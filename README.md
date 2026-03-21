@@ -1,6 +1,6 @@
 # CrowdSec CTI Feed
 
-A **community threat intelligence feed** built on top of [CrowdSec](https://crowdsec.net) alerts — publishing a rolling 7-day blocklist of malicious IPs, updated every 12 hours.
+A community threat intelligence feed built on top of [CrowdSec](https://crowdsec.net) alerts, publishing a rolling 7-day blocklist of malicious IPs, updated every 12 hours from my personnal homelab.
 
 > This feed is generated from real-world attack observations collected by a self-hosted CrowdSec instance. It is shared as-is for the community, with no guarantees. Use at your own discretion.
 
@@ -12,10 +12,10 @@ Consume the feed directly from GitHub raw URLs:
 
 | Feed | Format | URL |
 |---|---|---|
-| All IPs (v4 + v6) | Plain text | `https://raw.githubusercontent.com/<OWNER>/<REPO>/main/feeds/crowdsec_7d.txt` |
-| IPv4 only | Plain text | `https://raw.githubusercontent.com/<OWNER>/<REPO>/main/feeds/crowdsec_7d_v4.txt` |
-| IPv6 only | Plain text | `https://raw.githubusercontent.com/<OWNER>/<REPO>/main/feeds/crowdsec_7d_v6.txt` |
-| Enriched JSON | JSON | `https://raw.githubusercontent.com/<OWNER>/<REPO>/main/feeds/crowdsec_7d.json` |
+| All IPs (v4 + v6) | Plain text | `https://raw.githubusercontent.com/RedBlue232/crowdsec-alerts-feed/main/feeds/crowdsec_7d.txt` |
+| IPv4 only | Plain text | `https://raw.githubusercontent.com/RedBlue232/crowdsec-alerts-feed/main/feeds/crowdsec_7d_v4.txt` |
+| IPv6 only | Plain text | `https://raw.githubusercontent.com/RedBlue232/crowdsec-alerts-feed/main/feeds/crowdsec_7d_v6.txt` |
+| Enriched JSON | JSON | `https://raw.githubusercontent.com/RedBlue232/crowdsec-alerts-feed/main/feeds/crowdsec_7d.json` |
 
 ### Feed format
 
@@ -144,53 +144,6 @@ docker compose up -d
 ```
 
 The container runs silently and executes the script at **01:00 and 13:00 UTC** daily via supercronic.
-
----
-
-## Configuration
-
-Copy `.env.example` to `.env` and fill in your values. **Never commit `.env`** — it is listed in `.gitignore`.
-
-| Variable | Required | Description |
-|---|---|---|
-| `LAPI_BASE` | ✅ | CrowdSec LAPI base URL, e.g. `http://crowdsec:8080/v1` |
-| `CS_MACHINE_ID` | ✅ | Machine ID registered with `cscli machines add` |
-| `CS_PASSWORD` | ✅ | Password for the machine |
-| `LOOKBACK` | — | Alert fetch window, default `13h` (covers 12h cadence + margin) |
-| `GH_TOKEN` | ✅ | GitHub fine-grained token (Contents: read/write) |
-| `GH_OWNER` | ✅ | GitHub username or organization |
-| `GH_REPO` | ✅ | Target repository name |
-| `GH_BRANCH` | — | Target branch, default `main` |
-| `TTL_DAYS` | — | Sliding TTL in days, default `7` |
-| `MISP_URL` | — | MISP instance URL (leave empty to disable) |
-| `MISP_KEY` | — | MISP auth key |
-| `MISP_VERIFY_SSL` | — | `true` / `false`, default `false` |
-
----
-
-## MISP Integration
-
-When `MISP_URL` and `MISP_KEY` are set, the script maintains a **single rolling MISP event** tagged `crowdsec-feed`:
-
-- On first run: creates the event with all current IPs as `ip-src` attributes
-- On subsequent runs: replaces attributes with the current TTL-filtered IP set
-
-The event is tagged `crowdsec-feed` so it can be located and updated across runs without creating duplicates.
-
-To disable MISP integration, simply leave `MISP_URL` empty in your `.env`.
-
----
-
-## pfBlocker-NG Integration
-
-In pfSense → **pfBlockerNG → IP → IP Lists → Add**:
-
-- URL: `https://raw.githubusercontent.com/<OWNER>/<REPO>/main/feeds/crowdsec_7d_v4.txt`
-- Format: `IP`
-- Action: `Deny Inbound` (or `Alias Only` for custom rules)
-- Update frequency: `Every 12 hours`
-
-Add a second entry for the IPv6 feed (`crowdsec_7d_v6.txt`) if needed.
 
 ---
 
