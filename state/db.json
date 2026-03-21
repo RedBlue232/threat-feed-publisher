@@ -1,7 +1,7 @@
 {
   "schema_version": "1",
   "ttl_days": 7,
-  "updated_at": "2026-03-21T12:52:24.459604Z",
+  "updated_at": "2026-03-21T13:00:01.607434Z",
   "items": {
     "4.204.200.32": {
       "ip": "4.204.200.32",
@@ -10,19 +10,19 @@
       "last_seen": "2026-03-21T08:13:39Z",
       "scenarios": {
         "crowdsecurity/http-admin-interface-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-crawl-non_statics": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-wordpress-scan": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-03-21T08:13:39Z"
         }
       },
@@ -39,11 +39,11 @@
       "last_seen": "2026-03-21T12:44:25Z",
       "scenarios": {
         "crowdsecurity/jira_cve-2021-26086": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-03-21T12:44:25Z"
         },
         "crowdsecurity/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-03-21T12:44:25Z"
         }
       },
