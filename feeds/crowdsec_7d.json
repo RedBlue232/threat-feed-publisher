@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-03-21T11:21:43.861917Z",
+  "ttl_days": 7,
+  "cadence": "12h",
+  "counts": {
+    "total": 1,
+    "v4": 1,
+    "v6": 0
+  },
+  "items": [
+    {
+      "ip": "4.204.200.32",
+      "family": "v4",
+      "first_seen": "2026-03-21T08:13:33Z",
+      "last_seen": "2026-03-21T08:13:39Z",
+      "scenarios": {
+        "crowdsecurity/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-03-21T08:13:39Z"
+        },
+        "crowdsecurity/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-03-21T08:13:39Z"
+        },
+        "crowdsecurity/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-03-21T08:13:39Z"
+        },
+        "crowdsecurity/http-probing": {
+          "count": 1,
+          "last_seen": "2026-03-21T08:13:39Z"
+        }
+      },
+      "last_alert_id": 5101,
+      "last_alert_uuid": "840bbf7a-d1e1-4309-9190-ec4f0ab2dd28",
+      "machines": [
+        "localhost"
+      ]
+    }
+  ]
+}
