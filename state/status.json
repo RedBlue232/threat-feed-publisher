@@ -1,0 +1,10 @@
+{
+  "updated_at": "2026-03-21T11:21:43.861917Z",
+  "lookback": "13h",
+  "ttl_days": 7,
+  "counts": {
+    "total": 1,
+    "v4": 1,
+    "v6": 0
+  }
+}
