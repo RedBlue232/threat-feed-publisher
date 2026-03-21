@@ -1,7 +1,7 @@
 {
   "schema_version": "1",
   "ttl_days": 7,
-  "updated_at": "2026-03-21T13:04:02.107209Z",
+  "updated_at": "2026-03-21T13:42:21.614132Z",
   "items": {
     "4.204.200.32": {
       "ip": "4.204.200.32",
@@ -10,19 +10,19 @@
       "last_seen": "2026-03-21T08:13:39Z",
       "scenarios": {
         "crowdsecurity/http-admin-interface-probing": {
-          "count": 5,
+          "count": 6,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-crawl-non_statics": {
-          "count": 5,
+          "count": 6,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-wordpress-scan": {
-          "count": 5,
+          "count": 6,
           "last_seen": "2026-03-21T08:13:39Z"
         },
         "crowdsecurity/http-probing": {
-          "count": 5,
+          "count": 6,
           "last_seen": "2026-03-21T08:13:39Z"
         }
       },
@@ -39,16 +39,45 @@
       "last_seen": "2026-03-21T12:44:25Z",
       "scenarios": {
         "crowdsecurity/jira_cve-2021-26086": {
-          "count": 4,
+          "count": 5,
           "last_seen": "2026-03-21T12:44:25Z"
         },
         "crowdsecurity/http-probing": {
-          "count": 4,
+          "count": 5,
           "last_seen": "2026-03-21T12:44:25Z"
         }
       },
       "last_alert_id": 5105,
       "last_alert_uuid": "b734ae25-fb24-4a89-8b44-2646394c9fcf",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "20.151.2.242": {
+      "ip": "20.151.2.242",
+      "family": "v4",
+      "first_seen": "2026-03-21T13:15:31Z",
+      "last_seen": "2026-03-21T13:15:35Z",
+      "scenarios": {
+        "crowdsecurity/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-03-21T13:15:35Z"
+        },
+        "crowdsecurity/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-03-21T13:15:35Z"
+        },
+        "crowdsecurity/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-03-21T13:15:35Z"
+        },
+        "crowdsecurity/http-probing": {
+          "count": 1,
+          "last_seen": "2026-03-21T13:15:35Z"
+        }
+      },
+      "last_alert_id": 5110,
+      "last_alert_uuid": "13892cb8-1dde-42be-8c67-567811450bd9",
       "machines": [
         "localhost"
       ]
