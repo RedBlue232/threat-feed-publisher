@@ -1,9 +1,10 @@
 {
-  "updated_at": "2026-03-22T20:00:00Z",
+  "updated_at": "2026-03-23T01:00:01.477989Z",
+  "lookback": "13h",
   "ttl_days": 7,
   "counts": {
-    "total": 39,
-    "v4": 39,
+    "total": 38,
+    "v4": 38,
     "v6": 0
   }
 }
