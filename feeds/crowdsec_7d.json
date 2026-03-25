@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-25T16:00:00Z",
+  "generated_at": "2026-03-25T20:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 34,
-    "v4": 34,
+    "total": 33,
+    "v4": 33,
     "v6": 0
   },
   "items": [
@@ -225,15 +225,6 @@
         "crowdsecurity/http-backdoors-attempts",
         "crowdsecurity/http-admin-interface-probing",
         "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing"
-      ]
-    },
-    {
-      "ip": "3.99.146.86",
-      "family": "v4",
-      "first_seen": "2026-03-18T17:00:00Z",
-      "last_seen": "2026-03-18T17:00:00Z",
-      "scenarios": [
         "crowdsecurity/http-probing"
       ]
     },
