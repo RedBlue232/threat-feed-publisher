@@ -1,756 +1,362 @@
 {
-  "generated_at": "2026-03-25T12:58:06.772341Z",
+  "generated_at": "2026-03-25T16:00:00Z",
   "ttl_days": 7,
-  "cadence": "12h",
   "counts": {
-    "total": 33,
-    "v4": 33,
+    "total": 34,
+    "v4": 34,
     "v6": 0
   },
   "items": [
     {
       "ip": "4.204.200.32",
       "family": "v4",
-      "first_seen": "2026-03-17T17:20:38Z",
-      "last_seen": "2026-03-21T08:13:39Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 10,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 10,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 10,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 10,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-backdoors-attempts": {
-          "count": 2,
-          "last_seen": "2026-03-21T08:13:39Z"
-        }
-      },
-      "last_alert_id": 5101,
-      "last_alert_uuid": "840bbf7a-d1e1-4309-9190-ec4f0ab2dd28",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-17T17:00:00Z",
+      "last_seen": "2026-03-21T08:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-backdoors-attempts"
       ]
     },
     {
       "ip": "209.97.180.8",
       "family": "v4",
-      "first_seen": "2026-03-21T12:44:24Z",
-      "last_seen": "2026-03-21T12:44:25Z",
-      "scenarios": {
-        "crowdsecurity/jira_cve-2021-26086": {
-          "count": 8,
-          "last_seen": "2026-03-21T12:44:25Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 8,
-          "last_seen": "2026-03-21T12:44:25Z"
-        }
-      },
-      "last_alert_id": 5105,
-      "last_alert_uuid": "b734ae25-fb24-4a89-8b44-2646394c9fcf",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-21T12:00:00Z",
+      "last_seen": "2026-03-21T12:00:00Z",
+      "scenarios": [
+        "crowdsecurity/jira_cve-2021-26086",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "20.151.2.242",
       "family": "v4",
-      "first_seen": "2026-03-21T13:15:31Z",
-      "last_seen": "2026-03-21T13:15:35Z",
-      "scenarios": {
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 4,
-          "last_seen": "2026-03-21T13:15:35Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 4,
-          "last_seen": "2026-03-21T13:15:35Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 4,
-          "last_seen": "2026-03-21T13:15:35Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 4,
-          "last_seen": "2026-03-21T13:15:35Z"
-        }
-      },
-      "last_alert_id": 5110,
-      "last_alert_uuid": "13892cb8-1dde-42be-8c67-567811450bd9",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-21T13:00:00Z",
+      "last_seen": "2026-03-21T13:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "104.208.81.111",
       "family": "v4",
-      "first_seen": "2026-03-19T20:54:07Z",
-      "last_seen": "2026-03-21T20:40:53Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 5,
-          "last_seen": "2026-03-21T20:40:53Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 5,
-          "last_seen": "2026-03-21T20:40:53Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-03-21T20:40:53Z"
-        }
-      },
-      "last_alert_id": 5116,
-      "last_alert_uuid": "80441234-cb28-496a-a0da-072950524cf0",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T20:00:00Z",
+      "last_seen": "2026-03-21T20:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-wordpress-scan"
       ]
     },
     {
       "ip": "162.142.125.43",
       "family": "v4",
-      "first_seen": "2026-03-19T08:57:46Z",
-      "last_seen": "2026-03-21T19:48:50Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 5,
-          "last_seen": "2026-03-21T19:48:50Z"
-        }
-      },
-      "last_alert_id": 5114,
-      "last_alert_uuid": "f94762c2-ccfd-4792-baef-a65089532248",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T08:00:00Z",
+      "last_seen": "2026-03-21T19:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "20.240.46.49",
       "family": "v4",
-      "first_seen": "2026-03-22T09:18:49Z",
-      "last_seen": "2026-03-22T09:18:53Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 5,
-          "last_seen": "2026-03-22T09:18:53Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 5,
-          "last_seen": "2026-03-22T09:18:53Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 5,
-          "last_seen": "2026-03-22T09:18:53Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 5,
-          "last_seen": "2026-03-22T09:18:53Z"
-        }
-      },
-      "last_alert_id": 5133,
-      "last_alert_uuid": "a7e8baaf-1851-4261-b642-0b9921b3a21a",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-22T09:00:00Z",
+      "last_seen": "2026-03-22T09:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "52.169.5.4",
       "family": "v4",
-      "first_seen": "2026-03-22T05:50:53Z",
-      "last_seen": "2026-03-22T05:50:56Z",
-      "scenarios": {
-        "crowdsecurity/http-backdoors-attempts": {
-          "count": 3,
-          "last_seen": "2026-03-22T05:50:56Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 3,
-          "last_seen": "2026-03-22T05:50:56Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 3,
-          "last_seen": "2026-03-22T05:50:56Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 3,
-          "last_seen": "2026-03-22T05:50:56Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 3,
-          "last_seen": "2026-03-22T05:50:56Z"
-        }
-      },
-      "last_alert_id": 5127,
-      "last_alert_uuid": "7ef74437-b1fe-4c14-bd93-4da0ade74442",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-22T05:00:00Z",
+      "last_seen": "2026-03-22T05:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "66.132.186.186",
       "family": "v4",
-      "first_seen": "2026-03-22T02:56:58Z",
-      "last_seen": "2026-03-22T02:56:58Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 3,
-          "last_seen": "2026-03-22T02:56:58Z"
-        }
-      },
-      "last_alert_id": 5120,
-      "last_alert_uuid": "353bbf99-d0cf-40fc-a5db-c69d87f24e30",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-22T02:00:00Z",
+      "last_seen": "2026-03-22T02:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "124.29.194.213",
       "family": "v4",
-      "first_seen": "2026-03-20T21:18:09Z",
-      "last_seen": "2026-03-20T21:18:09Z",
-      "scenarios": {
-        "crowdsecurity/netgear_rce": {
-          "count": 2,
-          "last_seen": "2026-03-20T21:18:09Z"
-        },
-        "crowdsecurity/http-cve-probing": {
-          "count": 2,
-          "last_seen": "2026-03-20T21:18:09Z"
-        }
-      },
-      "last_alert_id": 5092,
-      "last_alert_uuid": "790cbe0e-7c88-4f51-b7a9-46156bca2686",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T21:00:00Z",
+      "last_seen": "2026-03-20T21:00:00Z",
+      "scenarios": [
+        "crowdsecurity/netgear_rce",
+        "crowdsecurity/http-cve-probing"
       ]
     },
     {
       "ip": "66.132.172.99",
       "family": "v4",
-      "first_seen": "2026-03-20T18:57:30Z",
-      "last_seen": "2026-03-20T18:57:30Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-20T18:57:30Z"
-        }
-      },
-      "last_alert_id": 5089,
-      "last_alert_uuid": "b7748793-5784-4c1e-9b7f-bdfa0848a8fd",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T18:00:00Z",
+      "last_seen": "2026-03-20T18:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "4.193.168.228",
       "family": "v4",
-      "first_seen": "2026-03-20T00:20:23Z",
-      "last_seen": "2026-03-20T17:24:59Z",
-      "scenarios": {
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 4,
-          "last_seen": "2026-03-20T17:24:59Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 4,
-          "last_seen": "2026-03-20T17:24:59Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 4,
-          "last_seen": "2026-03-20T17:24:59Z"
-        }
-      },
-      "last_alert_id": 5087,
-      "last_alert_uuid": "5c0b5b20-2907-43c8-a1b5-bbdd27c0923c",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T00:00:00Z",
+      "last_seen": "2026-03-20T17:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-admin-interface-probing"
       ]
     },
     {
       "ip": "162.142.125.223",
       "family": "v4",
-      "first_seen": "2026-03-20T09:47:51Z",
-      "last_seen": "2026-03-20T09:47:51Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-20T09:47:51Z"
-        }
-      },
-      "last_alert_id": 5080,
-      "last_alert_uuid": "f46123d6-2e9c-48bd-9a4a-ec0a062b52b7",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T09:00:00Z",
+      "last_seen": "2026-03-20T09:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "20.203.144.43",
       "family": "v4",
-      "first_seen": "2026-03-20T09:29:28Z",
-      "last_seen": "2026-03-20T09:29:29Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-03-20T09:29:29Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 2,
-          "last_seen": "2026-03-20T09:29:29Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-03-20T09:29:29Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-20T09:29:29Z"
-        }
-      },
-      "last_alert_id": 5079,
-      "last_alert_uuid": "aa05b3a4-9793-49de-b1be-7eb4f857740c",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T09:00:00Z",
+      "last_seen": "2026-03-20T09:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "159.223.96.96",
       "family": "v4",
-      "first_seen": "2026-03-20T08:56:05Z",
-      "last_seen": "2026-03-20T08:56:05Z",
-      "scenarios": {
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-20T08:56:05Z"
-        }
-      },
-      "last_alert_id": 5075,
-      "last_alert_uuid": "d34f7df9-b0fc-40f5-99e5-6cf336aba291",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-20T08:00:00Z",
+      "last_seen": "2026-03-20T08:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "128.203.201.155",
       "family": "v4",
-      "first_seen": "2026-03-19T23:27:16Z",
-      "last_seen": "2026-03-19T23:27:16Z",
-      "scenarios": {
-        "crowdsecurity/http-cve-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T23:27:16Z"
-        }
-      },
-      "last_alert_id": 5067,
-      "last_alert_uuid": "5b178a3f-eada-4793-ade4-706f646c3eb0",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T23:00:00Z",
+      "last_seen": "2026-03-19T23:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-cve-probing"
       ]
     },
     {
       "ip": "20.78.145.252",
       "family": "v4",
-      "first_seen": "2026-03-19T18:30:29Z",
-      "last_seen": "2026-03-19T18:30:35Z",
-      "scenarios": {
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-03-19T18:30:35Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T18:30:35Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T18:30:35Z"
-        }
-      },
-      "last_alert_id": 5060,
-      "last_alert_uuid": "c0f27a18-516d-4d2c-b91e-c162e3a73ee8",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T18:00:00Z",
+      "last_seen": "2026-03-19T18:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-admin-interface-probing"
       ]
     },
     {
       "ip": "162.142.125.212",
       "family": "v4",
-      "first_seen": "2026-03-19T18:04:24Z",
-      "last_seen": "2026-03-19T18:04:24Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-19T18:04:24Z"
-        }
-      },
-      "last_alert_id": 5057,
-      "last_alert_uuid": "1bbe5ee1-0cea-42e9-8346-28551c379521",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T18:00:00Z",
+      "last_seen": "2026-03-19T18:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "51.68.107.139",
       "family": "v4",
-      "first_seen": "2026-03-19T14:32:57Z",
-      "last_seen": "2026-03-19T14:32:57Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-19T14:32:57Z"
-        }
-      },
-      "last_alert_id": 5054,
-      "last_alert_uuid": "87ef0269-0a67-4c28-9ce1-1a11c5416df9",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T14:00:00Z",
+      "last_seen": "2026-03-19T14:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "130.89.144.170",
       "family": "v4",
-      "first_seen": "2026-03-19T12:04:35Z",
-      "last_seen": "2026-03-19T12:04:35Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-19T12:04:35Z"
-        }
-      },
-      "last_alert_id": 5052,
-      "last_alert_uuid": "9a4a4451-7e9c-4783-9488-f7f4dc5af1a3",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T12:00:00Z",
+      "last_seen": "2026-03-19T12:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "167.86.68.175",
       "family": "v4",
-      "first_seen": "2026-03-19T07:17:53Z",
-      "last_seen": "2026-03-19T07:17:53Z",
-      "scenarios": {
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 2,
-          "last_seen": "2026-03-19T07:17:53Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-03-19T07:17:53Z"
-        },
-        "crowdsecurity/http-sensitive-files": {
-          "count": 2,
-          "last_seen": "2026-03-19T07:17:53Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T07:17:53Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T07:17:53Z"
-        }
-      },
-      "last_alert_id": 5048,
-      "last_alert_uuid": "7f6ba358-ff5f-40d1-995d-67f38d037823",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T07:00:00Z",
+      "last_seen": "2026-03-19T07:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-sensitive-files",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-admin-interface-probing"
       ]
     },
     {
       "ip": "20.222.18.47",
       "family": "v4",
-      "first_seen": "2026-03-19T01:46:39Z",
-      "last_seen": "2026-03-19T01:47:25Z",
-      "scenarios": {
-        "crowdsecurity/http-backdoors-attempts": {
-          "count": 2,
-          "last_seen": "2026-03-19T01:47:25Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T01:47:25Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-03-19T01:47:25Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-19T01:47:25Z"
-        }
-      },
-      "last_alert_id": 5040,
-      "last_alert_uuid": "0375c694-59e0-4ca6-b9c0-45cb70d28aca",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-19T01:00:00Z",
+      "last_seen": "2026-03-19T01:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "3.99.146.86",
       "family": "v4",
-      "first_seen": "2026-03-18T17:03:06Z",
-      "last_seen": "2026-03-18T17:03:06Z",
-      "scenarios": {
-        "crowdsecurity/http-probing": {
-          "count": 2,
-          "last_seen": "2026-03-18T17:03:06Z"
-        }
-      },
-      "last_alert_id": 5031,
-      "last_alert_uuid": "352e8eea-02d6-437e-b789-3fdd5203a014",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-18T17:00:00Z",
+      "last_seen": "2026-03-18T17:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "162.142.125.35",
       "family": "v4",
-      "first_seen": "2026-03-23T00:43:34Z",
-      "last_seen": "2026-03-23T00:43:34Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-03-23T00:43:34Z"
-        }
-      },
-      "last_alert_id": 5141,
-      "last_alert_uuid": "a9c23d69-9952-4e7e-a874-46a13517a643",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T00:00:00Z",
+      "last_seen": "2026-03-23T00:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "185.177.72.22",
       "family": "v4",
-      "first_seen": "2026-03-23T09:07:46Z",
-      "last_seen": "2026-03-23T09:07:53Z",
-      "scenarios": {
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        },
-        "crowdsecurity/CVE-2017-9841": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        },
-        "crowdsecurity/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T09:07:53Z"
-        }
-      },
-      "last_alert_id": 5163,
-      "last_alert_uuid": "3cf4ccee-7eae-4606-83e2-ae107c5dd956",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T09:00:00Z",
+      "last_seen": "2026-03-23T09:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/CVE-2017-9841",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-sensitive-files",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "185.177.72.30",
       "family": "v4",
-      "first_seen": "2026-03-23T07:53:18Z",
-      "last_seen": "2026-03-23T07:53:18Z",
-      "scenarios": {
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:53:18Z"
-        },
-        "crowdsecurity/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:53:18Z"
-        },
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:53:18Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:53:18Z"
-        }
-      },
-      "last_alert_id": 5156,
-      "last_alert_uuid": "c716512c-c411-49eb-b5e2-4aad596a321a",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T07:00:00Z",
+      "last_seen": "2026-03-23T07:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-sensitive-files",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "20.220.232.240",
       "family": "v4",
-      "first_seen": "2026-03-23T07:22:23Z",
-      "last_seen": "2026-03-23T07:22:36Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:22:36Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:22:36Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:22:36Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-03-23T07:22:36Z"
-        }
-      },
-      "last_alert_id": 5152,
-      "last_alert_uuid": "e427325d-f4ec-4d0a-9d55-7e0019afaee3",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T07:00:00Z",
+      "last_seen": "2026-03-23T07:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-wordpress-scan"
       ]
     },
     {
       "ip": "89.248.168.239",
       "family": "v4",
-      "first_seen": "2026-03-23T05:50:44Z",
-      "last_seen": "2026-03-23T05:50:45Z",
-      "scenarios": {
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T05:50:45Z"
-        },
-        "crowdsecurity/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-03-23T05:50:45Z"
-        }
-      },
-      "last_alert_id": 5147,
-      "last_alert_uuid": "5a237bda-b66a-4abe-9beb-389812d706a9",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T05:00:00Z",
+      "last_seen": "2026-03-23T05:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-sensitive-files"
       ]
     },
     {
       "ip": "66.132.195.121",
       "family": "v4",
-      "first_seen": "2026-03-23T03:48:53Z",
-      "last_seen": "2026-03-23T03:48:53Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-03-23T03:48:53Z"
-        }
-      },
-      "last_alert_id": 5144,
-      "last_alert_uuid": "5da21d78-0d78-4345-ae03-b08efd505333",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T03:00:00Z",
+      "last_seen": "2026-03-23T03:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "40.85.222.197",
       "family": "v4",
-      "first_seen": "2026-03-23T17:49:25Z",
-      "last_seen": "2026-03-23T17:49:26Z",
-      "scenarios": {
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-03-23T17:49:26Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T17:49:26Z"
-        }
-      },
-      "last_alert_id": 5170,
-      "last_alert_uuid": "202b19d2-3960-43b9-9de9-04b3495af2f9",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T17:00:00Z",
+      "last_seen": "2026-03-23T17:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "20.104.19.195",
       "family": "v4",
-      "first_seen": "2026-03-23T13:38:49Z",
-      "last_seen": "2026-03-23T13:38:49Z",
-      "scenarios": {
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-23T13:38:49Z"
-        }
-      },
-      "last_alert_id": 5166,
-      "last_alert_uuid": "817f0e88-84bc-4eca-8511-29e74fe61c6c",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-23T13:00:00Z",
+      "last_seen": "2026-03-23T13:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-probing"
       ]
     },
     {
       "ip": "66.132.195.72",
       "family": "v4",
-      "first_seen": "2026-03-24T08:32:45Z",
-      "last_seen": "2026-03-24T08:32:45Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-03-24T08:32:45Z"
-        }
-      },
-      "last_alert_id": 5181,
-      "last_alert_uuid": "9574dedc-b746-4e97-a60e-1b968c72d260",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-24T08:00:00Z",
+      "last_seen": "2026-03-24T08:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "66.132.195.104",
       "family": "v4",
-      "first_seen": "2026-03-24T08:26:17Z",
-      "last_seen": "2026-03-24T08:26:17Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-03-24T08:26:17Z"
-        }
-      },
-      "last_alert_id": 5180,
-      "last_alert_uuid": "32f59319-46d3-44f3-a8a3-a88249cf63e1",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-24T08:00:00Z",
+      "last_seen": "2026-03-24T08:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     },
     {
       "ip": "216.180.246.8",
       "family": "v4",
-      "first_seen": "2026-03-24T04:49:20Z",
-      "last_seen": "2026-03-24T04:49:20Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-03-24T04:49:20Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 1,
-          "last_seen": "2026-03-24T04:49:20Z"
-        }
-      },
-      "last_alert_id": 5177,
-      "last_alert_uuid": "b3f3eda2-fda1-498b-8cb2-7a025d7194e3",
-      "machines": [
-        "localhost"
+      "first_seen": "2026-03-24T04:00:00Z",
+      "last_seen": "2026-03-24T04:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "51.103.36.25",
+      "family": "v4",
+      "first_seen": "2026-03-25T14:00:00Z",
+      "last_seen": "2026-03-25T14:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-probing"
       ]
     }
   ]
