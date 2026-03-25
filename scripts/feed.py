@@ -294,17 +294,58 @@ def publish_github(outputs: dict):
 
 
 # ---------------------------------------------------------------------------
+# Helpers MISP
+# ---------------------------------------------------------------------------
+
+def iso_to_dt(iso: str) -> datetime:
+    return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+
+def build_misp_comment(record: dict) -> str:
+    scenarios = ", ".join(sorted(record["scenarios"].keys()))
+    total_hits = sum(v.get("count", 0) for v in record["scenarios"].values())
+    return (
+        f"CrowdSec | "
+        f"first_seen: {record['first_seen']} | "
+        f"last_seen: {record['last_seen']} | "
+        f"hits: {total_hits} | "
+        f"scenarios: {scenarios}"
+    )
+
+def aggregate_run_events(events: list) -> dict:
+    """
+    Agrège les événements du run courant par IP.
+    Retient le timestamp le plus récent, les scénarios et machines vus.
+    """
+    by_ip = {}
+    for ev in events:
+        ip = ev["ip"]
+        ev_dt = iso_to_dt(ev["event_time"])
+        if ip not in by_ip:
+            by_ip[ip] = {"last_seen_dt": ev_dt, "scenarios": set(), "machines": set()}
+        else:
+            if ev_dt > by_ip[ip]["last_seen_dt"]:
+                by_ip[ip]["last_seen_dt"] = ev_dt
+        if ev.get("scenario"):
+            by_ip[ip]["scenarios"].add(ev["scenario"])
+        if ev.get("machine_id"):
+            by_ip[ip]["machines"].add(ev["machine_id"])
+    return by_ip
+
+
+# ---------------------------------------------------------------------------
 # 8. Push MISP via PyMISP
 #
 # Stratégie : un seul événement MISP "rolling" identifié par MISP_EVENT_TAG.
 # À chaque run :
-#   - On cherche l'événement existant via le tag
-#   - On supprime tous ses anciens attributs ip-src (reset propre)
-#   - On recrée les attributs depuis la DB courante (TTL déjà appliqué)
-# L'événement MISP reflète ainsi toujours exactement les IPs actives.
+#   - L'événement est créé s'il n'existe pas, sinon réutilisé
+#   - Les IPs absentes de la DB (TTL expiré) ne sont PAS supprimées ici
+#     → leur gestion est laissée à MISP (decay, manual review)
+#   - Les nouvelles IPs sont ajoutées
+#   - Les IPs existantes ont leur commentaire mis à jour
+#   - Un sighting est ajouté uniquement pour les IPs vues dans CE run
 # ---------------------------------------------------------------------------
 
-def push_misp(db: dict):
+def push_misp(db: dict, events: list):
     if not PYMISP_AVAILABLE:
         log.warning("PyMISP non installé — push MISP ignoré")
         return
@@ -315,6 +356,8 @@ def push_misp(db: dict):
     log.info("Connexion MISP → %s", MISP_URL)
     misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
 
+    run_obs = aggregate_run_events(events)
+
     # Chercher un événement existant avec notre tag
     existing_event = None
     results = misp.search(tags=[MISP_EVENT_TAG], pythonify=True)
@@ -323,48 +366,78 @@ def push_misp(db: dict):
         log.info("Événement MISP existant trouvé (id=%s)", existing_event.id)
 
     if existing_event is None:
-        # Première exécution : créer l'événement
         event = MISPEvent()
-        event.info             = "CrowdSec rolling feed (7 jours)"
-        event.distribution     = 0  # 0=Org only — adapte : 1=Community, 3=All
-        event.threat_level_id  = 3  # Low
-        event.analysis         = 2  # Completed
+        event.info            = "CrowdSec rolling feed (7 jours)"
+        event.distribution    = 0  # 0=Org only — adapte : 1=Community, 3=All
+        event.threat_level_id = 3  # Low
+        event.analysis        = 2  # Completed
         event.add_tag(MISP_EVENT_TAG)
         event = misp.add_event(event, pythonify=True)
         log.info("Événement MISP créé (id=%s)", event.id)
     else:
-        # Runs suivants : supprimer les anciens attributs IP pour repartir proprement
-        event = existing_event
-        deleted = 0
-        for attr in list(event.attributes):
-            if attr.type == "ip-src":
-                misp.delete_attribute(attr.id)
-                deleted += 1
-        if deleted:
-            log.info("%d anciens attributs ip-src supprimés", deleted)
-        # Recharger l'événement après suppression
-        event = misp.get_event(event.id, pythonify=True)
+        event = misp.get_event(existing_event.id, pythonify=True)
 
-    # Ajouter les attributs depuis la DB courante
-    records = list(db["items"].values())
-    for r in records:
-        scenarios_str = ", ".join(r["scenarios"].keys())
-        comment = (
-            f"CrowdSec | "
-            f"first_seen: {r['first_seen']} | "
-            f"last_seen: {r['last_seen']} | "
-            f"scenarios: {scenarios_str}"
-        )
-        event.add_attribute(
-            "ip-src",
-            r["ip"],
-            comment=comment,
-            to_ids=True,
-            category="Network activity",
-        )
+    # Index des attributs ip-src existants par valeur IP
+    existing_ip_attrs = {
+        attr.value: attr
+        for attr in getattr(event, "attributes", [])
+        if attr.type == "ip-src"
+    }
 
-    misp.update_event(event)
-    log.info("MISP ✓ %d attributs ip-src poussés (event id=%s)", len(records), event.id)
+    created_count = updated_count = sightings_count = 0
+
+    for ip, record in db["items"].items():
+        comment = build_misp_comment(record)
+        attr = existing_ip_attrs.get(ip)
+
+        # 1) Nouvelle IP : créer l'attribut
+        if attr is None:
+            created = misp.add_attribute(
+                event,
+                {"type": "ip-src", "value": ip, "comment": comment,
+                 "to_ids": True, "category": "Network activity"},
+                pythonify=True,
+                break_on_duplicate=False,
+            )
+            if isinstance(created, MISPAttribute):
+                attr = created
+                existing_ip_attrs[ip] = attr
+                created_count += 1
+                log.info("MISP + nouvelle IP %s", ip)
+            else:
+                log.warning("Impossible de créer l'attribut MISP pour %s : %s", ip, created)
+                continue
+
+        # 2) IP existante : mettre à jour le commentaire si besoin
+        else:
+            if (attr.comment or "") != comment:
+                attr.comment = comment
+                updated = misp.update_attribute(attr, pythonify=True)
+                if isinstance(updated, MISPAttribute):
+                    existing_ip_attrs[ip] = updated
+                updated_count += 1
+                log.info("MISP ~ commentaire mis à jour pour %s", ip)
+
+        # 3) Sighting uniquement si l'IP a été vue dans ce run
+        if ip in run_obs:
+            obs = run_obs[ip]
+            source = "crowdsec:" + ",".join(sorted(obs["machines"])) if obs["machines"] else "crowdsec-feed"
+            try:
+                misp.add_sighting(
+                    {"type": "0", "source": source,
+                     "timestamp": int(obs["last_seen_dt"].timestamp())},
+                    attribute=attr,
+                    pythonify=False,
+                )
+                sightings_count += 1
+                log.info("Sighting MISP ajouté pour %s", ip)
+            except Exception as e:
+                log.warning("Échec sighting pour %s : %s", ip, e)
+
+    log.info(
+        "MISP ✓ sync terminée (créées=%d, mises_à_jour=%d, sightings=%d, total_db=%d)",
+        created_count, updated_count, sightings_count, len(db["items"]),
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -402,7 +475,7 @@ def main():
     publish_github(outputs)
 
     # 8. Push MISP
-    push_misp(db)
+    push_misp(db, events)
 
     log.info("=== Terminé — %d IPs publiées ===", len(db["items"]))
 
