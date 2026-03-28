@@ -1,62 +1,8 @@
 {
   "schema_version": "1",
   "ttl_days": 7,
-  "updated_at": "2026-03-28T01:00:01.468583Z",
+  "updated_at": "2026-03-28T13:00:01.497740Z",
   "items": {
-    "4.204.200.32": {
-      "ip": "4.204.200.32",
-      "family": "v4",
-      "first_seen": "2026-03-17T17:20:38Z",
-      "last_seen": "2026-03-21T08:13:39Z",
-      "scenarios": {
-        "crowdsecurity/http-admin-interface-probing": {
-          "count": 14,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-crawl-non_statics": {
-          "count": 14,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-wordpress-scan": {
-          "count": 14,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 14,
-          "last_seen": "2026-03-21T08:13:39Z"
-        },
-        "crowdsecurity/http-backdoors-attempts": {
-          "count": 2,
-          "last_seen": "2026-03-21T08:13:39Z"
-        }
-      },
-      "last_alert_id": 5101,
-      "last_alert_uuid": "840bbf7a-d1e1-4309-9190-ec4f0ab2dd28",
-      "machines": [
-        "localhost"
-      ]
-    },
-    "209.97.180.8": {
-      "ip": "209.97.180.8",
-      "family": "v4",
-      "first_seen": "2026-03-21T12:44:24Z",
-      "last_seen": "2026-03-21T12:44:25Z",
-      "scenarios": {
-        "crowdsecurity/jira_cve-2021-26086": {
-          "count": 12,
-          "last_seen": "2026-03-21T12:44:25Z"
-        },
-        "crowdsecurity/http-probing": {
-          "count": 12,
-          "last_seen": "2026-03-21T12:44:25Z"
-        }
-      },
-      "last_alert_id": 5105,
-      "last_alert_uuid": "b734ae25-fb24-4a89-8b44-2646394c9fcf",
-      "machines": [
-        "localhost"
-      ]
-    },
     "20.151.2.242": {
       "ip": "20.151.2.242",
       "family": "v4",
@@ -746,6 +692,81 @@
       },
       "last_alert_id": 5259,
       "last_alert_uuid": "4c8e35d6-7993-4bd3-999a-bec097d8ff92",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "20.9.49.147": {
+      "ip": "20.9.49.147",
+      "family": "v4",
+      "first_seen": "2026-03-28T12:34:01Z",
+      "last_seen": "2026-03-28T12:34:06Z",
+      "scenarios": {
+        "crowdsecurity/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-03-28T12:34:06Z"
+        },
+        "crowdsecurity/http-probing": {
+          "count": 1,
+          "last_seen": "2026-03-28T12:34:06Z"
+        },
+        "crowdsecurity/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-03-28T12:34:06Z"
+        }
+      },
+      "last_alert_id": 5283,
+      "last_alert_uuid": "377cc579-0c48-4206-9657-d21c0c35ef82",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "138.2.100.159": {
+      "ip": "138.2.100.159",
+      "family": "v4",
+      "first_seen": "2026-03-28T08:35:05Z",
+      "last_seen": "2026-03-28T08:35:05Z",
+      "scenarios": {
+        "crowdsecurity/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-03-28T08:35:05Z"
+        }
+      },
+      "last_alert_id": 5278,
+      "last_alert_uuid": "ef8d9588-7d85-4945-bf0b-57e161e8ac31",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "20.48.232.178": {
+      "ip": "20.48.232.178",
+      "family": "v4",
+      "first_seen": "2026-03-28T06:20:27Z",
+      "last_seen": "2026-03-28T06:20:33Z",
+      "scenarios": {
+        "crowdsecurity/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-03-28T06:20:33Z"
+        },
+        "crowdsecurity/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-03-28T06:20:33Z"
+        },
+        "crowdsecurity/http-backdoors-attempts": {
+          "count": 1,
+          "last_seen": "2026-03-28T06:20:33Z"
+        },
+        "crowdsecurity/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-03-28T06:20:33Z"
+        },
+        "crowdsecurity/http-probing": {
+          "count": 1,
+          "last_seen": "2026-03-28T06:20:33Z"
+        }
+      },
+      "last_alert_id": 5276,
+      "last_alert_uuid": "bf553c7d-7ea3-457d-8321-c341f3b7d0bb",
       "machines": [
         "localhost"
       ]
