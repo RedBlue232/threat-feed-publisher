@@ -1,35 +1,12 @@
 {
-  "generated_at": "2026-03-28T01:00:00Z",
+  "generated_at": "2026-03-28T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 31,
-    "v4": 31,
+    "total": 32,
+    "v4": 32,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "4.204.200.32",
-      "family": "v4",
-      "first_seen": "2026-03-17T17:00:00Z",
-      "last_seen": "2026-03-21T08:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-admin-interface-probing",
-        "crowdsecurity/http-crawl-non_statics",
-        "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing",
-        "crowdsecurity/http-backdoors-attempts"
-      ]
-    },
-    {
-      "ip": "209.97.180.8",
-      "family": "v4",
-      "first_seen": "2026-03-21T12:00:00Z",
-      "last_seen": "2026-03-21T12:00:00Z",
-      "scenarios": [
-        "crowdsecurity/jira_cve-2021-26086",
-        "crowdsecurity/http-probing"
-      ]
-    },
     {
       "ip": "20.151.2.242",
       "family": "v4",
@@ -339,6 +316,39 @@
       "scenarios": [
         "crowdsecurity/http-cve-probing",
         "crowdsecurity/netgear_rce"
+      ]
+    },
+    {
+      "ip": "20.9.49.147",
+      "family": "v4",
+      "first_seen": "2026-03-28T12:00:00Z",
+      "last_seen": "2026-03-28T12:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-sensitive-files",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-admin-interface-probing"
+      ]
+    },
+    {
+      "ip": "138.2.100.159",
+      "family": "v4",
+      "first_seen": "2026-03-28T08:00:00Z",
+      "last_seen": "2026-03-28T08:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-cve-probing"
+      ]
+    },
+    {
+      "ip": "20.48.232.178",
+      "family": "v4",
+      "first_seen": "2026-03-28T06:00:00Z",
+      "last_seen": "2026-03-28T06:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-probing"
       ]
     }
   ]
