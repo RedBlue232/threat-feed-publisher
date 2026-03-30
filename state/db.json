@@ -1,25 +1,8 @@
 {
   "schema_version": "1",
   "ttl_days": 7,
-  "updated_at": "2026-03-29T13:00:01.343109Z",
+  "updated_at": "2026-03-30T01:00:01.428954Z",
   "items": {
-    "162.142.125.35": {
-      "ip": "162.142.125.35",
-      "family": "v4",
-      "first_seen": "2026-03-23T00:43:34Z",
-      "last_seen": "2026-03-23T00:43:34Z",
-      "scenarios": {
-        "crowdsecurity/http-bad-user-agent": {
-          "count": 6,
-          "last_seen": "2026-03-23T00:43:34Z"
-        }
-      },
-      "last_alert_id": 5141,
-      "last_alert_uuid": "a9c23d69-9952-4e7e-a874-46a13517a643",
-      "machines": [
-        "localhost"
-      ]
-    },
     "185.177.72.22": {
       "ip": "185.177.72.22",
       "family": "v4",
@@ -625,15 +608,15 @@
       "ip": "199.45.155.91",
       "family": "v4",
       "first_seen": "2026-03-28T20:01:28Z",
-      "last_seen": "2026-03-28T20:01:28Z",
+      "last_seen": "2026-03-30T00:46:13Z",
       "scenarios": {
         "crowdsecurity/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-03-28T20:01:28Z"
+          "count": 2,
+          "last_seen": "2026-03-30T00:46:13Z"
         }
       },
-      "last_alert_id": 5292,
-      "last_alert_uuid": "d68c256c-2714-411a-8f77-b051dc96f2e9",
+      "last_alert_id": 5315,
+      "last_alert_uuid": "8800f3c7-203a-48e5-8049-f8c862fb121a",
       "machines": [
         "localhost"
       ]
@@ -696,6 +679,44 @@
       },
       "last_alert_id": 5303,
       "last_alert_uuid": "e551042a-2a3d-4131-a694-634c3b14c25f",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "139.135.59.11": {
+      "ip": "139.135.59.11",
+      "family": "v4",
+      "first_seen": "2026-03-29T23:58:27Z",
+      "last_seen": "2026-03-29T23:58:27Z",
+      "scenarios": {
+        "crowdsecurity/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-03-29T23:58:27Z"
+        },
+        "crowdsecurity/netgear_rce": {
+          "count": 1,
+          "last_seen": "2026-03-29T23:58:27Z"
+        }
+      },
+      "last_alert_id": 5314,
+      "last_alert_uuid": "23e6b5c0-dcc0-4463-b5c2-7431d4378b8d",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "199.45.155.70": {
+      "ip": "199.45.155.70",
+      "family": "v4",
+      "first_seen": "2026-03-29T19:06:51Z",
+      "last_seen": "2026-03-29T19:06:51Z",
+      "scenarios": {
+        "crowdsecurity/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-03-29T19:06:51Z"
+        }
+      },
+      "last_alert_id": 5309,
+      "last_alert_uuid": "9f501edd-7caf-43b6-8bc5-d0d8ef429794",
       "machines": [
         "localhost"
       ]
