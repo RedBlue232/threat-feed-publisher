@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-03-29T13:00:00Z",
+  "generated_at": "2026-03-30T01:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 29,
-    "v4": 29,
+    "total": 30,
+    "v4": 30,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "162.142.125.35",
-      "family": "v4",
-      "first_seen": "2026-03-23T00:00:00Z",
-      "last_seen": "2026-03-23T00:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-bad-user-agent"
-      ]
-    },
     {
       "ip": "185.177.72.22",
       "family": "v4",
@@ -289,7 +280,7 @@
       "ip": "199.45.155.91",
       "family": "v4",
       "first_seen": "2026-03-28T20:00:00Z",
-      "last_seen": "2026-03-28T20:00:00Z",
+      "last_seen": "2026-03-30T00:00:00Z",
       "scenarios": [
         "crowdsecurity/http-bad-user-agent"
       ]
@@ -317,6 +308,25 @@
         "crowdsecurity/http-probing",
         "crowdsecurity/http-admin-interface-probing",
         "crowdsecurity/http-wordpress-scan"
+      ]
+    },
+    {
+      "ip": "139.135.59.11",
+      "family": "v4",
+      "first_seen": "2026-03-29T23:00:00Z",
+      "last_seen": "2026-03-29T23:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-cve-probing",
+        "crowdsecurity/netgear_rce"
+      ]
+    },
+    {
+      "ip": "199.45.155.70",
+      "family": "v4",
+      "first_seen": "2026-03-29T19:00:00Z",
+      "last_seen": "2026-03-29T19:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-bad-user-agent"
       ]
     }
   ]
