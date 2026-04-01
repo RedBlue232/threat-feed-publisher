@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-01T01:00:00Z",
+  "generated_at": "2026-04-01T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 24,
-    "v4": 24,
+    "total": 25,
+    "v4": 25,
     "v6": 0
   },
   "items": [
@@ -265,6 +265,19 @@
       "first_seen": "2026-03-31T23:00:00Z",
       "last_seen": "2026-03-31T23:00:00Z",
       "scenarios": [
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "158.158.32.26",
+      "family": "v4",
+      "first_seen": "2026-04-01T09:00:00Z",
+      "last_seen": "2026-04-01T09:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
         "crowdsecurity/http-probing"
       ]
     }
