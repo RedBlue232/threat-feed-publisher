@@ -1,7 +1,7 @@
 {
   "schema_version": "1",
   "ttl_days": 7,
-  "updated_at": "2026-03-31T13:00:01.421311Z",
+  "updated_at": "2026-04-01T01:00:01.430455Z",
   "items": {
     "51.103.36.25": {
       "ip": "51.103.36.25",
@@ -570,6 +570,23 @@
       },
       "last_alert_id": 5334,
       "last_alert_uuid": "adec55d6-b826-408c-925c-386126cede04",
+      "machines": [
+        "localhost"
+      ]
+    },
+    "8.209.96.179": {
+      "ip": "8.209.96.179",
+      "family": "v4",
+      "first_seen": "2026-03-31T23:39:30Z",
+      "last_seen": "2026-03-31T23:39:30Z",
+      "scenarios": {
+        "crowdsecurity/http-probing": {
+          "count": 1,
+          "last_seen": "2026-03-31T23:39:30Z"
+        }
+      },
+      "last_alert_id": 5348,
+      "last_alert_uuid": "7393b429-2f2e-4e21-954d-e507ea6ea882",
       "machines": [
         "localhost"
       ]
