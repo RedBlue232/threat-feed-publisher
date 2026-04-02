@@ -1,21 +1,12 @@
 {
-  "generated_at": "2026-04-01T13:00:00Z",
+  "generated_at": "2026-04-02T01:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 25,
-    "v4": 25,
+    "total": 31,
+    "v4": 31,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "51.103.36.25",
-      "family": "v4",
-      "first_seen": "2026-03-25T14:00:00Z",
-      "last_seen": "2026-03-25T14:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-probing"
-      ]
-    },
     {
       "ip": "74.235.238.88",
       "family": "v4",
@@ -279,6 +270,82 @@
         "crowdsecurity/http-crawl-non_statics",
         "crowdsecurity/http-wordpress-scan",
         "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "135.119.16.170",
+      "family": "v4",
+      "first_seen": "2026-04-02T00:00:00Z",
+      "last_seen": "2026-04-02T00:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-cve-probing"
+      ]
+    },
+    {
+      "ip": "172.213.236.116",
+      "family": "v4",
+      "first_seen": "2026-04-02T00:00:00Z",
+      "last_seen": "2026-04-02T00:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "23.101.4.52",
+      "family": "v4",
+      "first_seen": "2026-04-01T22:00:00Z",
+      "last_seen": "2026-04-01T22:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "20.223.180.142",
+      "family": "v4",
+      "first_seen": "2026-04-01T22:00:00Z",
+      "last_seen": "2026-04-01T22:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "172.190.142.176",
+      "family": "v4",
+      "first_seen": "2026-04-01T19:00:00Z",
+      "last_seen": "2026-04-01T19:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-wordpress-scan"
+      ]
+    },
+    {
+      "ip": "74.248.144.184",
+      "family": "v4",
+      "first_seen": "2026-04-01T18:00:00Z",
+      "last_seen": "2026-04-01T18:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "20.169.104.253",
+      "family": "v4",
+      "first_seen": "2026-04-01T17:00:00Z",
+      "last_seen": "2026-04-01T17:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-cve-probing"
       ]
     }
   ]
