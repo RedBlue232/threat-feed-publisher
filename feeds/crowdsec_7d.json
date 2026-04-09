@@ -1,32 +1,12 @@
 {
-  "generated_at": "2026-04-09T01:00:00Z",
+  "generated_at": "2026-04-09T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 40,
-    "v4": 40,
+    "total": 39,
+    "v4": 39,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "199.45.155.75",
-      "family": "v4",
-      "first_seen": "2026-04-02T07:00:00Z",
-      "last_seen": "2026-04-02T07:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-bad-user-agent"
-      ]
-    },
-    {
-      "ip": "51.107.85.44",
-      "family": "v4",
-      "first_seen": "2026-04-02T05:00:00Z",
-      "last_seen": "2026-04-02T05:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-crawl-non_statics",
-        "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing"
-      ]
-    },
     {
       "ip": "185.177.72.61",
       "family": "v4",
@@ -429,6 +409,17 @@
       "last_seen": "2026-04-08T19:00:00Z",
       "scenarios": [
         "crowdsecurity/http-bad-user-agent"
+      ]
+    },
+    {
+      "ip": "52.5.136.60",
+      "family": "v4",
+      "first_seen": "2026-04-09T12:00:00Z",
+      "last_seen": "2026-04-09T12:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-probing"
       ]
     }
   ]
