@@ -1,0 +1,31 @@
+{
+  "d177856e-6e46-44ee-8eb5-83ef1c7452c7": {
+    "Orgc": {
+      "id": "1",
+      "name": "cyberdefense.blue",
+      "uuid": "465c0f1d-a9cb-40fb-9ac0-2aeba492ef16",
+      "local": true
+    },
+    "Tag": [
+      {
+        "id": "6",
+        "name": "crowdsec-feed",
+        "colour": "#339c19",
+        "exportable": true,
+        "user_id": "0",
+        "hide_tag": false,
+        "numerical_value": null,
+        "is_galaxy": false,
+        "is_custom_galaxy": false,
+        "local_only": false,
+        "local": false,
+        "relationship_type": null
+      }
+    ],
+    "info": "CrowdSec rolling feed (7 jours)",
+    "date": "2026-03-21",
+    "analysis": "2",
+    "threat_level_id": "3",
+    "timestamp": "1775955609"
+  }
+}
