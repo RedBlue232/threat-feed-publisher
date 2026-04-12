@@ -1,8 +1,8 @@
 services:
-  crowdsec-feed:
+  threat-feed-publisher:
     build:
       context: ./scripts
-    container_name: crowdsec-feed
+    container_name: threat-feed-publisher
     restart: unless-stopped
     env_file:
       - .env
