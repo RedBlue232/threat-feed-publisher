@@ -1,2 +1,5 @@
-# Toutes les 12h — décalé à 01:00 et 13:00 pour éviter les pics
+# CrowdSec → feed + MISP (existant)
 0 1,13 * * * python /app/feed.py
+
+# MISP event → feed GitHub (nouveau) — décalé de 30 min
+30 1,13 * * * python /app/misp_export.py

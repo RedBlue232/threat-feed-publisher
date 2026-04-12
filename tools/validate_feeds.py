@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Valide la fraîcheur et la forme des feeds CrowdSec."""
+"""Valide la fraîcheur et la forme des feeds CrowdSec + MISP."""
 import json, re, sys
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
 FEEDS_DIR = Path("feeds")
 STATE_DIR = Path("state")
+MISP_FEED_DIR = Path("misp-feed")
 MAX_AGE_HOURS = 26  # 12h cadence + 2h marge
 IP_RE = re.compile(
     r"^(\d{1,3}\.){3}\d{1,3}$"          # IPv4
@@ -13,6 +14,10 @@ IP_RE = re.compile(
 )
 
 errors = []
+
+# ---------------------------------------------------------------------------
+# Feed CrowdSec
+# ---------------------------------------------------------------------------
 
 # 1. Vérifier que les fichiers existent
 for f in ["crowdsec_7d.txt", "crowdsec_7d_v4.txt", "crowdsec_7d_v6.txt", "crowdsec_7d.json"]:
@@ -28,7 +33,7 @@ else:
     updated_at = datetime.fromisoformat(status["updated_at"].replace("Z", "+00:00"))
     age = datetime.now(timezone.utc) - updated_at
     if age > timedelta(hours=MAX_AGE_HOURS):
-        errors.append(f"Feed trop ancien : {age} (max {MAX_AGE_HOURS}h)")
+        errors.append(f"Feed CrowdSec trop ancien : {age} (max {MAX_AGE_HOURS}h)")
 
 # 3. Vérifier le format des TXT (une IP/CIDR par ligne)
 txt_path = FEEDS_DIR / "crowdsec_7d.txt"
@@ -48,6 +53,61 @@ if json_path.exists():
         assert "items" in data and "generated_at" in data
     except Exception as e:
         errors.append(f"crowdsec_7d.json invalide : {e}")
+
+# ---------------------------------------------------------------------------
+# Feed MISP (optionnel — validé seulement si le dossier existe)
+# ---------------------------------------------------------------------------
+
+if MISP_FEED_DIR.exists():
+    # 5. Fichiers obligatoires du format Feed MISP
+    for f in ["manifest.json", "hashes.csv"]:
+        if not (MISP_FEED_DIR / f).exists():
+            errors.append(f"Fichier manquant : misp-feed/{f}")
+
+    # 6. Manifest valide + cohérence avec les fichiers d'events + fraîcheur
+    manifest_path = MISP_FEED_DIR / "manifest.json"
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text())
+            if not manifest:
+                errors.append("misp-feed/manifest.json est vide")
+            for uuid, meta in manifest.items():
+                # Fichier d'event présent ?
+                if not (MISP_FEED_DIR / f"{uuid}.json").exists():
+                    errors.append(f"Event MISP {uuid} référencé mais fichier manquant")
+                    continue
+                # Event parsable + structure attendue ?
+                try:
+                    evt = json.loads((MISP_FEED_DIR / f"{uuid}.json").read_text())
+                    if "Event" not in evt or evt["Event"].get("uuid") != uuid:
+                        errors.append(f"misp-feed/{uuid}.json : structure invalide")
+                except Exception as e:
+                    errors.append(f"misp-feed/{uuid}.json invalide : {e}")
+                # Fraîcheur du timestamp MISP (epoch stocké en string)
+                try:
+                    ts = datetime.fromtimestamp(int(meta["timestamp"]), tz=timezone.utc)
+                    age = datetime.now(timezone.utc) - ts
+                    if age > timedelta(hours=MAX_AGE_HOURS):
+                        errors.append(f"Event MISP {uuid} trop ancien : {age} (max {MAX_AGE_HOURS}h)")
+                except (KeyError, ValueError) as e:
+                    errors.append(f"Event MISP {uuid} : timestamp illisible ({e})")
+        except Exception as e:
+            errors.append(f"misp-feed/manifest.json invalide : {e}")
+
+    # 7. hashes.csv : format "<uuid>,<md5>" par ligne
+    hashes_path = MISP_FEED_DIR / "hashes.csv"
+    if hashes_path.exists():
+        for i, line in enumerate(hashes_path.read_text().splitlines(), 1):
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split(",")
+            if len(parts) != 2 or len(parts[1]) != 32:
+                errors.append(f"Ligne invalide dans hashes.csv:{i} → {line!r}")
+
+# ---------------------------------------------------------------------------
+# Résultat
+# ---------------------------------------------------------------------------
 
 if errors:
     print("Validation échouée :")

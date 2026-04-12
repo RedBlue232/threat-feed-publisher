@@ -3,6 +3,8 @@ name: Validate feeds
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'misp-feed/**'
   pull_request:
     branches: [main]
 
