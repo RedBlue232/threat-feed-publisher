@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-13T01:00:00Z",
+  "generated_at": "2026-04-13T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 45,
-    "v4": 45,
+    "total": 40,
+    "v4": 40,
     "v6": 0
   },
   "items": [
@@ -15,92 +15,6 @@
       "scenarios": [
         "crowdsecurity/http-probing",
         "crowdsecurity/http-sensitive-files"
-      ]
-    },
-    {
-      "ip": "20.89.241.241",
-      "family": "v4",
-      "first_seen": "2026-04-04T20:00:00Z",
-      "last_seen": "2026-04-06T04:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing",
-        "crowdsecurity/http-admin-interface-probing",
-        "crowdsecurity/http-backdoors-attempts"
-      ]
-    },
-    {
-      "ip": "47.253.11.110",
-      "family": "v4",
-      "first_seen": "2026-04-06T00:00:00Z",
-      "last_seen": "2026-04-06T01:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-probing",
-        "crowdsecurity/http-sensitive-files",
-        "crowdsecurity/http-crawl-non_statics"
-      ]
-    },
-    {
-      "ip": "20.220.232.240",
-      "family": "v4",
-      "first_seen": "2026-04-06T12:00:00Z",
-      "last_seen": "2026-04-06T12:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-admin-interface-probing",
-        "crowdsecurity/http-crawl-non_statics",
-        "crowdsecurity/http-backdoors-attempts",
-        "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing"
-      ]
-    },
-    {
-      "ip": "51.103.237.230",
-      "family": "v4",
-      "first_seen": "2026-04-06T10:00:00Z",
-      "last_seen": "2026-04-06T10:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-crawl-non_statics",
-        "crowdsecurity/http-wordpress-scan",
-        "crowdsecurity/http-probing"
-      ]
-    },
-    {
-      "ip": "84.200.73.111",
-      "family": "v4",
-      "first_seen": "2026-04-06T06:00:00Z",
-      "last_seen": "2026-04-06T06:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-cve-probing"
-      ]
-    },
-    {
-      "ip": "45.89.60.68",
-      "family": "v4",
-      "first_seen": "2026-04-06T04:00:00Z",
-      "last_seen": "2026-04-06T04:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-bad-user-agent"
-      ]
-    },
-    {
-      "ip": "20.199.97.195",
-      "family": "v4",
-      "first_seen": "2026-04-06T03:00:00Z",
-      "last_seen": "2026-04-06T03:00:00Z",
-      "scenarios": [
-        "crowdsecurity/http-backdoors-attempts",
-        "crowdsecurity/http-admin-interface-probing",
-        "crowdsecurity/http-probing",
-        "crowdsecurity/http-wordpress-scan"
-      ]
-    },
-    {
-      "ip": "79.124.40.174",
-      "family": "v4",
-      "first_seen": "2026-04-06T01:00:00Z",
-      "last_seen": "2026-04-06T01:00:00Z",
-      "scenarios": [
-        "crowdsecurity/CVE-2017-9841"
       ]
     },
     {
@@ -483,6 +397,41 @@
       "first_seen": "2026-04-12T16:00:00Z",
       "last_seen": "2026-04-12T16:00:00Z",
       "scenarios": [
+        "crowdsecurity/http-probing",
+        "crowdsecurity/http-sensitive-files"
+      ]
+    },
+    {
+      "ip": "51.107.185.94",
+      "family": "v4",
+      "first_seen": "2026-04-13T04:00:00Z",
+      "last_seen": "2026-04-13T04:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-backdoors-attempts",
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "20.151.248.149",
+      "family": "v4",
+      "first_seen": "2026-04-13T04:00:00Z",
+      "last_seen": "2026-04-13T04:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-crawl-non_statics",
+        "crowdsecurity/http-wordpress-scan",
+        "crowdsecurity/http-probing"
+      ]
+    },
+    {
+      "ip": "185.177.72.29",
+      "family": "v4",
+      "first_seen": "2026-04-13T01:00:00Z",
+      "last_seen": "2026-04-13T01:00:00Z",
+      "scenarios": [
+        "crowdsecurity/http-admin-interface-probing",
+        "crowdsecurity/http-crawl-non_statics",
         "crowdsecurity/http-probing",
         "crowdsecurity/http-sensitive-files"
       ]
