@@ -380,6 +380,25 @@ def round_to_hour(iso: str) -> str:
     return iso[:13] + ":00:00Z"
 
 
+def _sanitize_db_for_publish(db: dict) -> dict:
+    """Retourne une copie du DB privée des champs internes qu'on ne veut pas
+    exposer publiquement sur GitHub. Aujourd'hui : `machines` dans chaque
+    `sources.<name>` (nom de la machine CrowdSec → potentiellement sensible).
+
+    Le DB en mémoire reste intact pour le run courant ; seul le fichier
+    sérialisé `state/db.json` poussé sur GitHub est assaini. Conséquence :
+    `machines` ne persiste pas entre runs (repopulé à chaque fetch à partir
+    des alertes fraîches), ce qui est acceptable puisque l'info n'est pas
+    utilisée en logique cross-run.
+    """
+    import copy
+    pub = copy.deepcopy(db)
+    for item in pub.get("items", {}).values():
+        for src_block in item.get("sources", {}).values():
+            src_block.pop("machines", None)
+    return pub
+
+
 def generate_outputs(db: dict) -> dict:
     records = list(db["items"].values())
     ips_all = sorted(r["ip"] for r in records)
@@ -424,7 +443,7 @@ def generate_outputs(db: dict) -> dict:
         status["sources"] = dict(sorted(source_counts.items()))
 
     return {
-        "state/db.json":            json.dumps(db, indent=2),
+        "state/db.json":            json.dumps(_sanitize_db_for_publish(db), indent=2),
         "state/status.json":        json.dumps(status, indent=2),
         "feeds/crowdsec_7d.txt":    "\n".join(ips_all) + "\n",
         "feeds/crowdsec_7d_v4.txt": "\n".join(ips_v4)  + "\n",
