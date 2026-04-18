@@ -1,8 +1,8 @@
-# CrowdSec CTI Feed
+# Threat Feed Publisher
 
-Public threat feed built from alerts collected by my self-hosted CrowdSec instance.
+Public threat feed built from alerts collected by self-hosted sensors.
 
-It publishes a rolling 7-day list of source IPs seen triggering CrowdSec scenarios, updated every 12 hours. A curated MISP feed is also published alongside the plain text and JSON feeds for threat intelligence platforms.
+It publishes a rolling 7-day list of source IPs seen triggering detection scenarios, updated every 12 hours. Sources currently supported: **CrowdSec** (LAPI) and **Suricata on pfSense** (via Splunk). A curated MISP feed is also published alongside the plain text and JSON feeds for threat intelligence platforms.
 
 > This is a best-effort feed derived from a single self-hosted sensor. It may contain false positives, stale entries, or shared infrastructure IPs — review it before enforcing it blindly.
 
@@ -31,7 +31,7 @@ Plain text feeds follow the **one IP per line** format, directly consumable by f
 2001:db8::1
 ```
 
-The enriched JSON feed includes scenarios and timestamps rounded to the hour:
+The enriched JSON feed includes scenarios, timestamps rounded to the hour, and the originating sources:
 ```json
 {
   "generated_at": "2026-03-21T12:00:00Z",
@@ -43,11 +43,14 @@ The enriched JSON feed includes scenarios and timestamps rounded to the hour:
       "family": "v4",
       "first_seen": "2026-03-15T08:00:00Z",
       "last_seen":  "2026-03-21T11:00:00Z",
-      "scenarios":  ["crowdsecurity/ssh-bf", "crowdsecurity/http-probing"]
+      "scenarios":  ["crowdsec/ssh-bf", "suricata/ET SCAN Zmap User-Agent (Inbound)"],
+      "sources":    ["crowdsec", "suricata"]
     }
   ]
 }
 ```
+
+Scenarios are prefixed by their originating source (`crowdsec/…`, `suricata/…`). The optional `sources` field lists every sensor that has observed the IP within the rolling window — useful to gauge corroboration across detectors.
 
 The MISP feed is the standard MISP feed layout (`manifest.json`, `hashes.csv`, `<uuid>.json`), directly subscribable from any MISP instance — see [MISP subscription](#misp-subscription).
 
@@ -78,18 +81,22 @@ This project pulls those alerts, deduplicates them by IP, keeps entries for 7 da
 ## Architecture
 
 ```
-CrowdSec LAPI  ──(JWT auth)──▶  feed.py  ──▶  GitHub (feeds/*.txt, feeds/*.json, state/)
-                                   │
-                                   └────────▶  MISP event (ip-src attributes)
-                                                    │
-                                                    ▼
-                                            misp_export.py  ──▶  GitHub (misp-feed/)
+CrowdSec LAPI  ──(JWT auth)──▶┐
+                              │
+Splunk (suricata_block)  ─────┼──▶  feed.py  ──▶  GitHub (feeds/*.txt, feeds/*.json, state/)
+                              │        │
+                              │        └────────▶  MISP event (ip-src attributes)
+                              │                         │
+                                                        ▼
+                                                misp_export.py  ──▶  GitHub (misp-feed/)
 ```
 
 The pipeline runs in Docker, scheduled with [supercronic](https://github.com/aptible/supercronic):
 
-1. **`feed.py`** authenticates to the CrowdSec LAPI as a watcher (JWT), fetches recent alerts, normalizes them, deduplicates by IP, merges with the existing state, applies 7-day TTL purge based on `last_seen`, publishes text and JSON feeds to GitHub, and updates a single rolling MISP event.
+1. **`feed.py`** authenticates to each configured source (CrowdSec LAPI via JWT, Splunk via auth token), fetches recent alerts, normalizes them, deduplicates by IP across sources, merges with the existing state, applies the TTL purge based on `last_seen`, publishes text and JSON feeds to GitHub, and updates a single rolling MISP event. Sources are independent: disabling one does not affect the others, and a transient failure on one source does not interrupt the run (unless every source fails).
 2. **`misp_export.py`** fetches that MISP event, sanitizes it (strips internal IDs, creator email, sightings), and publishes it to GitHub as a standard MISP feed.
+
+Internally, each IP record carries a `sources` dictionary that discriminates per-source observations (counts, timestamps, sensor metadata). The state schema is versioned (`schema_version: "2"`); older v1 state files are migrated automatically on first load.
 
 ---
 
@@ -102,6 +109,7 @@ The pipeline runs in Docker, scheduled with [supercronic](https://github.com/apt
 - A GitHub repository, preferably public if the feeds are meant to be consumed directly by firewalls or third-party systems
 - A GitHub fine-grained token with **Contents: read/write** scoped to this repo
 - *(Optional)* A MISP instance — required only if you want to publish the MISP feed
+- *(Optional)* A Splunk instance ingesting the Suricata `block.log` from pfSense — required only if you want to add Suricata as a second source (see [Suricata via Splunk](#suricata-via-splunk))
 
 ### 1. Register a CrowdSec watcher machine
 
@@ -187,6 +195,110 @@ Copy `env.example` to `.env` and fill in your values. **Never commit `.env`** �
 | `MISP_VERIFY_SSL` | — | `true` / `false`, default `true` |
 | `MISP_EVENT_UUID` | ✅ *(for `misp_export.py`)* | UUID of the MISP event to publish as a feed |
 | `MISP_FEED_DIR` | — | Subfolder of the repo used as MISP feed root, default `misp-feed` |
+| `SURICATA_ENABLED` | — | `true` / `false`, default `false`. Master switch for the Suricata source. |
+| `SPLUNK_URL` | — | Splunk REST base URL (e.g. `https://splunk.example.com:8089`). Required if `SURICATA_ENABLED=true`. |
+| `SPLUNK_TOKEN` | — | Splunk auth token scoped to a minimal-privilege role (see [Suricata via Splunk](#suricata-via-splunk)). |
+| `SPLUNK_INDEX_BLOCK` | — | Splunk index containing Suricata `block.log`, default `suricata_block`. |
+| `SPLUNK_LOOKBACK` | — | Search window, default `13h`. Accepts Splunk time syntax (`s`, `m`, `h`, `d`, `w`, `M`, `y`). |
+| `SPLUNK_VERIFY_SSL` | — | `true` / `false`, default `true`. **Keep on** unless you have a very good reason. |
+| `SURICATA_MIN_PRIORITY` | — | Optional severity filter. Keep only events whose Suricata priority is ≤ this value (lower = more severe). Empty = no filter. |
+
+### Debug / test flags
+
+These are not meant for production and are intentionally absent from `env.example`. Set them temporarily when iterating locally:
+
+| Variable | Effect |
+|---|---|
+| `DRY_RUN=true` | Skip GitHub publish and MISP push. Writes outputs to `DRY_RUN_DIR` (default `/tmp/feed-output`) instead. |
+| `MIGRATE_ONLY=true` | Run the v1→v2 schema migration against the current `state/db.json`, write the result locally, and stop. |
+| `CROWDSEC_ONLY=true` | Skip the Suricata source for this run. |
+| `SURICATA_ONLY=true` | Skip the CrowdSec source for this run. |
+| `DRY_RUN_DIR` | Override the destination directory for `DRY_RUN` / `MIGRATE_ONLY` outputs. |
+
+---
+
+## Suricata via Splunk
+
+The Suricata source is optional and disabled by default. When enabled, `feed.py` queries a Splunk instance that already ingests the pfSense Suricata `block.log`, extracts the blocked IPs with their signature / classification / priority, and merges them with the CrowdSec state under a unified per-IP record.
+
+### Why via Splunk and not directly from pfSense
+
+Pulling `block.log` or `eve.json` directly from pfSense (SSH, syslog, Redis) would either require a long-running listener in the container or a second file-shipping path. If you already forward pfSense logs to Splunk for SIEM purposes, querying Splunk gives you rich, already-parsed data with no additional change on pfSense. The publisher uses the cron-friendly synchronous `/services/search/jobs/export` endpoint.
+
+### Security model
+
+This integration is designed to be safe for a public repository:
+
+- **Least-privilege Splunk role.** Create a dedicated role (e.g. `threat_feed_reader`) with only the `search` capability and read access restricted to the block index. Never reuse an admin or power-user token. Example role setup via Splunk UI: *Settings → Access controls → Roles → New Role → Capabilities: `search` only → Indexes: only `suricata_block` selected (all others unchecked)*.
+- **Dedicated auth token.** Generate a Splunk auth token attached to a service user that holds *only* the `threat_feed_reader` role: *Settings → Tokens → New Token*. Set an expiration matching your rotation policy. Put the token in `.env` (`SPLUNK_TOKEN`); never commit it.
+- **Strict TLS.** `SPLUNK_VERIFY_SSL=true` by default. Only disable on disposable lab setups. The container trusts standard CAs, so a Let's Encrypt certificate on your Splunk endpoint works out of the box.
+- **Hardened SPL.** The search query is built from a template in [`scripts/suricata.py`](scripts/suricata.py). Only `SPLUNK_INDEX_BLOCK` (strictly validated to `[A-Za-z0-9_-]+`) and `SPLUNK_LOOKBACK` (matching Splunk time syntax) are interpolated. No user content is reflected into the SPL.
+- **IP validation.** Every IP extracted from Splunk is validated with Python's `ipaddress` module. Non-global addresses (private RFC1918, loopback, link-local, multicast, reserved) are rejected and never reach the feed — this protects the public output even if the log parsing ever misbehaves.
+- **Token never logged.** The token flows only through the `Authorization: Bearer …` header. Logs report `verify_ssl`, `lookback`, and `index` but never the token value.
+- **Graceful failure isolation.** If Splunk is unreachable, the run logs the error and continues with CrowdSec data only. The state is never overwritten with an empty DB.
+
+### 1. Verify the data in Splunk
+
+Before enabling the integration, confirm that the block events are where you expect. In Splunk, run:
+
+```
+search index=suricata_block earliest=-13h
+| head 5
+```
+
+The raw events should look like:
+
+```
+04/18/2026-10:24:31.365412  [Block Src] [**] [1:2021076:3] ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response [**] [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} 172.189.127.19:80
+```
+
+Then run the full extraction SPL (the same template the publisher uses) to validate that the regex captures every field correctly on your deployment:
+
+```
+search index=suricata_block earliest=-13h
+| rex field=_raw "\[Block (?<block_dir>Src|Dst)\] \[\*\*\] \[(?<gid>\d+):(?<sid>\d+):(?<rev>\d+)\] (?<signature>[^\[]+?) \[\*\*\] \[Classification: (?<classification>[^\]]+)\] \[Priority: (?<priority>\d+)\] \{(?<proto>\w+)\} (?<blocked_ip>[0-9a-fA-F\.:]+):(?<blocked_port>\d+)"
+| where isnotnull(blocked_ip)
+| table _time, blocked_ip, sid, signature, classification, priority, block_dir
+```
+
+If any `blocked_ip` is empty or a signature looks truncated, the regex needs adjustment for your block.log variant — open an issue before enabling the integration.
+
+### 2. Configure the publisher
+
+In `.env`:
+
+```
+SURICATA_ENABLED=true
+SPLUNK_URL=https://splunk.example.com:8089
+SPLUNK_TOKEN=<token_generated_in_step_1>
+SPLUNK_INDEX_BLOCK=suricata_block
+SPLUNK_LOOKBACK=13h
+SPLUNK_VERIFY_SSL=true
+```
+
+### 3. Dry-run locally before publishing
+
+```bash
+# Run the whole pipeline without writing to GitHub or MISP.
+docker run --rm --env-file .env -e DRY_RUN=true \
+  threat-feed-publisher:latest python /app/feed.py
+
+# Or isolate the Suricata source to verify the Splunk leg in isolation.
+docker run --rm --env-file .env -e DRY_RUN=true -e SURICATA_ONLY=true \
+  threat-feed-publisher:latest python /app/feed.py
+```
+
+Inspect the generated files in the container path `/tmp/feed-output/` (mount a volume if you want them on the host).
+
+### 4. Current scope
+
+In the current phase the Suricata source produces:
+
+- An entry per blocked IP under `sources.suricata` in the internal state (`count`, `first_seen`, `last_seen`, deduplicated `sids`, most severe observed `priority`).
+- Prefixed scenarios of the form `suricata/<signature>` in `feeds/crowdsec_7d.json`.
+- Inclusion of `suricata` in the per-item `sources` list of the enriched JSON feed.
+
+The following are intentionally out of scope for now and will be addressed in follow-up phases: per-source split feeds (`crowdsec_7d.txt` vs `suricata_7d.txt` vs `global_7d.txt`), per-source MISP event separation and `source:*` attribute tags, and the payload enrichment from `eve.json`.
 
 ---
 

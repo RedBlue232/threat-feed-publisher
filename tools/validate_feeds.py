@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Valide la fraîcheur et la forme des feeds CrowdSec + MISP."""
+"""Valide la fraîcheur et la forme des feeds CrowdSec + MISP.
+
+Supporte le schéma v2 (multi-source) : les items peuvent porter un champ
+optionnel `sources` (liste) et des scénarios préfixés `<source>/…`.
+"""
 import json, re, sys
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
@@ -13,7 +17,15 @@ IP_RE = re.compile(
     r"|^[0-9a-fA-F:]+$"                  # IPv6 simplifié
 )
 
-errors = []
+# Sources connues en phase 1. Toute source non listée ici → warning (pas erreur).
+KNOWN_SOURCES = {"crowdsec", "suricata"}
+
+# Un scénario valide est soit "legacy" (crowdsecurity/…, conservé pour compat
+# transitoire) soit préfixé par une source : "<source>/<nom>".
+SCENARIO_RE = re.compile(r"^[a-zA-Z0-9_\-]+/.+$")
+
+errors: list[str] = []
+warnings: list[str] = []
 
 # ---------------------------------------------------------------------------
 # Feed CrowdSec
@@ -33,7 +45,7 @@ else:
     updated_at = datetime.fromisoformat(status["updated_at"].replace("Z", "+00:00"))
     age = datetime.now(timezone.utc) - updated_at
     if age > timedelta(hours=MAX_AGE_HOURS):
-        errors.append(f"Feed CrowdSec trop ancien : {age} (max {MAX_AGE_HOURS}h)")
+        errors.append(f"Feed trop ancien : {age} (max {MAX_AGE_HOURS}h)")
 
 # 3. Vérifier le format des TXT (une IP/CIDR par ligne)
 txt_path = FEEDS_DIR / "crowdsec_7d.txt"
@@ -50,7 +62,27 @@ json_path = FEEDS_DIR / "crowdsec_7d.json"
 if json_path.exists():
     try:
         data = json.loads(json_path.read_text())
-        assert "items" in data and "generated_at" in data
+        assert "items" in data and "generated_at" in data, "champs obligatoires manquants"
+
+        for idx, item in enumerate(data.get("items", []), 1):
+            # scénarios : liste de strings préfixées
+            scenarios = item.get("scenarios", [])
+            if not isinstance(scenarios, list):
+                errors.append(f"items[{idx}].scenarios doit être une liste")
+                continue
+            for sc in scenarios:
+                if not isinstance(sc, str) or not SCENARIO_RE.match(sc):
+                    errors.append(f"items[{idx}].scenarios: scénario mal formé {sc!r}")
+
+            # sources : optionnel, liste de strings
+            if "sources" in item:
+                srcs = item["sources"]
+                if not isinstance(srcs, list) or not all(isinstance(s, str) for s in srcs):
+                    errors.append(f"items[{idx}].sources doit être une liste de strings")
+                else:
+                    for s in srcs:
+                        if s not in KNOWN_SOURCES:
+                            warnings.append(f"items[{idx}].sources: source inconnue {s!r}")
     except Exception as e:
         errors.append(f"crowdsec_7d.json invalide : {e}")
 
@@ -108,6 +140,11 @@ if MISP_FEED_DIR.exists():
 # ---------------------------------------------------------------------------
 # Résultat
 # ---------------------------------------------------------------------------
+
+if warnings:
+    print("Warnings :")
+    for w in warnings:
+        print(f"  - {w}")
 
 if errors:
     print("Validation échouée :")

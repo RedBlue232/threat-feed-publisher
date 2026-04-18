@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-CrowdSec Feed Publisher
-- Collecte les alertes CrowdSec via LAPI (auth watcher)
-- Maintient un TTL glissant de 7 jours basé sur last_seen
+Threat Feed Publisher
+- Collecte les alertes depuis plusieurs sources (CrowdSec LAPI, Suricata via Splunk)
+- Maintient un TTL glissant (default 7 jours) basé sur last_seen
 - Publie les feeds TXT + JSON sur GitHub
-- Pousse les IOCs vers MISP via PyMISP
+- Pousse les IOCs vers MISP via PyMISP (optionnel)
+
+Schéma interne v2 : chaque IP porte un dict `sources` qui discrimine l'origine
+de l'observation (crowdsec, suricata, ...). Une migration automatique est
+appliquée à la première lecture d'un state/db.json au schéma v1.
 """
 
 import os
@@ -13,6 +17,7 @@ import base64
 import logging
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
 import requests
 
@@ -46,6 +51,23 @@ MISP_VERIFY_SSL = os.environ.get("MISP_VERIFY_SSL", "false").lower() == "true"
 # Tag utilisé pour retrouver l'événement MISP entre les runs
 MISP_EVENT_TAG  = "crowdsec-feed"
 
+# Suricata via Splunk — optionnels, désactivés par défaut
+SURICATA_ENABLED      = os.environ.get("SURICATA_ENABLED", "false").lower() == "true"
+SPLUNK_URL            = os.environ.get("SPLUNK_URL", "")
+SPLUNK_TOKEN          = os.environ.get("SPLUNK_TOKEN", "")
+SPLUNK_INDEX_BLOCK    = os.environ.get("SPLUNK_INDEX_BLOCK", "suricata_block")
+SPLUNK_LOOKBACK       = os.environ.get("SPLUNK_LOOKBACK", "13h")
+SPLUNK_VERIFY_SSL     = os.environ.get("SPLUNK_VERIFY_SSL", "true").lower() == "true"
+_min_prio_raw         = os.environ.get("SURICATA_MIN_PRIORITY", "").strip()
+SURICATA_MIN_PRIORITY = int(_min_prio_raw) if _min_prio_raw else None
+
+# Flags de debug / test — jamais publiés dans env.example (documentés dans le README)
+DRY_RUN        = os.environ.get("DRY_RUN", "false").lower() == "true"
+MIGRATE_ONLY   = os.environ.get("MIGRATE_ONLY", "false").lower() == "true"
+CROWDSEC_ONLY  = os.environ.get("CROWDSEC_ONLY", "false").lower() == "true"
+SURICATA_ONLY  = os.environ.get("SURICATA_ONLY", "false").lower() == "true"
+DRY_RUN_DIR    = Path(os.environ.get("DRY_RUN_DIR", "/tmp/feed-output"))
+
 # ---------------------------------------------------------------------------
 # Logging
 # ---------------------------------------------------------------------------
@@ -65,6 +87,12 @@ def now_iso() -> str:
 
 def ip_family(ip: str) -> str:
     return "v6" if ":" in ip else "v4"
+
+def iso_to_dt(iso: str) -> datetime:
+    return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+
+def iso_to_ms(iso: str) -> float:
+    return iso_to_dt(iso).timestamp() * 1000
 
 
 # ---------------------------------------------------------------------------
@@ -88,27 +116,31 @@ def lapi_login() -> str:
 
 
 # ---------------------------------------------------------------------------
-# 2. Fetch alertes
+# 2. Fetch alertes CrowdSec
 # ---------------------------------------------------------------------------
 
 def fetch_alerts(token: str) -> list:
     url = f"{LAPI_BASE}/alerts"
     params = {"since": LOOKBACK, "limit": 0}
     headers = {"Authorization": f"Bearer {token}"}
-    log.info("Fetch alertes → %s (since=%s)", url, LOOKBACK)
+    log.info("Fetch alertes CrowdSec → %s (since=%s)", url, LOOKBACK)
     resp = requests.get(url, params=params, headers=headers, timeout=30)
     resp.raise_for_status()
     data = resp.json()
     alerts = data if isinstance(data, list) else data.get("alerts", [])
-    log.info("%d alertes reçues", len(alerts))
+    log.info("%d alertes CrowdSec reçues", len(alerts))
     return alerts
 
 
 # ---------------------------------------------------------------------------
-# 3. Normaliser
+# 3. Normalisation des alertes CrowdSec
+#
+# Produit des events au format commun :
+#   {ip, family, event_time, scenario (préfixé "crowdsec/"), source="crowdsec",
+#    alert_id, alert_uuid, machine_id}
 # ---------------------------------------------------------------------------
 
-def normalize_alerts(alerts: list) -> list:
+def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
     events = []
     for a in alerts:
         if a.get("simulated"):
@@ -118,21 +150,29 @@ def normalize_alerts(alerts: list) -> list:
         if not ip:
             continue
         event_time = a.get("created_at") or a.get("stop_at") or a.get("start_at") or now_iso()
+        raw_scenario = a.get("scenario") or "unknown"
+        # Normalise le préfixe : "crowdsecurity/xxx" ou "xxx" → "<source>/xxx"
+        if "/" in raw_scenario:
+            _, _, tail = raw_scenario.partition("/")
+            scenario = f"{source}/{tail}"
+        else:
+            scenario = f"{source}/{raw_scenario}"
         events.append({
             "ip":          ip,
             "family":      ip_family(ip),
             "event_time":  event_time,
-            "scenario":    a.get("scenario") or "unknown",
+            "scenario":    scenario,
+            "source":      source,
             "alert_id":    a.get("id"),
             "alert_uuid":  a.get("uuid"),
             "machine_id":  a.get("machine_id"),
         })
-    log.info("%d événements normalisés (IPs extraites)", len(events))
+    log.info("%d events %s normalisés", len(events), source)
     return events
 
 
 # ---------------------------------------------------------------------------
-# 4. GitHub
+# 4. GitHub (lecture toujours ; écriture désactivée en DRY_RUN)
 # ---------------------------------------------------------------------------
 
 GH_API = "https://api.github.com"
@@ -168,8 +208,108 @@ def gh_put_file(path: str, content: str, message: str, sha: str | None = None):
 
 
 # ---------------------------------------------------------------------------
-# 5. Fusion + TTL glissant 7 jours
+# 5. Migration schéma v1 → v2
+#
+# v1 (CrowdSec-only) :
+#   {ip, family, first_seen, last_seen, scenarios{"crowdsecurity/…":{count,last_seen}},
+#    last_alert_id, last_alert_uuid, machines[]}
+#
+# v2 (multi-source) :
+#   {ip, family, first_seen, last_seen,
+#    scenarios{"crowdsec/…":{count,last_seen}},
+#    sources{crowdsec:{count, first_seen, last_seen, machines[],
+#                      last_alert_id, last_alert_uuid}}}
+#
+# Idempotent : si schema_version=="2" ou si tous les items ont déjà `sources`,
+# aucune modification n'est effectuée.
 # ---------------------------------------------------------------------------
+
+def migrate_db_schema(db: dict) -> dict:
+    if db.get("schema_version") == "2":
+        return db
+
+    migrated = 0
+    items = db.get("items", {})
+    for ip, item in items.items():
+        if "sources" in item:
+            # Déjà migré (cas hybride après un run partiel)
+            continue
+
+        # Préfixe des scénarios : crowdsecurity/xxx → crowdsec/xxx
+        new_scenarios = {}
+        total_count = 0
+        for k, v in item.get("scenarios", {}).items():
+            if k.startswith("crowdsecurity/"):
+                new_key = "crowdsec/" + k[len("crowdsecurity/"):]
+            elif "/" not in k:
+                new_key = f"crowdsec/{k}"
+            else:
+                new_key = k
+            new_scenarios[new_key] = v
+            total_count += v.get("count", 0)
+        item["scenarios"] = new_scenarios
+
+        # Construction du bloc sources.crowdsec
+        crowdsec_src = {
+            "count":      total_count,
+            "first_seen": item["first_seen"],
+            "last_seen":  item["last_seen"],
+            "machines":   item.pop("machines", []) or [],
+        }
+        if "last_alert_id" in item:
+            crowdsec_src["last_alert_id"] = item.pop("last_alert_id")
+        if "last_alert_uuid" in item:
+            crowdsec_src["last_alert_uuid"] = item.pop("last_alert_uuid")
+
+        item["sources"] = {"crowdsec": crowdsec_src}
+        migrated += 1
+
+    db["schema_version"] = "2"
+    if migrated:
+        log.info("[migration] %d IPs migrées vers le schéma v2", migrated)
+    else:
+        log.info("[migration] schéma déjà v2, aucune migration nécessaire")
+    return db
+
+
+# ---------------------------------------------------------------------------
+# 6. Fusion + TTL glissant
+#
+# La clé de dédup reste l'IP. Les champs de niveau top (first_seen/last_seen)
+# reflètent l'observation la plus ancienne / la plus récente toutes sources
+# confondues. Les métadonnées par source vivent dans sources.<name>.
+# ---------------------------------------------------------------------------
+
+def _update_source_block(src_block: dict, ev: dict, t_ms: float) -> None:
+    """Met à jour un bloc sources.<name> avec un event normalisé."""
+    src_block["count"] += 1
+
+    if t_ms < iso_to_ms(src_block["first_seen"]):
+        src_block["first_seen"] = ev["event_time"]
+    is_newer = t_ms >= iso_to_ms(src_block["last_seen"])
+    if is_newer:
+        src_block["last_seen"] = ev["event_time"]
+
+    if ev["source"] == "crowdsec":
+        if ev.get("machine_id"):
+            machines = src_block.setdefault("machines", [])
+            if ev["machine_id"] not in machines:
+                machines.append(ev["machine_id"])
+        if is_newer and ev.get("alert_id") is not None:
+            src_block["last_alert_id"]   = ev["alert_id"]
+            src_block["last_alert_uuid"] = ev["alert_uuid"]
+    elif ev["source"] == "suricata":
+        if ev.get("sid") is not None:
+            sids = src_block.setdefault("sids", [])
+            if ev["sid"] not in sids:
+                sids.append(ev["sid"])
+        if ev.get("priority") is not None:
+            # Priority Suricata : plus petit = plus sévère. On retient la plus
+            # sévère observée sur cette IP (min).
+            current = src_block.get("max_priority")
+            if current is None or ev["priority"] < current:
+                src_block["max_priority"] = ev["priority"]
+
 
 def merge_and_ttl(events: list, db: dict) -> dict:
     ttl_ms = TTL_DAYS * 24 * 3600 * 1000
@@ -177,45 +317,51 @@ def merge_and_ttl(events: list, db: dict) -> dict:
 
     for ev in events:
         ip       = ev["ip"]
-        t_ms     = datetime.fromisoformat(
-            ev["event_time"].replace("Z", "+00:00")
-        ).timestamp() * 1000
+        t_ms     = iso_to_ms(ev["event_time"])
         scenario = ev["scenario"]
+        source   = ev["source"]
 
+        # Création de l'entrée IP si besoin
         if ip not in db["items"]:
             db["items"][ip] = {
-                "ip":              ip,
-                "family":          ev["family"],
-                "first_seen":      ev["event_time"],
-                "last_seen":       ev["event_time"],
-                "scenarios":       {},
-                "last_alert_id":   ev["alert_id"],
-                "last_alert_uuid": ev["alert_uuid"],
-                "machines":        [ev["machine_id"]] if ev["machine_id"] else [],
+                "ip":         ip,
+                "family":     ev["family"],
+                "first_seen": ev["event_time"],
+                "last_seen":  ev["event_time"],
+                "scenarios":  {},
+                "sources":    {},
             }
-        else:
-            r = db["items"][ip]
-            first_ms = datetime.fromisoformat(r["first_seen"].replace("Z", "+00:00")).timestamp() * 1000
-            last_ms  = datetime.fromisoformat(r["last_seen"].replace("Z", "+00:00")).timestamp() * 1000
-            if t_ms < first_ms:
-                r["first_seen"] = ev["event_time"]
-            if t_ms > last_ms:
-                r["last_seen"]       = ev["event_time"]
-                r["last_alert_id"]   = ev["alert_id"]
-                r["last_alert_uuid"] = ev["alert_uuid"]
-            if ev["machine_id"] and ev["machine_id"] not in r["machines"]:
-                r["machines"].append(ev["machine_id"])
-
         r = db["items"][ip]
-        if scenario not in r["scenarios"]:
-            r["scenarios"][scenario] = {"count": 0, "last_seen": r["last_seen"]}
-        r["scenarios"][scenario]["count"] += 1
-        r["scenarios"][scenario]["last_seen"] = r["last_seen"]
 
-    # Purge TTL
+        # Maj first/last_seen globaux
+        if t_ms < iso_to_ms(r["first_seen"]):
+            r["first_seen"] = ev["event_time"]
+        if t_ms > iso_to_ms(r["last_seen"]):
+            r["last_seen"] = ev["event_time"]
+
+        # Maj du bloc sources.<name>
+        if source not in r["sources"]:
+            r["sources"][source] = {
+                "count":      0,
+                "first_seen": ev["event_time"],
+                "last_seen":  ev["event_time"],
+            }
+            if source == "crowdsec":
+                r["sources"][source]["machines"] = []
+        _update_source_block(r["sources"][source], ev, t_ms)
+
+        # Maj du scénario
+        if scenario not in r["scenarios"]:
+            r["scenarios"][scenario] = {"count": 0, "last_seen": ev["event_time"]}
+        sc = r["scenarios"][scenario]
+        sc["count"] += 1
+        if t_ms > iso_to_ms(sc["last_seen"]):
+            sc["last_seen"] = ev["event_time"]
+
+    # Purge TTL (basée sur last_seen global)
     to_delete = [
         ip for ip, r in db["items"].items()
-        if (now_ms - datetime.fromisoformat(r["last_seen"].replace("Z", "+00:00")).timestamp() * 1000) > ttl_ms
+        if (now_ms - iso_to_ms(r["last_seen"])) > ttl_ms
     ]
     for ip in to_delete:
         del db["items"][ip]
@@ -226,7 +372,7 @@ def merge_and_ttl(events: list, db: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# 6. Générer les fichiers de sortie
+# 7. Générer les fichiers de sortie
 # ---------------------------------------------------------------------------
 
 def round_to_hour(iso: str) -> str:
@@ -240,18 +386,21 @@ def generate_outputs(db: dict) -> dict:
     ips_v4  = sorted(r["ip"] for r in records if r["family"] == "v4")
     ips_v6  = sorted(r["ip"] for r in records if r["family"] == "v6")
 
-    # Feed public : métadonnées internes retirées (machines, alert_id/uuid),
-    # timestamps arrondis à l'heure, scénarios sans compteurs.
-    public_items = [
-        {
+    # Feed public : métadonnées internes retirées (machines, sids, alert_id…),
+    # timestamps arrondis à l'heure, scénarios sans compteurs, sources nommées.
+    public_items = []
+    for r in records:
+        item = {
             "ip":         r["ip"],
             "family":     r["family"],
             "first_seen": round_to_hour(r["first_seen"]),
             "last_seen":  round_to_hour(r["last_seen"]),
-            "scenarios":  list(r["scenarios"].keys()),
+            "scenarios":  sorted(r["scenarios"].keys()),
         }
-        for r in records
-    ]
+        sources = sorted(r.get("sources", {}).keys())
+        if sources:
+            item["sources"] = sources
+        public_items.append(item)
 
     feed_json = {
         "generated_at": round_to_hour(db["updated_at"]),
@@ -260,12 +409,19 @@ def generate_outputs(db: dict) -> dict:
         "items":        public_items,
     }
 
-    # status.json : pas de lookback ni cadence (ne révèle pas le rythme d'ingestion)
+    # Décompte par source (utile au monitoring CI)
+    source_counts = {}
+    for r in records:
+        for s in r.get("sources", {}):
+            source_counts[s] = source_counts.get(s, 0) + 1
+
     status = {
         "updated_at": round_to_hour(db["updated_at"]),
         "ttl_days":   TTL_DAYS,
         "counts":     feed_json["counts"],
     }
+    if source_counts:
+        status["sources"] = dict(sorted(source_counts.items()))
 
     return {
         "state/db.json":            json.dumps(db, indent=2),
@@ -278,7 +434,7 @@ def generate_outputs(db: dict) -> dict:
 
 
 # ---------------------------------------------------------------------------
-# 7. Publier sur GitHub
+# 8. Publier sur GitHub (ou en local en DRY_RUN)
 # ---------------------------------------------------------------------------
 
 def publish_github(outputs: dict):
@@ -288,23 +444,31 @@ def publish_github(outputs: dict):
         gh_put_file(
             path=path,
             content=content,
-            message=f"chore: update {path} [crowdsec-feed]",
+            message=f"chore: update {path} [threat-feed]",
             sha=sha,
         )
 
 
-# ---------------------------------------------------------------------------
-# Helpers MISP
-# ---------------------------------------------------------------------------
+def write_outputs_local(outputs: dict, out_dir: Path):
+    out_dir = Path(out_dir)
+    for path, content in outputs.items():
+        target = out_dir / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(content)
+        log.info("[dry-run] écrit %s", target)
 
-def iso_to_dt(iso: str) -> datetime:
-    return datetime.fromisoformat(iso.replace("Z", "+00:00"))
+
+# ---------------------------------------------------------------------------
+# 9. Helpers MISP
+# ---------------------------------------------------------------------------
 
 def build_misp_comment(record: dict) -> str:
+    sources = sorted(record.get("sources", {}).keys())
+    sources_str = ", ".join(sources) if sources else "unknown"
     scenarios = ", ".join(sorted(record["scenarios"].keys()))
     total_hits = sum(v.get("count", 0) for v in record["scenarios"].values())
     return (
-        f"CrowdSec | "
+        f"Sources: {sources_str} | "
         f"first_seen: {record['first_seen']} | "
         f"last_seen: {record['last_seen']} | "
         f"hits: {total_hits} | "
@@ -314,35 +478,35 @@ def build_misp_comment(record: dict) -> str:
 def aggregate_run_events(events: list) -> dict:
     """
     Agrège les événements du run courant par IP.
-    Retient le timestamp le plus récent, les scénarios et machines vus.
+    Retient le timestamp le plus récent, les scénarios et les sources vues
+    (avec leurs machines CrowdSec le cas échéant).
     """
     by_ip = {}
     for ev in events:
         ip = ev["ip"]
         ev_dt = iso_to_dt(ev["event_time"])
-        if ip not in by_ip:
-            by_ip[ip] = {"last_seen_dt": ev_dt, "scenarios": set(), "machines": set()}
-        else:
-            if ev_dt > by_ip[ip]["last_seen_dt"]:
-                by_ip[ip]["last_seen_dt"] = ev_dt
+        rec = by_ip.setdefault(ip, {
+            "last_seen_dt": ev_dt,
+            "scenarios":    set(),
+            "sources":      {},
+        })
+        if ev_dt > rec["last_seen_dt"]:
+            rec["last_seen_dt"] = ev_dt
         if ev.get("scenario"):
-            by_ip[ip]["scenarios"].add(ev["scenario"])
+            rec["scenarios"].add(ev["scenario"])
+        source = ev.get("source", "unknown")
+        src_data = rec["sources"].setdefault(source, {"machines": set()})
         if ev.get("machine_id"):
-            by_ip[ip]["machines"].add(ev["machine_id"])
+            src_data["machines"].add(ev["machine_id"])
     return by_ip
 
 
 # ---------------------------------------------------------------------------
-# 8. Push MISP via PyMISP
+# 10. Push MISP via PyMISP
 #
-# Stratégie : un seul événement MISP "rolling" identifié par MISP_EVENT_TAG.
-# À chaque run :
-#   - L'événement est créé s'il n'existe pas, sinon réutilisé
-#   - Les IPs absentes de la DB (TTL expiré) ne sont PAS supprimées ici
-#     → leur gestion est laissée à MISP (decay, manual review)
-#   - Les nouvelles IPs sont ajoutées
-#   - Les IPs existantes ont leur commentaire mis à jour
-#   - Un sighting est ajouté uniquement pour les IPs vues dans CE run
+# Stratégie (inchangée en phase 1) : un seul événement MISP "rolling" identifié
+# par MISP_EVENT_TAG. La correction multi-source (tags source:* par attribut,
+# événements séparés, etc.) est reportée à une phase ultérieure.
 # ---------------------------------------------------------------------------
 
 def push_misp(db: dict, events: list):
@@ -367,7 +531,7 @@ def push_misp(db: dict, events: list):
 
     if existing_event is None:
         event = MISPEvent()
-        event.info            = "CrowdSec rolling feed (7 jours)"
+        event.info            = "Threat feed (rolling)"
         event.distribution    = 0  # 0=Org only — adapte : 1=Community, 3=All
         event.threat_level_id = 3  # Low
         event.analysis        = 2  # Completed
@@ -421,7 +585,8 @@ def push_misp(db: dict, events: list):
         # 3) Sighting uniquement si l'IP a été vue dans ce run
         if ip in run_obs:
             obs = run_obs[ip]
-            source = "crowdsec:" + ",".join(sorted(obs["machines"])) if obs["machines"] else "crowdsec-feed"
+            source_names = sorted(obs["sources"].keys())
+            source = "+".join(source_names) if source_names else "threat-feed"
             try:
                 misp.add_sighting(
                     {"type": "0", "source": source,
@@ -441,41 +606,114 @@ def push_misp(db: dict, events: list):
 
 
 # ---------------------------------------------------------------------------
+# 11. Fetch multi-source tolérant aux pannes
+#
+# Chaque source est tentée indépendamment. Un échec est loggué mais n'arrête
+# le run que si *toutes* les sources tentées ont échoué (pour éviter d'écraser
+# l'état avec une DB vide).
+# ---------------------------------------------------------------------------
+
+def fetch_all_events() -> list:
+    events = []
+    attempted = 0
+    succeeded = 0
+
+    if not SURICATA_ONLY:
+        attempted += 1
+        try:
+            token = lapi_login()
+            alerts = fetch_alerts(token)
+            events.extend(normalize_alerts(alerts, source="crowdsec"))
+            succeeded += 1
+        except Exception as e:
+            log.error("CrowdSec fetch échoué : %s", e, exc_info=True)
+
+    if SURICATA_ENABLED and not CROWDSEC_ONLY:
+        if not (SPLUNK_URL and SPLUNK_TOKEN):
+            log.warning("SURICATA_ENABLED=true mais SPLUNK_URL/SPLUNK_TOKEN absents — source ignorée")
+        else:
+            attempted += 1
+            try:
+                # Import local : permet d'exécuter feed.py sans suricata.py présent
+                # tant que SURICATA_ENABLED=false (backward compat).
+                from suricata import fetch_blocked_ips
+                sura_events = fetch_blocked_ips(
+                    url=SPLUNK_URL,
+                    token=SPLUNK_TOKEN,
+                    index=SPLUNK_INDEX_BLOCK,
+                    lookback=SPLUNK_LOOKBACK,
+                    verify_ssl=SPLUNK_VERIFY_SSL,
+                    min_priority=SURICATA_MIN_PRIORITY,
+                )
+                events.extend(sura_events)
+                succeeded += 1
+            except Exception as e:
+                log.error("Suricata/Splunk fetch échoué : %s", e, exc_info=True)
+
+    if attempted == 0:
+        raise RuntimeError("Aucune source activée — rien à faire (check SURICATA_ONLY / CROWDSEC_ONLY).")
+    if succeeded == 0:
+        raise RuntimeError(f"Toutes les sources ont échoué ({attempted}/{attempted}) — arrêt pour ne pas écraser l'état.")
+
+    log.info("Fetch terminé : %d/%d sources OK, %d events au total", succeeded, attempted, len(events))
+    return events
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main():
-    log.info("=== CrowdSec Feed Publisher démarré ===")
+    log.info("=== Threat Feed Publisher démarré ===")
+    if DRY_RUN:
+        log.warning("DRY_RUN actif — aucune publication GitHub ni push MISP (écriture locale %s)", DRY_RUN_DIR)
+    if MIGRATE_ONLY:
+        log.warning("MIGRATE_ONLY actif — arrêt après migration, pas de fetch ni de publication")
+    if CROWDSEC_ONLY:
+        log.info("CROWDSEC_ONLY actif — source Suricata ignorée pour ce run")
+    if SURICATA_ONLY:
+        log.info("SURICATA_ONLY actif — source CrowdSec ignorée pour ce run")
 
-    # 1. Auth CrowdSec
-    token = lapi_login()
-
-    # 2. Fetch alertes
-    alerts = fetch_alerts(token)
-
-    # 3. Normaliser
-    events = normalize_alerts(alerts)
-
-    # 4. Charger la DB existante depuis GitHub
+    # 1. Charger la DB existante depuis GitHub
     existing_db = gh_get_file("state/db.json")
     if existing_db:
         db = json.loads(existing_db["content"])
-        log.info("DB existante chargée (%d IPs)", len(db.get("items", {})))
+        log.info("DB existante chargée (%d IPs, schema_version=%s)",
+                 len(db.get("items", {})), db.get("schema_version", "?"))
     else:
-        db = {"schema_version": "1", "ttl_days": TTL_DAYS, "updated_at": now_iso(), "items": {}}
-        log.info("Première exécution — DB initialisée")
+        db = {"schema_version": "2", "ttl_days": TTL_DAYS, "updated_at": now_iso(), "items": {}}
+        log.info("Première exécution — DB initialisée (schéma v2)")
 
-    # 5. Fusion + TTL
+    # 2. Migration v1 → v2 (idempotent)
+    db = migrate_db_schema(db)
+
+    # 2bis. Short-circuit MIGRATE_ONLY : on écrit la DB migrée en local et on sort
+    if MIGRATE_ONLY:
+        out = {"state/db.json": json.dumps(db, indent=2)}
+        write_outputs_local(out, DRY_RUN_DIR)
+        log.info("=== MIGRATE_ONLY terminé — %d IPs dans la DB migrée ===", len(db["items"]))
+        return
+
+    # 3. Fetch multi-source
+    events = fetch_all_events()
+
+    # 4. Fusion + TTL
     db = merge_and_ttl(events, db)
 
-    # 6. Générer les fichiers
+    # 5. Générer les fichiers
     outputs = generate_outputs(db)
 
-    # 7. Publier sur GitHub
-    publish_github(outputs)
+    # 6. Publier
+    if DRY_RUN:
+        write_outputs_local(outputs, DRY_RUN_DIR)
+    else:
+        publish_github(outputs)
 
-    # 8. Push MISP
-    push_misp(db, events)
+    # 7. Push MISP
+    if DRY_RUN:
+        log.info("[dry-run] push MISP ignoré")
+    else:
+        push_misp(db, events)
 
     log.info("=== Terminé — %d IPs publiées ===", len(db["items"]))
 

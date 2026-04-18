@@ -14,6 +14,7 @@ RUN curl -fsSL "$SUPERCRONIC_URL" -o "$SUPERCRONIC" && \
 WORKDIR /app
 COPY feed.py .
 COPY misp_export.py .
+COPY suricata.py .
 
 # Fichier crontab (sera monté ou copié)
 COPY crontab /app/crontab
