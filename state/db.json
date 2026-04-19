@@ -1,72 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-04-18T17:35:58.139572Z",
+  "updated_at": "2026-04-19T01:00:01.880848Z",
   "items": {
-    "13.71.185.179": {
-      "ip": "13.71.185.179",
-      "family": "v4",
-      "first_seen": "2026-04-11T21:08:33Z",
-      "last_seen": "2026-04-11T21:08:49Z",
-      "scenarios": {
-        "crowdsec/http-backdoors-attempts": {
-          "count": 2,
-          "last_seen": "2026-04-11T21:08:49Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 2,
-          "last_seen": "2026-04-11T21:08:49Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-04-11T21:08:49Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-04-11T21:08:49Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-04-11T21:08:49Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 10,
-          "first_seen": "2026-04-11T21:08:33Z",
-          "last_seen": "2026-04-11T21:08:49Z",
-          "machines": [
-            "localhost"
-          ],
-          "last_alert_id": 5655,
-          "last_alert_uuid": "2708d3c7-1c77-4059-8069-217dd7d67502"
-        }
-      }
-    },
-    "66.132.224.225": {
-      "ip": "66.132.224.225",
-      "family": "v4",
-      "first_seen": "2026-04-11T18:34:34Z",
-      "last_seen": "2026-04-11T18:34:34Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-04-11T18:34:34Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-04-11T18:34:34Z",
-          "last_seen": "2026-04-11T18:34:34Z",
-          "machines": [
-            "localhost"
-          ],
-          "last_alert_id": 5649,
-          "last_alert_uuid": "2bd8b3ff-daf1-4c15-87a5-570f6c98cec8"
-        }
-      }
-    },
     "43.207.135.5": {
       "ip": "43.207.135.5",
       "family": "v4",
@@ -91,9 +27,6 @@
           "count": 6,
           "first_seen": "2026-04-12T05:37:03Z",
           "last_seen": "2026-04-12T05:37:42Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5674,
           "last_alert_uuid": "4a8a8ec5-b037-4783-b00c-176d51d3bffe"
         }
@@ -127,9 +60,6 @@
           "count": 8,
           "first_seen": "2026-04-12T03:52:25Z",
           "last_seen": "2026-04-12T03:52:26Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5669,
           "last_alert_uuid": "11d8b9db-f15c-4e09-b593-a3a2cba1dab0"
         }
@@ -159,9 +89,6 @@
           "count": 6,
           "first_seen": "2026-04-12T03:27:03Z",
           "last_seen": "2026-04-12T03:27:05Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5666,
           "last_alert_uuid": "c5e0f724-0422-41a4-8b59-3b87068888eb"
         }
@@ -195,9 +122,6 @@
           "count": 8,
           "first_seen": "2026-04-12T02:21:32Z",
           "last_seen": "2026-04-12T02:21:33Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5660,
           "last_alert_uuid": "43ae8380-d4d0-4c8a-a076-00c79a83dd8e"
         }
@@ -231,9 +155,6 @@
           "count": 8,
           "first_seen": "2026-04-12T22:58:38Z",
           "last_seen": "2026-04-12T22:58:49Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5689,
           "last_alert_uuid": "65d288af-6021-42f3-8294-e3d3e0678629"
         }
@@ -255,9 +176,6 @@
           "count": 2,
           "first_seen": "2026-04-12T18:27:30Z",
           "last_seen": "2026-04-12T18:27:30Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5683,
           "last_alert_uuid": "bef26572-7710-489d-a0bc-4c7e77b47408"
         }
@@ -283,9 +201,6 @@
           "count": 4,
           "first_seen": "2026-04-12T16:58:20Z",
           "last_seen": "2026-04-12T16:58:22Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5681,
           "last_alert_uuid": "70b5f3fc-2f28-4e1c-82de-6cf98f99e574"
         }
@@ -319,9 +234,6 @@
           "count": 8,
           "first_seen": "2026-04-13T04:26:18Z",
           "last_seen": "2026-04-13T04:26:30Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5703,
           "last_alert_uuid": "364d5907-ab84-45a5-819a-2f42283607f9"
         }
@@ -351,9 +263,6 @@
           "count": 6,
           "first_seen": "2026-04-13T04:20:45Z",
           "last_seen": "2026-04-13T04:20:51Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5699,
           "last_alert_uuid": "521e448c-3e7d-4bdc-92d0-a4dd895c04cb"
         }
@@ -387,9 +296,6 @@
           "count": 8,
           "first_seen": "2026-04-13T01:31:54Z",
           "last_seen": "2026-04-13T01:31:56Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5695,
           "last_alert_uuid": "a2b9d4a1-c8bc-4123-a211-b7fa36cb47df"
         }
@@ -415,9 +321,6 @@
           "count": 4,
           "first_seen": "2026-04-13T22:11:41Z",
           "last_seen": "2026-04-13T22:11:43Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5721,
           "last_alert_uuid": "a6b639c0-8cf6-4ec5-8cb7-430f40d8abf7"
         }
@@ -447,9 +350,6 @@
           "count": 6,
           "first_seen": "2026-04-13T18:56:20Z",
           "last_seen": "2026-04-13T18:56:22Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5717,
           "last_alert_uuid": "7e70bd31-71bc-47cf-9047-c421de584959"
         }
@@ -483,9 +383,6 @@
           "count": 8,
           "first_seen": "2026-04-13T17:05:12Z",
           "last_seen": "2026-04-13T17:05:15Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5712,
           "last_alert_uuid": "8e91737c-815a-4ddf-b20e-aba64806c6d4"
         }
@@ -519,9 +416,6 @@
           "count": 8,
           "first_seen": "2026-04-14T04:53:31Z",
           "last_seen": "2026-04-14T04:53:38Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5732,
           "last_alert_uuid": "2e883c73-76e9-4fc6-ba9d-2500012d4b5f"
         }
@@ -555,9 +449,6 @@
           "count": 8,
           "first_seen": "2026-04-14T02:43:29Z",
           "last_seen": "2026-04-14T02:43:46Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5727,
           "last_alert_uuid": "50866747-626d-47b1-a3ba-58ceac524612"
         }
@@ -591,9 +482,6 @@
           "count": 8,
           "first_seen": "2026-04-15T06:29:28Z",
           "last_seen": "2026-04-15T06:29:42Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5757,
           "last_alert_uuid": "2dde761f-9f66-45a8-a452-52ba745f441e"
         }
@@ -615,9 +503,6 @@
           "count": 2,
           "first_seen": "2026-04-15T03:59:01Z",
           "last_seen": "2026-04-15T03:59:01Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5752,
           "last_alert_uuid": "f510881f-7c2a-40ef-9762-0c5f2e1421c9"
         }
@@ -651,9 +536,6 @@
           "count": 12,
           "first_seen": "2026-04-14T17:31:49Z",
           "last_seen": "2026-04-15T22:34:41Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5774,
           "last_alert_uuid": "a22528c3-b311-4b18-8494-74585fb5470b"
         }
@@ -675,9 +557,6 @@
           "count": 2,
           "first_seen": "2026-04-15T22:07:11Z",
           "last_seen": "2026-04-15T22:07:11Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5771,
           "last_alert_uuid": "7692fb12-5f33-4736-a2fe-89c3ad7101b8"
         }
@@ -711,9 +590,6 @@
           "count": 8,
           "first_seen": "2026-04-15T21:48:56Z",
           "last_seen": "2026-04-15T21:48:59Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5770,
           "last_alert_uuid": "828e35b6-1573-46a9-b073-d5096dce1bf5"
         }
@@ -735,9 +611,6 @@
           "count": 2,
           "first_seen": "2026-04-15T21:16:05Z",
           "last_seen": "2026-04-15T21:16:05Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5765,
           "last_alert_uuid": "e3e8ee40-80e2-4326-9587-cc550abd7b5c"
         }
@@ -763,9 +636,6 @@
           "count": 4,
           "first_seen": "2026-04-16T11:47:01Z",
           "last_seen": "2026-04-16T11:47:08Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5785,
           "last_alert_uuid": "b990029e-5a25-4e4a-88d6-e44875c4eefa"
         }
@@ -791,9 +661,6 @@
           "count": 4,
           "first_seen": "2026-04-16T11:32:25Z",
           "last_seen": "2026-04-16T11:32:31Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5783,
           "last_alert_uuid": "08990228-e117-480a-94e0-c64128b8f7ab"
         }
@@ -827,9 +694,6 @@
           "count": 12,
           "first_seen": "2026-04-17T00:47:20Z",
           "last_seen": "2026-04-17T00:47:38Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5819,
           "last_alert_uuid": "af7576ad-6211-4c1a-9cc8-84383ba2cc5e"
         }
@@ -855,9 +719,6 @@
           "count": 4,
           "first_seen": "2026-04-16T22:58:57Z",
           "last_seen": "2026-04-16T22:58:59Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5814,
           "last_alert_uuid": "7209f65f-7eff-4182-b5cb-7c5a9387052f"
         }
@@ -891,9 +752,6 @@
           "count": 8,
           "first_seen": "2026-04-16T19:38:48Z",
           "last_seen": "2026-04-16T19:38:52Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5811,
           "last_alert_uuid": "0221f043-9864-4020-ac70-7b695d022fa4"
         }
@@ -919,9 +777,6 @@
           "count": 4,
           "first_seen": "2026-04-16T18:44:00Z",
           "last_seen": "2026-04-16T18:44:01Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5806,
           "last_alert_uuid": "67ec3a3d-f006-4c3f-9083-9621286480c1"
         }
@@ -959,9 +814,6 @@
           "count": 10,
           "first_seen": "2026-04-16T18:17:54Z",
           "last_seen": "2026-04-16T18:17:58Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5803,
           "last_alert_uuid": "07f7f50a-7c11-4910-821f-990962b66484"
         }
@@ -995,9 +847,6 @@
           "count": 8,
           "first_seen": "2026-04-16T16:58:26Z",
           "last_seen": "2026-04-16T16:58:39Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5797,
           "last_alert_uuid": "9267e325-cd1d-4382-b696-0c3f0fe99a53"
         }
@@ -1027,9 +876,6 @@
           "count": 6,
           "first_seen": "2026-04-16T15:32:45Z",
           "last_seen": "2026-04-16T15:32:48Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5794,
           "last_alert_uuid": "f787dad3-ca8c-406e-9f38-04a80dba6ba5"
         }
@@ -1063,9 +909,6 @@
           "count": 8,
           "first_seen": "2026-04-16T14:36:16Z",
           "last_seen": "2026-04-16T14:36:30Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5790,
           "last_alert_uuid": "3eb05c45-81e9-4d9d-ae19-8b5da1af9a91"
         }
@@ -1087,9 +930,6 @@
           "count": 2,
           "first_seen": "2026-04-17T05:03:04Z",
           "last_seen": "2026-04-17T05:03:04Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5822,
           "last_alert_uuid": "81c752da-85af-48e5-9418-8b2e28096467"
         }
@@ -1115,9 +955,6 @@
           "count": 4,
           "first_seen": "2026-04-17T23:08:32Z",
           "last_seen": "2026-04-17T23:08:32Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5837,
           "last_alert_uuid": "b49d7cfe-cb18-4fa2-bfc7-198f5537e205"
         }
@@ -1155,9 +992,6 @@
           "count": 10,
           "first_seen": "2026-04-17T13:25:26Z",
           "last_seen": "2026-04-17T13:25:27Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5832,
           "last_alert_uuid": "c63bc79f-8ffc-470d-ad7a-59433230cee4"
         }
@@ -1179,9 +1013,6 @@
           "count": 2,
           "first_seen": "2026-04-18T06:28:05Z",
           "last_seen": "2026-04-18T06:28:05Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5844,
           "last_alert_uuid": "d8e4f947-df70-42d9-9ba8-b39e32ff3401"
         }
@@ -1203,9 +1034,6 @@
           "count": 2,
           "first_seen": "2026-04-18T02:31:17Z",
           "last_seen": "2026-04-18T02:31:17Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5841,
           "last_alert_uuid": "2322e7b1-778f-480d-884a-c15adab1fc22"
         }
@@ -1218,22 +1046,19 @@
       "last_seen": "2026-04-18T15:38:09Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-04-18T15:38:09Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-04-18T15:37:58Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 2,
+          "count": 4,
           "first_seen": "2026-04-18T15:37:58Z",
           "last_seen": "2026-04-18T15:38:09Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5852,
           "last_alert_uuid": "caaf9e86-c8fb-4d81-b329-5e7227bba719"
         }
@@ -1246,22 +1071,19 @@
       "last_seen": "2026-04-18T13:01:13Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-04-18T13:01:13Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-04-18T13:01:13Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 2,
+          "count": 4,
           "first_seen": "2026-04-18T13:01:13Z",
           "last_seen": "2026-04-18T13:01:13Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5848,
           "last_alert_uuid": "d1bdc85d-f9d2-447d-bd47-df13120e1804"
         }
@@ -1283,9 +1105,6 @@
           "count": 1,
           "first_seen": "2026-04-14T23:54:03Z",
           "last_seen": "2026-04-14T23:54:03Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5750,
           "last_alert_uuid": "311e408a-78a1-4167-a665-836f405c84de"
         }
@@ -1307,11 +1126,152 @@
           "count": 1,
           "first_seen": "2026-04-14T22:14:24Z",
           "last_seen": "2026-04-14T22:14:24Z",
-          "machines": [
-            "localhost"
-          ],
           "last_alert_id": 5748,
           "last_alert_uuid": "39dea9b5-22ef-4168-97f3-fd984bf3985c"
+        }
+      }
+    },
+    "103.168.66.237": {
+      "ip": "103.168.66.237",
+      "family": "v4",
+      "first_seen": "2026-04-18T23:11:04Z",
+      "last_seen": "2026-04-18T23:11:05Z",
+      "scenarios": {
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-04-18T23:11:05Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-04-18T23:11:04Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-04-18T23:11:04Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-04-18T23:11:04Z",
+          "last_seen": "2026-04-18T23:11:05Z",
+          "last_alert_id": 5859,
+          "last_alert_uuid": "6f5feb0c-6f5f-4cb5-a197-7a50a3a9b4b0"
+        }
+      }
+    },
+    "118.70.178.158": {
+      "ip": "118.70.178.158",
+      "family": "v4",
+      "first_seen": "2026-04-18T18:30:07Z",
+      "last_seen": "2026-04-18T18:30:07Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 2": {
+          "count": 1,
+          "last_seen": "2026-04-18T18:30:07Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-18T18:30:07Z",
+          "last_seen": "2026-04-18T18:30:07Z",
+          "sids": [
+            2500002
+          ],
+          "max_priority": 2
+        }
+      }
+    },
+    "103.40.61.98": {
+      "ip": "103.40.61.98",
+      "family": "v4",
+      "first_seen": "2026-04-18T14:54:57Z",
+      "last_seen": "2026-04-18T14:54:57Z",
+      "scenarios": {
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
+          "count": 1,
+          "last_seen": "2026-04-18T14:54:57Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-18T14:54:57Z",
+          "last_seen": "2026-04-18T14:54:57Z",
+          "sids": [
+            58276
+          ],
+          "max_priority": 1
+        }
+      }
+    },
+    "41.110.4.106": {
+      "ip": "41.110.4.106",
+      "family": "v4",
+      "first_seen": "2026-04-18T13:32:07Z",
+      "last_seen": "2026-04-18T13:32:07Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 10": {
+          "count": 1,
+          "last_seen": "2026-04-18T13:32:07Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-18T13:32:07Z",
+          "last_seen": "2026-04-18T13:32:07Z",
+          "sids": [
+            2500018
+          ],
+          "max_priority": 2
+        }
+      }
+    },
+    "172.189.127.30": {
+      "ip": "172.189.127.30",
+      "family": "v4",
+      "first_seen": "2026-04-18T12:21:39Z",
+      "last_seen": "2026-04-18T12:21:39Z",
+      "scenarios": {
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
+          "count": 1,
+          "last_seen": "2026-04-18T12:21:39Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-18T12:21:39Z",
+          "last_seen": "2026-04-18T12:21:39Z",
+          "sids": [
+            2021076
+          ],
+          "max_priority": 2
+        }
+      }
+    },
+    "190.2.135.111": {
+      "ip": "190.2.135.111",
+      "family": "v4",
+      "first_seen": "2026-04-18T23:31:01Z",
+      "last_seen": "2026-04-18T23:31:01Z",
+      "scenarios": {
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
+          "count": 1,
+          "last_seen": "2026-04-18T23:31:01Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-18T23:31:01Z",
+          "last_seen": "2026-04-18T23:31:01Z",
+          "sids": [
+            58276
+          ],
+          "max_priority": 1
         }
       }
     }
