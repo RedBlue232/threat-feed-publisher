@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-04-19T01:00:00Z",
+  "updated_at": "2026-04-19T12:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 46,
-    "v4": 46,
+    "total": 52,
+    "v4": 52,
     "v6": 0
   },
   "sources": {
-    "crowdsec": 41,
-    "suricata": 5
+    "crowdsec": 40,
+    "suricata": 13
   }
 }
