@@ -1,56 +1,12 @@
 {
-  "generated_at": "2026-04-20T01:00:00Z",
+  "generated_at": "2026-04-20T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 61,
+    "v4": 61,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "51.107.185.94",
-      "family": "v4",
-      "first_seen": "2026-04-13T04:00:00Z",
-      "last_seen": "2026-04-13T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
-    {
-      "ip": "20.151.248.149",
-      "family": "v4",
-      "first_seen": "2026-04-13T04:00:00Z",
-      "last_seen": "2026-04-13T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
-    {
-      "ip": "185.177.72.29",
-      "family": "v4",
-      "first_seen": "2026-04-13T01:00:00Z",
-      "last_seen": "2026-04-13T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
     {
       "ip": "34.101.239.103",
       "family": "v4",
@@ -783,6 +739,72 @@
       "last_seen": "2026-04-20T00:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "223.123.72.23",
+      "family": "v4",
+      "first_seen": "2026-04-20T07:00:00Z",
+      "last_seen": "2026-04-20T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ]
+    },
+    {
+      "ip": "20.219.138.200",
+      "family": "v4",
+      "first_seen": "2026-04-20T06:00:00Z",
+      "last_seen": "2026-04-20T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ]
+    },
+    {
+      "ip": "92.205.26.97",
+      "family": "v4",
+      "first_seen": "2026-04-20T05:00:00Z",
+      "last_seen": "2026-04-20T05:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Host header invalid"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.189.127.3",
+      "family": "v4",
+      "first_seen": "2026-04-20T02:00:00Z",
+      "last_seen": "2026-04-20T02:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "164.92.117.229",
+      "family": "v4",
+      "first_seen": "2026-04-20T11:00:00Z",
+      "last_seen": "2026-04-20T11:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
         "suricata"
