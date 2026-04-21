@@ -1,42 +1,12 @@
 {
-  "generated_at": "2026-04-21T01:00:00Z",
+  "generated_at": "2026-04-21T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 65,
-    "v4": 65,
+    "total": 72,
+    "v4": 72,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "52.236.68.31",
-      "family": "v4",
-      "first_seen": "2026-04-14T04:00:00Z",
-      "last_seen": "2026-04-14T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
-    {
-      "ip": "52.243.57.116",
-      "family": "v4",
-      "first_seen": "2026-04-14T02:00:00Z",
-      "last_seen": "2026-04-14T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
     {
       "ip": "20.92.87.114",
       "family": "v4",
@@ -849,6 +819,118 @@
       "last_seen": "2026-04-20T22:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.202.75.66",
+      "family": "v4",
+      "first_seen": "2026-04-21T10:00:00Z",
+      "last_seen": "2026-04-21T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ]
+    },
+    {
+      "ip": "193.30.244.60",
+      "family": "v4",
+      "first_seen": "2026-04-21T07:00:00Z",
+      "last_seen": "2026-04-21T07:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "109.248.170.188",
+      "family": "v4",
+      "first_seen": "2026-04-21T07:00:00Z",
+      "last_seen": "2026-04-21T07:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "66.240.223.208",
+      "family": "v4",
+      "first_seen": "2026-04-21T06:00:00Z",
+      "last_seen": "2026-04-21T06:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.189.127.2",
+      "family": "v4",
+      "first_seen": "2026-04-21T04:00:00Z",
+      "last_seen": "2026-04-21T04:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "163.7.1.156",
+      "family": "v4",
+      "first_seen": "2026-04-21T03:00:00Z",
+      "last_seen": "2026-04-21T03:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 4"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "159.89.50.64",
+      "family": "v4",
+      "first_seen": "2026-04-21T03:00:00Z",
+      "last_seen": "2026-04-21T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "104.168.56.24",
+      "family": "v4",
+      "first_seen": "2026-04-21T01:00:00Z",
+      "last_seen": "2026-04-21T01:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "20.169.80.121",
+      "family": "v4",
+      "first_seen": "2026-04-21T12:00:00Z",
+      "last_seen": "2026-04-21T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
         "suricata"
