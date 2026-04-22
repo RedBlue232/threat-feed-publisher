@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-21T13:00:00Z",
+  "generated_at": "2026-04-22T01:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 72,
-    "v4": 72,
+    "total": 79,
+    "v4": 79,
     "v6": 0
   },
   "items": [
@@ -316,30 +316,6 @@
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
-    {
-      "ip": "47.251.93.227",
-      "family": "v4",
-      "first_seen": "2026-04-14T23:00:00Z",
-      "last_seen": "2026-04-14T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ]
-    },
-    {
-      "ip": "130.89.144.165",
-      "family": "v4",
-      "first_seen": "2026-04-14T22:00:00Z",
-      "last_seen": "2026-04-14T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
       ],
       "sources": [
         "crowdsec"
@@ -931,6 +907,118 @@
       "last_seen": "2026-04-21T12:00:00Z",
       "scenarios": [
         "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "4.223.161.209",
+      "family": "v4",
+      "first_seen": "2026-04-22T00:00:00Z",
+      "last_seen": "2026-04-22T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ]
+    },
+    {
+      "ip": "8.209.96.179",
+      "family": "v4",
+      "first_seen": "2026-04-21T23:00:00Z",
+      "last_seen": "2026-04-21T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ]
+    },
+    {
+      "ip": "172.189.127.22",
+      "family": "v4",
+      "first_seen": "2026-04-21T22:00:00Z",
+      "last_seen": "2026-04-21T22:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "175.212.133.63",
+      "family": "v4",
+      "first_seen": "2026-04-21T21:00:00Z",
+      "last_seen": "2026-04-21T21:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "37.10.113.220",
+      "family": "v4",
+      "first_seen": "2026-04-21T20:00:00Z",
+      "last_seen": "2026-04-21T20:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.189.127.24",
+      "family": "v4",
+      "first_seen": "2026-04-21T16:00:00Z",
+      "last_seen": "2026-04-21T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "45.63.97.69",
+      "family": "v4",
+      "first_seen": "2026-04-21T16:00:00Z",
+      "last_seen": "2026-04-21T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "185.224.128.16",
+      "family": "v4",
+      "first_seen": "2026-04-21T16:00:00Z",
+      "last_seen": "2026-04-21T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "89.32.41.145",
+      "family": "v4",
+      "first_seen": "2026-04-21T23:00:00Z",
+      "last_seen": "2026-04-21T23:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
       ],
       "sources": [
         "suricata"
