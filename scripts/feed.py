@@ -28,6 +28,51 @@ try:
 except ImportError:
     PYMISP_AVAILABLE = False
 
+# Enrichment misp-warninglists : best-effort, pas de fail si le module/dossier
+# est absent (ex: dev local sans Docker).
+try:
+    import enrich_warninglists
+    WARNINGLISTS_AVAILABLE = True
+except ImportError:
+    WARNINGLISTS_AVAILABLE = False
+
+# Enrichment ASN via CIRCL IP-ASN-History : idem, best-effort.
+try:
+    import enrich_asn
+    ASN_AVAILABLE = True
+except ImportError:
+    ASN_AVAILABLE = False
+
+# Sanitization PII (payloads) : si le module manque, on refuse toute
+# extraction de payload plutôt que de risquer de publier du brut.
+try:
+    import sanitize
+    SANITIZE_AVAILABLE = True
+except ImportError:
+    SANITIZE_AVAILABLE = False
+
+# Enrichissement Tor exit-nodes (liste check.torproject.org) : idem,
+# best-effort.
+try:
+    import enrich_tor
+    TOR_AVAILABLE = True
+except ImportError:
+    TOR_AVAILABLE = False
+
+# Flag pour désactiver l'ASN enrichment sans toucher au code (ex: prod dégradée)
+ASN_ENABLED = os.environ.get("ASN_ENABLED", "true").lower() == "true"
+
+# Flag pour désactiver l'enrichissement Tor (ex: pas d'accès sortant)
+TOR_ENABLED = os.environ.get("TOR_ENABLED", "true").lower() == "true"
+
+# Nombre max de payloads conservés par (IP, source). Au-delà on évacue les
+# plus anciens (FIFO). Borne la taille du DB publié sur GitHub.
+PAYLOADS_PER_SOURCE_CAP = int(os.environ.get("PAYLOADS_PER_SOURCE_CAP", "20"))
+
+# Nombre max de payloads inclus dans le commentaire MISP (les plus récents).
+# Le commentaire doit rester lisible, pas reproduire le DB complet.
+PAYLOADS_MISP_SHOW = int(os.environ.get("PAYLOADS_MISP_SHOW", "3"))
+
 # ---------------------------------------------------------------------------
 # Configuration (depuis les variables d'environnement / .env)
 # ---------------------------------------------------------------------------
@@ -56,6 +101,7 @@ SURICATA_ENABLED      = os.environ.get("SURICATA_ENABLED", "false").lower() == "
 SPLUNK_URL            = os.environ.get("SPLUNK_URL", "")
 SPLUNK_TOKEN          = os.environ.get("SPLUNK_TOKEN", "")
 SPLUNK_INDEX_BLOCK    = os.environ.get("SPLUNK_INDEX_BLOCK", "suricata_block")
+SPLUNK_INDEX_EVE      = os.environ.get("SPLUNK_INDEX_EVE", "suricata_eve")
 SPLUNK_LOOKBACK       = os.environ.get("SPLUNK_LOOKBACK", "13h")
 SPLUNK_VERIFY_SSL     = os.environ.get("SPLUNK_VERIFY_SSL", "true").lower() == "true"
 _min_prio_raw         = os.environ.get("SURICATA_MIN_PRIORITY", "").strip()
@@ -137,8 +183,39 @@ def fetch_alerts(token: str) -> list:
 #
 # Produit des events au format commun :
 #   {ip, family, event_time, scenario (préfixé "crowdsec/"), source="crowdsec",
-#    alert_id, alert_uuid, machine_id}
+#    alert_id, alert_uuid, machine_id, payloads}
+#
+# `payloads` est une liste de strings "VERB path" extraites de la liste
+# `events[*].meta` (chaque meta est un {key, value}). Une alerte CrowdSec
+# agrège typiquement plusieurs hits HTTP, on récupère tous les hits ayant
+# au moins http_path renseigné. Liste vide si rien d'exploitable.
 # ---------------------------------------------------------------------------
+
+def _extract_crowdsec_payloads(alert: dict) -> list[str]:
+    """Extrait les payloads HTTP bruts (non sanitisés) d'une alerte CrowdSec.
+
+    Format CrowdSec : `alert.events[i].meta = [{key,value}, ...]`. On cherche
+    les couples (http_verb, http_path) ; en absence de http_verb on garde le
+    path seul. Les events sans aucun http_path sont ignorés.
+
+    NB : pas de sanitization ici — c'est `_update_source_block` qui
+    sanitisera avant stockage en DB.
+    """
+    payloads: list[str] = []
+    for event in alert.get("events") or []:
+        meta_list = event.get("meta") or []
+        verb = path = None
+        for m in meta_list:
+            k = m.get("key")
+            v = m.get("value")
+            if k == "http_verb":
+                verb = v
+            elif k == "http_path":
+                path = v
+        if path:
+            payloads.append(f"{verb} {path}" if verb else path)
+    return payloads
+
 
 def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
     events = []
@@ -166,6 +243,7 @@ def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
             "alert_id":    a.get("id"),
             "alert_uuid":  a.get("uuid"),
             "machine_id":  a.get("machine_id"),
+            "payloads":    _extract_crowdsec_payloads(a) if SANITIZE_AVAILABLE else [],
         })
     log.info("%d events %s normalisés", len(events), source)
     return events
@@ -280,6 +358,35 @@ def migrate_db_schema(db: dict) -> dict:
 # confondues. Les métadonnées par source vivent dans sources.<name>.
 # ---------------------------------------------------------------------------
 
+def _ingest_payloads(src_block: dict, raw_payloads: list[str]) -> int:
+    """Ajoute des payloads bruts à src_block['payloads'] après sanitization.
+
+    - Sanitize chaque payload (regex IP/domaine sur la liste PII_*)
+    - Tronque à PAYLOAD_MAX_LEN
+    - Dédup contre l'existant
+    - Cap à PAYLOADS_PER_SOURCE_CAP (FIFO : on évince les plus anciens)
+
+    No-op si SANITIZE_AVAILABLE est faux : on ne stocke jamais de payload
+    non sanitisé. Retourne le nombre de nouveaux payloads ajoutés.
+    """
+    if not raw_payloads or not SANITIZE_AVAILABLE:
+        return 0
+    payloads = src_block.setdefault("payloads", [])
+    existing = set(payloads)
+    added = 0
+    for raw in raw_payloads:
+        cooked = sanitize.sanitize_and_truncate(raw)
+        if not cooked or cooked in existing:
+            continue
+        payloads.append(cooked)
+        existing.add(cooked)
+        added += 1
+    if len(payloads) > PAYLOADS_PER_SOURCE_CAP:
+        # On garde les N plus récents (latest appended)
+        src_block["payloads"] = payloads[-PAYLOADS_PER_SOURCE_CAP:]
+    return added
+
+
 def _update_source_block(src_block: dict, ev: dict, t_ms: float) -> None:
     """Met à jour un bloc sources.<name> avec un event normalisé."""
     src_block["count"] += 1
@@ -309,6 +416,34 @@ def _update_source_block(src_block: dict, ev: dict, t_ms: float) -> None:
             current = src_block.get("max_priority")
             if current is None or ev["priority"] < current:
                 src_block["max_priority"] = ev["priority"]
+
+    # Ingestion des payloads (CrowdSec attache directement, Suricata est
+    # enrichi post-merge via fetch_eve_payloads → enrich_suricata_payloads)
+    if ev.get("payloads"):
+        _ingest_payloads(src_block, ev["payloads"])
+
+
+def enrich_suricata_payloads(db: dict, payloads_by_ip: dict[str, list[str]]) -> int:
+    """Injecte les payloads bruts récupérés depuis l'index suricata_eve dans
+    le bloc sources.suricata de chaque IP. Utilise le même chemin sanitize
+    + dédup + cap que `_update_source_block`. Retourne le total de payloads
+    nouvellement stockés."""
+    total = 0
+    for ip, raw_payloads in payloads_by_ip.items():
+        record = db["items"].get(ip)
+        if not record:
+            continue
+        sources = record.setdefault("sources", {})
+        # On ne crée pas un bloc sources.suricata ex nihilo : si l'IP n'a pas
+        # été observée dans le block log, on n'a pas la garantie que ce n'est
+        # pas du faux positif (alerte sans block). Le bloc devrait déjà exister
+        # via le fetch block, sinon on skippe.
+        if "suricata" not in sources:
+            log.debug("[suricata-eve] IP %s sans bloc sources.suricata, payloads ignorés", ip)
+            continue
+        added = _ingest_payloads(sources["suricata"], raw_payloads)
+        total += added
+    return total
 
 
 def merge_and_ttl(events: list, db: dict) -> dict:
@@ -404,6 +539,7 @@ def generate_outputs(db: dict) -> dict:
     ips_all = sorted(r["ip"] for r in records)
     ips_v4  = sorted(r["ip"] for r in records if r["family"] == "v4")
     ips_v6  = sorted(r["ip"] for r in records if r["family"] == "v6")
+    asn_names = db.get("asn_names") or {}
 
     # Feed public : métadonnées internes retirées (machines, sids, alert_id…),
     # timestamps arrondis à l'heure, scénarios sans compteurs, sources nommées.
@@ -419,6 +555,33 @@ def generate_outputs(db: dict) -> dict:
         sources = sorted(r.get("sources", {}).keys())
         if sources:
             item["sources"] = sources
+        # Enrichment ASN (CIRCL) — mémorisé dans le DB
+        if r.get("asn"):
+            item["asn"] = r["asn"]
+            if asn_names.get(r["asn"]):
+                item["asn_name"] = asn_names[r["asn"]]
+            if r.get("asn_prefix"):
+                item["asn_prefix"] = r["asn_prefix"]
+        # Enrichment tags classificatoires (mwl:*, tor:exit-node, ...)
+        # On agrège dans un même champ `tags` : tri stable, pas de doublons.
+        classify_tags: list[str] = []
+        if WARNINGLISTS_AVAILABLE:
+            classify_tags.extend(enrich_warninglists.enrich(r["ip"]))
+        if TOR_AVAILABLE and TOR_ENABLED:
+            classify_tags.extend(enrich_tor.enrich(r["ip"]))
+        if classify_tags:
+            # Dédup + tri pour un JSON stable (facilite les diffs GitHub)
+            item["tags"] = sorted(set(classify_tags))
+        # Payloads sanitisés (union toutes sources, dédup, ordre stable)
+        merged_payloads: list[str] = []
+        seen_payloads: set[str] = set()
+        for src_name in sorted(r.get("sources", {}).keys()):
+            for p in r["sources"][src_name].get("payloads", []):
+                if p not in seen_payloads:
+                    seen_payloads.add(p)
+                    merged_payloads.append(p)
+        if merged_payloads:
+            item["payloads"] = merged_payloads
         public_items.append(item)
 
     feed_json = {
@@ -481,18 +644,110 @@ def write_outputs_local(outputs: dict, out_dir: Path):
 # 9. Helpers MISP
 # ---------------------------------------------------------------------------
 
-def build_misp_comment(record: dict) -> str:
+def build_misp_comment(record: dict, asn_names: dict | None = None) -> str:
+    asn_names = asn_names or {}
     sources = sorted(record.get("sources", {}).keys())
     sources_str = ", ".join(sources) if sources else "unknown"
     scenarios = ", ".join(sorted(record["scenarios"].keys()))
     total_hits = sum(v.get("count", 0) for v in record["scenarios"].values())
-    return (
-        f"Sources: {sources_str} | "
-        f"first_seen: {record['first_seen']} | "
-        f"last_seen: {record['last_seen']} | "
-        f"hits: {total_hits} | "
-        f"scenarios: {scenarios}"
-    )
+    parts = [
+        f"Sources: {sources_str}",
+        f"first_seen: {record['first_seen']}",
+        f"last_seen: {record['last_seen']}",
+        f"hits: {total_hits}",
+    ]
+    if record.get("asn"):
+        asn_str = f"AS{record['asn']}"
+        if asn_names.get(record["asn"]):
+            asn_str += f" {asn_names[record['asn']]}"
+        if record.get("asn_prefix"):
+            asn_str += f" ({record['asn_prefix']})"
+        parts.append(asn_str)
+    parts.append(f"scenarios: {scenarios}")
+
+    # Payloads : on inclut les N plus récents, toutes sources confondues.
+    # Déjà sanitisés en DB. On garde un ordre stable (dernières entrées
+    # = les plus récentes puisque les ajouts sont append-only).
+    recent_payloads: list[str] = []
+    seen: set[str] = set()
+    for src_name in sorted(record.get("sources", {}).keys()):
+        for p in record["sources"][src_name].get("payloads", []):
+            if p not in seen:
+                seen.add(p)
+                recent_payloads.append(p)
+    if recent_payloads:
+        tail = recent_payloads[-PAYLOADS_MISP_SHOW:]
+        parts.append("payloads: " + " ; ".join(tail))
+
+    return " | ".join(parts)
+
+
+# ---------------------------------------------------------------------------
+# Tags MISP par source (source:crowdsec, source:suricata, ...)
+#
+# Permet de filtrer/searcher côté MISP par origine d'observation. Les tags
+# sont appliqués au niveau attribut (granularité IP) et reflétés au niveau
+# event (agrégat de toutes les sources vues sur l'event).
+#
+# Idempotent : on n'ajoute que les tags manquants, on ne retire rien.
+# Best-effort : un échec de tag est loggué mais ne bloque pas le run.
+# ---------------------------------------------------------------------------
+
+def _source_tags_for(record: dict) -> list[str]:
+    """Tags `source:<name>` correspondant aux sources actuelles d'une IP."""
+    return [f"source:{s}" for s in sorted(record.get("sources", {}).keys())]
+
+
+def _existing_tag_names(obj) -> set[str]:
+    """Extrait l'ensemble des noms de tags déjà posés sur un MISPAttribute
+    ou MISPEvent. Tolérant aux différentes formes renvoyées par PyMISP."""
+    names = set()
+    for t in getattr(obj, "tags", []) or []:
+        # MISPTag → .name ; dict brut → ["name"]
+        name = getattr(t, "name", None) or (t.get("name") if isinstance(t, dict) else None)
+        if name:
+            names.add(name)
+    return names
+
+
+def _apply_source_tags(misp, attr, desired_tags: list[str]) -> int:
+    """Ajoute les tags manquants à un attribut MISP. Retourne le nombre de
+    tags effectivement posés. Best-effort : log + continue en cas d'échec."""
+    if not desired_tags:
+        return 0
+    already = _existing_tag_names(attr)
+    added = 0
+    for tag in desired_tags:
+        if tag in already:
+            continue
+        try:
+            misp.tag(attr.uuid, tag)
+            added += 1
+        except Exception as e:
+            log.warning("MISP tag %s sur %s échoué : %s", tag, getattr(attr, "value", "?"), e)
+    return added
+
+
+def _apply_event_source_tags(misp, event, db: dict) -> int:
+    """Pose au niveau event la liste agrégée des tags `source:*` observés sur
+    toutes les IPs du DB. Idempotent. Retourne le nombre de tags ajoutés."""
+    all_sources = set()
+    for record in db.get("items", {}).values():
+        all_sources.update(record.get("sources", {}).keys())
+    desired = [f"source:{s}" for s in sorted(all_sources)]
+    if not desired:
+        return 0
+    already = _existing_tag_names(event)
+    added = 0
+    for tag in desired:
+        if tag in already:
+            continue
+        try:
+            misp.tag(event.uuid, tag)
+            added += 1
+        except Exception as e:
+            log.warning("MISP tag %s sur event échoué : %s", tag, e)
+    return added
 
 def aggregate_run_events(events: list) -> dict:
     """
@@ -523,9 +778,12 @@ def aggregate_run_events(events: list) -> dict:
 # ---------------------------------------------------------------------------
 # 10. Push MISP via PyMISP
 #
-# Stratégie (inchangée en phase 1) : un seul événement MISP "rolling" identifié
-# par MISP_EVENT_TAG. La correction multi-source (tags source:* par attribut,
-# événements séparés, etc.) est reportée à une phase ultérieure.
+# Stratégie : un seul événement MISP "rolling" identifié par MISP_EVENT_TAG.
+# Chaque IP est un attribut ip-src tagué `source:<name>` selon les sources
+# qui l'ont observée. L'event lui-même porte l'agrégat des `source:*` vus
+# toutes IPs confondues (utile pour requêter les events ayant émis du
+# Suricata, par ex.). Les tags sont posés idempotemment, sans suppression :
+# un tag historique reste tant que l'IP n'est pas purgée par TTL.
 # ---------------------------------------------------------------------------
 
 def push_misp(db: dict, events: list):
@@ -567,11 +825,19 @@ def push_misp(db: dict, events: list):
         if attr.type == "ip-src"
     }
 
-    created_count = updated_count = sightings_count = 0
+    created_count = updated_count = sightings_count = tags_added = 0
+    asn_names = db.get("asn_names") or {}
 
     for ip, record in db["items"].items():
-        comment = build_misp_comment(record)
+        comment = build_misp_comment(record, asn_names=asn_names)
         attr = existing_ip_attrs.get(ip)
+        desired_tags = _source_tags_for(record)
+        # Enrichment warninglists : ajoute mwl:scanner=*, mwl:cloud=*, etc.
+        if WARNINGLISTS_AVAILABLE:
+            desired_tags = desired_tags + enrich_warninglists.enrich(ip)
+        # Enrichment Tor : ajoute tor:exit-node si l'IP est un relay connu.
+        if TOR_AVAILABLE and TOR_ENABLED:
+            desired_tags = desired_tags + enrich_tor.enrich(ip)
 
         # 1) Nouvelle IP : créer l'attribut
         if attr is None:
@@ -598,8 +864,12 @@ def push_misp(db: dict, events: list):
                 updated = misp.update_attribute(attr, pythonify=True)
                 if isinstance(updated, MISPAttribute):
                     existing_ip_attrs[ip] = updated
+                    attr = updated
                 updated_count += 1
                 log.info("MISP ~ commentaire mis à jour pour %s", ip)
+
+        # 2bis) Tags source:* (idempotent, best-effort)
+        tags_added += _apply_source_tags(misp, attr, desired_tags)
 
         # 3) Sighting uniquement si l'IP a été vue dans ce run
         if ip in run_obs:
@@ -618,9 +888,14 @@ def push_misp(db: dict, events: list):
             except Exception as e:
                 log.warning("Échec sighting pour %s : %s", ip, e)
 
+    # Tags source:* au niveau event (agrégat toutes IPs)
+    event_tags_added = _apply_event_source_tags(misp, event, db)
+
     log.info(
-        "MISP ✓ sync terminée (créées=%d, mises_à_jour=%d, sightings=%d, total_db=%d)",
-        created_count, updated_count, sightings_count, len(db["items"]),
+        "MISP ✓ sync terminée (créées=%d, mises_à_jour=%d, sightings=%d, "
+        "tags_attr=%d, tags_event=%d, total_db=%d)",
+        created_count, updated_count, sightings_count,
+        tags_added, event_tags_added, len(db["items"]),
     )
 
 
@@ -693,6 +968,22 @@ def main():
     if SURICATA_ONLY:
         log.info("SURICATA_ONLY actif — source CrowdSec ignorée pour ce run")
 
+    # Preload warninglists (enrichment IP → tags mwl:*)
+    if WARNINGLISTS_AVAILABLE:
+        enrich_warninglists.load_warninglists()
+    else:
+        log.warning("module enrich_warninglists indisponible — enrichment skip")
+
+    # Preload Tor exit-nodes (enrichment IP → tag tor:exit-node). Best-effort :
+    # un fetch raté retourne un set vide, aucune IP ne sera taguée ce run.
+    if TOR_AVAILABLE and TOR_ENABLED:
+        tor_exits = enrich_tor.load_tor_exits()
+        log.info("Tor enrichment : %d exit-nodes en mémoire", len(tor_exits))
+    elif not TOR_ENABLED:
+        log.info("Tor enrichment désactivé (TOR_ENABLED=false)")
+    else:
+        log.warning("module enrich_tor indisponible — enrichment Tor skip")
+
     # 1. Charger la DB existante depuis GitHub
     existing_db = gh_get_file("state/db.json")
     if existing_db:
@@ -718,6 +1009,58 @@ def main():
 
     # 4. Fusion + TTL
     db = merge_and_ttl(events, db)
+
+    # 4bis. Enrichment payloads Suricata (index suricata_eve).
+    # On n'appelle l'API que si Suricata est activé, qu'on a vu des IPs
+    # Suricata dans ce run, et que la sanitization est disponible (garde-fou
+    # pour ne jamais stocker de payload brut).
+    if SURICATA_ENABLED and SANITIZE_AVAILABLE and SPLUNK_URL and SPLUNK_TOKEN:
+        suri_ips = [
+            ip for ip, rec in db["items"].items()
+            if "suricata" in rec.get("sources", {})
+        ]
+        if suri_ips:
+            try:
+                from suricata import fetch_eve_payloads
+                payloads_by_ip = fetch_eve_payloads(
+                    url=SPLUNK_URL,
+                    token=SPLUNK_TOKEN,
+                    index=SPLUNK_INDEX_EVE,
+                    lookback=SPLUNK_LOOKBACK,
+                    ips=suri_ips,
+                    verify_ssl=SPLUNK_VERIFY_SSL,
+                )
+                added = enrich_suricata_payloads(db, payloads_by_ip)
+                log.info("Suricata-eve : %d payloads ajoutés sur %d IPs",
+                         added, len(payloads_by_ip))
+            except Exception as e:
+                log.error("Suricata-eve fetch échoué (non-bloquant) : %s", e, exc_info=True)
+
+    # 4ter. Enrichment ASN (CIRCL) — uniquement les IPs sans ASN mémorisé.
+    # Best-effort : en cas d'échec global, on continue sans bloquer le run.
+    # Cache des noms d'ASN dans db["asn_names"] : persiste entre runs pour
+    # éviter de ré-interroger RIPE Stat pour les ASN déjà nommés.
+    db.setdefault("asn_names", {})
+    if ASN_AVAILABLE and ASN_ENABLED:
+        to_enrich = [ip for ip, rec in db["items"].items() if not rec.get("asn")]
+        if to_enrich:
+            asn_data = enrich_asn.enrich_batch(to_enrich)
+            for ip, info in asn_data.items():
+                db["items"][ip]["asn"] = info["asn"]
+                if info.get("prefix"):
+                    db["items"][ip]["asn_prefix"] = info["prefix"]
+            log.info("ASN enrichment : %d/%d IPs enrichies (CIRCL)",
+                     len(asn_data), len(to_enrich))
+        else:
+            log.info("ASN enrichment : toutes les IPs ont déjà un ASN mémorisé, skip CIRCL")
+
+        # Résolution ASN → nom (RIPE Stat), cachée dans db["asn_names"]
+        all_asns = {rec["asn"] for rec in db["items"].values() if rec.get("asn")}
+        new_names = enrich_asn.enrich_names(all_asns, known=db["asn_names"])
+        if new_names:
+            db["asn_names"].update(new_names)
+    elif not ASN_ENABLED:
+        log.info("ASN enrichment désactivé (ASN_ENABLED=false)")
 
     # 5. Générer les fichiers
     outputs = generate_outputs(db)

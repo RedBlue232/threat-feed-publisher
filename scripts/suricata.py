@@ -28,6 +28,7 @@ import ipaddress
 import json
 import logging
 import re
+from typing import Iterable
 
 import requests
 
@@ -244,3 +245,144 @@ def fetch_blocked_ips(
         log.info("[suricata] %d lignes rejetées (IP invalide / non globale / champ manquant)", rejected)
     log.info("[suricata] %d events exploitables", len(events))
     return events
+
+
+# ---------------------------------------------------------------------------
+# Payload enrichment via l'index eve (suricata_eve)
+#
+# L'index eve contient les events JSON structurés (event_type=alert), avec
+# entre autres http.http_method, http.url, http.http_user_agent et
+# payload_printable. On se sert de ces champs pour enrichir les IPs du feed
+# avec un aperçu du payload observé — utile pour distinguer un scanner
+# générique d'une exploitation ciblée.
+#
+# IMPORTANT : le payload brut peut contenir des PII (IP interne, nom d'hôte
+# privé, voire du contenu binaire). Cette fonction n'applique PAS la
+# sanitization : elle retourne la donnée brute, c'est au caller d'appeler
+# sanitize.sanitize_and_truncate() avant publication.
+#
+# Modélisation IPs : on matche `src_ip IN (...)`. Les alertes outbound
+# (src_ip interne → dest_ip attaquant) sont rares côté feed puisque les IPs
+# privées sont de toute façon filtrées par is_publishable_ip. Si besoin on
+# ajoutera un matching sur dest_ip plus tard.
+# ---------------------------------------------------------------------------
+
+# Nombre d'IPs max par requête Splunk (clause IN). Au-delà, on scinde.
+_EVE_BATCH_IPS = 500
+
+# Nombre max d'events renvoyés par batch (head). Pour dizaines d'IPs actives
+# on veut ~10 events par IP en moyenne, soit 5000 events/batch.
+_EVE_HEAD = 5000
+
+
+def _build_eve_spl(index: str, lookback: str, ips: list[str]) -> str:
+    """Construit la SPL de lookup payload pour un batch d'IPs.
+
+    Les IPs sont pré-validées par le caller (`fetch_eve_payloads`). On les
+    quote systématiquement pour Splunk — aucun caractère hors [0-9a-fA-F:.]
+    ne peut passer après validation `ipaddress`.
+    """
+    if not _INDEX_RE.match(index):
+        raise ValueError(f"SPLUNK_INDEX_EVE invalide: {index!r}")
+    if not _LOOKBACK_RE.match(lookback):
+        raise ValueError(f"SPLUNK_LOOKBACK invalide: {lookback!r}")
+
+    ip_list = ",".join(f'"{ip}"' for ip in ips)
+    return (
+        f"search index={index} earliest=-{lookback} event_type=alert "
+        f"| search src_ip IN ({ip_list}) "
+        # Splunk auto-extrait les champs JSON avec des `.` ; on renomme pour
+        # ne pas avoir de clés pointées côté client. On ne ramène QUE les
+        # champs HTTP — pas `payload_printable`, qui contient des octets
+        # bruts pour les alertes non-HTTP (IKE, DNS, TLS…).
+        f'| rename "http.http_method" AS http_method, "http.url" AS http_url '
+        f"| table src_ip, http_method, http_url "
+        f"| head {_EVE_HEAD}"
+    )
+
+
+def _row_to_payload(row: dict) -> str | None:
+    """Extrait un payload lisible d'une row eve. Retourne None si rien.
+
+    On n'exporte un payload QUE si Suricata a réussi à parser du HTTP
+    (http_method ET http_url présents). Le fallback sur `payload_printable`
+    était dangereux : pour les alertes non-HTTP (IKE, DNS, TLS, SSH…),
+    payload_printable est peuplé avec des octets bruts du paquet qui ne sont
+    pas lisibles en texte et polluent le feed public. Si on veut enrichir
+    d'autres protocoles plus tard, ça se fera via des extracteurs dédiés
+    par protocole (`dns.rrname`, `tls.sni`…), pas via le payload brut.
+    """
+    method = (row.get("http_method") or "").strip()
+    url    = (row.get("http_url") or "").strip()
+    if method and url:
+        return f"{method} {url}"
+    return None
+
+
+def fetch_eve_payloads(
+    url: str,
+    token: str,
+    index: str,
+    lookback: str,
+    ips: Iterable[str],
+    verify_ssl: bool = True,
+) -> dict[str, list[str]]:
+    """Récupère pour chaque IP donnée la liste des payloads HTTP observés
+    dans l'index eve, dédupliqués (ordre d'apparition conservé).
+
+    Retourne un dict `{ip: [payload_str, ...]}`. Best-effort : toute erreur
+    réseau/Splunk lève (le caller doit gérer try/except).
+
+    NB : pas de sanitization ici, c'est une responsabilité du caller.
+    """
+    if not url or not token:
+        return {}
+
+    # Validation stricte des IPs avant injection SPL — double ceinture avec
+    # la validation déjà faite à l'ingestion block.
+    validated: list[str] = []
+    for ip in ips:
+        try:
+            ipaddress.ip_address(ip)
+            validated.append(ip)
+        except (TypeError, ValueError):
+            continue
+    if not validated:
+        return {}
+
+    log.info(
+        "[suricata-eve] lookup payloads pour %d IPs (index=%s, lookback=%s)",
+        len(validated), index, lookback,
+    )
+
+    raw: dict[str, list[str]] = {}
+    for i in range(0, len(validated), _EVE_BATCH_IPS):
+        chunk = validated[i:i + _EVE_BATCH_IPS]
+        spl = _build_eve_spl(index, lookback, chunk)
+        rows = splunk_search_export(url, token, spl, verify_ssl)
+        for row in rows:
+            src = (row.get("src_ip") or "").strip()
+            if not src:
+                continue
+            payload = _row_to_payload(row)
+            if payload is None:
+                continue
+            raw.setdefault(src, []).append(payload)
+        log.info(
+            "[suricata-eve] batch %d-%d : %d events répartis sur %d IPs",
+            i, i + len(chunk), sum(len(v) for v in raw.values()), len(raw),
+        )
+
+    # Dédup tout en gardant l'ordre d'apparition
+    out: dict[str, list[str]] = {}
+    for ip, items in raw.items():
+        seen: set[str] = set()
+        unique: list[str] = []
+        for p in items:
+            if p not in seen:
+                seen.add(p)
+                unique.append(p)
+        out[ip] = unique
+
+    log.info("[suricata-eve] %d IPs enrichies sur %d demandées", len(out), len(validated))
+    return out
