@@ -469,6 +469,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "214503",
+      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
+      "asn_prefix": "45.84.107.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -484,6 +487,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "214503",
+      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
+      "asn_prefix": "45.84.107.0/24",
       "tags": [
         "tor:exit-node"
       ]
