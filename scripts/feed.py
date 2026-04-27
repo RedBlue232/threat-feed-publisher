@@ -93,8 +93,33 @@ MISP_URL        = os.environ.get("MISP_URL", "")
 MISP_KEY        = os.environ.get("MISP_KEY", "")
 MISP_VERIFY_SSL = os.environ.get("MISP_VERIFY_SSL", "false").lower() == "true"
 
-# Tag utilisé pour retrouver l'événement MISP entre les runs
-MISP_EVENT_TAG  = "crowdsec-feed"
+# UUIDs des 3 events MISP rolling (un par scope de feed). L'event `all` est
+# l'event historique, conservé sous son UUID original. Les events `crowdsec`
+# et `suricata` sont nouveaux. Si un UUID est absent, le scope correspondant
+# est silencieusement skippé côté push (mais reste publié côté feeds GitHub).
+MISP_UUID_ALL      = os.environ.get("MISP_UUID_ALL", "").strip()
+MISP_UUID_CROWDSEC = os.environ.get("MISP_UUID_CROWDSEC", "").strip()
+MISP_UUID_SURICATA = os.environ.get("MISP_UUID_SURICATA", "").strip()
+
+# Mapping scope → (uuid, event_info, event_tag). L'event_tag sert au tagging
+# côté event MISP, pas à la recherche (on retrouve l'event par UUID).
+MISP_EVENT_CONFIG: dict[str, dict[str, str]] = {
+    "all": {
+        "uuid":  MISP_UUID_ALL,
+        "info":  "Threat feed (rolling, all sources)",
+        "tag":   "threat-feed:all",
+    },
+    "crowdsec": {
+        "uuid":  MISP_UUID_CROWDSEC,
+        "info":  "Threat feed (rolling, CrowdSec only)",
+        "tag":   "threat-feed:crowdsec",
+    },
+    "suricata": {
+        "uuid":  MISP_UUID_SURICATA,
+        "info":  "Threat feed (rolling, Suricata only)",
+        "tag":   "threat-feed:suricata",
+    },
+}
 
 # Suricata via Splunk — optionnels, désactivés par défaut
 SURICATA_ENABLED      = os.environ.get("SURICATA_ENABLED", "false").lower() == "true"
@@ -534,85 +559,129 @@ def _sanitize_db_for_publish(db: dict) -> dict:
     return pub
 
 
-def generate_outputs(db: dict) -> dict:
-    records = list(db["items"].values())
-    ips_all = sorted(r["ip"] for r in records)
-    ips_v4  = sorted(r["ip"] for r in records if r["family"] == "v4")
-    ips_v6  = sorted(r["ip"] for r in records if r["family"] == "v6")
-    asn_names = db.get("asn_names") or {}
+# Scopes des feeds publiés. Chaque scope = un préfixe de fichier
+# `feed-<scope>-7d.*` + un event MISP dédié. Le scope `all` est l'union des
+# autres ; les scopes nommés sont des filtres `sources` du DB interne.
+# Ordre = ordre d'apparition dans le manifest, ordre stable des fichiers.
+FEED_SCOPES = ("all", "crowdsec", "suricata")
 
-    # Feed public : métadonnées internes retirées (machines, sids, alert_id…),
-    # timestamps arrondis à l'heure, scénarios sans compteurs, sources nommées.
-    public_items = []
-    for r in records:
-        item = {
-            "ip":         r["ip"],
-            "family":     r["family"],
-            "first_seen": round_to_hour(r["first_seen"]),
-            "last_seen":  round_to_hour(r["last_seen"]),
-            "scenarios":  sorted(r["scenarios"].keys()),
-        }
-        sources = sorted(r.get("sources", {}).keys())
-        if sources:
-            item["sources"] = sources
-        # Enrichment ASN (CIRCL) — mémorisé dans le DB
-        if r.get("asn"):
-            item["asn"] = r["asn"]
-            if asn_names.get(r["asn"]):
-                item["asn_name"] = asn_names[r["asn"]]
-            if r.get("asn_prefix"):
-                item["asn_prefix"] = r["asn_prefix"]
-        # Enrichment tags classificatoires (mwl:*, tor:exit-node, ...)
-        # On agrège dans un même champ `tags` : tri stable, pas de doublons.
-        classify_tags: list[str] = []
-        if WARNINGLISTS_AVAILABLE:
-            classify_tags.extend(enrich_warninglists.enrich(r["ip"]))
-        if TOR_AVAILABLE and TOR_ENABLED:
-            classify_tags.extend(enrich_tor.enrich(r["ip"]))
-        if classify_tags:
-            # Dédup + tri pour un JSON stable (facilite les diffs GitHub)
-            item["tags"] = sorted(set(classify_tags))
-        # Payloads sanitisés (union toutes sources, dédup, ordre stable)
-        merged_payloads: list[str] = []
-        seen_payloads: set[str] = set()
-        for src_name in sorted(r.get("sources", {}).keys()):
-            for p in r["sources"][src_name].get("payloads", []):
-                if p not in seen_payloads:
-                    seen_payloads.add(p)
-                    merged_payloads.append(p)
-        if merged_payloads:
-            item["payloads"] = merged_payloads
-        public_items.append(item)
 
-    feed_json = {
-        "generated_at": round_to_hour(db["updated_at"]),
-        "ttl_days":     TTL_DAYS,
-        "counts":       {"total": len(ips_all), "v4": len(ips_v4), "v6": len(ips_v6)},
-        "items":        public_items,
+def _record_in_scope(record: dict, scope: str) -> bool:
+    """Filtre une IP selon le scope du feed. `all` = pas de filtre, sinon on
+    vérifie que la source est observée dans `record["sources"]`."""
+    if scope == "all":
+        return True
+    return scope in record.get("sources", {})
+
+
+def _build_public_item(r: dict, asn_names: dict) -> dict:
+    """Construit l'item JSON public à partir d'un record DB. Identique pour
+    tous les scopes : on ne tronque pas le détail (sources, scenarios) parce
+    qu'on veut que `feed-crowdsec-7d.json` montre quand même qu'une IP est
+    aussi vue par Suricata, par exemple."""
+    item = {
+        "ip":         r["ip"],
+        "family":     r["family"],
+        "first_seen": round_to_hour(r["first_seen"]),
+        "last_seen":  round_to_hour(r["last_seen"]),
+        "scenarios":  sorted(r["scenarios"].keys()),
     }
+    sources = sorted(r.get("sources", {}).keys())
+    if sources:
+        item["sources"] = sources
+    # Enrichment ASN (CIRCL) — mémorisé dans le DB
+    if r.get("asn"):
+        item["asn"] = r["asn"]
+        if asn_names.get(r["asn"]):
+            item["asn_name"] = asn_names[r["asn"]]
+        if r.get("asn_prefix"):
+            item["asn_prefix"] = r["asn_prefix"]
+    # Enrichment tags classificatoires (mwl:*, tor:exit-node, ...)
+    # On agrège dans un même champ `tags` : tri stable, pas de doublons.
+    classify_tags: list[str] = []
+    if WARNINGLISTS_AVAILABLE:
+        classify_tags.extend(enrich_warninglists.enrich(r["ip"]))
+    if TOR_AVAILABLE and TOR_ENABLED:
+        classify_tags.extend(enrich_tor.enrich(r["ip"]))
+    if classify_tags:
+        # Dédup + tri pour un JSON stable (facilite les diffs GitHub)
+        item["tags"] = sorted(set(classify_tags))
+    # Payloads sanitisés (union toutes sources, dédup, ordre stable)
+    merged_payloads: list[str] = []
+    seen_payloads: set[str] = set()
+    for src_name in sorted(r.get("sources", {}).keys()):
+        for p in r["sources"][src_name].get("payloads", []):
+            if p not in seen_payloads:
+                seen_payloads.add(p)
+                merged_payloads.append(p)
+    if merged_payloads:
+        item["payloads"] = merged_payloads
+    return item
 
-    # Décompte par source (utile au monitoring CI)
-    source_counts = {}
+
+def generate_outputs(db: dict) -> dict:
+    """Produit les fichiers à publier sur GitHub. Génère 3 jeux de feeds
+    scopés (all / crowdsec / suricata) au format `feed-<scope>-7d.{txt,
+    _v4.txt, _v6.txt, json}`, plus le state interne (db + status).
+
+    Une IP multi-source est dupliquée entre `crowdsec`, `suricata` et `all`
+    — voulu : un consommateur abonné au seul scope `crowdsec` doit voir
+    l'IP même si Suricata l'a aussi flaguée."""
+    records = list(db["items"].values())
+    asn_names = db.get("asn_names") or {}
+    updated_iso = round_to_hour(db["updated_at"])
+
+    outputs: dict[str, str] = {}
+
+    # Compte global pour status.json (= scope "all")
+    global_counts = {"total": 0, "v4": 0, "v6": 0}
+    per_scope_counts: dict[str, dict[str, int]] = {}
+
+    for scope in FEED_SCOPES:
+        scoped = [r for r in records if _record_in_scope(r, scope)]
+        ips_all = sorted(r["ip"] for r in scoped)
+        ips_v4  = sorted(r["ip"] for r in scoped if r["family"] == "v4")
+        ips_v6  = sorted(r["ip"] for r in scoped if r["family"] == "v6")
+
+        public_items = [_build_public_item(r, asn_names) for r in scoped]
+        feed_json = {
+            "generated_at": updated_iso,
+            "ttl_days":     TTL_DAYS,
+            "scope":        scope,
+            "counts":       {"total": len(ips_all), "v4": len(ips_v4), "v6": len(ips_v6)},
+            "items":        public_items,
+        }
+
+        prefix = f"feeds/feed-{scope}-7d"
+        outputs[f"{prefix}.txt"]    = "\n".join(ips_all) + "\n"
+        outputs[f"{prefix}_v4.txt"] = "\n".join(ips_v4)  + "\n"
+        outputs[f"{prefix}_v6.txt"] = "\n".join(ips_v6)  + "\n"
+        outputs[f"{prefix}.json"]   = json.dumps(feed_json, indent=2)
+
+        per_scope_counts[scope] = feed_json["counts"]
+        if scope == "all":
+            global_counts = feed_json["counts"]
+
+    # Décompte par source (= heuristique : nombre d'IPs ayant cette source).
+    # Redondant avec per_scope_counts mais utile aux consommateurs qui
+    # veulent itérer "toutes les sources connues".
+    source_counts: dict[str, int] = {}
     for r in records:
         for s in r.get("sources", {}):
             source_counts[s] = source_counts.get(s, 0) + 1
 
     status = {
-        "updated_at": round_to_hour(db["updated_at"]),
+        "updated_at": updated_iso,
         "ttl_days":   TTL_DAYS,
-        "counts":     feed_json["counts"],
+        "counts":     global_counts,
+        "feeds":      per_scope_counts,
     }
     if source_counts:
         status["sources"] = dict(sorted(source_counts.items()))
 
-    return {
-        "state/db.json":            json.dumps(_sanitize_db_for_publish(db), indent=2),
-        "state/status.json":        json.dumps(status, indent=2),
-        "feeds/crowdsec_7d.txt":    "\n".join(ips_all) + "\n",
-        "feeds/crowdsec_7d_v4.txt": "\n".join(ips_v4)  + "\n",
-        "feeds/crowdsec_7d_v6.txt": "\n".join(ips_v6)  + "\n",
-        "feeds/crowdsec_7d.json":   json.dumps(feed_json, indent=2),
-    }
+    outputs["state/db.json"]     = json.dumps(_sanitize_db_for_publish(db), indent=2)
+    outputs["state/status.json"] = json.dumps(status, indent=2)
+    return outputs
 
 
 # ---------------------------------------------------------------------------
@@ -786,60 +855,55 @@ def aggregate_run_events(events: list) -> dict:
 # un tag historique reste tant que l'IP n'est pas purgée par TTL.
 # ---------------------------------------------------------------------------
 
-def push_misp(db: dict, events: list):
-    if not PYMISP_AVAILABLE:
-        log.warning("PyMISP non installé — push MISP ignoré")
-        return
-    if not MISP_URL or not MISP_KEY:
-        log.info("MISP non configuré (MISP_URL/MISP_KEY absents) — push ignoré")
-        return
+def _get_or_create_misp_event(misp, scope: str, cfg: dict):
+    """Récupère l'event MISP par UUID stable. Le crée s'il n'existe pas
+    encore côté instance (premier run d'un nouveau scope). UUID stable =
+    une seule source de vérité, pas de recherche par tag fragile."""
+    uuid = cfg["uuid"]
+    try:
+        event = misp.get_event(uuid, pythonify=True)
+        # PyMISP renvoie un dict d'erreur si l'event n'existe pas
+        if hasattr(event, "uuid") and event.uuid == uuid:
+            log.info("[%s] event MISP trouvé (id=%s, uuid=%s)", scope, event.id, uuid)
+            return event
+    except Exception as e:
+        log.info("[%s] event MISP %s introuvable (%s) — création", scope, uuid, e)
 
-    log.info("Connexion MISP → %s", MISP_URL)
-    misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    event = MISPEvent()
+    event.uuid            = uuid
+    event.info            = cfg["info"]
+    event.distribution    = 0  # 0=Org only — adapte : 1=Community, 3=All
+    event.threat_level_id = 3  # Low
+    event.analysis        = 2  # Completed
+    event.add_tag(cfg["tag"])
+    created = misp.add_event(event, pythonify=True)
+    log.info("[%s] event MISP créé (id=%s, uuid=%s)", scope, created.id, uuid)
+    return created
 
-    run_obs = aggregate_run_events(events)
 
-    # Chercher un événement existant avec notre tag
-    existing_event = None
-    results = misp.search(tags=[MISP_EVENT_TAG], pythonify=True)
-    if results:
-        existing_event = results[0]
-        log.info("Événement MISP existant trouvé (id=%s)", existing_event.id)
+def _push_one_event(misp, scope: str, cfg: dict, scoped_db: dict, run_obs: dict) -> dict:
+    """Push d'un seul event MISP : crée/maj attributs ip-src, applique tags,
+    pose sightings. Retourne un dict de stats par scope."""
+    event = _get_or_create_misp_event(misp, scope, cfg)
 
-    if existing_event is None:
-        event = MISPEvent()
-        event.info            = "Threat feed (rolling)"
-        event.distribution    = 0  # 0=Org only — adapte : 1=Community, 3=All
-        event.threat_level_id = 3  # Low
-        event.analysis        = 2  # Completed
-        event.add_tag(MISP_EVENT_TAG)
-        event = misp.add_event(event, pythonify=True)
-        log.info("Événement MISP créé (id=%s)", event.id)
-    else:
-        event = misp.get_event(existing_event.id, pythonify=True)
-
-    # Index des attributs ip-src existants par valeur IP
     existing_ip_attrs = {
         attr.value: attr
         for attr in getattr(event, "attributes", [])
         if attr.type == "ip-src"
     }
 
-    created_count = updated_count = sightings_count = tags_added = 0
-    asn_names = db.get("asn_names") or {}
+    stats = {"created": 0, "updated": 0, "sightings": 0, "tags_attr": 0, "tags_event": 0}
+    asn_names = scoped_db.get("asn_names") or {}
 
-    for ip, record in db["items"].items():
+    for ip, record in scoped_db["items"].items():
         comment = build_misp_comment(record, asn_names=asn_names)
         attr = existing_ip_attrs.get(ip)
         desired_tags = _source_tags_for(record)
-        # Enrichment warninglists : ajoute mwl:scanner=*, mwl:cloud=*, etc.
         if WARNINGLISTS_AVAILABLE:
             desired_tags = desired_tags + enrich_warninglists.enrich(ip)
-        # Enrichment Tor : ajoute tor:exit-node si l'IP est un relay connu.
         if TOR_AVAILABLE and TOR_ENABLED:
             desired_tags = desired_tags + enrich_tor.enrich(ip)
 
-        # 1) Nouvelle IP : créer l'attribut
         if attr is None:
             created = misp.add_attribute(
                 event,
@@ -851,13 +915,10 @@ def push_misp(db: dict, events: list):
             if isinstance(created, MISPAttribute):
                 attr = created
                 existing_ip_attrs[ip] = attr
-                created_count += 1
-                log.info("MISP + nouvelle IP %s", ip)
+                stats["created"] += 1
             else:
-                log.warning("Impossible de créer l'attribut MISP pour %s : %s", ip, created)
+                log.warning("[%s] création attribut %s échouée : %s", scope, ip, created)
                 continue
-
-        # 2) IP existante : mettre à jour le commentaire si besoin
         else:
             if (attr.comment or "") != comment:
                 attr.comment = comment
@@ -865,13 +926,10 @@ def push_misp(db: dict, events: list):
                 if isinstance(updated, MISPAttribute):
                     existing_ip_attrs[ip] = updated
                     attr = updated
-                updated_count += 1
-                log.info("MISP ~ commentaire mis à jour pour %s", ip)
+                stats["updated"] += 1
 
-        # 2bis) Tags source:* (idempotent, best-effort)
-        tags_added += _apply_source_tags(misp, attr, desired_tags)
+        stats["tags_attr"] += _apply_source_tags(misp, attr, desired_tags)
 
-        # 3) Sighting uniquement si l'IP a été vue dans ce run
         if ip in run_obs:
             obs = run_obs[ip]
             source_names = sorted(obs["sources"].keys())
@@ -883,20 +941,68 @@ def push_misp(db: dict, events: list):
                     attribute=attr,
                     pythonify=False,
                 )
-                sightings_count += 1
-                log.info("Sighting MISP ajouté pour %s", ip)
+                stats["sightings"] += 1
             except Exception as e:
-                log.warning("Échec sighting pour %s : %s", ip, e)
+                log.warning("[%s] sighting %s échoué : %s", scope, ip, e)
 
-    # Tags source:* au niveau event (agrégat toutes IPs)
-    event_tags_added = _apply_event_source_tags(misp, event, db)
-
+    stats["tags_event"] = _apply_event_source_tags(misp, event, scoped_db)
     log.info(
-        "MISP ✓ sync terminée (créées=%d, mises_à_jour=%d, sightings=%d, "
-        "tags_attr=%d, tags_event=%d, total_db=%d)",
-        created_count, updated_count, sightings_count,
-        tags_added, event_tags_added, len(db["items"]),
+        "[%s] MISP ✓ created=%d updated=%d sightings=%d tags_attr=%d tags_event=%d total=%d",
+        scope, stats["created"], stats["updated"], stats["sightings"],
+        stats["tags_attr"], stats["tags_event"], len(scoped_db["items"]),
     )
+    return stats
+
+
+def _filter_db_by_scope(db: dict, scope: str) -> dict:
+    """Crée un sous-DB avec seulement les IPs du scope demandé. Préserve
+    `asn_names` et `updated_at` par référence (lecture seule chez le caller).
+    Pour `all`, retourne une vue identique au DB d'origine."""
+    if scope == "all":
+        return db
+    filtered_items = {
+        ip: rec for ip, rec in db["items"].items()
+        if scope in rec.get("sources", {})
+    }
+    return {
+        "items":      filtered_items,
+        "asn_names":  db.get("asn_names", {}),
+        "updated_at": db.get("updated_at"),
+    }
+
+
+def push_misp(db: dict, events: list):
+    """Push les IPs vers les 3 events MISP distincts (un par scope).
+    Chaque event est identifié par un UUID stable depuis l'env. Un scope
+    sans UUID configuré est silencieusement skippé (utile en transition)."""
+    if not PYMISP_AVAILABLE:
+        log.warning("PyMISP non installé — push MISP ignoré")
+        return
+    if not MISP_URL or not MISP_KEY:
+        log.info("MISP non configuré (MISP_URL/MISP_KEY absents) — push ignoré")
+        return
+
+    log.info("Connexion MISP → %s", MISP_URL)
+    misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    run_obs = aggregate_run_events(events)
+
+    pushed = 0
+    for scope in FEED_SCOPES:
+        cfg = MISP_EVENT_CONFIG[scope]
+        if not cfg["uuid"]:
+            log.info("[%s] MISP_UUID non configuré — push skippé pour ce scope", scope)
+            continue
+        scoped_db = _filter_db_by_scope(db, scope)
+        if not scoped_db["items"]:
+            log.info("[%s] DB vide pour ce scope — push skippé", scope)
+            continue
+        try:
+            _push_one_event(misp, scope, cfg, scoped_db, run_obs)
+            pushed += 1
+        except Exception as e:
+            log.warning("[%s] push MISP a échoué : %s", scope, e)
+
+    log.info("MISP ✓ %d/%d events synchronisés", pushed, len(FEED_SCOPES))
 
 
 # ---------------------------------------------------------------------------

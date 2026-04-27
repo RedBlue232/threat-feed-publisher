@@ -17,16 +17,16 @@ Syntaxe des domaines :
                        bar.foo.example.com, example.com)
 
 Les matchings de domaines sont protégés contre les faux positifs évidents :
-- `notsalledarcade.fr` ne matche PAS `salledarcade.fr` (bordure de label)
+- `notexample.com` ne matche PAS `example.com` (bordure de label)
 
-En revanche un lookalike du type `salledarcade.fr.evil.com` est redacté
+En revanche un lookalike du type `example.com.evil.com` est redacté
 (résultat : `[REDACTED_DOMAIN].evil.com`). C'est volontaire : si un
 attaquant forge un domaine qui imite le nôtre, on préfère sur-redacter que
 laisser fuiter la racine publique.
 
 Config via env (comma-separated) :
-- PII_IPS         : liste d'IPs à occulter (ex: "82.67.159.52,10.42.0.1")
-- PII_DOMAINS     : liste de domaines (ex: "*.salledarcade.fr,example.com")
+- PII_IPS         : liste d'IPs à occulter (ex: "203.0.113.42,10.42.0.1")
+- PII_DOMAINS     : liste de domaines (ex: "*.example.com,corp.example")
 - PAYLOAD_MAX_LEN : longueur max après sanitization (défaut 512)
 
 Invariants :
