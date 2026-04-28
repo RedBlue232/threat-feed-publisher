@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-04-28T14:28:16.845739Z",
+  "updated_at": "2026-04-28T15:35:37.470743Z",
   "items": {
     "79.124.40.174": {
       "ip": "79.124.40.174",
@@ -1211,13 +1211,13 @@
       "last_seen": "2026-04-28T09:17:56Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T09:17:56Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T09:17:56Z",
           "last_seen": "2026-04-28T09:17:56Z",
           "last_alert_id": 6071,
@@ -1238,17 +1238,17 @@
       "last_seen": "2026-04-28T08:23:35Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T08:23:35Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T08:23:35Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 6,
+          "count": 8,
           "first_seen": "2026-04-28T08:23:35Z",
           "last_seen": "2026-04-28T08:23:35Z",
           "last_alert_id": 6069,
@@ -1278,21 +1278,21 @@
       "last_seen": "2026-04-28T05:40:11Z",
       "scenarios": {
         "crowdsec/netgear_rce": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T05:40:11Z"
         },
         "crowdsec/http-cve-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T05:40:10Z"
         },
         "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T05:40:06Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 6,
+          "count": 8,
           "first_seen": "2026-04-28T05:40:10Z",
           "last_seen": "2026-04-28T05:40:11Z",
           "last_alert_id": 6066,
@@ -1302,7 +1302,7 @@
           ]
         },
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T05:40:06Z",
           "last_seen": "2026-04-28T05:40:06Z",
           "sids": [
@@ -1324,13 +1324,13 @@
       "last_seen": "2026-04-28T11:25:26Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T11:25:26Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T11:25:26Z",
           "last_seen": "2026-04-28T11:25:26Z",
           "sids": [
@@ -1352,13 +1352,13 @@
       "last_seen": "2026-04-28T11:21:43Z",
       "scenarios": {
         "suricata/SURICATA HTTP unable to match response to request": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T11:21:43Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T11:21:43Z",
           "last_seen": "2026-04-28T11:21:43Z",
           "sids": [
@@ -1377,13 +1377,13 @@
       "last_seen": "2026-04-28T07:18:23Z",
       "scenarios": {
         "suricata/SURICATA HTTP unable to match response to request": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T07:18:23Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T07:18:23Z",
           "last_seen": "2026-04-28T07:18:23Z",
           "sids": [
@@ -1402,13 +1402,13 @@
       "last_seen": "2026-04-28T11:37:10Z",
       "scenarios": {
         "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-04-28T11:37:10Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-04-28T11:37:10Z",
           "last_seen": "2026-04-28T11:37:10Z",
           "sids": [
@@ -1431,13 +1431,13 @@
       "last_seen": "2026-04-28T13:25:36Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-04-28T13:25:36Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-04-28T13:25:36Z",
           "last_seen": "2026-04-28T13:25:36Z",
           "sids": [
@@ -1446,6 +1446,60 @@
           "max_priority": 2,
           "payloads": [
             "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.324.0_3fd98b226d1c0c27af74e1e6aab3677da801f17f.exe?cacheHostOrigin=au.download.windowsupdate.com"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "172.160.0.0/11"
+    },
+    "34.11.70.76": {
+      "ip": "34.11.70.76",
+      "family": "v4",
+      "first_seen": "2026-04-28T14:33:15Z",
+      "last_seen": "2026-04-28T14:33:15Z",
+      "scenarios": {
+        "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML": {
+          "count": 1,
+          "last_seen": "2026-04-28T14:33:15Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-28T14:33:15Z",
+          "last_seen": "2026-04-28T14:33:15Z",
+          "sids": [
+            2031505
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /wordpress/wp-includes/wlwmanifest.xml"
+          ]
+        }
+      }
+    },
+    "135.222.40.122": {
+      "ip": "135.222.40.122",
+      "family": "v4",
+      "first_seen": "2026-04-28T15:15:42Z",
+      "last_seen": "2026-04-28T15:15:42Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-04-28T15:15:42Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-04-28T15:15:42Z",
+          "last_seen": "2026-04-28T15:15:42Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /actuator/health"
           ]
         }
       }
