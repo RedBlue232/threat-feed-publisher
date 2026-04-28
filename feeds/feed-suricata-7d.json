@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-28T14:00:00Z",
+  "generated_at": "2026-04-28T15:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 30,
-    "v4": 30,
+    "total": 32,
+    "v4": 32,
     "v6": 0
   },
   "items": [
@@ -545,11 +545,47 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.324.0_3fd98b226d1c0c27af74e1e6aab3677da801f17f.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "34.11.70.76",
+      "family": "v4",
+      "first_seen": "2026-04-28T14:00:00Z",
+      "last_seen": "2026-04-28T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /wordpress/wp-includes/wlwmanifest.xml"
+      ]
+    },
+    {
+      "ip": "135.222.40.122",
+      "family": "v4",
+      "first_seen": "2026-04-28T15:00:00Z",
+      "last_seen": "2026-04-28T15:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /actuator/health"
       ]
     }
   ]
