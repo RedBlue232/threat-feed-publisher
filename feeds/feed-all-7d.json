@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T01:00:00Z",
+  "generated_at": "2026-04-30T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 63,
-    "v4": 63,
+    "total": 73,
+    "v4": 73,
     "v6": 0
   },
   "items": [
@@ -312,7 +312,10 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24"
+      "asn_prefix": "45.84.107.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
     },
     {
       "ip": "45.84.107.97",
@@ -327,7 +330,10 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24"
+      "asn_prefix": "45.84.107.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
     },
     {
       "ip": "172.189.127.19",
@@ -1203,7 +1209,7 @@
       "ip": "158.158.98.94",
       "family": "v4",
       "first_seen": "2026-04-29T15:00:00Z",
-      "last_seen": "2026-04-29T21:00:00Z",
+      "last_seen": "2026-04-30T04:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-backdoors-attempts",
@@ -1216,17 +1222,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /images/index.php",
-        "GET /index.php",
-        "GET /index/function.php",
-        "GET /install.php",
-        "GET /ioxi-o.php",
-        "GET /k.php",
-        "GET /lock360.php",
-        "GET /meta.php",
-        "GET /admin.php",
-        "GET /admin/controller/extension/",
-        "GET /adminfuns.php",
         "GET /xleet.php",
         "GET /xmrlpc.php",
         "GET /1.php",
@@ -1235,7 +1230,18 @@
         "GET /aa.php",
         "GET /aaa.php",
         "GET /abcd.php",
-        "GET /about.php"
+        "GET /about.php",
+        "GET /xmlrpc.php",
+        "GET /wk/index.php",
+        "GET /inputs.php",
+        "GET /classwithtostring.php",
+        "GET /autoload_classmap/function.php",
+        "GET /b.php",
+        "GET /cache.php",
+        "GET /abc.php",
+        "GET /.well-known/",
+        "GET /.well-known/gecko-litespeed.php",
+        "GET /.well-known/pki-validation/mariju.php"
       ]
     },
     {
@@ -1293,6 +1299,177 @@
       ],
       "sources": [
         "suricata"
+      ]
+    },
+    {
+      "ip": "15.223.44.210",
+      "family": "v4",
+      "first_seen": "2026-04-30T04:00:00Z",
+      "last_seen": "2026-04-30T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /admin/.env",
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "45.165.148.70",
+      "family": "v4",
+      "first_seen": "2026-04-30T10:00:00Z",
+      "last_seen": "2026-04-30T10:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "160.30.142.213",
+      "family": "v4",
+      "first_seen": "2026-04-30T08:00:00Z",
+      "last_seen": "2026-04-30T08:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "79.127.184.158",
+      "family": "v4",
+      "first_seen": "2026-04-30T07:00:00Z",
+      "last_seen": "2026-04-30T07:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Possible Apache log4j RCE Attempt - 2021/12/12 Obfuscation Observed M2 (udp) (Outbound) (CVE-2021-44228)"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "51.158.205.47",
+      "family": "v4",
+      "first_seen": "2026-04-30T06:00:00Z",
+      "last_seen": "2026-04-30T06:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN NETWORK Incoming Masscan detected"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "217.154.92.76",
+      "family": "v4",
+      "first_seen": "2026-04-30T05:00:00Z",
+      "last_seen": "2026-04-30T05:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 7"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "115.248.8.65",
+      "family": "v4",
+      "first_seen": "2026-04-30T04:00:00Z",
+      "last_seen": "2026-04-30T04:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "103.165.11.185",
+      "family": "v4",
+      "first_seen": "2026-04-30T04:00:00Z",
+      "last_seen": "2026-04-30T04:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "20.65.195.30",
+      "family": "v4",
+      "first_seen": "2026-04-30T01:00:00Z",
+      "last_seen": "2026-04-30T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/text/list"
+      ]
+    },
+    {
+      "ip": "104.198.206.16",
+      "family": "v4",
+      "first_seen": "2026-04-30T13:00:00Z",
+      "last_seen": "2026-04-30T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /wordpress/wp-includes/wlwmanifest.xml"
       ]
     }
   ]
