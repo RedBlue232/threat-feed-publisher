@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T13:00:00Z",
+  "generated_at": "2026-05-01T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 28,
-    "v4": 28,
+    "total": 25,
+    "v4": 25,
     "v6": 0
   },
   "items": [
@@ -27,62 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "20.65.219.43",
-      "family": "v4",
-      "first_seen": "2026-04-23T21:00:00Z",
-      "last_seen": "2026-04-23T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "20.211.123.94",
-      "family": "v4",
-      "first_seen": "2026-04-23T20:00:00Z",
-      "last_seen": "2026-04-23T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "158.158.109.204",
-      "family": "v4",
-      "first_seen": "2026-04-23T13:00:00Z",
-      "last_seen": "2026-04-23T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "158.158.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
