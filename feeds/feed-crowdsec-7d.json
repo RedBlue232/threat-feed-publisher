@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-01T01:00:00Z",
+  "generated_at": "2026-05-01T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 25,
-    "v4": 25,
+    "total": 20,
+    "v4": 20,
     "v6": 0
   },
   "items": [
@@ -27,108 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "158.158.124.89",
-      "family": "v4",
-      "first_seen": "2026-04-24T11:00:00Z",
-      "last_seen": "2026-04-24T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "158.158.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "54.219.20.110",
-      "family": "v4",
-      "first_seen": "2026-04-24T07:00:00Z",
-      "last_seen": "2026-04-24T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "54.219.0.0/17",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ]
-    },
-    {
-      "ip": "51.103.42.147",
-      "family": "v4",
-      "first_seen": "2026-04-24T06:00:00Z",
-      "last_seen": "2026-04-24T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "51.103.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "100.53.147.39",
-      "family": "v4",
-      "first_seen": "2026-04-24T01:00:00Z",
-      "last_seen": "2026-04-24T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14618",
-      "asn_name": "AMAZON-AES - Amazon.com",
-      "asn_prefix": "100.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ]
-    },
-    {
-      "ip": "20.151.131.235",
-      "family": "v4",
-      "first_seen": "2026-04-24T01:00:00Z",
-      "last_seen": "2026-04-24T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.150.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
