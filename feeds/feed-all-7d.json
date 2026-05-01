@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-01T01:00:00Z",
+  "generated_at": "2026-05-01T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 74,
-    "v4": 74,
+    "total": 71,
+    "v4": 71,
     "v6": 0
   },
   "items": [
@@ -27,108 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "158.158.124.89",
-      "family": "v4",
-      "first_seen": "2026-04-24T11:00:00Z",
-      "last_seen": "2026-04-24T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "158.158.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "54.219.20.110",
-      "family": "v4",
-      "first_seen": "2026-04-24T07:00:00Z",
-      "last_seen": "2026-04-24T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "54.219.0.0/17",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ]
-    },
-    {
-      "ip": "51.103.42.147",
-      "family": "v4",
-      "first_seen": "2026-04-24T06:00:00Z",
-      "last_seen": "2026-04-24T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "51.103.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "100.53.147.39",
-      "family": "v4",
-      "first_seen": "2026-04-24T01:00:00Z",
-      "last_seen": "2026-04-24T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14618",
-      "asn_name": "AMAZON-AES - Amazon.com",
-      "asn_prefix": "100.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ]
-    },
-    {
-      "ip": "20.151.131.235",
-      "family": "v4",
-      "first_seen": "2026-04-24T01:00:00Z",
-      "last_seen": "2026-04-24T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.150.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
       ]
     },
     {
@@ -1480,6 +1378,42 @@
       ],
       "tags": [
         "mwl:cdn=\"akamai\""
+      ]
+    },
+    {
+      "ip": "20.106.17.55",
+      "family": "v4",
+      "first_seen": "2026-05-01T09:00:00Z",
+      "last_seen": "2026-05-01T09:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.189.127.18",
+      "family": "v4",
+      "first_seen": "2026-05-01T12:00:00Z",
+      "last_seen": "2026-05-01T12:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /filestreamingservice/files/3b646567-edd8-4d79-a43d-e9ae952e6a56?P1=1778241724&P2=404&P3=2&P4=bUYbAAAKKZqmzpy6CpQr9aZpi%2b%2fhoeb2H835kVBXE93cgZKn%2btmvLOHlikE87d%2bZf8%2bg04dphnEbT2q7bBp5TQ%3d%3d&cacheHostOrigin=msedge.b.tlu.dl.delivery.mp.microsoft.com"
       ]
     }
   ]
