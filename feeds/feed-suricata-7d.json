@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-30T13:00:00Z",
+  "generated_at": "2026-05-01T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 50,
-    "v4": 50,
+    "total": 54,
+    "v4": 54,
     "v6": 0
   },
   "items": [
@@ -908,6 +908,72 @@
       ],
       "payloads": [
         "GET /wordpress/wp-includes/wlwmanifest.xml"
+      ]
+    },
+    {
+      "ip": "134.122.30.157",
+      "family": "v4",
+      "first_seen": "2026-04-30T19:00:00Z",
+      "last_seen": "2026-04-30T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.189.127.5",
+      "family": "v4",
+      "first_seen": "2026-04-30T18:00:00Z",
+      "last_seen": "2026-04-30T18:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.357.0_3980e8944b88bd722e5702380e7eee3f5ad75571.exe?cacheHostOrigin=4.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "172.189.127.2",
+      "family": "v4",
+      "first_seen": "2026-04-30T13:00:00Z",
+      "last_seen": "2026-04-30T13:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.357.0_3980e8944b88bd722e5702380e7eee3f5ad75571.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "172.232.133.233",
+      "family": "v4",
+      "first_seen": "2026-04-30T20:00:00Z",
+      "last_seen": "2026-04-30T20:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cdn=\"akamai\""
       ]
     }
   ]
