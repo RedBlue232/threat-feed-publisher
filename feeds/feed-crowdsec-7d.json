@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-01T13:00:00Z",
+  "generated_at": "2026-05-02T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 20,
-    "v4": 20,
+    "total": 22,
+    "v4": 22,
     "v6": 0
   },
   "items": [
@@ -414,6 +414,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "65.0.0.0/14",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -445,6 +448,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /debug/pprof/",
         "GET /metrics"
@@ -463,6 +469,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "158.158.0.0/16",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -502,6 +511,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "15.222.0.0/15",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -520,6 +532,64 @@
         "GET /.env.remote",
         "GET /.env.bak",
         "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "172.212.217.10",
+      "family": "v4",
+      "first_seen": "2026-05-01T22:00:00Z",
+      "last_seen": "2026-05-01T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /timeclock.php",
+        "GET /000.php",
+        "GET /app.php",
+        "GET /profiler.php",
+        "GET /oauth.php",
+        "GET /styles.php",
+        "GET /7.php",
+        "GET /lmfi2.php",
+        "GET /xinfo.php",
+        "GET /creds.php"
+      ]
+    },
+    {
+      "ip": "107.173.37.12",
+      "family": "v4",
+      "first_seen": "2026-05-01T16:00:00Z",
+      "last_seen": "2026-05-01T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.git/config",
+        "GET /.aws/credentials",
+        "GET /.env.local",
+        "GET /.env.backup",
+        "GET /sitemap.xml",
+        "GET /robots.txt",
+        "GET /asset-manifest.json",
+        "GET /manifest.json",
+        "GET /build-manifest.json",
+        "GET /serverless.yml",
+        "GET /.ssh/known_hosts",
+        "GET /.terraform/terraform.tfstate",
+        "GET /.ssh/id_ecdsa",
+        "GET /.env.example"
       ]
     }
   ]
