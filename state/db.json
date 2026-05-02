@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-05-02T01:00:04.414934Z",
+  "updated_at": "2026-05-02T13:00:03.380550Z",
   "items": {
     "79.124.40.174": {
       "ip": "79.124.40.174",
@@ -2186,7 +2186,9 @@
             "GET /creds.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "172.208.0.0/13"
     },
     "107.173.37.12": {
       "ip": "107.173.37.12",
@@ -2228,7 +2230,9 @@
             "GET /.env.example"
           ]
         }
-      }
+      },
+      "asn": "36352",
+      "asn_prefix": "107.173.37.0/24"
     },
     "167.250.226.29": {
       "ip": "167.250.226.29",
@@ -2254,7 +2258,9 @@
             "GET /admin/config.php"
           ]
         }
-      }
+      },
+      "asn": "265210",
+      "asn_prefix": "167.250.226.0/24"
     },
     "185.38.148.2": {
       "ip": "185.38.148.2",
@@ -2277,7 +2283,9 @@
           ],
           "max_priority": 2
         }
-      }
+      },
+      "asn": "25369",
+      "asn_prefix": "185.38.148.0/22"
     },
     "173.197.14.231": {
       "ip": "173.197.14.231",
@@ -2303,7 +2311,9 @@
             "HEAD /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo"
           ]
         }
-      }
+      },
+      "asn": "11427",
+      "asn_prefix": "173.197.0.0/18"
     },
     "62.45.67.8": {
       "ip": "62.45.67.8",
@@ -2325,6 +2335,109 @@
             2221010
           ],
           "max_priority": 3
+        }
+      },
+      "asn": "15435",
+      "asn_prefix": "62.45.0.0/16"
+    },
+    "68.69.177.112": {
+      "ip": "68.69.177.112",
+      "family": "v4",
+      "first_seen": "2026-05-02T09:07:13Z",
+      "last_seen": "2026-05-02T09:07:14Z",
+      "scenarios": {
+        "crowdsec/http-backdoors-attempts": {
+          "count": 1,
+          "last_seen": "2026-05-02T09:07:14Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-05-02T09:07:13Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-05-02T09:07:13Z",
+          "last_seen": "2026-05-02T09:07:14Z",
+          "last_alert_id": 6150,
+          "last_alert_uuid": "173f004b-ef0b-4178-b859-c093380670e9",
+          "payloads": [
+            "GET /upl.php",
+            "GET /t4",
+            "GET /ab2g",
+            "GET /ab2h"
+          ]
+        }
+      }
+    },
+    "104.28.235.58": {
+      "ip": "104.28.235.58",
+      "family": "v4",
+      "first_seen": "2026-05-02T08:34:49Z",
+      "last_seen": "2026-05-02T08:34:52Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-05-02T08:34:52Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-02T08:34:50Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-05-02T08:34:49Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-05-02T08:34:49Z",
+          "last_seen": "2026-05-02T08:34:52Z",
+          "last_alert_id": 6148,
+          "last_alert_uuid": "12f60893-574c-4772-b47e-3982ea0b1bd5",
+          "payloads": [
+            "GET /wp-admin/style.php",
+            "GET /wp-admin/admin-ajax.php",
+            "GET /wp-admin/zwso.php",
+            "GET /style.php",
+            "GET /wp-content/style.php",
+            "GET /wp-content/themes/style.php",
+            "GET /wp-includes/style.php",
+            "GET /chosen.php?p=",
+            "GET /file.php",
+            "GET /flower.php",
+            "GET /gifclass.php",
+            "GET /bless.php",
+            "GET /class-t.api.php"
+          ]
+        }
+      }
+    },
+    "47.238.236.74": {
+      "ip": "47.238.236.74",
+      "family": "v4",
+      "first_seen": "2026-05-02T02:16:36Z",
+      "last_seen": "2026-05-02T02:16:36Z",
+      "scenarios": {
+        "suricata/ET EXPLOIT MVPower DVR Shell UCE": {
+          "count": 1,
+          "last_seen": "2026-05-02T02:16:36Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-05-02T02:16:36Z",
+          "last_seen": "2026-05-02T02:16:36Z",
+          "sids": [
+            2025883
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /shell?cd+/tmp;rm+-rf+*;wget"
+          ]
         }
       }
     }
@@ -2375,6 +2488,9 @@
     "212238": "CDNEXT Datacamp Limited",
     "268678": "CSI SOLUCOES TECNOLOGICAS LTDA",
     "398324": "CENSYS-ARIN-01 - Censys, Inc.",
-    "8560": "IONOS-AS IONOS SE"
+    "8560": "IONOS-AS IONOS SE",
+    "11427": "TWC-11427-TEXAS - Charter Communications Inc",
+    "15435": "KABELFOON DELTA Fiber Nederland B.V.",
+    "265210": "OSCAR M DE CARVALHO - ME"
   }
 }
