@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-02T01:00:00Z",
+  "generated_at": "2026-05-02T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 77,
-    "v4": 77,
+    "total": 80,
+    "v4": 80,
     "v6": 0
   },
   "items": [
@@ -154,7 +154,10 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24"
+      "asn_prefix": "45.84.107.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
     },
     {
       "ip": "45.84.107.97",
@@ -169,7 +172,10 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24"
+      "asn_prefix": "45.84.107.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
     },
     {
       "ip": "172.189.127.19",
@@ -1490,6 +1496,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1519,6 +1528,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "107.173.37.0/24",
       "payloads": [
         "GET /.env",
         "GET /.git/config",
@@ -1548,6 +1560,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "265210",
+      "asn_name": "OSCAR M DE CARVALHO - ME",
+      "asn_prefix": "167.250.226.0/24",
       "payloads": [
         "GET /admin/config.php"
       ]
@@ -1562,7 +1577,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "25369",
+      "asn_name": "BANDWIDTH-AS - Hydra Communications Ltd",
+      "asn_prefix": "185.38.148.0/22"
     },
     {
       "ip": "173.197.14.231",
@@ -1575,6 +1593,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "11427",
+      "asn_name": "TWC-11427-TEXAS - Charter Communications Inc",
+      "asn_prefix": "173.197.0.0/18",
       "payloads": [
         "HEAD /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo"
       ]
@@ -1589,6 +1610,72 @@
       ],
       "sources": [
         "suricata"
+      ],
+      "asn": "15435",
+      "asn_name": "KABELFOON DELTA Fiber Nederland B.V.",
+      "asn_prefix": "62.45.0.0/16"
+    },
+    {
+      "ip": "68.69.177.112",
+      "family": "v4",
+      "first_seen": "2026-05-02T09:00:00Z",
+      "last_seen": "2026-05-02T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /upl.php",
+        "GET /t4",
+        "GET /ab2g",
+        "GET /ab2h"
+      ]
+    },
+    {
+      "ip": "104.28.235.58",
+      "family": "v4",
+      "first_seen": "2026-05-02T08:00:00Z",
+      "last_seen": "2026-05-02T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /wp-admin/style.php",
+        "GET /wp-admin/admin-ajax.php",
+        "GET /wp-admin/zwso.php",
+        "GET /style.php",
+        "GET /wp-content/style.php",
+        "GET /wp-content/themes/style.php",
+        "GET /wp-includes/style.php",
+        "GET /chosen.php?p=",
+        "GET /file.php",
+        "GET /flower.php",
+        "GET /gifclass.php",
+        "GET /bless.php",
+        "GET /class-t.api.php"
+      ]
+    },
+    {
+      "ip": "47.238.236.74",
+      "family": "v4",
+      "first_seen": "2026-05-02T02:00:00Z",
+      "last_seen": "2026-05-02T02:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT MVPower DVR Shell UCE"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget"
       ]
     }
   ]
