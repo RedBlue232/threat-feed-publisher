@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-01T13:00:00Z",
+  "generated_at": "2026-05-02T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 56,
-    "v4": 56,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
@@ -132,10 +132,7 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "45.84.107.97",
@@ -150,10 +147,7 @@
       ],
       "asn": "214503",
       "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "172.189.127.19",
@@ -726,6 +720,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "136180",
+      "asn_name": "IPIP-CN Beijing Tiantexin Tech. Co., Ltd.",
+      "asn_prefix": "103.203.57.0/24",
       "payloads": [
         "GET /"
       ]
@@ -740,7 +737,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "48721",
+      "asn_name": "FLYSERVERS-ENDCLIENTS - Flyservers S.A.",
+      "asn_prefix": "194.165.16.0/24"
     },
     {
       "ip": "172.189.127.21",
@@ -753,6 +753,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -770,7 +773,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "48874",
+      "asn_name": "HOSTMAZE - HOSTMAZE INC SRL-D",
+      "asn_prefix": "89.32.41.0/24"
     },
     {
       "ip": "45.165.148.70",
@@ -783,6 +789,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "268678",
+      "asn_name": "CSI SOLUCOES TECNOLOGICAS LTDA",
+      "asn_prefix": "45.165.148.0/23",
       "payloads": [
         "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
@@ -799,6 +808,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "142647",
+      "asn_name": "NAN-AS-AP Nasstec Airnet Networks Private Limited",
+      "asn_prefix": "160.30.142.0/24",
       "payloads": [
         "POST /GponForm/diag_Form?images/"
       ]
@@ -813,7 +825,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "79.127.184.0/24"
     },
     {
       "ip": "51.158.205.47",
@@ -826,6 +841,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "51.158.128.0/17",
       "payloads": [
         "GET /"
       ]
@@ -840,7 +858,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "8560",
+      "asn_name": "IONOS-AS IONOS SE",
+      "asn_prefix": "217.154.92.0/22"
     },
     {
       "ip": "115.248.8.65",
@@ -853,6 +874,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "18101",
+      "asn_name": "RELIANCE-COMMUNICATIONS-IN Reliance Communications Ltd.DAKC MUMBAI",
+      "asn_prefix": "115.248.8.0/22",
       "payloads": [
         "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
@@ -869,6 +893,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "154323",
+      "asn_name": "SOFTERINT-AS-AP SOFTERINT TECHNOLOGY OPC PRIVATE LIMITED",
+      "asn_prefix": "103.165.10.0/23",
       "payloads": [
         "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
@@ -885,6 +912,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -903,6 +933,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "104.198.192.0/20",
       "tags": [
         "mwl:cloud=\"gcp\""
       ],
@@ -921,6 +954,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "134.122.16.0/20",
       "payloads": [
         "GET /"
       ]
@@ -936,6 +972,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -954,6 +993,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -972,6 +1014,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
+      "asn_prefix": "172.232.128.0/19",
       "tags": [
         "mwl:cdn=\"akamai\""
       ]
@@ -987,6 +1032,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1005,11 +1053,68 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /filestreamingservice/files/3b646567-edd8-4d79-a43d-e9ae952e6a56?P1=1778241724&P2=404&P3=2&P4=bUYbAAAKKZqmzpy6CpQr9aZpi%2b%2fhoeb2H835kVBXE93cgZKn%2btmvLOHlikE87d%2bZf8%2bg04dphnEbT2q7bBp5TQ%3d%3d&cacheHostOrigin=msedge.b.tlu.dl.delivery.mp.microsoft.com"
+      ]
+    },
+    {
+      "ip": "167.250.226.29",
+      "family": "v4",
+      "first_seen": "2026-05-01T20:00:00Z",
+      "last_seen": "2026-05-01T20:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Host header invalid"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /admin/config.php"
+      ]
+    },
+    {
+      "ip": "185.38.148.2",
+      "family": "v4",
+      "first_seen": "2026-05-01T15:00:00Z",
+      "last_seen": "2026-05-01T15:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 6"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "173.197.14.231",
+      "family": "v4",
+      "first_seen": "2026-05-01T13:00:00Z",
+      "last_seen": "2026-05-01T13:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP JBoss JMX console access attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "HEAD /jmx-console/HtmlAdaptor?action=inspectMBean&name=jboss.system:type=ServerInfo"
+      ]
+    },
+    {
+      "ip": "62.45.67.8",
+      "family": "v4",
+      "first_seen": "2026-05-01T21:00:00Z",
+      "last_seen": "2026-05-01T21:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
       ]
     }
   ]
