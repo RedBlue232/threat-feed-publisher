@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-02T01:00:00Z",
+  "generated_at": "2026-05-02T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 22,
-    "v4": 22,
+    "total": 24,
+    "v4": 24,
     "v6": 0
   },
   "items": [
@@ -545,6 +545,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -574,6 +577,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "107.173.37.0/24",
       "payloads": [
         "GET /.env",
         "GET /.git/config",
@@ -590,6 +596,54 @@
         "GET /.terraform/terraform.tfstate",
         "GET /.ssh/id_ecdsa",
         "GET /.env.example"
+      ]
+    },
+    {
+      "ip": "68.69.177.112",
+      "family": "v4",
+      "first_seen": "2026-05-02T09:00:00Z",
+      "last_seen": "2026-05-02T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /upl.php",
+        "GET /t4",
+        "GET /ab2g",
+        "GET /ab2h"
+      ]
+    },
+    {
+      "ip": "104.28.235.58",
+      "family": "v4",
+      "first_seen": "2026-05-02T08:00:00Z",
+      "last_seen": "2026-05-02T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /wp-admin/style.php",
+        "GET /wp-admin/admin-ajax.php",
+        "GET /wp-admin/zwso.php",
+        "GET /style.php",
+        "GET /wp-content/style.php",
+        "GET /wp-content/themes/style.php",
+        "GET /wp-includes/style.php",
+        "GET /chosen.php?p=",
+        "GET /file.php",
+        "GET /flower.php",
+        "GET /gifclass.php",
+        "GET /bless.php",
+        "GET /class-t.api.php"
       ]
     }
   ]
