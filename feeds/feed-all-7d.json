@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-03T01:00:00Z",
+  "generated_at": "2026-05-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 88,
-    "v4": 88,
+    "total": 91,
+    "v4": 91,
     "v6": 0
   },
   "items": [
@@ -1627,6 +1627,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "402226",
+      "asn_name": "ONLYSCANS - OnlyScans LLC",
+      "asn_prefix": "68.69.177.0/24",
       "payloads": [
         "GET /upl.php",
         "GET /t4",
@@ -1647,6 +1650,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.28.235.0/24",
       "payloads": [
         "GET /wp-admin/style.php",
         "GET /wp-admin/admin-ajax.php",
@@ -1755,6 +1761,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP Cyber Internet Services Pvt Ltd.",
+      "asn_prefix": "72.255.33.0/24",
       "payloads": [
         "POST /HNAP1/"
       ]
@@ -1804,6 +1813,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP Cyber Internet Services Pvt Ltd.",
+      "asn_prefix": "72.255.32.0/24",
       "payloads": [
         "POST /GponForm/diag_Form?images/"
       ]
@@ -1819,6 +1831,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "132165",
+      "asn_name": "CONNECT-AS-AP Connect Communications",
+      "asn_prefix": "103.196.160.0/24",
       "payloads": [
         "POST /HNAP1/"
       ]
@@ -1834,8 +1849,59 @@
       "sources": [
         "suricata"
       ],
+      "asn": "57717",
+      "asn_name": "FBX-AS FiberXpress BV",
+      "asn_prefix": "185.216.140.0/23",
       "payloads": [
         "GET /level/15/exec/-/sh/run/CR"
+      ]
+    },
+    {
+      "ip": "20.29.23.140",
+      "family": "v4",
+      "first_seen": "2026-05-03T01:00:00Z",
+      "last_seen": "2026-05-03T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.119.86.71",
+      "family": "v4",
+      "first_seen": "2026-05-03T01:00:00Z",
+      "last_seen": "2026-05-03T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "182.126.252.112",
+      "family": "v4",
+      "first_seen": "2026-05-03T11:00:00Z",
+      "last_seen": "2026-05-03T11:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /HNAP1/"
       ]
     }
   ]
