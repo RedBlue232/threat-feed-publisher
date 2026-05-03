@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T01:00:00Z",
+  "generated_at": "2026-05-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -610,6 +610,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "402226",
+      "asn_name": "ONLYSCANS - OnlyScans LLC",
+      "asn_prefix": "68.69.177.0/24",
       "payloads": [
         "GET /upl.php",
         "GET /t4",
@@ -630,6 +633,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.28.235.0/24",
       "payloads": [
         "GET /wp-admin/style.php",
         "GET /wp-admin/admin-ajax.php",
