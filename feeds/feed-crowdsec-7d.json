@@ -1,34 +1,13 @@
 {
-  "generated_at": "2026-05-04T01:00:00Z",
+  "generated_at": "2026-05-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 27,
-    "v4": 27,
+    "total": 26,
+    "v4": 26,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "79.124.40.174",
-      "family": "v4",
-      "first_seen": "2026-04-19T17:00:00Z",
-      "last_seen": "2026-04-27T07:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-cve-probing",
-        "suricata/SERVER-WEBAPP React Server Components remote code execution attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "50360",
-      "asn_name": "TAMATIYA-AS - Tamatiya EOOD",
-      "asn_prefix": "79.124.40.0/24",
-      "payloads": [
-        "POST /"
-      ]
-    },
     {
       "ip": "66.232.121.182",
       "family": "v4",
