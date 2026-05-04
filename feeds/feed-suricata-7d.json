@@ -1,166 +1,13 @@
 {
-  "generated_at": "2026-05-04T01:00:00Z",
+  "generated_at": "2026-05-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 72,
-    "v4": 72,
+    "total": 69,
+    "v4": 69,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "79.124.40.174",
-      "family": "v4",
-      "first_seen": "2026-04-19T17:00:00Z",
-      "last_seen": "2026-04-27T07:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-cve-probing",
-        "suricata/SERVER-WEBAPP React Server Components remote code execution attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "50360",
-      "asn_name": "TAMATIYA-AS - Tamatiya EOOD",
-      "asn_prefix": "79.124.40.0/24",
-      "payloads": [
-        "POST /"
-      ]
-    },
-    {
-      "ip": "124.221.64.62",
-      "family": "v4",
-      "first_seen": "2026-04-27T09:00:00Z",
-      "last_seen": "2026-04-27T09:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "45090",
-      "asn_name": "TENCENT-NET-AP Shenzhen Tencent Computer Systems Company Limited",
-      "asn_prefix": "124.221.64.0/18",
-      "payloads": [
-        "POST /GponForm/diag_Form?images/"
-      ]
-    },
-    {
-      "ip": "172.189.127.13",
-      "family": "v4",
-      "first_seen": "2026-04-27T07:00:00Z",
-      "last_seen": "2026-04-27T07:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.304.0_763cea0bbf7b3b7093c7a563406d52a22490f3f4.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "136.112.32.76",
-      "family": "v4",
-      "first_seen": "2026-04-27T03:00:00Z",
-      "last_seen": "2026-04-27T03:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.112.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "143.198.26.42",
-      "family": "v4",
-      "first_seen": "2026-04-27T11:00:00Z",
-      "last_seen": "2026-04-27T11:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "143.198.16.0/20",
-      "payloads": [
-        "GET /wordpress/wp-includes/wlwmanifest.xml"
-      ]
-    },
-    {
-      "ip": "45.84.107.198",
-      "family": "v4",
-      "first_seen": "2026-04-27T11:00:00Z",
-      "last_seen": "2026-04-27T11:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 111"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "214503",
-      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "45.84.107.97",
-      "family": "v4",
-      "first_seen": "2026-04-27T11:00:00Z",
-      "last_seen": "2026-04-27T11:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 112"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "214503",
-      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "172.189.127.19",
-      "family": "v4",
-      "first_seen": "2026-04-27T12:00:00Z",
-      "last_seen": "2026-04-27T12:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /d/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.307.0_2587be0d8d937a891b641f39958748a24d27f782.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
-      ]
-    },
     {
       "ip": "104.218.165.188",
       "family": "v4",
@@ -1313,6 +1160,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "4837",
+      "asn_name": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+      "asn_prefix": "182.112.0.0/12",
       "payloads": [
         "POST /HNAP1/"
       ]
@@ -1354,6 +1204,75 @@
       ],
       "payloads": [
         "GET /ReportServer"
+      ]
+    },
+    {
+      "ip": "194.165.16.164",
+      "family": "v4",
+      "first_seen": "2026-05-04T08:00:00Z",
+      "last_seen": "2026-05-04T08:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "5.187.35.26",
+      "family": "v4",
+      "first_seen": "2026-05-04T03:00:00Z",
+      "last_seen": "2026-05-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"
+      ]
+    },
+    {
+      "ip": "64.227.150.86",
+      "family": "v4",
+      "first_seen": "2026-05-04T01:00:00Z",
+      "last_seen": "2026-05-04T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "45.139.122.80",
+      "family": "v4",
+      "first_seen": "2026-05-04T01:00:00Z",
+      "last_seen": "2026-05-04T01:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 11"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "194.165.16.165",
+      "family": "v4",
+      "first_seen": "2026-05-04T11:00:00Z",
+      "last_seen": "2026-05-04T11:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "\u0003/*\\xe0Cookie: mstshash=Administr"
       ]
     }
   ]
