@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-03T13:00:00Z",
+  "generated_at": "2026-05-04T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 25,
-    "v4": 25,
+    "total": 27,
+    "v4": 27,
     "v6": 0
   },
   "items": [
@@ -27,28 +27,6 @@
       "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "POST /"
-      ]
-    },
-    {
-      "ip": "167.94.146.59",
-      "family": "v4",
-      "first_seen": "2026-04-26T23:00:00Z",
-      "last_seen": "2026-04-26T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
       ]
     },
     {
@@ -694,6 +672,107 @@
         "GET /xxl.php",
         "GET /uploat.php",
         "GET /wpxml.php"
+      ]
+    },
+    {
+      "ip": "52.172.142.96",
+      "family": "v4",
+      "first_seen": "2026-05-03T16:00:00Z",
+      "last_seen": "2026-05-03T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-admin/css/colors/ectoplasm/",
+        "GET /wp-admin/js/",
+        "GET /admin/function.php",
+        "GET /wp-content/plugins/cp-pro/js.php",
+        "GET /wp-content/plugins/index.php",
+        "GET /wp-content/themes/alera/alpha.php",
+        "GET /wp-info.php",
+        "GET /new4.php",
+        "GET /pouhg.php",
+        "GET /sbhu.php",
+        "GET /sf.php",
+        "GET /wp-content/uploads/",
+        "GET /wp-includes/js/"
+      ]
+    },
+    {
+      "ip": "199.45.155.64",
+      "family": "v4",
+      "first_seen": "2026-05-03T15:00:00Z",
+      "last_seen": "2026-05-03T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.155.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "172.173.121.85",
+      "family": "v4",
+      "first_seen": "2026-05-03T13:00:00Z",
+      "last_seen": "2026-05-03T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /aaa.php?p=",
+        "GET /classwithtostring.php?p=",
+        "GET /wp-admin/js/index.php",
+        "GET /admin.php",
+        "GET /wp-content/admin.php",
+        "GET /shell.php",
+        "GET /1.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-load.php",
+        "GET /wp-temp.php",
+        "GET /wp-xme.php",
+        "GET /error.php",
+        "GET /77.php",
+        "GET /.sghb.php",
+        "GET /zoko.php",
+        "GET /solo1.php",
+        "GET /locales.php",
+        "GET /bgymj.php",
+        "GET /pucci.php",
+        "GET /wp-includes/blocks/details/"
       ]
     }
   ]
