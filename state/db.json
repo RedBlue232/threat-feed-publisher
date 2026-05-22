@@ -1,99 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-05-22T01:00:02.769355Z",
+  "updated_at": "2026-05-22T13:00:02.468390Z",
   "items": {
-    "172.212.136.43": {
-      "ip": "172.212.136.43",
-      "family": "v4",
-      "first_seen": "2026-05-15T03:47:17Z",
-      "last_seen": "2026-05-15T03:47:25Z",
-      "scenarios": {
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-05-15T03:47:25Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-15T03:47:17Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-05-15T03:47:17Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-05-15T03:47:17Z",
-          "last_seen": "2026-05-15T03:47:25Z",
-          "last_alert_id": 6467,
-          "last_alert_uuid": "eae2fe9a-ba45-4717-aca6-57816a58aa9d",
-          "payloads": [
-            "GET /19.php",
-            "GET /geforce.php",
-            "GET /dostshell.php",
-            "GET /doc.php",
-            "GET /mar.php",
-            "GET /casp1.php",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /adminfuns.php",
-            "GET /sx_pms.php",
-            "GET /wp-info.php",
-            "GET /wp-test.php",
-            "GET /we.php",
-            "GET /wp.php",
-            "GET /wp-indx.php",
-            "GET /zoo.php",
-            "GET /wp-link-spm.php",
-            "GET /wp-link-snpm.php"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "172.208.0.0/13"
-    },
-    "23.180.120.134": {
-      "ip": "23.180.120.134",
-      "family": "v4",
-      "first_seen": "2026-05-15T02:22:35Z",
-      "last_seen": "2026-05-15T02:22:37Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-15T02:22:37Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-05-15T02:22:35Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-05-15T02:22:35Z",
-          "last_seen": "2026-05-15T02:22:37Z",
-          "last_alert_id": 6464,
-          "last_alert_uuid": "ba3140b2-afef-4358-b221-e024d1cccfda",
-          "payloads": [
-            "GET /backup.sql.zip",
-            "GET /database.sql",
-            "GET /backup.zip",
-            "GET /db_backup.sql",
-            "GET /db.sql.zip",
-            "GET /database.sqlite",
-            "GET /old.sql",
-            "GET /import.sql",
-            "GET /master.sql",
-            "GET /export.sql",
-            "GET /schema.sql",
-            "GET /backup.sql.gz"
-          ]
-        }
-      },
-      "asn": "53514",
-      "asn_prefix": "23.180.120.0/24"
-    },
     "208.84.102.199": {
       "ip": "208.84.102.199",
       "family": "v4",
@@ -2266,7 +2175,9 @@
             "GET /cgi-bin/"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.112.0.0/13"
     }
   },
   "asn_names": {
