@@ -1,34 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-05-25T13:00:02.167693Z",
+  "updated_at": "2026-05-26T01:00:02.127771Z",
   "items": {
-    "20.168.0.218": {
-      "ip": "20.168.0.218",
-      "family": "v4",
-      "first_seen": "2026-05-19T00:56:35Z",
-      "last_seen": "2026-05-19T00:56:35Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 2,
-          "last_seen": "2026-05-19T00:56:35Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-05-19T00:56:35Z",
-          "last_seen": "2026-05-19T00:56:35Z",
-          "last_alert_id": 6573,
-          "last_alert_uuid": "c7f896f9-4a75-4a96-94bd-aba81bbe67af",
-          "payloads": [
-            "GET /owa/auth/logon.aspx"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.160.0.0/12"
-    },
     "208.84.100.197": {
       "ip": "208.84.100.197",
       "family": "v4",
@@ -1505,7 +1479,9 @@
             "GET /hplfuns.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.192.0.0/10"
     },
     "167.94.146.53": {
       "ip": "167.94.146.53",
@@ -1598,25 +1574,25 @@
       "last_seen": "2026-05-25T12:33:17Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-25T12:33:17Z"
         },
         "crowdsec/http-wordpress-scan": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-25T12:33:15Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-25T12:33:14Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-25T12:33:13Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 8,
           "first_seen": "2026-05-25T12:33:13Z",
           "last_seen": "2026-05-25T12:33:17Z",
           "last_alert_id": 6751,
@@ -1639,7 +1615,9 @@
             "GET /o.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "172.200.0.0/13"
     },
     "192.235.106.165": {
       "ip": "192.235.106.165",
@@ -1664,7 +1642,9 @@
             "GET /debug/pprof/"
           ]
         }
-      }
+      },
+      "asn": "36086",
+      "asn_prefix": "192.235.104.0/22"
     },
     "4.225.163.177": {
       "ip": "4.225.163.177",
@@ -1716,7 +1696,9 @@
             "GET /cgi-bin/"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "4.224.0.0/12"
     },
     "107.20.6.60": {
       "ip": "107.20.6.60",
@@ -1754,7 +1736,9 @@
             "GET /.env.old"
           ]
         }
-      }
+      },
+      "asn": "14618",
+      "asn_prefix": "107.20.0.0/16"
     },
     "20.203.168.197": {
       "ip": "20.203.168.197",
@@ -1804,6 +1788,72 @@
             "GET /as.php",
             "GET /cache.php",
             "GET /cgi-bin/"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.192.0.0/10"
+    },
+    "45.13.225.114": {
+      "ip": "45.13.225.114",
+      "family": "v4",
+      "first_seen": "2026-05-25T18:15:07Z",
+      "last_seen": "2026-05-25T18:15:07Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-25T18:15:07Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-05-25T18:15:07Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-05-25T18:15:07Z",
+          "last_seen": "2026-05-25T18:15:07Z",
+          "last_alert_id": 6755,
+          "last_alert_uuid": "58691178-c4b3-4637-b3eb-94bb93e72c76",
+          "payloads": [
+            "HEAD /",
+            "GET /.git/config",
+            "GET /.git/HEAD",
+            "GET /.env",
+            "GET /env",
+            "GET /.env.local",
+            "GET /.env.production",
+            "GET /api/.env",
+            "GET /.env.development",
+            "GET /backend/.env",
+            "GET /config.json"
+          ]
+        }
+      },
+      "asn": "58087",
+      "asn_prefix": "45.13.225.0/24"
+    },
+    "20.221.71.226": {
+      "ip": "20.221.71.226",
+      "family": "v4",
+      "first_seen": "2026-05-25T14:37:55Z",
+      "last_seen": "2026-05-25T14:37:55Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-05-25T14:37:55Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-05-25T14:37:55Z",
+          "last_seen": "2026-05-25T14:37:55Z",
+          "last_alert_id": 6753,
+          "last_alert_uuid": "5f760643-e8a9-4718-9aeb-4ddda2aacc51",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
           ]
         }
       }
@@ -1900,6 +1950,8 @@
     "53514": "UHQ - UHQ Services LLC",
     "211590": "BUCKLOG Bucklog SARL",
     "1133": "UTWENTE-AS SURF B.V.",
-    "53667": "PONYNET - FranTech Solutions"
+    "53667": "PONYNET - FranTech Solutions",
+    "36086": "TELX-LEGACY - Telx",
+    "58087": "FlorianKolb Florian Kolb"
   }
 }
