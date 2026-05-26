@@ -1,34 +1,13 @@
 {
-  "generated_at": "2026-05-25T13:00:00Z",
+  "generated_at": "2026-05-26T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 49,
-    "v4": 49,
+    "total": 50,
+    "v4": 50,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.168.0.218",
-      "family": "v4",
-      "first_seen": "2026-05-19T00:00:00Z",
-      "last_seen": "2026-05-19T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
     {
       "ip": "208.84.100.197",
       "family": "v4",
@@ -1105,6 +1084,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1201,6 +1183,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.200.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1233,6 +1218,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "36086",
+      "asn_name": "TELX-LEGACY - Telx",
+      "asn_prefix": "192.235.104.0/22",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1252,6 +1240,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.224.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1287,6 +1278,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "14618",
+      "asn_name": "AMAZON-AES - Amazon.com",
+      "asn_prefix": "107.20.0.0/16",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -1318,6 +1312,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1339,6 +1336,53 @@
         "GET /as.php",
         "GET /cache.php",
         "GET /cgi-bin/"
+      ]
+    },
+    {
+      "ip": "45.13.225.114",
+      "family": "v4",
+      "first_seen": "2026-05-25T18:00:00Z",
+      "last_seen": "2026-05-25T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "58087",
+      "asn_name": "FlorianKolb Florian Kolb",
+      "asn_prefix": "45.13.225.0/24",
+      "payloads": [
+        "HEAD /",
+        "GET /.git/config",
+        "GET /.git/HEAD",
+        "GET /.env",
+        "GET /env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /api/.env",
+        "GET /.env.development",
+        "GET /backend/.env",
+        "GET /config.json"
+      ]
+    },
+    {
+      "ip": "20.221.71.226",
+      "family": "v4",
+      "first_seen": "2026-05-25T14:00:00Z",
+      "last_seen": "2026-05-25T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
       ]
     }
   ]
