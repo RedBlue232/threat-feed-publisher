@@ -1,62 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-05-28T13:00:02.212225Z",
+  "updated_at": "2026-05-29T01:00:02.521091Z",
   "items": {
-    "40.115.141.123": {
-      "ip": "40.115.141.123",
-      "family": "v4",
-      "first_seen": "2026-05-21T13:36:34Z",
-      "last_seen": "2026-05-21T13:36:38Z",
-      "scenarios": {
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-05-21T13:36:38Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-05-21T13:36:37Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-21T13:36:35Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-21T13:36:34Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 4,
-          "first_seen": "2026-05-21T13:36:34Z",
-          "last_seen": "2026-05-21T13:36:38Z",
-          "last_alert_id": 6665,
-          "last_alert_uuid": "65ab3044-1f48-4164-9f28-a46c0dc9b45b",
-          "payloads": [
-            "GET /wp-content/admin.php",
-            "GET /wp-content/plugins/index.php",
-            "GET /wp-content/themes/admin.php",
-            "GET /wp-content/themes/index.php",
-            "GET /admin.php",
-            "GET /adminfuns.php",
-            "GET /wp-admin/css/colors/ectoplasm/",
-            "GET /info.php",
-            "GET /.well-known/",
-            "GET /404.php",
-            "GET /abc.php",
-            "GET /abcd.php",
-            "GET /about.php",
-            "GET /an.php",
-            "GET /as.php",
-            "GET /cache.php",
-            "GET /cgi-bin/"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "40.112.0.0/13"
-    },
     "198.98.56.217": {
       "ip": "198.98.56.217",
       "family": "v4",
@@ -1477,44 +1423,38 @@
       "last_seen": "2026-05-28T12:38:04Z",
       "scenarios": {
         "crowdsec/http-crawl-non_statics": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:38:04Z"
         },
         "crowdsec/http-wordpress-scan": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:37:51Z"
         },
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:37:50Z"
         },
         "crowdsec/http-backdoors-attempts": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:37:48Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:37:47Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-28T12:37:46Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 6,
+          "count": 12,
           "first_seen": "2026-05-28T12:37:46Z",
           "last_seen": "2026-05-28T12:38:04Z",
           "last_alert_id": 6841,
           "last_alert_uuid": "90337689-69b4-4883-9b38-75b8e0871eea",
           "payloads": [
-            "GET /2.php",
-            "GET /atomlib.php",
-            "GET /wp-content/admin.php",
-            "GET /wp-content/themes/pridmag/il.php",
-            "GET /wp-content/index.php",
-            "GET /wp-admin/wp.php",
             "GET /info.php",
             "GET /1.php",
             "GET /xleet.php",
@@ -1528,7 +1468,13 @@
             "GET /wk/index.php",
             "GET /about.php",
             "GET /term.php",
-            "GET /ioxi-o.php"
+            "GET /ioxi-o.php",
+            "GET /k.php",
+            "GET /wp-blink.php",
+            "GET /randkeyword.PhP7",
+            "GET /ww5.php",
+            "GET /wp-content/admin.php",
+            "GET /wp-content/themes/pridmag/il.php"
           ]
         }
       }
@@ -1601,6 +1547,256 @@
           "last_seen": "2026-05-28T05:04:42Z",
           "last_alert_id": 6829,
           "last_alert_uuid": "64c049ed-655c-4550-a31e-ac988871893c",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      }
+    },
+    "69.12.64.53": {
+      "ip": "69.12.64.53",
+      "family": "v4",
+      "first_seen": "2026-05-29T00:30:29Z",
+      "last_seen": "2026-05-29T00:30:29Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-29T00:30:29Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-05-29T00:30:29Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-05-29T00:30:29Z",
+          "last_seen": "2026-05-29T00:30:29Z",
+          "last_alert_id": 6862,
+          "last_alert_uuid": "6e9e11ed-ebef-4a55-82f7-e59bf2792da4",
+          "payloads": [
+            "HEAD /",
+            "GET /.git/HEAD",
+            "GET /.env",
+            "GET /env",
+            "GET /.git/config",
+            "GET /api/.env",
+            "GET /backend/.env",
+            "GET /.env.development",
+            "GET /.env.local",
+            "GET /.aws/credentials",
+            "GET /.env.production"
+          ]
+        }
+      }
+    },
+    "34.181.213.38": {
+      "ip": "34.181.213.38",
+      "family": "v4",
+      "first_seen": "2026-05-28T22:41:20Z",
+      "last_seen": "2026-05-28T22:41:21Z",
+      "scenarios": {
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-05-28T22:41:21Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-05-28T22:41:20Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T22:41:20Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T22:41:20Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T22:41:20Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 5,
+          "first_seen": "2026-05-28T22:41:20Z",
+          "last_seen": "2026-05-28T22:41:21Z",
+          "last_alert_id": 6860,
+          "last_alert_uuid": "6018d448-1e51-4cda-8a0c-99feaab4268d",
+          "payloads": [
+            "GET /docker-compose.yml",
+            "GET /docker-compose.prod.yml",
+            "GET /docker-compose.yaml",
+            "GET /docker-compose.prod.yaml",
+            "GET /docker-compose.dev.yml",
+            "GET /phpinfo.php",
+            "GET /_profiler/phpinfo",
+            "GET /profiler/phpinfo",
+            "GET /info.php",
+            "GET /actuator/env",
+            "GET /actuator/heapdump",
+            "GET /actuator/logfile",
+            "GET /actuator/threaddump",
+            "GET /actuator/configprops",
+            "GET /actuator/trace",
+            "GET /actuator/dump",
+            "GET /actuator/httptrace",
+            "GET /actuator/auditevents",
+            "GET /actuator/sessions",
+            "GET /configprops"
+          ]
+        }
+      }
+    },
+    "20.197.177.196": {
+      "ip": "20.197.177.196",
+      "family": "v4",
+      "first_seen": "2026-05-28T19:38:57Z",
+      "last_seen": "2026-05-28T19:39:14Z",
+      "scenarios": {
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-05-28T19:39:14Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-05-28T19:39:04Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T19:39:01Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T19:38:57Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 4,
+          "first_seen": "2026-05-28T19:38:57Z",
+          "last_seen": "2026-05-28T19:39:14Z",
+          "last_alert_id": 6853,
+          "last_alert_uuid": "de999fa8-cb67-4048-b2de-4fc87df5bf30",
+          "payloads": [
+            "GET /simple.php",
+            "GET /kj.php",
+            "GET /xxx.php",
+            "GET /hypo.php",
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /wp-admin/css/colour.php",
+            "GET /wp-includes/ID3/about.php",
+            "GET /wp-temp.php",
+            "GET /wp-admin/js/",
+            "GET /wordpress/wp-admin/maint/",
+            "GET /x.php",
+            "GET /wpconf.php",
+            "GET /aaf.php",
+            "GET /tw0.php",
+            "GET /htt.php",
+            "GET /eid.php",
+            "GET /hellcut.php",
+            "GET /tdd.php",
+            "GET /wander.php",
+            "GET /ha.php"
+          ]
+        }
+      }
+    },
+    "66.132.195.96": {
+      "ip": "66.132.195.96",
+      "family": "v4",
+      "first_seen": "2026-05-28T17:05:29Z",
+      "last_seen": "2026-05-28T17:05:29Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-05-28T17:05:29Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-05-28T17:05:29Z",
+          "last_seen": "2026-05-28T17:05:29Z",
+          "last_alert_id": 6848,
+          "last_alert_uuid": "088e49c0-f806-40fb-8d36-58540e52a63f",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      }
+    },
+    "20.48.248.185": {
+      "ip": "20.48.248.185",
+      "family": "v4",
+      "first_seen": "2026-05-28T14:41:50Z",
+      "last_seen": "2026-05-28T14:41:57Z",
+      "scenarios": {
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-05-28T14:41:57Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-28T14:41:50Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-05-28T14:41:50Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-05-28T14:41:50Z",
+          "last_seen": "2026-05-28T14:41:57Z",
+          "last_alert_id": 6846,
+          "last_alert_uuid": "ba5d0bbb-b796-4c14-9acd-bcf2b10fabc1",
+          "payloads": [
+            "GET /dostshell.php",
+            "GET /doc.php",
+            "GET /mar.php",
+            "GET /casp1.php",
+            "GET /a1.php",
+            "GET /ms-edit.php",
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /adminfuns.php",
+            "GET /sx_pms.php",
+            "GET /wp-info.php",
+            "GET /wp-test.php",
+            "GET /like.php",
+            "GET /we.php",
+            "GET /wp.php",
+            "GET /wp-indx.php",
+            "GET /zoo.php",
+            "GET /wp-link-spm.php"
+          ]
+        }
+      }
+    },
+    "66.132.195.105": {
+      "ip": "66.132.195.105",
+      "family": "v4",
+      "first_seen": "2026-05-28T13:14:28Z",
+      "last_seen": "2026-05-28T13:14:28Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-05-28T13:14:28Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-05-28T13:14:28Z",
+          "last_seen": "2026-05-28T13:14:28Z",
+          "last_alert_id": 6842,
+          "last_alert_uuid": "b88efc2c-90e8-4c53-89d7-1942ec522125",
           "payloads": [
             "GET /",
             "GET /debug/pprof/"
