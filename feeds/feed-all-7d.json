@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-29T01:00:00Z",
+  "generated_at": "2026-05-29T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 47,
-    "v4": 47,
+    "total": 50,
+    "v4": 50,
     "v6": 0
   },
   "items": [
@@ -874,6 +874,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "50360",
+      "asn_name": "TAMATIYA-AS - Tamatiya EOOD",
+      "asn_prefix": "79.124.40.0/24",
       "payloads": [
         "GET /actuator/gateway/routes"
       ]
@@ -1085,6 +1088,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1154,6 +1160,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1171,6 +1180,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "69.12.64.0/23",
       "payloads": [
         "HEAD /",
         "GET /.git/HEAD",
@@ -1200,6 +1212,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.181.128.0/17",
       "tags": [
         "mwl:cloud=\"gcp\""
       ],
@@ -1240,6 +1255,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1295,6 +1313,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.48.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1332,6 +1353,104 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "40.119.24.130",
+      "family": "v4",
+      "first_seen": "2026-05-29T05:00:00Z",
+      "last_seen": "2026-05-29T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "8.231.67.38",
+      "family": "v4",
+      "first_seen": "2026-05-29T03:00:00Z",
+      "last_seen": "2026-05-29T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /docker-compose.yaml",
+        "GET /docker-compose.yml",
+        "GET /docker-compose.prod.yml",
+        "GET /docker-compose.prod.yaml",
+        "GET /docker-compose.production.yml",
+        "GET /phpinfo.php",
+        "GET /_profiler/phpinfo",
+        "GET /profiler/phpinfo",
+        "GET /info.php",
+        "GET /actuator/heapdump",
+        "GET /actuator/configprops",
+        "GET /actuator/env",
+        "GET /actuator/logfile",
+        "GET /actuator/threaddump",
+        "GET /actuator/dump",
+        "GET /actuator/trace",
+        "GET /actuator/httptrace",
+        "GET /actuator/auditevents",
+        "GET /heapdump",
+        "GET /configprops"
+      ]
+    },
+    {
+      "ip": "34.32.97.166",
+      "family": "v4",
+      "first_seen": "2026-05-29T02:00:00Z",
+      "last_seen": "2026-05-29T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /admin/.env",
+        "GET /admin/.env.local",
+        "GET /admin/.env.production",
+        "GET /.env.txt",
+        "GET /env",
+        "GET /env.txt",
+        "GET /env.backup",
+        "GET /env.bak",
+        "GET /env.old",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.backup",
+        "GET /.env.backup.txt",
+        "GET /.env.production",
+        "GET /.env.prod",
+        "GET /.env.prod.bak",
+        "GET /.env.production.bak",
+        "GET /.env.old",
+        "GET /.env.bak",
+        "GET /.env.save"
       ]
     }
   ]
