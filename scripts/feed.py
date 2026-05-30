@@ -91,7 +91,7 @@ TTL_DAYS       = int(os.environ.get("TTL_DAYS", "7"))
 # MISP — optionnels, le push est skippé si absents
 MISP_URL        = os.environ.get("MISP_URL", "")
 MISP_KEY        = os.environ.get("MISP_KEY", "")
-MISP_VERIFY_SSL = os.environ.get("MISP_VERIFY_SSL", "false").lower() == "true"
+MISP_VERIFY_SSL = os.environ.get("MISP_VERIFY_SSL", "true").lower() == "true"
 
 # UUIDs des 3 events MISP rolling (un par scope de feed). L'event `all` est
 # l'event historique, conservé sous son UUID original. Les events `crowdsec`
@@ -540,22 +540,30 @@ def round_to_hour(iso: str) -> str:
     return iso[:13] + ":00:00Z"
 
 
+# Champs internes de `sources.<name>` jamais exposés dans le db.json public :
+# - machines        : nom de la machine CrowdSec (potentiellement sensible)
+# - last_alert_id   : ID séquentiel de l'instance → révèle volume/cadence
+#                     d'alertes à un observateur externe
+# - last_alert_uuid : identifiant interne d'alerte, inutile aux consommateurs
+_PUBLISH_STRIP_SOURCE_KEYS = ("machines", "last_alert_id", "last_alert_uuid")
+
+
 def _sanitize_db_for_publish(db: dict) -> dict:
     """Retourne une copie du DB privée des champs internes qu'on ne veut pas
-    exposer publiquement sur GitHub. Aujourd'hui : `machines` dans chaque
-    `sources.<name>` (nom de la machine CrowdSec → potentiellement sensible).
+    exposer publiquement sur GitHub (voir `_PUBLISH_STRIP_SOURCE_KEYS`).
 
     Le DB en mémoire reste intact pour le run courant ; seul le fichier
-    sérialisé `state/db.json` poussé sur GitHub est assaini. Conséquence :
-    `machines` ne persiste pas entre runs (repopulé à chaque fetch à partir
-    des alertes fraîches), ce qui est acceptable puisque l'info n'est pas
-    utilisée en logique cross-run.
+    sérialisé `state/db.json` poussé sur GitHub est assaini. Ces champs sont
+    repopulés à chaque fetch à partir des alertes fraîches et ne sont pas
+    utilisés en logique cross-run, donc leur absence côté public est sans
+    conséquence.
     """
     import copy
     pub = copy.deepcopy(db)
     for item in pub.get("items", {}).values():
         for src_block in item.get("sources", {}).values():
-            src_block.pop("machines", None)
+            for key in _PUBLISH_STRIP_SOURCE_KEYS:
+                src_block.pop(key, None)
     return pub
 
 
