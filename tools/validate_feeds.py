@@ -187,14 +187,14 @@ if MISP_FEED_DIR.exists():
                         errors.append(f"misp-feed/{uuid}.json : structure invalide")
                 except Exception as e:
                     errors.append(f"misp-feed/{uuid}.json invalide : {e}")
-                # Fraîcheur du timestamp MISP (epoch stocké en string)
-                try:
-                    ts = datetime.fromtimestamp(int(meta["timestamp"]), tz=timezone.utc)
-                    age = datetime.now(timezone.utc) - ts
-                    if age > timedelta(hours=MAX_AGE_HOURS):
-                        errors.append(f"Event MISP {uuid} trop ancien : {age} (max {MAX_AGE_HOURS}h)")
-                except (KeyError, ValueError) as e:
-                    errors.append(f"Event MISP {uuid} : timestamp illisible ({e})")
+                # Note : on ne vérifie PAS la fraîcheur du `timestamp` MISP par
+                # event. Ce champ reflète la dernière modification de l'event
+                # côté instance MISP, qui ne bouge que si un attribut a été
+                # créé/maj/supprimé. Un event scopé (ex: Suricata) peut très
+                # bien rester sans nouvelle IP pendant > 26h alors que le
+                # pipeline tourne normalement. La fraîcheur globale est gérée
+                # par state/status.json (vérifié plus haut), qui est mis à
+                # jour à CHAQUE run de feed.py indépendamment des deltas.
         except Exception as e:
             errors.append(f"misp-feed/manifest.json invalide : {e}")
 

@@ -1,12 +1,21 @@
 name: Validate feeds
 
+# On ne déclenche QUE sur les changements de code, jamais sur les commits de
+# publication automatique de feed.py / misp_export.py. Raison : feed.py pousse
+# 14 fichiers via 14 commits API séparés, et la CI levée sur un commit
+# intermédiaire voit un état transitoire incohérent (par ex status.json mis à
+# jour mais pas encore feed-*.json). La fraîcheur des données est validée par
+# monitor.yml (cron 13h) qui tombe hors cycle de publication.
 on:
   push:
     branches: [main]
     paths-ignore:
+      - 'feeds/**'
+      - 'state/**'
       - 'misp-feed/**'
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
