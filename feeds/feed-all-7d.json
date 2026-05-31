@@ -1,55 +1,13 @@
 {
-  "generated_at": "2026-05-31T01:00:00Z",
+  "generated_at": "2026-05-31T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 53,
-    "v4": 53,
+    "total": 52,
+    "v4": 52,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.98.140.180",
-      "family": "v4",
-      "first_seen": "2026-05-24T08:00:00Z",
-      "last_seen": "2026-05-24T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-05-24T07:00:00Z",
-      "last_seen": "2026-05-24T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
     {
       "ip": "20.206.89.89",
       "family": "v4",
@@ -1584,6 +1542,40 @@
       ],
       "payloads": [
         "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "92.60.40.219",
+      "family": "v4",
+      "first_seen": "2026-05-31T03:00:00Z",
+      "last_seen": "2026-05-31T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-cve-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "POST /admin",
+        "GET /wp-content/phpinfo.php",
+        "GET /administrator/phpinfo.php",
+        "GET /info.php",
+        "GET /_ignition/execute-solution",
+        "GET /",
+        "GET /.env",
+        "GET /backend/.env",
+        "GET /.env.production",
+        "GET /.env.local",
+        "GET /laravel/.env",
+        "GET /api/.env",
+        "GET /.env.backup",
+        "GET /app/.env",
+        "GET /.env.old",
+        "GET /.env.dev"
       ]
     }
   ]
