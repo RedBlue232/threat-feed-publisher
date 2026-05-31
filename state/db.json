@@ -1,60 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-05-31T01:00:02.248613Z",
+  "updated_at": "2026-05-31T13:00:02.461038Z",
   "items": {
-    "20.98.140.180": {
-      "ip": "20.98.140.180",
-      "family": "v4",
-      "first_seen": "2026-05-24T08:20:20Z",
-      "last_seen": "2026-05-24T08:20:20Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-24T08:20:20Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-05-24T08:20:20Z",
-          "last_seen": "2026-05-24T08:20:20Z",
-          "last_alert_id": 6715,
-          "last_alert_uuid": "09193e85-527d-46b5-bb82-1cd8b654e01d",
-          "payloads": [
-            "GET /owa/auth/logon.aspx"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.64.0.0/10"
-    },
-    "184.105.139.69": {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-05-24T07:48:12Z",
-      "last_seen": "2026-05-24T07:48:12Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-24T07:48:12Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-05-24T07:48:12Z",
-          "last_seen": "2026-05-24T07:48:12Z",
-          "last_alert_id": 6714,
-          "last_alert_uuid": "81d5f22a-6c56-4b45-87b5-d6ba81348f4c",
-          "payloads": [
-            "GET /remote/logincheck"
-          ]
-        }
-      },
-      "asn": "6939",
-      "asn_prefix": "184.104.0.0/15"
-    },
     "20.206.89.89": {
       "ip": "20.206.89.89",
       "family": "v4",
@@ -2015,13 +1963,13 @@
       "last_seen": "2026-05-31T00:20:29Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-31T00:20:29Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-05-31T00:20:29Z",
           "last_seen": "2026-05-31T00:20:29Z",
           "last_alert_id": 6926,
@@ -2039,13 +1987,13 @@
       "last_seen": "2026-05-31T00:11:27Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-05-31T00:11:27Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-05-31T00:11:27Z",
           "last_seen": "2026-05-31T00:11:27Z",
           "last_alert_id": 6925,
@@ -2131,6 +2079,61 @@
           "last_alert_uuid": "1ee24c4b-6a25-4680-a117-f2f3407a68b4",
           "payloads": [
             "GET /developmentserver/metadatauploader"
+          ]
+        }
+      }
+    },
+    "92.60.40.219": {
+      "ip": "92.60.40.219",
+      "family": "v4",
+      "first_seen": "2026-05-31T03:55:14Z",
+      "last_seen": "2026-05-31T03:55:15Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-05-31T03:55:15Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-05-31T03:55:15Z"
+        },
+        "crowdsec/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-05-31T03:55:14Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-05-31T03:55:14Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-05-31T03:55:14Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 5,
+          "first_seen": "2026-05-31T03:55:14Z",
+          "last_seen": "2026-05-31T03:55:15Z",
+          "last_alert_id": 6932,
+          "last_alert_uuid": "9609b11b-2ea0-44ee-b9b9-52d3e6a43051",
+          "payloads": [
+            "POST /admin",
+            "GET /wp-content/phpinfo.php",
+            "GET /administrator/phpinfo.php",
+            "GET /info.php",
+            "GET /_ignition/execute-solution",
+            "GET /",
+            "GET /.env",
+            "GET /backend/.env",
+            "GET /.env.production",
+            "GET /.env.local",
+            "GET /laravel/.env",
+            "GET /api/.env",
+            "GET /.env.backup",
+            "GET /app/.env",
+            "GET /.env.old",
+            "GET /.env.dev"
           ]
         }
       }
