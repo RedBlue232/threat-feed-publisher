@@ -1,74 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-01T13:00:04.259918Z",
+  "updated_at": "2026-06-02T01:00:02.130303Z",
   "items": {
-    "45.13.225.114": {
-      "ip": "45.13.225.114",
-      "family": "v4",
-      "first_seen": "2026-05-25T18:15:07Z",
-      "last_seen": "2026-05-25T18:15:07Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-25T18:15:07Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-05-25T18:15:07Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-05-25T18:15:07Z",
-          "last_seen": "2026-05-25T18:15:07Z",
-          "last_alert_id": 6755,
-          "last_alert_uuid": "58691178-c4b3-4637-b3eb-94bb93e72c76",
-          "payloads": [
-            "HEAD /",
-            "GET /.git/config",
-            "GET /.git/HEAD",
-            "GET /.env",
-            "GET /env",
-            "GET /.env.local",
-            "GET /.env.production",
-            "GET /api/.env",
-            "GET /.env.development",
-            "GET /backend/.env",
-            "GET /config.json"
-          ]
-        }
-      },
-      "asn": "58087",
-      "asn_prefix": "45.13.225.0/24"
-    },
-    "20.221.71.226": {
-      "ip": "20.221.71.226",
-      "family": "v4",
-      "first_seen": "2026-05-25T14:37:55Z",
-      "last_seen": "2026-05-25T14:37:55Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-25T14:37:55Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-05-25T14:37:55Z",
-          "last_seen": "2026-05-25T14:37:55Z",
-          "last_alert_id": 6753,
-          "last_alert_uuid": "5f760643-e8a9-4718-9aeb-4ddda2aacc51",
-          "payloads": [
-            "GET /owa/auth/logon.aspx"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.192.0.0/10"
-    },
     "47.245.117.221": {
       "ip": "47.245.117.221",
       "family": "v4",
@@ -2095,6 +2029,104 @@
           "last_seen": "2026-06-01T01:29:21Z",
           "last_alert_id": 6956,
           "last_alert_uuid": "2d966b97-1906-464c-96a7-2c3c525fc907",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
+          ]
+        }
+      }
+    },
+    "64.62.156.172": {
+      "ip": "64.62.156.172",
+      "family": "v4",
+      "first_seen": "2026-06-02T00:21:10Z",
+      "last_seen": "2026-06-02T00:21:10Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-02T00:21:10Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-02T00:21:10Z",
+          "last_seen": "2026-06-02T00:21:10Z",
+          "last_alert_id": 6979,
+          "last_alert_uuid": "3b32267a-1b02-4dc4-be78-c6bd25634a86",
+          "payloads": [
+            "GET /remote/logincheck"
+          ]
+        }
+      }
+    },
+    "199.45.154.112": {
+      "ip": "199.45.154.112",
+      "family": "v4",
+      "first_seen": "2026-06-01T17:50:56Z",
+      "last_seen": "2026-06-01T17:50:56Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-01T17:50:56Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-01T17:50:56Z",
+          "last_seen": "2026-06-01T17:50:56Z",
+          "last_alert_id": 6975,
+          "last_alert_uuid": "b203ebf4-689a-4190-97b7-f67d3d5bd44b",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      }
+    },
+    "66.132.195.38": {
+      "ip": "66.132.195.38",
+      "family": "v4",
+      "first_seen": "2026-06-01T16:35:27Z",
+      "last_seen": "2026-06-01T16:35:27Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-01T16:35:27Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-01T16:35:27Z",
+          "last_seen": "2026-06-01T16:35:27Z",
+          "last_alert_id": 6973,
+          "last_alert_uuid": "9231bb54-be80-47e5-aee1-b9f14310f484",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      }
+    },
+    "20.169.85.114": {
+      "ip": "20.169.85.114",
+      "family": "v4",
+      "first_seen": "2026-06-01T16:14:20Z",
+      "last_seen": "2026-06-01T16:14:20Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-01T16:14:20Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-01T16:14:20Z",
+          "last_seen": "2026-06-01T16:14:20Z",
+          "last_alert_id": 6972,
+          "last_alert_uuid": "6b290291-2fe3-49b1-938c-3aef5fb0a188",
           "payloads": [
             "GET /owa/auth/logon.aspx"
           ]
