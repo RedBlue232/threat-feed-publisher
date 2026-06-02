@@ -1,63 +1,13 @@
 {
-  "generated_at": "2026-06-01T13:00:00Z",
+  "generated_at": "2026-06-02T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 53,
-    "v4": 53,
+    "total": 55,
+    "v4": 55,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "45.13.225.114",
-      "family": "v4",
-      "first_seen": "2026-05-25T18:00:00Z",
-      "last_seen": "2026-05-25T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "58087",
-      "asn_name": "FlorianKolb Florian Kolb",
-      "asn_prefix": "45.13.225.0/24",
-      "payloads": [
-        "HEAD /",
-        "GET /.git/config",
-        "GET /.git/HEAD",
-        "GET /.env",
-        "GET /env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /api/.env",
-        "GET /.env.development",
-        "GET /backend/.env",
-        "GET /config.json"
-      ]
-    },
-    {
-      "ip": "20.221.71.226",
-      "family": "v4",
-      "first_seen": "2026-05-25T14:00:00Z",
-      "last_seen": "2026-05-25T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
     {
       "ip": "47.245.117.221",
       "family": "v4",
@@ -1531,6 +1481,77 @@
       ],
       "tags": [
         "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "64.62.156.172",
+      "family": "v4",
+      "first_seen": "2026-06-02T00:00:00Z",
+      "last_seen": "2026-06-02T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "199.45.154.112",
+      "family": "v4",
+      "first_seen": "2026-06-01T17:00:00Z",
+      "last_seen": "2026-06-01T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "66.132.195.38",
+      "family": "v4",
+      "first_seen": "2026-06-01T16:00:00Z",
+      "last_seen": "2026-06-01T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.169.85.114",
+      "family": "v4",
+      "first_seen": "2026-06-01T16:00:00Z",
+      "last_seen": "2026-06-01T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /owa/auth/logon.aspx"
