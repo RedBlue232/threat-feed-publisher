@@ -1,191 +1,13 @@
 {
-  "generated_at": "2026-06-03T01:00:00Z",
+  "generated_at": "2026-06-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 55,
-    "v4": 55,
+    "total": 52,
+    "v4": 52,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "179.43.146.227",
-      "family": "v4",
-      "first_seen": "2026-05-27T12:00:00Z",
-      "last_seen": "2026-05-27T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "51852",
-      "asn_name": "PLI-AS Private Layer INC",
-      "asn_prefix": "179.43.146.0/24",
-      "payloads": [
-        "GET /redirect-to?url=http://testdomain.com",
-        "GET /url?url=//testdomain.com",
-        "GET /out.php?url=http://testdomain.com",
-        "GET /?redirect=http://testdomain.com",
-        "GET /redirect.php?u=http://testdomain.com",
-        "GET /r?url=http://testdomain.com",
-        "GET /redirect.php?url=http://testdomain.com",
-        "GET /go?url=http://testdomain.com",
-        "GET /redirect?url=http://testdomain.com",
-        "GET /redirect.php?goto=http://testdomain.com",
-        "GET /next?next=http://testdomain.com"
-      ]
-    },
-    {
-      "ip": "66.132.172.109",
-      "family": "v4",
-      "first_seen": "2026-05-27T10:00:00Z",
-      "last_seen": "2026-05-27T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.172.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
-    {
-      "ip": "4.201.96.199",
-      "family": "v4",
-      "first_seen": "2026-05-27T10:00:00Z",
-      "last_seen": "2026-05-27T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "4.192.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /c99.php",
-        "GET /.trash7309/index.php",
-        "GET /CLA.php",
-        "GET /aa.php",
-        "GET /wp.php",
-        "GET /info.php",
-        "GET /test.php",
-        "GET /1.php",
-        "GET /check.php",
-        "GET /wso.php"
-      ]
-    },
-    {
-      "ip": "20.116.59.164",
-      "family": "v4",
-      "first_seen": "2026-05-27T10:00:00Z",
-      "last_seen": "2026-05-27T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /info.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-admin/images/admin.php",
-        "GET /wp-admin/css/colors/index.php",
-        "GET /admin.php",
-        "GET /goods.php",
-        "GET /public/css.php",
-        "GET /alfa.php",
-        "GET /css.php",
-        "GET /classwithtostring.php",
-        "GET /aa.php",
-        "GET /0x.php",
-        "GET /k.php",
-        "GET /o.php"
-      ]
-    },
-    {
-      "ip": "172.202.117.213",
-      "family": "v4",
-      "first_seen": "2026-05-27T06:00:00Z",
-      "last_seen": "2026-05-27T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.200.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "79.124.40.174",
-      "family": "v4",
-      "first_seen": "2026-05-27T03:00:00Z",
-      "last_seen": "2026-05-27T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "50360",
-      "asn_name": "TAMATIYA-AS - Tamatiya EOOD",
-      "asn_prefix": "79.124.40.0/24",
-      "payloads": [
-        "GET /actuator/gateway/routes"
-      ]
-    },
-    {
-      "ip": "20.168.121.119",
-      "family": "v4",
-      "first_seen": "2026-05-27T01:00:00Z",
-      "last_seen": "2026-05-27T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
     {
       "ip": "20.205.106.92",
       "family": "v4",
@@ -1492,6 +1314,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.136.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1563,6 +1388,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1586,6 +1414,103 @@
         "GET /ah25.php",
         "GET /samll.php",
         "GET /favicon.php"
+      ]
+    },
+    {
+      "ip": "40.124.168.253",
+      "family": "v4",
+      "first_seen": "2026-06-03T10:00:00Z",
+      "last_seen": "2026-06-03T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "216.180.246.237",
+      "family": "v4",
+      "first_seen": "2026-06-03T07:00:00Z",
+      "last_seen": "2026-06-03T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "48.217.177.226",
+      "family": "v4",
+      "first_seen": "2026-06-03T03:00:00Z",
+      "last_seen": "2026-06-03T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /wp-config.php",
+        "GET /.aws/credentials",
+        "GET /config/database.yml",
+        "GET /server-status",
+        "GET /actuator/env"
+      ]
+    },
+    {
+      "ip": "20.40.212.249",
+      "family": "v4",
+      "first_seen": "2026-06-03T03:00:00Z",
+      "last_seen": "2026-06-03T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /.env.local",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /wp-config.php.bak",
+        "GET /.aws/credentials"
       ]
     }
   ]
