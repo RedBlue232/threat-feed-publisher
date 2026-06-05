@@ -1,160 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-05T01:00:02.047339Z",
+  "updated_at": "2026-06-05T13:00:01.833442Z",
   "items": {
-    "40.119.24.130": {
-      "ip": "40.119.24.130",
-      "family": "v4",
-      "first_seen": "2026-05-29T05:06:14Z",
-      "last_seen": "2026-05-29T05:06:14Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T05:06:14Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-05-29T05:06:14Z",
-          "last_seen": "2026-05-29T05:06:14Z",
-          "last_alert_id": 6877,
-          "last_alert_uuid": "2bdc0c90-0a21-4655-9731-79f9027101c3",
-          "payloads": [
-            "GET /owa/auth/x.js"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "40.112.0.0/13"
-    },
-    "8.231.67.38": {
-      "ip": "8.231.67.38",
-      "family": "v4",
-      "first_seen": "2026-05-29T03:49:35Z",
-      "last_seen": "2026-05-29T03:49:36Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:36Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:36Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:35Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:35Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:35Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T03:49:35Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 6,
-          "first_seen": "2026-05-29T03:49:35Z",
-          "last_seen": "2026-05-29T03:49:36Z",
-          "last_alert_id": 6874,
-          "last_alert_uuid": "f3878094-9b3b-47a4-bfdf-1cdf7864fcc3",
-          "payloads": [
-            "GET /docker-compose.yaml",
-            "GET /docker-compose.yml",
-            "GET /docker-compose.prod.yml",
-            "GET /docker-compose.prod.yaml",
-            "GET /docker-compose.production.yml",
-            "GET /phpinfo.php",
-            "GET /_profiler/phpinfo",
-            "GET /profiler/phpinfo",
-            "GET /info.php",
-            "GET /actuator/heapdump",
-            "GET /actuator/configprops",
-            "GET /actuator/env",
-            "GET /actuator/logfile",
-            "GET /actuator/threaddump",
-            "GET /actuator/dump",
-            "GET /actuator/trace",
-            "GET /actuator/httptrace",
-            "GET /actuator/auditevents",
-            "GET /heapdump",
-            "GET /configprops"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "8.231.64.0/18"
-    },
-    "34.32.97.166": {
-      "ip": "34.32.97.166",
-      "family": "v4",
-      "first_seen": "2026-05-29T02:37:39Z",
-      "last_seen": "2026-05-29T02:37:40Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-05-29T02:37:40Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T02:37:40Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-05-29T02:37:40Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-05-29T02:37:39Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-05-29T02:37:39Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 5,
-          "first_seen": "2026-05-29T02:37:39Z",
-          "last_seen": "2026-05-29T02:37:40Z",
-          "last_alert_id": 6867,
-          "last_alert_uuid": "485d08fd-7502-44d5-bf05-24f35475c4a7",
-          "payloads": [
-            "GET /admin/.env",
-            "GET /admin/.env.local",
-            "GET /admin/.env.production",
-            "GET /.env.txt",
-            "GET /env",
-            "GET /env.txt",
-            "GET /env.backup",
-            "GET /env.bak",
-            "GET /env.old",
-            "GET /.env",
-            "GET /.env.local",
-            "GET /.env.backup",
-            "GET /.env.backup.txt",
-            "GET /.env.production",
-            "GET /.env.prod",
-            "GET /.env.prod.bak",
-            "GET /.env.production.bak",
-            "GET /.env.old",
-            "GET /.env.bak",
-            "GET /.env.save"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "34.32.0.0/17"
-    },
     "184.105.139.70": {
       "ip": "184.105.139.70",
       "family": "v4",
@@ -1534,7 +1382,9 @@
             "GET /owa/auth/logon.aspx"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.160.0.0/12"
     },
     "34.138.142.217": {
       "ip": "34.138.142.217",
@@ -1579,7 +1429,9 @@
             "GET /api/.env.production"
           ]
         }
-      }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.138.128.0/20"
     },
     "65.52.170.96": {
       "ip": "65.52.170.96",
@@ -1618,7 +1470,9 @@
             "GET /lock360.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "65.52.0.0/14"
     },
     "35.255.194.5": {
       "ip": "35.255.194.5",
@@ -1681,7 +1535,9 @@
             "GET /heapdump"
           ]
         }
-      }
+      },
+      "asn": "396982",
+      "asn_prefix": "35.255.0.0/16"
     },
     "143.244.143.175": {
       "ip": "143.244.143.175",
@@ -1724,7 +1580,9 @@
             "GET /images"
           ]
         }
-      }
+      },
+      "asn": "14061",
+      "asn_prefix": "143.244.128.0/20"
     },
     "208.84.100.247": {
       "ip": "208.84.100.247",
@@ -1773,7 +1631,9 @@
             "GET /client_secret.json"
           ]
         }
-      }
+      },
+      "asn": "22295",
+      "asn_prefix": "208.84.100.0/24"
     },
     "209.38.248.17": {
       "ip": "209.38.248.17",
@@ -1817,7 +1677,9 @@
             "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application"
           ]
         }
-      }
+      },
+      "asn": "14061",
+      "asn_prefix": "209.38.224.0/19"
     },
     "164.90.228.79": {
       "ip": "164.90.228.79",
@@ -1861,7 +1723,9 @@
             "GET /.env"
           ]
         }
-      }
+      },
+      "asn": "14061",
+      "asn_prefix": "164.90.224.0/20"
     },
     "66.132.195.94": {
       "ip": "66.132.195.94",
@@ -1886,7 +1750,9 @@
             "GET /debug/pprof/"
           ]
         }
-      }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.195.0/24"
     },
     "216.218.206.66": {
       "ip": "216.218.206.66",
@@ -1910,7 +1776,9 @@
             "GET /remote/logincheck"
           ]
         }
-      }
+      },
+      "asn": "6939",
+      "asn_prefix": "216.218.128.0/17"
     },
     "66.132.195.115": {
       "ip": "66.132.195.115",
@@ -1935,7 +1803,9 @@
             "GET /debug/pprof/"
           ]
         }
-      }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.195.0/24"
     },
     "34.123.200.245": {
       "ip": "34.123.200.245",
@@ -1998,7 +1868,9 @@
             "GET /backend/actuator/heapdump"
           ]
         }
-      }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.123.192.0/20"
     },
     "20.83.48.88": {
       "ip": "20.83.48.88",
@@ -2053,7 +1925,9 @@
             "GET /classc.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.64.0.0/10"
     },
     "20.163.6.104": {
       "ip": "20.163.6.104",
@@ -2075,6 +1949,105 @@
           "last_alert_uuid": "9253a63d-0fef-4514-b7d1-d7780651f8ce",
           "payloads": [
             "GET /developmentserver/metadatauploader"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.160.0.0/12"
+    },
+    "31.58.51.37": {
+      "ip": "31.58.51.37",
+      "family": "v4",
+      "first_seen": "2026-06-05T09:36:57Z",
+      "last_seen": "2026-06-05T09:36:57Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-05T09:36:57Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-05T09:36:57Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-06-05T09:36:57Z",
+          "last_seen": "2026-06-05T09:36:57Z",
+          "last_alert_id": 7084,
+          "last_alert_uuid": "2ed7b9f1-6465-48d5-a10e-affc359cd45e",
+          "payloads": [
+            "GET /.git/HEAD",
+            "GET /.env",
+            "GET /env",
+            "GET /.env.local",
+            "GET /.git/config",
+            "GET /.env.development",
+            "GET /config.json",
+            "GET /api/.env",
+            "GET /backend/.env",
+            "GET /.env.production",
+            "GET /.aws/credentials"
+          ]
+        }
+      }
+    },
+    "8.230.3.70": {
+      "ip": "8.230.3.70",
+      "family": "v4",
+      "first_seen": "2026-06-05T01:03:49Z",
+      "last_seen": "2026-06-05T01:03:50Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-06-05T01:03:50Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-06-05T01:03:50Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-05T01:03:49Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-05T01:03:49Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-05T01:03:49Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 5,
+          "first_seen": "2026-06-05T01:03:49Z",
+          "last_seen": "2026-06-05T01:03:50Z",
+          "last_alert_id": 7077,
+          "last_alert_uuid": "06a53775-494c-4106-acf0-88e65658a2ed",
+          "payloads": [
+            "GET /.env.dev.local",
+            "GET /.env.dist",
+            "GET /env.old",
+            "GET /env.txt",
+            "GET /env",
+            "GET /.env.txt",
+            "GET /frontend/.env.staging",
+            "GET /app/.env.production",
+            "GET /.env.bak",
+            "GET /.env.development",
+            "GET /.env.local",
+            "GET /.env.test",
+            "GET /.env.prod.bak",
+            "GET /.env.qa",
+            "GET /.env.docker",
+            "GET /.env.uat",
+            "GET /.env.production",
+            "GET /.env.sample",
+            "GET /.env.example",
+            "GET /.env.backup.txt"
           ]
         }
       }
