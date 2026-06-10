@@ -1,117 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-09T13:00:02.356569Z",
+  "updated_at": "2026-06-10T01:00:01.909435Z",
   "items": {
-    "195.26.255.17": {
-      "ip": "195.26.255.17",
-      "family": "v4",
-      "first_seen": "2026-06-02T22:39:30Z",
-      "last_seen": "2026-06-02T22:39:30Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-06-02T22:39:30Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-06-02T22:39:30Z",
-          "last_seen": "2026-06-02T22:39:30Z",
-          "last_alert_id": 7000,
-          "last_alert_uuid": "431c9967-aaea-4912-a641-0ffe9c4804eb",
-          "payloads": [
-            "GET /remote/login?lang=en"
-          ]
-        }
-      },
-      "asn": "40021",
-      "asn_prefix": "195.26.248.0/21"
-    },
-    "66.132.224.92": {
-      "ip": "66.132.224.92",
-      "family": "v4",
-      "first_seen": "2026-06-02T20:31:09Z",
-      "last_seen": "2026-06-02T20:31:09Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-06-02T20:31:09Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-06-02T20:31:09Z",
-          "last_seen": "2026-06-02T20:31:09Z",
-          "last_alert_id": 6998,
-          "last_alert_uuid": "3237e96f-4eaf-4d6e-afc9-75f62ed50bd1",
-          "payloads": [
-            "GET /",
-            "GET /debug/pprof/"
-          ]
-        }
-      },
-      "asn": "398324",
-      "asn_prefix": "66.132.224.0/24"
-    },
-    "20.220.145.212": {
-      "ip": "20.220.145.212",
-      "family": "v4",
-      "first_seen": "2026-06-02T17:57:18Z",
-      "last_seen": "2026-06-02T17:57:27Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-06-02T17:57:27Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-06-02T17:57:22Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-06-02T17:57:18Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-06-02T17:57:18Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 4,
-          "first_seen": "2026-06-02T17:57:18Z",
-          "last_seen": "2026-06-02T17:57:27Z",
-          "last_alert_id": 6996,
-          "last_alert_uuid": "34708bd5-1672-4073-8643-51d1d3cb377f",
-          "payloads": [
-            "GET /wp-admin/css/colors/blue/file.php",
-            "GET /wp-admin/network/edit.php",
-            "GET /wp-content/uploads/admin.php",
-            "GET /crgio.php",
-            "GET /Okxob.php",
-            "GET /mass.php",
-            "GET /dropdown.php",
-            "GET /wp-good.php",
-            "GET /mifta.php",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /ff.php",
-            "GET /x.php",
-            "GET /tires.php",
-            "GET /wp-block.php",
-            "GET /wp-der.php",
-            "GET /ah25.php",
-            "GET /samll.php",
-            "GET /favicon.php"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.192.0.0/10"
-    },
     "40.124.168.253": {
       "ip": "40.124.168.253",
       "family": "v4",
@@ -2201,6 +2092,154 @@
           "last_alert_uuid": "fbc2cbcc-c0db-49b9-88c0-10758b29f502",
           "payloads": [
             "GET /info.php"
+          ]
+        }
+      }
+    },
+    "34.154.5.79": {
+      "ip": "34.154.5.79",
+      "family": "v4",
+      "first_seen": "2026-06-09T21:05:03Z",
+      "last_seen": "2026-06-09T21:05:03Z",
+      "scenarios": {
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T21:05:03Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 6,
+          "first_seen": "2026-06-09T21:05:03Z",
+          "last_seen": "2026-06-09T21:05:03Z",
+          "last_alert_id": 7207,
+          "last_alert_uuid": "4530fe9f-ffcc-4ee6-8912-59dfc0b207a9",
+          "payloads": [
+            "GET /docker-compose.yaml",
+            "GET /docker-compose.prod.yml",
+            "GET /docker-compose.prod.yaml",
+            "GET /docker-compose.production.yml",
+            "GET /phpinfo.php",
+            "GET /_profiler/phpinfo",
+            "GET /profiler/phpinfo",
+            "GET /info.php",
+            "GET /actuator/env",
+            "GET /backend/service-account.json",
+            "GET /actuator/heapdump",
+            "GET /actuator/threaddump",
+            "GET /actuator/logfile",
+            "GET /actuator/dump",
+            "GET /actuator/configprops",
+            "GET /actuator/trace",
+            "GET /actuator/httptrace",
+            "GET /actuator/auditevents",
+            "GET /actuator/sessions",
+            "GET /heapdump"
+          ]
+        }
+      }
+    },
+    "20.104.79.71": {
+      "ip": "20.104.79.71",
+      "family": "v4",
+      "first_seen": "2026-06-09T15:39:12Z",
+      "last_seen": "2026-06-09T15:39:20Z",
+      "scenarios": {
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-06-09T15:39:20Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-06-09T15:39:19Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T15:39:12Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-06-09T15:39:12Z",
+          "last_seen": "2026-06-09T15:39:20Z",
+          "last_alert_id": 7203,
+          "last_alert_uuid": "b2255e4e-cbf5-45ed-881e-94441f59038b",
+          "payloads": [
+            "GET /ms-edit.php",
+            "GET /grsiuk.php",
+            "GET /mh.php",
+            "GET /5b9ac.php",
+            "GET /bolt.php",
+            "GET /nw.php",
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /wp-access.php",
+            "GET /wp-blog-header.php",
+            "GET /wp-p2r3q9c8k4.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /aaf.php",
+            "GET /66t.php",
+            "GET /lala.php",
+            "GET /gscxejbc.php",
+            "GET /l.php",
+            "GET /hypo.php",
+            "GET /hoeig.php",
+            "GET /jj_260530013947.php",
+            "GET /zoper.php"
+          ]
+        }
+      }
+    },
+    "172.202.96.198": {
+      "ip": "172.202.96.198",
+      "family": "v4",
+      "first_seen": "2026-06-09T15:00:10Z",
+      "last_seen": "2026-06-09T15:00:10Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-09T15:00:10Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-09T15:00:10Z",
+          "last_seen": "2026-06-09T15:00:10Z",
+          "last_alert_id": 7200,
+          "last_alert_uuid": "39a62893-7d22-4309-b54a-5a65c2bd4a6f",
+          "payloads": [
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /x.php",
+            "GET /wss.php",
+            "GET /ultra.php",
+            "GET /Ar.php",
+            "GET /wpconf.php",
+            "GET /aaf.php",
+            "GET /tw0.php",
+            "GET /htt.php",
+            "GET /eid.php"
           ]
         }
       }
