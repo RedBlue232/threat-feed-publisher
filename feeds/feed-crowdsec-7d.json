@@ -1,86 +1,13 @@
 {
-  "generated_at": "2026-06-12T01:00:00Z",
+  "generated_at": "2026-06-12T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 62,
-    "v4": 62,
+    "total": 61,
+    "v4": 61,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "31.58.51.37",
-      "family": "v4",
-      "first_seen": "2026-06-05T09:00:00Z",
-      "last_seen": "2026-06-05T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "214481",
-      "asn_name": "wczapkowicz-as Wojciech Czapkowicz",
-      "asn_prefix": "31.58.51.0/24",
-      "payloads": [
-        "GET /.git/HEAD",
-        "GET /.env",
-        "GET /env",
-        "GET /.env.local",
-        "GET /.git/config",
-        "GET /.env.development",
-        "GET /config.json",
-        "GET /api/.env",
-        "GET /backend/.env",
-        "GET /.env.production",
-        "GET /.aws/credentials"
-      ]
-    },
-    {
-      "ip": "8.230.3.70",
-      "family": "v4",
-      "first_seen": "2026-06-05T01:00:00Z",
-      "last_seen": "2026-06-05T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "8.230.0.0/19",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env.dev.local",
-        "GET /.env.dist",
-        "GET /env.old",
-        "GET /env.txt",
-        "GET /env",
-        "GET /.env.txt",
-        "GET /frontend/.env.staging",
-        "GET /app/.env.production",
-        "GET /.env.bak",
-        "GET /.env.development",
-        "GET /.env.local",
-        "GET /.env.test",
-        "GET /.env.prod.bak",
-        "GET /.env.qa",
-        "GET /.env.docker",
-        "GET /.env.uat",
-        "GET /.env.production",
-        "GET /.env.sample",
-        "GET /.env.example",
-        "GET /.env.backup.txt"
-      ]
-    },
     {
       "ip": "205.185.113.104",
       "family": "v4",
@@ -1338,6 +1265,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "184.104.0.0/15",
       "tags": [
         "mwl:scanner=\"shadowserver\""
       ],
@@ -1356,6 +1286,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1374,6 +1307,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "51167",
+      "asn_name": "CONTABO Contabo GmbH",
+      "asn_prefix": "13.140.128.0/18",
       "payloads": [
         "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
       ]
@@ -1391,6 +1327,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "31898",
+      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
+      "asn_prefix": "161.118.192.0/18",
       "payloads": [
         "GET /wp-login.php",
         "GET /wp-admin/",
@@ -1416,6 +1355,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398705",
+      "asn_name": "CENSYS-ARIN-02 - Censys",
+      "asn_prefix": "167.94.146.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ],
@@ -1436,6 +1378,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1466,6 +1411,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "45102",
+      "asn_name": "ALIBABA-CN-NET Alibaba US Technology Co.",
+      "asn_prefix": "47.245.96.0/19",
       "payloads": [
         "GET /dns-query?dns=RL0BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
         "POST /dns-query",
@@ -1491,6 +1439,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1511,21 +1462,13 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /xx.php",
-        "GET /wp-the.php",
-        "GET /jga.php",
-        "GET /wp-blog-header.php",
-        "GET /bmi.php",
-        "GET /byypas.php",
-        "GET /wp-content/radio.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /wp-omao.php",
-        "GET /wp-wlx.php",
-        "GET /wp-blogs.php",
         "GET /this_is_a_new_hello_world.php",
         "GET /aboutc.php",
         "GET /txets.php",
@@ -1534,7 +1477,18 @@
         "GET /w3llstore.php",
         "GET /leaf.php",
         "GET /000.php",
-        "GET /alr.php"
+        "GET /alr.php",
+        "GET /wp-admin/network/edit.php",
+        "GET /wp-admin/network/users.php",
+        "GET /wp-admin/css/bolt.php",
+        "GET /shell.php",
+        "GET /xx.php",
+        "GET /wp-the.php",
+        "GET /jga.php",
+        "GET /wp-blog-header.php",
+        "GET /bmi.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-omao.php"
       ]
     },
     {
@@ -1548,6 +1502,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1568,6 +1525,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
       "payloads": [
         "GET /manage/account/login",
         "GET /admin/index.html",
@@ -1596,6 +1556,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1620,6 +1583,22 @@
         "GET /tw0.php",
         "GET /htt.php",
         "GET /eid.php"
+      ]
+    },
+    {
+      "ip": "66.132.224.83",
+      "family": "v4",
+      "first_seen": "2026-06-12T01:00:00Z",
+      "last_seen": "2026-06-12T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
       ]
     }
   ]
