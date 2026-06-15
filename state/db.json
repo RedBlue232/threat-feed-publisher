@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-15T16:39:20.588374Z",
+  "updated_at": "2026-06-15T16:58:46.651411Z",
   "items": {
     "199.45.154.118": {
       "ip": "199.45.154.118",
@@ -1609,13 +1609,13 @@
       "last_seen": "2026-06-15T09:56:05Z",
       "scenarios": {
         "crowdsec/http-cve-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:56:05Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-06-15T09:56:05Z",
           "last_seen": "2026-06-15T09:56:05Z",
           "last_alert_id": 7403,
@@ -1635,17 +1635,17 @@
       "last_seen": "2026-06-15T09:19:59Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:19:59Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:19:59Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 6,
           "first_seen": "2026-06-15T09:19:59Z",
           "last_seen": "2026-06-15T09:19:59Z",
           "last_alert_id": 7400,
@@ -1675,21 +1675,21 @@
       "last_seen": "2026-06-15T09:02:56Z",
       "scenarios": {
         "crowdsec/http-admin-interface-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:02:56Z"
         },
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:02:51Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T09:02:51Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 6,
+          "count": 9,
           "first_seen": "2026-06-15T09:02:51Z",
           "last_seen": "2026-06-15T09:02:56Z",
           "last_alert_id": 7399,
@@ -1722,17 +1722,17 @@
       "last_seen": "2026-06-15T08:31:18Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T08:31:18Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T08:31:15Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 6,
           "first_seen": "2026-06-15T08:31:15Z",
           "last_seen": "2026-06-15T08:31:18Z",
           "last_alert_id": 7396,
@@ -1762,17 +1762,17 @@
       "last_seen": "2026-06-15T07:59:40Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T07:59:40Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-15T07:59:40Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 6,
           "first_seen": "2026-06-15T07:59:40Z",
           "last_seen": "2026-06-15T07:59:40Z",
           "last_alert_id": 7393,
@@ -1842,13 +1842,13 @@
       "last_seen": "2026-06-15T16:26:43Z",
       "scenarios": {
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-15T16:26:43Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-15T16:26:43Z",
           "last_seen": "2026-06-15T16:26:43Z",
           "last_alert_id": 7408,
@@ -1867,7 +1867,9 @@
             "GET /cxl.php"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "135.119.0.0/16"
     },
     "66.132.195.73": {
       "ip": "66.132.195.73",
@@ -1876,13 +1878,13 @@
       "last_seen": "2026-06-15T14:21:01Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-15T14:21:01Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-15T14:21:01Z",
           "last_seen": "2026-06-15T14:21:01Z",
           "last_alert_id": 7406,
@@ -1892,7 +1894,9 @@
             "GET /metrics"
           ]
         }
-      }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.195.0/24"
     }
   },
   "asn_names": {
