@@ -3,8 +3,8 @@
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 53,
-    "v4": 53,
+    "total": 56,
+    "v4": 56,
     "v6": 0
   },
   "items": [
@@ -1217,10 +1217,12 @@
       "first_seen": "2026-06-15T09:00:00Z",
       "last_seen": "2026-06-15T09:00:00Z",
       "scenarios": [
-        "crowdsec/http-cve-probing"
+        "crowdsec/http-cve-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -1304,10 +1306,12 @@
       "last_seen": "2026-06-15T08:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -1323,7 +1327,8 @@
         "GET /wp-config.php",
         "GET /wp-config.php.bak",
         "GET /.aws/credentials",
-        "GET /config/database.yml"
+        "GET /config/database.yml",
+        "GET /phpinfo.php"
       ]
     },
     {
@@ -1432,6 +1437,54 @@
       "payloads": [
         "GET /debug/pprof/",
         "GET /metrics"
+      ]
+    },
+    {
+      "ip": "20.65.195.109",
+      "family": "v4",
+      "first_seen": "2026-06-15T07:00:00Z",
+      "last_seen": "2026-06-15T07:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "160.119.76.50",
+      "family": "v4",
+      "first_seen": "2026-06-15T05:00:00Z",
+      "last_seen": "2026-06-15T05:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "172.189.127.18",
+      "family": "v4",
+      "first_seen": "2026-06-15T05:00:00Z",
+      "last_seen": "2026-06-15T05:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.90.0_6b5454b2724a858740a4e2bd1b5e567e0285f387.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
       ]
     }
   ]
