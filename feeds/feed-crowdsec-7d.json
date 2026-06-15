@@ -1217,10 +1217,12 @@
       "first_seen": "2026-06-15T09:00:00Z",
       "last_seen": "2026-06-15T09:00:00Z",
       "scenarios": [
-        "crowdsec/http-cve-probing"
+        "crowdsec/http-cve-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -1304,10 +1306,12 @@
       "last_seen": "2026-06-15T08:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -1323,7 +1327,8 @@
         "GET /wp-config.php",
         "GET /wp-config.php.bak",
         "GET /.aws/credentials",
-        "GET /config/database.yml"
+        "GET /config/database.yml",
+        "GET /phpinfo.php"
       ]
     },
     {
