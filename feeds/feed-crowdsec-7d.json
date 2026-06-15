@@ -1398,6 +1398,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "135.119.0.0/16",
       "payloads": [
         "GET /wp-content/plugins/hellopress/wp_filemanager.php",
         "GET /this_is_a_new_hello_world.php",
@@ -1423,6 +1426,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /debug/pprof/",
         "GET /metrics"
