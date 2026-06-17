@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-16T13:00:00Z",
+  "generated_at": "2026-06-17T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 29,
-    "v4": 29,
+    "total": 35,
+    "v4": 35,
     "v6": 0
   },
   "items": [
@@ -484,6 +484,125 @@
       ],
       "payloads": [
         "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.105.0_b518a1a6f10d238b417b8e5933c28ead6a6628c3.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "20.12.240.74",
+      "family": "v4",
+      "first_seen": "2026-06-16T15:00:00Z",
+      "last_seen": "2026-06-16T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "52.161.75.164",
+      "family": "v4",
+      "first_seen": "2026-06-16T15:00:00Z",
+      "last_seen": "2026-06-16T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /.env.prod",
+        "GET /.env.bak",
+        "GET /.env.development",
+        "GET /wp-config.php.bak",
+        "GET /.aws/credentials",
+        "GET /.git/refs/heads/main",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /.env.old",
+        "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "20.210.107.25",
+      "family": "v4",
+      "first_seen": "2026-06-16T18:00:00Z",
+      "last_seen": "2026-06-16T18:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "136.112.32.76",
+      "family": "v4",
+      "first_seen": "2026-06-16T17:00:00Z",
+      "last_seen": "2026-06-16T17:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "20.80.105.86",
+      "family": "v4",
+      "first_seen": "2026-06-16T13:00:00Z",
+      "last_seen": "2026-06-16T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "135.237.125.206",
+      "family": "v4",
+      "first_seen": "2026-06-17T00:00:00Z",
+      "last_seen": "2026-06-17T00:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
       ]
     }
   ]
