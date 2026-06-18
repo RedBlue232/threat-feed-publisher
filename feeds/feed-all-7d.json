@@ -1,141 +1,13 @@
 {
-  "generated_at": "2026-06-17T13:00:00Z",
+  "generated_at": "2026-06-18T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 99,
-    "v4": 99,
+    "total": 107,
+    "v4": 107,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.219.39.254",
-      "family": "v4",
-      "first_seen": "2026-06-10T22:00:00Z",
-      "last_seen": "2026-06-10T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /1.php",
-        "GET /xleet.php",
-        "GET /a.php",
-        "GET /aa.php",
-        "GET /aaa.php",
-        "GET /ab.php",
-        "GET /lock360.php",
-        "GET /anonse/lock360.php",
-        "GET /file5.php",
-        "GET /sitemaps.php",
-        "GET /ioxi-o.php",
-        "GET /load.php",
-        "GET /k.php"
-      ]
-    },
-    {
-      "ip": "45.156.129.127",
-      "family": "v4",
-      "first_seen": "2026-06-10T21:00:00Z",
-      "last_seen": "2026-06-10T21:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2019-18935",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "211680",
-      "asn_name": "AS-BITSIGHT NSEC - Sistemas Informaticos, S.A.",
-      "asn_prefix": "45.156.129.0/24",
-      "tags": [
-        "mwl:scanner=\"internet-census\""
-      ],
-      "payloads": [
-        "GET /solr/",
-        "GET /owa/",
-        "GET /Telerik.Web.UI.WebResource.axd?type=rau",
-        "GET /sitecore/shell/sitecore.version.xml"
-      ]
-    },
-    {
-      "ip": "92.154.95.236",
-      "family": "v4",
-      "first_seen": "2026-06-10T18:00:00Z",
-      "last_seen": "2026-06-10T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "3215",
-      "asn_name": "AS3215 Orange S.A.",
-      "asn_prefix": "92.154.0.0/17",
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "40.119.24.130",
-      "family": "v4",
-      "first_seen": "2026-06-10T18:00:00Z",
-      "last_seen": "2026-06-10T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.112.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "62.210.142.64",
-      "family": "v4",
-      "first_seen": "2026-06-10T18:00:00Z",
-      "last_seen": "2026-06-10T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "12876",
-      "asn_name": "AS12876 Scaleway SAS",
-      "asn_prefix": "62.210.0.0/16",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html"
-      ]
-    },
     {
       "ip": "184.105.139.69",
       "family": "v4",
@@ -1219,6 +1091,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1315,6 +1190,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1370,6 +1248,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1385,6 +1266,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1400,6 +1284,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "214503",
+      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
+      "asn_prefix": "45.84.107.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1433,6 +1320,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "205100",
+      "asn_name": "F3NETZE F3 Netze e.V.",
+      "asn_prefix": "185.220.100.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1448,6 +1338,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "208323",
+      "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
+      "asn_prefix": "109.70.100.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1463,6 +1356,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "60404",
+      "asn_name": "Liteserver The Infrastructure Group B.V.",
+      "asn_prefix": "192.76.153.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1478,6 +1374,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1493,6 +1392,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "214503",
+      "asn_name": "R0CKET-CLOUD - QuxLabs AB",
+      "asn_prefix": "45.84.107.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -1544,6 +1446,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "197540",
+      "asn_name": "netcup-AS netcup GmbH",
+      "asn_prefix": "46.232.248.0/22",
       "tags": [
         "tor:exit-node"
       ]
@@ -1559,6 +1464,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "54113",
+      "asn_name": "FASTLY - Fastly, Inc.",
+      "asn_prefix": "199.232.208.0/22",
       "tags": [
         "mwl:cdn=\"fastly\""
       ]
@@ -1623,6 +1531,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "22295",
+      "asn_name": "ADVIN - Advin Services LLC",
+      "asn_prefix": "208.84.101.0/24",
       "payloads": [
         "GET /service-account-file.json",
         "GET /google-cloud.json",
@@ -1659,6 +1570,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.28.196.0/24",
       "payloads": [
         "GET /wp-admin/admin-ajax.php",
         "GET /wp-admin/css/index.php",
@@ -1803,6 +1717,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
       "payloads": [
         "GET /robots.txt",
         "GET /"
@@ -1887,6 +1804,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.155.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ],
@@ -2094,6 +2014,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.36.0.0/14",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2114,6 +2037,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2143,6 +2069,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2161,10 +2090,14 @@
       "sources": [
         "suricata"
       ],
+      "asn": "56420",
+      "asn_name": "RYAZAN-AS JSC \"ER-Telecom Holding\"",
+      "asn_prefix": "176.112.128.0/20",
       "payloads": [
         "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
         "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input"
       ]
     },
     {
@@ -2178,6 +2111,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "36947",
+      "asn_name": "Telecom Algeria - Telecom Algeria",
+      "asn_prefix": "41.110.0.0/16",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
         "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh"
@@ -2194,6 +2130,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "13036",
+      "asn_name": "TMOBILE-CZ T-Mobile Czech Republic a.s.",
+      "asn_prefix": "46.13.0.0/16",
       "payloads": [
         "POST /cgi-bin/ViewLog.asp"
       ]
@@ -2209,6 +2148,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "58563",
+      "asn_name": "CHINATELECOM-Hubei-IDC - CHINANET Hubei province network",
+      "asn_prefix": "119.96.220.0/22",
       "payloads": [
         "POST /cgi-bin/ViewLog.asp"
       ]
@@ -2224,6 +2166,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "17622",
+      "asn_name": "CNCGROUP-GZ - China Unicom Guangzhou network",
+      "asn_prefix": "120.85.0.0/17",
       "payloads": [
         "POST /HNAP1/"
       ]
@@ -2238,7 +2183,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.223.144.0/20"
     },
     {
       "ip": "52.224.242.102",
@@ -2251,6 +2199,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.224.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
       ]
@@ -2266,6 +2217,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2284,8 +2238,261 @@
       "sources": [
         "suricata"
       ],
+      "asn": "41745",
+      "asn_name": "FORTIS-AS Baykov Ilya Sergeevich",
+      "asn_prefix": "41.216.182.0/24",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "66.132.195.59",
+      "family": "v4",
+      "first_seen": "2026-06-17T23:00:00Z",
+      "last_seen": "2026-06-17T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "35.178.182.139",
+      "family": "v4",
+      "first_seen": "2026-06-17T22:00:00Z",
+      "last_seen": "2026-06-17T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /.git/HEAD",
+        "GET /.git/config",
+        "GET /.git/logs/HEAD",
+        "GET /.git/refs/heads/master",
+        "GET /.git/refs/heads/main",
+        "GET /.git/index",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "185.38.148.2",
+      "family": "v4",
+      "first_seen": "2026-06-17T21:00:00Z",
+      "last_seen": "2026-06-17T21:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh"
+      ]
+    },
+    {
+      "ip": "104.28.208.60",
+      "family": "v4",
+      "first_seen": "2026-06-17T18:00:00Z",
+      "last_seen": "2026-06-17T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /wp-admin/admin-ajax.php",
+        "GET /wp-admin/css/index.php",
+        "GET /wp-admin/txets.php",
+        "GET /wp-content/plugins/hellopress/wp_mna.php",
+        "GET /wp-content/plugins/index.php",
+        "GET /ms-themes.php",
+        "GET /chosen.php?p=",
+        "GET /file.php",
+        "GET /flower.php",
+        "GET /gifclass.php",
+        "GET /bless.php",
+        "GET /class-t.api.php",
+        "GET /blurbs.php",
+        "GET /akcc.php",
+        "GET /abcd.php",
+        "GET /shelp.php"
+      ]
+    },
+    {
+      "ip": "51.68.107.138",
+      "family": "v4",
+      "first_seen": "2026-06-17T17:00:00Z",
+      "last_seen": "2026-06-17T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "35.216.195.77",
+      "family": "v4",
+      "first_seen": "2026-06-17T15:00:00Z",
+      "last_seen": "2026-06-17T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php"
+      ]
+    },
+    {
+      "ip": "34.65.251.190",
+      "family": "v4",
+      "first_seen": "2026-06-18T00:00:00Z",
+      "last_seen": "2026-06-18T00:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "51.15.204.194",
+      "family": "v4",
+      "first_seen": "2026-06-17T20:00:00Z",
+      "last_seen": "2026-06-17T20:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "20.65.195.117",
+      "family": "v4",
+      "first_seen": "2026-06-17T20:00:00Z",
+      "last_seen": "2026-06-17T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "51.15.206.25",
+      "family": "v4",
+      "first_seen": "2026-06-17T18:00:00Z",
+      "last_seen": "2026-06-17T18:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "20.12.240.188",
+      "family": "v4",
+      "first_seen": "2026-06-17T15:00:00Z",
+      "last_seen": "2026-06-17T15:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "3.131.220.121",
+      "family": "v4",
+      "first_seen": "2026-06-17T14:00:00Z",
+      "last_seen": "2026-06-17T14:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ]
+    },
+    {
+      "ip": "51.159.147.228",
+      "family": "v4",
+      "first_seen": "2026-06-18T00:00:00Z",
+      "last_seen": "2026-06-18T00:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
       ]
     }
   ]
