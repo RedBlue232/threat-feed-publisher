@@ -53,6 +53,17 @@ RIPE_STAT_URL = os.environ.get(
 )
 RIPE_STAT_TIMEOUT = float(os.environ.get("RIPE_STAT_TIMEOUT", "10"))
 
+# RIPE Stat network-info : IP → ASN+préfixe en TEMPS RÉEL (sans date). Sert de
+# fallback quand CIRCL ne résout pas une IP : les snapshots CIRCL sont indexés
+# par date et sont épars/instables (une date donnée peut être vide selon
+# l'avancement de leur ingestion BGP), si bien qu'une IP fraîchement ajoutée
+# reste souvent sans ASN au run courant pour n'être résolue qu'à un run
+# ultérieur. RIPE network-info n'a pas ce problème (pas de notion de date).
+RIPE_NETWORK_INFO_URL = os.environ.get(
+    "RIPE_NETWORK_INFO_URL",
+    "https://stat.ripe.net/data/network-info/data.json",
+)
+
 # Au-delà, on découpe en batches pour éviter timeouts/payload trop gros côté serveur.
 BATCH_SIZE = int(os.environ.get("CIRCL_ASN_BATCH_SIZE", "500"))
 
@@ -151,9 +162,44 @@ def _post_batch(ips: list[str]) -> dict[str, dict]:
     return out
 
 
+def _fetch_ip_asn_ripe(ip: str) -> dict | None:
+    """IP → {asn, prefix} via RIPE Stat network-info (temps réel, sans date).
+
+    Best-effort : retourne None en cas d'échec réseau/HTTP/JSON ou si RIPE n'a
+    pas d'ASN pour l'IP. Ne retient que le premier ASN si le préfixe est
+    multi-origine (rare), cohérent avec le schéma DB mono-ASN."""
+    try:
+        r = requests.get(
+            RIPE_NETWORK_INFO_URL,
+            params={"resource": ip},
+            timeout=RIPE_STAT_TIMEOUT,
+        )
+        r.raise_for_status()
+        data = r.json()
+    except (requests.exceptions.RequestException, ValueError) as e:
+        log.debug("RIPE network-info %s : échec (%s)", ip, e)
+        return None
+
+    d = data.get("data") if isinstance(data, dict) else None
+    if not isinstance(d, dict):
+        return None
+    asns = d.get("asns") or []
+    if not asns:
+        return None
+    out = {"asn": str(asns[0])}
+    prefix = d.get("prefix")
+    if prefix and prefix != "0.0.0.0/0":
+        out["prefix"] = prefix
+    return out
+
+
 def enrich_batch(ips: Iterable[str]) -> dict[str, dict]:
-    """Best-effort batch lookup. Retourne {ip: {"asn": ..., "prefix": ...}}
-    pour les IPs résolues. Les IPs non résolues sont absentes du dict."""
+    """Best-effort lookup IP → ASN. Retourne {ip: {"asn": ..., "prefix": ...}}
+    pour les IPs résolues ; les IPs non résolues sont absentes du dict.
+
+    Chemin principal : batch CIRCL (1 requête pour plusieurs centaines d'IP).
+    Fallback : RIPE Stat network-info pour les IP que CIRCL ne résout pas (ses
+    snapshots par date sont épars), afin de les enrichir dès le run courant."""
     ips = sorted(set(ip for ip in ips if ip))
     if not ips:
         return {}
@@ -168,6 +214,22 @@ def enrich_batch(ips: Iterable[str]) -> dict[str, dict]:
         out.update(batch_out)
         log.info("CIRCL ASN batch %d-%d : %d/%d IPs résolues",
                  i, i + len(chunk), len(batch_out), len(chunk))
+
+    # Fallback RIPE Stat pour les IP non résolues par CIRCL (snapshots par date
+    # épars). Résout dans le run courant les IP fraîches au lieu d'attendre
+    # qu'un run ultérieur tombe par chance sur une date CIRCL exploitable —
+    # c'était la cause du "ASN manquant à l'ajout, présent au run suivant".
+    # 1 requête/IP, séquentiel ; best-effort, un échec laisse l'IP sans ASN.
+    missing = [ip for ip in ips if ip not in out]
+    if missing:
+        log.info("CIRCL ASN : %d IP non résolues → fallback RIPE network-info", len(missing))
+        resolved = 0
+        for ip in missing:
+            info = _fetch_ip_asn_ripe(ip)
+            if info:
+                out[ip] = info
+                resolved += 1
+        log.info("RIPE network-info fallback : %d/%d IP résolues", resolved, len(missing))
     return out
 
 
