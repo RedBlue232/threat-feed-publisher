@@ -1,157 +1,31 @@
 {
-  "generated_at": "2026-06-18T01:00:00Z",
+  "generated_at": "2026-06-18T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 62,
-    "v4": 62,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
     {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-06-11T12:00:00Z",
-      "last_seen": "2026-06-11T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "20.102.92.213",
-      "family": "v4",
-      "first_seen": "2026-06-11T12:00:00Z",
-      "last_seen": "2026-06-11T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
       "ip": "13.140.137.178",
       "family": "v4",
       "first_seen": "2026-06-11T10:00:00Z",
-      "last_seen": "2026-06-11T10:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
-        "crowdsec/CVE-2017-9841"
+        "crowdsec/CVE-2017-9841",
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "51167",
       "asn_name": "CONTABO Contabo GmbH",
       "asn_prefix": "13.140.128.0/18",
       "payloads": [
         "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
-      ]
-    },
-    {
-      "ip": "161.118.221.25",
-      "family": "v4",
-      "first_seen": "2026-06-11T10:00:00Z",
-      "last_seen": "2026-06-11T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "31898",
-      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
-      "asn_prefix": "161.118.192.0/18",
-      "payloads": [
-        "GET /wp-login.php",
-        "GET /wp-admin/",
-        "GET /",
-        "GET /wp-admin/admin-ajax.php",
-        "GET /wp-admin/load-scripts.php",
-        "GET /wp-admin/load-styles.php",
-        "GET /wp-content/themes/",
-        "GET /wp-content/plugins/",
-        "GET /wp-includes/version.php",
-        "GET /wp-includes/functions.php",
-        "GET /wp-includes/class-wp.php"
-      ]
-    },
-    {
-      "ip": "167.94.146.53",
-      "family": "v4",
-      "first_seen": "2026-06-11T07:00:00Z",
-      "last_seen": "2026-06-11T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "20.214.111.181",
-      "family": "v4",
-      "first_seen": "2026-06-11T05:00:00Z",
-      "last_seen": "2026-06-11T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /1.php",
-        "GET /xleet.php",
-        "GET /a.php",
-        "GET /aa.php",
-        "GET /aaa.php",
-        "GET /ab.php",
-        "GET /lock360.php",
-        "GET /anonse/lock360.php",
-        "GET /file5.php",
-        "GET /sitemaps.php",
-        "GET /ioxi-o.php",
-        "GET /load.php",
-        "GET /k.php"
       ]
     },
     {
@@ -249,12 +123,14 @@
       "ip": "20.118.216.147",
       "family": "v4",
       "first_seen": "2026-06-11T20:00:00Z",
-      "last_seen": "2026-06-11T20:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
-        "crowdsec/http-cve-probing"
+        "crowdsec/http-cve-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -506,12 +382,14 @@
       "ip": "20.65.194.38",
       "family": "v4",
       "first_seen": "2026-06-12T19:00:00Z",
-      "last_seen": "2026-06-12T19:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
-        "crowdsec/http-technology-probing"
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -670,7 +548,7 @@
       "ip": "20.65.219.72",
       "family": "v4",
       "first_seen": "2026-06-15T09:00:00Z",
-      "last_seen": "2026-06-15T09:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "suricata/ET SCAN Zmap User-Agent (Inbound)"
@@ -758,7 +636,7 @@
       "ip": "132.196.94.33",
       "family": "v4",
       "first_seen": "2026-06-15T08:00:00Z",
-      "last_seen": "2026-06-15T08:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files",
@@ -898,7 +776,7 @@
       "ip": "40.124.175.5",
       "family": "v4",
       "first_seen": "2026-06-16T00:00:00Z",
-      "last_seen": "2026-06-16T00:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-technology-probing",
         "suricata/ET SCAN Zmap User-Agent (Inbound)"
@@ -1046,7 +924,7 @@
       "ip": "83.220.64.48",
       "family": "v4",
       "first_seen": "2026-06-15T19:00:00Z",
-      "last_seen": "2026-06-15T19:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "crowdsec/netgear_rce",
@@ -1390,7 +1268,7 @@
       "ip": "20.12.240.74",
       "family": "v4",
       "first_seen": "2026-06-16T15:00:00Z",
-      "last_seen": "2026-06-16T15:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "suricata/ET SCAN Zmap User-Agent (Inbound)"
@@ -1413,7 +1291,7 @@
       "ip": "52.161.75.164",
       "family": "v4",
       "first_seen": "2026-06-16T15:00:00Z",
-      "last_seen": "2026-06-16T15:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files",
@@ -1491,7 +1369,7 @@
       "ip": "172.215.210.55",
       "family": "v4",
       "first_seen": "2026-06-17T05:00:00Z",
-      "last_seen": "2026-06-17T05:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
@@ -1553,6 +1431,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1562,7 +1443,7 @@
       "ip": "35.178.182.139",
       "family": "v4",
       "first_seen": "2026-06-17T22:00:00Z",
-      "last_seen": "2026-06-17T22:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files",
@@ -1572,6 +1453,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "35.178.0.0/15",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -1594,7 +1478,7 @@
       "ip": "185.38.148.2",
       "family": "v4",
       "first_seen": "2026-06-17T21:00:00Z",
-      "last_seen": "2026-06-17T21:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
       "scenarios": [
         "crowdsec/CVE-2017-9841",
         "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
@@ -1603,6 +1487,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "25369",
+      "asn_name": "BANDWIDTH-AS - Hydra Communications Ltd",
+      "asn_prefix": "185.38.148.0/22",
       "payloads": [
         "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
@@ -1625,6 +1512,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.28.208.0/24",
       "payloads": [
         "GET /wp-admin/admin-ajax.php",
         "GET /wp-admin/css/index.php",
@@ -1655,6 +1545,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
       "payloads": [
         "GET /robots.txt",
         "GET /"
@@ -1671,11 +1564,79 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.216.128.0/17",
       "tags": [
         "mwl:cloud=\"gcp\""
       ],
       "payloads": [
         "GET /info.php"
+      ]
+    },
+    {
+      "ip": "184.105.139.67",
+      "family": "v4",
+      "first_seen": "2026-06-18T07:00:00Z",
+      "last_seen": "2026-06-18T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "66.132.224.229",
+      "family": "v4",
+      "first_seen": "2026-06-18T01:00:00Z",
+      "last_seen": "2026-06-18T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.119.103.54",
+      "family": "v4",
+      "first_seen": "2026-06-18T01:00:00Z",
+      "last_seen": "2026-06-18T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /.env.save",
+        "GET /.env.prod",
+        "GET /.env.bak",
+        "GET /.env.development",
+        "GET /wp-config.php.bak",
+        "GET /.git/logs/HEAD",
+        "GET /.git/refs/heads/master",
+        "GET /.git/refs/heads/main",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.backup",
+        "GET /.env.old",
+        "GET /.env.docker",
+        "GET /phpinfo.php"
       ]
     }
   ]
