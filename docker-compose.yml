@@ -4,5 +4,44 @@ services:
       context: ./scripts
     container_name: threat-feed-publisher
     restart: unless-stopped
-    env_file:
-      - .env
+    # Variables injectées via l'interface Portainer (déploiement depuis Git, pas
+    # de fichier .env sur disque). On mappe explicitement chaque variable depuis
+    # l'environnement de la stack via ${VAR}. La syntaxe ${VAR:-defaut} applique
+    # le même défaut que le code quand la variable n'est pas définie dans l'UI.
+    # Les 6 premières (sans défaut) sont OBLIGATOIRES côté Portainer.
+    environment:
+      # --- requis ---
+      LAPI_BASE:          ${LAPI_BASE}
+      CS_MACHINE_ID:      ${CS_MACHINE_ID}
+      CS_PASSWORD:        ${CS_PASSWORD}
+      GH_TOKEN:           ${GH_TOKEN}
+      GH_OWNER:           ${GH_OWNER}
+      GH_REPO:            ${GH_REPO}
+      # --- GitHub / feed ---
+      GH_BRANCH:          ${GH_BRANCH:-main}
+      TTL_DAYS:           ${TTL_DAYS:-7}
+      LOOKBACK:           ${LOOKBACK:-13h}
+      # --- MISP ---
+      MISP_URL:           ${MISP_URL:-}
+      MISP_KEY:           ${MISP_KEY:-}
+      MISP_VERIFY_SSL:    ${MISP_VERIFY_SSL:-true}
+      MISP_UUID_ALL:      ${MISP_UUID_ALL:-}
+      MISP_UUID_CROWDSEC: ${MISP_UUID_CROWDSEC:-}
+      MISP_UUID_SURICATA: ${MISP_UUID_SURICATA:-}
+      # --- Suricata / Splunk ---
+      SURICATA_ENABLED:      ${SURICATA_ENABLED:-false}
+      SPLUNK_URL:            ${SPLUNK_URL:-}
+      SPLUNK_TOKEN:          ${SPLUNK_TOKEN:-}
+      SPLUNK_INDEX_BLOCK:    ${SPLUNK_INDEX_BLOCK:-suricata_block}
+      SPLUNK_INDEX_EVE:      ${SPLUNK_INDEX_EVE:-suricata_eve}
+      SPLUNK_LOOKBACK:       ${SPLUNK_LOOKBACK:-13h}
+      SPLUNK_VERIFY_SSL:     ${SPLUNK_VERIFY_SSL:-true}
+      SURICATA_MIN_PRIORITY: ${SURICATA_MIN_PRIORITY:-}
+      # --- Enrichissement / sanitize ---
+      ASN_ENABLED:             ${ASN_ENABLED:-true}
+      TOR_ENABLED:             ${TOR_ENABLED:-true}
+      PII_IPS:                 ${PII_IPS:-}
+      PII_DOMAINS:             ${PII_DOMAINS:-}
+      PAYLOAD_MAX_LEN:         ${PAYLOAD_MAX_LEN:-512}
+      PAYLOADS_PER_SOURCE_CAP: ${PAYLOADS_PER_SOURCE_CAP:-20}
+      PAYLOADS_MISP_SHOW:      ${PAYLOADS_MISP_SHOW:-3}
