@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-19T06:21:57.565133Z",
+  "updated_at": "2026-06-19T13:00:02.939708Z",
   "items": {
     "13.140.137.178": {
       "ip": "13.140.137.178",
@@ -5755,22 +5755,25 @@
       "ip": "172.189.127.28",
       "family": "v4",
       "first_seen": "2026-06-18T03:38:25Z",
-      "last_seen": "2026-06-18T03:38:25Z",
+      "last_seen": "2026-06-19T11:14:46Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 2,
-          "last_seen": "2026-06-18T03:38:25Z"
+          "count": 3,
+          "last_seen": "2026-06-19T11:14:46Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-06-18T03:38:25Z",
-          "last_seen": "2026-06-18T03:38:25Z",
+          "last_seen": "2026-06-19T11:14:46Z",
           "sids": [
             2021076
           ],
-          "max_priority": 2
+          "max_priority": 2,
+          "payloads": [
+            "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.166.0_d68143278eaa3c241da2d1aa6be550197a29c96e.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
+          ]
         }
       },
       "asn": "8075",
@@ -10796,13 +10799,13 @@
       "last_seen": "2026-06-19T03:34:42Z",
       "scenarios": {
         "suricata/ET WEB_SERVER WebShell Generic - wget http - POST": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-06-19T03:34:42Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-06-18T03:38:25Z",
           "last_seen": "2026-06-19T03:34:42Z",
           "sids": [
@@ -14211,44 +14214,45 @@
       "last_seen": "2026-06-19T02:13:07Z",
       "scenarios": {
         "crowdsec/http-path-traversal-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:07Z"
         },
         "crowdsec/http-wordpress-scan": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:07Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:04Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:04Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:03Z"
         },
         "crowdsec/http-cve-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:03Z"
         },
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:03Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T02:13:03Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 8,
+          "count": 16,
           "first_seen": "2026-06-19T02:13:03Z",
           "last_seen": "2026-06-19T02:13:07Z",
           "payloads": [
+            "GET /.env",
             "GET /.git/HEAD",
             "GET /wp-content/debug.log",
             "GET /.git/config",
@@ -14267,8 +14271,7 @@
             "GET /wp-sitemap.xml",
             "GET /sitemap.xml",
             "GET /?rest_route=/wp/v2/",
-            "GET /_next/static/",
-            "GET /login"
+            "GET /_next/static/"
           ]
         }
       },
@@ -14282,17 +14285,17 @@
       "last_seen": "2026-06-19T00:34:56Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T00:34:55Z"
         },
         "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T00:34:56Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-19T00:34:55Z",
           "last_seen": "2026-06-19T00:34:55Z",
           "payloads": [
@@ -14300,7 +14303,7 @@
           ]
         },
         "suricata": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-19T00:34:56Z",
           "last_seen": "2026-06-19T00:34:56Z",
           "sids": [
@@ -14487,13 +14490,13 @@
       "last_seen": "2026-06-19T04:50:14Z",
       "scenarios": {
         "suricata/ET SCAN WordPress Scanner Performing Multiple Requests to Windows Live Writer XML": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-06-19T04:50:14Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-06-19T04:50:14Z",
           "last_seen": "2026-06-19T04:50:14Z",
           "sids": [
@@ -14507,6 +14510,64 @@
       },
       "asn": "9009",
       "asn_prefix": "146.70.194.0/24"
+    },
+    "20.250.14.139": {
+      "ip": "20.250.14.139",
+      "family": "v4",
+      "first_seen": "2026-06-19T12:31:18Z",
+      "last_seen": "2026-06-19T12:31:18Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-19T12:31:18Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-19T12:31:18Z",
+          "last_seen": "2026-06-19T12:31:18Z",
+          "payloads": [
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /jj.php",
+            "GET /dd.php",
+            "GET /xa.php",
+            "GET /test2.php",
+            "GET /ee.php",
+            "GET /menu.php",
+            "GET /base.php",
+            "GET /aq.php",
+            "GET /333.php"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.192.0.0/10"
+    },
+    "20.172.67.176": {
+      "ip": "20.172.67.176",
+      "family": "v4",
+      "first_seen": "2026-06-19T07:32:00Z",
+      "last_seen": "2026-06-19T07:32:00Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-19T07:32:00Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-19T07:32:00Z",
+          "last_seen": "2026-06-19T07:32:00Z",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.160.0.0/12"
     }
   },
   "asn_names": {
