@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T06:00:00Z",
+  "generated_at": "2026-06-19T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -2894,7 +2894,7 @@
       "ip": "172.189.127.28",
       "family": "v4",
       "first_seen": "2026-06-18T03:00:00Z",
-      "last_seen": "2026-06-18T03:00:00Z",
+      "last_seen": "2026-06-19T11:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
       ],
@@ -2906,6 +2906,9 @@
       "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.166.0_d68143278eaa3c241da2d1aa6be550197a29c96e.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
       ]
     },
     {
