@@ -1,7 +1,10 @@
 services:
   threat-feed-publisher:
-    build:
-      context: ./scripts
+    # Image pré-construite et poussée sur GHCR par .github/workflows/docker-publish.yml
+    # (build sur GitHub, plus de build côté Portainer). pull_policy: always =>
+    # Portainer récupère la dernière image à chaque redéploiement.
+    image: ghcr.io/redblue232/threat-feed-publisher:latest
+    pull_policy: always
     container_name: threat-feed-publisher
     restart: unless-stopped
     # Variables injectées via l'interface Portainer (déploiement depuis Git, pas
