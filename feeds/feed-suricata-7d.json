@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-20T01:00:00Z",
+  "generated_at": "2026-06-20T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 508,
-    "v4": 508,
+    "total": 513,
+    "v4": 513,
     "v6": 0
   },
   "items": [
@@ -8508,7 +8508,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.68.64.0/20"
     },
     {
       "ip": "54.38.176.226",
@@ -8538,7 +8541,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "400848",
+      "asn_name": "DHI9PUT - DHI TECHNICAL SERVICES LLC",
+      "asn_prefix": "140.235.236.0/23"
     },
     {
       "ip": "35.157.26.135",
@@ -8590,6 +8596,97 @@
       "asn": "16276",
       "asn_name": "OVH OVH SAS",
       "asn_prefix": "144.217.0.0/16"
+    },
+    {
+      "ip": "40.124.175.39",
+      "family": "v4",
+      "first_seen": "2026-06-20T10:00:00Z",
+      "last_seen": "2026-06-20T10:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "93.185.156.121",
+      "family": "v4",
+      "first_seen": "2026-06-20T06:00:00Z",
+      "last_seen": "2026-06-20T06:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "216127",
+      "asn_name": "NUXT-AS INTERNATIONAL HOSTING COMPANY LIMITED",
+      "asn_prefix": "93.185.156.0/24",
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "64.178.184.168",
+      "family": "v4",
+      "first_seen": "2026-06-20T04:00:00Z",
+      "last_seen": "2026-06-20T04:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "23404",
+      "asn_name": "RITTERNET - Ritter Communications",
+      "asn_prefix": "64.178.184.0/24",
+      "payloads": [
+        "POST /boaform/adminformLogout//boaform/admin/formPing6"
+      ]
+    },
+    {
+      "ip": "45.79.115.134",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:00:00Z",
+      "last_seen": "2026-06-20T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
+      "asn_prefix": "45.79.112.0/22",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "146.70.226.226",
+      "family": "v4",
+      "first_seen": "2026-06-20T11:00:00Z",
+      "last_seen": "2026-06-20T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA UDPv4 invalid checksum"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9009",
+      "asn_name": "M247 M247 Europe SRL",
+      "asn_prefix": "146.70.226.0/24"
     }
   ]
 }
