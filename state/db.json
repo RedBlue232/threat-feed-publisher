@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-06-20T01:00:02.933129Z",
+  "updated_at": "2026-06-20T13:00:03.358054Z",
   "items": {
     "13.140.137.178": {
       "ip": "13.140.137.178",
@@ -14225,7 +14225,9 @@
           ],
           "max_priority": 3
         }
-      }
+      },
+      "asn": "14061",
+      "asn_prefix": "138.68.64.0/20"
     },
     "54.38.176.226": {
       "ip": "54.38.176.226",
@@ -14276,7 +14278,9 @@
           ],
           "max_priority": 3
         }
-      }
+      },
+      "asn": "400848",
+      "asn_prefix": "140.235.236.0/23"
     },
     "35.157.26.135": {
       "ip": "35.157.26.135",
@@ -14352,6 +14356,323 @@
       },
       "asn": "16276",
       "asn_prefix": "144.217.0.0/16"
+    },
+    "103.168.66.158": {
+      "ip": "103.168.66.158",
+      "family": "v4",
+      "first_seen": "2026-06-20T09:31:28Z",
+      "last_seen": "2026-06-20T09:31:29Z",
+      "scenarios": {
+        "crowdsec/http-path-traversal-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:29Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:29Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        },
+        "crowdsec/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T09:31:28Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 8,
+          "first_seen": "2026-06-20T09:31:28Z",
+          "last_seen": "2026-06-20T09:31:29Z",
+          "payloads": [
+            "GET /wp-config.php.bak",
+            "GET /.docker/config.json",
+            "GET /wp-content/debug.log",
+            "GET /api/v1/system/system-information",
+            "GET /sanctum/csrf-cookie",
+            "GET /cli",
+            "GET /_ignition/health-check",
+            "GET /api/v1/flows?page=1&size=1",
+            "GET /tmui/login.jsp",
+            "GET /remote/login",
+            "HEAD /",
+            "GET /robots.txt",
+            "GET /sitemap.xml",
+            "GET /graphql?query={__typename}",
+            "GET /mgmt/shared/authn/login",
+            "GET /modules/ps_emailsubscription/",
+            "GET /rest/login",
+            "GET /horizon/api/stats",
+            "GET /global-protect/login.esp",
+            "GET /api/health"
+          ]
+        }
+      },
+      "asn": "142430",
+      "asn_prefix": "103.168.66.0/23"
+    },
+    "74.248.112.30": {
+      "ip": "74.248.112.30",
+      "family": "v4",
+      "first_seen": "2026-06-20T06:14:29Z",
+      "last_seen": "2026-06-20T06:14:29Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T06:14:29Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-20T06:14:29Z",
+          "last_seen": "2026-06-20T06:14:29Z",
+          "payloads": [
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /jj.php",
+            "GET /dd.php",
+            "GET /xa.php",
+            "GET /test2.php",
+            "GET /ee.php",
+            "GET /menu.php",
+            "GET /base.php",
+            "GET /aq.php",
+            "GET /333.php"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "74.248.0.0/15"
+    },
+    "66.132.224.230": {
+      "ip": "66.132.224.230",
+      "family": "v4",
+      "first_seen": "2026-06-20T05:59:15Z",
+      "last_seen": "2026-06-20T05:59:15Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-20T05:59:15Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-20T05:59:15Z",
+          "last_seen": "2026-06-20T05:59:15Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.224.0/24"
+    },
+    "199.45.155.94": {
+      "ip": "199.45.155.94",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:38:13Z",
+      "last_seen": "2026-06-20T02:38:13Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-06-20T02:38:13Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-20T02:38:13Z",
+          "last_seen": "2026-06-20T02:38:13Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398722",
+      "asn_prefix": "199.45.155.0/24"
+    },
+    "172.202.117.213": {
+      "ip": "172.202.117.213",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:01:35Z",
+      "last_seen": "2026-06-20T02:01:35Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-06-20T02:01:35Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-06-20T02:01:35Z",
+          "last_seen": "2026-06-20T02:01:35Z",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "172.200.0.0/13"
+    },
+    "40.124.175.39": {
+      "ip": "40.124.175.39",
+      "family": "v4",
+      "first_seen": "2026-06-20T10:14:25Z",
+      "last_seen": "2026-06-20T10:14:25Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-06-20T10:14:25Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-20T10:14:25Z",
+          "last_seen": "2026-06-20T10:14:25Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.124.0.0/16"
+    },
+    "93.185.156.121": {
+      "ip": "93.185.156.121",
+      "family": "v4",
+      "first_seen": "2026-06-20T06:19:21Z",
+      "last_seen": "2026-06-20T06:19:21Z",
+      "scenarios": {
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
+          "count": 1,
+          "last_seen": "2026-06-20T06:19:21Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-20T06:19:21Z",
+          "last_seen": "2026-06-20T06:19:21Z",
+          "sids": [
+            58276
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+            "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+          ]
+        }
+      },
+      "asn": "216127",
+      "asn_prefix": "93.185.156.0/24"
+    },
+    "64.178.184.168": {
+      "ip": "64.178.184.168",
+      "family": "v4",
+      "first_seen": "2026-06-20T04:34:56Z",
+      "last_seen": "2026-06-20T04:34:56Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST": {
+          "count": 1,
+          "last_seen": "2026-06-20T04:34:56Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-20T04:34:56Z",
+          "last_seen": "2026-06-20T04:34:56Z",
+          "sids": [
+            2016683
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "POST /boaform/adminformLogout//boaform/admin/formPing6"
+          ]
+        }
+      },
+      "asn": "23404",
+      "asn_prefix": "64.178.184.0/24"
+    },
+    "45.79.115.134": {
+      "ip": "45.79.115.134",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:36:47Z",
+      "last_seen": "2026-06-20T02:36:47Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-06-20T02:36:47Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-20T02:36:47Z",
+          "last_seen": "2026-06-20T02:36:47Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "63949",
+      "asn_prefix": "45.79.112.0/22"
+    },
+    "146.70.226.226": {
+      "ip": "146.70.226.226",
+      "family": "v4",
+      "first_seen": "2026-06-20T11:09:20Z",
+      "last_seen": "2026-06-20T11:09:20Z",
+      "scenarios": {
+        "suricata/SURICATA UDPv4 invalid checksum": {
+          "count": 1,
+          "last_seen": "2026-06-20T11:09:20Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-06-20T11:09:20Z",
+          "last_seen": "2026-06-20T11:09:20Z",
+          "sids": [
+            2200075
+          ],
+          "max_priority": 3
+        }
+      },
+      "asn": "9009",
+      "asn_prefix": "146.70.226.0/24"
     }
   },
   "asn_names": {
@@ -14586,6 +14907,10 @@
     "9299": "IPG-AS-AP - Philippine Long Distance Telephone Company",
     "9534": "MAXIS-AS1-AP - Binariang Berhad",
     "9873": "TELECOM-LA-AS-AP - Lao Telecom Communication, LTC",
-    "9988": "MPT-AP - Myanma Posts and Telecommunications"
+    "9988": "MPT-AP - Myanma Posts and Telecommunications",
+    "142430": "DIGIVPS-AS-AP - DIGI VPS",
+    "216127": "NUXT-AS INTERNATIONAL HOSTING COMPANY LIMITED",
+    "23404": "RITTERNET - Ritter Communications",
+    "400848": "DHI9PUT - DHI TECHNICAL SERVICES LLC"
   }
 }
