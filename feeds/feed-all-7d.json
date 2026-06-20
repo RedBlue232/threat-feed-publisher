@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-20T01:00:00Z",
+  "generated_at": "2026-06-20T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 544,
-    "v4": 544,
+    "total": 554,
+    "v4": 554,
     "v6": 0
   },
   "items": [
@@ -9483,7 +9483,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.68.64.0/20"
     },
     {
       "ip": "54.38.176.226",
@@ -9513,7 +9516,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "400848",
+      "asn_name": "DHI9PUT - DHI TECHNICAL SERVICES LLC",
+      "asn_prefix": "140.235.236.0/23"
     },
     {
       "ip": "35.157.26.135",
@@ -9565,6 +9571,234 @@
       "asn": "16276",
       "asn_name": "OVH OVH SAS",
       "asn_prefix": "144.217.0.0/16"
+    },
+    {
+      "ip": "103.168.66.158",
+      "family": "v4",
+      "first_seen": "2026-06-20T09:00:00Z",
+      "last_seen": "2026-06-20T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-cve-probing",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "142430",
+      "asn_name": "DIGIVPS-AS-AP - DIGI VPS",
+      "asn_prefix": "103.168.66.0/23",
+      "payloads": [
+        "GET /wp-config.php.bak",
+        "GET /.docker/config.json",
+        "GET /wp-content/debug.log",
+        "GET /api/v1/system/system-information",
+        "GET /sanctum/csrf-cookie",
+        "GET /cli",
+        "GET /_ignition/health-check",
+        "GET /api/v1/flows?page=1&size=1",
+        "GET /tmui/login.jsp",
+        "GET /remote/login",
+        "HEAD /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /graphql?query={__typename}",
+        "GET /mgmt/shared/authn/login",
+        "GET /modules/ps_emailsubscription/",
+        "GET /rest/login",
+        "GET /horizon/api/stats",
+        "GET /global-protect/login.esp",
+        "GET /api/health"
+      ]
+    },
+    {
+      "ip": "74.248.112.30",
+      "family": "v4",
+      "first_seen": "2026-06-20T06:00:00Z",
+      "last_seen": "2026-06-20T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "74.248.0.0/15",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /jj.php",
+        "GET /dd.php",
+        "GET /xa.php",
+        "GET /test2.php",
+        "GET /ee.php",
+        "GET /menu.php",
+        "GET /base.php",
+        "GET /aq.php",
+        "GET /333.php"
+      ]
+    },
+    {
+      "ip": "66.132.224.230",
+      "family": "v4",
+      "first_seen": "2026-06-20T05:00:00Z",
+      "last_seen": "2026-06-20T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "199.45.155.94",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:00:00Z",
+      "last_seen": "2026-06-20T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.155.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "172.202.117.213",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:00:00Z",
+      "last_seen": "2026-06-20T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.200.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "40.124.175.39",
+      "family": "v4",
+      "first_seen": "2026-06-20T10:00:00Z",
+      "last_seen": "2026-06-20T10:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "93.185.156.121",
+      "family": "v4",
+      "first_seen": "2026-06-20T06:00:00Z",
+      "last_seen": "2026-06-20T06:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "216127",
+      "asn_name": "NUXT-AS INTERNATIONAL HOSTING COMPANY LIMITED",
+      "asn_prefix": "93.185.156.0/24",
+      "payloads": [
+        "POST /cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "64.178.184.168",
+      "family": "v4",
+      "first_seen": "2026-06-20T04:00:00Z",
+      "last_seen": "2026-06-20T04:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "23404",
+      "asn_name": "RITTERNET - Ritter Communications",
+      "asn_prefix": "64.178.184.0/24",
+      "payloads": [
+        "POST /boaform/adminformLogout//boaform/admin/formPing6"
+      ]
+    },
+    {
+      "ip": "45.79.115.134",
+      "family": "v4",
+      "first_seen": "2026-06-20T02:00:00Z",
+      "last_seen": "2026-06-20T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
+      "asn_prefix": "45.79.112.0/22",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "146.70.226.226",
+      "family": "v4",
+      "first_seen": "2026-06-20T11:00:00Z",
+      "last_seen": "2026-06-20T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA UDPv4 invalid checksum"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9009",
+      "asn_name": "M247 M247 Europe SRL",
+      "asn_prefix": "146.70.226.0/24"
     }
   ]
 }
