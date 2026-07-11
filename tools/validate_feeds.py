@@ -9,7 +9,7 @@ Architecture v3 (split par source) : trois jeux de feeds publiés en
 parallèle, un par scope. Le scope `all` est l'union, les autres sont
 filtrés par source observée.
 """
-import json, re, sys
+import ipaddress, json, re, sys
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -17,10 +17,16 @@ FEEDS_DIR = Path("feeds")
 STATE_DIR = Path("state")
 MISP_FEED_DIR = Path("misp-feed")
 MAX_AGE_HOURS = 26  # 12h cadence + 2h marge
-IP_RE = re.compile(
-    r"^(\d{1,3}\.){3}\d{1,3}$"          # IPv4
-    r"|^[0-9a-fA-F:]+$"                  # IPv6 simplifié
-)
+
+
+def _valid_public_ip(s: str) -> bool:
+    """IP syntaxiquement valide ET routable publiquement (is_global).
+    Une IP privée/réservée dans un feed public = fuite d'infra interne ou
+    bug de filtrage en amont — toujours une erreur."""
+    try:
+        return ipaddress.ip_address(s).is_global
+    except ValueError:
+        return False
 
 # Sources connues. Toute source non listée → warning (pas erreur) :
 # permet l'ajout d'une 3e source future sans rebuilder le validator.
@@ -58,8 +64,8 @@ def _validate_feed_files(scope: str) -> dict | None:
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            if not IP_RE.match(line.split("/")[0]):
-                errors.append(f"Ligne invalide dans {txt_name}:{i} → {line!r}")
+            if not _valid_public_ip(line.split("/")[0]):
+                errors.append(f"Ligne invalide dans {txt_name}:{i} (IP invalide ou non publique) → {line!r}")
 
     # 3. JSON enrichi
     json_path = FEEDS_DIR / f"{prefix}.json"
@@ -78,6 +84,10 @@ def _validate_feed_files(scope: str) -> dict | None:
         )
 
     for idx, item in enumerate(data.get("items", []), 1):
+        ip_val = item.get("ip")
+        if not isinstance(ip_val, str) or not _valid_public_ip(ip_val):
+            errors.append(f"{prefix}.json items[{idx}] : IP invalide ou non publique {ip_val!r}")
+
         scenarios = item.get("scenarios", [])
         if not isinstance(scenarios, list):
             errors.append(f"{prefix}.json items[{idx}].scenarios doit être une liste")
@@ -153,8 +163,10 @@ else:
             expected_total = feed_data[scope]["counts"].get("total")
             actual_total = feeds_counts[scope].get("total")
             if expected_total != actual_total:
+                # NB: pas de caractère non-ASCII ici — un print d'erreur ne doit
+                # jamais crasher sur une console cp1252 (Windows).
                 errors.append(
-                    f"status.json feeds.{scope}.total ({actual_total}) ≠ "
+                    f"status.json feeds.{scope}.total ({actual_total}) != "
                     f"feed-{scope}-7d.json counts.total ({expected_total})"
                 )
 
