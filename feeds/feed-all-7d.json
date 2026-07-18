@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T13:00:00Z",
+  "generated_at": "2026-07-18T12:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
@@ -9,58 +9,66 @@
   },
   "items": [
     {
-      "ip": "172.189.127.20",
+      "ip": "40.119.24.130",
       "family": "v4",
-      "first_seen": "2026-06-16T05:00:00Z",
-      "last_seen": "2026-07-09T11:00:00Z",
+      "first_seen": "2026-07-18T12:00:00Z",
+      "last_seen": "2026-07-18T12:00:00Z",
       "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+        "crowdsec/http-technology-probing"
       ],
       "sources": [
-        "suricata"
+        "crowdsec"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
+      "asn_prefix": "40.112.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /d/msdownload/update/software/defu/2026/06/am_delta_patch_1.453.107.0_e055bbe226035e506dcb5e9c022d2d0e818f9a59.exe?cacheHostOrigin=3.au.download.windowsupdate.com",
-        "GET /c/msdownload/update/software/defu/2026/07/am_delta_e54f95fa557135a64920d7b9e95d3440d0a9645d.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
+        "GET /owa/auth/logon.aspx"
       ]
     },
     {
-      "ip": "150.171.110.117",
+      "ip": "172.215.145.162",
       "family": "v4",
-      "first_seen": "2026-07-09T11:00:00Z",
-      "last_seen": "2026-07-09T11:00:00Z",
+      "first_seen": "2026-07-18T12:00:00Z",
+      "last_seen": "2026-07-18T12:00:00Z",
       "scenarios": [
-        "suricata/SURICATA TLS multiple SNI extensions"
+        "crowdsec/http-cve-probing"
       ],
       "sources": [
-        "suricata"
+        "crowdsec"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "150.171.0.0/16"
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
     },
     {
-      "ip": "124.71.175.215",
+      "ip": "20.169.85.114",
       "family": "v4",
-      "first_seen": "2026-07-09T12:00:00Z",
-      "last_seen": "2026-07-09T12:00:00Z",
+      "first_seen": "2026-07-18T09:00:00Z",
+      "last_seen": "2026-07-18T09:00:00Z",
       "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+        "crowdsec/http-technology-probing"
       ],
       "sources": [
-        "suricata"
+        "crowdsec"
       ],
-      "asn": "55990",
-      "asn_name": "HWCSNET Huawei Cloud Service data center",
-      "asn_prefix": "124.71.160.0/20",
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
       "payloads": [
-        "POST /cgi-bin/ViewLog.asp"
+        "GET /owa/auth/x.js"
       ]
     }
   ]
