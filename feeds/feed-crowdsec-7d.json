@@ -1,11 +1,75 @@
 {
-  "generated_at": "2026-07-09T13:00:00Z",
+  "generated_at": "2026-07-18T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 0,
-    "v4": 0,
+    "total": 3,
+    "v4": 3,
     "v6": 0
   },
-  "items": []
+  "items": [
+    {
+      "ip": "40.119.24.130",
+      "family": "v4",
+      "first_seen": "2026-07-18T12:00:00Z",
+      "last_seen": "2026-07-18T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.112.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "172.215.145.162",
+      "family": "v4",
+      "first_seen": "2026-07-18T12:00:00Z",
+      "last_seen": "2026-07-18T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "20.169.85.114",
+      "family": "v4",
+      "first_seen": "2026-07-18T09:00:00Z",
+      "last_seen": "2026-07-18T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    }
+  ]
 }
