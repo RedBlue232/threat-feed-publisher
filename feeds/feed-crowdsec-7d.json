@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-18T12:00:00Z",
+  "generated_at": "2026-07-19T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 3,
-    "v4": 3,
+    "total": 10,
+    "v4": 10,
     "v6": 0
   },
   "items": [
@@ -69,6 +69,174 @@
       ],
       "payloads": [
         "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "8.211.162.45",
+      "family": "v4",
+      "first_seen": "2026-07-18T21:00:00Z",
+      "last_seen": "2026-07-18T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /dns-query?dns=Gn4BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
+        "POST /dns-query",
+        "GET /dns-query?name=1.odns.m.dnsmeasure.top&type=A",
+        "GET /dns-query?dns=8_EBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
+        "GET /query?dns=O2IBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
+        "POST /query",
+        "GET /query?name=1.odns.m.dnsmeasure.top&type=A",
+        "GET /query?dns=qywBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
+        "GET /resolve?dns=HvoBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
+        "POST /resolve",
+        "GET /resolve?name=1.odns.m.dnsmeasure.top&type=A"
+      ]
+    },
+    {
+      "ip": "20.163.74.182",
+      "family": "v4",
+      "first_seen": "2026-07-18T19:00:00Z",
+      "last_seen": "2026-07-18T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "20.221.56.179",
+      "family": "v4",
+      "first_seen": "2026-07-18T18:00:00Z",
+      "last_seen": "2026-07-18T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "62.210.142.163",
+      "family": "v4",
+      "first_seen": "2026-07-18T18:00:00Z",
+      "last_seen": "2026-07-18T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "172.202.117.124",
+      "family": "v4",
+      "first_seen": "2026-07-18T17:00:00Z",
+      "last_seen": "2026-07-18T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.200.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "194.165.16.11",
+      "family": "v4",
+      "first_seen": "2026-07-18T15:00:00Z",
+      "last_seen": "2026-07-18T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "48721",
+      "asn_name": "FLYSERVERS-ENDCLIENTS - Flyservers S.A.",
+      "asn_prefix": "194.165.16.0/24",
+      "payloads": [
+        "GET /",
+        "POST /~/api/loginSrp1"
+      ]
+    },
+    {
+      "ip": "211.214.239.175",
+      "family": "v4",
+      "first_seen": "2026-07-18T13:00:00Z",
+      "last_seen": "2026-07-18T13:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "9318",
+      "asn_name": "SKB-AS-KR - SK Broadband Co Ltd",
+      "asn_prefix": "211.212.0.0/14",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php",
+        "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /phpunit/phpunit/Util/PHP/eval-stdin.php"
       ]
     }
   ]
