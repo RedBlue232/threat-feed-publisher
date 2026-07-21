@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-20T13:00:00Z",
+  "generated_at": "2026-07-21T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 25,
-    "v4": 25,
+    "total": 27,
+    "v4": 27,
     "v6": 0
   },
   "items": [
@@ -606,6 +606,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.192.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -706,6 +709,57 @@
       ],
       "payloads": [
         "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "216.180.246.190",
+      "family": "v4",
+      "first_seen": "2026-07-20T23:00:00Z",
+      "last_seen": "2026-07-20T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /manage/account/login",
+        "GET /admin/index.html",
+        "GET /index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html",
+        "GET /remote/login"
+      ]
+    },
+    {
+      "ip": "20.55.42.210",
+      "family": "v4",
+      "first_seen": "2026-07-20T13:00:00Z",
+      "last_seen": "2026-07-20T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.48.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
       ]
     }
   ]
