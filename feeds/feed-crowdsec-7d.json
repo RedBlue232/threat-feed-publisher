@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-24T01:00:00Z",
+  "generated_at": "2026-07-24T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 53,
-    "v4": 53,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
@@ -1587,6 +1587,236 @@
         "GET /class-t.api.php",
         "GET /nf.php",
         "GET /xda.php"
+      ]
+    },
+    {
+      "ip": "20.65.178.1",
+      "family": "v4",
+      "first_seen": "2026-07-24T09:00:00Z",
+      "last_seen": "2026-07-24T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "4.204.201.85",
+      "family": "v4",
+      "first_seen": "2026-07-24T07:00:00Z",
+      "last_seen": "2026-07-24T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.192.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /1.php",
+        "GET /memberfuns.php",
+        "GET /0.php",
+        "GET /BDKR28.php",
+        "GET /nc4.php",
+        "GET /info.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-includes/ID3/about.php",
+        "GET /wp-admin/css/colour.php",
+        "GET /wp-content/admin.php",
+        "GET /admin.php",
+        "GET /adminner.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /media.php",
+        "GET /images.php",
+        "GET /gecko.php",
+        "GET /82.php",
+        "GET /a.php",
+        "GET /k.php",
+        "GET /aaa.php"
+      ]
+    },
+    {
+      "ip": "62.210.142.65",
+      "family": "v4",
+      "first_seen": "2026-07-24T06:00:00Z",
+      "last_seen": "2026-07-24T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /remote/login",
+        "GET /manage/account/login",
+        "GET /admin/index.html",
+        "GET /index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "169.58.42.242",
+      "family": "v4",
+      "first_seen": "2026-07-24T06:00:00Z",
+      "last_seen": "2026-07-24T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "51167",
+      "asn_name": "CONTABO Contabo GmbH",
+      "asn_prefix": "169.58.0.0/17",
+      "payloads": [
+        "GET /wp-admin/css/",
+        "GET /wp-admin/css/colors/",
+        "GET /wp-admin/css/colors/blue/",
+        "GET /wp-admin/includes/",
+        "GET /wp-admin/maint/",
+        "GET /wp-admin/js/",
+        "GET /wp-admin/js/widgets/",
+        "GET /wp-admin/images/",
+        "GET /wp-admin/network/",
+        "GET /wp-admin/user/",
+        "GET /wp-includes/",
+        "GET /wp-admin/"
+      ]
+    },
+    {
+      "ip": "172.213.144.209",
+      "family": "v4",
+      "first_seen": "2026-07-24T04:00:00Z",
+      "last_seen": "2026-07-24T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /mac.php",
+        "GET /echkm.php?p=",
+        "GET /red.php",
+        "GET /bootstrap.php?p=",
+        "GET /edit.php",
+        "GET /fpwch.php",
+        "GET /wicked.php",
+        "GET /biufile.php",
+        "GET /dp.php"
+      ]
+    },
+    {
+      "ip": "63.186.132.32",
+      "family": "v4",
+      "first_seen": "2026-07-24T03:00:00Z",
+      "last_seen": "2026-07-24T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "63.184.0.0/14",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /test.php",
+        "GET /phpinfo",
+        "GET /p.php",
+        "GET /debug.php",
+        "GET /info",
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "216.180.246.15",
+      "family": "v4",
+      "first_seen": "2026-07-24T02:00:00Z",
+      "last_seen": "2026-07-24T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /manage/account/login",
+        "GET /admin/index.html",
+        "GET /index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html",
+        "GET /remote/login"
       ]
     }
   ]
