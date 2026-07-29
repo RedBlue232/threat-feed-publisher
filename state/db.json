@@ -1,145 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-07-28T13:00:10.639251Z",
+  "updated_at": "2026-07-29T01:00:05.841489Z",
   "items": {
-    "47.251.13.59": {
-      "ip": "47.251.13.59",
-      "family": "v4",
-      "first_seen": "2026-07-22T00:51:18Z",
-      "last_seen": "2026-07-22T00:51:18Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-07-22T00:51:18Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-07-22T00:51:18Z",
-          "last_seen": "2026-07-22T00:51:18Z",
-          "payloads": [
-            "GET /dns-query?dns=7n0BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-            "POST /dns-query",
-            "GET /dns-query?name=1.odns.m.dnsmeasure.top&type=A",
-            "GET /dns-query?dns=-ScBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-            "GET /query?dns=nO0BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-            "POST /query",
-            "GET /query?name=1.odns.m.dnsmeasure.top&type=A",
-            "GET /query?dns=mW4BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-            "GET /resolve?dns=4vkBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-            "POST /resolve",
-            "GET /resolve?name=1.odns.m.dnsmeasure.top&type=A"
-          ]
-        }
-      },
-      "asn": "45102",
-      "asn_prefix": "47.251.0.0/17"
-    },
-    "128.203.204.215": {
-      "ip": "128.203.204.215",
-      "family": "v4",
-      "first_seen": "2026-07-22T00:31:38Z",
-      "last_seen": "2026-07-22T00:31:38Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 2,
-          "last_seen": "2026-07-22T00:31:38Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-07-22T00:31:38Z",
-          "last_seen": "2026-07-22T00:31:38Z",
-          "payloads": [
-            "GET /actuator/health"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "128.203.0.0/16"
-    },
-    "20.198.114.210": {
-      "ip": "20.198.114.210",
-      "family": "v4",
-      "first_seen": "2026-07-21T23:30:38Z",
-      "last_seen": "2026-07-21T23:30:45Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-07-21T23:30:45Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-07-21T23:30:44Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-07-21T23:30:42Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-07-21T23:30:38Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 4,
-          "first_seen": "2026-07-21T23:30:38Z",
-          "last_seen": "2026-07-21T23:30:45Z",
-          "payloads": [
-            "GET /wp-admin/js/",
-            "GET /aaf.php",
-            "GET /ha.php",
-            "GET /hur.php",
-            "GET /h02ugyh.php",
-            "GET /155.php",
-            "GET /pp.php",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /wp-ws68.php?p=",
-            "GET /wp-content/index.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /x.php",
-            "GET /mgrr.php",
-            "GET /stdin.php",
-            "GET /BDKR28.php",
-            "GET /001.php",
-            "GET /dZ3wP5.php",
-            "GET /yup.php",
-            "GET /X.php",
-            "GET /1polka.php"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.192.0.0/10"
-    },
-    "104.248.32.250": {
-      "ip": "104.248.32.250",
-      "family": "v4",
-      "first_seen": "2026-07-21T15:49:03Z",
-      "last_seen": "2026-07-21T15:49:03Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-07-21T15:49:03Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-07-21T15:49:03Z",
-          "last_seen": "2026-07-21T15:49:03Z",
-          "payloads": [
-            "GET /solr/admin/info/system"
-          ]
-        }
-      },
-      "asn": "14061",
-      "asn_prefix": "104.248.32.0/20"
-    },
     "27.72.98.85": {
       "ip": "27.72.98.85",
       "family": "v4",
@@ -2586,13 +2449,13 @@
       "last_seen": "2026-07-28T12:35:16Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-07-28T12:35:16Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-07-28T12:35:16Z",
           "last_seen": "2026-07-28T12:35:16Z",
           "payloads": [
@@ -2729,6 +2592,58 @@
       },
       "asn": "9541",
       "asn_prefix": "59.103.100.0/24"
+    },
+    "20.9.63.139": {
+      "ip": "20.9.63.139",
+      "family": "v4",
+      "first_seen": "2026-07-28T21:11:03Z",
+      "last_seen": "2026-07-28T21:11:24Z",
+      "scenarios": {
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-07-28T21:11:24Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-07-28T21:11:23Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-07-28T21:11:08Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-07-28T21:11:03Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 4,
+          "first_seen": "2026-07-28T21:11:03Z",
+          "last_seen": "2026-07-28T21:11:24Z",
+          "payloads": [
+            "GET /wp-content/admin.php",
+            "GET /wp-blink.php",
+            "GET /wp-content/themes/admin.php",
+            "GET /wp-content/index.php",
+            "GET /wp-admin",
+            "GET /info.php",
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /admin.php",
+            "GET /edit.php",
+            "GET /bootstrap.php?p=",
+            "GET /w.php",
+            "GET /m.php",
+            "GET /file.php",
+            "GET /adminfuns.php",
+            "GET /aa.php",
+            "GET /classwithtostring.php"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.0.0.0/11"
     }
   },
   "asn_names": {
