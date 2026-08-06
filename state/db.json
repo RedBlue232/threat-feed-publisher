@@ -1,75 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-08-05T13:00:03.690235Z",
+  "updated_at": "2026-08-06T01:00:03.848350Z",
   "items": {
-    "98.85.225.159": {
-      "ip": "98.85.225.159",
-      "family": "v4",
-      "first_seen": "2026-07-29T17:36:05Z",
-      "last_seen": "2026-07-29T17:36:10Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-07-29T17:36:10Z"
-        },
-        "crowdsec/jira_cve-2021-26086": {
-          "count": 1,
-          "last_seen": "2026-07-29T17:36:10Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-07-29T17:36:05Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-07-29T17:36:05Z",
-          "last_seen": "2026-07-29T17:36:10Z",
-          "payloads": [
-            "GET /etc/hosts",
-            "GET /.DS_Store",
-            "GET /info.php",
-            "GET /.json",
-            "GET /.git/config",
-            "GET /idx_config/",
-            "GET /.env",
-            "GET /telescope/requests",
-            "GET /login.action",
-            "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties",
-            "GET /api/geojson?url=file:///etc/hosts"
-          ]
-        }
-      },
-      "asn": "14618",
-      "asn_prefix": "98.80.0.0/13"
-    },
-    "66.132.195.68": {
-      "ip": "66.132.195.68",
-      "family": "v4",
-      "first_seen": "2026-07-29T16:10:22Z",
-      "last_seen": "2026-07-29T16:10:22Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-07-29T16:10:22Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-07-29T16:10:22Z",
-          "last_seen": "2026-07-29T16:10:22Z",
-          "payloads": [
-            "GET /debug/pprof/",
-            "GET /metrics"
-          ]
-        }
-      },
-      "asn": "398324",
-      "asn_prefix": "66.132.195.0/24"
-    },
     "135.119.63.61": {
       "ip": "135.119.63.61",
       "family": "v4",
@@ -2846,6 +2779,89 @@
       },
       "asn": "205997",
       "asn_prefix": "185.136.15.0/24"
+    },
+    "66.132.186.186": {
+      "ip": "66.132.186.186",
+      "family": "v4",
+      "first_seen": "2026-08-06T00:54:00Z",
+      "last_seen": "2026-08-06T00:54:00Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-08-06T00:54:00Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-08-06T00:54:00Z",
+          "last_seen": "2026-08-06T00:54:00Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.186.0/24"
+    },
+    "5.83.129.180": {
+      "ip": "5.83.129.180",
+      "family": "v4",
+      "first_seen": "2026-08-06T00:12:56Z",
+      "last_seen": "2026-08-06T00:12:56Z",
+      "scenarios": {
+        "crowdsec/CVE-2017-9841": {
+          "count": 1,
+          "last_seen": "2026-08-06T00:12:56Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-08-06T00:12:56Z",
+          "last_seen": "2026-08-06T00:12:56Z",
+          "payloads": [
+            "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
+          ]
+        }
+      },
+      "asn": "214639",
+      "asn_prefix": "5.83.129.0/24"
+    },
+    "74.248.35.25": {
+      "ip": "74.248.35.25",
+      "family": "v4",
+      "first_seen": "2026-08-05T23:38:15Z",
+      "last_seen": "2026-08-05T23:38:15Z",
+      "scenarios": {
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-08-05T23:38:15Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-08-05T23:38:15Z",
+          "last_seen": "2026-08-05T23:38:15Z",
+          "payloads": [
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /img.php",
+            "GET /aa.php",
+            "GET /av.php",
+            "GET /media.php",
+            "GET /images.php",
+            "GET /admin.php",
+            "GET /222.php",
+            "GET /mac.php",
+            "GET /ops.php"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "74.248.0.0/15"
     }
   },
   "asn_names": {
