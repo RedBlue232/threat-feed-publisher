@@ -1,65 +1,13 @@
 {
-  "generated_at": "2026-08-05T13:00:00Z",
+  "generated_at": "2026-08-06T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 76,
-    "v4": 76,
+    "total": 77,
+    "v4": 77,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "98.85.225.159",
-      "family": "v4",
-      "first_seen": "2026-07-29T17:00:00Z",
-      "last_seen": "2026-07-29T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/jira_cve-2021-26086"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14618",
-      "asn_name": "AMAZON-AES - Amazon.com",
-      "asn_prefix": "98.80.0.0/13",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /etc/hosts",
-        "GET /.DS_Store",
-        "GET /info.php",
-        "GET /.json",
-        "GET /.git/config",
-        "GET /idx_config/",
-        "GET /.env",
-        "GET /telescope/requests",
-        "GET /login.action",
-        "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties",
-        "GET /api/geojson?url=file:///etc/hosts"
-      ]
-    },
-    {
-      "ip": "66.132.195.68",
-      "family": "v4",
-      "first_seen": "2026-07-29T16:00:00Z",
-      "last_seen": "2026-07-29T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
     {
       "ip": "135.119.63.61",
       "family": "v4",
@@ -2298,6 +2246,74 @@
       "asn_prefix": "185.136.15.0/24",
       "payloads": [
         "GET /remote/login"
+      ]
+    },
+    {
+      "ip": "66.132.186.186",
+      "family": "v4",
+      "first_seen": "2026-08-06T00:00:00Z",
+      "last_seen": "2026-08-06T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.186.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "5.83.129.180",
+      "family": "v4",
+      "first_seen": "2026-08-06T00:00:00Z",
+      "last_seen": "2026-08-06T00:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "214639",
+      "asn_name": "TAKEHOST-AS Raul Ghita trading as 'Ghita Telekom'",
+      "asn_prefix": "5.83.129.0/24",
+      "payloads": [
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "74.248.35.25",
+      "family": "v4",
+      "first_seen": "2026-08-05T23:00:00Z",
+      "last_seen": "2026-08-05T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "74.248.0.0/15",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /img.php",
+        "GET /aa.php",
+        "GET /av.php",
+        "GET /media.php",
+        "GET /images.php",
+        "GET /admin.php",
+        "GET /222.php",
+        "GET /mac.php",
+        "GET /ops.php"
       ]
     }
   ]
