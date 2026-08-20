@@ -1,132 +1,13 @@
 {
-  "generated_at": "2026-08-20T01:00:00Z",
+  "generated_at": "2026-08-20T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 102,
-    "v4": 102,
+    "total": 105,
+    "v4": 105,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "66.132.195.52",
-      "family": "v4",
-      "first_seen": "2026-08-10T16:00:00Z",
-      "last_seen": "2026-08-13T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "40.119.24.130",
-      "family": "v4",
-      "first_seen": "2026-08-13T08:00:00Z",
-      "last_seen": "2026-08-13T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.112.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-08-13T06:00:00Z",
-      "last_seen": "2026-08-13T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "62.210.142.163",
-      "family": "v4",
-      "first_seen": "2026-08-13T06:00:00Z",
-      "last_seen": "2026-08-13T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "12876",
-      "asn_name": "AS12876 Scaleway SAS",
-      "asn_prefix": "62.210.0.0/16",
-      "payloads": [
-        "GET /manage/account/login",
-        "GET /admin/index.html",
-        "GET /index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html",
-        "GET /remote/login"
-      ]
-    },
-    {
-      "ip": "47.89.154.16",
-      "family": "v4",
-      "first_seen": "2026-08-13T01:00:00Z",
-      "last_seen": "2026-08-13T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "45102",
-      "asn_name": "ALIBABA-CN-NET Alibaba US Technology Co.",
-      "asn_prefix": "47.89.128.0/19",
-      "payloads": [
-        "GET /dns-query?dns=u-ABAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /dns-query",
-        "GET /dns-query?name=1.odns.m.dnsmeasure.top&type=A",
-        "GET /dns-query?dns=IbUBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "GET /query?dns=iWwBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /query",
-        "GET /query?name=1.odns.m.dnsmeasure.top&type=A",
-        "GET /query?dns=FREBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "GET /resolve?dns=rgUBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /resolve",
-        "GET /resolve?name=1.odns.m.dnsmeasure.top&type=A"
-      ]
-    },
     {
       "ip": "66.132.172.195",
       "family": "v4",
@@ -3109,6 +2990,205 @@
         "GET /.aws/config",
         "GET /.aws/.env",
         "GET /website/.env"
+      ]
+    },
+    {
+      "ip": "216.180.246.97",
+      "family": "v4",
+      "first_seen": "2026-08-20T07:00:00Z",
+      "last_seen": "2026-08-20T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /remote/login",
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "107.161.92.20",
+      "family": "v4",
+      "first_seen": "2026-08-20T07:00:00Z",
+      "last_seen": "2026-08-20T07:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "107.161.92.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "216.218.206.67",
+      "family": "v4",
+      "first_seen": "2026-08-20T07:00:00Z",
+      "last_seen": "2026-08-20T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "159.65.148.75",
+      "family": "v4",
+      "first_seen": "2026-08-20T05:00:00Z",
+      "last_seen": "2026-08-20T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.65.144.0/20",
+      "payloads": [
+        "GET /manager/html",
+        "GET /wp-login.php",
+        "GET /wp/wp-login.php",
+        "GET /wordpress/wp-login.php",
+        "GET /blog/wp-login.php"
+      ]
+    },
+    {
+      "ip": "184.105.139.67",
+      "family": "v4",
+      "first_seen": "2026-08-20T03:00:00Z",
+      "last_seen": "2026-08-20T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "184.104.0.0/15",
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "62.210.142.166",
+      "family": "v4",
+      "first_seen": "2026-08-20T02:00:00Z",
+      "last_seen": "2026-08-20T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /remote/login",
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "167.94.146.52",
+      "family": "v4",
+      "first_seen": "2026-08-20T02:00:00Z",
+      "last_seen": "2026-08-20T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398705",
+      "asn_name": "CENSYS-ARIN-02 - Censys",
+      "asn_prefix": "167.94.146.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.65.194.161",
+      "family": "v4",
+      "first_seen": "2026-08-20T01:00:00Z",
+      "last_seen": "2026-08-20T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
       ]
     }
   ]
