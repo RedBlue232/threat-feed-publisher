@@ -14,6 +14,7 @@ appliquée à la première lecture d'un state/db.json au schéma v1.
 import os
 import json
 import base64
+import ipaddress
 import logging
 import sys
 from datetime import datetime, timezone
@@ -88,6 +89,14 @@ GH_BRANCH      = os.environ.get("GH_BRANCH", "main")
 
 TTL_DAYS       = int(os.environ.get("TTL_DAYS", "7"))
 
+# IPs à ne JAMAIS publier même si une source les remonte — typiquement ses
+# propres IPs publiques (monitoring externe, VPN de retour) qui déclencheraient
+# un scénario. Liste séparée par des virgules. Une IP déjà en DB est purgée au
+# run suivant son ajout ici (voir merge_and_ttl).
+PUBLISH_EXCLUDE_IPS = frozenset(
+    ip.strip() for ip in os.environ.get("PUBLISH_EXCLUDE_IPS", "").split(",") if ip.strip()
+)
+
 # MISP — optionnels, le push est skippé si absents
 MISP_URL        = os.environ.get("MISP_URL", "")
 MISP_KEY        = os.environ.get("MISP_KEY", "")
@@ -158,6 +167,22 @@ def now_iso() -> str:
 
 def ip_family(ip: str) -> str:
     return "v6" if ":" in ip else "v4"
+
+def is_publishable_ip(ip_str: str) -> bool:
+    """Vrai ssi l'IP est valide, routable publiquement (is_global) et non
+    explicitement exclue via PUBLISH_EXCLUDE_IPS.
+
+    Même garantie que le chemin Suricata (suricata.is_publishable_ip) : on ne
+    publie JAMAIS une IP privée/loopback/link-local/réservée dans un feed
+    public — une alerte CrowdSec sur une IP interne (scanner interne, trou de
+    whitelist) ne doit pas fuiter la topologie du réseau."""
+    try:
+        ip_obj = ipaddress.ip_address(ip_str)
+    except ValueError:
+        return False
+    if not ip_obj.is_global:
+        return False
+    return ip_str not in PUBLISH_EXCLUDE_IPS
 
 def iso_to_dt(iso: str) -> datetime:
     return datetime.fromisoformat(iso.replace("Z", "+00:00"))
@@ -244,12 +269,18 @@ def _extract_crowdsec_payloads(alert: dict) -> list[str]:
 
 def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
     events = []
+    rejected = 0
     for a in alerts:
         if a.get("simulated"):
             continue
         src = a.get("source") or {}
         ip = src.get("ip") or (src.get("value") if src.get("scope") == "ip" else None)
         if not ip:
+            continue
+        # Même garde-fou que le chemin Suricata : IP invalide, non globale ou
+        # explicitement exclue → jamais publiée.
+        if not is_publishable_ip(ip):
+            rejected += 1
             continue
         event_time = a.get("created_at") or a.get("stop_at") or a.get("start_at") or now_iso()
         raw_scenario = a.get("scenario") or "unknown"
@@ -270,6 +301,8 @@ def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
             "machine_id":  a.get("machine_id"),
             "payloads":    _extract_crowdsec_payloads(a) if SANITIZE_AVAILABLE else [],
         })
+    if rejected:
+        log.warning("%d events %s rejetés (IP non globale ou exclue)", rejected, source)
     log.info("%d events %s normalisés", len(events), source)
     return events
 
@@ -285,15 +318,50 @@ GH_HEADERS = {
     "X-GitHub-Api-Version": "2022-11-28",
 }
 
+# L'API Contents ne renvoie plus le contenu inline au-delà de 1 Mo (403
+# too_large avec le media type JSON par défaut). gh_get_file bascule alors sur
+# le media type `raw`. On prévient dès 800 Ko côté publication pour anticiper
+# (state/db.json grossit avec le nombre d'IPs × payloads).
+GH_CONTENT_WARN_BYTES = 800 * 1024
+
+
 def gh_get_file(path: str) -> dict | None:
+    """Lit un fichier du repo via l'API Contents.
+
+    Gère les fichiers > 1 Mo : l'API refuse alors le contenu inline (403
+    too_large, ou content vide + encoding "none" selon le media type). Sans ce
+    fallback, un state/db.json devenu trop gros rendrait chaque run fatal
+    (json.loads sur chaîne vide) et le pipeline resterait mort jusqu'à
+    intervention manuelle. Fallback : media type `raw` pour le contenu,
+    `object` pour le sha."""
     url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}/contents/{path}"
-    resp = requests.get(url, headers=GH_HEADERS, params={"ref": GH_BRANCH}, timeout=15)
+    params = {"ref": GH_BRANCH}
+    resp = requests.get(url, headers=GH_HEADERS, params=params, timeout=30)
     if resp.status_code == 404:
         return None
-    resp.raise_for_status()
-    data = resp.json()
-    content = base64.b64decode(data["content"]).decode("utf-8")
-    return {"content": content, "sha": data["sha"]}
+    if resp.status_code != 403:
+        resp.raise_for_status()
+        data = resp.json()
+        if data.get("encoding") == "base64":
+            content = base64.b64decode(data["content"]).decode("utf-8")
+            return {"content": content, "sha": data["sha"]}
+        # encoding "none" / inattendu → fichier trop gros, fallback ci-dessous
+    log.warning("gh_get_file: %s non disponible inline (probable > 1 Mo) — fallback raw", path)
+    raw = requests.get(
+        url,
+        headers={**GH_HEADERS, "Accept": "application/vnd.github.raw+json"},
+        params=params,
+        timeout=60,
+    )
+    raw.raise_for_status()
+    meta = requests.get(
+        url,
+        headers={**GH_HEADERS, "Accept": "application/vnd.github.object+json"},
+        params=params,
+        timeout=30,
+    )
+    meta.raise_for_status()
+    return {"content": raw.text, "sha": meta.json()["sha"]}
 
 
 def gh_put_file(path: str, content: str, message: str, sha: str | None = None):
@@ -526,7 +594,17 @@ def merge_and_ttl(events: list, db: dict) -> dict:
     for ip in to_delete:
         del db["items"][ip]
 
-    log.info("DB après fusion : %d IPs (%d purgées)", len(db["items"]), len(to_delete))
+    # Purge des IPs non publiables déjà présentes en DB : ajout a posteriori
+    # d'une IP dans PUBLISH_EXCLUDE_IPS, ou entrée non globale ingérée avant
+    # que le filtre n'existe. Effet immédiat, sans attendre le TTL.
+    not_publishable = [ip for ip in db["items"] if not is_publishable_ip(ip)]
+    for ip in not_publishable:
+        del db["items"][ip]
+    if not_publishable:
+        log.warning("%d IPs non publiables purgées de la DB (ex: %s)",
+                    len(not_publishable), ", ".join(not_publishable[:5]))
+
+    log.info("DB après fusion : %d IPs (%d purgées TTL)", len(db["items"]), len(to_delete))
     db["updated_at"] = now_iso()
     return db
 
@@ -698,6 +776,13 @@ def generate_outputs(db: dict) -> dict:
 
 def publish_github(outputs: dict):
     for path, content in outputs.items():
+        size = len(content.encode("utf-8"))
+        if size > GH_CONTENT_WARN_BYTES:
+            log.warning(
+                "%s fait %.0f Ko — approche la limite de 1 Mo de l'API Contents ; "
+                "réduire PAYLOADS_PER_SOURCE_CAP ou envisager un stockage hors-repo",
+                path, size / 1024,
+            )
         existing = gh_get_file(path)
         sha = existing["sha"] if existing else None
         gh_put_file(
@@ -1053,6 +1138,9 @@ def fetch_all_events() -> list:
                     verify_ssl=SPLUNK_VERIFY_SSL,
                     min_priority=SURICATA_MIN_PRIORITY,
                 )
+                # suricata.py filtre déjà les IP non globales ; on applique en
+                # plus la liste d'exclusion PUBLISH_EXCLUDE_IPS.
+                sura_events = [ev for ev in sura_events if is_publishable_ip(ev["ip"])]
                 events.extend(sura_events)
                 succeeded += 1
             except Exception as e:

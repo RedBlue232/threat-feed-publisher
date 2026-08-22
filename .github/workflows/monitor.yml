@@ -19,14 +19,28 @@ jobs:
         id: validate
         run: python3 tools/validate_feeds.py
 
-      - name: Ouvrir une issue si échec
+      - name: Ouvrir une issue si échec (dédupliquée)
         if: failure()
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # v8.0.0
         with:
           script: |
+            const title = "Feed non mis à jour";
+            // Dédup : une seule issue ouverte à la fois. Le monitor tourne
+            // toutes les 13h — sans ce garde-fou, une panne prolongée génère
+            // des dizaines de doublons (constaté : 39 issues en 3 semaines).
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            if (open.some(i => i.title === title && !i.pull_request)) {
+              core.info("Issue déjà ouverte — pas de doublon créé.");
+              return;
+            }
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: "Feed non mis à jour",
+              title,
               body: "Le workflow de monitoring a détecté un problème. Vérifier le pipeline de publication."
             });
