@@ -9,6 +9,13 @@ on:
     paths:
       - 'scripts/**'
       - '.github/workflows/docker-publish.yml'
+  # Sur PR : on construit sans pousser, pour qu'un Dockerfile cassé soit
+  # détecté avant le merge et non au moment du déploiement Portainer.
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/docker-publish.yml'
   workflow_dispatch:
 
 permissions:
@@ -27,7 +34,10 @@ jobs:
       - name: Set up Buildx
         uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f  # v3
 
+      # Pas de login sur une PR : rien n'y est poussé, et une PR de fork
+      # n'obtiendrait de toute façon pas les droits `packages: write`.
       - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9  # v3
         with:
           registry: ghcr.io
@@ -39,7 +49,7 @@ jobs:
         with:
           context: ./scripts
           file: ./scripts/Dockerfile
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: |
             ${{ env.IMAGE }}:latest
             ${{ env.IMAGE }}:${{ github.sha }}

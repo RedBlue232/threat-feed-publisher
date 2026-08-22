@@ -171,9 +171,29 @@ def truncate(text: str, max_len: int | None = None) -> str:
     return text[: max_len - 1] + "…"
 
 
+# Borne appliquée à l'entrée AVANT les regex de sanitization.
+#
+# Les motifs de domaine wildcard ont la forme `(?:[A-Za-z0-9_\-]+\.)*cible\.tld`
+# : ce quantificateur imbriqué peut dégénérer en backtracking catastrophique sur
+# une entrée longue et adverse (typiquement `a.a.a.a.a…` sans la cible attendue).
+# Les payloads proviennent de requêtes d'attaquants, donc partiellement
+# contrôlés : on borne l'entrée plutôt que d'exposer le module à un ReDoS.
+#
+# Pourquoi la redaction n'en souffre pas : la sortie fait au plus `max_len`
+# caractères, tous issus du début du texte. Couper l'entrée très au-delà de
+# cette limite ne peut pas laisser passer une PII qui serait ensuite publiée.
+_SANITIZE_INPUT_FACTOR = 4
+_SANITIZE_INPUT_FLOOR  = 4096
+
+
 def sanitize_and_truncate(text: str, max_len: int | None = None) -> str:
-    """Pipeline standard : sanitize d'abord (peut faire grossir le texte
-    lorsque l'IP 12 chars → token 14 chars) puis tronque."""
+    """Pipeline standard : borne l'entrée (garde-fou ReDoS), sanitize — ce qui
+    peut faire grossir le texte, une IP de 12 caractères devenant un token de
+    14 — puis tronque à `max_len`."""
+    effective = max_len if max_len is not None else PAYLOAD_MAX_LEN
+    cap = max(_SANITIZE_INPUT_FLOOR, effective * _SANITIZE_INPUT_FACTOR)
+    if text and len(text) > cap:
+        text = text[:cap]
     return truncate(sanitize(text), max_len=max_len)
 
 

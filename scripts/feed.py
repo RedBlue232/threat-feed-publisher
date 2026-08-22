@@ -21,6 +21,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # PyMISP est optionnel : si non installé ou MISP non configuré, on skip silencieusement
 try:
@@ -325,6 +327,34 @@ GH_HEADERS = {
 GH_CONTENT_WARN_BYTES = 800 * 1024
 
 
+def _make_gh_session() -> requests.Session:
+    """Session HTTP avec réessais pour l'API GitHub.
+
+    Un run publie 14 fichiers en 14 appels successifs : sans réessai, un seul
+    5xx/429 transitoire avorte la publication au milieu et laisse l'état publié
+    incohérent (feeds à jour, status.json non — ou l'inverse) jusqu'au run
+    suivant, 12 h plus tard.
+
+    PUT est inclus dans les méthodes réessayées : l'API Contents est un
+    compare-and-swap sur `sha`, donc un réessai après une écriture déjà
+    appliquée échoue en 409 au lieu de dupliquer le contenu. Au pire on retombe
+    sur l'échec qu'on aurait eu sans réessai — jamais sur une corruption.
+    """
+    session = requests.Session()
+    retry = Retry(
+        total=4,
+        backoff_factor=1,  # attentes 1s, 2s, 4s, 8s
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(["GET", "PUT"]),
+        respect_retry_after_header=True,
+    )
+    session.mount("https://", HTTPAdapter(max_retries=retry))
+    return session
+
+
+GH_SESSION = _make_gh_session()
+
+
 def gh_get_file(path: str) -> dict | None:
     """Lit un fichier du repo via l'API Contents.
 
@@ -336,7 +366,7 @@ def gh_get_file(path: str) -> dict | None:
     `object` pour le sha."""
     url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}/contents/{path}"
     params = {"ref": GH_BRANCH}
-    resp = requests.get(url, headers=GH_HEADERS, params=params, timeout=30)
+    resp = GH_SESSION.get(url, headers=GH_HEADERS, params=params, timeout=30)
     if resp.status_code == 404:
         return None
     if resp.status_code != 403:
@@ -347,14 +377,14 @@ def gh_get_file(path: str) -> dict | None:
             return {"content": content, "sha": data["sha"]}
         # encoding "none" / inattendu → fichier trop gros, fallback ci-dessous
     log.warning("gh_get_file: %s non disponible inline (probable > 1 Mo) — fallback raw", path)
-    raw = requests.get(
+    raw = GH_SESSION.get(
         url,
         headers={**GH_HEADERS, "Accept": "application/vnd.github.raw+json"},
         params=params,
         timeout=60,
     )
     raw.raise_for_status()
-    meta = requests.get(
+    meta = GH_SESSION.get(
         url,
         headers={**GH_HEADERS, "Accept": "application/vnd.github.object+json"},
         params=params,
@@ -373,7 +403,7 @@ def gh_put_file(path: str, content: str, message: str, sha: str | None = None):
     }
     if sha:
         body["sha"] = sha
-    resp = requests.put(url, headers=GH_HEADERS, json=body, timeout=30)
+    resp = GH_SESSION.put(url, headers=GH_HEADERS, json=body, timeout=30)
     resp.raise_for_status()
     log.info("GitHub ✓ %s", path)
 
@@ -614,8 +644,25 @@ def merge_and_ttl(events: list, db: dict) -> dict:
 # ---------------------------------------------------------------------------
 
 def round_to_hour(iso: str) -> str:
-    """Arrondit un timestamp ISO à l'heure — réduit la granularité des observations."""
-    return iso[:13] + ":00:00Z"
+    """Arrondit un timestamp ISO à l'heure, en UTC — réduit la granularité des
+    observations publiées.
+
+    L'implémentation précédente tronquait la chaîne (`iso[:13] + ":00:00Z"`) :
+    un timestamp décalé comme `2026-08-22T13:47:59+02:00` devenait
+    `2026-08-22T13:00:00Z`, soit deux heures dans le futur, le suffixe `Z`
+    affirmant un UTC faux. Les sources ne garantissent pas de renvoyer de l'UTC,
+    donc on convertit explicitement. Un timestamp sans fuseau est supposé UTC
+    (comportement historique). En cas d'entrée illisible on renvoie la valeur
+    d'origine plutôt que de faire échouer la publication.
+    """
+    try:
+        dt = iso_to_dt(iso)
+    except (ValueError, TypeError, AttributeError):
+        log.warning("round_to_hour : timestamp illisible %r, laissé tel quel", iso)
+        return iso
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:00:00Z")
 
 
 # Champs internes de `sources.<name>` jamais exposés dans le db.json public :
@@ -1169,6 +1216,22 @@ def main():
         log.info("CROWDSEC_ONLY actif — source Suricata ignorée pour ce run")
     if SURICATA_ONLY:
         log.info("SURICATA_ONLY actif — source CrowdSec ignorée pour ce run")
+
+    # Garde-fou PII : la sanitization ne redacte que ce qui est explicitement
+    # configuré. Des listes vides signifient que les payloads partent tels quels
+    # (simplement tronqués) — une nuance invisible dans les logs jusqu'ici, alors
+    # que les payloads sont désormais publiés ET indexés par la recherche du
+    # viewer public.
+    if not SANITIZE_AVAILABLE:
+        log.warning("module sanitize indisponible — aucun payload ne sera collecté")
+    elif not (sanitize.PII_IPS or sanitize.PII_DOMAINS):
+        log.warning(
+            "Sanitization active mais PII_IPS et PII_DOMAINS sont vides : les payloads "
+            "seront publiés tels quels (tronqués à %d caractères). Renseigne tes IPs et "
+            "domaines dans la configuration si les payloads peuvent référencer ton "
+            "infrastructure.",
+            sanitize.PAYLOAD_MAX_LEN,
+        )
 
     # Preload warninglists (enrichment IP → tags mwl:*)
     if WARNINGLISTS_AVAILABLE:
