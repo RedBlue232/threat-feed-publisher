@@ -9,7 +9,7 @@ Architecture v3 (split par source) : trois jeux de feeds publiés en
 parallèle, un par scope. Le scope `all` est l'union, les autres sont
 filtrés par source observée.
 """
-import ipaddress, json, re, sys
+import ipaddress, json, os, re, sys
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -17,6 +17,13 @@ FEEDS_DIR = Path("feeds")
 STATE_DIR = Path("state")
 MISP_FEED_DIR = Path("misp-feed")
 MAX_AGE_HOURS = 26  # 12h cadence + 2h marge
+
+# Sur une pull request, feeds/ et state/ sont le snapshot figé à la création de
+# la branche : leur âge mesure l'ancienneté de la branche, pas la santé du
+# pipeline. Contrôler la fraîcheur là revient à faire échouer toute PR de code
+# vieille de plus de 26h — un faux positif systématique. La fraîcheur réelle
+# reste couverte par monitor.yml (cron) et par ci.yml sur push main.
+SKIP_FRESHNESS = os.environ.get("GITHUB_EVENT_NAME") == "pull_request"
 
 
 def _valid_public_ip(s: str) -> bool:
@@ -148,7 +155,9 @@ else:
     try:
         updated_at = datetime.fromisoformat(status["updated_at"].replace("Z", "+00:00"))
         age = datetime.now(timezone.utc) - updated_at
-        if age > timedelta(hours=MAX_AGE_HOURS):
+        if SKIP_FRESHNESS:
+            print(f"Info : contrôle de fraîcheur ignoré (pull request) — feed daté du {updated_at.isoformat()}")
+        elif age > timedelta(hours=MAX_AGE_HOURS):
             errors.append(f"Feed trop ancien : {age} (max {MAX_AGE_HOURS}h)")
     except (KeyError, ValueError) as e:
         errors.append(f"state/status.json : updated_at illisible ({e})")
