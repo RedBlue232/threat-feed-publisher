@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-22T11:00:00Z",
+  "generated_at": "2026-08-22T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 103,
-    "v4": 103,
+    "total": 102,
+    "v4": 102,
     "v6": 0
   },
   "items": [
@@ -45,50 +45,6 @@
         "GET /wp-configs.php",
         "GET /wp-config-sample.php",
         "GET /wp-content.php"
-      ]
-    },
-    {
-      "ip": "20.218.66.54",
-      "family": "v4",
-      "first_seen": "2026-08-15T11:00:00Z",
-      "last_seen": "2026-08-15T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /sc.php",
-        "GET /echkm.php",
-        "GET /wyzer3.php",
-        "GET /25.php",
-        "GET /wp-admin/setup-config.php",
-        "GET /wp-content/plugins/admin.php",
-        "GET /admin-footer.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /wp-config.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /god.php",
-        "GET /hehe.php",
-        "GET /dragonshell.php",
-        "GET /x.php",
-        "GET /r.php",
-        "GET /xml.php",
-        "GET /sd.php",
-        "GET /themes.php",
-        "GET /ws.php",
-        "GET /1.php"
       ]
     },
     {
@@ -3002,7 +2958,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /inx.php",
         "GET /reviall.php",
         "GET /admin.php",
         "GET /adminfuns.php",
@@ -3021,7 +2976,8 @@
         "GET /run.php",
         "GET /gecko.php",
         "GET /xiugai.php?p=",
-        "GET /adminner.php"
+        "GET /adminner.php",
+        "GET /file1221.php"
       ]
     },
     {
@@ -3046,12 +3002,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /wp-load.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-content/themes/index.php",
-        "GET /ccc.php?p=",
-        "GET /reviall.php",
-        "GET /hp2.php",
         "GET /doc.php",
         "GET /too.php",
         "GET /kir.php",
@@ -3065,7 +3015,13 @@
         "GET /3PJcpMFsD8B.php",
         "GET /new.php",
         "GET /bladeacss.php",
-        "GET /shapes.php"
+        "GET /shapes.php",
+        "GET /wp-ws68.php?p=",
+        "GET /parx.php",
+        "GET /fig.php",
+        "GET /qaivbilq.php",
+        "GET /saka.php",
+        "GET /hobi.php"
       ]
     },
     {
@@ -3090,7 +3046,6 @@
         "mwl:cloud=\"aws\""
       ],
       "payloads": [
-        "GET /sa.json",
         "GET /gcp-key.json",
         "GET /info.php",
         "GET /admin/.env",
@@ -3109,7 +3064,8 @@
         "GET /.env.backup",
         "GET /phpinfo.php~",
         "GET /info.php.bak",
-        "GET /phpinfo.php.save"
+        "GET /phpinfo.php.save",
+        "GET /service-account.json"
       ]
     },
     {
