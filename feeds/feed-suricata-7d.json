@@ -1,11 +1,150 @@
 {
-  "generated_at": "2026-08-22T01:00:00Z",
+  "generated_at": "2026-08-22T10:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 0,
-    "v4": 0,
+    "total": 7,
+    "v4": 7,
     "v6": 0
   },
-  "items": []
+  "items": [
+    {
+      "ip": "52.188.81.67",
+      "family": "v4",
+      "first_seen": "2026-08-22T08:00:00Z",
+      "last_seen": "2026-08-22T08:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "178.128.199.209",
+      "family": "v4",
+      "first_seen": "2026-08-22T04:00:00Z",
+      "last_seen": "2026-08-22T04:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "178.128.192.0/20"
+    },
+    {
+      "ip": "172.189.127.19",
+      "family": "v4",
+      "first_seen": "2026-08-22T04:00:00Z",
+      "last_seen": "2026-08-22T04:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.275.0_dec5da8886d9bc6aca368a70ac7af5b67a10c409.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "104.22.56.57",
+      "family": "v4",
+      "first_seen": "2026-08-22T03:00:00Z",
+      "last_seen": "2026-08-22T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.22.56.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/proc/self/environ?import&raw??"
+      ]
+    },
+    {
+      "ip": "172.189.127.30",
+      "family": "v4",
+      "first_seen": "2026-08-21T23:00:00Z",
+      "last_seen": "2026-08-21T23:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /filestreamingservice/files/4f8d66c3-efe0-49df-8721-79b7d87120c5?P1=1787958749&P2=404&P3=2&P4=OC0dsKqWBavDj2gU9jpLRDwqc7DuX8Hg9RoI5JnqTGKB%2bIpm51mlBUOv%2f6mdeCvjfzrkbhsMIg5Q5MXNuAEnHA%3d%3d&cacheHostOrigin=msedge.b.tlu.dl.delivery.mp.microsoft.com"
+      ]
+    },
+    {
+      "ip": "40.124.175.201",
+      "family": "v4",
+      "first_seen": "2026-08-21T21:00:00Z",
+      "last_seen": "2026-08-21T21:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "46.236.65.43",
+      "family": "v4",
+      "first_seen": "2026-08-22T09:00:00Z",
+      "last_seen": "2026-08-22T09:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "29518",
+      "asn_name": "BREDBAND2 Bredband2 AB",
+      "asn_prefix": "46.236.64.0/18",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    }
+  ]
 }
