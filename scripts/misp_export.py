@@ -22,6 +22,7 @@ import json
 import base64
 import hashlib
 import logging
+import sys
 from datetime import datetime, timezone
 
 import requests
@@ -197,7 +198,18 @@ def main():
 
     log.info("Connexion MISP → %s", MISP_URL)
     log.info("Scopes à exporter : %s", ", ".join(sorted(configured.keys())))
-    misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    # Contrairement à feed.py, l'échec n'est pas rendu tolérable ici : exporter
+    # l'event MISP EST la seule raison d'être de ce script, sans connexion il n'y
+    # a rien à publier. On remplace en revanche le traceback PyMISP brut par un
+    # message actionnable — c'est ce silence illisible qui a laissé misp-feed/
+    # figé deux mois sans que la cause saute aux yeux.
+    try:
+        misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    except Exception as e:
+        raise RuntimeError(
+            f"connexion à MISP impossible ({e}) — vérifier MISP_URL/MISP_KEY et "
+            "que la clé appartient à un utilisateur dont le rôle a l'accès API activé"
+        ) from e
 
     manifest: dict[str, dict] = {}
     hashes_lines: list[str] = []
@@ -245,4 +257,10 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # Même contrat que feed.py : une ligne d'erreur lisible dans `docker logs`
+    # plutôt qu'un traceback, et un code de sortie non nul (rien n'a été exporté).
+    try:
+        main()
+    except Exception as e:
+        log.error("ERREUR FATALE : %s", e)
+        sys.exit(1)
