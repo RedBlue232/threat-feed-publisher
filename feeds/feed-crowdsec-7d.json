@@ -3002,7 +3002,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /file1221.php",
         "GET /inx.php",
         "GET /reviall.php",
         "GET /admin.php",
@@ -3021,7 +3020,8 @@
         "GET /w.php",
         "GET /run.php",
         "GET /gecko.php",
-        "GET /xiugai.php?p="
+        "GET /xiugai.php?p=",
+        "GET /adminner.php"
       ]
     },
     {
@@ -3046,6 +3046,12 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
+        "GET /wp-load.php",
+        "GET /wp-content/admin.php",
+        "GET /wp-content/themes/index.php",
+        "GET /ccc.php?p=",
+        "GET /reviall.php",
+        "GET /hp2.php",
         "GET /doc.php",
         "GET /too.php",
         "GET /kir.php",
@@ -3059,13 +3065,7 @@
         "GET /3PJcpMFsD8B.php",
         "GET /new.php",
         "GET /bladeacss.php",
-        "GET /shapes.php",
-        "GET /wp-ws68.php?p=",
-        "GET /parx.php",
-        "GET /fig.php",
-        "GET /qaivbilq.php",
-        "GET /saka.php",
-        "GET /hobi.php"
+        "GET /shapes.php"
       ]
     },
     {
@@ -3090,7 +3090,6 @@
         "mwl:cloud=\"aws\""
       ],
       "payloads": [
-        "GET /service-account.json",
         "GET /sa.json",
         "GET /gcp-key.json",
         "GET /info.php",
@@ -3109,7 +3108,8 @@
         "GET /.env.bak",
         "GET /.env.backup",
         "GET /phpinfo.php~",
-        "GET /info.php.bak"
+        "GET /info.php.bak",
+        "GET /phpinfo.php.save"
       ]
     },
     {

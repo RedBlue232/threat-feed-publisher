@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-08-22T11:16:19.280562Z",
+  "updated_at": "2026-08-22T11:49:47.296732Z",
   "items": {
     "51.120.79.29": {
       "ip": "51.120.79.29",
@@ -3663,13 +3663,13 @@
       "last_seen": "2026-08-22T00:29:00Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 4,
+          "count": 5,
           "last_seen": "2026-08-22T00:29:00Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 5,
           "first_seen": "2026-08-22T00:29:00Z",
           "last_seen": "2026-08-22T00:29:00Z",
           "payloads": [
@@ -3688,13 +3688,13 @@
       "last_seen": "2026-08-22T00:05:58Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 4,
+          "count": 5,
           "last_seen": "2026-08-22T00:05:58Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 5,
           "first_seen": "2026-08-22T00:05:58Z",
           "last_seen": "2026-08-22T00:05:58Z",
           "payloads": [
@@ -3914,29 +3914,28 @@
       "last_seen": "2026-08-22T02:01:46Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T02:01:46Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T02:01:40Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T02:01:38Z"
         },
         "crowdsec/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T02:01:30Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 12,
+          "count": 16,
           "first_seen": "2026-08-22T02:01:30Z",
           "last_seen": "2026-08-22T02:01:46Z",
           "payloads": [
-            "GET /file1221.php",
             "GET /inx.php",
             "GET /reviall.php",
             "GET /admin.php",
@@ -3955,7 +3954,8 @@
             "GET /w.php",
             "GET /run.php",
             "GET /gecko.php",
-            "GET /xiugai.php?p="
+            "GET /xiugai.php?p=",
+            "GET /adminner.php"
           ]
         }
       },
@@ -3969,32 +3969,38 @@
       "last_seen": "2026-08-22T01:47:17Z",
       "scenarios": {
         "crowdsec/http-wordpress-scan": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:47:17Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:47:15Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:47:12Z"
         },
         "crowdsec/http-backdoors-attempts": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:47:10Z"
         },
         "crowdsec/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:47:05Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 15,
+          "count": 20,
           "first_seen": "2026-08-22T01:47:05Z",
           "last_seen": "2026-08-22T01:47:17Z",
           "payloads": [
+            "GET /wp-load.php",
+            "GET /wp-content/admin.php",
+            "GET /wp-content/themes/index.php",
+            "GET /ccc.php?p=",
+            "GET /reviall.php",
+            "GET /hp2.php",
             "GET /doc.php",
             "GET /too.php",
             "GET /kir.php",
@@ -4008,13 +4014,7 @@
             "GET /3PJcpMFsD8B.php",
             "GET /new.php",
             "GET /bladeacss.php",
-            "GET /shapes.php",
-            "GET /wp-ws68.php?p=",
-            "GET /parx.php",
-            "GET /fig.php",
-            "GET /qaivbilq.php",
-            "GET /saka.php",
-            "GET /hobi.php"
+            "GET /shapes.php"
           ]
         }
       },
@@ -4028,33 +4028,32 @@
       "last_seen": "2026-08-22T01:34:13Z",
       "scenarios": {
         "crowdsec/http-crawl-non_statics": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:34:13Z"
         },
         "crowdsec/http-technology-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:34:11Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:34:09Z"
         },
         "crowdsec/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:34:05Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:34:05Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 15,
+          "count": 20,
           "first_seen": "2026-08-22T01:34:05Z",
           "last_seen": "2026-08-22T01:34:13Z",
           "payloads": [
-            "GET /service-account.json",
             "GET /sa.json",
             "GET /gcp-key.json",
             "GET /info.php",
@@ -4073,7 +4072,8 @@
             "GET /.env.bak",
             "GET /.env.backup",
             "GET /phpinfo.php~",
-            "GET /info.php.bak"
+            "GET /info.php.bak",
+            "GET /phpinfo.php.save"
           ]
         }
       },
@@ -4087,17 +4087,17 @@
       "last_seen": "2026-08-22T01:28:38Z",
       "scenarios": {
         "crowdsec/http-wordpress-scan": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:28:38Z"
         },
         "crowdsec/http-probing": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T01:28:35Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 6,
+          "count": 8,
           "first_seen": "2026-08-22T01:28:35Z",
           "last_seen": "2026-08-22T01:28:38Z",
           "payloads": [
@@ -4126,13 +4126,13 @@
       "last_seen": "2026-08-22T08:52:18Z",
       "scenarios": {
         "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T08:52:18Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T08:52:18Z",
           "last_seen": "2026-08-22T08:52:18Z",
           "sids": [
@@ -4154,13 +4154,13 @@
       "last_seen": "2026-08-22T04:57:12Z",
       "scenarios": {
         "suricata/SURICATA HTTP unable to match response to request": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T04:57:12Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T04:57:12Z",
           "last_seen": "2026-08-22T04:57:12Z",
           "sids": [
@@ -4179,13 +4179,13 @@
       "last_seen": "2026-08-22T04:11:38Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T04:11:38Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T04:11:38Z",
           "last_seen": "2026-08-22T04:11:38Z",
           "sids": [
@@ -4207,13 +4207,13 @@
       "last_seen": "2026-08-22T03:41:20Z",
       "scenarios": {
         "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T03:41:20Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T03:41:20Z",
           "last_seen": "2026-08-22T03:41:20Z",
           "sids": [
@@ -4235,13 +4235,13 @@
       "last_seen": "2026-08-21T23:12:31Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-21T23:12:31Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-21T23:12:31Z",
           "last_seen": "2026-08-21T23:12:31Z",
           "sids": [
@@ -4291,13 +4291,13 @@
       "last_seen": "2026-08-22T09:16:54Z",
       "scenarios": {
         "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T09:16:54Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T09:16:54Z",
           "last_seen": "2026-08-22T09:16:54Z",
           "sids": [
@@ -5655,259 +5655,30 @@
   },
   "asn_names": {
     "14061": "DIGITALOCEAN-ASN - DigitalOcean",
-    "215925": "VPSVAULTHOST - VPSVAULT.HOST LTD",
     "396982": "GOOGLE-CLOUD-PLATFORM - Google LLC",
     "398705": "CENSYS-ARIN-02 - Censys",
-    "45090": "TENCENT-NET-AP Shenzhen Tencent Computer Systems Company Limited",
-    "50360": "TAMATIYA-AS - Tamatiya EOOD",
     "8075": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-    "10439": "CARINET - CariNet",
     "13335": "CLOUDFLARENET - Cloudflare",
-    "14618": "AMAZON-AES - Amazon.com",
-    "150436": "BYTEPLUS-AS-AP Byteplus Pte. Ltd.",
     "16509": "AMAZON-02 - Amazon.com",
-    "203087": "GOHOST-KZ - Fedinyak Sergey Vyacheslavovich",
-    "20473": "AS-VULTR - The Constant Company",
-    "25369": "BANDWIDTH-AS - Hydra Communications Ltd",
     "36352": "AS-COLOCROSSING - HostPapa",
     "398722": "CENSYS-ARIN-03 - Censys",
-    "43815": "NASHPROSTIR-LLC - Nash Prostir LLC",
     "45102": "ALIBABA-CN-NET Alibaba US Technology Co.",
-    "4766": "KIXS-AS-KR Korea Telecom",
-    "48721": "FLYSERVERS-ENDCLIENTS - Flyservers S.A.",
-    "48874": "HOSTMAZE - HOSTMAZE INC SRL-D",
-    "49870": "AS49870-BV - Alsycon B.V.",
-    "214503": "R0CKET-CLOUD - QuxLabs AB",
     "135377": "UCLOUD-HK-AS-AP UCLOUD INFORMATION TECHNOLOGY HK LIMITED",
-    "58232": "HADERAN - Parsun Network Solutions PTY LTD",
-    "29802": "HVC-AS - HIVELOCITY, Inc.",
     "51167": "CONTABO Contabo GmbH",
-    "142647": "NAN-AS-AP Nasstec Airnet Networks Private Limited",
-    "34534": "BULLIONET FBW NETWORKS SAS",
-    "51852": "PLI-AS Private Layer INC",
-    "205759": "GHOSTYNETWORKS Ghosty Networks LLC",
-    "132934": "SKYMAX-AS Skymax Broadband Services Pvt. Ltd.",
-    "215607": "DF-Transit dataforest GmbH",
-    "23470": "RELIABLESITE - ReliableSite.Net LLC",
-    "41608": "NextGenWebs-NL NextGenWebs, S.L.",
-    "59257": "CMPAKLIMITED-AS-AP CMPak Limited",
     "63949": "AKAMAI-LINODE-AP Akamai Connected Cloud",
     "12876": "AS12876 Scaleway SAS",
-    "136180": "IPIP-CN Beijing Tiantexin Tech. Co., Ltd.",
-    "154323": "SOFTERINT-AS-AP SOFTERINT TECHNOLOGY OPC PRIVATE LIMITED",
-    "18101": "RELIANCE-COMMUNICATIONS-IN Reliance Communications Ltd.DAKC MUMBAI",
-    "212238": "CDNEXT Datacamp Limited",
-    "268678": "CSI SOLUCOES TECNOLOGICAS LTDA",
     "398324": "CENSYS-ARIN-01 - Censys, Inc.",
-    "8560": "IONOS-AS IONOS SE",
-    "11427": "TWC-11427-TEXAS - Charter Communications Inc",
-    "15435": "KABELFOON DELTA Fiber Nederland B.V.",
-    "265210": "OSCAR M DE CARVALHO - ME",
-    "137718": "VOLCANO-ENGINE Beijing Volcano Engine Technology Co., Ltd.",
-    "132165": "CONNECT-AS-AP Connect Communications",
     "402226": "ONLYSCANS - OnlyScans LLC",
-    "57717": "FBX-AS FiberXpress BV",
     "9541": "CYBERNET-AP Cyber Internet Services Pvt Ltd.",
-    "4837": "CHINA169-BACKBONE CHINA UNICOM China169 Backbone",
-    "206264": "AMARUTU-TECHNOLOGY Amarutu Technology Ltd",
-    "19318": "IS-AS-1 - Interserver, Inc",
-    "22773": "ASN-CXA-ALL-CCI-22773-RDC - Cox Communications Inc.",
-    "9498": "BBIL-AP BHARTI Airtel Ltd.",
-    "37963": "ALIBABA-CN-NET Hangzhou Alibaba Advertising Co.,Ltd.",
-    "138759": "NETMAX-IN NETMAX COMPUTERS",
-    "214472": "STORMINDUSTRIES Offshore LC",
     "215540": "GCS-AS GLOBAL CONNECTIVITY SOLUTIONS LLP",
-    "22295": "ADVIN - Advin Services LLC",
     "4134": "CHINANET-BACKBONE No.31,Jin-rong Street",
-    "49981": "WorldStream WorldStream B.V.",
-    "16276": "OVH OVH SAS",
-    "215724": "EDGEVANA-AS-RP Edgevana, Inc.",
-    "56420": "RYAZAN-AS JSC \"ER-Telecom Holding\"",
-    "174": "COGENT-174 - Cogent Communications, LLC",
-    "208323": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-    "215125": "Cyberology-AS Church of Cyberology",
-    "41111": "AS-GEOHOSTING FAST GEO HOSTING S.R.L.",
-    "47513": "SKYLINE-UA-AS FOP Zubenko Volodimir Oleksandrovich",
-    "60729": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-    "9808": "CHINAMOBILE-CN China Mobile Communications Group Co., Ltd.",
     "35042": "Layer7-Networks-DE Layer7 Networks GmbH",
-    "38365": "BAIDU Beijing Baidu Netcom Science and Technology Co., Ltd.",
-    "55990": "HWCSNET Huawei Cloud Service data center",
     "6939": "HURRICANE - Hurricane Electric LLC",
-    "7922": "COMCAST-7922 - Comcast Cable Communications, LLC",
-    "211860": "VPSDEDIC-AS Nerushenko Vyacheslav Nikolaevich",
-    "21499": "GODADDY-SXB Host Europe GmbH",
-    "60404": "Liteserver The Infrastructure Group B.V.",
-    "15169": "GOOGLE - Google LLC",
-    "209702": "SOLDATOV-AS SOLDATOV ALEXEY VALEREVICH",
-    "38623": "VIETTELCAMBODIA-AS-AP ISPIXP IN CAMBODIA WITH THE BEST VERVICE IN THERE.",
-    "53514": "UHQ - UHQ Services LLC",
     "211590": "BUCKLOG Bucklog SARL",
     "1133": "UTWENTE-AS SURF B.V.",
     "53667": "PONYNET - FranTech Solutions",
-    "36086": "TELX-LEGACY - Telx",
-    "58087": "FlorianKolb Florian Kolb",
-    "14315": "1GSERVERS - 1GSERVERS, LLC",
-    "43357": "OWL Owl Limited",
-    "40021": "CONTABO-40021 - Contabo Inc.",
-    "8255": "EURO-INFORMATION Euro-Information-Europeenne de Traitement de l'Information SAS",
-    "214481": "wczapkowicz-as Wojciech Czapkowicz",
-    "47583": "AS-HOSTINGER Hostinger International Limited",
-    "262191": "AS262191 - LIBERTY NETWORKS DE COLOMBIA S.A.S",
-    "9416": "MULTIMEDIA-AS-AP - Hoshin Multimedia Center Inc.",
-    "211680": "AS-BITSIGHT NSEC - Sistemas Informaticos, S.A.",
-    "3215": "AS3215 Orange S.A.",
-    "31898": "ORACLE-BMC-31898 - Oracle Corporation",
-    "29066": "VELIANET-AS velia.net Internetdienste GmbH",
-    "31275": "Samtelecom-AS LLC Telecom-Service",
-    "8283": "COLOCLUE-AS Netwerkvereniging Coloclue",
-    "13036": "TMOBILE-CZ T-Mobile Czech Republic a.s.",
-    "17622": "CNCGROUP-GZ - China Unicom Guangzhou network",
-    "197540": "netcup-AS netcup GmbH",
-    "205100": "F3NETZE F3 Netze e.V.",
-    "36947": "Telecom Algeria - Telecom Algeria",
-    "41745": "FORTIS-AS Baykov Ilya Sergeevich",
-    "54113": "FASTLY - Fastly, Inc.",
-    "58563": "CHINATELECOM-Hubei-IDC - CHINANET Hubei province network",
-    "11664": "AS11664 - Techtel LMDS Comunicaciones Interactivas S.A.",
-    "12091": "MTN SA - MTN SA",
-    "12975": "PALTEL-AS Palestine Telecommunications Company (PALTEL)",
-    "132652": "IDNIC-UNINA-AS-ID - PT. Cahaya Buana Raksa",
-    "133385": "ATOMMYANMAR-AS-AP - Atom Myanmar Limited",
-    "133619": "DESIVPS-AS-AP - DESIVPS",
-    "135483": "IDNIC-WISESACONSULTING-AS-ID - PT. WISESA CONSULTING INDONESIA",
-    "136119": "BALIFIBERNET-AS-ID - PT Bali Towerindo Sentra, Tbk",
-    "137535": "JTIP-AS-AP - JT TELECOM INTERNATIONAL PTE.LTD.",
-    "138123": "DEXA-AS-ID - PT. ADEAKSA INDO JAYATAMA",
-    "13825": "TROYCABLE-NET - Troy Cablevision, Inc.",
-    "138423": "CMPAKLIMITED-AS-ENTCORP - CMPak Limited",
-    "139752": "MCTI-AS-AP - Multinetwork Cable Television, Inc",
-    "139994": "XLNET-FTTH-ID - PT XL Axiata Tbk",
-    "140475": "PRIMAHOME-AS-ID - PT Citra Celebas Multimedia",
-    "142002": "SCLOUDPTELTD-AS - Scloud Pte Ltd",
-    "14593": "SPACEX-STARLINK - Space Exploration Technologies Corporation",
-    "147049": "PACKETHUBSA-AS-AP - PacketHub S.A.",
-    "14754": "AS14754 - TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA",
-    "14956": "ROUTERHOSTING - RouterHosting LLC",
-    "149925": "IDNIC-SWNETWORK-AS-ID - PT Sakti Wijaya Network",
-    "150263": "ALNET-AS-ID - PT Alnet Telekomunikasi Indonesia",
-    "150279": "IDNIC-LNS-AS-ID - PT Lintas Network Solusi",
-    "150303": "SOLORDP-AS-AP - SoloRDP",
-    "152775": "IDNIC-TASKANET-AS-ID - PT Taska Sarana Nusantara",
-    "152918": "LNL-AS-AP - Liberally Network LLC",
-    "153739": "GNET-AS-AP - G-Net IT Systems OPC",
-    "154628": "IDNIC-SMUNET-AS-ID - PT Sinergi Multidata Utama",
-    "17639": "CONVERGE-AS - Converge ICT Solutions Inc.",
-    "17858": "POWERVIS-AS-KR-KR - LG POWERCOMM",
-    "17882": "Univision-AS-AP - UNIVISION LLC",
-    "198093": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-    "20055": "AS-WHOLESAIL - Wholesail networks LLC",
-    "200651": "FlokiNET FlokiNET ehf",
-    "200899": "INTERSPACE-EUROPE INTERSPACE DOOEL Skopje",
-    "201814": "Mevspace MEVSPACE sp. z o.o.",
-    "202425": "INT-NETWORK IP Volume inc",
-    "2027": "MilkyWan MilkyWan Association",
-    "203198": "GRADO-AS PP Telecommunication systems Grado",
-    "20860": "IOMART-AS IOMART CLOUD SERVICES LIMITED",
-    "208972": "gibirnet-tr GIBIRNET ILETISIM HIZMETLERI SANAYI VE TICARET LIMITED SIRKETI",
-    "209413": "DEDIK-CH DEDIK SERVICES LIMITED",
-    "210218": "OpenFiber-Italy Open Fiber S.P.A.",
-    "210558": "services-1337-gmbh 1337 Services GmbH",
-    "210731": "DOTSRC Forening for DotSrc",
-    "212317": "HETZNER-CLOUD3-AS Hetzner Online GmbH",
-    "212756": "MediaNetISP SmartLink for Internet Services LTD",
-    "213873": "OUIDO-Hosting MOJI SAS",
-    "214639": "TAKEHOST-AS Raul Ghita trading as 'Ghita Telekom'",
     "215439": "PLAY2GO-NET PLAY2GO INTERNATIONAL LIMITED",
-    "215659": "MOEMOEKYUN Aokigahara SRL",
-    "216300": "AbkhazMedia-As Closed Joint Stock Company \"AbkhazMedia\"",
-    "216472": "HS-SYR High Speed For Internet Services L.L.C",
-    "21738": "ROZINT - Rozint",
-    "23679": "NUSANET-AS-ID - PT. Media Antar Nusa",
-    "23974": "MOE-AS-AP - Ministry of education",
-    "25019": "SAUDINETSTC-AS Saudi Telecom Company JSC",
-    "264528": "AS264528 - KASATECH PROVEDOR DE INTERNET LTDA",
-    "264765": "AS264765 - VANET TELECOMUNICACIONES S.R.L.",
-    "26615": "AS26615 - TIM S/A",
-    "266668": "AS266668 - OBERCOM S.R.L.",
-    "267595": "AS267595 - MILANIN NET",
-    "267784": "AS267784 - Flyservers S.A.",
-    "267875": "AS267875 - CANETE GLADIS ROXANA(ENREDADOS)",
-    "268404": "AS268404 - DIGITAL VIRTUAL LTDA - ME",
-    "270737": "AS270737 - G G BRUZARROSCO SERVICOS DE TELECOMUNICACOES LTDA",
-    "271943": "AS271943 - WHITETELECOM, S.R.L.",
-    "273217": "AS273217 - ACOLME TECH, SRL",
-    "274227": "AS274227 - MOSSO MAYRA ADELA (INTERZONA FORMOSA)",
-    "27967": "AS27967 - Gobernacion de la Provincia de Buenos Aires",
-    "28126": "AS28126 - BRISANET SERVICOS DE TELECOMUNICACOES S.A",
-    "28198": "AS28198 - SEMPRE TELECOMUNICACOES LTDA",
-    "28573": "AS28573 - Claro NXT Telecomunicacoes Ltda",
-    "31257": "ORIONNET-KRK Orion Telecom LLC",
-    "328583": "CRAZYWEB TECH (PTY) LTD - CRAZYWEB TECH (PTY) LTD",
-    "33765": "TANZANIA TELECOMMUNICATIONS CO. LTD - TANZANIA TELECOMMUNICATIONS CO. LTD",
-    "33837": "PRQ-AS Fredrik Holmqvist",
-    "3462": "HINET - Data Communication Business Group",
-    "34665": "PINDC-AS Petersburg Internet Network ltd.",
-    "36903": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM - Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
-    "3816": "AS3816 - COLOMBIA TELECOMUNICACIONES S.A. ESP BIC",
-    "396507": "EMERALD-ONION - Emerald Onion",
-    "39662": "FI-FICORA-AS Finnish Transport and Communications Agency",
-    "398019": "DYNU - Dynu Systems Incorporated",
-    "400587": "RYAMER - Ryamer, LLC",
-    "40676": "AS40676 - Psychz Networks",
-    "41281": "KEFF KeFF Networks Ltd",
-    "44112": "SWEB-AS SpaceWeb Ltd",
-    "48492": "IQ-Online I.Q Online for Internet Services and Communications LLC",
-    "49581": "TUBE-HOSTING Ferdinand Zink trading as Tube-Hosting",
-    "52940": "AS52940 - VERO S.A",
     "52981": "AS52981 - Conecta Tecnologia LTDA",
-    "5384": "EMIRATES-INTERNET EMIRATES TELECOMMUNICATIONS GROUP COMPANY (ETISALAT GROUP) PJSC",
-    "56099": "AVCHI-CLICK-AS-AP - Asian Vision Cable",
-    "56207": "COMCLARK-PH - ComClark Network & Technology Corp",
-    "56971": "AS56971 CGI GLOBAL LIMITED",
-    "58461": "CT-HangZhou-IDC - No.288,Fu-chun Road",
-    "58495": "HSPNET-AS-ID - PT Parsaoran Global Datatrans",
-    "60068": "CDN77 Datacamp Limited",
-    "6400": "AS6400 - Compania Dominicana de Telefonos S. A.",
-    "680": "DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
-    "701": "UUNET - Verizon Business",
-    "7303": "AS7303 - Telecom Argentina S.A.",
-    "7488": "CNSERVER-AP-AS - CNServer LLC",
-    "7713": "telkomnet-as-ap - PT Telekomunikasi Indonesia",
-    "8053": "AS8053 - IFX Networks Venezuela C.A.",
-    "8151": "AS8151 - UNINET",
-    "8193": "BRM-AS \"Uzbektelekom\" Joint Stock Company",
-    "8473": "BAHNHOF Bahnhof AB",
-    "8781": "QA-ISP Ooredoo Q.S.C.",
-    "9009": "M247 M247 Europe SRL",
-    "9050": "RTD Orange Romania S.A.",
-    "9129": "MTN SA - MTN SA",
-    "9299": "IPG-AS-AP - Philippine Long Distance Telephone Company",
-    "9534": "MAXIS-AS1-AP - Binariang Berhad",
-    "9873": "TELECOM-LA-AS-AP - Lao Telecom Communication, LTC",
-    "9988": "MPT-AP - Myanma Posts and Telecommunications",
-    "142430": "DIGIVPS-AS-AP - DIGI VPS",
-    "216127": "NUXT-AS INTERNATIONAL HOSTING COMPANY LIMITED",
-    "23404": "RITTERNET - Ritter Communications",
-    "400848": "DHI9PUT - DHI TECHNICAL SERVICES LLC",
-    "9318": "SKB-AS-KR - SK Broadband Co Ltd",
-    "7552": "VIETEL-AS-AP - Viettel Group",
-    "203363": "KUROIT Kuroit Limited",
-    "3269": "ASN-IBSNAZ Telecom Italia S.p.A.",
-    "213474": "HOMELINE-AS HomeLine Broadband LLC",
-    "139879": "GALAXY-AS-AP - Galaxy Broadband",
-    "42831": "UKSERVERS-AS UK Dedicated Servers Limited",
-    "11878": "TZULO - tzulo, inc.",
-    "205997": "Vlad_Cojuhari Vlad Cojuhari",
-    "211486": "AAA-AS Alferov Aleksey Aleksandrovich",
-    "135905": "VNPT-AS-VN - VIETNAM POSTS AND TELECOMMUNICATIONS GROUP",
-    "132203": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-    "215708": "mobinidc Mobin Arvand Infrastructure Company LTD",
-    "266702": "AS266702 - MEGALINK S.R.L.",
-    "39351": "ESAB-AS 31173 Services AB",
-    "3301": "TELIANET-SWEDEN Telia Company AB",
-    "24544": "LAWSCLOUDINFRASTRUCTURELIMITED-AS-HK - Law's Cloud Infrastructure Limited",
-    "24757": "Ethio Telecom - Ethio Telecom",
     "206134": "NEKO-AS NEKOBYTE INTERNATIONAL LIMITED",
     "29518": "BREDBAND2 Bredband2 AB",
     "141995": "CAPL-AS-AP - Contabo Asia Private Limited",
