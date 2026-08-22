@@ -639,6 +639,28 @@ def merge_and_ttl(events: list, db: dict) -> dict:
     return db
 
 
+def purge_asn_names(db: dict) -> int:
+    """Retire du cache `asn_names` les ASN qui ne sont plus référencés par
+    aucune IP de la DB. Retourne le nombre d'entrées purgées.
+
+    Le cache est alimenté à chaque résolution RIPE mais n'était jamais nettoyé :
+    une IP purgée par TTL laissait le nom de son ASN derrière elle indéfiniment.
+    Mesure avant correctif : 265 entrées en cache pour 36 ASN réellement
+    utilisés, soit 86 % d'orphelins pesant 10 % du `db.json` publié.
+
+    Purger est sans risque : un nom retiré à tort se re-résout en un appel RIPE
+    au run suivant, et `enrich_names` ne réinterroge que les ASN absents du cache.
+    """
+    cache = db.get("asn_names")
+    if not cache:
+        return 0
+    used = {rec["asn"] for rec in db.get("items", {}).values() if rec.get("asn")}
+    orphans = [asn for asn in cache if asn not in used]
+    for asn in orphans:
+        del cache[asn]
+    return len(orphans)
+
+
 # ---------------------------------------------------------------------------
 # 7. Générer les fichiers de sortie
 # ---------------------------------------------------------------------------
@@ -1123,7 +1145,21 @@ def push_misp(db: dict, events: list):
         return
 
     log.info("Connexion MISP → %s", MISP_URL)
-    misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    try:
+        misp = PyMISP(MISP_URL, MISP_KEY, MISP_VERIFY_SSL)
+    except Exception as e:
+        # Le push MISP est un canal secondaire : à ce stade les feeds sont déjà
+        # publiés sur GitHub. Une instance injoignable ou une clé révoquée ne doit
+        # pas faire échouer tout le run — c'est le contrat déjà appliqué aux
+        # sources CrowdSec/Suricata et aux push par scope juste en dessous.
+        # Auparavant un simple 403 tuait le run en exit 1 après une publication
+        # pourtant réussie.
+        log.error(
+            "Connexion MISP impossible (%s) — push ignoré pour ce run. Vérifier "
+            "MISP_URL/MISP_KEY, et que la clé appartient à un utilisateur dont le "
+            "rôle a l'accès API activé.", e,
+        )
+        return
     run_obs = aggregate_run_events(events)
 
     pushed = 0
@@ -1326,6 +1362,12 @@ def main():
             db["asn_names"].update(new_names)
     elif not ASN_ENABLED:
         log.info("ASN enrichment désactivé (ASN_ENABLED=false)")
+
+    # 4quater. Purge du cache asn_names (voir purge_asn_names).
+    purged = purge_asn_names(db)
+    if purged:
+        log.info("asn_names : %d entrées orphelines purgées, %d conservées",
+                 purged, len(db["asn_names"]))
 
     # 5. Générer les fichiers
     outputs = generate_outputs(db)
