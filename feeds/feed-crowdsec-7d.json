@@ -360,10 +360,12 @@
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-backdoors-attempts",
         "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
+        "crowdsec/http-wordpress-scan",
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -384,7 +386,8 @@
         "GET /wp-content/themes/about.php",
         "GET /favicon.php",
         "GET /8xyz.php",
-        "GET /install.php"
+        "GET /install.php",
+        "GET /phpinfo.php"
       ]
     },
     {
@@ -799,10 +802,12 @@
         "crowdsec/CVE-2017-9841",
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
+        "crowdsec/http-wordpress-scan",
+        "suricata/ET WEB_SERVER ThinkPHP RCE Exploitation Attempt"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "8075",
       "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
@@ -821,7 +826,8 @@
         "GET /wp-content/uploads/2018/01/Raiz0__yitnw.php",
         "GET /wp-content/wp-plugins/user-export-with-their-meta-data/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
         "GET /wp-content/plugins/realia/libraries/PayPal-PHP-SDK/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /wp-content/adminer.php"
+        "GET /wp-content/adminer.php",
+        "GET /index.php?s=/Index/%5Cthink%5Capp/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=HelloThinkPHP21"
       ]
     },
     {
@@ -1420,10 +1426,12 @@
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files",
         "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
+        "crowdsec/http-wordpress-scan",
+        "suricata/SERVER-WEBAPP PHPUnit PHP remote code execution attempt"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "211590",
       "asn_name": "BUCKLOG Bucklog SARL",
@@ -1448,7 +1456,9 @@
         "GET /lib/.env",
         "GET /lab/.env",
         "GET /cronlab/.env",
-        "GET /cron/.env"
+        "GET /cron/.env",
+        "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "POST /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php"
       ]
     },
     {
@@ -2242,10 +2252,12 @@
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files",
         "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
+        "crowdsec/http-wordpress-scan",
+        "suricata/ET WEB_SERVER PHP tags in HTTP POST"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "211590",
       "asn_name": "BUCKLOG Bucklog SARL",
@@ -2270,7 +2282,10 @@
         "GET /.aws/credentials",
         "GET /.aws/config",
         "GET /.aws/.env",
-        "GET /website/.env"
+        "GET /website/.env",
+        "POST /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "POST /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
       ]
     },
     {
@@ -2990,8 +3005,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /gecko.php",
-        "GET /xiugai.php?p=",
         "GET /adminner.php",
         "GET /file1221.php",
         "GET /inx.php",
@@ -3009,7 +3022,9 @@
         "GET /sixxis.php",
         "GET /yj09.php",
         "GET /k.php",
-        "GET /w.php"
+        "GET /w.php",
+        "GET /run.php",
+        "GET /gecko.php"
       ]
     },
     {
@@ -3034,6 +3049,11 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
+        "GET /wp-load.php",
+        "GET /wp-content/admin.php",
+        "GET /wp-content/themes/index.php",
+        "GET /ccc.php?p=",
+        "GET /reviall.php",
         "GET /hp2.php",
         "GET /doc.php",
         "GET /too.php",
@@ -3048,12 +3068,7 @@
         "GET /3PJcpMFsD8B.php",
         "GET /new.php",
         "GET /bladeacss.php",
-        "GET /shapes.php",
-        "GET /parx.php",
-        "GET /fig.php",
-        "GET /qaivbilq.php",
-        "GET /saka.php",
-        "GET /hobi.php"
+        "GET /shapes.php"
       ]
     },
     {
@@ -3078,7 +3093,6 @@
         "mwl:cloud=\"aws\""
       ],
       "payloads": [
-        "GET /info.php.bak",
         "GET /phpinfo.php.save",
         "GET /service-account.json",
         "GET /sa.json",
@@ -3097,7 +3111,8 @@
         "GET /.env.test",
         "GET /.env.remote",
         "GET /.env.bak",
-        "GET /.env.backup"
+        "GET /.env.backup",
+        "GET /phpinfo.php~"
       ]
     },
     {
