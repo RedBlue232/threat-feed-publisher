@@ -21,8 +21,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+
+import github_publish
 
 # PyMISP est optionnel : si non installé ou MISP non configuré, on skip silencieusement
 try:
@@ -313,91 +313,27 @@ def normalize_alerts(alerts: list, source: str = "crowdsec") -> list:
 # 4. GitHub (lecture toujours ; écriture désactivée en DRY_RUN)
 # ---------------------------------------------------------------------------
 
-GH_API = "https://api.github.com"
-GH_HEADERS = {
-    "Authorization": f"Bearer {GH_TOKEN}",
-    "Accept": "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-}
+# Le client GitHub vit dans github_publish : feed.py et misp_export.py
+# publient tous deux plusieurs fichiers indissociables, la logique est commune.
+# On conserve ici des noms de module (GH_SESSION, GH_HEADERS…) parce qu'ils sont
+# lus à chaque appel : les tests peuvent donc les remplacer sans toucher au
+# module partagé.
+GH_API = github_publish.GH_API
+GH_HEADERS = github_publish.build_headers(GH_TOKEN)
+GH_SESSION = github_publish.make_session()
+GH_PUBLISH_ATTEMPTS = github_publish.PUBLISH_ATTEMPTS
 
-# L'API Contents ne renvoie plus le contenu inline au-delà de 1 Mo (403
-# too_large avec le media type JSON par défaut). gh_get_file bascule alors sur
-# le media type `raw`. On prévient dès 800 Ko côté publication pour anticiper
-# (state/db.json grossit avec le nombre d'IPs × payloads).
+# Seuil d'alerte sur la taille d'un fichier publié. Ce n'est plus une limite
+# d'API depuis la publication par blobs (100 Mo), mais un fichier de feed
+# volumineux dégrade l'expérience des consommateurs.
 GH_CONTENT_WARN_BYTES = 800 * 1024
 
 
-def _make_gh_session() -> requests.Session:
-    """Session HTTP avec réessais pour l'API GitHub.
-
-    Un run publie 14 fichiers en 14 appels successifs : sans réessai, un seul
-    5xx/429 transitoire avorte la publication au milieu et laisse l'état publié
-    incohérent (feeds à jour, status.json non — ou l'inverse) jusqu'au run
-    suivant, 12 h plus tard.
-
-    PUT est inclus dans les méthodes réessayées : l'API Contents est un
-    compare-and-swap sur `sha`, donc un réessai après une écriture déjà
-    appliquée échoue en 409 au lieu de dupliquer le contenu. Au pire on retombe
-    sur l'échec qu'on aurait eu sans réessai — jamais sur une corruption.
-    """
-    session = requests.Session()
-    retry = Retry(
-        total=4,
-        backoff_factor=1,  # attentes 1s, 2s, 4s, 8s
-        status_forcelist=(429, 500, 502, 503, 504),
-        # POST/PATCH sont réessayables ici sans risque de doublon :
-        #  - POST /git/blobs et /git/trees sont adressés par contenu (même
-        #    contenu = même sha), un réessai est un no-op ;
-        #  - POST /git/commits peut créer un objet en double, mais il reste non
-        #    référencé et sera ramassé par le GC de GitHub ;
-        #  - PATCH /git/refs est protégé par le fast-forward (force absent).
-        allowed_methods=frozenset(["GET", "PUT", "POST", "PATCH"]),
-        respect_retry_after_header=True,
-    )
-    session.mount("https://", HTTPAdapter(max_retries=retry))
-    return session
-
-
-GH_SESSION = _make_gh_session()
-
-
 def gh_get_file(path: str) -> dict | None:
-    """Lit un fichier du repo via l'API Contents.
-
-    Gère les fichiers > 1 Mo : l'API refuse alors le contenu inline (403
-    too_large, ou content vide + encoding "none" selon le media type). Sans ce
-    fallback, un state/db.json devenu trop gros rendrait chaque run fatal
-    (json.loads sur chaîne vide) et le pipeline resterait mort jusqu'à
-    intervention manuelle. Fallback : media type `raw` pour le contenu,
-    `object` pour le sha."""
-    url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}/contents/{path}"
-    params = {"ref": GH_BRANCH}
-    resp = GH_SESSION.get(url, headers=GH_HEADERS, params=params, timeout=30)
-    if resp.status_code == 404:
-        return None
-    if resp.status_code != 403:
-        resp.raise_for_status()
-        data = resp.json()
-        if data.get("encoding") == "base64":
-            content = base64.b64decode(data["content"]).decode("utf-8")
-            return {"content": content, "sha": data["sha"]}
-        # encoding "none" / inattendu → fichier trop gros, fallback ci-dessous
-    log.warning("gh_get_file: %s non disponible inline (probable > 1 Mo) — fallback raw", path)
-    raw = GH_SESSION.get(
-        url,
-        headers={**GH_HEADERS, "Accept": "application/vnd.github.raw+json"},
-        params=params,
-        timeout=60,
+    """Lit un fichier du dépôt (voir github_publish.get_file)."""
+    return github_publish.get_file(
+        GH_SESSION, GH_HEADERS, GH_OWNER, GH_REPO, GH_BRANCH, path
     )
-    raw.raise_for_status()
-    meta = GH_SESSION.get(
-        url,
-        headers={**GH_HEADERS, "Accept": "application/vnd.github.object+json"},
-        params=params,
-        timeout=30,
-    )
-    meta.raise_for_status()
-    return {"content": raw.text, "sha": meta.json()["sha"]}
 
 
 # ---------------------------------------------------------------------------
@@ -835,79 +771,17 @@ def generate_outputs(db: dict) -> dict:
 # 8. Publier sur GitHub (ou en local en DRY_RUN)
 # ---------------------------------------------------------------------------
 
-# Nombre de tentatives de publication. Un échec de mise à jour de la référence
-# signifie que la branche a bougé entre la lecture de la base et l'écriture
-# (run manuel concurrent d'un run cron) : on reconstruit le commit sur la
-# nouvelle base plutôt que de forcer, ce qui écraserait le travail de l'autre.
-GH_PUBLISH_ATTEMPTS = 3
-
-
-def _gh_api(method: str, endpoint: str, **kwargs) -> dict:
-    """Appel JSON à l'API GitHub du dépôt courant. Lève sur statut d'erreur."""
-    url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}{endpoint}"
-    resp = GH_SESSION.request(method, url, headers=GH_HEADERS, timeout=60, **kwargs)
-    resp.raise_for_status()
-    return resp.json() if resp.content else {}
-
-
-def _publish_commit(outputs: dict, message: str) -> str | None:
-    """Construit et pousse UN commit contenant tous les fichiers.
-
-    Retourne le sha du commit, ou None si l'arbre résultant est identique à la
-    base (aucun contenu n'a changé — inutile de créer un commit vide).
-    """
-    ref = _gh_api("GET", f"/git/ref/heads/{GH_BRANCH}")
-    base_commit_sha = ref["object"]["sha"]
-    base_tree_sha = _gh_api("GET", f"/git/commits/{base_commit_sha}")["tree"]["sha"]
-
-    tree_entries = []
-    for path, content in sorted(outputs.items()):
-        # base64 : l'API accepte ainsi n'importe quel contenu, et la limite est
-        # de 100 Mo par blob contre 1 Mo pour l'API Contents.
-        blob = _gh_api("POST", "/git/blobs", json={
-            "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
-            "encoding": "base64",
-        })
-        tree_entries.append(
-            {"path": path, "mode": "100644", "type": "blob", "sha": blob["sha"]}
-        )
-
-    tree = _gh_api("POST", "/git/trees",
-                   json={"base_tree": base_tree_sha, "tree": tree_entries})
-    if tree["sha"] == base_tree_sha:
-        return None
-
-    commit = _gh_api("POST", "/git/commits", json={
-        "message": message,
-        "tree": tree["sha"],
-        "parents": [base_commit_sha],
-    })
-    # force absent/false : la mise à jour n'aboutit que si elle est en
-    # fast-forward, donc jamais au détriment d'un commit concurrent.
-    _gh_api("PATCH", f"/git/refs/heads/{GH_BRANCH}",
-            json={"sha": commit["sha"], "force": False})
-    return commit["sha"]
-
-
 def publish_github(outputs: dict):
-    """Publie tous les fichiers en UN SEUL commit, de façon atomique.
+    """Publie tous les fichiers en UN SEUL commit atomique.
 
-    L'implémentation précédente écrivait fichier par fichier via l'API Contents
-    (14 appels PUT, donc 14 commits). Deux conséquences réelles :
-    - une interruption en cours de publication laissait le dépôt dans un état
-      incohérent — feeds à jour mais status.json non, ou l'inverse — jusqu'au
-      run suivant, douze heures plus tard. C'est exactement ce qui s'est produit
-      le 9 juillet 2026 quand le serveur s'est éteint en pleine publication ;
-    - l'historique était noyé sous 98 % de commits automatiques.
-
-    L'API Git Data permet de construire l'arbre complet puis de déplacer la
-    référence de branche en une opération : soit tout est publié, soit rien.
+    L'implémentation historique écrivait fichier par fichier via l'API Contents
+    (14 appels PUT, donc 14 commits). Une interruption en cours de publication
+    laissait le dépôt incohérent — feeds à jour mais status.json non, ou
+    l'inverse — jusqu'au run suivant, douze heures plus tard.
     """
     for path, content in outputs.items():
         size = len(content.encode("utf-8"))
         if size > GH_CONTENT_WARN_BYTES:
-            # Les blobs acceptent jusqu'à 100 Mo, ce n'est donc plus une limite
-            # d'API : c'est le confort des consommateurs du feed qui est en jeu.
             log.warning(
                 "%s fait %.0f Ko — volumineux pour un fichier de feed ; "
                 "envisager de réduire PAYLOADS_PER_SOURCE_CAP",
@@ -915,25 +789,14 @@ def publish_github(outputs: dict):
             )
 
     message = f"chore: update feeds & state ({len(outputs)} fichiers) [threat-feed]"
-    for attempt in range(1, GH_PUBLISH_ATTEMPTS + 1):
-        try:
-            sha = _publish_commit(outputs, message)
-        except requests.HTTPError as e:
-            status = e.response.status_code if e.response is not None else None
-            if status in (409, 422) and attempt < GH_PUBLISH_ATTEMPTS:
-                log.warning(
-                    "Publication : la branche a bougé (HTTP %s), reconstruction "
-                    "du commit — tentative %d/%d",
-                    status, attempt + 1, GH_PUBLISH_ATTEMPTS,
-                )
-                continue
-            raise
-        if sha is None:
-            log.info("GitHub ✓ contenu inchangé — aucun commit créé")
-        else:
-            log.info("GitHub ✓ %d fichiers publiés en 1 commit (%s)",
-                     len(outputs), sha[:7])
-        return
+    sha = github_publish.publish_atomic(
+        GH_SESSION, GH_HEADERS, GH_OWNER, GH_REPO, GH_BRANCH,
+        outputs, message, attempts=GH_PUBLISH_ATTEMPTS,
+    )
+    if sha is None:
+        log.info("GitHub ✓ contenu inchangé — aucun commit créé")
+    else:
+        log.info("GitHub ✓ %d fichiers publiés en 1 commit (%s)", len(outputs), sha[:7])
 
 
 def write_outputs_local(outputs: dict, out_dir: Path):

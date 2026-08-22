@@ -19,13 +19,12 @@ instance MISP n'empêche pas la publication des autres).
 
 import os
 import json
-import base64
 import hashlib
 import logging
 import sys
 from datetime import datetime, timezone
 
-import requests
+import github_publish
 from pymisp import PyMISP
 
 # ---------------------------------------------------------------------------
@@ -50,12 +49,8 @@ GH_BRANCH = os.environ.get("GH_BRANCH", "main")
 # Sous-dossier du repo qui sert de racine de feed MISP
 FEED_DIR = os.environ.get("MISP_FEED_DIR", "misp-feed")
 
-GH_API = "https://api.github.com"
-GH_HEADERS = {
-    "Authorization": f"Bearer {GH_TOKEN}",
-    "Accept": "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-}
+GH_HEADERS = github_publish.build_headers(GH_TOKEN)
+GH_SESSION = github_publish.make_session()
 
 logging.basicConfig(
     level=logging.INFO,
@@ -63,34 +58,6 @@ logging.basicConfig(
     datefmt="%Y-%m-%dT%H:%M:%SZ",
 )
 log = logging.getLogger(__name__)
-
-
-# ---------------------------------------------------------------------------
-# GitHub helpers (identiques à feed.py)
-# ---------------------------------------------------------------------------
-
-def gh_get_sha(path: str) -> str | None:
-    url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}/contents/{path}"
-    r = requests.get(url, headers=GH_HEADERS, params={"ref": GH_BRANCH}, timeout=15)
-    if r.status_code == 404:
-        return None
-    r.raise_for_status()
-    return r.json()["sha"]
-
-
-def gh_put_file(path: str, content: str, message: str) -> None:
-    url = f"{GH_API}/repos/{GH_OWNER}/{GH_REPO}/contents/{path}"
-    body = {
-        "message": message,
-        "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
-        "branch": GH_BRANCH,
-    }
-    sha = gh_get_sha(path)
-    if sha:
-        body["sha"] = sha
-    r = requests.put(url, headers=GH_HEADERS, json=body, timeout=30)
-    r.raise_for_status()
-    log.info("GitHub ✓ %s", path)
 
 
 # ---------------------------------------------------------------------------
@@ -248,10 +215,21 @@ def main():
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     commit_msg = f"chore(misp): refresh feed ({fetched} events) [{ts}]"
 
-    for path, content in event_files.items():
-        gh_put_file(path, content, commit_msg)
-    gh_put_file(f"{FEED_DIR}/manifest.json", manifest_json, commit_msg)
-    gh_put_file(f"{FEED_DIR}/hashes.csv",    hashes_csv,    commit_msg)
+    # Un event et son manifeste n'ont de sens qu'ensemble : ils sont publiés en
+    # un commit unique. Auparavant chaque fichier faisait son propre commit, ce
+    # qui exposait un manifeste référençant un event pas encore écrit — et
+    # provoquait des collisions avec feed.py lancé au même moment.
+    fichiers = dict(event_files)
+    fichiers[f"{FEED_DIR}/manifest.json"] = manifest_json
+    fichiers[f"{FEED_DIR}/hashes.csv"] = hashes_csv
+
+    sha = github_publish.publish_atomic(
+        GH_SESSION, GH_HEADERS, GH_OWNER, GH_REPO, GH_BRANCH, fichiers, commit_msg
+    )
+    if sha is None:
+        log.info("GitHub ✓ contenu inchangé — aucun commit créé")
+    else:
+        log.info("GitHub ✓ %d fichiers publiés en 1 commit (%s)", len(fichiers), sha[:7])
 
     log.info("Done. %d events exportés, %d échecs.", fetched, failed)
 

@@ -1,22 +1,17 @@
 name: Validate feeds
 
-# On ne déclenche pas sur les commits de publication automatique : ils ne
-# changent que des données, pas le code que valide cette CI.
+# On valide TOUS les push sur main, y compris les commits de publication.
 #
-# Historiquement cette exclusion était indispensable — feed.py écrivait ses 14
+# Ces commits étaient auparavant exclus par nécessité : feed.py écrivait ses 14
 # fichiers en 14 commits séparés, et la CI levée sur un commit intermédiaire
 # voyait un état incohérent (status.json à jour mais pas encore feed-*.json).
-# Depuis la publication atomique, un run produit un commit unique et cohérent :
-# l'exclusion reste par économie, mais on pourrait désormais valider aussi les
-# commits de données pour détecter une publication malformée en quelques
-# minutes au lieu d'attendre le cron de monitor.yml.
+# Depuis la publication atomique, un run produit un commit unique et cohérent —
+# le valider a donc du sens, et fait détecter une publication malformée en
+# quelques minutes au lieu d'attendre le prochain cron de monitor.yml.
+# Coût : deux exécutions supplémentaires par jour, de quelques secondes.
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'feeds/**'
-      - 'state/**'
-      - 'misp-feed/**'
   pull_request:
     branches: [main]
   workflow_dispatch:

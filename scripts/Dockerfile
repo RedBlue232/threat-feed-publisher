@@ -50,6 +50,7 @@ RUN git clone --depth 1 https://github.com/MISP/misp-warninglists.git /app/warni
 WORKDIR /app
 COPY feed.py .
 COPY misp_export.py .
+COPY github_publish.py .
 COPY suricata.py .
 COPY enrich_warninglists.py .
 COPY enrich_asn.py .
