@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-08-22T10:43:30.814484Z",
+  "updated_at": "2026-08-22T11:16:19.280562Z",
   "items": {
     "51.120.79.29": {
       "ip": "51.120.79.29",
@@ -3663,13 +3663,13 @@
       "last_seen": "2026-08-22T00:29:00Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T00:29:00Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T00:29:00Z",
           "last_seen": "2026-08-22T00:29:00Z",
           "payloads": [
@@ -3688,13 +3688,13 @@
       "last_seen": "2026-08-22T00:05:58Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 3,
+          "count": 4,
           "last_seen": "2026-08-22T00:05:58Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 3,
+          "count": 4,
           "first_seen": "2026-08-22T00:05:58Z",
           "last_seen": "2026-08-22T00:05:58Z",
           "payloads": [
@@ -3914,29 +3914,28 @@
       "last_seen": "2026-08-22T02:01:46Z",
       "scenarios": {
         "crowdsec/http-technology-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T02:01:46Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T02:01:40Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T02:01:38Z"
         },
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T02:01:30Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 8,
+          "count": 12,
           "first_seen": "2026-08-22T02:01:30Z",
           "last_seen": "2026-08-22T02:01:46Z",
           "payloads": [
-            "GET /adminner.php",
             "GET /file1221.php",
             "GET /inx.php",
             "GET /reviall.php",
@@ -3955,7 +3954,8 @@
             "GET /k.php",
             "GET /w.php",
             "GET /run.php",
-            "GET /gecko.php"
+            "GET /gecko.php",
+            "GET /xiugai.php?p="
           ]
         }
       },
@@ -3969,38 +3969,32 @@
       "last_seen": "2026-08-22T01:47:17Z",
       "scenarios": {
         "crowdsec/http-wordpress-scan": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:47:17Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:47:15Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:47:12Z"
         },
         "crowdsec/http-backdoors-attempts": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:47:10Z"
         },
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:47:05Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 10,
+          "count": 15,
           "first_seen": "2026-08-22T01:47:05Z",
           "last_seen": "2026-08-22T01:47:17Z",
           "payloads": [
-            "GET /wp-load.php",
-            "GET /wp-content/admin.php",
-            "GET /wp-content/themes/index.php",
-            "GET /ccc.php?p=",
-            "GET /reviall.php",
-            "GET /hp2.php",
             "GET /doc.php",
             "GET /too.php",
             "GET /kir.php",
@@ -4014,7 +4008,13 @@
             "GET /3PJcpMFsD8B.php",
             "GET /new.php",
             "GET /bladeacss.php",
-            "GET /shapes.php"
+            "GET /shapes.php",
+            "GET /wp-ws68.php?p=",
+            "GET /parx.php",
+            "GET /fig.php",
+            "GET /qaivbilq.php",
+            "GET /saka.php",
+            "GET /hobi.php"
           ]
         }
       },
@@ -4028,33 +4028,32 @@
       "last_seen": "2026-08-22T01:34:13Z",
       "scenarios": {
         "crowdsec/http-crawl-non_statics": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:34:13Z"
         },
         "crowdsec/http-technology-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:34:11Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:34:09Z"
         },
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:34:05Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:34:05Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 10,
+          "count": 15,
           "first_seen": "2026-08-22T01:34:05Z",
           "last_seen": "2026-08-22T01:34:13Z",
           "payloads": [
-            "GET /phpinfo.php.save",
             "GET /service-account.json",
             "GET /sa.json",
             "GET /gcp-key.json",
@@ -4073,7 +4072,8 @@
             "GET /.env.remote",
             "GET /.env.bak",
             "GET /.env.backup",
-            "GET /phpinfo.php~"
+            "GET /phpinfo.php~",
+            "GET /info.php.bak"
           ]
         }
       },
@@ -4087,17 +4087,17 @@
       "last_seen": "2026-08-22T01:28:38Z",
       "scenarios": {
         "crowdsec/http-wordpress-scan": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:28:38Z"
         },
         "crowdsec/http-probing": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T01:28:35Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 4,
+          "count": 6,
           "first_seen": "2026-08-22T01:28:35Z",
           "last_seen": "2026-08-22T01:28:38Z",
           "payloads": [
@@ -4126,13 +4126,13 @@
       "last_seen": "2026-08-22T08:52:18Z",
       "scenarios": {
         "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T08:52:18Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-22T08:52:18Z",
           "last_seen": "2026-08-22T08:52:18Z",
           "sids": [
@@ -4154,13 +4154,13 @@
       "last_seen": "2026-08-22T04:57:12Z",
       "scenarios": {
         "suricata/SURICATA HTTP unable to match response to request": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T04:57:12Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-22T04:57:12Z",
           "last_seen": "2026-08-22T04:57:12Z",
           "sids": [
@@ -4179,13 +4179,13 @@
       "last_seen": "2026-08-22T04:11:38Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T04:11:38Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-22T04:11:38Z",
           "last_seen": "2026-08-22T04:11:38Z",
           "sids": [
@@ -4207,13 +4207,13 @@
       "last_seen": "2026-08-22T03:41:20Z",
       "scenarios": {
         "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T03:41:20Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-22T03:41:20Z",
           "last_seen": "2026-08-22T03:41:20Z",
           "sids": [
@@ -4235,13 +4235,13 @@
       "last_seen": "2026-08-21T23:12:31Z",
       "scenarios": {
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-21T23:12:31Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-21T23:12:31Z",
           "last_seen": "2026-08-21T23:12:31Z",
           "sids": [
@@ -4291,13 +4291,13 @@
       "last_seen": "2026-08-22T09:16:54Z",
       "scenarios": {
         "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers": {
-          "count": 2,
+          "count": 3,
           "last_seen": "2026-08-22T09:16:54Z"
         }
       },
       "sources": {
         "suricata": {
-          "count": 2,
+          "count": 3,
           "first_seen": "2026-08-22T09:16:54Z",
           "last_seen": "2026-08-22T09:16:54Z",
           "sids": [
