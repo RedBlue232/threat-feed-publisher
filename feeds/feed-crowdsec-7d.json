@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T10:00:00Z",
+  "generated_at": "2026-08-22T11:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -1698,9 +1698,6 @@
       "asn": "6939",
       "asn_name": "HURRICANE - Hurricane Electric LLC",
       "asn_prefix": "216.218.128.0/17",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
       "payloads": [
         "GET /remote/logincheck"
       ]
@@ -3005,7 +3002,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /adminner.php",
         "GET /file1221.php",
         "GET /inx.php",
         "GET /reviall.php",
@@ -3024,7 +3020,8 @@
         "GET /k.php",
         "GET /w.php",
         "GET /run.php",
-        "GET /gecko.php"
+        "GET /gecko.php",
+        "GET /xiugai.php?p="
       ]
     },
     {
@@ -3049,12 +3046,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /wp-load.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-content/themes/index.php",
-        "GET /ccc.php?p=",
-        "GET /reviall.php",
-        "GET /hp2.php",
         "GET /doc.php",
         "GET /too.php",
         "GET /kir.php",
@@ -3068,7 +3059,13 @@
         "GET /3PJcpMFsD8B.php",
         "GET /new.php",
         "GET /bladeacss.php",
-        "GET /shapes.php"
+        "GET /shapes.php",
+        "GET /wp-ws68.php?p=",
+        "GET /parx.php",
+        "GET /fig.php",
+        "GET /qaivbilq.php",
+        "GET /saka.php",
+        "GET /hobi.php"
       ]
     },
     {
@@ -3093,7 +3090,6 @@
         "mwl:cloud=\"aws\""
       ],
       "payloads": [
-        "GET /phpinfo.php.save",
         "GET /service-account.json",
         "GET /sa.json",
         "GET /gcp-key.json",
@@ -3112,7 +3108,8 @@
         "GET /.env.remote",
         "GET /.env.bak",
         "GET /.env.backup",
-        "GET /phpinfo.php~"
+        "GET /phpinfo.php~",
+        "GET /info.php.bak"
       ]
     },
     {
