@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T01:00:00Z",
+  "generated_at": "2026-08-25T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -646,60 +646,6 @@
       ]
     },
     {
-      "ip": "142.93.117.153",
-      "family": "v4",
-      "first_seen": "2026-08-18T07:00:00Z",
-      "last_seen": "2026-08-18T07:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "142.93.112.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "157.10.7.199",
-      "family": "v4",
-      "first_seen": "2026-08-18T06:00:00Z",
-      "last_seen": "2026-08-18T06:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "152605",
-      "asn_name": "ZCOMNETWORKS-AS-AP - Z COM NETWORKS",
-      "asn_prefix": "157.10.7.0/24",
-      "payloads": [
-        "POST /HNAP1/"
-      ]
-    },
-    {
-      "ip": "45.79.211.97",
-      "family": "v4",
-      "first_seen": "2026-08-18T05:00:00Z",
-      "last_seen": "2026-08-18T05:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
-      "asn_prefix": "45.79.192.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
       "ip": "169.58.152.81",
       "family": "v4",
       "first_seen": "2026-08-22T14:00:00Z",
@@ -1041,6 +987,69 @@
       ],
       "payloads": [
         "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.309.0_7ba9190e1e930312c9af9603e53a766efabd9a93.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "172.189.127.21",
+      "family": "v4",
+      "first_seen": "2026-08-25T06:00:00Z",
+      "last_seen": "2026-08-25T06:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /d/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.323.0_408b077cb8a345da5fdf37b40385cb7a7f239003.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "172.212.104.63",
+      "family": "v4",
+      "first_seen": "2026-08-25T01:00:00Z",
+      "last_seen": "2026-08-25T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/text/list"
+      ]
+    },
+    {
+      "ip": "20.64.104.237",
+      "family": "v4",
+      "first_seen": "2026-08-25T12:00:00Z",
+      "last_seen": "2026-08-25T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
       ]
     }
   ]
