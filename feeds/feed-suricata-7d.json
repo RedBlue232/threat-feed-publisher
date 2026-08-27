@@ -1,63 +1,13 @@
 {
-  "generated_at": "2026-08-26T13:00:00Z",
+  "generated_at": "2026-08-27T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 50,
+    "v4": 50,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "185.177.72.56",
-      "family": "v4",
-      "first_seen": "2026-08-19T13:00:00Z",
-      "last_seen": "2026-08-19T13:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-cve-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan",
-        "suricata/ET WEB_SERVER PHP tags in HTTP POST"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "211590",
-      "asn_name": "BUCKLOG Bucklog SARL",
-      "asn_prefix": "185.177.72.0/24",
-      "payloads": [
-        "GET /.backup/phpinfo.php",
-        "GET /2020/phpinfo.php",
-        "GET /2021/phpinfo.php",
-        "GET /.env.testing",
-        "GET /.environment",
-        "GET /.envrc",
-        "GET /.envs/.production/.django",
-        "GET /.env~",
-        "GET /.git",
-        "GET /wp-json/gravitysmtp/v1/tests/mock-data?page=gravitysmtp-settings",
-        "GET /.env",
-        "GET /.git/config",
-        "GET /%2F.aws%2Fcredentials",
-        "GET /%2F.env",
-        "GET /%2Fbackend%2F.env",
-        "GET /backend/.env",
-        "GET /.aws/credentials",
-        "GET /.aws/config",
-        "GET /.aws/.env",
-        "GET /website/.env",
-        "POST /laravel/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "POST /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "POST /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
-      ]
-    },
     {
       "ip": "52.188.81.67",
       "family": "v4",
@@ -392,66 +342,6 @@
       "asn_prefix": "72.14.176.0/20",
       "payloads": [
         "GET /"
-      ]
-    },
-    {
-      "ip": "18.116.101.220",
-      "family": "v4",
-      "first_seen": "2026-08-19T23:00:00Z",
-      "last_seen": "2026-08-19T23:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "18.116.0.0/14",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ]
-    },
-    {
-      "ip": "172.189.127.22",
-      "family": "v4",
-      "first_seen": "2026-08-19T19:00:00Z",
-      "last_seen": "2026-08-19T19:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /d/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.239.0_ab6a7e13e7f8d9c0d8150382c995c250d6805a6e.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "20.163.32.168",
-      "family": "v4",
-      "first_seen": "2026-08-19T17:00:00Z",
-      "last_seen": "2026-08-19T17:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
       ]
     },
     {
@@ -1068,6 +958,66 @@
       ],
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "172.189.127.25",
+      "family": "v4",
+      "first_seen": "2026-08-26T20:00:00Z",
+      "last_seen": "2026-08-26T20:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.338.0_51359e88ba0e5e925a2ff20d5b6733c90b1f7b9f.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "172.189.127.14",
+      "family": "v4",
+      "first_seen": "2026-08-26T19:00:00Z",
+      "last_seen": "2026-08-26T19:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.332.0_f76f5d7e40283296abeda788652fc6ae4505d656.exe?cacheHostOrigin=au.download.windowsupdate.com"
+      ]
+    },
+    {
+      "ip": "192.161.49.2",
+      "family": "v4",
+      "first_seen": "2026-08-26T23:00:00Z",
+      "last_seen": "2026-08-26T23:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "23273",
+      "asn_name": "HOSTP-LA - HostPapa",
+      "asn_prefix": "192.161.49.0/24",
+      "payloads": [
+        "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"
       ]
     }
   ]
