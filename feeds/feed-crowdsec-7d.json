@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-27T12:00:00Z",
+  "generated_at": "2026-08-28T00:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 79,
-    "v4": 79,
+    "total": 84,
+    "v4": 84,
     "v6": 0
   },
   "items": [
@@ -69,72 +69,6 @@
       "payloads": [
         "GET /ab2g",
         "GET /ab2h"
-      ]
-    },
-    {
-      "ip": "199.45.154.115",
-      "family": "v4",
-      "first_seen": "2026-08-20T22:00:00Z",
-      "last_seen": "2026-08-20T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "35.227.97.26",
-      "family": "v4",
-      "first_seen": "2026-08-20T20:00:00Z",
-      "last_seen": "2026-08-20T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "35.227.96.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /public/admin.json",
-        "GET /phpinfo.php",
-        "GET /docker-compose.yaml",
-        "GET /.ssh/id_rsa",
-        "GET /.ssh/id_dsa",
-        "GET /.ssh/authorized_keys",
-        "GET /.ssh/known_hosts",
-        "GET /server.key",
-        "GET /.aws/credentials",
-        "GET /.aws/config",
-        "GET /.git/config",
-        "GET /.git/HEAD",
-        "GET /.env",
-        "GET /",
-        "GET /wp-json",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /.git-credentials",
-        "POST /graphql",
-        "GET /.github/workflows/deploy.yml",
-        "GET /.gitconfig"
       ]
     },
     {
@@ -1037,7 +971,7 @@
       "ip": "34.125.245.56",
       "family": "v4",
       "first_seen": "2026-08-23T21:00:00Z",
-      "last_seen": "2026-08-27T05:00:00Z",
+      "last_seen": "2026-08-27T16:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-crawl-non_statics",
@@ -1218,7 +1152,7 @@
       "ip": "103.98.37.172",
       "family": "v4",
       "first_seen": "2026-08-23T15:00:00Z",
-      "last_seen": "2026-08-27T05:00:00Z",
+      "last_seen": "2026-08-27T16:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "crowdsec/netgear_rce",
@@ -1891,7 +1825,7 @@
       "ip": "34.76.23.80",
       "family": "v4",
       "first_seen": "2026-08-25T17:00:00Z",
-      "last_seen": "2026-08-27T05:00:00Z",
+      "last_seen": "2026-08-27T16:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-crawl-non_statics",
@@ -2456,6 +2390,245 @@
         "GET /wp-0.php",
         "GET /dyt8mjxc3yofbkoriukvgjaCdefault.php",
         "GET /robots.php"
+      ]
+    },
+    {
+      "ip": "20.48.179.39",
+      "family": "v4",
+      "first_seen": "2026-08-27T23:00:00Z",
+      "last_seen": "2026-08-27T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.48.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-login.php",
+        "GET /admin.php/admin.php",
+        "GET /wp-admin/css/colors/modern/",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /filefuns.php",
+        "GET /wp-cron.php",
+        "GET /lock360.php",
+        "GET /wp-theme.php",
+        "GET /2d7433/index.php",
+        "GET /images.php",
+        "GET /ops.php",
+        "GET /4PJcpMFsD8B.php"
+      ]
+    },
+    {
+      "ip": "34.21.130.155",
+      "family": "v4",
+      "first_seen": "2026-08-27T22:00:00Z",
+      "last_seen": "2026-08-27T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.21.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.git/config",
+        "GET /app/.git/config",
+        "GET /src/.git/config",
+        "GET /backend/.git/config",
+        "GET /api/.git/config",
+        "GET /www/.git/config",
+        "GET /var/www/.git/config",
+        "GET /wordpress/.git/config",
+        "GET /html/.git/config",
+        "GET /site/.git/config",
+        "GET /public/.git/config"
+      ]
+    },
+    {
+      "ip": "172.212.194.58",
+      "family": "v4",
+      "first_seen": "2026-08-27T20:00:00Z",
+      "last_seen": "2026-08-27T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /meninbox.php",
+        "GET /run.php",
+        "GET /adminfuns.php",
+        "GET /wp-admin/setup-config.php",
+        "GET /wp-admin/privacy.php",
+        "GET /wp-mails.php",
+        "GET /wp-content/options.php",
+        "GET /wp-content/index.php",
+        "GET /wp-content/cong.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /vpn.php",
+        "GET /aaa.php",
+        "GET /admin.php",
+        "GET /file52.php",
+        "GET /11.php",
+        "GET /fling.php",
+        "GET /w.php",
+        "GET /kir.php",
+        "GET /media.php"
+      ]
+    },
+    {
+      "ip": "34.118.173.141",
+      "family": "v4",
+      "first_seen": "2026-08-27T19:00:00Z",
+      "last_seen": "2026-08-27T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.118.128.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.git/config",
+        "GET /var/www/.git/config",
+        "GET /app/.git/config",
+        "GET /www/.git/config",
+        "GET /backend/.git/config",
+        "GET /src/.git/config",
+        "GET /site/.git/config",
+        "GET /api/.git/config",
+        "GET /htdocs/.git/config",
+        "GET /wordpress/.git/config",
+        "GET /public/.git/config"
+      ]
+    },
+    {
+      "ip": "34.23.97.175",
+      "family": "v4",
+      "first_seen": "2026-08-27T19:00:00Z",
+      "last_seen": "2026-08-27T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.23.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env.bak",
+        "GET /.env.old",
+        "GET /wp-config.php~",
+        "GET /.env.production",
+        "GET /.env.local",
+        "GET /crusader-404-probe",
+        "GET /.env.backup",
+        "GET /.env.prod",
+        "GET /.env",
+        "GET /_ignition/health-check",
+        "GET /.env.dev"
+      ]
+    },
+    {
+      "ip": "34.27.117.6",
+      "family": "v4",
+      "first_seen": "2026-08-27T15:00:00Z",
+      "last_seen": "2026-08-27T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.27.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /env",
+        "GET /.env.save",
+        "GET /.env.local",
+        "GET /wp-config.php.bak",
+        "GET /.env.dev",
+        "GET /.env.example",
+        "GET /wp-config.php~",
+        "GET /actuator/configprops",
+        "GET /.env.bak",
+        "GET /.env.backup",
+        "GET /crusader-404-probe"
+      ]
+    },
+    {
+      "ip": "8.235.62.225",
+      "family": "v4",
+      "first_seen": "2026-08-27T15:00:00Z",
+      "last_seen": "2026-08-27T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "8.235.0.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /public/.git/config",
+        "GET /.git/config",
+        "GET /wordpress/.git/config",
+        "GET /app/.git/config",
+        "GET /html/.git/config",
+        "GET /var/www/.git/config",
+        "GET /www/.git/config",
+        "GET /site/.git/config",
+        "GET /api/.git/config",
+        "GET /src/.git/config",
+        "GET /htdocs/.git/config"
       ]
     }
   ]
