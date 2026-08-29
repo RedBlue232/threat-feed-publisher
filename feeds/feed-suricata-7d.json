@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-28T13:00:00Z",
+  "generated_at": "2026-08-29T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 892,
-    "v4": 892,
+    "total": 897,
+    "v4": 897,
     "v6": 0
   },
   "items": [
@@ -528,8 +528,9 @@
       "ip": "77.239.124.102",
       "family": "v4",
       "first_seen": "2026-08-23T16:00:00Z",
-      "last_seen": "2026-08-27T16:00:00Z",
+      "last_seen": "2026-08-28T13:00:00Z",
       "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 17",
         "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 18"
       ],
       "sources": [
@@ -6676,7 +6677,7 @@
       "ip": "172.189.127.12",
       "family": "v4",
       "first_seen": "2026-08-27T05:00:00Z",
-      "last_seen": "2026-08-27T16:00:00Z",
+      "last_seen": "2026-08-28T23:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
       ],
@@ -6688,6 +6689,9 @@
       "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.381.0_7581327a2a2c18bfe549f8b3077f75c69ea695f8.exe?cacheHostOrigin=3.au.download.windowsupdate.com"
       ]
     },
     {
@@ -14788,6 +14792,102 @@
       "asn_prefix": "95.173.161.0/24",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "138.197.183.214",
+      "family": "v4",
+      "first_seen": "2026-08-28T20:00:00Z",
+      "last_seen": "2026-08-28T20:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.197.176.0/20"
+    },
+    {
+      "ip": "35.181.43.254",
+      "family": "v4",
+      "first_seen": "2026-08-28T17:00:00Z",
+      "last_seen": "2026-08-28T17:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "35.181.0.0/16",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "34.158.22.165",
+      "family": "v4",
+      "first_seen": "2026-08-28T17:00:00Z",
+      "last_seen": "2026-08-28T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.158.16.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /wp-config.php~"
+      ]
+    },
+    {
+      "ip": "134.209.215.49",
+      "family": "v4",
+      "first_seen": "2026-08-28T16:00:00Z",
+      "last_seen": "2026-08-28T16:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "134.209.208.0/20",
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
+    },
+    {
+      "ip": "20.163.39.67",
+      "family": "v4",
+      "first_seen": "2026-08-28T14:00:00Z",
+      "last_seen": "2026-08-28T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /portal/redlion"
       ]
     }
   ]
