@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-31T01:00:00Z",
+  "generated_at": "2026-08-31T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 83,
-    "v4": 83,
+    "total": 84,
+    "v4": 84,
     "v6": 0
   },
   "items": [
@@ -113,108 +113,6 @@
         "GET /cmd.php",
         "GET /4rbvp7.php",
         "GET /0freg0a6xe.php"
-      ]
-    },
-    {
-      "ip": "20.151.9.151",
-      "family": "v4",
-      "first_seen": "2026-08-24T06:00:00Z",
-      "last_seen": "2026-08-24T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.150.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /Capte.php",
-        "GET /beetle.php",
-        "GET /fin.php",
-        "GET /kurtlar.php",
-        "GET /m.php",
-        "GET /anon.php",
-        "GET /admin.php",
-        "GET /cmd.php",
-        "GET /4rbvp7.php"
-      ]
-    },
-    {
-      "ip": "20.169.16.7",
-      "family": "v4",
-      "first_seen": "2026-08-24T02:00:00Z",
-      "last_seen": "2026-08-24T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /man.php",
-        "GET /conf.php",
-        "GET /db.php",
-        "GET /ffile.php",
-        "GET /ff123.php",
-        "GET /a.php",
-        "GET /acces.php",
-        "GET /Sanskrit.php",
-        "GET /133.php"
-      ]
-    },
-    {
-      "ip": "52.141.19.25",
-      "family": "v4",
-      "first_seen": "2026-08-24T01:00:00Z",
-      "last_seen": "2026-08-24T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "52.136.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-load.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-content/themes/index.php",
-        "GET /wp-includes/ID3/about.php",
-        "GET /admin.php/admin.php",
-        "GET /admin.php",
-        "GET /adminner.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /images.php",
-        "GET /222.php",
-        "GET /ops.php",
-        "GET /4PJcpMFsD8B.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /new.php",
-        "GET /confag.php",
-        "GET /9b97ec/index.php",
-        "GET /b9007d/index.php"
       ]
     },
     {
@@ -2379,7 +2277,7 @@
       "ip": "20.151.200.44",
       "family": "v4",
       "first_seen": "2026-08-30T11:00:00Z",
-      "last_seen": "2026-08-30T11:00:00Z",
+      "last_seen": "2026-08-31T03:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-probing",
@@ -2409,7 +2307,8 @@
         "GET /kcs.php",
         "GET /tajj.php",
         "GET /bge.php",
-        "GET /ssh3ll.php"
+        "GET /ssh3ll.php",
+        "GET /wp-admin/js/index.php"
       ]
     },
     {
@@ -2554,9 +2453,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /wp-admin/sc.php",
-        "GET /wp-konfig.php",
-        "GET /public/wp-blog.php",
         "GET /wp-blog.php",
         "GET /sadd.php",
         "GET /application.config.php",
@@ -2573,7 +2469,10 @@
         "GET /ammika.php",
         "GET /broadcasting.php",
         "GET /aws_config.php",
-        "GET /dialog.php"
+        "GET /dialog.php",
+        "GET /adminer-4.7.6-en.php",
+        "GET /wp-admin/css/bolt.php",
+        "GET /wp-konfig.php"
       ]
     },
     {
@@ -2595,6 +2494,149 @@
       ],
       "payloads": [
         "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "4.204.224.164",
+      "family": "v4",
+      "first_seen": "2026-08-31T12:00:00Z",
+      "last_seen": "2026-08-31T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.192.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /reviall.php",
+        "GET /11.php?p=",
+        "GET /File.php",
+        "GET /fi22.php",
+        "GET /3PJcpMFsD8B.php",
+        "GET /a3ampzmbipnkpxeqhqpsanCdefault.php",
+        "GET /admin.php",
+        "GET /adminfuns.php",
+        "GET /admin.php?",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /nail.php",
+        "GET /or.php",
+        "GET /verox.php",
+        "GET /ba.php?p=",
+        "GET /great.php",
+        "GET /dyt8mjxc3yofbkoriukvgjaCdefault.php",
+        "GET /robots.php",
+        "GET /sky.php",
+        "GET /yj09.php"
+      ]
+    },
+    {
+      "ip": "158.23.18.78",
+      "family": "v4",
+      "first_seen": "2026-08-31T06:00:00Z",
+      "last_seen": "2026-08-31T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "158.23.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /ee.php",
+        "GET /css.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /bulet.php",
+        "GET /plugins.php?p=",
+        "GET /wpxml.php",
+        "GET /wp-admin/css/colors/coffee/alyan.php",
+        "GET /wp-admin/css/colors/coffee/marin.php",
+        "GET /wp-admin/css/colors/coffee/redn.php",
+        "GET /run.php",
+        "GET /wp-mail.php",
+        "GET /BDKR28WP.php"
+      ]
+    },
+    {
+      "ip": "66.132.195.43",
+      "family": "v4",
+      "first_seen": "2026-08-31T04:00:00Z",
+      "last_seen": "2026-08-31T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "35.185.36.65",
+      "family": "v4",
+      "first_seen": "2026-08-31T03:00:00Z",
+      "last_seen": "2026-08-31T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "35.185.32.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /proc/self/environ",
+        "GET /@fs/proc/self/environ?import&raw??",
+        "GET /_image?href=/proc/self/environ",
+        "GET /_image?href=/../../../.env",
+        "GET /config/storage.yml",
+        "GET /.streamlit/secrets.toml",
+        "GET /config.py",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /config.env",
+        "GET /api/uploads/..%2F..%2F..%2F..%2F.env",
+        "GET /uploads/..%2F..%2F..%2F..%2F.env",
+        "GET /dashboard%2F.env",
+        "GET /api%2F.env",
+        "GET /",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "GET /api/uploads/..%2F..%2F..%2F..%2F..%2Fproc/self/environ",
+        "POST /graphql",
+        "GET /@fs/.env?url&raw??",
+        "GET /@fs/.env?raw&url??"
       ]
     }
   ]
