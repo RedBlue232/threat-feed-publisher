@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-01T13:00:00Z",
+  "generated_at": "2026-09-02T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 974,
-    "v4": 974,
+    "total": 979,
+    "v4": 979,
     "v6": 0
   },
   "items": [
@@ -987,7 +987,7 @@
       "ip": "172.189.127.14",
       "family": "v4",
       "first_seen": "2026-08-26T19:00:00Z",
-      "last_seen": "2026-08-27T16:00:00Z",
+      "last_seen": "2026-09-01T16:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
       ],
@@ -1001,7 +1001,8 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.332.0_f76f5d7e40283296abeda788652fc6ae4505d656.exe?cacheHostOrigin=au.download.windowsupdate.com"
+        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.332.0_f76f5d7e40283296abeda788652fc6ae4505d656.exe?cacheHostOrigin=au.download.windowsupdate.com",
+        "GET /d/msdownload/update/software/defu/2026/09/am_delta_patch_1.457.429.0_2479fcd93d027942546a12858eb6b1c9f2186c94.exe?cacheHostOrigin=au.download.windowsupdate.com"
       ]
     },
     {
@@ -16414,6 +16415,100 @@
       "asn_prefix": "49.233.32.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "43.165.125.66",
+      "family": "v4",
+      "first_seen": "2026-09-01T15:00:00Z",
+      "last_seen": "2026-09-01T15:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.165.64.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "43.157.150.69",
+      "family": "v4",
+      "first_seen": "2026-09-01T15:00:00Z",
+      "last_seen": "2026-09-01T15:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.157.128.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "49.51.253.26",
+      "family": "v4",
+      "first_seen": "2026-09-01T14:00:00Z",
+      "last_seen": "2026-09-01T14:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "49.51.252.0/23",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "163.7.1.156",
+      "family": "v4",
+      "first_seen": "2026-09-01T13:00:00Z",
+      "last_seen": "2026-09-01T13:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "150436",
+      "asn_name": "BYTEPLUS-AS-AP - Byteplus Pte. Ltd.",
+      "asn_prefix": "163.7.0.0/21",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "13.56.203.85",
+      "family": "v4",
+      "first_seen": "2026-09-01T22:00:00Z",
+      "last_seen": "2026-09-01T22:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Response excessive header repetition"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "13.56.0.0/16",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /EF/makeKey?clientId=1788280894748&ver=4.1.6&userId=223660194&domain=G&ts=1788283461310&numRevive=179&numSoulRest=0&accountId=286485862&server=6&exp=65537&n=1&mod=iWxWHC7j64kXKJfH2cBHgLLO4tO33A00+7c4W532U7xplzPDZl+Q0jYaFLhy0tt4y97wqXqIIIIwRm9kGDnS/w==&u=getTime&lang=FR&tqx=c858ce4e18f41e37bdc774eff49b719f&",
+        "GET /EF/getTime?data=Iu/ynhBCW/upcc8CdjTIt1sNGtH+mU07Hs+WtEbt5Gkl0qexEfwBKKv0bqg0wyVm2L4UPrpC5N5+/MCFHOPxKgue/0yWCLIDpF+bUSnw7YlBWzIGHQWRfwhCU4hUf847zInI7RnlKJcXY0LQqN83JUE74Gw1OaZNRNqLtc7ggFlALbz5oIChrBcRByDVr6uuPT9KO4QlioMFmV7CzzJlT/Gj0yT8dSxMVW6SVavVHGf9k5JHZ32eJtYLBF4BQJ0kxeLqicYdb/jJESwEg6PAXG50fariqvncXVTaXlF+B+Ob4IvKvjWZSJ3jgdlCsMgCmsT9kLtVVmsMv5zKMK4CaQ=="
       ]
     }
   ]
