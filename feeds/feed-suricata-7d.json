@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02T13:00:00Z",
+  "generated_at": "2026-09-03T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 986,
-    "v4": 986,
+    "total": 988,
+    "v4": 988,
     "v6": 0
   },
   "items": [
@@ -1162,7 +1162,7 @@
       "ip": "172.189.127.0",
       "family": "v4",
       "first_seen": "2026-08-27T05:00:00Z",
-      "last_seen": "2026-08-27T16:00:00Z",
+      "last_seen": "2026-09-02T16:00:00Z",
       "scenarios": [
         "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
       ],
@@ -1174,6 +1174,10 @@
       "asn_prefix": "172.160.0.0/11",
       "tags": [
         "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /d/msdownload/update/software/defu/2026/09/am_base_patch1_7068a0b807e7dfadc4b03df8194b3dfe1d99b9be.exe?cacheHostOrigin=au.download.windowsupdate.com",
+        "GET /d/msdownload/update/software/defu/2026/09/am_delta_66d1cbeb866e761da0c4bbe51b24a8fa2024add5.exe?cacheHostOrigin=au.download.windowsupdate.com"
       ]
     },
     {
@@ -16538,8 +16542,6 @@
         "mwl:cloud=\"gcp\""
       ],
       "payloads": [
-        "GET /admin/.env",
-        "GET /_profiler/phpinfo",
         "GET /phpinfo.php",
         "GET /.aws/credentials.old",
         "GET /aws/credentials.json",
@@ -16558,6 +16560,8 @@
         "GET /.git-credentials",
         "GET /aws/credentials",
         "GET /static../.aws/credentials",
+        "GET /info.php",
+        "GET /admin/.env",
         "GET /static../etc/passwd",
         "GET /media../etc/passwd",
         "GET /assets../../../etc/passwd",
@@ -16702,6 +16706,45 @@
       ],
       "payloads": [
         "GET /proc/self/environ"
+      ]
+    },
+    {
+      "ip": "192.161.173.78",
+      "family": "v4",
+      "first_seen": "2026-09-02T20:00:00Z",
+      "last_seen": "2026-09-02T20:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "192.161.173.0/24",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "20.40.253.27",
+      "family": "v4",
+      "first_seen": "2026-09-03T00:00:00Z",
+      "last_seen": "2026-09-03T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.40.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /portal/redlion"
       ]
     }
   ]
