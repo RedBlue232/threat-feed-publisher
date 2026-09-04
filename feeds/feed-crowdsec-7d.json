@@ -1,213 +1,13 @@
 {
-  "generated_at": "2026-09-04T01:00:00Z",
+  "generated_at": "2026-09-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 82,
-    "v4": 82,
+    "total": 81,
+    "v4": 81,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.63.81.20",
-      "family": "v4",
-      "first_seen": "2026-08-28T10:00:00Z",
-      "last_seen": "2026-08-28T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /hypo.php",
-        "GET /Hd.php",
-        "GET /im.php",
-        "GET /fc.php",
-        "GET /du.php",
-        "GET /ke.php",
-        "GET /wp-login.php",
-        "GET /admin.php/admin.php",
-        "GET /wp-admin/css/colors/modern/",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /filefuns.php",
-        "GET /wp-cron.php",
-        "GET /lock360.php",
-        "GET /wp-theme.php",
-        "GET /2d7433/index.php",
-        "GET /images.php",
-        "GET /ops.php",
-        "GET /4PJcpMFsD8B.php"
-      ]
-    },
-    {
-      "ip": "66.132.224.238",
-      "family": "v4",
-      "first_seen": "2026-08-28T07:00:00Z",
-      "last_seen": "2026-08-28T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.195.96",
-      "family": "v4",
-      "first_seen": "2026-08-28T07:00:00Z",
-      "last_seen": "2026-08-28T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "34.139.62.117",
-      "family": "v4",
-      "first_seen": "2026-08-28T04:00:00Z",
-      "last_seen": "2026-08-28T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.139.48.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.aws/credentials",
-        "GET /api/settings.yml",
-        "GET /app/config/mail.php",
-        "GET /app/config/parameters.yaml",
-        "GET /application.json",
-        "GET /application.log",
-        "GET /app.json",
-        "GET /admin/phpinfo.php",
-        "GET /api/admin/phpinfo.php",
-        "GET /Admin/phpinfo.php",
-        "GET /access.log",
-        "GET /actuator/httptrace",
-        "GET /actuator/heapdump",
-        "GET /actuator/logfile",
-        "GET /actuator/trace",
-        "GET /actuator/threaddump",
-        "GET /api/actuator/env",
-        "GET /actuator/auditevents",
-        "GET /actuator/configprops",
-        "GET /api/actuator/configprops"
-      ]
-    },
-    {
-      "ip": "34.12.134.79",
-      "family": "v4",
-      "first_seen": "2026-08-28T02:00:00Z",
-      "last_seen": "2026-08-28T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.12.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /debug/default/view?panel=config",
-        "GET /google-services.json",
-        "GET /.github/workflows/ci.yml",
-        "GET /claude_desktop_config.json",
-        "GET /api/file?path=../../.env",
-        "GET /@fs/proc/1/environ?import&raw??",
-        "GET /static../.env",
-        "GET /aws/credentials",
-        "GET /app/.env",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/home/ec2-user/.aws/credentials?raw??",
-        "GET /actuator/env",
-        "GET /.git-credentials",
-        "GET /?file=../../../../etc/passwd",
-        "GET /@fs/root/.aws/credentials?raw??",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /files../etc/passwd",
-        "GET /read?url=file:///proc/self/environ",
-        "GET /download?file=../../../../etc/passwd",
-        "GET /@fs/proc/self/environ",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /proc/self/environ",
-        "GET /static../etc/passwd",
-        "GET /media../etc/passwd",
-        "GET /assets../../../etc/passwd"
-      ]
-    },
-    {
-      "ip": "66.132.195.77",
-      "family": "v4",
-      "first_seen": "2026-08-28T01:00:00Z",
-      "last_seen": "2026-08-28T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /wiki"
-      ]
-    },
     {
       "ip": "8.234.203.86",
       "family": "v4",
@@ -2253,7 +2053,7 @@
       "ip": "193.32.204.199",
       "family": "v4",
       "first_seen": "2026-09-03T05:00:00Z",
-      "last_seen": "2026-09-03T05:00:00Z",
+      "last_seen": "2026-09-04T12:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-sensitive-files"
@@ -2276,7 +2076,15 @@
         "GET /portal/.git/config",
         "GET /site/.git/config",
         "GET /core/.git/config",
-        "GET /app/.git/config"
+        "GET /app/.git/config",
+        "GET /prod/.git/config",
+        "GET /deploy/.git/config",
+        "GET /media/.git/config",
+        "GET /themes/.git/config",
+        "GET /assets/.git/config",
+        "GET /www/.git/config",
+        "GET /dashboard/.git/config",
+        "GET /v2/.git/config"
       ]
     },
     {
@@ -2447,6 +2255,156 @@
         "GET /var/www/.git/config",
         "GET /wordpress/.git/config",
         "GET /site/.git/config"
+      ]
+    },
+    {
+      "ip": "35.233.68.223",
+      "family": "v4",
+      "first_seen": "2026-09-04T12:00:00Z",
+      "last_seen": "2026-09-04T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "35.233.0.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.env.bak",
+        "GET /.env.backup",
+        "GET /.env.old",
+        "GET /wp-config.php.bak",
+        "GET /.env.example",
+        "GET /.env.production",
+        "GET /.env.local",
+        "GET /env",
+        "GET /.env.dev",
+        "GET /actuator/configprops"
+      ]
+    },
+    {
+      "ip": "34.64.185.156",
+      "family": "v4",
+      "first_seen": "2026-09-04T05:00:00Z",
+      "last_seen": "2026-09-04T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.64.176.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /admin/phpinfo.php",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "51.68.236.92",
+      "family": "v4",
+      "first_seen": "2026-09-04T04:00:00Z",
+      "last_seen": "2026-09-04T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "35.190.235.128",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "35.190.224.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env.staging",
+        "GET /.env.local",
+        "GET /.env",
+        "GET /v1/.env",
+        "GET /.env.bak",
+        "GET /@fs/etc/passwd?raw??",
+        "GET /@fs/proc/self/cmdline?raw??",
+        "GET /proc/self/environ?raw??",
+        "GET /@fs/proc/self/cwd/.aws/credentials?raw??",
+        "GET /",
+        "GET /@fs/.env?raw??",
+        "GET /@fs/proc/self/environ?raw??",
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??",
+        "GET /.env?raw??",
+        "GET /@fs/.env.development?raw??",
+        "GET /@fs/.env.staging?raw??",
+        "GET /@fs/home/admin/.aws/credentials?raw??",
+        "GET /@fs/home/node/.aws/config?raw??",
+        "GET /@fs/root/.aws/credentials?raw??"
+      ]
+    },
+    {
+      "ip": "51.68.111.199",
+      "family": "v4",
+      "first_seen": "2026-09-04T02:00:00Z",
+      "last_seen": "2026-09-04T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
       ]
     }
   ]

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-04T01:00:00Z",
+  "generated_at": "2026-09-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 114,
-    "v4": 114,
+    "total": 120,
+    "v4": 120,
     "v6": 0
   },
   "items": [
@@ -253,99 +253,6 @@
       "payloads": [
         "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.350.0_d382bc1380909f4289d42948f1980f43a6f36ef3.exe?cacheHostOrigin=au.download.windowsupdate.com",
         "GET /d/msdownload/update/software/defu/2026/09/am_delta_patch_1.457.442.0_16dd2a29c89193c6fb3fe6f55c6d21dd72f865e9.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "34.12.134.79",
-      "family": "v4",
-      "first_seen": "2026-08-28T02:00:00Z",
-      "last_seen": "2026-08-28T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.12.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /debug/default/view?panel=config",
-        "GET /google-services.json",
-        "GET /.github/workflows/ci.yml",
-        "GET /claude_desktop_config.json",
-        "GET /api/file?path=../../.env",
-        "GET /@fs/proc/1/environ?import&raw??",
-        "GET /static../.env",
-        "GET /aws/credentials",
-        "GET /app/.env",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/home/ec2-user/.aws/credentials?raw??",
-        "GET /actuator/env",
-        "GET /.git-credentials",
-        "GET /?file=../../../../etc/passwd",
-        "GET /@fs/root/.aws/credentials?raw??",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /files../etc/passwd",
-        "GET /read?url=file:///proc/self/environ",
-        "GET /download?file=../../../../etc/passwd",
-        "GET /@fs/proc/self/environ",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /proc/self/environ",
-        "GET /static../etc/passwd",
-        "GET /media../etc/passwd",
-        "GET /assets../../../etc/passwd"
-      ]
-    },
-    {
-      "ip": "45.79.207.71",
-      "family": "v4",
-      "first_seen": "2026-08-28T03:00:00Z",
-      "last_seen": "2026-08-28T03:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP Akamai Connected Cloud",
-      "asn_prefix": "45.79.192.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "95.173.161.147",
-      "family": "v4",
-      "first_seen": "2026-08-28T06:00:00Z",
-      "last_seen": "2026-08-28T06:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "51559",
-      "asn_name": "NETINTERNET Netinternet Bilisim Teknolojileri AS",
-      "asn_prefix": "95.173.161.0/24",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
       ]
     },
     {
@@ -2329,6 +2236,197 @@
       "asn_prefix": "167.99.0.0/20",
       "payloads": [
         "GET /index.html"
+      ]
+    },
+    {
+      "ip": "172.70.223.103",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.70.223.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
+      ]
+    },
+    {
+      "ip": "172.68.85.174",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.68.85.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
+      ]
+    },
+    {
+      "ip": "172.71.24.34",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.71.24.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/proc/self/environ?raw??"
+      ]
+    },
+    {
+      "ip": "172.64.215.96",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.64.215.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
+        "GET /@fs/etc/passwd?raw??"
+      ]
+    },
+    {
+      "ip": "172.70.223.104",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.70.223.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
+      ]
+    },
+    {
+      "ip": "172.64.215.160",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.64.215.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
+        "GET /@fs/etc/passwd?raw??"
+      ]
+    },
+    {
+      "ip": "172.71.24.24",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.71.24.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/proc/self/environ?raw??"
+      ]
+    },
+    {
+      "ip": "172.68.85.229",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.68.85.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
+      ]
+    },
+    {
+      "ip": "172.70.223.246",
+      "family": "v4",
+      "first_seen": "2026-09-04T03:00:00Z",
+      "last_seen": "2026-09-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.70.223.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
       ]
     }
   ]
