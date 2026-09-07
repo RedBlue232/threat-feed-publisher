@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-06T13:00:00Z",
+  "generated_at": "2026-09-07T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 195,
-    "v4": 195,
+    "total": 184,
+    "v4": 184,
     "v6": 0
   },
   "items": [
@@ -75,25 +75,6 @@
       ]
     },
     {
-      "ip": "45.84.107.172",
-      "family": "v4",
-      "first_seen": "2026-08-27T05:00:00Z",
-      "last_seen": "2026-08-30T15:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 104",
-        "suricata/ET TOR Known Tor Exit Node Traffic group 120"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "214503",
-      "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
       "ip": "172.189.127.8",
       "family": "v4",
       "first_seen": "2026-08-27T05:00:00Z",
@@ -113,27 +94,6 @@
       "payloads": [
         "GET /d/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.362.0_88261a457fb720e4fa63724b888a857b51679b36.exe?cacheHostOrigin=au.download.windowsupdate.com",
         "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.429.0_8a936bbb65c3e68ce33447a654b32a16aaf12d46.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "172.189.127.23",
-      "family": "v4",
-      "first_seen": "2026-08-27T05:00:00Z",
-      "last_seen": "2026-08-30T16:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.396.0_1430eaa401348c71e2c951231adfc8db5ced8ac8.exe?cacheHostOrigin=au.download.windowsupdate.com"
       ]
     },
     {
@@ -194,326 +154,6 @@
         "GET /bge.php",
         "GET /ssh3ll.php",
         "GET /wp-admin/js/index.php"
-      ]
-    },
-    {
-      "ip": "4.205.62.107",
-      "family": "v4",
-      "first_seen": "2026-08-31T00:00:00Z",
-      "last_seen": "2026-08-31T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "4.192.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-blog.php",
-        "GET /sadd.php",
-        "GET /application.config.php",
-        "GET /xp.php",
-        "GET /g3.php",
-        "GET /25.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /cloud.php",
-        "GET /kerang.php",
-        "GET /rem.php",
-        "GET /min.php",
-        "GET /saiga.php",
-        "GET /ammika.php",
-        "GET /broadcasting.php",
-        "GET /aws_config.php",
-        "GET /dialog.php",
-        "GET /adminer-4.7.6-en.php",
-        "GET /wp-admin/css/bolt.php",
-        "GET /wp-konfig.php"
-      ]
-    },
-    {
-      "ip": "13.86.115.81",
-      "family": "v4",
-      "first_seen": "2026-08-30T14:00:00Z",
-      "last_seen": "2026-08-30T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "13.64.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "129.226.193.111",
-      "family": "v4",
-      "first_seen": "2026-08-30T23:00:00Z",
-      "last_seen": "2026-08-30T23:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "129.226.192.0/22",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "129.211.229.121",
-      "family": "v4",
-      "first_seen": "2026-08-30T22:00:00Z",
-      "last_seen": "2026-08-30T22:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "45090",
-      "asn_name": "TENCENT-NET-AP - Shenzhen Tencent Computer Systems Company Limited",
-      "asn_prefix": "129.211.192.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.135.142.7",
-      "family": "v4",
-      "first_seen": "2026-08-30T22:00:00Z",
-      "last_seen": "2026-08-30T22:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.135.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "42.233.105.132",
-      "family": "v4",
-      "first_seen": "2026-08-30T21:00:00Z",
-      "last_seen": "2026-08-30T21:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4837",
-      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
-      "asn_prefix": "42.224.0.0/12",
-      "payloads": [
-        "POST /HNAP1/"
-      ]
-    },
-    {
-      "ip": "43.155.188.157",
-      "family": "v4",
-      "first_seen": "2026-08-30T21:00:00Z",
-      "last_seen": "2026-08-30T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.155.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "54.153.46.105",
-      "family": "v4",
-      "first_seen": "2026-08-30T20:00:00Z",
-      "last_seen": "2026-08-30T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Response excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "54.153.0.0/17",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /EF/makeKey?ts=1788109209333&clientId=1788108874556&domain=G&tqx=71837f9092e4ed13712d79bb495eb093&lang=FR&ver=4.1.6&server=6&numRevive=177&exp=65537&mod=SHAicHt61N9Ff/y9frwVUJsMc1wnxyl5zxmq72kfYtpuuYOLhQ5RqKBoY8XUwcYXccnSwsU7zrqxLqbewMhLJQ==&numSoulRest=0&n=1&userId=223660194&u=getTime&accountId=286485862&",
-        "GET /EF/getTime?data=9mfeN9lQR3YABntBpe+ZVndMkqTbp+ugWcniwvdqGVvb5JhMYxBVbX9F88it5b9GAnpv4vMsEM7teYKl/Dq/tyAGVaJK9n7HO9K1aOTLAMYrIp8JFy+bQco4LPihwmL3csfkHE9AGgNjpn9/Iq8mz7AfYV+xXj+q1QnjrP016jtO4Td6eAjU5R2qf0Ej9OmvHHTpTiL23NjICH/EcpmE8IUsUmbelFMkUSF0A/Hl5rOTW8veNE/1LZ6bJoKl+Rlt"
-      ]
-    },
-    {
-      "ip": "43.164.129.191",
-      "family": "v4",
-      "first_seen": "2026-08-31T00:00:00Z",
-      "last_seen": "2026-08-31T00:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.164.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "170.106.165.76",
-      "family": "v4",
-      "first_seen": "2026-08-30T17:00:00Z",
-      "last_seen": "2026-08-30T17:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "170.106.164.0/23",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.130.78.203",
-      "family": "v4",
-      "first_seen": "2026-08-30T15:00:00Z",
-      "last_seen": "2026-08-30T15:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.130.64.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "109.70.100.14",
-      "family": "v4",
-      "first_seen": "2026-08-30T15:00:00Z",
-      "last_seen": "2026-08-30T15:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 11"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "208323",
-      "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "193.189.100.201",
-      "family": "v4",
-      "first_seen": "2026-08-30T15:00:00Z",
-      "last_seen": "2026-08-30T15:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 65"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "41281",
-      "asn_name": "KEFF KeFF Networks Ltd",
-      "asn_prefix": "193.189.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "43.157.156.190",
-      "family": "v4",
-      "first_seen": "2026-08-30T15:00:00Z",
-      "last_seen": "2026-08-30T15:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.157.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "161.248.239.20",
-      "family": "v4",
-      "first_seen": "2026-08-30T13:00:00Z",
-      "last_seen": "2026-08-30T13:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "150895",
-      "asn_name": "EZTECH-VN - EZ TECHNOLOGY COMPANY LIMITED",
-      "asn_prefix": "161.248.238.0/23",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "43.163.206.70",
-      "family": "v4",
-      "first_seen": "2026-08-30T13:00:00Z",
-      "last_seen": "2026-08-30T13:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.163.192.0/19",
-      "payloads": [
-        "GET /"
       ]
     },
     {
@@ -4623,6 +4263,176 @@
       "asn_prefix": "103.182.135.0/24",
       "payloads": [
         "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "34.53.136.255",
+      "family": "v4",
+      "first_seen": "2026-09-06T14:00:00Z",
+      "last_seen": "2026-09-06T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.53.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /Admin/phpinfo.php",
+        "GET /phpinfo.php",
+        "GET /openai.json",
+        "GET /ai_config.json",
+        "GET /ai.json",
+        "GET /.anthropic",
+        "GET /.openai",
+        "GET /.zsh_history",
+        "GET /backup.sql",
+        "GET /db.sql",
+        "GET /dump.sql",
+        "GET /database.sql",
+        "GET /data.sql",
+        "GET /backup.tgz",
+        "GET /backup.zip",
+        "GET /backup.tar",
+        "GET /htdocs.zip",
+        "GET /www.zip",
+        "GET /site.zip",
+        "GET /public_html.zip"
+      ]
+    },
+    {
+      "ip": "172.68.23.9",
+      "family": "v4",
+      "first_seen": "2026-09-06T21:00:00Z",
+      "last_seen": "2026-09-06T21:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.68.23.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "162.158.41.18",
+      "family": "v4",
+      "first_seen": "2026-09-06T17:00:00Z",
+      "last_seen": "2026-09-06T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "162.158.41.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.71.151.44",
+      "family": "v4",
+      "first_seen": "2026-09-06T17:00:00Z",
+      "last_seen": "2026-09-06T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.71.151.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "162.158.42.222",
+      "family": "v4",
+      "first_seen": "2026-09-06T17:00:00Z",
+      "last_seen": "2026-09-06T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "162.158.42.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "162.158.41.19",
+      "family": "v4",
+      "first_seen": "2026-09-06T17:00:00Z",
+      "last_seen": "2026-09-06T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "162.158.41.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.68.23.10",
+      "family": "v4",
+      "first_seen": "2026-09-06T21:00:00Z",
+      "last_seen": "2026-09-06T21:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.68.23.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
