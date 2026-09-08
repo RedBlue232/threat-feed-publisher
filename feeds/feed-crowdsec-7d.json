@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-07T13:00:00Z",
+  "generated_at": "2026-09-08T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 87,
-    "v4": 87,
+    "total": 90,
+    "v4": 90,
     "v6": 0
   },
   "items": [
@@ -50,74 +50,6 @@
         "GET /mac.php",
         "GET /1.php",
         "GET /4PJcpMFsD8B.php"
-      ]
-    },
-    {
-      "ip": "66.132.195.76",
-      "family": "v4",
-      "first_seen": "2026-08-31T23:00:00Z",
-      "last_seen": "2026-08-31T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /robots.txt"
-      ]
-    },
-    {
-      "ip": "144.91.95.188",
-      "family": "v4",
-      "first_seen": "2026-08-31T22:00:00Z",
-      "last_seen": "2026-08-31T22:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-probing",
-        "crowdsec/thinkphp-cve-2018-20062"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "51167",
-      "asn_name": "CONTABO Contabo GmbH",
-      "asn_prefix": "144.91.94.0/23",
-      "payloads": [
-        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
-        "POST /bin/sh",
-        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
-        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
-      ]
-    },
-    {
-      "ip": "195.37.190.88",
-      "family": "v4",
-      "first_seen": "2026-08-31T14:00:00Z",
-      "last_seen": "2026-08-31T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "680",
-      "asn_name": "DFN Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
-      "asn_prefix": "195.37.0.0/16",
-      "payloads": [
-        "GET /"
       ]
     },
     {
@@ -2618,6 +2550,189 @@
         "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??",
         "GET /@fs/proc/self/environ?raw??",
         "GET /@fs/.env?raw??"
+      ]
+    },
+    {
+      "ip": "34.84.168.240",
+      "family": "v4",
+      "first_seen": "2026-09-08T00:00:00Z",
+      "last_seen": "2026-09-08T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing",
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.84.160.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /_profiler/phpinfo",
+        "GET /phpinfo.php",
+        "GET /app_dev.php/_profiler/phpinfo",
+        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
+        "GET /azure-credentials.json",
+        "GET /@fs/proc/self/environ?import&raw??",
+        "GET /.git/index",
+        "GET /.github/workflows/ci.yml",
+        "GET /.gitlab-ci.yml",
+        "GET /",
+        "GET /__aws_leak_probe_8f878624__",
+        "GET /static../.env",
+        "GET /media../.env",
+        "GET /proc/self/environ",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /static../.aws/credentials",
+        "GET /files../etc/passwd",
+        "GET /static../.azure/credentials",
+        "GET /static../etc/passwd",
+        "GET /@fs/proc/self/environ",
+        "GET /@fs/proc/self/environ?raw??",
+        "GET /media../etc/passwd",
+        "GET /assets../../../etc/passwd"
+      ]
+    },
+    {
+      "ip": "143.198.214.233",
+      "family": "v4",
+      "first_seen": "2026-09-07T23:00:00Z",
+      "last_seen": "2026-09-07T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "143.198.208.0/20",
+      "payloads": [
+        "POST /wp-json/batch/v1"
+      ]
+    },
+    {
+      "ip": "51.68.107.148",
+      "family": "v4",
+      "first_seen": "2026-09-07T22:00:00Z",
+      "last_seen": "2026-09-07T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "51.68.0.0/16",
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "34.51.186.252",
+      "family": "v4",
+      "first_seen": "2026-09-07T19:00:00Z",
+      "last_seen": "2026-09-07T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.51.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /service-account.json",
+        "GET /sa.json",
+        "GET /gcp-key.json",
+        "GET /gcp-credentials.json",
+        "GET /gcp-sa.json",
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "103.46.186.148",
+      "family": "v4",
+      "first_seen": "2026-09-07T18:00:00Z",
+      "last_seen": "2026-09-07T18:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "150462",
+      "asn_name": "IDNIC-AIRLINK-AS-ID - PT Air Lintas Komunikasi",
+      "asn_prefix": "103.46.186.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "66.132.224.231",
+      "family": "v4",
+      "first_seen": "2026-09-07T17:00:00Z",
+      "last_seen": "2026-09-07T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
       ]
     }
   ]
