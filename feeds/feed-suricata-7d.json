@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-09T01:00:00Z",
+  "generated_at": "2026-09-09T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 79,
-    "v4": 79,
+    "total": 76,
+    "v4": 76,
     "v6": 0
   },
   "items": [
@@ -28,220 +28,6 @@
       "payloads": [
         "GET /d/msdownload/update/software/defu/2026/09/am_base_patch1_7068a0b807e7dfadc4b03df8194b3dfe1d99b9be.exe?cacheHostOrigin=au.download.windowsupdate.com",
         "GET /d/msdownload/update/software/defu/2026/09/am_delta_66d1cbeb866e761da0c4bbe51b24a8fa2024add5.exe?cacheHostOrigin=au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "172.189.127.11",
-      "family": "v4",
-      "first_seen": "2026-08-27T05:00:00Z",
-      "last_seen": "2026-09-02T05:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING SUSPICIOUS Dotted Quad Host MZ Response"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /c/msdownload/update/software/defu/2026/08/am_delta_patch_1.457.350.0_d382bc1380909f4289d42948f1980f43a6f36ef3.exe?cacheHostOrigin=au.download.windowsupdate.com",
-        "GET /d/msdownload/update/software/defu/2026/09/am_delta_patch_1.457.442.0_16dd2a29c89193c6fb3fe6f55c6d21dd72f865e9.exe?cacheHostOrigin=2.au.download.windowsupdate.com"
-      ]
-    },
-    {
-      "ip": "34.38.121.96",
-      "family": "v4",
-      "first_seen": "2026-09-02T12:00:00Z",
-      "last_seen": "2026-09-02T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.38.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /.aws/credentials.old",
-        "GET /aws/credentials.json",
-        "GET /fetch?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Finfo",
-        "GET /actuator",
-        "GET /management",
-        "GET /@fs/root/.aws/credentials?import&raw??",
-        "GET /",
-        "GET /__aws_leak_probe_b1d137a4__",
-        "GET /static../.env",
-        "GET /media../.env",
-        "GET /@fs/proc/self/environ",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /app/.env",
-        "GET /download?file=../../../../etc/passwd",
-        "GET /.git-credentials",
-        "GET /aws/credentials",
-        "GET /static../.aws/credentials",
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /static../etc/passwd",
-        "GET /media../etc/passwd",
-        "GET /assets../../../etc/passwd",
-        "GET /?file=../../../../etc/passwd",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /read?url=file:///proc/self/environ",
-        "GET /files../etc/passwd",
-        "GET /proc/self/environ"
-      ]
-    },
-    {
-      "ip": "20.220.204.93",
-      "family": "v4",
-      "first_seen": "2026-09-02T07:00:00Z",
-      "last_seen": "2026-09-02T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /default.php",
-        "GET /wsx.php",
-        "GET /.well-known/zaza.php",
-        "GET /wp-content/plugins/pwnd/aduot.php",
-        "GET /index1.php",
-        "GET /unprecipitously.php",
-        "GET /gmanz.php",
-        "GET /ahax.php",
-        "GET /wp-content/upgrade/a4tech.php",
-        "GET /test.php~"
-      ]
-    },
-    {
-      "ip": "20.83.52.184",
-      "family": "v4",
-      "first_seen": "2026-09-02T03:00:00Z",
-      "last_seen": "2026-09-02T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
-    {
-      "ip": "209.38.17.92",
-      "family": "v4",
-      "first_seen": "2026-09-02T10:00:00Z",
-      "last_seen": "2026-09-02T10:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP Request Body"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "209.38.16.0/20",
-      "payloads": [
-        "POST /wp-json/batch/v1"
-      ]
-    },
-    {
-      "ip": "54.215.76.187",
-      "family": "v4",
-      "first_seen": "2026-09-02T09:00:00Z",
-      "last_seen": "2026-09-02T09:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP Response excessive header repetition"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "54.215.0.0/17",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /EFAccount/makeKey?ver=4.1.6&exp=65537&clientId=1788339694833&n=0&domain=G&mod=ftbbsYHiLcwJXJw0NWJBX9sg+SKtXPF5UULmMsGmheiMRecH8n0pQz6ysOyEWrc5aR7WQ9LjW8BN//bUcfaUdQ==&ts=1788339695492&"
-      ]
-    },
-    {
-      "ip": "66.205.216.58",
-      "family": "v4",
-      "first_seen": "2026-09-02T07:00:00Z",
-      "last_seen": "2026-09-02T07:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13614",
-      "asn_name": "ALLWEST - All West Communications, Inc.",
-      "asn_prefix": "66.205.208.0/20",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "64.236.201.55",
-      "family": "v4",
-      "first_seen": "2026-09-02T02:00:00Z",
-      "last_seen": "2026-09-02T02:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "64.236.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /proc/self/environ"
       ]
     },
     {
@@ -1760,6 +1546,90 @@
       "payloads": [
         "GET /hudson"
       ]
+    },
+    {
+      "ip": "198.211.117.57",
+      "family": "v4",
+      "first_seen": "2026-09-09T10:00:00Z",
+      "last_seen": "2026-09-09T10:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "198.211.116.0/23",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "92.154.95.236",
+      "family": "v4",
+      "first_seen": "2026-09-09T08:00:00Z",
+      "last_seen": "2026-09-09T08:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request unrecognized authorization method"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3215",
+      "asn_name": "AS3215 Orange S.A.",
+      "asn_prefix": "92.154.0.0/17",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "159.223.147.29",
+      "family": "v4",
+      "first_seen": "2026-09-09T06:00:00Z",
+      "last_seen": "2026-09-09T06:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.223.144.0/20"
+    },
+    {
+      "ip": "3.18.221.28",
+      "family": "v4",
+      "first_seen": "2026-09-09T04:00:00Z",
+      "last_seen": "2026-09-09T04:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "3.16.0.0/14",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ]
+    },
+    {
+      "ip": "58.59.233.184",
+      "family": "v4",
+      "first_seen": "2026-09-09T11:00:00Z",
+      "last_seen": "2026-09-09T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4134",
+      "asn_name": "CHINANET-BACKBONE - No.31,Jin-rong Street",
+      "asn_prefix": "58.59.128.0/17"
     }
   ]
 }

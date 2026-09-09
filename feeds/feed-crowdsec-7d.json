@@ -1,203 +1,13 @@
 {
-  "generated_at": "2026-09-09T01:00:00Z",
+  "generated_at": "2026-09-09T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 78,
-    "v4": 78,
+    "total": 74,
+    "v4": 74,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.38.121.96",
-      "family": "v4",
-      "first_seen": "2026-09-02T12:00:00Z",
-      "last_seen": "2026-09-02T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.38.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /.aws/credentials.old",
-        "GET /aws/credentials.json",
-        "GET /fetch?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Finfo",
-        "GET /actuator",
-        "GET /management",
-        "GET /@fs/root/.aws/credentials?import&raw??",
-        "GET /",
-        "GET /__aws_leak_probe_b1d137a4__",
-        "GET /static../.env",
-        "GET /media../.env",
-        "GET /@fs/proc/self/environ",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /app/.env",
-        "GET /download?file=../../../../etc/passwd",
-        "GET /.git-credentials",
-        "GET /aws/credentials",
-        "GET /static../.aws/credentials",
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /static../etc/passwd",
-        "GET /media../etc/passwd",
-        "GET /assets../../../etc/passwd",
-        "GET /?file=../../../../etc/passwd",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /read?url=file:///proc/self/environ",
-        "GET /files../etc/passwd",
-        "GET /proc/self/environ"
-      ]
-    },
-    {
-      "ip": "40.119.43.218",
-      "family": "v4",
-      "first_seen": "2026-09-02T09:00:00Z",
-      "last_seen": "2026-09-02T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.112.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "20.220.204.93",
-      "family": "v4",
-      "first_seen": "2026-09-02T07:00:00Z",
-      "last_seen": "2026-09-02T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /default.php",
-        "GET /wsx.php",
-        "GET /.well-known/zaza.php",
-        "GET /wp-content/plugins/pwnd/aduot.php",
-        "GET /index1.php",
-        "GET /unprecipitously.php",
-        "GET /gmanz.php",
-        "GET /ahax.php",
-        "GET /wp-content/upgrade/a4tech.php",
-        "GET /test.php~"
-      ]
-    },
-    {
-      "ip": "51.68.111.240",
-      "family": "v4",
-      "first_seen": "2026-09-02T06:00:00Z",
-      "last_seen": "2026-09-02T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "184.105.139.67",
-      "family": "v4",
-      "first_seen": "2026-09-02T04:00:00Z",
-      "last_seen": "2026-09-02T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "20.83.52.184",
-      "family": "v4",
-      "first_seen": "2026-09-02T03:00:00Z",
-      "last_seen": "2026-09-02T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
-    {
-      "ip": "65.49.20.67",
-      "family": "v4",
-      "first_seen": "2026-09-02T03:00:00Z",
-      "last_seen": "2026-09-02T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "65.49.0.0/17",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
     {
       "ip": "8.209.96.179",
       "family": "v4",
@@ -2313,6 +2123,80 @@
         "GET /@fs/app/.env?raw??",
         "GET /@fs/root/rootkey.csv?raw??",
         "GET /@fs/home/debian/.aws/credentials?raw??"
+      ]
+    },
+    {
+      "ip": "216.218.206.66",
+      "family": "v4",
+      "first_seen": "2026-09-09T01:00:00Z",
+      "last_seen": "2026-09-09T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "104.244.79.113",
+      "family": "v4",
+      "first_seen": "2026-09-09T06:00:00Z",
+      "last_seen": "2026-09-09T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "53667",
+      "asn_name": "PONYNET - FranTech Solutions",
+      "asn_prefix": "104.244.79.0/24",
+      "payloads": [
+        "GET /cgi-bin/luci/"
+      ]
+    },
+    {
+      "ip": "34.51.186.70",
+      "family": "v4",
+      "first_seen": "2026-09-09T06:00:00Z",
+      "last_seen": "2026-09-09T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.51.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
       ]
     }
   ]
