@@ -1,147 +1,13 @@
 {
-  "generated_at": "2026-09-10T01:00:00Z",
+  "generated_at": "2026-09-10T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 145,
-    "v4": 145,
+    "total": 140,
+    "v4": 140,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "199.180.115.54",
-      "family": "v4",
-      "first_seen": "2026-09-03T12:00:00Z",
-      "last_seen": "2026-09-03T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "25820",
-      "asn_name": "IT7NET - IT7 Networks Inc",
-      "asn_prefix": "199.180.112.0/21",
-      "payloads": [
-        "GET /auth.json",
-        "GET /.claude/.credentials.json",
-        "GET /.credentials.json",
-        "GET /.codex/auth.json",
-        "GET /.env",
-        "GET /.local/share/opencode/auth.json",
-        "GET /.openclaw/.env",
-        "GET /.openclaw/openclaw.json",
-        "GET /.hermes/.env",
-        "GET /.git/config",
-        "GET /.git-credentials"
-      ]
-    },
-    {
-      "ip": "34.78.178.165",
-      "family": "v4",
-      "first_seen": "2026-09-03T11:00:00Z",
-      "last_seen": "2026-09-03T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.78.176.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /api/settings.yml",
-        "GET /app/config/mail.php",
-        "GET /app/config/parameters.yaml",
-        "GET /app.json",
-        "GET /application.yaml",
-        "GET /application.json",
-        "GET /admin/kubeconfig",
-        "GET /admin/phpinfo.php",
-        "GET /Admin/phpinfo.php",
-        "GET /actuator/heapdump",
-        "GET /actuator/dump",
-        "GET /actuator/threaddump",
-        "GET /actuator/env",
-        "GET /actuator/sessions",
-        "GET /actuator/auditevents",
-        "GET /actuator/trace",
-        "GET /actuator/logfile",
-        "GET /actuator/configprops",
-        "GET /access.log",
-        "GET /actuator/httptrace"
-      ]
-    },
-    {
-      "ip": "20.29.59.178",
-      "family": "v4",
-      "first_seen": "2026-09-03T10:00:00Z",
-      "last_seen": "2026-09-03T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.0.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "51.68.111.239",
-      "family": "v4",
-      "first_seen": "2026-09-03T10:00:00Z",
-      "last_seen": "2026-09-03T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "167.94.146.63",
-      "family": "v4",
-      "first_seen": "2026-09-03T09:00:00Z",
-      "last_seen": "2026-09-03T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
     {
       "ip": "193.32.204.199",
       "family": "v4",
@@ -178,110 +44,6 @@
         "GET /www/.git/config",
         "GET /dashboard/.git/config",
         "GET /v2/.git/config"
-      ]
-    },
-    {
-      "ip": "216.218.206.67",
-      "family": "v4",
-      "first_seen": "2026-09-03T04:00:00Z",
-      "last_seen": "2026-09-03T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "216.218.128.0/17",
-      "tags": [
-        "mwl:scanner=\"shadowserver\""
-      ],
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "20.14.73.46",
-      "family": "v4",
-      "first_seen": "2026-09-03T04:00:00Z",
-      "last_seen": "2026-09-03T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.0.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "199.45.155.93",
-      "family": "v4",
-      "first_seen": "2026-09-03T04:00:00Z",
-      "last_seen": "2026-09-03T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.155.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "167.94.146.60",
-      "family": "v4",
-      "first_seen": "2026-09-03T01:00:00Z",
-      "last_seen": "2026-09-03T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "101.53.228.61",
-      "family": "v4",
-      "first_seen": "2026-09-03T12:00:00Z",
-      "last_seen": "2026-09-03T12:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "101.53.228.0/24",
-      "payloads": [
-        "POST /HNAP1/"
       ]
     },
     {
@@ -3547,6 +3309,148 @@
       ],
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "194.163.170.0",
+      "family": "v4",
+      "first_seen": "2026-09-10T11:00:00Z",
+      "last_seen": "2026-09-10T11:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "51167",
+      "asn_name": "CONTABO Contabo GmbH",
+      "asn_prefix": "194.163.128.0/18",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "62.238.58.32",
+      "family": "v4",
+      "first_seen": "2026-09-10T08:00:00Z",
+      "last_seen": "2026-09-10T08:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "24940",
+      "asn_name": "HETZNER-AS Hetzner Online GmbH",
+      "asn_prefix": "62.238.0.0/17",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "34.51.166.49",
+      "family": "v4",
+      "first_seen": "2026-09-10T07:00:00Z",
+      "last_seen": "2026-09-10T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.51.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /credentials.json",
+        "GET /google-credentials.json",
+        "GET /google-key.json",
+        "GET /.config/gcloud/application_default_credentials.json",
+        "GET /key.json",
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "167.71.124.65",
+      "family": "v4",
+      "first_seen": "2026-09-10T01:00:00Z",
+      "last_seen": "2026-09-10T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP URI terminated by non-compliant character"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.71.112.0/20",
+      "payloads": [
+        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n\f9\\x95n\f;\\x84\u000f3\\xac\\xe8sch\\xa8^\\xcf4'J\\x97\\xa9\\x82\\xe30\\xc3\\x91h]&\\x90\\xf8\\xce\\x97S\\xcbA4L?2=\\xe1\\xc4\\x92\\x86\u000b@\\xf5`"
+      ]
+    },
+    {
+      "ip": "192.241.130.15",
+      "family": "v4",
+      "first_seen": "2026-09-10T01:00:00Z",
+      "last_seen": "2026-09-10T01:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read (CVE-2020-3452) M2"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "192.241.128.0/19",
+      "payloads": [
+        "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
       ]
     }
   ]

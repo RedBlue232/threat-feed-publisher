@@ -1,31 +1,13 @@
 {
-  "generated_at": "2026-09-10T01:00:00Z",
+  "generated_at": "2026-09-10T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 78,
-    "v4": 78,
+    "total": 79,
+    "v4": 79,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "101.53.228.61",
-      "family": "v4",
-      "first_seen": "2026-09-03T12:00:00Z",
-      "last_seen": "2026-09-03T12:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "101.53.228.0/24",
-      "payloads": [
-        "POST /HNAP1/"
-      ]
-    },
     {
       "ip": "20.29.59.114",
       "family": "v4",
@@ -1671,6 +1653,42 @@
       ],
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "167.71.124.65",
+      "family": "v4",
+      "first_seen": "2026-09-10T01:00:00Z",
+      "last_seen": "2026-09-10T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP URI terminated by non-compliant character"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.71.112.0/20",
+      "payloads": [
+        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n\f9\\x95n\f;\\x84\u000f3\\xac\\xe8sch\\xa8^\\xcf4'J\\x97\\xa9\\x82\\xe30\\xc3\\x91h]&\\x90\\xf8\\xce\\x97S\\xcbA4L?2=\\xe1\\xc4\\x92\\x86\u000b@\\xf5`"
+      ]
+    },
+    {
+      "ip": "192.241.130.15",
+      "family": "v4",
+      "first_seen": "2026-09-10T01:00:00Z",
+      "last_seen": "2026-09-10T01:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read (CVE-2020-3452) M2"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "192.241.128.0/19",
+      "payloads": [
+        "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
       ]
     }
   ]
