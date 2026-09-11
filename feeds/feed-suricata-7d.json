@@ -1,204 +1,13 @@
 {
-  "generated_at": "2026-09-11T01:00:00Z",
+  "generated_at": "2026-09-11T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 81,
-    "v4": 81,
+    "total": 74,
+    "v4": 74,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "172.70.223.103",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.68.85.174",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.68.85.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.71.24.34",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.71.24.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/proc/self/environ?raw??"
-      ]
-    },
-    {
-      "ip": "172.64.215.96",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.64.215.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "172.70.223.104",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.64.215.160",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.64.215.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "172.71.24.24",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.71.24.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/proc/self/environ?raw??"
-      ]
-    },
-    {
-      "ip": "172.68.85.229",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.68.85.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.70.223.246",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
     {
       "ip": "34.75.91.214",
       "family": "v4",
@@ -951,10 +760,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.145",
@@ -969,10 +775,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.37",
@@ -987,10 +790,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.101.0",
@@ -1005,10 +805,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "136.85.100.175",
@@ -1161,10 +958,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "34.84.168.240",
@@ -1759,6 +1553,42 @@
       "asn_prefix": "161.35.176.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "102.212.40.238",
+      "family": "v4",
+      "first_seen": "2026-09-11T11:00:00Z",
+      "last_seen": "2026-09-11T11:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "329244",
+      "asn_name": "Connect, Surf and Smile Limited - Connect, Surf and Smile Limited",
+      "asn_prefix": "102.212.40.0/22",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "27.210.41.219",
+      "family": "v4",
+      "first_seen": "2026-09-11T11:00:00Z",
+      "last_seen": "2026-09-11T11:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+      "asn_prefix": "27.192.0.0/11",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
       ]
     }
   ]

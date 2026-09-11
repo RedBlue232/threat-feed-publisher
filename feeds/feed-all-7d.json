@@ -1,392 +1,13 @@
 {
-  "generated_at": "2026-09-11T01:00:00Z",
+  "generated_at": "2026-09-11T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 144,
-    "v4": 144,
+    "total": 133,
+    "v4": 133,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "193.32.204.199",
-      "family": "v4",
-      "first_seen": "2026-09-03T05:00:00Z",
-      "last_seen": "2026-09-04T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "153622",
-      "asn_name": "MADINAIT-AS-AP - Madina IT",
-      "asn_prefix": "193.32.204.0/24",
-      "payloads": [
-        "GET /server/.git/config",
-        "GET /config/.git/config",
-        "GET /test/.git/config",
-        "GET /dist/.git/config",
-        "GET /includes/.git/config",
-        "GET /template/.git/config",
-        "GET /data/.git/config",
-        "GET /admin/.git/config",
-        "GET /portal/.git/config",
-        "GET /site/.git/config",
-        "GET /core/.git/config",
-        "GET /app/.git/config",
-        "GET /prod/.git/config",
-        "GET /deploy/.git/config",
-        "GET /media/.git/config",
-        "GET /themes/.git/config",
-        "GET /assets/.git/config",
-        "GET /www/.git/config",
-        "GET /dashboard/.git/config",
-        "GET /v2/.git/config"
-      ]
-    },
-    {
-      "ip": "35.233.68.223",
-      "family": "v4",
-      "first_seen": "2026-09-04T12:00:00Z",
-      "last_seen": "2026-09-04T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "35.233.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env",
-        "GET /.env.bak",
-        "GET /.env.backup",
-        "GET /.env.old",
-        "GET /wp-config.php.bak",
-        "GET /.env.example",
-        "GET /.env.production",
-        "GET /.env.local",
-        "GET /env",
-        "GET /.env.dev",
-        "GET /actuator/configprops"
-      ]
-    },
-    {
-      "ip": "34.64.185.156",
-      "family": "v4",
-      "first_seen": "2026-09-04T05:00:00Z",
-      "last_seen": "2026-09-04T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.64.176.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /admin/phpinfo.php",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "51.68.236.92",
-      "family": "v4",
-      "first_seen": "2026-09-04T04:00:00Z",
-      "last_seen": "2026-09-04T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "35.190.235.128",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "35.190.224.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env.staging",
-        "GET /.env.local",
-        "GET /.env",
-        "GET /v1/.env",
-        "GET /.env.bak",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /@fs/proc/self/cmdline?raw??",
-        "GET /proc/self/environ?raw??",
-        "GET /@fs/proc/self/cwd/.aws/credentials?raw??",
-        "GET /",
-        "GET /@fs/.env?raw??",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??",
-        "GET /.env?raw??",
-        "GET /@fs/.env.development?raw??",
-        "GET /@fs/.env.staging?raw??",
-        "GET /@fs/home/admin/.aws/credentials?raw??",
-        "GET /@fs/home/node/.aws/config?raw??",
-        "GET /@fs/root/.aws/credentials?raw??"
-      ]
-    },
-    {
-      "ip": "51.68.111.199",
-      "family": "v4",
-      "first_seen": "2026-09-04T02:00:00Z",
-      "last_seen": "2026-09-04T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "172.70.223.103",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.68.85.174",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.68.85.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.71.24.34",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.71.24.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/proc/self/environ?raw??"
-      ]
-    },
-    {
-      "ip": "172.64.215.96",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.64.215.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "172.70.223.104",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.64.215.160",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.64.215.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fproc/self/environ?raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "172.71.24.24",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.71.24.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/proc/self/environ?raw??"
-      ]
-    },
-    {
-      "ip": "172.68.85.229",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.68.85.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252fapp/.env?raw??"
-      ]
-    },
-    {
-      "ip": "172.70.223.246",
-      "family": "v4",
-      "first_seen": "2026-09-04T03:00:00Z",
-      "last_seen": "2026-09-04T03:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT VMware Spring Cloud Directory Traversal (CVE-2020-5410)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "172.70.223.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
-      ]
-    },
     {
       "ip": "66.132.224.228",
       "family": "v4",
@@ -2105,10 +1726,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.145",
@@ -2123,10 +1741,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.37",
@@ -2141,10 +1756,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.101.0",
@@ -2159,10 +1771,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "136.85.100.175",
@@ -2315,10 +1924,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "34.84.168.240",
@@ -3565,6 +3171,105 @@
       "asn_prefix": "161.35.176.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "34.6.225.30",
+      "family": "v4",
+      "first_seen": "2026-09-11T09:00:00Z",
+      "last_seen": "2026-09-11T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.6.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /server-info.php",
+        "GET /server-status.php",
+        "GET /_environment",
+        "GET /phpinfo.php.bak",
+        "GET /phpinfo.php.old",
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "46.105.38.210",
+      "family": "v4",
+      "first_seen": "2026-09-11T07:00:00Z",
+      "last_seen": "2026-09-11T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16276",
+      "asn_name": "OVH OVH SAS",
+      "asn_prefix": "46.105.0.0/16",
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "102.212.40.238",
+      "family": "v4",
+      "first_seen": "2026-09-11T11:00:00Z",
+      "last_seen": "2026-09-11T11:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "329244",
+      "asn_name": "Connect, Surf and Smile Limited - Connect, Surf and Smile Limited",
+      "asn_prefix": "102.212.40.0/22",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "27.210.41.219",
+      "family": "v4",
+      "first_seen": "2026-09-11T11:00:00Z",
+      "last_seen": "2026-09-11T11:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+      "asn_prefix": "27.192.0.0/11",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
       ]
     }
   ]
