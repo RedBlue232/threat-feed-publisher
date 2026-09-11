@@ -1,49 +1,13 @@
 {
-  "generated_at": "2026-09-10T13:00:00Z",
+  "generated_at": "2026-09-11T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 79,
-    "v4": 79,
+    "total": 81,
+    "v4": 81,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.29.59.114",
-      "family": "v4",
-      "first_seen": "2026-09-03T17:00:00Z",
-      "last_seen": "2026-09-03T17:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.0.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "167.99.13.19",
-      "family": "v4",
-      "first_seen": "2026-09-03T20:00:00Z",
-      "last_seen": "2026-09-03T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "167.99.0.0/20",
-      "payloads": [
-        "GET /index.html"
-      ]
-    },
     {
       "ip": "172.70.223.103",
       "family": "v4",
@@ -1689,6 +1653,112 @@
       "asn_prefix": "192.241.128.0/19",
       "payloads": [
         "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
+      ]
+    },
+    {
+      "ip": "104.199.221.96",
+      "family": "v4",
+      "first_seen": "2026-09-10T16:00:00Z",
+      "last_seen": "2026-09-10T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing",
+        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "104.199.208.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /phpinfo.php",
+        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
+        "GET /azure.json",
+        "GET /preview?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
+        "GET /.cursor/mcp.json",
+        "GET /@fs/proc/1/environ?import&raw??",
+        "GET /screenshot?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
+        "GET /static../.env",
+        "GET /media../.env",
+        "GET /.env",
+        "GET /app/.env",
+        "GET /static../.aws/credentials",
+        "GET /",
+        "GET /__aws_leak_probe_008c7960__",
+        "GET /@fs/proc/self/environ",
+        "GET /static../etc/passwd",
+        "GET /.azure/credentials",
+        "GET /@fs/root/.config/gcloud/application_default_credentials.json?raw??",
+        "GET /media../etc/passwd",
+        "GET /@fs/etc/passwd?raw??",
+        "GET /@fs/proc/self/environ?raw??",
+        "GET /@fs/etc/passwd?import&raw??",
+        "GET /assets../../../etc/passwd",
+        "GET /files../etc/passwd"
+      ]
+    },
+    {
+      "ip": "79.127.184.158",
+      "family": "v4",
+      "first_seen": "2026-09-10T21:00:00Z",
+      "last_seen": "2026-09-10T21:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Possible Apache log4j RCE Attempt - 2021/12/12 Obfuscation Observed M2 (udp) (Outbound) (CVE-2021-44228)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "79.127.184.0/24"
+    },
+    {
+      "ip": "40.67.169.102",
+      "family": "v4",
+      "first_seen": "2026-09-10T19:00:00Z",
+      "last_seen": "2026-09-10T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.67.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /portal/redlion"
+      ]
+    },
+    {
+      "ip": "161.35.190.246",
+      "family": "v4",
+      "first_seen": "2026-09-11T00:00:00Z",
+      "last_seen": "2026-09-11T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "161.35.176.0/20",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
