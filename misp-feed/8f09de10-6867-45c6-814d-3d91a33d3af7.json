@@ -5,9 +5,9 @@
     "info": "Threat feed (rolling, Suricata only)",
     "published": true,
     "uuid": "8f09de10-6867-45c6-814d-3d91a33d3af7",
-    "attribute_count": "1202",
+    "attribute_count": "1203",
     "analysis": "2",
-    "timestamp": "1789131630",
+    "timestamp": "1789174834",
     "distribution": "3",
     "publish_timestamp": "0",
     "first_publication": "0",
@@ -46201,6 +46201,38 @@
         "first_seen": null,
         "last_seen": null,
         "value": "27.210.41.219",
+        "Galaxy": [],
+        "Tag": [
+          {
+            "id": "9",
+            "name": "source:suricata",
+            "colour": "#99cd0a",
+            "exportable": true,
+            "user_id": "0",
+            "hide_tag": false,
+            "numerical_value": null,
+            "is_galaxy": false,
+            "is_custom_galaxy": false,
+            "local_only": false,
+            "local": false,
+            "relationship_type": null
+          }
+        ]
+      },
+      {
+        "type": "ip-src",
+        "category": "Network activity",
+        "to_ids": true,
+        "uuid": "a0d99b80-b2dd-4423-8f3f-9a3799e5c044",
+        "distribution": "5",
+        "timestamp": "1789174834",
+        "comment": "Sources: suricata | first_seen: 2026-09-11T13:35:32Z | last_seen: 2026-09-11T13:35:32Z | hits: 1 | AS135377 UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED (118.26.111.0/24) | scenarios: suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port | payloads: \u00033.\\xe0Cookie: mstshash=Administrator",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": null,
+        "first_seen": null,
+        "last_seen": null,
+        "value": "118.26.111.94",
         "Galaxy": [],
         "Tag": [
           {
