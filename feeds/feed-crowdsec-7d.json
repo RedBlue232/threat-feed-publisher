@@ -1,36 +1,13 @@
 {
-  "generated_at": "2026-09-15T01:00:00Z",
+  "generated_at": "2026-09-15T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 55,
-    "v4": 55,
+    "total": 59,
+    "v4": 59,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.83.50.186",
-      "family": "v4",
-      "first_seen": "2026-09-08T12:00:00Z",
-      "last_seen": "2026-09-08T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
     {
       "ip": "20.102.108.180",
       "family": "v4",
@@ -1573,6 +1550,173 @@
       "asn_prefix": "82.165.58.0/24",
       "payloads": [
         "GET /web/login"
+      ]
+    },
+    {
+      "ip": "34.18.139.199",
+      "family": "v4",
+      "first_seen": "2026-09-15T10:00:00Z",
+      "last_seen": "2026-09-15T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.18.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "216.180.246.35",
+      "family": "v4",
+      "first_seen": "2026-09-15T05:00:00Z",
+      "last_seen": "2026-09-15T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "167.94.146.59",
+      "family": "v4",
+      "first_seen": "2026-09-15T05:00:00Z",
+      "last_seen": "2026-09-15T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398705",
+      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
+      "asn_prefix": "167.94.146.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "136.92.5.211",
+      "family": "v4",
+      "first_seen": "2026-09-15T04:00:00Z",
+      "last_seen": "2026-09-15T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "136.92.0.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "34.97.118.9",
+      "family": "v4",
+      "first_seen": "2026-09-15T03:00:00Z",
+      "last_seen": "2026-09-15T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.97.112.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
       ]
     }
   ]
