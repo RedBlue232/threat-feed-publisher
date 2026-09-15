@@ -1,106 +1,13 @@
 {
-  "generated_at": "2026-09-14T13:00:00Z",
+  "generated_at": "2026-09-15T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 49,
-    "v4": 49,
+    "total": 50,
+    "v4": 50,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.84.168.240",
-      "family": "v4",
-      "first_seen": "2026-09-08T00:00:00Z",
-      "last_seen": "2026-09-08T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.84.160.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /app_dev.php/_profiler/phpinfo",
-        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /azure-credentials.json",
-        "GET /@fs/proc/self/environ?import&raw??",
-        "GET /.git/index",
-        "GET /.github/workflows/ci.yml",
-        "GET /.gitlab-ci.yml",
-        "GET /",
-        "GET /__aws_leak_probe_8f878624__",
-        "GET /static../.env",
-        "GET /media../.env",
-        "GET /proc/self/environ",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /static../.aws/credentials",
-        "GET /files../etc/passwd",
-        "GET /static../.azure/credentials",
-        "GET /static../etc/passwd",
-        "GET /info.php",
-        "GET /_profiler/phpinfo",
-        "GET /@fs/proc/self/environ",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /media../etc/passwd",
-        "GET /assets../../../etc/passwd",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "20.55.77.33",
-      "family": "v4",
-      "first_seen": "2026-09-07T15:00:00Z",
-      "last_seen": "2026-09-07T15:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "199.45.154.127",
-      "family": "v4",
-      "first_seen": "2026-09-08T00:00:00Z",
-      "last_seen": "2026-09-08T00:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP2 too long frame data"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ]
-    },
     {
       "ip": "20.83.50.186",
       "family": "v4",
@@ -1015,6 +922,79 @@
       "asn_prefix": "85.11.182.0/24",
       "payloads": [
         "GET /sftp-config.json"
+      ]
+    },
+    {
+      "ip": "4.150.191.40",
+      "family": "v4",
+      "first_seen": "2026-09-14T18:00:00Z",
+      "last_seen": "2026-09-14T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.144.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "103.109.7.75",
+      "family": "v4",
+      "first_seen": "2026-09-14T16:00:00Z",
+      "last_seen": "2026-09-14T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request line incomplete"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "134286",
+      "asn_name": "NETFORCHOICE-AS - Net for Choice",
+      "asn_prefix": "103.109.7.0/24"
+    },
+    {
+      "ip": "105.225.239.111",
+      "family": "v4",
+      "first_seen": "2026-09-14T13:00:00Z",
+      "last_seen": "2026-09-14T13:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "37457",
+      "asn_name": "Telkom SA Ltd. - Telkom SA Ltd.",
+      "asn_prefix": "105.225.239.0/24",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "136.0.82.161",
+      "family": "v4",
+      "first_seen": "2026-09-14T19:00:00Z",
+      "last_seen": "2026-09-14T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14315",
+      "asn_prefix": "136.0.82.0/24",
+      "payloads": [
+        "POST /"
       ]
     }
   ]
