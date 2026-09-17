@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T01:00:00Z",
+  "updated_at": "2026-09-17T13:00:00Z",
   "ttl_days": 7,
   "counts": {
     "total": 1172,
@@ -13,18 +13,18 @@
       "v6": 0
     },
     "crowdsec": {
-      "total": 63,
-      "v4": 63,
+      "total": 62,
+      "v4": 62,
       "v6": 0
     },
     "suricata": {
-      "total": 1114,
-      "v4": 1114,
+      "total": 1115,
+      "v4": 1115,
       "v6": 0
     }
   },
   "sources": {
-    "crowdsec": 63,
-    "suricata": 1114
+    "crowdsec": 62,
+    "suricata": 1115
   }
 }
