@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-17T13:00:00Z",
+  "generated_at": "2026-09-18T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1172,
-    "v4": 1172,
+    "total": 1169,
+    "v4": 1169,
     "v6": 0
   },
   "items": [
@@ -145,134 +145,6 @@
       "asn_prefix": "192.241.128.0/19",
       "payloads": [
         "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
-      ]
-    },
-    {
-      "ip": "64.225.61.231",
-      "family": "v4",
-      "first_seen": "2026-09-10T23:00:00Z",
-      "last_seen": "2026-09-10T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "64.225.48.0/20",
-      "payloads": [
-        "POST /wp-json/batch/v1"
-      ]
-    },
-    {
-      "ip": "66.132.172.221",
-      "family": "v4",
-      "first_seen": "2026-09-10T22:00:00Z",
-      "last_seen": "2026-09-10T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.172.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.163.115.174",
-      "family": "v4",
-      "first_seen": "2026-09-10T21:00:00Z",
-      "last_seen": "2026-09-10T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "crowdsec/jira_cve-2021-26086"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "63023",
-      "asn_name": "AS-GLOBALTELEHOST - GTHost",
-      "asn_prefix": "66.163.115.0/24",
-      "payloads": [
-        "GET /info.php",
-        "GET /s/lkx/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties",
-        "GET /.git/config",
-        "GET /.env.dev",
-        "GET /.env.php",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /etc/hosts",
-        "GET /.DS_Store",
-        "GET /config.json",
-        "GET /idx_config/",
-        "GET /telescope/requests",
-        "GET /.json",
-        "GET /server-status",
-        "GET /settings.json"
-      ]
-    },
-    {
-      "ip": "199.45.154.68",
-      "family": "v4",
-      "first_seen": "2026-09-10T20:00:00Z",
-      "last_seen": "2026-09-10T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "82.67.202.213",
-      "family": "v4",
-      "first_seen": "2026-09-10T17:00:00Z",
-      "last_seen": "2026-09-10T17:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-probing",
-        "crowdsec/thinkphp-cve-2018-20062"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "12322",
-      "asn_name": "PROXAD Free SAS",
-      "asn_prefix": "82.64.0.0/14",
-      "payloads": [
-        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
-        "GET /app/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php",
-        "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /phpunit/Util/PHP/eval-stdin.php",
-        "GET /lib/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /lib/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /lib/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /lib/phpunit/Util/PHP/eval-stdin.php",
-        "GET /lib/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
       ]
     },
     {
@@ -20059,6 +19931,45 @@
       "asn_prefix": "173.212.192.0/19",
       "payloads": [
         "POST /"
+      ]
+    },
+    {
+      "ip": "20.106.18.245",
+      "family": "v4",
+      "first_seen": "2026-09-17T14:00:00Z",
+      "last_seen": "2026-09-17T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "164.92.134.110",
+      "family": "v4",
+      "first_seen": "2026-09-17T20:00:00Z",
+      "last_seen": "2026-09-17T20:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP Request Body"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "164.92.128.0/20",
+      "payloads": [
+        "POST /wp-json/batch/v1"
       ]
     }
   ]
