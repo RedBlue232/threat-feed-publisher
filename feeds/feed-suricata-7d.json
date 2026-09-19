@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19T01:00:00Z",
+  "generated_at": "2026-09-19T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1125,
-    "v4": 1125,
+    "total": 1127,
+    "v4": 1127,
     "v6": 0
   },
   "items": [
@@ -13262,10 +13262,7 @@
       ],
       "asn": "210558",
       "asn_name": "services-1337-gmbh 1337 Services GmbH",
-      "asn_prefix": "194.26.192.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "194.26.192.0/24"
     },
     {
       "ip": "192.42.116.108",
@@ -18559,6 +18556,39 @@
       "asn_prefix": "147.90.209.0/24",
       "payloads": [
         "POST /"
+      ]
+    },
+    {
+      "ip": "102.220.161.86",
+      "family": "v4",
+      "first_seen": "2026-09-19T01:00:00Z",
+      "last_seen": "2026-09-19T01:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/22"
+    },
+    {
+      "ip": "222.119.5.40",
+      "family": "v4",
+      "first_seen": "2026-09-19T12:00:00Z",
+      "last_seen": "2026-09-19T12:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4766",
+      "asn_name": "KIXS-AS-KR-KR - Korea Telecom",
+      "asn_prefix": "222.112.0.0/13",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
       ]
     }
   ]

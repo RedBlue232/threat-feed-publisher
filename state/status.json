@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-19T01:00:00Z",
+  "updated_at": "2026-09-19T13:00:00Z",
   "ttl_days": 7,
   "counts": {
-    "total": 1178,
-    "v4": 1178,
+    "total": 1180,
+    "v4": 1180,
     "v6": 0
   },
   "feeds": {
     "all": {
-      "total": 1178,
-      "v4": 1178,
+      "total": 1180,
+      "v4": 1180,
       "v6": 0
     },
     "crowdsec": {
@@ -18,13 +18,13 @@
       "v6": 0
     },
     "suricata": {
-      "total": 1125,
-      "v4": 1125,
+      "total": 1127,
+      "v4": 1127,
       "v6": 0
     }
   },
   "sources": {
     "crowdsec": 59,
-    "suricata": 1125
+    "suricata": 1127
   }
 }
