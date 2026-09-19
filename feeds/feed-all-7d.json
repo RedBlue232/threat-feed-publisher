@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-18T13:00:00Z",
+  "generated_at": "2026-09-19T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1175,
-    "v4": 1175,
+    "total": 1178,
+    "v4": 1178,
     "v6": 0
   },
   "items": [
@@ -287,131 +287,6 @@
       "asn_prefix": "27.192.0.0/11",
       "payloads": [
         "POST /GponForm/diag_Form?images/"
-      ]
-    },
-    {
-      "ip": "66.132.224.82",
-      "family": "v4",
-      "first_seen": "2026-09-11T17:00:00Z",
-      "last_seen": "2026-09-11T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "34.80.249.255",
-      "family": "v4",
-      "first_seen": "2026-09-11T15:00:00Z",
-      "last_seen": "2026-09-11T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.80.240.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env",
-        "GET /.env.local?import&raw",
-        "GET /.env.development?raw",
-        "GET /dist../.env",
-        "GET /js../.env",
-        "GET /",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///proc/self/environ&environmentName=rsc",
-        "GET /rclone.conf",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///app/.env&environmentName=rsc",
-        "GET /@fs/.env?import&?raw??",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///root/.aws/credentials&environmentName=rsc",
-        "GET /@fs/var/run/secrets/kubernetes.io/serviceaccount/token?raw??",
-        "GET /@fs/var/run/secrets/kubernetes.io/serviceaccount/ca.crt?raw??",
-        "GET /@fs/proc/self/cmdline?raw??",
-        "GET /proc/self/environ",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///root/.ssh/id_rsa&environmentName=rsc",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "40.119.28.208",
-      "family": "v4",
-      "first_seen": "2026-09-11T13:00:00Z",
-      "last_seen": "2026-09-11T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.112.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "34.62.51.20",
-      "family": "v4",
-      "first_seen": "2026-09-11T13:00:00Z",
-      "last_seen": "2026-09-11T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.62.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /images../.env",
-        "GET /img../.env",
-        "GET /.env",
-        "GET /assets../.env",
-        "GET /.env.local",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /@fs/proc/self/cmdline?raw??",
-        "GET /proc/self/environ?raw??",
-        "GET /@fs/proc/self/cwd/.env?raw??",
-        "GET /",
-        "GET /@fs/.env?raw??",
-        "GET /@fs/app/.env?raw??",
-        "GET /.env?raw??",
-        "GET /@fs/src/.env?raw??",
-        "GET /@fs/.env.production?raw??",
-        "GET /@fs/.env.local?raw??",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/root/.env?raw??",
-        "GET /@fs/app/rootkey.csv?raw??",
-        "GET /@fs/..%252f..%252f..%252f..%252f..%252froot/.env?raw??"
       ]
     },
     {
@@ -20087,6 +19962,155 @@
       "asn": "135377",
       "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
       "asn_prefix": "107.150.96.0/21"
+    },
+    {
+      "ip": "66.132.186.170",
+      "family": "v4",
+      "first_seen": "2026-09-18T21:00:00Z",
+      "last_seen": "2026-09-18T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.186.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.118.201.169",
+      "family": "v4",
+      "first_seen": "2026-09-18T16:00:00Z",
+      "last_seen": "2026-09-18T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "62.210.142.169",
+      "family": "v4",
+      "first_seen": "2026-09-18T13:00:00Z",
+      "last_seen": "2026-09-18T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /remote/login",
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "147.90.209.245",
+      "family": "v4",
+      "first_seen": "2026-09-18T23:00:00Z",
+      "last_seen": "2026-09-18T23:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "147.90.209.0/24",
+      "payloads": [
+        "POST /"
+      ]
+    },
+    {
+      "ip": "85.217.149.24",
+      "family": "v4",
+      "first_seen": "2026-09-18T13:00:00Z",
+      "last_seen": "2026-09-18T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.149.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "85.217.149.6",
+      "family": "v4",
+      "first_seen": "2026-09-18T13:00:00Z",
+      "last_seen": "2026-09-18T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.149.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "147.90.209.135",
+      "family": "v4",
+      "first_seen": "2026-09-18T23:00:00Z",
+      "last_seen": "2026-09-18T23:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "147.90.209.0/24",
+      "payloads": [
+        "POST /"
+      ]
     }
   ]
 }
