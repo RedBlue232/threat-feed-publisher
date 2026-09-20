@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-19T13:00:00Z",
+  "generated_at": "2026-09-20T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1127,
-    "v4": 1127,
+    "total": 1131,
+    "v4": 1131,
     "v6": 0
   },
   "items": [
@@ -2118,10 +2118,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.116",
@@ -2136,10 +2133,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.19",
@@ -2154,10 +2148,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "45.84.107.128",
@@ -2172,10 +2163,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "185.220.101.7",
@@ -2190,10 +2178,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.100.244",
@@ -2208,10 +2193,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "109.70.100.2",
@@ -2226,10 +2208,7 @@
       ],
       "asn": "208323",
       "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "109.70.100.0/24"
     },
     {
       "ip": "192.76.153.253",
@@ -2244,10 +2223,7 @@
       ],
       "asn": "60404",
       "asn_name": "Liteserver The Infrastructure Group B.V.",
-      "asn_prefix": "192.76.153.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.76.153.0/24"
     },
     {
       "ip": "185.220.101.4",
@@ -2263,10 +2239,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.84.107.101",
@@ -2282,10 +2255,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "94.142.241.194",
@@ -2300,10 +2270,7 @@
       ],
       "asn": "8283",
       "asn_name": "COLOCLUE-AS Netwerkvereniging Coloclue",
-      "asn_prefix": "94.142.240.0/21",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "94.142.240.0/21"
     },
     {
       "ip": "185.220.101.1",
@@ -2318,10 +2285,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "46.232.251.191",
@@ -2336,10 +2300,7 @@
       ],
       "asn": "197540",
       "asn_name": "netcup-AS netcup GmbH",
-      "asn_prefix": "46.232.248.0/22",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "46.232.248.0/22"
     },
     {
       "ip": "199.232.210.172",
@@ -3330,10 +3291,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "107.189.31.187",
@@ -3348,10 +3306,7 @@
       ],
       "asn": "53667",
       "asn_name": "PONYNET - FranTech Solutions",
-      "asn_prefix": "107.189.30.0/23",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "107.189.30.0/23"
     },
     {
       "ip": "182.208.28.30",
@@ -3642,10 +3597,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.84.107.172",
@@ -3661,10 +3613,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "192.42.116.102",
@@ -3679,10 +3628,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.100.87.174",
@@ -3697,10 +3643,7 @@
       ],
       "asn": "200651",
       "asn_name": "FlokiNET FlokiNET ehf",
-      "asn_prefix": "185.100.87.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.100.87.0/24"
     },
     {
       "ip": "192.42.116.105",
@@ -3715,10 +3658,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.58",
@@ -3733,10 +3673,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.52",
@@ -3753,10 +3690,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.44",
@@ -3772,10 +3706,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.100",
@@ -3790,10 +3721,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.17",
@@ -3808,10 +3736,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.163",
@@ -3826,10 +3751,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "192.42.116.144",
@@ -3844,10 +3766,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "161.35.121.200",
@@ -3892,10 +3811,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.142",
@@ -3910,10 +3826,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.106",
@@ -3929,10 +3842,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "88.80.26.4",
@@ -3947,10 +3857,7 @@
       ],
       "asn": "33837",
       "asn_name": "PRQ-AS Fredrik Holmqvist",
-      "asn_prefix": "88.80.16.0/20",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "88.80.16.0/20"
     },
     {
       "ip": "192.42.116.63",
@@ -3965,10 +3872,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.100.243",
@@ -3984,10 +3888,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "192.42.116.47",
@@ -4002,10 +3903,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.21",
@@ -4021,10 +3919,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "107.189.8.181",
@@ -4039,10 +3934,7 @@
       ],
       "asn": "53667",
       "asn_name": "PONYNET - FranTech Solutions",
-      "asn_prefix": "107.189.8.0/22",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "107.189.8.0/22"
     },
     {
       "ip": "185.220.101.147",
@@ -4057,10 +3949,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.101.35",
@@ -4075,10 +3964,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "192.42.116.45",
@@ -4093,10 +3979,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "171.25.193.40",
@@ -4111,10 +3994,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "82.153.138.57",
@@ -4144,10 +4024,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "103.76.204.115",
@@ -4240,10 +4117,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "45.84.107.182",
@@ -4259,10 +4133,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "192.42.116.16",
@@ -4277,10 +4148,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "45.84.107.47",
@@ -4295,10 +4163,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "185.220.101.171",
@@ -4313,10 +4178,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "192.42.116.96",
@@ -4331,10 +4193,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "203.55.81.1",
@@ -4350,10 +4209,7 @@
       ],
       "asn": "213873",
       "asn_name": "OUIDO-Hosting MOJI SAS",
-      "asn_prefix": "203.55.81.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "203.55.81.0/24"
     },
     {
       "ip": "192.42.116.97",
@@ -4368,10 +4224,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.113",
@@ -4386,10 +4239,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.154",
@@ -4404,10 +4254,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "193.189.100.198",
@@ -4422,10 +4269,7 @@
       ],
       "asn": "41281",
       "asn_name": "KEFF KeFF Networks Ltd",
-      "asn_prefix": "193.189.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "193.189.100.0/24"
     },
     {
       "ip": "192.42.116.93",
@@ -4440,10 +4284,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.60",
@@ -4458,10 +4299,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "121.127.34.40",
@@ -4491,10 +4329,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "188.161.88.80",
@@ -5545,10 +5380,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "207.56.228.128",
@@ -7690,10 +7522,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "45.84.107.74",
@@ -7708,10 +7537,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "192.42.116.98",
@@ -7726,10 +7552,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.15",
@@ -7745,10 +7568,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "172.235.168.35",
@@ -8060,10 +7880,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.51",
@@ -8079,10 +7896,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "80.67.167.81",
@@ -8097,10 +7911,7 @@
       ],
       "asn": "2027",
       "asn_name": "MilkyWan MilkyWan Association",
-      "asn_prefix": "80.67.167.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "80.67.167.0/24"
     },
     {
       "ip": "192.42.116.109",
@@ -8115,10 +7926,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "98.128.173.33",
@@ -8149,10 +7957,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.101.33",
@@ -8167,10 +7972,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "185.220.101.37",
@@ -8186,10 +7988,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.154.98.160",
@@ -8219,10 +8018,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "192.42.116.42",
@@ -8237,10 +8033,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "23.129.64.206",
@@ -8255,10 +8048,7 @@
       ],
       "asn": "396507",
       "asn_name": "EMERALD-ONION - Emerald Onion",
-      "asn_prefix": "23.129.64.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "23.129.64.0/24"
     },
     {
       "ip": "94.72.104.135",
@@ -8273,10 +8063,7 @@
       ],
       "asn": "51167",
       "asn_name": "CONTABO Contabo GmbH",
-      "asn_prefix": "94.72.96.0/20",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "94.72.96.0/20"
     },
     {
       "ip": "185.129.61.5",
@@ -8291,10 +8078,7 @@
       ],
       "asn": "210731",
       "asn_name": "DOTSRC Forening for DotSrc",
-      "asn_prefix": "185.129.61.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.129.61.0/24"
     },
     {
       "ip": "160.119.76.10",
@@ -9164,10 +8948,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.138.16.125",
@@ -9197,10 +8978,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "180.76.172.156",
@@ -10526,10 +10304,7 @@
       ],
       "asn": "208323",
       "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "109.70.100.0/24"
     },
     {
       "ip": "193.189.100.201",
@@ -10544,10 +10319,7 @@
       ],
       "asn": "41281",
       "asn_name": "KEFF KeFF Networks Ltd",
-      "asn_prefix": "193.189.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "193.189.100.0/24"
     },
     {
       "ip": "43.157.156.190",
@@ -12794,10 +12566,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.184",
@@ -12812,10 +12581,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "5.255.115.58",
@@ -12830,10 +12596,7 @@
       ],
       "asn": "60404",
       "asn_name": "Liteserver The Infrastructure Group B.V.",
-      "asn_prefix": "5.255.115.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "5.255.115.0/24"
     },
     {
       "ip": "171.25.193.80",
@@ -12848,10 +12611,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "23.191.200.104",
@@ -12866,10 +12626,7 @@
       ],
       "asn": "401401",
       "asn_name": "UNREDACTED-NOISENET - Unredacted Inc",
-      "asn_prefix": "23.191.200.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "23.191.200.0/24"
     },
     {
       "ip": "54.36.108.162",
@@ -12884,10 +12641,7 @@
       ],
       "asn": "16276",
       "asn_name": "OVH OVH SAS",
-      "asn_prefix": "54.36.0.0/16",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "54.36.0.0/16"
     },
     {
       "ip": "185.220.101.24",
@@ -12902,10 +12656,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.66.35.24",
@@ -12920,10 +12671,7 @@
       ],
       "asn": "61125",
       "asn_name": "SABOTAGE SABOTAGE LLC",
-      "asn_prefix": "45.66.35.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.66.35.0/24"
     },
     {
       "ip": "192.42.116.111",
@@ -12938,10 +12686,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "45.84.107.174",
@@ -12956,10 +12701,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "194.15.113.118",
@@ -12974,10 +12716,7 @@
       ],
       "asn": "213354",
       "asn_name": "International-Hosting-Solutions-AS INTERNATIONAL HOSTING SOLUTIONS LLP",
-      "asn_prefix": "194.15.113.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "194.15.113.0/24"
     },
     {
       "ip": "51.15.15.81",
@@ -12992,10 +12731,7 @@
       ],
       "asn": "12876",
       "asn_name": "AS12876 Scaleway SAS",
-      "asn_prefix": "51.15.0.0/17",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "51.15.0.0/17"
     },
     {
       "ip": "192.42.116.55",
@@ -13010,10 +12746,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.49",
@@ -13028,10 +12761,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.100.249",
@@ -13046,10 +12776,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "193.189.100.205",
@@ -13064,10 +12791,7 @@
       ],
       "asn": "41281",
       "asn_name": "KEFF KeFF Networks Ltd",
-      "asn_prefix": "193.189.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "193.189.100.0/24"
     },
     {
       "ip": "185.220.100.252",
@@ -13082,10 +12806,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "192.42.116.62",
@@ -13100,10 +12821,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.243.218.230",
@@ -13118,10 +12836,7 @@
       ],
       "asn": "56655",
       "asn_name": "GIGAHOST Gigahost AS",
-      "asn_prefix": "185.243.218.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.243.218.0/24"
     },
     {
       "ip": "185.129.61.129",
@@ -13136,10 +12851,7 @@
       ],
       "asn": "210731",
       "asn_name": "DOTSRC Forening for DotSrc",
-      "asn_prefix": "185.129.61.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.129.61.0/24"
     },
     {
       "ip": "178.218.144.18",
@@ -13154,10 +12866,7 @@
       ],
       "asn": "212508",
       "asn_name": "LOWHOSTING-AS Lowhosting services of Davide Gennari",
-      "asn_prefix": "178.218.144.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "178.218.144.0/24"
     },
     {
       "ip": "23.191.200.70",
@@ -13172,10 +12881,7 @@
       ],
       "asn": "401401",
       "asn_name": "UNREDACTED-NOISENET - Unredacted Inc",
-      "asn_prefix": "23.191.200.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "23.191.200.0/24"
     },
     {
       "ip": "185.220.101.11",
@@ -13190,10 +12896,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "45.13.225.78",
@@ -13208,10 +12911,7 @@
       ],
       "asn": "58087",
       "asn_name": "FlorianKolb Florian Kolb",
-      "asn_prefix": "45.13.225.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.13.225.0/24"
     },
     {
       "ip": "192.42.116.53",
@@ -13226,10 +12926,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "107.189.11.111",
@@ -13244,10 +12941,7 @@
       ],
       "asn": "53667",
       "asn_name": "PONYNET - FranTech Solutions",
-      "asn_prefix": "107.189.8.0/22",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "107.189.8.0/22"
     },
     {
       "ip": "194.26.192.203",
@@ -13277,10 +12971,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "190.109.228.165",
@@ -14483,10 +14174,7 @@
       ],
       "asn": "214503",
       "asn_name": "QUXLABS QuxLabs AB",
-      "asn_prefix": "45.84.107.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "45.84.107.0/24"
     },
     {
       "ip": "23.129.64.140",
@@ -14501,10 +14189,7 @@
       ],
       "asn": "396507",
       "asn_name": "EMERALD-ONION - Emerald Onion",
-      "asn_prefix": "23.129.64.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "23.129.64.0/24"
     },
     {
       "ip": "2.56.10.36",
@@ -14519,10 +14204,7 @@
       ],
       "asn": "213373",
       "asn_name": "IPCONNECT IP Connect Inc",
-      "asn_prefix": "2.56.10.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "2.56.10.0/24"
     },
     {
       "ip": "109.70.100.15",
@@ -14537,10 +14219,7 @@
       ],
       "asn": "208323",
       "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "109.70.100.0/24"
     },
     {
       "ip": "146.190.41.214",
@@ -16161,10 +15840,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "192.42.116.57",
@@ -16179,10 +15855,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "109.70.100.11",
@@ -16197,10 +15870,7 @@
       ],
       "asn": "208323",
       "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "109.70.100.0/24"
     },
     {
       "ip": "161.153.121.253",
@@ -16374,10 +16044,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.31",
@@ -16392,10 +16059,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "146.70.194.228",
@@ -17469,10 +17133,7 @@
       ],
       "asn": "198093",
       "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "171.25.193.0/24"
     },
     {
       "ip": "192.42.116.145",
@@ -17487,10 +17148,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.0",
@@ -17505,10 +17163,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "136.85.100.175",
@@ -18590,6 +18245,75 @@
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
       ]
+    },
+    {
+      "ip": "128.14.236.41",
+      "family": "v4",
+      "first_seen": "2026-09-19T18:00:00Z",
+      "last_seen": "2026-09-19T18:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "128.14.236.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
+    },
+    {
+      "ip": "153.117.1.172",
+      "family": "v4",
+      "first_seen": "2026-09-19T17:00:00Z",
+      "last_seen": "2026-09-19T17:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "153.117.1.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "146.56.55.47",
+      "family": "v4",
+      "first_seen": "2026-09-19T15:00:00Z",
+      "last_seen": "2026-09-19T15:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP Request unrecognized authorization method"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "31898",
+      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
+      "asn_prefix": "146.56.48.0/21",
+      "payloads": [
+        "POST /wsman?PSVersion=5.1.19041.1"
+      ]
+    },
+    {
+      "ip": "90.66.107.203",
+      "family": "v4",
+      "first_seen": "2026-09-19T18:00:00Z",
+      "last_seen": "2026-09-19T18:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Possible Apache log4j RCE Attempt - 2021/12/12 Obfuscation Observed M2 (udp) (CVE-2021-44228)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3215",
+      "asn_name": "AS3215 Orange S.A.",
+      "asn_prefix": "90.66.0.0/16"
     }
   ]
 }
