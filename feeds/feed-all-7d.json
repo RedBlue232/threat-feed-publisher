@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-20T12:00:00Z",
+  "generated_at": "2026-09-21T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1191,
-    "v4": 1191,
+    "total": 1188,
+    "v4": 1188,
     "v6": 0
   },
   "items": [
@@ -527,24 +527,6 @@
       ]
     },
     {
-      "ip": "141.94.247.54",
-      "family": "v4",
-      "first_seen": "2026-09-14T00:00:00Z",
-      "last_seen": "2026-09-14T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "141.94.0.0/16",
-      "payloads": [
-        "GET /web/login"
-      ]
-    },
-    {
       "ip": "137.184.70.104",
       "family": "v4",
       "first_seen": "2026-09-13T16:00:00Z",
@@ -602,241 +584,6 @@
         "GET /k2.php?p=",
         "GET /media.php",
         "GET /mac.php"
-      ]
-    },
-    {
-      "ip": "136.111.246.73",
-      "family": "v4",
-      "first_seen": "2026-09-13T21:00:00Z",
-      "last_seen": "2026-09-13T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.111.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /appsettings.json",
-        "GET /appsettings.Development.json",
-        "GET /appsettings.Production.json",
-        "GET /.env.production?raw",
-        "GET /static/..%2F..%2F..%2F..%2Fproc/self/environ",
-        "GET /.env?raw",
-        "GET /.env.local?raw",
-        "GET /.env.development?import&raw",
-        "GET /public../.env",
-        "GET /dist../.env",
-        "GET /proc/self/environ",
-        "GET /proc/self/cmdline",
-        "GET /proc/self/cgroup",
-        "GET /",
-        "GET /var/run/secrets/kubernetes.io/serviceaccount/token",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /.dockerenv",
-        "GET /.env?import&raw",
-        "GET /.env?import&url&inline",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "34.16.186.176",
-      "family": "v4",
-      "first_seen": "2026-09-13T15:00:00Z",
-      "last_seen": "2026-09-13T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.16.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /administrator/.env",
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "51.68.236.91",
-      "family": "v4",
-      "first_seen": "2026-09-13T14:00:00Z",
-      "last_seen": "2026-09-13T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "51.68.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "136.109.36.193",
-      "family": "v4",
-      "first_seen": "2026-09-13T14:00:00Z",
-      "last_seen": "2026-09-13T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.109.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /public/admin.json",
-        "GET /wp-config.php~",
-        "GET /application.yml",
-        "GET /wp-config.old",
-        "GET /actuator/env",
-        "GET /config/secrets.yml",
-        "GET /actuator/configprops",
-        "GET /@fs/root/.aws/credentials?raw??",
-        "GET /.env.local?import&raw",
-        "GET /images../.env",
-        "GET /img../.env",
-        "GET /uploads../.env",
-        "GET /@fs/proc/self/cwd/.env?raw??",
-        "GET /",
-        "GET /..%2F.env",
-        "GET /api/.env/public/.env",
-        "GET /.env",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /rclone.conf",
-        "GET /..%2F..%2F.env"
-      ]
-    },
-    {
-      "ip": "136.111.47.87",
-      "family": "v4",
-      "first_seen": "2026-09-13T14:00:00Z",
-      "last_seen": "2026-09-13T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.111.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /firebase-service-account.json",
-        "GET /..%2F.env",
-        "GET /.ssh/id_ed25519",
-        "GET /",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "POST /",
-        "GET /backend/.env",
-        "GET /.boto",
-        "GET /.aws/credentials",
-        "GET /.svn/entries",
-        "GET /.git/config",
-        "GET /secrets.env",
-        "GET /.aws/config",
-        "GET /docker-compose.yaml",
-        "GET /.docker/config.json",
-        "GET /static/home/user/.env",
-        "POST /graphql",
-        "GET /.s3cfg",
-        "GET /.htpasswd",
-        "GET /.npmrc"
-      ]
-    },
-    {
-      "ip": "34.50.65.250",
-      "family": "v4",
-      "first_seen": "2026-09-13T13:00:00Z",
-      "last_seen": "2026-09-13T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.50.64.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /admin/phpinfo.php",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
       ]
     },
     {
@@ -20375,6 +20122,122 @@
       ],
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "66.132.224.237",
+      "family": "v4",
+      "first_seen": "2026-09-20T19:00:00Z",
+      "last_seen": "2026-09-20T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "34.47.136.151",
+      "family": "v4",
+      "first_seen": "2026-09-20T19:00:00Z",
+      "last_seen": "2026-09-20T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.47.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /admin/phpinfo.php",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "34.65.112.85",
+      "family": "v4",
+      "first_seen": "2026-09-20T17:00:00Z",
+      "last_seen": "2026-09-20T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.65.112.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "20.40.232.119",
+      "family": "v4",
+      "first_seen": "2026-09-20T22:00:00Z",
+      "last_seen": "2026-09-20T22:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.40.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
       ]
     }
   ]
