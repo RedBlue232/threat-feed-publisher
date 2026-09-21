@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-21T01:00:00Z",
+  "generated_at": "2026-09-21T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1136,
-    "v4": 1136,
+    "total": 1139,
+    "v4": 1139,
     "v6": 0
   },
   "items": [
@@ -4340,9 +4340,10 @@
       "ip": "203.55.81.1",
       "family": "v4",
       "first_seen": "2026-09-16T20:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
+      "last_seen": "2026-09-21T08:00:00Z",
       "scenarios": [
         "suricata/ET TOR Known Tor Exit Node Traffic group 66",
+        "suricata/ET TOR Known Tor Exit Node Traffic group 67",
         "suricata/ET TOR Known Tor Exit Node Traffic group 68"
       ],
       "sources": [
@@ -18754,6 +18755,57 @@
       ],
       "payloads": [
         "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "104.244.73.190",
+      "family": "v4",
+      "first_seen": "2026-09-21T08:00:00Z",
+      "last_seen": "2026-09-21T08:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 3"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "53667",
+      "asn_name": "PONYNET - FranTech Solutions",
+      "asn_prefix": "104.244.73.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "102.220.161.79",
+      "family": "v4",
+      "first_seen": "2026-09-21T01:00:00Z",
+      "last_seen": "2026-09-21T01:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/22"
+    },
+    {
+      "ip": "167.172.89.248",
+      "family": "v4",
+      "first_seen": "2026-09-21T12:00:00Z",
+      "last_seen": "2026-09-21T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.172.80.0/20",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
