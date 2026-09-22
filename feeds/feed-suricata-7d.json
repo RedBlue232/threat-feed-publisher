@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-22T01:00:00Z",
+  "generated_at": "2026-09-22T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1143,
-    "v4": 1143,
+    "total": 1147,
+    "v4": 1147,
     "v6": 0
   },
   "items": [
@@ -18884,6 +18884,81 @@
       "asn_prefix": "20.160.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "161.35.99.65",
+      "family": "v4",
+      "first_seen": "2026-09-22T12:00:00Z",
+      "last_seen": "2026-09-22T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "161.35.96.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "74.208.202.196",
+      "family": "v4",
+      "first_seen": "2026-09-22T06:00:00Z",
+      "last_seen": "2026-09-22T06:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8560",
+      "asn_name": "IONOS-AS IONOS SE",
+      "asn_prefix": "74.208.0.0/16",
+      "payloads": [
+        "POST /"
+      ]
+    },
+    {
+      "ip": "20.80.97.121",
+      "family": "v4",
+      "first_seen": "2026-09-22T02:00:00Z",
+      "last_seen": "2026-09-22T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "64.227.191.20",
+      "family": "v4",
+      "first_seen": "2026-09-22T12:00:00Z",
+      "last_seen": "2026-09-22T12:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "64.227.176.0/20",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
       ]
     }
   ]
