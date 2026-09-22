@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-21T13:00:00Z",
+  "generated_at": "2026-09-22T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1192,
-    "v4": 1192,
+    "total": 1197,
+    "v4": 1197,
     "v6": 0
   },
   "items": [
@@ -668,66 +668,6 @@
       ]
     },
     {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-09-15T00:00:00Z",
-      "last_seen": "2026-09-15T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "40.80.203.118",
-      "family": "v4",
-      "first_seen": "2026-09-14T22:00:00Z",
-      "last_seen": "2026-09-14T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.80.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "20.84.164.199",
-      "family": "v4",
-      "first_seen": "2026-09-14T21:00:00Z",
-      "last_seen": "2026-09-14T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
       "ip": "4.150.191.40",
       "family": "v4",
       "first_seen": "2026-09-14T18:00:00Z",
@@ -748,46 +688,6 @@
       ],
       "payloads": [
         "GET /manager/html"
-      ]
-    },
-    {
-      "ip": "199.45.155.49",
-      "family": "v4",
-      "first_seen": "2026-09-14T17:00:00Z",
-      "last_seen": "2026-09-14T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.155.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "82.165.58.43",
-      "family": "v4",
-      "first_seen": "2026-09-14T16:00:00Z",
-      "last_seen": "2026-09-14T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8560",
-      "asn_name": "IONOS-AS IONOS SE",
-      "asn_prefix": "82.165.58.0/24",
-      "payloads": [
-        "GET /web/login"
       ]
     },
     {
@@ -20357,6 +20257,240 @@
       "asn_prefix": "167.172.80.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "8.234.255.64",
+      "family": "v4",
+      "first_seen": "2026-09-21T18:00:00Z",
+      "last_seen": "2026-09-21T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "34.27.111.250",
+      "family": "v4",
+      "first_seen": "2026-09-21T17:00:00Z",
+      "last_seen": "2026-09-21T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.27.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /bak/.claude/credentials.json",
+        "GET /.claude/credentials.json",
+        "GET /.claude/settings.local.json",
+        "GET /html/.claude.json",
+        "GET /.codex/config.toml",
+        "GET /api/.codex/auth.json",
+        "GET /.claude/.credentials.json",
+        "GET /html/.codex/auth.json",
+        "GET /backup/.claude.json",
+        "GET /app/.claude/credentials.json",
+        "GET /www/.claude/credentials.json"
+      ]
+    },
+    {
+      "ip": "185.213.174.141",
+      "family": "v4",
+      "first_seen": "2026-09-21T16:00:00Z",
+      "last_seen": "2026-09-21T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "41608",
+      "asn_name": "NextGenWebs-NL NextGenWebs, S.L.",
+      "asn_prefix": "185.213.174.0/24",
+      "payloads": [
+        "GET /cgi-bin/luci/"
+      ]
+    },
+    {
+      "ip": "199.45.155.37",
+      "family": "v4",
+      "first_seen": "2026-09-21T16:00:00Z",
+      "last_seen": "2026-09-21T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.155.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "179.43.150.26",
+      "family": "v4",
+      "first_seen": "2026-09-21T15:00:00Z",
+      "last_seen": "2026-09-21T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "51852",
+      "asn_name": "PLI-AS Private Layer INC",
+      "asn_prefix": "179.43.150.0/24",
+      "payloads": [
+        "GET /.e5416",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.development",
+        "GET /.env.dev",
+        "GET /.env.prod",
+        "GET /.env.test",
+        "GET /.env.staging",
+        "GET /.env.backup",
+        "GET /.env.save",
+        "GET /.env.old"
+      ]
+    },
+    {
+      "ip": "40.124.113.127",
+      "family": "v4",
+      "first_seen": "2026-09-21T14:00:00Z",
+      "last_seen": "2026-09-21T14:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2022-41082"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /autodiscover/autodiscover.json?@zdi/Powershell"
+      ]
+    },
+    {
+      "ip": "198.44.58.153",
+      "family": "v4",
+      "first_seen": "2026-09-21T15:00:00Z",
+      "last_seen": "2026-09-21T15:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "36352",
+      "asn_name": "AS-COLOCROSSING - HostPapa",
+      "asn_prefix": "198.44.58.0/24",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "104.22.160.42",
+      "family": "v4",
+      "first_seen": "2026-09-21T13:00:00Z",
+      "last_seen": "2026-09-21T13:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.22.160.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "104.22.160.71",
+      "family": "v4",
+      "first_seen": "2026-09-21T13:00:00Z",
+      "last_seen": "2026-09-21T13:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare",
+      "asn_prefix": "104.22.160.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.171.11.45",
+      "family": "v4",
+      "first_seen": "2026-09-21T23:00:00Z",
+      "last_seen": "2026-09-21T23:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
       ]
     }
   ]
