@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-24T13:00:00Z",
+  "generated_at": "2026-09-25T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 73,
-    "v4": 73,
+    "total": 77,
+    "v4": 77,
     "v6": 0
   },
   "items": [
@@ -220,27 +220,6 @@
         "GET /media.php",
         "GET /mac.php",
         "GET /test1.php"
-      ]
-    },
-    {
-      "ip": "20.106.18.245",
-      "family": "v4",
-      "first_seen": "2026-09-17T14:00:00Z",
-      "last_seen": "2026-09-17T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
       ]
     },
     {
@@ -2209,6 +2188,108 @@
         "GET /login",
         "GET /doc/index.html",
         "GET /remote/login"
+      ]
+    },
+    {
+      "ip": "20.83.41.25",
+      "family": "v4",
+      "first_seen": "2026-09-24T20:00:00Z",
+      "last_seen": "2026-09-24T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "134.33.66.210",
+      "family": "v4",
+      "first_seen": "2026-09-24T19:00:00Z",
+      "last_seen": "2026-09-24T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "134.33.0.0/16",
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "66.132.195.118",
+      "family": "v4",
+      "first_seen": "2026-09-24T17:00:00Z",
+      "last_seen": "2026-09-24T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "167.94.146.49",
+      "family": "v4",
+      "first_seen": "2026-09-24T17:00:00Z",
+      "last_seen": "2026-09-24T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398705",
+      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
+      "asn_prefix": "167.94.146.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "199.45.154.73",
+      "family": "v4",
+      "first_seen": "2026-09-24T17:00:00Z",
+      "last_seen": "2026-09-24T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
       ]
     }
   ]
