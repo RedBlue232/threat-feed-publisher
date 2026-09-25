@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T01:00:00Z",
+  "generated_at": "2026-09-25T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -181,48 +181,6 @@
       ]
     },
     {
-      "ip": "52.141.45.117",
-      "family": "v4",
-      "first_seen": "2026-09-16T17:00:00Z",
-      "last_seen": "2026-09-18T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "52.136.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /01.php",
-        "GET /wp-filemannger.php",
-        "GET /ba.php?p=",
-        "GET /great.php",
-        "GET /dyt8mjxc3yofbkoriukvgjaCdefault.php",
-        "GET /robots.php",
-        "GET /k.php",
-        "GET /w.php",
-        "GET /wp-admin/css/",
-        "GET /admin.php",
-        "GET /admin.php?attempt=1",
-        "GET /alfa.php",
-        "GET /222.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /images.php",
-        "GET /goods.php",
-        "GET /k.php?p=",
-        "GET /media.php",
-        "GET /mac.php",
-        "GET /test1.php"
-      ]
-    },
-    {
       "ip": "103.116.137.186",
       "family": "v4",
       "first_seen": "2026-09-18T10:00:00Z",
@@ -245,50 +203,6 @@
       ]
     },
     {
-      "ip": "34.6.167.89",
-      "family": "v4",
-      "first_seen": "2026-09-18T06:00:00Z",
-      "last_seen": "2026-09-18T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.6.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /administrator/.env",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup",
-        "GET /_environment",
-        "GET /phpinfo.php.bak",
-        "GET /phpinfo.php.old",
-        "GET /phpinfo.php~",
-        "GET /info.php.bak",
-        "GET /phpinfo.php.save",
-        "GET /info.php",
-        "GET /admin/.env"
-      ]
-    },
-    {
       "ip": "199.45.154.71",
       "family": "v4",
       "first_seen": "2026-09-18T05:00:00Z",
@@ -308,25 +222,6 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.224.227",
-      "family": "v4",
-      "first_seen": "2026-09-18T01:00:00Z",
-      "last_seen": "2026-09-18T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /sitemap.xml"
       ]
     },
     {
@@ -2290,6 +2185,104 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.219.14.152",
+      "family": "v4",
+      "first_seen": "2026-09-25T10:00:00Z",
+      "last_seen": "2026-09-25T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /info.php/new.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /adminfuns.php",
+        "GET /goods.php",
+        "GET /100.php",
+        "GET /about.php",
+        "GET /admin.php",
+        "GET /themes.php",
+        "GET /biufile.php",
+        "GET /coffexium.php",
+        "GET /coffee.php"
+      ]
+    },
+    {
+      "ip": "31.59.160.30",
+      "family": "v4",
+      "first_seen": "2026-09-25T09:00:00Z",
+      "last_seen": "2026-09-25T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "POST /wp/wp-json/batch/v1",
+        "POST /?rest_route=/batch/v1",
+        "POST /index.php?rest_route=/batch/v1",
+        "POST /index.php?rest_route=%2Fbatch%2Fv1",
+        "POST /?rest_route=%2Fbatch%2Fv1",
+        "POST /?rest_route=/batch%2Fv1",
+        "POST /wp-json/batch/v1",
+        "POST /wp-json/Batch/v1",
+        "POST /wp-json/batch/v1/",
+        "POST /blog/wp-json/batch/v1",
+        "POST /wordpress/wp-json/batch/v1",
+        "GET /wp/v2/posts/999999"
+      ]
+    },
+    {
+      "ip": "34.86.87.138",
+      "family": "v4",
+      "first_seen": "2026-09-25T04:00:00Z",
+      "last_seen": "2026-09-25T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.86.80.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /info.php",
+        "GET /admin/.env",
+        "GET /admin-panel/.env",
+        "GET /administrator/.env",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
       ]
     }
   ]
