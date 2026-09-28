@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T01:00:00Z",
+  "generated_at": "2026-09-28T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -28,182 +28,6 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "34.26.104.81",
-      "family": "v4",
-      "first_seen": "2026-09-21T11:00:00Z",
-      "last_seen": "2026-09-21T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.26.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /static/..%2F..%2F..%2F..%2F.env",
-        "GET /userfiles/x?path=../../../../proc/self/environ",
-        "GET /wp-config.php.swp",
-        "GET /.env.development?raw",
-        "GET /dist../.env",
-        "GET /public../.env",
-        "GET /build../.env",
-        "GET /css../.env",
-        "GET /",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /s6watcrcz4ndy883ipyw",
-        "GET /4lpdqq5tcigpeeabeb50",
-        "POST /",
-        "GET /@fs/app/.env.local?import&raw??",
-        "GET /@fs/app/.env.production?import&raw??",
-        "GET /.env.development?import&raw",
-        "GET /@fs/app/.env?import&raw??",
-        "GET /.env?import&raw??",
-        "GET /.env.production?import&raw",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "45.138.12.52",
-      "family": "v4",
-      "first_seen": "2026-09-21T11:00:00Z",
-      "last_seen": "2026-09-21T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "218785",
-      "asn_name": "TC-DATACENTER TC DATACENTER LIMITED",
-      "asn_prefix": "45.138.12.0/24",
-      "payloads": [
-        "GET /actuator/health",
-        "GET /actuator/heapdump",
-        "GET /_profiler",
-        "GET /_profiler/phpinfo/info.php",
-        "GET /api/database.yml",
-        "GET /local.settings.json",
-        "GET /phpinfo.php",
-        "GET /_profiler/phpinfo/phpinfo.php",
-        "GET /actuator/gateway/routes",
-        "GET /.env",
-        "GET /.git/config",
-        "GET /backend/.env",
-        "GET /api/.env",
-        "GET /laravel/.env",
-        "GET /",
-        "GET /rest/api/1.0/application-properties",
-        "GET /.git/logs/HEAD",
-        "GET /.env.example",
-        "GET /ai/config.yaml",
-        "GET /_profiler/phpinfo"
-      ]
-    },
-    {
-      "ip": "195.63.9.179",
-      "family": "v4",
-      "first_seen": "2026-09-21T07:00:00Z",
-      "last_seen": "2026-09-21T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "200373",
-      "asn_name": "Drei-K-Tech-GmbH 3xK Tech GmbH",
-      "asn_prefix": "195.63.0.0/20",
-      "payloads": [
-        "POST /wp-json/batch/v1"
-      ]
-    },
-    {
-      "ip": "34.151.92.177",
-      "family": "v4",
-      "first_seen": "2026-09-21T06:00:00Z",
-      "last_seen": "2026-09-21T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.151.80.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /admin/phpinfo.php",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
-    {
-      "ip": "159.223.132.86",
-      "family": "v4",
-      "first_seen": "2026-09-21T05:00:00Z",
-      "last_seen": "2026-09-21T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/jira_cve-2021-26086"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "159.223.128.0/20",
-      "payloads": [
-        "GET /info.php",
-        "GET /s/2353e2935313e27363e22383/_/;/META-INF/maven/com.atlassian.jira/jira-webapp-dist/pom.properties",
-        "GET /console/",
-        "GET /server-status",
-        "GET /about",
-        "GET /login.action",
-        "GET /___proxy_subdomain_whm/login",
-        "GET /___proxy_subdomain_cpanel",
-        "GET /v2/_catalog",
-        "GET /.DS_Store",
-        "GET /.env",
-        "GET /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application",
-        "POST /graphql"
       ]
     },
     {
@@ -2169,7 +1993,7 @@
       "ip": "20.214.145.90",
       "family": "v4",
       "first_seen": "2026-09-27T21:00:00Z",
-      "last_seen": "2026-09-27T21:00:00Z",
+      "last_seen": "2026-09-28T09:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-technology-probing"
@@ -2202,7 +2026,7 @@
       "ip": "45.138.12.51",
       "family": "v4",
       "first_seen": "2026-09-27T21:00:00Z",
-      "last_seen": "2026-09-27T21:00:00Z",
+      "last_seen": "2026-09-28T03:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-probing",
@@ -2215,10 +2039,6 @@
       "asn_name": "TC-DATACENTER TC DATACENTER LIMITED",
       "asn_prefix": "45.138.12.0/24",
       "payloads": [
-        "GET /phpinfo",
-        "GET /admin/.env",
-        "GET /admin/.git/config",
-        "GET /.env.stage",
         "GET /api/.env",
         "GET /build/.env",
         "GET /.env.bak",
@@ -2228,7 +2048,17 @@
         "GET /config.json",
         "GET /.env.dev.local",
         "GET /.env.sandbox",
-        "GET /.env.example"
+        "GET /.env.example",
+        "GET /_profiler/phpinfo",
+        "GET /.env.backup",
+        "GET /dev/.git/config",
+        "GET /media../.git/config",
+        "GET /public/.env",
+        "GET /.gitlab-ci.yml",
+        "GET /.env.template",
+        "GET /config/aws.json",
+        "GET /sftp.json",
+        "GET /.env.production"
       ]
     },
     {
@@ -2291,6 +2121,143 @@
         "GET /wp_blog_footer.php",
         "GET /k.php?p=",
         "GET /133.php"
+      ]
+    },
+    {
+      "ip": "103.215.74.26",
+      "family": "v4",
+      "first_seen": "2026-09-28T07:00:00Z",
+      "last_seen": "2026-09-28T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "150303",
+      "asn_name": "SOLORDP-AS-AP - SoloRDP",
+      "asn_prefix": "103.215.74.0/23",
+      "payloads": [
+        "POST /wordpress/wp-json/batch/v1",
+        "POST /wp/wp-json/batch/v1",
+        "POST /?rest_route=%2Fbatch%2Fv1",
+        "POST /?rest_route=/batch%2Fv1",
+        "POST /wp-json/batch/v1",
+        "POST /wp-json/Batch/v1",
+        "POST /wp-json/batch/v1/",
+        "POST /blog/wp-json/batch/v1",
+        "GET /wp/v2/posts/999999",
+        "GET /?rest_route=/wp/v2/posts/999999",
+        "GET /wp/v2/pages",
+        "GET /?rest_route=/wp/v2/pages"
+      ]
+    },
+    {
+      "ip": "199.45.154.50",
+      "family": "v4",
+      "first_seen": "2026-09-28T07:00:00Z",
+      "last_seen": "2026-09-28T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "13.70.4.78",
+      "family": "v4",
+      "first_seen": "2026-09-28T07:00:00Z",
+      "last_seen": "2026-09-28T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "13.64.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /adminfuns.php",
+        "GET /wp-admin/css/",
+        "GET /admin.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /alfa.php",
+        "GET /222.php",
+        "GET /3PJcpMFsD8B.php",
+        "GET /images.php",
+        "GET /goods.php",
+        "GET /media.php",
+        "GET /mac.php",
+        "GET /ops.php"
+      ]
+    },
+    {
+      "ip": "66.132.195.61",
+      "family": "v4",
+      "first_seen": "2026-09-28T02:00:00Z",
+      "last_seen": "2026-09-28T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "167.71.153.59",
+      "family": "v4",
+      "first_seen": "2026-09-28T01:00:00Z",
+      "last_seen": "2026-09-28T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.71.144.0/20",
+      "payloads": [
+        "HEAD /",
+        "HEAD /us/",
+        "HEAD /old/",
+        "HEAD /2023/",
+        "HEAD /home/",
+        "HEAD /portal/",
+        "HEAD /en/",
+        "HEAD /website/",
+        "HEAD /web/",
+        "HEAD /content/",
+        "HEAD /new/",
+        "HEAD /press/",
+        "HEAD /wordpress/",
+        "HEAD /v2/"
       ]
     }
   ]

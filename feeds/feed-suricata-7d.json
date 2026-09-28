@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-28T01:00:00Z",
+  "generated_at": "2026-09-28T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 52,
+    "v4": 52,
     "v6": 0
   },
   "items": [
@@ -22,26 +22,6 @@
       "asn": "212238",
       "asn_name": "CDNEXT Datacamp Limited",
       "asn_prefix": "79.127.184.0/24"
-    },
-    {
-      "ip": "203.55.81.1",
-      "family": "v4",
-      "first_seen": "2026-09-16T20:00:00Z",
-      "last_seen": "2026-09-21T08:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 66",
-        "suricata/ET TOR Known Tor Exit Node Traffic group 67",
-        "suricata/ET TOR Known Tor Exit Node Traffic group 68"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "213873",
-      "asn_name": "OUIDO-Hosting MOJI SAS",
-      "asn_prefix": "203.55.81.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
     },
     {
       "ip": "37.120.213.13",
@@ -73,57 +53,6 @@
       "asn": "209103",
       "asn_name": "ProtonVPN Proton AG",
       "asn_prefix": "62.169.136.0/24"
-    },
-    {
-      "ip": "104.244.73.190",
-      "family": "v4",
-      "first_seen": "2026-09-21T08:00:00Z",
-      "last_seen": "2026-09-21T08:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 3"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "53667",
-      "asn_name": "PONYNET - FranTech Solutions",
-      "asn_prefix": "104.244.73.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "102.220.161.79",
-      "family": "v4",
-      "first_seen": "2026-09-21T01:00:00Z",
-      "last_seen": "2026-09-21T01:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "197769",
-      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
-      "asn_prefix": "102.220.160.0/22"
-    },
-    {
-      "ip": "167.172.89.248",
-      "family": "v4",
-      "first_seen": "2026-09-21T12:00:00Z",
-      "last_seen": "2026-09-21T12:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "167.172.80.0/20",
-      "payloads": [
-        "GET /"
-      ]
     },
     {
       "ip": "198.44.58.153",
@@ -922,6 +851,93 @@
       "asn_prefix": "18.216.0.0/14",
       "tags": [
         "mwl:cloud=\"aws\""
+      ]
+    },
+    {
+      "ip": "45.33.14.5",
+      "family": "v4",
+      "first_seen": "2026-09-28T03:00:00Z",
+      "last_seen": "2026-09-28T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "45.33.0.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "66.228.62.150",
+      "family": "v4",
+      "first_seen": "2026-09-28T02:00:00Z",
+      "last_seen": "2026-09-28T02:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "66.228.56.0/21"
+    },
+    {
+      "ip": "124.29.251.232",
+      "family": "v4",
+      "first_seen": "2026-09-28T01:00:00Z",
+      "last_seen": "2026-09-28T01:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "124.29.251.0/24",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "45.79.207.252",
+      "family": "v4",
+      "first_seen": "2026-09-28T01:00:00Z",
+      "last_seen": "2026-09-28T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "45.79.192.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "39.34.189.230",
+      "family": "v4",
+      "first_seen": "2026-09-28T04:00:00Z",
+      "last_seen": "2026-09-28T04:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132165",
+      "asn_name": "CONNECT-AS-AP - Connect Communications",
+      "asn_prefix": "39.34.189.0/24",
+      "payloads": [
+        "POST /HNAP1/"
       ]
     }
   ]
