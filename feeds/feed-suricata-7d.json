@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-28T13:00:00Z",
+  "generated_at": "2026-09-29T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 52,
-    "v4": 52,
+    "total": 54,
+    "v4": 54,
     "v6": 0
   },
   "items": [
@@ -53,84 +53,6 @@
       "asn": "209103",
       "asn_name": "ProtonVPN Proton AG",
       "asn_prefix": "62.169.136.0/24"
-    },
-    {
-      "ip": "198.44.58.153",
-      "family": "v4",
-      "first_seen": "2026-09-21T15:00:00Z",
-      "last_seen": "2026-09-21T15:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "36352",
-      "asn_name": "AS-COLOCROSSING - HostPapa",
-      "asn_prefix": "198.44.58.0/24",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "104.22.160.42",
-      "family": "v4",
-      "first_seen": "2026-09-21T13:00:00Z",
-      "last_seen": "2026-09-21T13:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "104.22.160.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "104.22.160.71",
-      "family": "v4",
-      "first_seen": "2026-09-21T13:00:00Z",
-      "last_seen": "2026-09-21T13:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare",
-      "asn_prefix": "104.22.160.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "20.171.11.45",
-      "family": "v4",
-      "first_seen": "2026-09-21T23:00:00Z",
-      "last_seen": "2026-09-21T23:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.160.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
     },
     {
       "ip": "161.35.99.65",
@@ -938,6 +860,123 @@
       "asn_prefix": "39.34.189.0/24",
       "payloads": [
         "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "40.119.45.161",
+      "family": "v4",
+      "first_seen": "2026-09-28T23:00:00Z",
+      "last_seen": "2026-09-28T23:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.112.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.46.235.108",
+      "family": "v4",
+      "first_seen": "2026-09-28T22:00:00Z",
+      "last_seen": "2026-09-28T22:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.40.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "43.241.37.251",
+      "family": "v4",
+      "first_seen": "2026-09-28T18:00:00Z",
+      "last_seen": "2026-09-28T18:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 19"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "133296",
+      "asn_name": "WEBWERKS-AS-IN - Web Werks India Pvt. Ltd.",
+      "asn_prefix": "43.241.37.0/24"
+    },
+    {
+      "ip": "115.48.147.103",
+      "family": "v4",
+      "first_seen": "2026-09-28T16:00:00Z",
+      "last_seen": "2026-09-28T16:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+      "asn_prefix": "115.48.0.0/12",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "20.106.200.208",
+      "family": "v4",
+      "first_seen": "2026-09-28T13:00:00Z",
+      "last_seen": "2026-09-28T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "20.65.145.4",
+      "family": "v4",
+      "first_seen": "2026-09-29T00:00:00Z",
+      "last_seen": "2026-09-29T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
       ]
     }
   ]
