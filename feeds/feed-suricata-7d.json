@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-29T01:00:00Z",
+  "generated_at": "2026-09-29T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 54,
-    "v4": 54,
+    "total": 55,
+    "v4": 55,
     "v6": 0
   },
   "items": [
@@ -53,81 +53,6 @@
       "asn": "209103",
       "asn_name": "ProtonVPN Proton AG",
       "asn_prefix": "62.169.136.0/24"
-    },
-    {
-      "ip": "161.35.99.65",
-      "family": "v4",
-      "first_seen": "2026-09-22T12:00:00Z",
-      "last_seen": "2026-09-22T12:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "161.35.96.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "74.208.202.196",
-      "family": "v4",
-      "first_seen": "2026-09-22T06:00:00Z",
-      "last_seen": "2026-09-22T06:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8560",
-      "asn_name": "IONOS-AS IONOS SE",
-      "asn_prefix": "74.208.0.0/16",
-      "payloads": [
-        "POST /"
-      ]
-    },
-    {
-      "ip": "20.80.97.121",
-      "family": "v4",
-      "first_seen": "2026-09-22T02:00:00Z",
-      "last_seen": "2026-09-22T02:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "64.227.191.20",
-      "family": "v4",
-      "first_seen": "2026-09-22T12:00:00Z",
-      "last_seen": "2026-09-22T12:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "64.227.176.0/20",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
     },
     {
       "ip": "147.182.215.171",
@@ -978,6 +903,87 @@
       "payloads": [
         "GET /developmentserver/metadatauploader"
       ]
+    },
+    {
+      "ip": "140.248.138.172",
+      "family": "v4",
+      "first_seen": "2026-09-29T06:00:00Z",
+      "last_seen": "2026-09-29T06:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "54113",
+      "asn_name": "FASTLY - Fastly, Inc.",
+      "asn_prefix": "140.248.136.0/22",
+      "tags": [
+        "mwl:cdn=\"fastly\""
+      ]
+    },
+    {
+      "ip": "72.14.178.148",
+      "family": "v4",
+      "first_seen": "2026-09-29T04:00:00Z",
+      "last_seen": "2026-09-29T04:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "45.33.12.122",
+      "family": "v4",
+      "first_seen": "2026-09-29T04:00:00Z",
+      "last_seen": "2026-09-29T04:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "45.33.0.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "45.33.12.214",
+      "family": "v4",
+      "first_seen": "2026-09-29T02:00:00Z",
+      "last_seen": "2026-09-29T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "45.33.0.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "176.65.139.206",
+      "family": "v4",
+      "first_seen": "2026-09-29T08:00:00Z",
+      "last_seen": "2026-09-29T08:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 8"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "219502",
+      "asn_name": "STORMCLOUD-AS Storm Industries LLC",
+      "asn_prefix": "176.65.139.0/24"
     }
   ]
 }
