@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-29T13:00:00Z",
+  "generated_at": "2026-09-30T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 55,
-    "v4": 55,
+    "total": 56,
+    "v4": 56,
     "v6": 0
   },
   "items": [
@@ -24,22 +24,6 @@
       "asn_prefix": "79.127.184.0/24"
     },
     {
-      "ip": "37.120.213.13",
-      "family": "v4",
-      "first_seen": "2026-09-16T20:00:00Z",
-      "last_seen": "2026-09-22T14:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 19",
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9009",
-      "asn_name": "M247 M247 Europe SRL",
-      "asn_prefix": "37.120.213.0/24"
-    },
-    {
       "ip": "62.169.136.3",
       "family": "v4",
       "first_seen": "2026-09-16T20:00:00Z",
@@ -53,42 +37,6 @@
       "asn": "209103",
       "asn_name": "ProtonVPN Proton AG",
       "asn_prefix": "62.169.136.0/24"
-    },
-    {
-      "ip": "147.182.215.171",
-      "family": "v4",
-      "first_seen": "2026-09-22T21:00:00Z",
-      "last_seen": "2026-09-22T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "147.182.208.0/20"
-    },
-    {
-      "ip": "20.112.236.30",
-      "family": "v4",
-      "first_seen": "2026-09-23T00:00:00Z",
-      "last_seen": "2026-09-23T00:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
     },
     {
       "ip": "66.234.146.2",
@@ -932,7 +880,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "72.14.176.0/20"
     },
     {
       "ip": "45.33.12.122",
@@ -984,6 +935,81 @@
       "asn": "219502",
       "asn_name": "STORMCLOUD-AS Storm Industries LLC",
       "asn_prefix": "176.65.139.0/24"
+    },
+    {
+      "ip": "85.90.246.159",
+      "family": "v4",
+      "first_seen": "2026-09-29T16:00:00Z",
+      "last_seen": "2026-09-29T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "85.90.244.0/22"
+    },
+    {
+      "ip": "40.124.84.61",
+      "family": "v4",
+      "first_seen": "2026-09-29T14:00:00Z",
+      "last_seen": "2026-09-29T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "174.138.40.60",
+      "family": "v4",
+      "first_seen": "2026-09-29T13:00:00Z",
+      "last_seen": "2026-09-29T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "174.138.32.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.29.41.210",
+      "family": "v4",
+      "first_seen": "2026-09-29T20:00:00Z",
+      "last_seen": "2026-09-29T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
     }
   ]
 }
