@@ -1,216 +1,13 @@
 {
-  "generated_at": "2026-10-01T13:00:00Z",
+  "generated_at": "2026-10-02T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 61,
-    "v4": 61,
+    "total": 55,
+    "v4": 55,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.83.41.25",
-      "family": "v4",
-      "first_seen": "2026-09-24T20:00:00Z",
-      "last_seen": "2026-09-24T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "134.33.66.210",
-      "family": "v4",
-      "first_seen": "2026-09-24T19:00:00Z",
-      "last_seen": "2026-09-24T19:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "134.33.0.0/16",
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "66.132.195.118",
-      "family": "v4",
-      "first_seen": "2026-09-24T17:00:00Z",
-      "last_seen": "2026-09-24T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "167.94.146.49",
-      "family": "v4",
-      "first_seen": "2026-09-24T17:00:00Z",
-      "last_seen": "2026-09-24T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "199.45.154.73",
-      "family": "v4",
-      "first_seen": "2026-09-24T17:00:00Z",
-      "last_seen": "2026-09-24T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398722",
-      "asn_name": "CENSYS-ARIN-03 - Censys",
-      "asn_prefix": "199.45.154.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "20.219.14.152",
-      "family": "v4",
-      "first_seen": "2026-09-25T10:00:00Z",
-      "last_seen": "2026-09-25T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /info.php/new.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /adminfuns.php",
-        "GET /goods.php",
-        "GET /100.php",
-        "GET /about.php",
-        "GET /admin.php",
-        "GET /themes.php",
-        "GET /biufile.php",
-        "GET /coffexium.php",
-        "GET /coffee.php"
-      ]
-    },
-    {
-      "ip": "31.59.160.30",
-      "family": "v4",
-      "first_seen": "2026-09-25T09:00:00Z",
-      "last_seen": "2026-09-25T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "203861",
-      "asn_name": "MITEFLUX-AS Miteflux Technologies Ltd",
-      "asn_prefix": "31.59.160.0/24",
-      "payloads": [
-        "POST /wp/wp-json/batch/v1",
-        "POST /?rest_route=/batch/v1",
-        "POST /index.php?rest_route=/batch/v1",
-        "POST /index.php?rest_route=%2Fbatch%2Fv1",
-        "POST /?rest_route=%2Fbatch%2Fv1",
-        "POST /?rest_route=/batch%2Fv1",
-        "POST /wp-json/batch/v1",
-        "POST /wp-json/Batch/v1",
-        "POST /wp-json/batch/v1/",
-        "POST /blog/wp-json/batch/v1",
-        "POST /wordpress/wp-json/batch/v1",
-        "GET /wp/v2/posts/999999"
-      ]
-    },
-    {
-      "ip": "34.86.87.138",
-      "family": "v4",
-      "first_seen": "2026-09-25T04:00:00Z",
-      "last_seen": "2026-09-25T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.86.80.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /admin-panel/.env",
-        "GET /administrator/.env",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
     {
       "ip": "66.132.224.227",
       "family": "v4",
@@ -272,7 +69,7 @@
       "ip": "223.123.72.50",
       "family": "v4",
       "first_seen": "2026-09-25T17:00:00Z",
-      "last_seen": "2026-09-25T17:00:00Z",
+      "last_seen": "2026-10-02T07:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "crowdsec/netgear_rce",
@@ -1639,6 +1436,59 @@
       ],
       "payloads": [
         "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "20.58.177.98",
+      "family": "v4",
+      "first_seen": "2026-10-02T11:00:00Z",
+      "last_seen": "2026-10-02T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.48.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /3PJcpMFsD8B.php",
+        "GET /aa.php",
+        "GET /z70.php",
+        "GET /adminfuns.php",
+        "GET /av.php",
+        "GET /dex.php",
+        "GET /chosen.php",
+        "GET /1.php?p=",
+        "GET /radio.php"
+      ]
+    },
+    {
+      "ip": "54.194.21.157",
+      "family": "v4",
+      "first_seen": "2026-10-02T10:00:00Z",
+      "last_seen": "2026-10-02T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com",
+      "asn_prefix": "54.194.0.0/16",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /robots.txt",
+        "GET /"
       ]
     }
   ]
