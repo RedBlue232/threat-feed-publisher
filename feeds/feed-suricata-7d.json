@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-03T01:00:00Z",
+  "generated_at": "2026-10-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1206,
-    "v4": 1206,
+    "total": 1209,
+    "v4": 1209,
     "v6": 0
   },
   "items": [
@@ -9427,6 +9427,7 @@
         "suricata"
       ],
       "asn": "13614",
+      "asn_name": "ALLWEST - All West Communications, Inc.",
       "asn_prefix": "66.205.208.0/20"
     },
     {
@@ -15586,6 +15587,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
       "tags": [
         "mwl:cloud=\"azure\""
       ]
@@ -19708,6 +19712,54 @@
       "asn": "197170",
       "asn_name": "TECHTIES-AS TechTies Inc.",
       "asn_prefix": "45.156.87.0/24"
+    },
+    {
+      "ip": "138.68.99.238",
+      "family": "v4",
+      "first_seen": "2026-10-03T07:00:00Z",
+      "last_seen": "2026-10-03T07:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.68.96.0/20"
+    },
+    {
+      "ip": "103.46.186.148",
+      "family": "v4",
+      "first_seen": "2026-10-03T02:00:00Z",
+      "last_seen": "2026-10-03T02:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "185.221.237.197",
+      "family": "v4",
+      "first_seen": "2026-10-03T12:00:00Z",
+      "last_seen": "2026-10-03T12:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212552",
+      "asn_name": "BitCommand BitCommand LLC",
+      "asn_prefix": "185.221.237.0/24",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
     }
   ]
 }
