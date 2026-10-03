@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T12:00:00Z",
+  "generated_at": "2026-10-03T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1205,
-    "v4": 1205,
+    "total": 1206,
+    "v4": 1206,
     "v6": 0
   },
   "items": [
@@ -8721,6 +8721,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
       "tags": [
         "mwl:cloud=\"azure\""
       ]
@@ -9886,7 +9889,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.130.0.0/18"
     },
     {
       "ip": "40.124.114.27",
@@ -11427,6 +11433,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
       "tags": [
         "mwl:cloud=\"azure\""
       ]
@@ -13122,6 +13131,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "58087",
+      "asn_name": "FlorianKolb Florian Kolb",
+      "asn_prefix": "45.13.225.0/24",
       "tags": [
         "tor:exit-node"
       ]
@@ -19681,6 +19693,21 @@
       "asn": "4134",
       "asn_name": "CHINANET-BACKBONE - No.31,Jin-rong Street",
       "asn_prefix": "182.128.0.0/12"
+    },
+    {
+      "ip": "45.156.87.209",
+      "family": "v4",
+      "first_seen": "2026-10-02T18:00:00Z",
+      "last_seen": "2026-10-02T18:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 18"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197170",
+      "asn_name": "TECHTIES-AS TechTies Inc.",
+      "asn_prefix": "45.156.87.0/24"
     }
   ]
 }
