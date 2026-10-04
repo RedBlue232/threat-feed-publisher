@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-03T13:00:00Z",
+  "generated_at": "2026-10-04T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1209,
-    "v4": 1209,
+    "total": 1221,
+    "v4": 1221,
     "v6": 0
   },
   "items": [
@@ -19739,6 +19739,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "150462",
+      "asn_name": "IDNIC-AIRLINK-AS-ID - PT Air Lintas Komunikasi",
+      "asn_prefix": "103.46.186.0/24",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
       ]
@@ -19759,6 +19762,226 @@
       "asn_prefix": "185.221.237.0/24",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "59.103.100.243",
+      "family": "v4",
+      "first_seen": "2026-10-03T17:00:00Z",
+      "last_seen": "2026-10-03T17:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "59.103.100.0/24",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "104.234.32.107",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "GET /html/phpinfo.php"
+      ]
+    },
+    {
+      "ip": "104.234.32.195",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT ownCloud Information Disclosure Attempt (CVE-2023-49103)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "HEAD /owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php",
+        "GET /owncloud/apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php"
+      ]
+    },
+    {
+      "ip": "104.234.32.149",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "HEAD /phpinfo.php",
+        "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "181.215.65.161",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING HTTP URI Path Normalization Bypasses & Escapes M1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "181.215.65.0/24",
+      "payloads": [
+        "GET /..;/env.production.js"
+      ]
+    },
+    {
+      "ip": "181.215.65.162",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING HTTP URI Path Normalization Bypasses & Escapes M1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "181.215.65.0/24",
+      "payloads": [
+        "GET /..;/env.js",
+        "GET /..;/env.prod.js"
+      ]
+    },
+    {
+      "ip": "104.234.32.153",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING HTTP URI Path Normalization Bypasses & Escapes M1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "GET /..;/env.dev.js",
+        "GET /..;/env.development.js"
+      ]
+    },
+    {
+      "ip": "181.215.65.173",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN SFTP/FTP Password Exposure via sftp-config.json"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "181.215.65.0/24",
+      "payloads": [
+        "GET /sftp-config.json"
+      ]
+    },
+    {
+      "ip": "104.234.32.202",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP Request Body"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "POST /wp-json/batch/v1"
+      ]
+    },
+    {
+      "ip": "104.234.32.157",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP React Server Components remote code execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206092",
+      "asn_name": "SECFIREWALLAS F.N.S. HOLDINGS LIMITED",
+      "asn_prefix": "104.234.32.0/24",
+      "payloads": [
+        "POST /"
+      ]
+    },
+    {
+      "ip": "181.215.65.169",
+      "family": "v4",
+      "first_seen": "2026-10-03T16:00:00Z",
+      "last_seen": "2026-10-03T16:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP React Server Components remote code execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "181.215.65.0/24",
+      "payloads": [
+        "POST /"
+      ]
+    },
+    {
+      "ip": "45.120.126.66",
+      "family": "v4",
+      "first_seen": "2026-10-03T18:00:00Z",
+      "last_seen": "2026-10-03T18:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN NETWORK Incoming Masscan detected"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "132934",
+      "asn_name": "SKYMAX-AS - Skymax Broadband Services Pvt. Ltd.",
+      "asn_prefix": "45.120.124.0/22",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
