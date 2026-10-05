@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-04T13:00:00Z",
+  "generated_at": "2026-10-05T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1286,
-    "v4": 1286,
+    "total": 1291,
+    "v4": 1291,
     "v6": 0
   },
   "items": [
@@ -370,28 +370,6 @@
       ]
     },
     {
-      "ip": "164.90.238.135",
-      "family": "v4",
-      "first_seen": "2026-09-28T00:00:00Z",
-      "last_seen": "2026-09-28T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "164.90.224.0/20",
-      "payloads": [
-        "GET /.env",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.local",
-        "GET /.env.backup"
-      ]
-    },
-    {
       "ip": "20.214.145.90",
       "family": "v4",
       "first_seen": "2026-09-27T21:00:00Z",
@@ -461,68 +439,6 @@
         "GET /config/aws.json",
         "GET /sftp.json",
         "GET /.env.production"
-      ]
-    },
-    {
-      "ip": "169.58.65.110",
-      "family": "v4",
-      "first_seen": "2026-09-27T18:00:00Z",
-      "last_seen": "2026-09-27T18:00:00Z",
-      "scenarios": [
-        "crowdsec/CVE-2017-9841",
-        "crowdsec/http-probing",
-        "crowdsec/thinkphp-cve-2018-20062"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "51167",
-      "asn_name": "CONTABO Contabo GmbH",
-      "asn_prefix": "169.58.0.0/17",
-      "payloads": [
-        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
-        "POST /bin/sh",
-        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
-        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
-        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
-        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
-        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
-      ]
-    },
-    {
-      "ip": "20.213.164.196",
-      "family": "v4",
-      "first_seen": "2026-09-27T13:00:00Z",
-      "last_seen": "2026-09-27T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /adminfuns.php",
-        "GET /av.php",
-        "GET /dex.php",
-        "GET /chosen.php",
-        "GET /radio.php",
-        "GET /wp_blog_footer.php",
-        "GET /k.php?p=",
-        "GET /133.php"
       ]
     },
     {
@@ -4254,10 +4170,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "107.189.31.187",
@@ -13963,10 +13876,7 @@
       ],
       "asn": "205100",
       "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.100.0/24"
     },
     {
       "ip": "192.42.116.62",
@@ -21808,6 +21718,232 @@
       ],
       "payloads": [
         "GET /phpinfo.php"
+      ]
+    },
+    {
+      "ip": "199.45.154.60",
+      "family": "v4",
+      "first_seen": "2026-10-04T22:00:00Z",
+      "last_seen": "2026-10-04T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys",
+      "asn_prefix": "199.45.154.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "161.35.63.144",
+      "family": "v4",
+      "first_seen": "2026-10-04T21:00:00Z",
+      "last_seen": "2026-10-04T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "161.35.48.0/20",
+      "payloads": [
+        "HEAD /portal/",
+        "HEAD /old/",
+        "HEAD /",
+        "HEAD /website/",
+        "HEAD /2024/",
+        "HEAD /en/",
+        "HEAD /news/",
+        "HEAD /backup/",
+        "HEAD /web/",
+        "HEAD /site1/",
+        "HEAD /2023/",
+        "HEAD /new/",
+        "HEAD /wordpress/",
+        "HEAD /v2/",
+        "HEAD /blog2/"
+      ]
+    },
+    {
+      "ip": "20.70.173.30",
+      "family": "v4",
+      "first_seen": "2026-10-04T16:00:00Z",
+      "last_seen": "2026-10-04T16:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-ablbseaer.php",
+        "GET /wp-wxyy.php",
+        "GET /wp-fgban13jx3.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /go.php",
+        "GET /photo.php",
+        "GET /choco.php",
+        "GET /unaut.php",
+        "GET /bro.php",
+        "GET /bisan.php",
+        "GET /wed.php",
+        "GET /coffexiumimage.php",
+        "GET /class-core-files.php"
+      ]
+    },
+    {
+      "ip": "20.214.109.68",
+      "family": "v4",
+      "first_seen": "2026-10-04T15:00:00Z",
+      "last_seen": "2026-10-04T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /worksec.php",
+        "GET /r5t.php",
+        "GET /simple.php",
+        "GET /f35.update.php",
+        "GET /aboutt.php",
+        "GET /sm.php",
+        "GET /b8.php",
+        "GET /bnmtp.php",
+        "GET /wo.php"
+      ]
+    },
+    {
+      "ip": "20.204.16.113",
+      "family": "v4",
+      "first_seen": "2026-10-04T14:00:00Z",
+      "last_seen": "2026-10-04T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /adminfuns.php",
+        "GET /wp-admin/css/",
+        "GET /wp-admin/css/colors/modern/",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /ccc.php?p=",
+        "GET /domvf.php",
+        "GET /echkm.php?",
+        "GET /fpwch.php",
+        "GET /b.php?p=",
+        "GET /wp-content/themes/index.php",
+        "GET /alfa.php",
+        "GET /222.php"
+      ]
+    },
+    {
+      "ip": "4.240.25.22",
+      "family": "v4",
+      "first_seen": "2026-10-04T13:00:00Z",
+      "last_seen": "2026-10-04T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.240.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-ablbseaer.php",
+        "GET /wp-wxyy.php",
+        "GET /wp-fgban13jx3.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /go.php",
+        "GET /photo.php",
+        "GET /choco.php",
+        "GET /unaut.php",
+        "GET /bro.php",
+        "GET /bisan.php",
+        "GET /wed.php",
+        "GET /coffexiumimage.php",
+        "GET /class-core-files.php"
+      ]
+    },
+    {
+      "ip": "116.52.29.104",
+      "family": "v4",
+      "first_seen": "2026-10-04T17:00:00Z",
+      "last_seen": "2026-10-04T17:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4134",
+      "asn_name": "CHINANET-BACKBONE - No.31,Jin-rong Street",
+      "asn_prefix": "116.52.0.0/14",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "182.127.27.88",
+      "family": "v4",
+      "first_seen": "2026-10-05T00:00:00Z",
+      "last_seen": "2026-10-05T00:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+      "asn_prefix": "182.112.0.0/12",
+      "payloads": [
+        "POST /HNAP1/"
       ]
     }
   ]
