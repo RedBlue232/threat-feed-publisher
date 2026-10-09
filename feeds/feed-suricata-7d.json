@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-08T13:00:00Z",
+  "generated_at": "2026-10-09T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1250,
-    "v4": 1250,
+    "total": 1254,
+    "v4": 1254,
     "v6": 0
   },
   "items": [
@@ -20443,6 +20443,7 @@
         "suricata"
       ],
       "asn": "2514",
+      "asn_name": "InfoSphere - NTT PC Communications, Inc.",
       "asn_prefix": "219.117.192.0/18",
       "payloads": [
         "GET /sftp-config.json"
@@ -20485,6 +20486,78 @@
       "asn_prefix": "20.160.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "167.71.233.141",
+      "family": "v4",
+      "first_seen": "2026-10-08T20:00:00Z",
+      "last_seen": "2026-10-08T20:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 7"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.71.224.0/20"
+    },
+    {
+      "ip": "20.106.60.152",
+      "family": "v4",
+      "first_seen": "2026-10-08T16:00:00Z",
+      "last_seen": "2026-10-08T16:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "4.148.17.175",
+      "family": "v4",
+      "first_seen": "2026-10-08T15:00:00Z",
+      "last_seen": "2026-10-08T15:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.144.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "24.199.98.33",
+      "family": "v4",
+      "first_seen": "2026-10-09T00:00:00Z",
+      "last_seen": "2026-10-09T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "24.199.96.0/20",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
