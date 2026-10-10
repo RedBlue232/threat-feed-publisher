@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-09T13:00:00Z",
+  "generated_at": "2026-10-10T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1259,
-    "v4": 1259,
+    "total": 1261,
+    "v4": 1261,
     "v6": 0
   },
   "items": [
@@ -17368,7 +17368,7 @@
       "ip": "85.217.149.6",
       "family": "v4",
       "first_seen": "2026-10-02T07:00:00Z",
-      "last_seen": "2026-10-05T09:00:00Z",
+      "last_seen": "2026-10-09T20:00:00Z",
       "scenarios": [
         "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
       ],
@@ -17380,6 +17380,9 @@
       "asn_prefix": "85.217.149.0/24",
       "tags": [
         "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     },
     {
@@ -20651,6 +20654,45 @@
       ],
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "104.23.190.111",
+      "family": "v4",
+      "first_seen": "2026-10-09T20:00:00Z",
+      "last_seen": "2026-10-09T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Bing Webcrawler User-Agent (BingBot)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /robots.txt"
+      ]
+    },
+    {
+      "ip": "104.23.190.110",
+      "family": "v4",
+      "first_seen": "2026-10-09T20:00:00Z",
+      "last_seen": "2026-10-09T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Bing Webcrawler User-Agent (BingBot)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "104.23.190.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /robots.txt"
       ]
     }
   ]
