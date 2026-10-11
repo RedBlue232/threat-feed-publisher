@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-11T01:00:00Z",
+  "generated_at": "2026-10-11T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1264,
-    "v4": 1264,
+    "total": 1266,
+    "v4": 1266,
     "v6": 0
   },
   "items": [
@@ -20750,6 +20750,60 @@
       ],
       "payloads": [
         "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "34.81.64.115",
+      "family": "v4",
+      "first_seen": "2026-10-11T06:00:00Z",
+      "last_seen": "2026-10-11T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.81.64.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.backup",
+        "GET /.env.bak",
+        "GET /.env.old",
+        "GET /.env.swp",
+        "GET /.env.save",
+        "GET /.env.dist",
+        "GET /wp-config.php~"
+      ]
+    },
+    {
+      "ip": "168.107.90.53",
+      "family": "v4",
+      "first_seen": "2026-10-11T02:00:00Z",
+      "last_seen": "2026-10-11T02:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "31898",
+      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
+      "asn_prefix": "168.107.64.0/19",
+      "payloads": [
+        "GET /wp-config.php~",
+        "GET /includes/configure.php~"
       ]
     }
   ]
