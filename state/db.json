@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-18T13:00:07.656718Z",
+  "updated_at": "2026-10-19T01:00:08.295738Z",
   "items": {
     "85.217.149.6": {
       "ip": "85.217.149.6",
@@ -962,96 +962,6 @@
       },
       "asn": "31898",
       "asn_prefix": "168.107.64.0/19"
-    },
-    "66.132.224.254": {
-      "ip": "66.132.224.254",
-      "family": "v4",
-      "first_seen": "2026-10-11T23:56:21Z",
-      "last_seen": "2026-10-11T23:56:21Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-10-11T23:56:21Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-11T23:56:21Z",
-          "last_seen": "2026-10-11T23:56:21Z",
-          "payloads": [
-            "GET /",
-            "GET /debug/pprof/"
-          ]
-        }
-      },
-      "asn": "398324",
-      "asn_prefix": "66.132.224.0/24"
-    },
-    "66.132.195.53": {
-      "ip": "66.132.195.53",
-      "family": "v4",
-      "first_seen": "2026-10-11T21:44:38Z",
-      "last_seen": "2026-10-11T21:44:38Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-10-11T21:44:38Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-11T21:44:38Z",
-          "last_seen": "2026-10-11T21:44:38Z",
-          "payloads": [
-            "GET /",
-            "GET /debug/pprof/"
-          ]
-        }
-      },
-      "asn": "398324",
-      "asn_prefix": "66.132.195.0/24"
-    },
-    "167.99.196.148": {
-      "ip": "167.99.196.148",
-      "family": "v4",
-      "first_seen": "2026-10-11T21:16:43Z",
-      "last_seen": "2026-10-11T21:16:43Z",
-      "scenarios": {
-        "crowdsec/http-dos-swithcing-ua": {
-          "count": 1,
-          "last_seen": "2026-10-11T21:16:43Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-10-11T21:16:43Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-10-11T21:16:43Z",
-          "last_seen": "2026-10-11T21:16:43Z",
-          "payloads": [
-            "HEAD /de/",
-            "HEAD /content/",
-            "HEAD /2024/",
-            "HEAD /us/",
-            "HEAD /wp/",
-            "HEAD /wordpress/",
-            "HEAD /shop/",
-            "HEAD /home/",
-            "HEAD /en/",
-            "HEAD /",
-            "HEAD /web/",
-            "HEAD /media/",
-            "HEAD /v2/"
-          ]
-        }
-      },
-      "asn": "14061",
-      "asn_prefix": "167.99.192.0/20"
     },
     "59.96.137.75": {
       "ip": "59.96.137.75",
@@ -35483,6 +35393,110 @@
       },
       "asn": "135377",
       "asn_prefix": "118.193.33.0/24"
+    },
+    "40.124.180.6": {
+      "ip": "40.124.180.6",
+      "family": "v4",
+      "first_seen": "2026-10-18T15:42:39Z",
+      "last_seen": "2026-10-18T15:42:39Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-18T15:42:39Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-18T15:42:39Z",
+          "last_seen": "2026-10-18T15:42:39Z",
+          "payloads": [
+            "GET /actuator/health"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.124.0.0/16"
+    },
+    "40.124.80.46": {
+      "ip": "40.124.80.46",
+      "family": "v4",
+      "first_seen": "2026-10-18T14:40:50Z",
+      "last_seen": "2026-10-18T14:40:50Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-18T14:40:50Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-18T14:40:50Z",
+          "last_seen": "2026-10-18T14:40:50Z",
+          "payloads": [
+            "GET /owa/auth/x.js"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.124.0.0/16"
+    },
+    "103.17.215.36": {
+      "ip": "103.17.215.36",
+      "family": "v4",
+      "first_seen": "2026-10-18T15:09:03Z",
+      "last_seen": "2026-10-18T15:09:03Z",
+      "scenarios": {
+        "suricata/ET SCAN SFTP/FTP Password Exposure via sftp-config.json": {
+          "count": 1,
+          "last_seen": "2026-10-18T15:09:03Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-18T15:09:03Z",
+          "last_seen": "2026-10-18T15:09:03Z",
+          "sids": [
+            2015940
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "GET /sftp-config.json"
+          ]
+        }
+      },
+      "asn": "24492",
+      "asn_prefix": "103.17.215.0/24"
+    },
+    "27.184.127.193": {
+      "ip": "27.184.127.193",
+      "family": "v4",
+      "first_seen": "2026-10-18T18:40:52Z",
+      "last_seen": "2026-10-18T18:40:52Z",
+      "scenarios": {
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
+          "count": 1,
+          "last_seen": "2026-10-18T18:40:52Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-18T18:40:52Z",
+          "last_seen": "2026-10-18T18:40:52Z",
+          "sids": [
+            58276
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+          ]
+        }
+      },
+      "asn": "4134",
+      "asn_prefix": "27.184.0.0/13"
     }
   },
   "asn_names": {
@@ -35811,6 +35825,7 @@
     "328003": "STANDARD TELECOM CONGO SARL- STC SA - STANDARD TELECOM CONGO SARL- STC SA",
     "62744": "QUINTEX - Quintex Alliance Consulting",
     "149020": "WEBHORIZON-AS-AP - WebHorizon Internet Services",
-    "153587": "CLOUDEXPAKISTAN-AS-AP - Cloudex Pakistan"
+    "153587": "CLOUDEXPAKISTAN-AS-AP - Cloudex Pakistan",
+    "24492": "IIT-WICAM-AS-AP - WiCAM Corporation Ltd."
   }
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-18T13:00:00Z",
+  "generated_at": "2026-10-19T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 58,
+    "v4": 58,
     "v6": 0
   },
   "items": [
@@ -41,75 +41,6 @@
         "GET /.env.save",
         "GET /.env.dist",
         "GET /wp-config.php~"
-      ]
-    },
-    {
-      "ip": "66.132.224.254",
-      "family": "v4",
-      "first_seen": "2026-10-11T23:00:00Z",
-      "last_seen": "2026-10-11T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.195.53",
-      "family": "v4",
-      "first_seen": "2026-10-11T21:00:00Z",
-      "last_seen": "2026-10-11T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "167.99.196.148",
-      "family": "v4",
-      "first_seen": "2026-10-11T21:00:00Z",
-      "last_seen": "2026-10-11T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "167.99.192.0/20",
-      "payloads": [
-        "HEAD /de/",
-        "HEAD /content/",
-        "HEAD /2024/",
-        "HEAD /us/",
-        "HEAD /wp/",
-        "HEAD /wordpress/",
-        "HEAD /shop/",
-        "HEAD /home/",
-        "HEAD /en/",
-        "HEAD /",
-        "HEAD /web/",
-        "HEAD /media/",
-        "HEAD /v2/"
       ]
     },
     {
@@ -1755,6 +1686,48 @@
         "GET /40341.php",
         "GET /aa.php",
         "GET /yich.php"
+      ]
+    },
+    {
+      "ip": "40.124.180.6",
+      "family": "v4",
+      "first_seen": "2026-10-18T15:00:00Z",
+      "last_seen": "2026-10-18T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "40.124.80.46",
+      "family": "v4",
+      "first_seen": "2026-10-18T14:00:00Z",
+      "last_seen": "2026-10-18T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
       ]
     }
   ]
