@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-19T01:00:08.295738Z",
+  "updated_at": "2026-10-19T13:00:08.858470Z",
   "items": {
     "85.217.149.6": {
       "ip": "85.217.149.6",
@@ -1059,103 +1059,6 @@
       },
       "asn": "16509",
       "asn_prefix": "216.198.79.0/24"
-    },
-    "172.202.106.156": {
-      "ip": "172.202.106.156",
-      "family": "v4",
-      "first_seen": "2026-10-12T09:50:32Z",
-      "last_seen": "2026-10-12T09:50:32Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-12T09:50:32Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-12T09:50:32Z",
-          "last_seen": "2026-10-12T09:50:32Z",
-          "payloads": [
-            "GET /owa/auth/logon.aspx"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "172.200.0.0/13"
-    },
-    "80.66.66.68": {
-      "ip": "80.66.66.68",
-      "family": "v4",
-      "first_seen": "2026-10-12T09:37:09Z",
-      "last_seen": "2026-10-12T09:37:09Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-12T09:37:09Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-12T09:37:09Z",
-          "last_seen": "2026-10-12T09:37:09Z",
-          "payloads": [
-            "GET /remote/login"
-          ]
-        }
-      },
-      "asn": "209702",
-      "asn_prefix": "80.66.66.0/24"
-    },
-    "184.105.139.70": {
-      "ip": "184.105.139.70",
-      "family": "v4",
-      "first_seen": "2026-10-12T06:32:35Z",
-      "last_seen": "2026-10-12T06:32:35Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-12T06:32:35Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-12T06:32:35Z",
-          "last_seen": "2026-10-12T06:32:35Z",
-          "payloads": [
-            "GET /remote/logincheck"
-          ]
-        }
-      },
-      "asn": "6939",
-      "asn_prefix": "184.104.0.0/15"
-    },
-    "68.69.177.112": {
-      "ip": "68.69.177.112",
-      "family": "v4",
-      "first_seen": "2026-10-12T02:12:22Z",
-      "last_seen": "2026-10-12T02:12:22Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-10-12T02:12:22Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-12T02:12:22Z",
-          "last_seen": "2026-10-12T02:12:22Z",
-          "payloads": [
-            "GET /ab2g",
-            "GET /ab2h"
-          ]
-        }
-      },
-      "asn": "402226",
-      "asn_prefix": "68.69.177.0/24"
     },
     "4.148.240.217": {
       "ip": "4.148.240.217",
@@ -35497,6 +35400,333 @@
       },
       "asn": "4134",
       "asn_prefix": "27.184.0.0/13"
+    },
+    "34.186.101.32": {
+      "ip": "34.186.101.32",
+      "family": "v4",
+      "first_seen": "2026-10-19T12:51:44Z",
+      "last_seen": "2026-10-19T12:51:48Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:48Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:45Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:45Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:45Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:44Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:44Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:51:44Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 7,
+          "first_seen": "2026-10-19T12:51:44Z",
+          "last_seen": "2026-10-19T12:51:48Z",
+          "payloads": [
+            "GET /.env.keys",
+            "GET /.env.secret",
+            "GET /.env.credentials",
+            "GET /.config/gcloud/credentials.db",
+            "GET /.git/HEAD",
+            "GET /secrets.json",
+            "GET /secrets.yml",
+            "GET /secrets.env",
+            "GET /.git/config",
+            "GET /",
+            "GET /robots.txt",
+            "GET /iwkd0pcfiyd510oylluu",
+            "GET /[REDACTED_DOMAIN]",
+            "POST /",
+            "GET /04kj4f1d8zda8q021cmv",
+            "POST /_next",
+            "GET /serviceAccountKey.json",
+            "GET /key.json",
+            "POST /graphql",
+            "GET /firebase-service-account.json"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.186.64.0/18"
+    },
+    "34.187.210.221": {
+      "ip": "34.187.210.221",
+      "family": "v4",
+      "first_seen": "2026-10-19T12:19:03Z",
+      "last_seen": "2026-10-19T12:19:05Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:05Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:04Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:03Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:03Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:03Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:03Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T12:19:03Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 7,
+          "first_seen": "2026-10-19T12:19:03Z",
+          "last_seen": "2026-10-19T12:19:05Z",
+          "payloads": [
+            "GET /..%2F.env",
+            "GET /.env.keys",
+            "GET /.env.dev.local",
+            "GET /document.php?modulepart=systemtools&file=../conf/conf.php&hashp=shared",
+            "GET /api/console/api_server?sense_version=%40%40SENSE_VERSION&apis=../../../../../../.env",
+            "GET /assets../.env",
+            "GET /images../.env",
+            "GET /static../.env",
+            "GET /uploads../.env",
+            "GET /files../.env",
+            "GET /.gitlab-ci.yml",
+            "GET /",
+            "GET /robots.txt",
+            "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+            "GET /h40fkhdeg5jun7vgpslm",
+            "POST /",
+            "GET /7fwcp9tyziufbidoz82t",
+            "GET /compose.yaml",
+            "POST /_next",
+            "POST /graphql"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.187.128.0/17"
+    },
+    "147.224.144.36": {
+      "ip": "147.224.144.36",
+      "family": "v4",
+      "first_seen": "2026-10-19T11:29:17Z",
+      "last_seen": "2026-10-19T11:29:17Z",
+      "scenarios": {
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-10-19T11:29:17Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T11:29:17Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-10-19T11:29:17Z",
+          "last_seen": "2026-10-19T11:29:17Z",
+          "payloads": [
+            "GET /.env",
+            "GET /.env.staging",
+            "GET /root/.env",
+            "GET /api/contents/.env",
+            "GET /files/workspace/.env",
+            "GET /docker-compose.yml",
+            "GET /.env.old",
+            "GET /files/workspace/start.sh",
+            "GET /.runpod/config.toml",
+            "GET /api/settings",
+            "GET /api/env",
+            "GET /api/spec",
+            "GET /api/terminals"
+          ]
+        }
+      },
+      "asn": "31898",
+      "asn_prefix": "147.224.128.0/18"
+    },
+    "170.9.241.157": {
+      "ip": "170.9.241.157",
+      "family": "v4",
+      "first_seen": "2026-10-19T11:29:01Z",
+      "last_seen": "2026-10-19T11:29:01Z",
+      "scenarios": {
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-10-19T11:29:01Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T11:29:01Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-10-19T11:29:01Z",
+          "last_seen": "2026-10-19T11:29:01Z",
+          "payloads": [
+            "GET /.env.development",
+            "GET /.env.staging",
+            "GET /files/workspace/.env",
+            "GET /.env.bak",
+            "GET /runpod-volume/.env",
+            "GET /.env.production",
+            "GET /api/settings",
+            "GET /.runpod/",
+            "GET /api/contents/",
+            "GET /.env.old",
+            "GET /.runpod/config.toml",
+            "GET /api/contents/root",
+            "GET /api/kernels"
+          ]
+        }
+      },
+      "asn": "31898",
+      "asn_prefix": "170.9.224.0/19"
+    },
+    "34.24.48.66": {
+      "ip": "34.24.48.66",
+      "family": "v4",
+      "first_seen": "2026-10-19T10:23:28Z",
+      "last_seen": "2026-10-19T10:23:30Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:30Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:29Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:28Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:28Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:28Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:28Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T10:23:28Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 7,
+          "first_seen": "2026-10-19T10:23:28Z",
+          "last_seen": "2026-10-19T10:23:30Z",
+          "payloads": [
+            "GET /.dev.vars",
+            "GET /supabase/config.toml",
+            "GET /railway.toml",
+            "GET /railway.json",
+            "GET /.env.keys",
+            "GET /.amplifyrc",
+            "GET /",
+            "GET /robots.txt",
+            "GET /5rfh04dwye4lpgdxjq54",
+            "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+            "POST /",
+            "GET /8wnzck6ggbqsybd4ymdu",
+            "GET /core/.env",
+            "GET /secrets.yml",
+            "GET /.aws/credentials",
+            "GET /.aws/config",
+            "POST /_next",
+            "GET /.next/.env",
+            "POST /graphql",
+            "GET /.git-credentials"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.24.0.0/16"
+    },
+    "172.212.226.229": {
+      "ip": "172.212.226.229",
+      "family": "v4",
+      "first_seen": "2026-10-19T08:09:24Z",
+      "last_seen": "2026-10-19T08:09:24Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T08:09:24Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-19T08:09:24Z",
+          "last_seen": "2026-10-19T08:09:24Z",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "172.208.0.0/13"
+    },
+    "40.76.249.14": {
+      "ip": "40.76.249.14",
+      "family": "v4",
+      "first_seen": "2026-10-19T02:56:41Z",
+      "last_seen": "2026-10-19T02:56:41Z",
+      "scenarios": {
+        "crowdsec/http-cve-probing": {
+          "count": 1,
+          "last_seen": "2026-10-19T02:56:41Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-19T02:56:41Z",
+          "last_seen": "2026-10-19T02:56:41Z",
+          "payloads": [
+            "GET /developmentserver/metadatauploader"
+          ]
+        }
+      }
     }
   },
   "asn_names": {
@@ -35527,8 +35757,6 @@
     "141342": "FIBERISHPVTLTD-AS-AP - FIBERISH (PVT) LTD",
     "153844": "RNBL-AS-AP - Riderz Network Broadband (Private) Limited",
     "139245": "ISP-3TECHNOLOGY-AS-AP - 3Technology",
-    "209702": "SOLDATOV-AS SOLDATOV ALEXEY VALEREVICH",
-    "402226": "ONLYSCANS - OnlyScans LLC",
     "197769": "VPSDEDICATED-AS VPS Dedicated LLC",
     "202412": "OMEGATECH-AS Omegatech LTD",
     "43357": "OWL Owl Limited",

