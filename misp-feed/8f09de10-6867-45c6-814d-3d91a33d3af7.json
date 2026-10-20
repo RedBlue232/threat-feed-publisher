@@ -5,9 +5,9 @@
     "info": "Threat feed (rolling, Suricata only)",
     "published": true,
     "uuid": "8f09de10-6867-45c6-814d-3d91a33d3af7",
-    "attribute_count": "1459",
+    "attribute_count": "1461",
     "analysis": "2",
-    "timestamp": "1792371651",
+    "timestamp": "1792458057",
     "distribution": "3",
     "publish_timestamp": "0",
     "first_publication": "0",
@@ -55895,6 +55895,70 @@
         "first_seen": null,
         "last_seen": null,
         "value": "27.184.127.193",
+        "Galaxy": [],
+        "Tag": [
+          {
+            "id": "9",
+            "name": "source:suricata",
+            "colour": "#99cd0a",
+            "exportable": true,
+            "user_id": "0",
+            "hide_tag": false,
+            "numerical_value": null,
+            "is_galaxy": false,
+            "is_custom_galaxy": false,
+            "local_only": false,
+            "local": false,
+            "relationship_type": null
+          }
+        ]
+      },
+      {
+        "type": "ip-src",
+        "category": "Network activity",
+        "to_ids": true,
+        "uuid": "c76ed049-6607-402e-bc68-8f754dc21374",
+        "distribution": "5",
+        "timestamp": "1792458057",
+        "comment": "Sources: suricata | first_seen: 2026-10-19T17:59:03Z | last_seen: 2026-10-19T17:59:03Z | hits: 1 | AS62041 Telegram Telegram Messenger Inc (149.154.165.0/24) | scenarios: suricata/SURICATA TLS invalid record version",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": null,
+        "first_seen": null,
+        "last_seen": null,
+        "value": "149.154.165.111",
+        "Galaxy": [],
+        "Tag": [
+          {
+            "id": "9",
+            "name": "source:suricata",
+            "colour": "#99cd0a",
+            "exportable": true,
+            "user_id": "0",
+            "hide_tag": false,
+            "numerical_value": null,
+            "is_galaxy": false,
+            "is_custom_galaxy": false,
+            "local_only": false,
+            "local": false,
+            "relationship_type": null
+          }
+        ]
+      },
+      {
+        "type": "ip-src",
+        "category": "Network activity",
+        "to_ids": true,
+        "uuid": "a3f4abe0-9cb7-4eff-b6ac-007c68b8979f",
+        "distribution": "5",
+        "timestamp": "1792458057",
+        "comment": "Sources: suricata | first_seen: 2026-10-19T18:18:27Z | last_seen: 2026-10-19T18:18:27Z | hits: 1 | AS135377 UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED (128.14.226.0/24) | scenarios: suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port | payloads: \u00033.\\xe0Cookie: mstshash=Administrator",
+        "deleted": false,
+        "disable_correlation": false,
+        "object_relation": null,
+        "first_seen": null,
+        "last_seen": null,
+        "value": "128.14.226.191",
         "Galaxy": [],
         "Tag": [
           {
