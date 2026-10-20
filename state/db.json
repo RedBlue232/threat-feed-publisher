@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-19T13:00:08.858470Z",
+  "updated_at": "2026-10-20T01:00:06.762486Z",
   "items": {
     "85.217.149.6": {
       "ip": "85.217.149.6",
@@ -1112,186 +1112,6 @@
       },
       "asn": "14618",
       "asn_prefix": "18.97.0.0/18"
-    },
-    "34.126.80.139": {
-      "ip": "34.126.80.139",
-      "family": "v4",
-      "first_seen": "2026-10-12T13:07:53Z",
-      "last_seen": "2026-10-13T00:35:36Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:36Z"
-        },
-        "crowdsec/http-bad-user-agent": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:36Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:35Z"
-        },
-        "crowdsec/http-path-traversal-probing": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:34Z"
-        },
-        "crowdsec/http-dos-swithcing-ua": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:33Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:33Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 3,
-          "last_seen": "2026-10-13T00:35:33Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 21,
-          "first_seen": "2026-10-12T13:07:53Z",
-          "last_seen": "2026-10-13T00:35:36Z",
-          "payloads": [
-            "GET /railway.json",
-            "GET /terraform.tfstate",
-            "GET /.npmrc",
-            "GET /userfiles/x?path=../../.env",
-            "GET /gc-service.json",
-            "GET /.dev.vars",
-            "GET /files../.env",
-            "GET /assets../.env",
-            "GET /media../.env",
-            "GET /",
-            "GET /robots.txt",
-            "GET /[REDACTED_DOMAIN]",
-            "POST /",
-            "GET /sxgyq3vvjiag0wjpam5n",
-            "GET /y4kvpq10zntkpkl6y53g",
-            "GET /static/home/user/.env",
-            "GET /api/.env/public/.env",
-            "GET /.env",
-            "GET /..%2F..%2F.env",
-            "POST /graphql"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "34.126.80.0/20"
-    },
-    "34.11.77.217": {
-      "ip": "34.11.77.217",
-      "family": "v4",
-      "first_seen": "2026-10-12T16:20:03Z",
-      "last_seen": "2026-10-12T22:42:35Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:35Z"
-        },
-        "crowdsec/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:31Z"
-        },
-        "crowdsec/http-path-traversal-probing": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:31Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:30Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:30Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:30Z"
-        },
-        "crowdsec/http-dos-swithcing-ua": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:42:30Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 14,
-          "first_seen": "2026-10-12T16:20:03Z",
-          "last_seen": "2026-10-12T22:42:35Z",
-          "payloads": [
-            "GET /@fs/proc/self/cmdline?raw??",
-            "GET /__vite_rsc_findSourceMapURL?filename=file:///root/.ssh/id_rsa&environmentName=rsc",
-            "GET /.env.production.local",
-            "GET /.env.config",
-            "GET /.bashrc",
-            "GET /.envrc",
-            "GET /.env.development.local",
-            "GET /",
-            "GET /robots.txt",
-            "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-            "POST /",
-            "GET /h98f4a5b7frfrpfkeov3",
-            "GET /6s74l9frqxxda0nfwksq",
-            "GET /.env.preprod",
-            "GET /.ssh/id_rsa",
-            "GET /.env.supabase",
-            "GET /.ssh/id_ed25519",
-            "POST /graphql",
-            "GET /.my.cnf",
-            "POST /login"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "34.11.0.0/17"
-    },
-    "20.194.17.163": {
-      "ip": "20.194.17.163",
-      "family": "v4",
-      "first_seen": "2026-10-12T15:01:29Z",
-      "last_seen": "2026-10-12T22:41:57Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:41:57Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:41:43Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-10-12T22:41:42Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 6,
-          "first_seen": "2026-10-12T15:01:29Z",
-          "last_seen": "2026-10-12T22:41:57Z",
-          "payloads": [
-            "GET /admin.php",
-            "GET /adminfuns.php",
-            "GET /admin.php?",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /wp-trbacks.php",
-            "GET /wp-fgban13jx3.php",
-            "GET /wp-blink.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /index/function.php",
-            "GET /go.php",
-            "GET /1ac.php",
-            "GET /flm.php",
-            "GET /40341.php",
-            "GET /aa.php",
-            "GET /yich.php"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.192.0.0/10"
     },
     "20.98.155.81": {
       "ip": "20.98.155.81",
@@ -35408,37 +35228,37 @@
       "last_seen": "2026-10-19T12:51:48Z",
       "scenarios": {
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:48Z"
         },
         "crowdsec/http-path-traversal-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:45Z"
         },
         "crowdsec/http-bad-user-agent": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:45Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:45Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:44Z"
         },
         "crowdsec/http-dos-swithcing-ua": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:44Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:51:44Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 7,
+          "count": 14,
           "first_seen": "2026-10-19T12:51:44Z",
           "last_seen": "2026-10-19T12:51:48Z",
           "payloads": [
@@ -35475,60 +35295,60 @@
       "last_seen": "2026-10-19T12:19:05Z",
       "scenarios": {
         "crowdsec/http-admin-interface-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:05Z"
         },
         "crowdsec/http-crawl-non_statics": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:04Z"
         },
         "crowdsec/http-sensitive-files": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:03Z"
         },
         "crowdsec/http-bad-user-agent": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:03Z"
         },
         "crowdsec/http-path-traversal-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:03Z"
         },
         "crowdsec/http-dos-swithcing-ua": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:03Z"
         },
         "crowdsec/http-probing": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-19T12:19:03Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 7,
+          "count": 14,
           "first_seen": "2026-10-19T12:19:03Z",
           "last_seen": "2026-10-19T12:19:05Z",
           "payloads": [
-            "GET /..%2F.env",
-            "GET /.env.keys",
-            "GET /.env.dev.local",
-            "GET /document.php?modulepart=systemtools&file=../conf/conf.php&hashp=shared",
-            "GET /api/console/api_server?sense_version=%40%40SENSE_VERSION&apis=../../../../../../.env",
-            "GET /assets../.env",
-            "GET /images../.env",
-            "GET /static../.env",
-            "GET /uploads../.env",
-            "GET /files../.env",
-            "GET /.gitlab-ci.yml",
-            "GET /",
-            "GET /robots.txt",
             "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
             "GET /h40fkhdeg5jun7vgpslm",
             "POST /",
             "GET /7fwcp9tyziufbidoz82t",
             "GET /compose.yaml",
             "POST /_next",
-            "POST /graphql"
+            "POST /graphql",
+            "GET /admin%2F.env",
+            "GET /public/admin.json",
+            "GET /admin/.env",
+            "GET /.env.secret",
+            "GET /..%2F.env",
+            "GET /.env.keys",
+            "GET /.env.dev.local",
+            "GET /assets../.env",
+            "GET /images../.env",
+            "GET /static../.env",
+            "GET /uploads../.env",
+            "GET /.gitlab-ci.yml",
+            "GET /"
           ]
         }
       },
@@ -35726,7 +35546,330 @@
             "GET /developmentserver/metadatauploader"
           ]
         }
-      }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.76.0.0/14"
+    },
+    "34.19.161.145": {
+      "ip": "34.19.161.145",
+      "family": "v4",
+      "first_seen": "2026-10-19T17:48:02Z",
+      "last_seen": "2026-10-19T23:55:45Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:55:45Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 14,
+          "first_seen": "2026-10-19T17:48:02Z",
+          "last_seen": "2026-10-19T23:55:45Z",
+          "payloads": [
+            "GET /.ssh/authorized_keys",
+            "GET /etc/.env",
+            "GET /.env.live",
+            "GET /.env.development?raw",
+            "GET /api/orders/..%2F..%2F.env",
+            "GET /.env",
+            "GET /api/data/..%2F..%2F.env",
+            "GET /packages/.env",
+            "GET /",
+            "GET /robots.txt",
+            "GET /vb4vabszi5tsjfkt1xzl",
+            "POST /",
+            "GET /[REDACTED_DOMAIN]",
+            "GET /klztddneztoo2cy7ub0a",
+            "GET /.env.production?raw",
+            "GET /@fs/.env?raw??",
+            "GET /.env.production::$DATA?raw",
+            "GET /@fs/root/.env?raw??",
+            "POST /graphql",
+            "GET /.env.local?.svg?.wasm?init"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.19.128.0/17"
+    },
+    "34.24.239.16": {
+      "ip": "34.24.239.16",
+      "family": "v4",
+      "first_seen": "2026-10-19T15:40:11Z",
+      "last_seen": "2026-10-19T23:54:01Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:01Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:01Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:01Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:00Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:00Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:00Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:54:00Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 14,
+          "first_seen": "2026-10-19T15:40:11Z",
+          "last_seen": "2026-10-19T23:54:01Z",
+          "payloads": [
+            "GET /admin/.env",
+            "GET /.env.supabase",
+            "GET /api/fs/read?allowOutsideWorkspace=true&path=/app/.env",
+            "GET /.env.bak",
+            "GET /.env.old",
+            "GET /.env.save",
+            "GET /.dockerenv",
+            "GET /api/console/api_server?sense_version=%40%40SENSE_VERSION&apis=../../../../../../.env",
+            "GET /static../.env",
+            "GET /files../.env",
+            "GET /images../.env",
+            "GET /.env",
+            "GET /..%2F.env",
+            "GET /dashboard%2F.env",
+            "GET /",
+            "GET /robots.txt",
+            "GET /[REDACTED_DOMAIN]",
+            "GET /p69w9bda38ok6gx5p80p",
+            "GET /pzkx3flg4jvs71qaezha",
+            "POST /graphql"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.24.0.0/16"
+    },
+    "34.187.31.226": {
+      "ip": "34.187.31.226",
+      "family": "v4",
+      "first_seen": "2026-10-19T13:43:58Z",
+      "last_seen": "2026-10-19T23:29:38Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:38Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 2,
+          "last_seen": "2026-10-19T23:29:34Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 14,
+          "first_seen": "2026-10-19T13:43:58Z",
+          "last_seen": "2026-10-19T23:29:38Z",
+          "payloads": [
+            "GET /.s3cfg",
+            "GET /.ssh/id_rsa",
+            "GET /.cache/huggingface/token",
+            "GET /id_dsa",
+            "GET /privatekey.key",
+            "GET /localhost.key",
+            "GET /.amplifyrc",
+            "GET /",
+            "GET /robots.txt",
+            "GET /qqa1eqai1trbrnhpjus9",
+            "GET /[REDACTED_DOMAIN]",
+            "GET /9wqy7ke2uxvqcpdyym29",
+            "GET /serviceAccountKey.json",
+            "GET /firebase-adminsdk.json",
+            "GET /compose.yaml",
+            "GET /terraform.tfstate",
+            "GET /credentials.json",
+            "POST /graphql",
+            "GET /docker-compose.yaml",
+            "GET /docker-compose.yml"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.187.0.0/17"
+    },
+    "34.187.88.97": {
+      "ip": "34.187.88.97",
+      "family": "v4",
+      "first_seen": "2026-10-19T15:14:44Z",
+      "last_seen": "2026-10-19T21:41:04Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:04Z"
+        },
+        "crowdsec/http-crawl-non_statics": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        },
+        "crowdsec/http-path-traversal-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        },
+        "crowdsec/http-sensitive-files": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        },
+        "crowdsec/http-dos-swithcing-ua": {
+          "count": 2,
+          "last_seen": "2026-10-19T21:41:03Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 14,
+          "first_seen": "2026-10-19T15:14:44Z",
+          "last_seen": "2026-10-19T21:41:04Z",
+          "payloads": [
+            "GET /.env.config",
+            "GET /.env.preprod",
+            "GET /.config/gcloud/credentials.db",
+            "GET /.env.staging.local",
+            "GET /.my.cnf",
+            "GET /.ssh/config",
+            "GET /.ssh/id_ed25519",
+            "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+            "GET /supabase/config.toml",
+            "GET /",
+            "GET /robots.txt",
+            "GET /mu5mz80evx05wnkpfmb1",
+            "GET /4ufkwt9mjoquprfm3y5o",
+            "GET /.npmrc",
+            "GET /compose.yml",
+            "GET /terraform.tfstate",
+            "GET /compose.yaml",
+            "GET /docker-compose.yaml",
+            "POST /graphql",
+            "GET /.env.supabase"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "34.187.0.0/17"
+    },
+    "149.154.165.111": {
+      "ip": "149.154.165.111",
+      "family": "v4",
+      "first_seen": "2026-10-19T17:59:03Z",
+      "last_seen": "2026-10-19T17:59:03Z",
+      "scenarios": {
+        "suricata/SURICATA TLS invalid record version": {
+          "count": 1,
+          "last_seen": "2026-10-19T17:59:03Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-19T17:59:03Z",
+          "last_seen": "2026-10-19T17:59:03Z",
+          "sids": [
+            2230015
+          ],
+          "max_priority": 3
+        }
+      },
+      "asn": "62041",
+      "asn_prefix": "149.154.165.0/24"
+    },
+    "128.14.226.191": {
+      "ip": "128.14.226.191",
+      "family": "v4",
+      "first_seen": "2026-10-19T18:18:27Z",
+      "last_seen": "2026-10-19T18:18:27Z",
+      "scenarios": {
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port": {
+          "count": 1,
+          "last_seen": "2026-10-19T18:18:27Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-19T18:18:27Z",
+          "last_seen": "2026-10-19T18:18:27Z",
+          "sids": [
+            2023753
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "\u00033.\\xe0Cookie: mstshash=Administrator"
+          ]
+        }
+      },
+      "asn": "135377",
+      "asn_prefix": "128.14.226.0/24"
     }
   },
   "asn_names": {
