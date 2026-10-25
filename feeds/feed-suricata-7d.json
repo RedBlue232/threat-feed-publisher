@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-25T01:00:00Z",
+  "generated_at": "2026-10-25T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1345,
-    "v4": 1345,
+    "total": 1350,
+    "v4": 1350,
     "v6": 0
   },
   "items": [
@@ -926,8 +926,9 @@
       "ip": "146.70.226.226",
       "family": "v4",
       "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
+      "last_seen": "2026-10-25T02:00:00Z",
       "scenarios": [
+        "suricata/SURICATA QUIC crypto fragments too long",
         "suricata/SURICATA UDPv4 invalid checksum"
       ],
       "sources": [
@@ -3594,7 +3595,7 @@
       "ip": "170.64.166.144",
       "family": "v4",
       "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
+      "last_seen": "2026-10-25T01:00:00Z",
       "scenarios": [
         "suricata/ET SCAN Zmap User-Agent (Inbound)"
       ],
@@ -3603,7 +3604,10 @@
       ],
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "170.64.128.0/18"
+      "asn_prefix": "170.64.128.0/18",
+      "payloads": [
+        "GET /"
+      ]
     },
     {
       "ip": "192.42.116.99",
@@ -12813,10 +12817,7 @@
       ],
       "asn": "56655",
       "asn_name": "GIGAHOST Gigahost AS",
-      "asn_prefix": "185.243.218.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.243.218.0/24"
     },
     {
       "ip": "185.129.61.129",
@@ -20897,6 +20898,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "398722",
+      "asn_name": "CENSYS-ARIN-03 - Censys, Inc.",
+      "asn_prefix": "199.45.154.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ]
@@ -21879,6 +21883,7 @@
         "suricata"
       ],
       "asn": "208637",
+      "asn_name": "Vendeta4-LTD 4 Vendeta Ltd",
       "asn_prefix": "78.128.112.0/24"
     },
     {
@@ -21916,6 +21921,95 @@
       "asn": "135377",
       "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
       "asn_prefix": "107.150.123.0/24"
+    },
+    {
+      "ip": "165.22.168.250",
+      "family": "v4",
+      "first_seen": "2026-10-25T07:00:00Z",
+      "last_seen": "2026-10-25T07:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read (CVE-2020-3452) M2"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "165.22.160.0/20",
+      "payloads": [
+        "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
+      ]
+    },
+    {
+      "ip": "138.68.231.203",
+      "family": "v4",
+      "first_seen": "2026-10-25T07:00:00Z",
+      "last_seen": "2026-10-25T07:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP URI terminated by non-compliant character"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "138.68.224.0/20",
+      "payloads": [
+        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n\f9\\x95n\f;\\x84\u000f3\\xac\\xe8sch\\xa8^\\xcf4'J\\x97\\xa9\\x82\\xe30\\xc3\\x91h]&\\x90\\xf8\\xce\\x97S\\xcbA4L?2=\\xe1\\xc4\\x92\\x86\u000b@\\xf5`"
+      ]
+    },
+    {
+      "ip": "149.165.155.230",
+      "family": "v4",
+      "first_seen": "2026-10-25T05:00:00Z",
+      "last_seen": "2026-10-25T05:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "10680",
+      "asn_name": "IU-RESEARCH - Indiana University",
+      "asn_prefix": "149.165.144.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "162.216.149.73",
+      "family": "v4",
+      "first_seen": "2026-10-25T01:00:00Z",
+      "last_seen": "2026-10-25T01:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SMB malformed request dialects"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "162.216.149.0/24",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "87.182.231.18",
+      "family": "v4",
+      "first_seen": "2026-10-25T08:00:00Z",
+      "last_seen": "2026-10-25T08:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Tomcat Auth Brute Force attempt (admin)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3320",
+      "asn_prefix": "87.128.0.0/10",
+      "payloads": [
+        "GET /mjpg.cgi"
+      ]
     }
   ]
 }
