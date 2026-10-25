@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-24T13:00:00Z",
+  "generated_at": "2026-10-25T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1386,
-    "v4": 1386,
+    "total": 1388,
+    "v4": 1388,
     "v6": 0
   },
   "items": [
@@ -213,71 +213,6 @@
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
       "asn_prefix": "46.101.128.0/17"
-    },
-    {
-      "ip": "35.203.28.67",
-      "family": "v4",
-      "first_seen": "2026-10-17T21:00:00Z",
-      "last_seen": "2026-10-17T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "35.203.16.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.gitlab-ci.yml",
-        "GET /.env.dev.local",
-        "GET /railway.json",
-        "GET /.config/gcloud/credentials.db",
-        "GET /.vault-token",
-        "GET /.azure/accessTokens.json",
-        "GET /.cache/huggingface/token",
-        "GET /",
-        "GET /robots.txt",
-        "POST /",
-        "GET /qgytnwy4fus7heaqfgjg",
-        "GET /brpeorxmy4guxlis1b7c",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /.npmrc",
-        "GET /serverless.yml",
-        "GET /terraform.tfstate",
-        "GET /compose.yaml",
-        "GET /firebase-adminsdk.json",
-        "GET /Dockerfile",
-        "GET /firebase-service-account.json"
-      ]
-    },
-    {
-      "ip": "66.132.224.241",
-      "family": "v4",
-      "first_seen": "2026-10-17T19:00:00Z",
-      "last_seen": "2026-10-17T19:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.224.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
     },
     {
       "ip": "4.148.9.171",
@@ -23214,6 +23149,7 @@
         "crowdsec"
       ],
       "asn": "22168",
+      "asn_name": "SHADOWSERVER-FOUNDATION - The Shadowserver Foundation, Inc.",
       "asn_prefix": "199.165.159.0/24",
       "payloads": [
         "GET /remote/logincheck"
@@ -23322,6 +23258,84 @@
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
       "asn_prefix": "68.183.208.0/20"
+    },
+    {
+      "ip": "136.70.123.79",
+      "family": "v4",
+      "first_seen": "2026-10-24T22:00:00Z",
+      "last_seen": "2026-10-24T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.git/config",
+        "GET /.git/credentials",
+        "GET /.git-credentials",
+        "GET /.gitconfig",
+        "GET /.netrc",
+        "GET /_netrc",
+        "GET /.npmrc",
+        "GET /.yarnrc",
+        "GET /.composer/auth.json",
+        "GET /composer/auth.json",
+        "GET /.config/gh/hosts.yml"
+      ]
+    },
+    {
+      "ip": "78.128.112.74",
+      "family": "v4",
+      "first_seen": "2026-10-24T18:00:00Z",
+      "last_seen": "2026-10-24T18:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "208637",
+      "asn_prefix": "78.128.112.0/24"
+    },
+    {
+      "ip": "85.217.140.15",
+      "family": "v4",
+      "first_seen": "2026-10-24T16:00:00Z",
+      "last_seen": "2026-10-24T16:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "107.150.123.48",
+      "family": "v4",
+      "first_seen": "2026-10-25T00:00:00Z",
+      "last_seen": "2026-10-25T00:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 2"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "107.150.123.0/24"
     }
   ]
 }
