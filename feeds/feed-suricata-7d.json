@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T01:00:00Z",
+  "generated_at": "2026-10-26T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1350,
-    "v4": 1350,
+    "total": 1353,
+    "v4": 1353,
     "v6": 0
   },
   "items": [
@@ -16825,8 +16825,9 @@
       "ip": "157.245.84.42",
       "family": "v4",
       "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
+      "last_seen": "2026-10-26T08:00:00Z",
       "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5",
         "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
       ],
       "sources": [
@@ -22006,9 +22007,75 @@
         "suricata"
       ],
       "asn": "3320",
+      "asn_name": "DTAG Deutsche Telekom AG",
       "asn_prefix": "87.128.0.0/10",
       "payloads": [
         "GET /mjpg.cgi"
+      ]
+    },
+    {
+      "ip": "172.208.50.59",
+      "family": "v4",
+      "first_seen": "2026-10-26T01:00:00Z",
+      "last_seen": "2026-10-26T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "20.29.58.11",
+      "family": "v4",
+      "first_seen": "2026-10-26T02:00:00Z",
+      "last_seen": "2026-10-26T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "85.217.140.31",
+      "family": "v4",
+      "first_seen": "2026-10-26T12:00:00Z",
+      "last_seen": "2026-10-26T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]

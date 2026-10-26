@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T01:00:00Z",
+  "generated_at": "2026-10-26T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1395,
-    "v4": 1395,
+    "total": 1393,
+    "v4": 1393,
     "v6": 0
   },
   "items": [
@@ -338,248 +338,6 @@
       "asn_prefix": "27.184.0.0/13",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "34.186.101.32",
-      "family": "v4",
-      "first_seen": "2026-10-19T12:00:00Z",
-      "last_seen": "2026-10-19T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.186.64.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env.keys",
-        "GET /.env.secret",
-        "GET /.env.credentials",
-        "GET /.config/gcloud/credentials.db",
-        "GET /.git/HEAD",
-        "GET /secrets.json",
-        "GET /secrets.yml",
-        "GET /secrets.env",
-        "GET /.git/config",
-        "GET /",
-        "GET /robots.txt",
-        "GET /iwkd0pcfiyd510oylluu",
-        "GET /[REDACTED_DOMAIN]",
-        "POST /",
-        "GET /04kj4f1d8zda8q021cmv",
-        "POST /_next",
-        "GET /serviceAccountKey.json",
-        "GET /key.json",
-        "POST /graphql",
-        "GET /firebase-service-account.json"
-      ]
-    },
-    {
-      "ip": "34.187.210.221",
-      "family": "v4",
-      "first_seen": "2026-10-19T12:00:00Z",
-      "last_seen": "2026-10-19T12:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.187.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /h40fkhdeg5jun7vgpslm",
-        "POST /",
-        "GET /7fwcp9tyziufbidoz82t",
-        "GET /compose.yaml",
-        "POST /_next",
-        "POST /graphql",
-        "GET /admin%2F.env",
-        "GET /public/admin.json",
-        "GET /admin/.env",
-        "GET /.env.secret",
-        "GET /..%2F.env",
-        "GET /.env.keys",
-        "GET /.env.dev.local",
-        "GET /assets../.env",
-        "GET /images../.env",
-        "GET /static../.env",
-        "GET /uploads../.env",
-        "GET /.gitlab-ci.yml",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "147.224.144.36",
-      "family": "v4",
-      "first_seen": "2026-10-19T11:00:00Z",
-      "last_seen": "2026-10-19T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "31898",
-      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
-      "asn_prefix": "147.224.128.0/18",
-      "payloads": [
-        "GET /.env",
-        "GET /.env.staging",
-        "GET /root/.env",
-        "GET /api/contents/.env",
-        "GET /files/workspace/.env",
-        "GET /docker-compose.yml",
-        "GET /.env.old",
-        "GET /files/workspace/start.sh",
-        "GET /.runpod/config.toml",
-        "GET /api/settings",
-        "GET /api/env",
-        "GET /api/spec",
-        "GET /api/terminals"
-      ]
-    },
-    {
-      "ip": "170.9.241.157",
-      "family": "v4",
-      "first_seen": "2026-10-19T11:00:00Z",
-      "last_seen": "2026-10-19T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "31898",
-      "asn_name": "ORACLE-BMC-31898 - Oracle Corporation",
-      "asn_prefix": "170.9.224.0/19",
-      "payloads": [
-        "GET /.env.development",
-        "GET /.env.staging",
-        "GET /files/workspace/.env",
-        "GET /.env.bak",
-        "GET /runpod-volume/.env",
-        "GET /.env.production",
-        "GET /api/settings",
-        "GET /.runpod/",
-        "GET /api/contents/",
-        "GET /.env.old",
-        "GET /.runpod/config.toml",
-        "GET /api/contents/root",
-        "GET /api/kernels"
-      ]
-    },
-    {
-      "ip": "34.24.48.66",
-      "family": "v4",
-      "first_seen": "2026-10-19T10:00:00Z",
-      "last_seen": "2026-10-19T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.24.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.dev.vars",
-        "GET /supabase/config.toml",
-        "GET /railway.toml",
-        "GET /railway.json",
-        "GET /.env.keys",
-        "GET /.amplifyrc",
-        "GET /",
-        "GET /robots.txt",
-        "GET /5rfh04dwye4lpgdxjq54",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "POST /",
-        "GET /8wnzck6ggbqsybd4ymdu",
-        "GET /core/.env",
-        "GET /secrets.yml",
-        "GET /.aws/credentials",
-        "GET /.aws/config",
-        "POST /_next",
-        "GET /.next/.env",
-        "POST /graphql",
-        "GET /.git-credentials"
-      ]
-    },
-    {
-      "ip": "172.212.226.229",
-      "family": "v4",
-      "first_seen": "2026-10-19T08:00:00Z",
-      "last_seen": "2026-10-19T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.208.0.0/13",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "40.76.249.14",
-      "family": "v4",
-      "first_seen": "2026-10-19T02:00:00Z",
-      "last_seen": "2026-10-19T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.76.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
       ]
     },
     {
@@ -18081,8 +17839,9 @@
       "ip": "157.245.84.42",
       "family": "v4",
       "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
+      "last_seen": "2026-10-26T08:00:00Z",
       "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5",
         "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
       ],
       "sources": [
@@ -23438,6 +23197,7 @@
         "suricata"
       ],
       "asn": "3320",
+      "asn_name": "DTAG Deutsche Telekom AG",
       "asn_prefix": "87.128.0.0/10",
       "payloads": [
         "GET /mjpg.cgi"
@@ -23460,6 +23220,132 @@
       "payloads": [
         "GET /images/images/cache.php",
         "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "34.181.147.11",
+      "family": "v4",
+      "first_seen": "2026-10-26T07:00:00Z",
+      "last_seen": "2026-10-26T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.181.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.staging",
+        "GET /.env.dev",
+        "GET /.env.backup",
+        "GET /.git-credentials",
+        "GET /.gitconfig",
+        "GET /.git/configf",
+        "GET /.netrc",
+        "GET /_netrc",
+        "GET /.npmrc",
+        "GET /.pypirc",
+        "GET /.gem/credentials",
+        "GET /.config/gh/hosts.yml",
+        "GET /.config/gh/config.yml",
+        "GET /.config/git/config"
+      ]
+    },
+    {
+      "ip": "72.88.195.185",
+      "family": "v4",
+      "first_seen": "2026-10-26T06:00:00Z",
+      "last_seen": "2026-10-26T06:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "72.88.128.0/17",
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "GET /workspace/drupal/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /testing/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /www/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "172.208.50.59",
+      "family": "v4",
+      "first_seen": "2026-10-26T01:00:00Z",
+      "last_seen": "2026-10-26T01:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.208.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "20.29.58.11",
+      "family": "v4",
+      "first_seen": "2026-10-26T02:00:00Z",
+      "last_seen": "2026-10-26T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "85.217.140.31",
+      "family": "v4",
+      "first_seen": "2026-10-26T12:00:00Z",
+      "last_seen": "2026-10-26T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
