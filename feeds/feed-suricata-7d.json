@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T13:00:00Z",
+  "generated_at": "2026-10-27T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1353,
-    "v4": 1353,
+    "total": 1360,
+    "v4": 1360,
     "v6": 0
   },
   "items": [
@@ -344,7 +344,7 @@
       "ip": "149.154.165.111",
       "family": "v4",
       "first_seen": "2026-10-19T17:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
+      "last_seen": "2026-10-26T22:00:00Z",
       "scenarios": [
         "suricata/SURICATA TLS invalid record version"
       ],
@@ -22073,6 +22073,129 @@
       "asn_prefix": "85.217.140.0/24",
       "tags": [
         "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "194.76.172.156",
+      "family": "v4",
+      "first_seen": "2026-10-26T22:00:00Z",
+      "last_seen": "2026-10-26T22:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "96.9.98.108",
+      "family": "v4",
+      "first_seen": "2026-10-26T22:00:00Z",
+      "last_seen": "2026-10-26T22:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 658"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "36849",
+      "asn_name": "SAEOL-1-ASN - 1st Amendment Encrypted Openness LLC",
+      "asn_prefix": "96.9.98.0/24"
+    },
+    {
+      "ip": "20.98.137.38",
+      "family": "v4",
+      "first_seen": "2026-10-26T21:00:00Z",
+      "last_seen": "2026-10-26T21:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /portal/redlion"
+      ]
+    },
+    {
+      "ip": "118.178.60.117",
+      "family": "v4",
+      "first_seen": "2026-10-26T18:00:00Z",
+      "last_seen": "2026-10-26T18:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Observed Let's Encrypt Certificate for Suspicious TLD (.xyz)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "37963",
+      "asn_name": "ALIBABA-CN-NET - Hangzhou Alibaba Advertising Co.,Ltd.",
+      "asn_prefix": "118.178.0.0/17"
+    },
+    {
+      "ip": "20.84.74.141",
+      "family": "v4",
+      "first_seen": "2026-10-26T15:00:00Z",
+      "last_seen": "2026-10-26T15:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "50.221.56.52",
+      "family": "v4",
+      "first_seen": "2026-10-26T13:00:00Z",
+      "last_seen": "2026-10-26T13:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "7922",
+      "asn_name": "COMCAST-7922 - Comcast Cable Communications, LLC",
+      "asn_prefix": "50.128.0.0/9"
+    },
+    {
+      "ip": "74.235.184.74",
+      "family": "v4",
+      "first_seen": "2026-10-26T22:00:00Z",
+      "last_seen": "2026-10-26T22:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "74.234.0.0/15",
+      "tags": [
+        "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /"

