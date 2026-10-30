@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-10-29T13:00:07.131108Z",
+  "updated_at": "2026-10-30T01:00:09.083440Z",
   "items": {
     "37.120.213.13": {
       "ip": "37.120.213.13",
@@ -1011,49 +1011,6 @@
       },
       "asn": "135377",
       "asn_prefix": "152.32.225.0/24"
-    },
-    "62.210.142.170": {
-      "ip": "62.210.142.170",
-      "family": "v4",
-      "first_seen": "2026-10-22T14:12:48Z",
-      "last_seen": "2026-10-22T14:12:49Z",
-      "scenarios": {
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-10-22T14:12:49Z"
-        },
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-10-22T14:12:49Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-10-22T14:12:48Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-10-22T14:12:48Z",
-          "last_seen": "2026-10-22T14:12:49Z",
-          "payloads": [
-            "GET /remote/login",
-            "GET /admin/index.html",
-            "GET /+CSCOE+/logon.html",
-            "GET /",
-            "GET /manage/account/login",
-            "GET /index.html",
-            "GET /cgi-bin/login.cgi",
-            "GET /login.htm",
-            "GET /login.html",
-            "GET /login.jsp",
-            "GET /login",
-            "GET /doc/index.html"
-          ]
-        }
-      },
-      "asn": "12876",
-      "asn_prefix": "62.210.0.0/16"
     },
     "45.43.62.50": {
       "ip": "45.43.62.50",
@@ -36075,7 +36032,9 @@
             "GET /debug/pprof/"
           ]
         }
-      }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.172.0/24"
     },
     "167.94.146.56": {
       "ip": "167.94.146.56",
@@ -36276,6 +36235,162 @@
       },
       "asn": "209334",
       "asn_prefix": "85.217.140.0/24"
+    },
+    "167.71.127.44": {
+      "ip": "167.71.127.44",
+      "family": "v4",
+      "first_seen": "2026-10-29T23:40:35Z",
+      "last_seen": "2026-10-29T23:40:35Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-29T23:40:35Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-29T23:40:35Z",
+          "last_seen": "2026-10-29T23:40:35Z",
+          "payloads": [
+            "GET /dana-na/nc/nc_gina_ver.txt"
+          ]
+        }
+      },
+      "asn": "14061",
+      "asn_prefix": "167.71.112.0/20"
+    },
+    "66.132.224.88": {
+      "ip": "66.132.224.88",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:51:59Z",
+      "last_seen": "2026-10-29T19:51:59Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-29T19:51:59Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-29T19:51:59Z",
+          "last_seen": "2026-10-29T19:51:59Z",
+          "payloads": [
+            "GET /debug/pprof/",
+            "GET /app-ads.txt"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.224.0/24"
+    },
+    "66.132.224.225": {
+      "ip": "66.132.224.225",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:23:17Z",
+      "last_seen": "2026-10-29T19:23:49Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-29T19:23:49Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-10-29T19:23:17Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-10-29T19:23:17Z",
+          "last_seen": "2026-10-29T19:23:49Z",
+          "payloads": [
+            "GET /info.php",
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.224.0/24"
+    },
+    "40.124.186.184": {
+      "ip": "40.124.186.184",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:08:52Z",
+      "last_seen": "2026-10-29T19:08:52Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-10-29T19:08:52Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-10-29T19:08:52Z",
+          "last_seen": "2026-10-29T19:08:52Z",
+          "payloads": [
+            "GET /owa/auth/logon.aspx"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.124.0.0/16"
+    },
+    "190.74.113.13": {
+      "ip": "190.74.113.13",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:26:15Z",
+      "last_seen": "2026-10-29T19:26:15Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST": {
+          "count": 1,
+          "last_seen": "2026-10-29T19:26:15Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-29T19:26:15Z",
+          "last_seen": "2026-10-29T19:26:15Z",
+          "sids": [
+            2016683
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "POST /cgi-bin/ViewLog.asp"
+          ]
+        }
+      },
+      "asn": "8048",
+      "asn_prefix": "190.74.96.0/19"
+    },
+    "20.83.45.16": {
+      "ip": "20.83.45.16",
+      "family": "v4",
+      "first_seen": "2026-10-29T21:47:13Z",
+      "last_seen": "2026-10-29T21:47:13Z",
+      "scenarios": {
+        "suricata/SURICATA SSH invalid banner": {
+          "count": 1,
+          "last_seen": "2026-10-29T21:47:13Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-10-29T21:47:13Z",
+          "last_seen": "2026-10-29T21:47:13Z",
+          "sids": [
+            2228000
+          ],
+          "max_priority": 3
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.64.0.0/10"
     }
   },
   "asn_names": {
@@ -36618,6 +36733,7 @@
     "60982": "XZONE X-ZONE IT SRL",
     "29222": "Infomaniak-AS Infomaniak Network SA",
     "38264": "WATEEN-IMS-PK-AS-AP - National WiMAX/IMS environment",
-    "398705": "CENSYS-ARIN-02 - Censys, Inc."
+    "398705": "CENSYS-ARIN-02 - Censys, Inc.",
+    "8048": "AS8048 - CANTV Servicios, Venezuela"
   }
 }

@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-29T13:00:00Z",
+  "generated_at": "2026-10-30T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 47,
-    "v4": 47,
+    "total": 50,
+    "v4": 50,
     "v6": 0
   },
   "items": [
@@ -70,37 +70,6 @@
       "asn_prefix": "92.154.0.0/17",
       "payloads": [
         "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "62.210.142.170",
-      "family": "v4",
-      "first_seen": "2026-10-22T14:00:00Z",
-      "last_seen": "2026-10-22T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "12876",
-      "asn_name": "AS12876 Scaleway SAS",
-      "asn_prefix": "62.210.0.0/16",
-      "payloads": [
-        "GET /remote/login",
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html"
       ]
     },
     {
@@ -1093,6 +1062,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.172.0/24",
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
@@ -1178,6 +1150,85 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "167.71.127.44",
+      "family": "v4",
+      "first_seen": "2026-10-29T23:00:00Z",
+      "last_seen": "2026-10-29T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.71.112.0/20",
+      "payloads": [
+        "GET /dana-na/nc/nc_gina_ver.txt"
+      ]
+    },
+    {
+      "ip": "66.132.224.88",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:00:00Z",
+      "last_seen": "2026-10-29T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /debug/pprof/",
+        "GET /app-ads.txt"
+      ]
+    },
+    {
+      "ip": "66.132.224.225",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:00:00Z",
+      "last_seen": "2026-10-29T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.224.0/24",
+      "payloads": [
+        "GET /info.php",
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "40.124.186.184",
+      "family": "v4",
+      "first_seen": "2026-10-29T19:00:00Z",
+      "last_seen": "2026-10-29T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
       ]
     }
   ]
