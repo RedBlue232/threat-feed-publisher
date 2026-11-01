@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-01T01:00:00Z",
+  "generated_at": "2026-11-01T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 49,
-    "v4": 49,
+    "total": 44,
+    "v4": 44,
     "v6": 0
   },
   "items": [
@@ -24,40 +24,6 @@
       "asn_prefix": "149.154.165.0/24"
     },
     {
-      "ip": "146.70.226.226",
-      "family": "v4",
-      "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-25T02:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA QUIC crypto fragments too long",
-        "suricata/SURICATA UDPv4 invalid checksum"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9009",
-      "asn_name": "M247 M247 Europe SRL",
-      "asn_prefix": "146.70.226.0/24"
-    },
-    {
-      "ip": "170.64.166.144",
-      "family": "v4",
-      "first_seen": "2026-10-23T12:00:00Z",
-      "last_seen": "2026-10-25T01:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "170.64.128.0/18",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
       "ip": "157.245.84.42",
       "family": "v4",
       "first_seen": "2026-10-23T12:00:00Z",
@@ -72,96 +38,6 @@
       "asn": "14061",
       "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
       "asn_prefix": "157.245.80.0/20"
-    },
-    {
-      "ip": "165.22.168.250",
-      "family": "v4",
-      "first_seen": "2026-10-25T07:00:00Z",
-      "last_seen": "2026-10-25T07:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT Cisco ASA/Firepower Unauthenticated File Read (CVE-2020-3452) M2"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "165.22.160.0/20",
-      "payloads": [
-        "GET /+CSCOT+/oem-customization?app=AnyConnect&type=oem&platform=..&resource-type=..&name=%2BCSCOE%2B/portal_inc.lua"
-      ]
-    },
-    {
-      "ip": "138.68.231.203",
-      "family": "v4",
-      "first_seen": "2026-10-25T07:00:00Z",
-      "last_seen": "2026-10-25T07:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP URI terminated by non-compliant character"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "138.68.224.0/20",
-      "payloads": [
-        "Gh0st\\xad\\xe0x\\x9cKS``\\x98\\xc3\\xc0\\xc0\\xc0\u0006\\xc4\\x8c@\\xbcQ\\x96\\x81\\x81 H\u0007\\xa7\u0016\\x95e&\\xa7*\u0004$&g+\u00182\\x94\\xf6\\xb000\\xac\\xa8rc\u0001\u0011\\xa0\\x82\u001f\\`&\\x83\\xc7K7\\x86\u0019\\xe5n\f9\\x95n\f;\\x84\u000f3\\xac\\xe8sch\\xa8^\\xcf4'J\\x97\\xa9\\x82\\xe30\\xc3\\x91h]&\\x90\\xf8\\xce\\x97S\\xcbA4L?2=\\xe1\\xc4\\x92\\x86\u000b@\\xf5`"
-      ]
-    },
-    {
-      "ip": "149.165.155.230",
-      "family": "v4",
-      "first_seen": "2026-10-25T05:00:00Z",
-      "last_seen": "2026-10-25T05:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "10680",
-      "asn_name": "IU-RESEARCH - Indiana University",
-      "asn_prefix": "149.165.144.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "162.216.149.73",
-      "family": "v4",
-      "first_seen": "2026-10-25T01:00:00Z",
-      "last_seen": "2026-10-25T01:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SMB malformed request dialects"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "162.216.149.0/24",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "87.182.231.18",
-      "family": "v4",
-      "first_seen": "2026-10-25T08:00:00Z",
-      "last_seen": "2026-10-25T08:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Tomcat Auth Brute Force attempt (admin)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "3320",
-      "asn_name": "DTAG Deutsche Telekom AG",
-      "asn_prefix": "87.128.0.0/10",
-      "payloads": [
-        "GET /mjpg.cgi"
-      ]
     },
     {
       "ip": "172.208.50.59",
@@ -895,6 +771,39 @@
       "asn": "63949",
       "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
       "asn_prefix": "172.105.64.0/19"
+    },
+    {
+      "ip": "64.227.11.104",
+      "family": "v4",
+      "first_seen": "2026-11-01T06:00:00Z",
+      "last_seen": "2026-11-01T06:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "64.227.0.0/20",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "204.48.24.203",
+      "family": "v4",
+      "first_seen": "2026-11-01T08:00:00Z",
+      "last_seen": "2026-11-01T08:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "204.48.16.0/20"
     }
   ]
 }
