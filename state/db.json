@@ -1,7 +1,7 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-11-01T13:00:06.559281Z",
+  "updated_at": "2026-11-02T01:00:09.440832Z",
   "items": {
     "149.154.165.111": {
       "ip": "149.154.165.111",
@@ -57,31 +57,6 @@
       },
       "asn": "14061",
       "asn_prefix": "157.245.80.0/20"
-    },
-    "152.42.245.186": {
-      "ip": "152.42.245.186",
-      "family": "v4",
-      "first_seen": "2026-10-25T23:52:18Z",
-      "last_seen": "2026-10-25T23:52:18Z",
-      "scenarios": {
-        "crowdsec/http-bad-user-agent": {
-          "count": 1,
-          "last_seen": "2026-10-25T23:52:18Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 1,
-          "first_seen": "2026-10-25T23:52:18Z",
-          "last_seen": "2026-10-25T23:52:18Z",
-          "payloads": [
-            "GET /images/images/cache.php",
-            "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
-          ]
-        }
-      },
-      "asn": "14061",
-      "asn_prefix": "152.42.240.0/20"
     },
     "34.181.147.11": {
       "ip": "34.181.147.11",
@@ -2903,6 +2878,476 @@
       },
       "asn": "14061",
       "asn_prefix": "204.48.16.0/20"
+    },
+    "66.132.172.210": {
+      "ip": "66.132.172.210",
+      "family": "v4",
+      "first_seen": "2026-11-01T20:26:07Z",
+      "last_seen": "2026-11-01T20:27:01Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T20:27:01Z"
+        },
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-11-01T20:26:07Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 2,
+          "first_seen": "2026-11-01T20:26:07Z",
+          "last_seen": "2026-11-01T20:27:01Z",
+          "payloads": [
+            "GET /info.php",
+            "GET /"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.172.0/24"
+    },
+    "66.132.172.108": {
+      "ip": "66.132.172.108",
+      "family": "v4",
+      "first_seen": "2026-11-01T19:01:46Z",
+      "last_seen": "2026-11-01T19:01:46Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-11-01T19:01:46Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-11-01T19:01:46Z",
+          "last_seen": "2026-11-01T19:01:46Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.172.0/24"
+    },
+    "20.65.202.202": {
+      "ip": "20.65.202.202",
+      "family": "v4",
+      "first_seen": "2026-11-01T18:35:49Z",
+      "last_seen": "2026-11-01T18:35:49Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T18:35:49Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-11-01T18:35:49Z",
+          "last_seen": "2026-11-01T18:35:49Z",
+          "payloads": [
+            "GET /actuator/health"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.64.0.0/10"
+    },
+    "66.132.172.176": {
+      "ip": "66.132.172.176",
+      "family": "v4",
+      "first_seen": "2026-11-01T17:28:45Z",
+      "last_seen": "2026-11-01T17:28:45Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-11-01T17:28:45Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-11-01T17:28:45Z",
+          "last_seen": "2026-11-01T17:28:45Z",
+          "payloads": [
+            "GET /",
+            "GET /debug/pprof/"
+          ]
+        }
+      },
+      "asn": "398324",
+      "asn_prefix": "66.132.172.0/24"
+    },
+    "158.23.179.22": {
+      "ip": "158.23.179.22",
+      "family": "v4",
+      "first_seen": "2026-11-01T15:45:27Z",
+      "last_seen": "2026-11-01T15:47:33Z",
+      "scenarios": {
+        "crowdsec/http-admin-interface-probing": {
+          "count": 3,
+          "last_seen": "2026-11-01T15:47:33Z"
+        },
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T15:45:54Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T15:45:28Z"
+        },
+        "crowdsec/http-wordpress-scan": {
+          "count": 1,
+          "last_seen": "2026-11-01T15:45:27Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 6,
+          "first_seen": "2026-11-01T15:45:27Z",
+          "last_seen": "2026-11-01T15:47:33Z",
+          "payloads": [
+            "GET /wp-content/uploads/admin.php",
+            "GET /wp-admin/js/widgets/cdc.php",
+            "GET /wp-admin/maint/admin.php",
+            "GET /wp-admin/includes/class-wp-page-Xf7lZ4.php",
+            "GET /wp-admin/css/TykrTmyzsG.php",
+            "GET /wp-admin/css/spjRmJO.php",
+            "GET /.well-known/info.php",
+            "GET /wp-admin/css/colors/midnight/uGaFTFu.php",
+            "GET /wp-admin/css/colors/midnight/about.php",
+            "GET /wp-admin/images/admin.php",
+            "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+            "GET /this_is_a_new_hello_world.php",
+            "GET /wp-content/languages/about.php",
+            "GET /kir.php",
+            "GET /init-notica.php",
+            "GET /n7wmf4i9.php",
+            "GET /cfd1zlde.php",
+            "GET /wp-includes/images/ABezqxIO.php",
+            "GET /wp-content/uploads/sectors.php"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "158.23.0.0/16"
+    },
+    "62.210.142.170": {
+      "ip": "62.210.142.170",
+      "family": "v4",
+      "first_seen": "2026-11-01T13:54:11Z",
+      "last_seen": "2026-11-01T13:54:11Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T13:54:11Z"
+        },
+        "crowdsec/http-admin-interface-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T13:54:11Z"
+        },
+        "crowdsec/http-probing": {
+          "count": 1,
+          "last_seen": "2026-11-01T13:54:11Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 3,
+          "first_seen": "2026-11-01T13:54:11Z",
+          "last_seen": "2026-11-01T13:54:11Z",
+          "payloads": [
+            "GET /remote/login",
+            "GET /admin/index.html",
+            "GET /+CSCOE+/logon.html",
+            "GET /",
+            "GET /manage/account/login",
+            "GET /index.html",
+            "GET /cgi-bin/login.cgi",
+            "GET /login.htm",
+            "GET /login.html",
+            "GET /login.jsp",
+            "GET /login",
+            "GET /doc/index.html"
+          ]
+        }
+      },
+      "asn": "12876",
+      "asn_prefix": "62.210.0.0/16"
+    },
+    "172.68.164.48": {
+      "ip": "172.68.164.48",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:51:44Z",
+      "last_seen": "2026-11-01T21:51:44Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:51:44Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:51:44Z",
+          "last_seen": "2026-11-01T21:51:44Z",
+          "sids": [
+            2061026
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      }
+    },
+    "108.162.227.47": {
+      "ip": "108.162.227.47",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:50:05Z",
+      "last_seen": "2026-11-01T21:50:05Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:50:05Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:50:05Z",
+          "last_seen": "2026-11-01T21:50:05Z",
+          "sids": [
+            2061026
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "13335",
+      "asn_prefix": "108.162.227.0/24"
+    },
+    "162.158.170.74": {
+      "ip": "162.158.170.74",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:50:04Z",
+      "last_seen": "2026-11-01T21:50:04Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:50:04Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:50:04Z",
+          "last_seen": "2026-11-01T21:50:04Z",
+          "sids": [
+            2061026
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "13335",
+      "asn_prefix": "162.158.170.0/24"
+    },
+    "108.162.227.48": {
+      "ip": "108.162.227.48",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:49:52Z",
+      "last_seen": "2026-11-01T21:49:52Z",
+      "scenarios": {
+        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:49:52Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:49:52Z",
+          "last_seen": "2026-11-01T21:49:52Z",
+          "sids": [
+            2061026
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "13335",
+      "asn_prefix": "108.162.227.0/24"
+    },
+    "152.32.235.36": {
+      "ip": "152.32.235.36",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:44:26Z",
+      "last_seen": "2026-11-01T21:44:26Z",
+      "scenarios": {
+        "suricata/SURICATA TLS invalid SNI length": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:44:26Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:44:26Z",
+          "last_seen": "2026-11-01T21:44:26Z",
+          "sids": [
+            2230018
+          ],
+          "max_priority": 3
+        }
+      }
+    },
+    "85.133.217.136": {
+      "ip": "85.133.217.136",
+      "family": "v4",
+      "first_seen": "2026-11-01T21:25:20Z",
+      "last_seen": "2026-11-01T21:25:20Z",
+      "scenarios": {
+        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt": {
+          "count": 1,
+          "last_seen": "2026-11-01T21:25:20Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T21:25:20Z",
+          "last_seen": "2026-11-01T21:25:20Z",
+          "sids": [
+            58276
+          ],
+          "max_priority": 1,
+          "payloads": [
+            "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
+          ]
+        }
+      },
+      "asn": "210820",
+      "asn_prefix": "85.133.217.0/24"
+    },
+    "3.129.187.38": {
+      "ip": "3.129.187.38",
+      "family": "v4",
+      "first_seen": "2026-11-01T19:53:40Z",
+      "last_seen": "2026-11-01T19:53:40Z",
+      "scenarios": {
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port": {
+          "count": 1,
+          "last_seen": "2026-11-01T19:53:40Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T19:53:40Z",
+          "last_seen": "2026-11-01T19:53:40Z",
+          "sids": [
+            2023753
+          ],
+          "max_priority": 2,
+          "payloads": [
+            "\u0003+&\\xe0Cookie: mstshash=zgrab"
+          ]
+        }
+      },
+      "asn": "16509",
+      "asn_prefix": "3.128.0.0/15"
+    },
+    "4.236.164.36": {
+      "ip": "4.236.164.36",
+      "family": "v4",
+      "first_seen": "2026-11-01T17:48:34Z",
+      "last_seen": "2026-11-01T17:48:34Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-11-01T17:48:34Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T17:48:34Z",
+          "last_seen": "2026-11-01T17:48:34Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "4.224.0.0/12"
+    },
+    "35.209.250.149": {
+      "ip": "35.209.250.149",
+      "family": "v4",
+      "first_seen": "2026-11-01T17:00:44Z",
+      "last_seen": "2026-11-01T17:00:44Z",
+      "scenarios": {
+        "suricata/SURICATA HTTP unable to match response to request": {
+          "count": 1,
+          "last_seen": "2026-11-01T17:00:44Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T17:00:44Z",
+          "last_seen": "2026-11-01T17:00:44Z",
+          "sids": [
+            2221010
+          ],
+          "max_priority": 3
+        }
+      },
+      "asn": "15169",
+      "asn_prefix": "35.208.0.0/15"
+    },
+    "176.123.7.7": {
+      "ip": "176.123.7.7",
+      "family": "v4",
+      "first_seen": "2026-11-01T22:37:46Z",
+      "last_seen": "2026-11-01T22:37:46Z",
+      "scenarios": {
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost": {
+          "count": 1,
+          "last_seen": "2026-11-01T22:37:46Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-01T22:37:46Z",
+          "last_seen": "2026-11-01T22:37:46Z",
+          "sids": [
+            2072593
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /identity"
+          ]
+        }
+      },
+      "asn": "200019",
+      "asn_prefix": "176.123.7.0/24"
     }
   },
   "asn_names": {
@@ -2942,6 +3387,9 @@
     "215125": "Cyberology-AS Church of Cyberology",
     "215599": "ZKILLU Zkillu SAS",
     "4766": "KIXS-AS-KR-KR - Korea Telecom",
-    "135444": "IDNIC-IKUBARU-AS-ID - PT Ikubaru Indonesia"
+    "135444": "IDNIC-IKUBARU-AS-ID - PT Ikubaru Indonesia",
+    "15169": "GOOGLE - Google LLC",
+    "200019": "AlexHost ALEXHOST S.R.L.",
+    "210820": "PentaServer Enteghal Dadeh Araz Shomal Company PJSC"
   }
 }
