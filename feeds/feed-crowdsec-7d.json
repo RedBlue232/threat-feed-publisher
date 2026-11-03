@@ -1,181 +1,13 @@
 {
-  "generated_at": "2026-11-03T01:00:00Z",
+  "generated_at": "2026-11-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 63,
-    "v4": 63,
+    "total": 59,
+    "v4": 59,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "64.205.112.95",
-      "family": "v4",
-      "first_seen": "2026-10-27T11:00:00Z",
-      "last_seen": "2026-10-27T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "60982",
-      "asn_name": "XZONE X-ZONE IT SRL",
-      "asn_prefix": "64.205.112.0/24",
-      "payloads": [
-        "GET /hinfofuns.php",
-        "GET /wp-admin/css/",
-        "GET /wp-content/themes/index.php",
-        "GET /wp-gans.php",
-        "GET /blog/wp-login.php",
-        "GET /wp-content/admin.php",
-        "GET /adminner.php",
-        "GET /admin.php",
-        "GET /ws.php",
-        "GET /1.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /core.php",
-        "GET /footer.php",
-        "GET /header.php",
-        "GET /functions.php",
-        "GET /main.php",
-        "GET /lib.php",
-        "GET /bnmtp.php",
-        "GET /date1.php"
-      ]
-    },
-    {
-      "ip": "184.105.139.69",
-      "family": "v4",
-      "first_seen": "2026-10-27T09:00:00Z",
-      "last_seen": "2026-10-27T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "212.104.214.7",
-      "family": "v4",
-      "first_seen": "2026-10-27T08:00:00Z",
-      "last_seen": "2026-10-27T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "212238",
-      "asn_name": "CDNEXT Datacamp Limited",
-      "asn_prefix": "212.104.214.0/24",
-      "payloads": [
-        "GET /rest/feed/favicon/16370",
-        "GET /rest/feed/favicon/1050",
-        "GET /rest/feed/favicon/16586",
-        "GET /rest/feed/favicon/16378",
-        "GET /rest/feed/favicon/16584",
-        "GET /rest/feed/favicon/16587"
-      ]
-    },
-    {
-      "ip": "164.92.176.96",
-      "family": "v4",
-      "first_seen": "2026-10-27T08:00:00Z",
-      "last_seen": "2026-10-27T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "164.92.176.0/20",
-      "payloads": [
-        "GET /solr/admin/info/system"
-      ]
-    },
-    {
-      "ip": "185.136.15.2",
-      "family": "v4",
-      "first_seen": "2026-10-27T06:00:00Z",
-      "last_seen": "2026-10-27T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "210328",
-      "asn_name": "ALMAZ AO ALMAZ",
-      "asn_prefix": "185.136.15.0/24",
-      "payloads": [
-        "GET /authorization.do"
-      ]
-    },
-    {
-      "ip": "216.180.246.192",
-      "family": "v4",
-      "first_seen": "2026-10-27T05:00:00Z",
-      "last_seen": "2026-10-27T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "216.180.246.0/24",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html"
-      ]
-    },
-    {
-      "ip": "66.132.195.37",
-      "family": "v4",
-      "first_seen": "2026-10-27T03:00:00Z",
-      "last_seen": "2026-10-27T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
     {
       "ip": "143.198.93.210",
       "family": "v4",
@@ -1615,6 +1447,90 @@
         "GET /.changeset/config.json",
         "POST /graphql",
         "GET /rush.json"
+      ]
+    },
+    {
+      "ip": "20.164.214.25",
+      "family": "v4",
+      "first_seen": "2026-11-03T11:00:00Z",
+      "last_seen": "2026-11-03T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-content/abouta.php",
+        "GET /wp-rr.php?p=",
+        "GET /wp-seepting.php",
+        "GET /wp-sing.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /3PJcpMFsD8B.php",
+        "GET /radio.php",
+        "GET /BDKR28WP.php",
+        "GET /ccc.php",
+        "GET /opsh.php",
+        "GET /ano.php",
+        "GET /lanbai.php",
+        "GET /file5.php",
+        "GET /kerang.php"
+      ]
+    },
+    {
+      "ip": "103.59.160.189",
+      "family": "v4",
+      "first_seen": "2026-11-03T10:00:00Z",
+      "last_seen": "2026-11-03T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "150493",
+      "asn_name": "IDNIC-PGSS-AS-ID - PT Gunung Sedayu Sentosa",
+      "asn_prefix": "103.59.160.0/24",
+      "payloads": [
+        "GET /",
+        "GET /wp-admin/",
+        "GET /wp-admin/css/",
+        "GET /wp-admin/images/",
+        "GET /wp-admin/includes/",
+        "GET /wp-admin/js/",
+        "GET /wp-admin/maint/",
+        "GET /wp-admin/network/",
+        "GET /wp-admin/user/",
+        "GET /wp-content/",
+        "GET /wp-content/plugins/"
+      ]
+    },
+    {
+      "ip": "68.69.177.112",
+      "family": "v4",
+      "first_seen": "2026-11-03T07:00:00Z",
+      "last_seen": "2026-11-03T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "402226",
+      "asn_name": "ONLYSCANS - OnlyScans LLC",
+      "asn_prefix": "68.69.177.0/24",
+      "payloads": [
+        "GET /ab2g",
+        "GET /ab2h"
       ]
     }
   ]

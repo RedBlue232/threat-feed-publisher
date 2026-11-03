@@ -1,103 +1,13 @@
 {
-  "generated_at": "2026-11-03T01:00:00Z",
+  "generated_at": "2026-11-03T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 47,
-    "v4": 47,
+    "total": 43,
+    "v4": 43,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "138.197.15.3",
-      "family": "v4",
-      "first_seen": "2026-10-27T07:00:00Z",
-      "last_seen": "2026-10-27T07:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "138.197.0.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "147.182.168.229",
-      "family": "v4",
-      "first_seen": "2026-10-27T06:00:00Z",
-      "last_seen": "2026-10-27T06:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "147.182.160.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "52.180.154.81",
-      "family": "v4",
-      "first_seen": "2026-10-27T05:00:00Z",
-      "last_seen": "2026-10-27T05:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "52.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "50.114.236.142",
-      "family": "v4",
-      "first_seen": "2026-10-27T01:00:00Z",
-      "last_seen": "2026-10-27T01:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "7488",
-      "asn_name": "CNSERVER-AP-AS - CNServer LLC",
-      "asn_prefix": "50.114.236.0/24"
-    },
-    {
-      "ip": "20.102.109.125",
-      "family": "v4",
-      "first_seen": "2026-10-27T10:00:00Z",
-      "last_seen": "2026-10-27T10:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "47.184.58.103",
       "family": "v4",
@@ -866,6 +776,24 @@
       "asn_prefix": "103.192.199.0/24",
       "payloads": [
         "POST /"
+      ]
+    },
+    {
+      "ip": "35.210.123.92",
+      "family": "v4",
+      "first_seen": "2026-11-03T02:00:00Z",
+      "last_seen": "2026-11-03T02:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
       ]
     }
   ]
