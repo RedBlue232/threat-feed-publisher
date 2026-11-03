@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T13:00:00Z",
+  "generated_at": "2026-11-03T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -8,119 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.80.116.203",
-      "family": "v4",
-      "first_seen": "2026-10-26T19:00:00Z",
-      "last_seen": "2026-10-26T22:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.80.112.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.dockerenv",
-        "GET /gcp-key.json",
-        "GET /.gitlab-ci.yml",
-        "GET /userfiles/x?path=../../.env",
-        "GET /sa.json",
-        "GET /public../.env",
-        "GET /build../.env",
-        "GET /dist../.env",
-        "GET /files../.env",
-        "GET /api/..;/.env",
-        "GET /secrets.yml",
-        "GET /",
-        "GET /robots.txt",
-        "GET /sitemap.xml",
-        "GET /sitemap_index.xml",
-        "GET /5x7w2nba2nswrushh2qf",
-        "GET /juu36bniaupo7b48s1aw",
-        "GET /[REDACTED_DOMAIN]",
-        "GET /credentials.json",
-        "POST /graphql"
-      ]
-    },
-    {
-      "ip": "172.180.64.72",
-      "family": "v4",
-      "first_seen": "2026-10-26T21:00:00Z",
-      "last_seen": "2026-10-26T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "34.74.130.248",
-      "family": "v4",
-      "first_seen": "2026-10-26T13:00:00Z",
-      "last_seen": "2026-10-26T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-bad-user-agent",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-dos-swithcing-ua",
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.74.128.0/20",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /.bashrc",
-        "GET /.env.keys",
-        "GET /.env.dev.local",
-        "GET /.firebaserc",
-        "GET /.env.credentials",
-        "GET /.env.secret",
-        "GET /.env.preprod",
-        "GET /",
-        "GET /robots.txt",
-        "GET /sitemap.xml",
-        "GET /sitemap_index.xml",
-        "GET /tyc7lwaopn1zj4a8l2pp",
-        "POST /_next",
-        "GET /.gitlab-ci.yml",
-        "GET /docker-compose.yaml",
-        "GET /service_account.json",
-        "GET /a89fjma2u6zqs64nteed",
-        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
-        "POST /graphql",
-        "GET /firebase-service-account.json"
-      ]
-    },
     {
       "ip": "64.205.112.95",
       "family": "v4",
@@ -1625,6 +1512,109 @@
         "GET /wp-admin/css/",
         "GET /admin/controller/extension/extension/ultra.php",
         "GET /about.php"
+      ]
+    },
+    {
+      "ip": "34.64.62.139",
+      "family": "v4",
+      "first_seen": "2026-11-02T23:00:00Z",
+      "last_seen": "2026-11-02T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.64.32.0/19",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "66.132.186.185",
+      "family": "v4",
+      "first_seen": "2026-11-02T20:00:00Z",
+      "last_seen": "2026-11-02T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.186.0/24",
+      "payloads": [
+        "GET /debug/pprof/",
+        "GET /metrics"
+      ]
+    },
+    {
+      "ip": "136.85.31.116",
+      "family": "v4",
+      "first_seen": "2026-11-02T14:00:00Z",
+      "last_seen": "2026-11-02T18:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "136.85.0.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /key.pem",
+        "GET /server.key",
+        "GET /sendgrid.env",
+        "GET /.htpasswd",
+        "GET /.env.development.local",
+        "GET /.env.production.local",
+        "GET /.env.test",
+        "GET /.env.staging",
+        "GET /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /sitemap_index.xml",
+        "GET /[REDACTED_DOMAIN]",
+        "GET /xisr9g2v2ts9wt4mbro7",
+        "GET /89kqlwzfzmwn5obo2rx1",
+        "GET /serverless.yml",
+        "GET /.dev.vars",
+        "GET /.changeset/config.json",
+        "POST /graphql",
+        "GET /rush.json"
       ]
     }
   ]
