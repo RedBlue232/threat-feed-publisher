@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T13:00:00Z",
+  "generated_at": "2026-11-04T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -8,66 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "143.198.93.210",
-      "family": "v4",
-      "first_seen": "2026-10-27T21:00:00Z",
-      "last_seen": "2026-10-27T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "143.198.80.0/20",
-      "payloads": [
-        "GET /images/images/cache.php",
-        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
-      ]
-    },
-    {
-      "ip": "66.132.159.114",
-      "family": "v4",
-      "first_seen": "2026-10-27T20:00:00Z",
-      "last_seen": "2026-10-27T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.159.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.195.96",
-      "family": "v4",
-      "first_seen": "2026-10-27T17:00:00Z",
-      "last_seen": "2026-10-27T17:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
     {
       "ip": "66.132.186.168",
       "family": "v4",
@@ -1531,6 +1471,100 @@
       "payloads": [
         "GET /ab2g",
         "GET /ab2h"
+      ]
+    },
+    {
+      "ip": "164.92.181.190",
+      "family": "v4",
+      "first_seen": "2026-11-04T00:00:00Z",
+      "last_seen": "2026-11-04T00:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "164.92.176.0/20",
+      "payloads": [
+        "GET /solr/admin/info/system"
+      ]
+    },
+    {
+      "ip": "34.158.200.229",
+      "family": "v4",
+      "first_seen": "2026-11-03T19:00:00Z",
+      "last_seen": "2026-11-03T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "396982",
+      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
+      "asn_prefix": "34.158.192.0/19",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "45.147.208.29",
+      "family": "v4",
+      "first_seen": "2026-11-03T13:00:00Z",
+      "last_seen": "2026-11-03T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "47160",
+      "asn_name": "MOJI MOJI SAS",
+      "asn_prefix": "45.147.208.0/22",
+      "payloads": [
+        "GET /rest/feed/favicon/16591",
+        "GET /rest/feed/favicon/18038",
+        "GET /rest/feed/favicon/16592",
+        "POST /rest/category/collapse",
+        "GET /rest/feed/favicon/3003",
+        "GET /rest/feed/favicon/18004",
+        "GET /rest/feed/favicon/16343",
+        "GET /rest/feed/favicon/18022",
+        "GET /rest/feed/favicon/18025",
+        "GET /rest/feed/favicon/2016",
+        "GET /rest/feed/favicon/18003",
+        "GET /rest/feed/favicon/18023",
+        "GET /rest/feed/favicon/3002",
+        "GET /rest/feed/favicon/16395",
+        "GET /rest/feed/favicon/16383",
+        "GET /rest/feed/favicon/16378",
+        "GET /rest/feed/favicon/3005",
+        "GET /rest/feed/favicon/16581",
+        "GET /rest/feed/favicon/16587",
+        "GET /rest/feed/favicon/1050"
       ]
     }
   ]
