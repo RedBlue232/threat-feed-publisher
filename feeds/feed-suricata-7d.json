@@ -1,31 +1,13 @@
 {
-  "generated_at": "2026-11-04T13:00:00Z",
+  "generated_at": "2026-11-05T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 43,
-    "v4": 43,
+    "total": 44,
+    "v4": 44,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "72.255.18.49",
-      "family": "v4",
-      "first_seen": "2026-10-28T15:00:00Z",
-      "last_seen": "2026-10-28T15:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "72.255.18.0/24",
-      "payloads": [
-        "POST /GponForm/diag_Form?images/"
-      ]
-    },
     {
       "ip": "202.47.53.117",
       "family": "v4",
@@ -801,8 +783,47 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.112.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "43.138.5.244",
+      "family": "v4",
+      "first_seen": "2026-11-04T17:00:00Z",
+      "last_seen": "2026-11-04T17:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /gcp.json"
+      ]
+    },
+    {
+      "ip": "20.65.219.69",
+      "family": "v4",
+      "first_seen": "2026-11-04T20:00:00Z",
+      "last_seen": "2026-11-04T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
