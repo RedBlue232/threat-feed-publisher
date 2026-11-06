@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T13:00:00Z",
+  "generated_at": "2026-11-06T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -8,42 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "190.74.113.13",
-      "family": "v4",
-      "first_seen": "2026-10-29T19:00:00Z",
-      "last_seen": "2026-10-29T19:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8048",
-      "asn_name": "AS8048 - CANTV Servicios, Venezuela",
-      "asn_prefix": "190.74.96.0/19",
-      "payloads": [
-        "POST /cgi-bin/ViewLog.asp"
-      ]
-    },
-    {
-      "ip": "20.83.45.16",
-      "family": "v4",
-      "first_seen": "2026-10-29T21:00:00Z",
-      "last_seen": "2026-10-29T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
     {
       "ip": "104.22.100.136",
       "family": "v4",
@@ -935,6 +899,42 @@
       "family": "v4",
       "first_seen": "2026-11-05T12:00:00Z",
       "last_seen": "2026-11-05T12:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/23"
+    },
+    {
+      "ip": "135.233.98.30",
+      "family": "v4",
+      "first_seen": "2026-11-05T14:00:00Z",
+      "last_seen": "2026-11-05T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "135.232.0.0/14",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "102.220.161.86",
+      "family": "v4",
+      "first_seen": "2026-11-05T18:00:00Z",
+      "last_seen": "2026-11-05T18:00:00Z",
       "scenarios": [
         "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
       ],
