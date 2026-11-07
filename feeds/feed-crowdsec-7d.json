@@ -1,101 +1,13 @@
 {
-  "generated_at": "2026-11-07T01:00:00Z",
+  "generated_at": "2026-11-07T12:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 51,
-    "v4": 51,
+    "total": 49,
+    "v4": 49,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "3.252.68.237",
-      "family": "v4",
-      "first_seen": "2026-10-31T10:00:00Z",
-      "last_seen": "2026-10-31T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
-      "asn_prefix": "3.248.0.0/13",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /robots.txt",
-        "GET /"
-      ]
-    },
-    {
-      "ip": "134.33.66.210",
-      "family": "v4",
-      "first_seen": "2026-10-31T09:00:00Z",
-      "last_seen": "2026-10-31T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "134.33.0.0/16",
-      "payloads": [
-        "GET /owa/auth/logon.aspx"
-      ]
-    },
-    {
-      "ip": "62.210.142.168",
-      "family": "v4",
-      "first_seen": "2026-10-31T05:00:00Z",
-      "last_seen": "2026-10-31T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "12876",
-      "asn_name": "AS12876 Scaleway SAS",
-      "asn_prefix": "62.210.0.0/16",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /login",
-        "GET /doc/index.html"
-      ]
-    },
-    {
-      "ip": "5.181.86.188",
-      "family": "v4",
-      "first_seen": "2026-10-31T02:00:00Z",
-      "last_seen": "2026-10-31T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "211632",
-      "asn_name": "ORG-ISI14-RIPE Internet Solutions & Innovations LTD.",
-      "asn_prefix": "5.181.86.0/24",
-      "payloads": [
-        "GET /remote/login?lang=en"
-      ]
-    },
     {
       "ip": "66.132.195.185",
       "family": "v4",
@@ -1475,6 +1387,72 @@
         "GET /kir.php",
         "GET /002.php",
         "GET /inso.php"
+      ]
+    },
+    {
+      "ip": "216.218.206.67",
+      "family": "v4",
+      "first_seen": "2026-11-07T06:00:00Z",
+      "last_seen": "2026-11-07T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "20.217.196.140",
+      "family": "v4",
+      "first_seen": "2026-11-07T02:00:00Z",
+      "last_seen": "2026-11-07T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /tfm.php",
+        "GET /ws81.php",
+        "GET /t.php",
+        "GET /a1.php",
+        "GET /wp-content/admin.php",
+        "GET /wp-content/themes/pridmag/il.php",
+        "GET /wp-content/index.php",
+        "GET /wp-admin/wp.php",
+        "GET /info.php",
+        "GET /adminfuns.php",
+        "GET /wp-admin/",
+        "GET /file.php",
+        "GET /1.php",
+        "GET /alfa.php",
+        "GET /edit.php",
+        "GET /elp.php",
+        "GET /classwithtostring.php",
+        "GET /patch-helper.php",
+        "GET /ws54.php",
+        "GET /xleet.php"
       ]
     }
   ]
