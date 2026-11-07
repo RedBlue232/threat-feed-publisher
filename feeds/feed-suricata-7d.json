@@ -1,76 +1,13 @@
 {
-  "generated_at": "2026-11-06T13:00:00Z",
+  "generated_at": "2026-11-07T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "104.22.100.136",
-      "family": "v4",
-      "first_seen": "2026-10-30T19:00:00Z",
-      "last_seen": "2026-10-30T19:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "104.22.100.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "104.22.102.35",
-      "family": "v4",
-      "first_seen": "2026-10-30T19:00:00Z",
-      "last_seen": "2026-10-30T19:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "104.22.102.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "104.22.102.36",
-      "family": "v4",
-      "first_seen": "2026-10-30T19:00:00Z",
-      "last_seen": "2026-10-30T19:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "104.22.102.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "192.42.116.117",
       "family": "v4",
@@ -1091,6 +1028,87 @@
       "asn": "48090",
       "asn_name": "DMZHOST TECHOFF SRV LIMITED",
       "asn_prefix": "195.178.110.0/24"
+    },
+    {
+      "ip": "172.70.242.2",
+      "family": "v4",
+      "first_seen": "2026-11-06T13:00:00Z",
+      "last_seen": "2026-11-06T13:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.70.242.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "172.68.192.162",
+      "family": "v4",
+      "first_seen": "2026-11-06T13:00:00Z",
+      "last_seen": "2026-11-06T13:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.68.192.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "85.217.140.26",
+      "family": "v4",
+      "first_seen": "2026-11-06T13:00:00Z",
+      "last_seen": "2026-11-06T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "tags": [
+        "mwl:scanner=\"modat\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "152.32.202.244",
+      "family": "v4",
+      "first_seen": "2026-11-06T20:00:00Z",
+      "last_seen": "2026-11-06T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.202.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
     }
   ]
 }
