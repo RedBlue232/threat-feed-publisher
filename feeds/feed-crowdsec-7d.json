@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-10T01:00:00Z",
+  "generated_at": "2026-11-10T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 48,
-    "v4": 48,
+    "total": 53,
+    "v4": 53,
     "v6": 0
   },
   "items": [
@@ -42,54 +42,6 @@
         "GET /lanbai.php",
         "GET /file5.php",
         "GET /kerang.php"
-      ]
-    },
-    {
-      "ip": "103.59.160.189",
-      "family": "v4",
-      "first_seen": "2026-11-03T10:00:00Z",
-      "last_seen": "2026-11-03T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "150493",
-      "asn_name": "IDNIC-PGSS-AS-ID - PT Gunung Sedayu Sentosa",
-      "asn_prefix": "103.59.160.0/24",
-      "payloads": [
-        "GET /",
-        "GET /wp-admin/",
-        "GET /wp-admin/css/",
-        "GET /wp-admin/images/",
-        "GET /wp-admin/includes/",
-        "GET /wp-admin/js/",
-        "GET /wp-admin/maint/",
-        "GET /wp-admin/network/",
-        "GET /wp-admin/user/",
-        "GET /wp-content/",
-        "GET /wp-content/plugins/"
-      ]
-    },
-    {
-      "ip": "68.69.177.112",
-      "family": "v4",
-      "first_seen": "2026-11-03T07:00:00Z",
-      "last_seen": "2026-11-03T07:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "402226",
-      "asn_name": "ONLYSCANS - OnlyScans LLC",
-      "asn_prefix": "68.69.177.0/24",
-      "payloads": [
-        "GET /ab2g",
-        "GET /ab2h"
       ]
     },
     {
@@ -1263,6 +1215,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "3269",
+      "asn_name": "ASN-IBSNAZ Telecom Italia S.p.A.",
+      "asn_prefix": "82.190.0.0/16",
       "payloads": [
         "GET /%24%7B%28%23a%3D%40org.apache.commons.io.IOUtils%40toString%28%40java.lang.Runtime%40getRuntime%28%29.exec%28%22whoami%22%29.getInputStream%28%29%2C%22utf-8%22%29%29.%28%40com.opensymphony.webwork.ServletActionContext%40getResponse%28%29.setHeader%28%22X-Cmd-Response%22%2C%23a%29%29%7D/"
       ]
@@ -1357,12 +1312,212 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "398705",
+      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
+      "asn_prefix": "167.94.146.0/24",
       "tags": [
         "mwl:scanner=\"censys\""
       ],
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "84.233.199.140",
+      "family": "v4",
+      "first_seen": "2026-11-10T11:00:00Z",
+      "last_seen": "2026-11-10T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "84.233.199.0/24",
+      "payloads": [
+        "POST /wp-json/batch/v1",
+        "GET /info.php",
+        "GET /.env.production",
+        "GET /.env.prod",
+        "GET /.env.testing",
+        "GET /.env.development",
+        "GET /.env.backup",
+        "GET /.env.test",
+        "GET /.env.dev",
+        "GET /.env.staging",
+        "GET /.env.local",
+        "GET /.env.example",
+        "GET /.env.bak",
+        "GET /.env"
+      ]
+    },
+    {
+      "ip": "20.46.43.126",
+      "family": "v4",
+      "first_seen": "2026-11-10T09:00:00Z",
+      "last_seen": "2026-11-10T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /file.php",
+        "GET /epinyins.php",
+        "GET /wp.php",
+        "GET /wp-includes/style-engine/autoload_classmap.php",
+        "GET /ok.php",
+        "GET /item.php",
+        "GET /info.php",
+        "GET /wp-content/admin.php",
+        "GET /wp-admin/images/admin.php",
+        "GET /wp-admin/css/colors/index.php",
+        "GET /wp-content.php.php",
+        "GET /admin.php",
+        "GET /public/css.php",
+        "GET /classwithtostring.php",
+        "GET /wp-includes/block-supports/",
+        "GET /gelay.php",
+        "GET /adminfuns.php",
+        "GET /wp-admin/css/",
+        "GET /admin/controller/extension/extension/ultra.php",
+        "GET /about.php"
+      ]
+    },
+    {
+      "ip": "79.124.58.22",
+      "family": "v4",
+      "first_seen": "2026-11-10T09:00:00Z",
+      "last_seen": "2026-11-10T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "50360",
+      "asn_name": "TAMATIYA-AS Tamatiya EOOD",
+      "asn_prefix": "79.124.58.0/24",
+      "payloads": [
+        "GET /.bitcoin/wallet.dat",
+        "GET /.env.staging",
+        "GET /.bitcoin/wallets/wallet.dat",
+        "GET /.env.dev",
+        "GET /.electrum/wallets/default_wallet",
+        "GET /.bitcoin/",
+        "GET /.env.prod",
+        "GET /.bitcoin/wallets/",
+        "GET /.env.test",
+        "GET /.env.backup",
+        "GET /.electrum/"
+      ]
+    },
+    {
+      "ip": "159.26.105.114",
+      "family": "v4",
+      "first_seen": "2026-11-10T08:00:00Z",
+      "last_seen": "2026-11-10T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-crawl-non_statics"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "208172",
+      "asn_name": "PV-HOSTED Proton AG",
+      "asn_prefix": "159.26.105.0/24",
+      "payloads": [
+        "GET /rest/feed/favicon/16575",
+        "GET /rest/feed/favicon/1050",
+        "GET /rest/feed/favicon/16573",
+        "GET /rest/feed/favicon/16571",
+        "GET /rest/feed/favicon/18017",
+        "GET /rest/feed/favicon/18013"
+      ]
+    },
+    {
+      "ip": "157.245.207.106",
+      "family": "v4",
+      "first_seen": "2026-11-10T06:00:00Z",
+      "last_seen": "2026-11-10T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "157.245.192.0/20",
+      "payloads": [
+        "GET /wp-content/plugins/plugins/cache.php",
+        "GET /assets/images/images/cache.php",
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "134.33.66.210",
+      "family": "v4",
+      "first_seen": "2026-11-10T04:00:00Z",
+      "last_seen": "2026-11-10T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /owa/auth/x.js"
+      ]
+    },
+    {
+      "ip": "43.131.255.65",
+      "family": "v4",
+      "first_seen": "2026-11-10T02:00:00Z",
+      "last_seen": "2026-11-10T02:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "132203",
+      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
+      "asn_prefix": "43.131.224.0/19",
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
       ]
     }
   ]
