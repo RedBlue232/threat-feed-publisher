@@ -1,51 +1,13 @@
 {
-  "generated_at": "2026-11-12T01:00:00Z",
+  "generated_at": "2026-11-12T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 59,
+    "v4": 59,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "34.47.42.179",
-      "family": "v4",
-      "first_seen": "2026-11-05T09:00:00Z",
-      "last_seen": "2026-11-05T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.47.0.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /administrator/.env",
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
     {
       "ip": "95.173.223.163",
       "family": "v4",
@@ -1628,6 +1590,46 @@
         "GET /tpg-contato.php",
         "GET /wp-ainefgskk.php",
         "GET /opsh.php"
+      ]
+    },
+    {
+      "ip": "168.144.43.149",
+      "family": "v4",
+      "first_seen": "2026-11-12T11:00:00Z",
+      "last_seen": "2026-11-12T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "168.144.32.0/20",
+      "payloads": [
+        "GET /wp-content/plugins/plugins/cache.php",
+        "GET /assets/images/images/cache.php",
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "159.65.1.19",
+      "family": "v4",
+      "first_seen": "2026-11-12T07:00:00Z",
+      "last_seen": "2026-11-12T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.65.0.0/20",
+      "payloads": [
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
       ]
     }
   ]
