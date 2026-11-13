@@ -1,56 +1,13 @@
 {
-  "generated_at": "2026-11-13T01:00:00Z",
+  "generated_at": "2026-11-13T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 61,
-    "v4": 61,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "135.233.115.110",
-      "family": "v4",
-      "first_seen": "2026-11-06T03:00:00Z",
-      "last_seen": "2026-11-06T03:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "135.232.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /developmentserver/metadatauploader"
-      ]
-    },
-    {
-      "ip": "167.94.146.61",
-      "family": "v4",
-      "first_seen": "2026-11-06T01:00:00Z",
-      "last_seen": "2026-11-06T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398705",
-      "asn_name": "CENSYS-ARIN-02 - Censys, Inc.",
-      "asn_prefix": "167.94.146.0/24",
-      "tags": [
-        "mwl:scanner=\"censys\""
-      ],
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
     {
       "ip": "40.124.186.156",
       "family": "v4",
@@ -1692,6 +1649,24 @@
         "GET /.env-exemple",
         "GET /.env.staging",
         "GET /server/app.py"
+      ]
+    },
+    {
+      "ip": "216.218.206.69",
+      "family": "v4",
+      "first_seen": "2026-11-13T11:00:00Z",
+      "last_seen": "2026-11-13T11:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "payloads": [
+        "GET /remote/logincheck"
       ]
     }
   ]
