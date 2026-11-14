@@ -1,94 +1,13 @@
 {
-  "generated_at": "2026-11-13T13:00:00Z",
+  "generated_at": "2026-11-14T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 104,
-    "v4": 104,
+    "total": 103,
+    "v4": 103,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "172.70.242.2",
-      "family": "v4",
-      "first_seen": "2026-11-06T13:00:00Z",
-      "last_seen": "2026-11-06T13:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.70.242.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "172.68.192.162",
-      "family": "v4",
-      "first_seen": "2026-11-06T13:00:00Z",
-      "last_seen": "2026-11-06T13:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.68.192.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "85.217.140.26",
-      "family": "v4",
-      "first_seen": "2026-11-06T13:00:00Z",
-      "last_seen": "2026-11-06T13:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "209334",
-      "asn_name": "MODAT-01 Modat B.V.",
-      "asn_prefix": "85.217.140.0/24",
-      "tags": [
-        "mwl:scanner=\"modat\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "152.32.202.244",
-      "family": "v4",
-      "first_seen": "2026-11-06T20:00:00Z",
-      "last_seen": "2026-11-06T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "152.32.202.0/24",
-      "payloads": [
-        "\u00033.\\xe0Cookie: mstshash=Administrator"
-      ]
-    },
     {
       "ip": "20.46.228.250",
       "family": "v4",
@@ -1868,6 +1787,63 @@
       ],
       "payloads": [
         "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "20.83.25.1",
+      "family": "v4",
+      "first_seen": "2026-11-13T18:00:00Z",
+      "last_seen": "2026-11-13T18:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "124.29.194.42",
+      "family": "v4",
+      "first_seen": "2026-11-13T13:00:00Z",
+      "last_seen": "2026-11-13T13:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "124.29.194.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "135.119.91.133",
+      "family": "v4",
+      "first_seen": "2026-11-13T19:00:00Z",
+      "last_seen": "2026-11-13T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "135.119.0.0/16",
+      "payloads": [
+        "GET /"
       ]
     }
   ]
