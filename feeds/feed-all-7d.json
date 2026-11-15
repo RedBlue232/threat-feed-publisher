@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T13:00:00Z",
+  "generated_at": "2026-11-15T01:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 159,
-    "v4": 159,
+    "total": 149,
+    "v4": 149,
     "v6": 0
   },
   "items": [
@@ -28,381 +28,6 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "172.161.40.129",
-      "family": "v4",
-      "first_seen": "2026-11-07T21:00:00Z",
-      "last_seen": "2026-11-07T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-backdoors-attempts",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /autoload_classmap.php?p=",
-        "GET /inputs.php",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /wp-admin/css/colors/blue/index.php",
-        "GET /wp-admin/maint/about.php",
-        "GET /wp-admin/network/wp-conflg.php?p=",
-        "GET /admin.php?p=",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /zwso.php",
-        "GET /class19.php",
-        "GET /class20.php",
-        "GET /randkeyword.php",
-        "GET /fwe.php",
-        "GET /ioxi-o.php",
-        "GET /images/m.php",
-        "GET /info.php",
-        "GET /css.php",
-        "GET /1.php",
-        "GET /wp-admin/maint/maint.php",
-        "GET /alfa.php"
-      ]
-    },
-    {
-      "ip": "102.133.162.110",
-      "family": "v4",
-      "first_seen": "2026-11-07T16:00:00Z",
-      "last_seen": "2026-11-07T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "102.133.128.0/17",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-xserver.php?p=",
-        "GET /wp-vylgwca.php",
-        "GET /wp-qby.php",
-        "GET /wp-rr.php?p=",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /3PJcpMFsD8B.php",
-        "GET /radio.php",
-        "GET /BDKR28WP.php",
-        "GET /ccc.php",
-        "GET /lanbai.php",
-        "GET /file5.php",
-        "GET /kerang.php",
-        "GET /add.php",
-        "GET /file.php"
-      ]
-    },
-    {
-      "ip": "91.148.244.131",
-      "family": "v4",
-      "first_seen": "2026-11-07T14:00:00Z",
-      "last_seen": "2026-11-07T14:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "34343",
-      "asn_name": "BIP-AS Eweka Internet Services B.V.",
-      "asn_prefix": "91.148.244.0/22",
-      "payloads": [
-        "GET /user_secrets.yml",
-        "GET /.git/HEAD",
-        "GET /.vscode/sftp.json",
-        "GET /.env",
-        "GET /api/.env",
-        "POST /",
-        "GET /storage/logs/laravel.log",
-        "GET /config.xml",
-        "GET /wp-admin/setup-config.php",
-        "GET /config.php",
-        "GET /.env.production",
-        "GET /server.key"
-      ]
-    },
-    {
-      "ip": "20.55.91.192",
-      "family": "v4",
-      "first_seen": "2026-11-07T13:00:00Z",
-      "last_seen": "2026-11-07T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.48.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
-    {
-      "ip": "152.32.149.35",
-      "family": "v4",
-      "first_seen": "2026-11-07T20:00:00Z",
-      "last_seen": "2026-11-07T20:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "152.32.149.0/24"
-    },
-    {
-      "ip": "192.42.116.13",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 50"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "109.70.100.14",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 5"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "208323",
-      "asn_name": "APPLIEDPRIVACY-AS Foundation for Applied Privacy",
-      "asn_prefix": "109.70.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.243.218.225",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 43"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "56655",
-      "asn_name": "GIGAHOST Gigahost AS",
-      "asn_prefix": "185.243.218.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "64.190.76.10",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 114"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "214094",
-      "asn_name": "OSSERVATORIO-NESSUNO Davide Silvetti trading as 'Association Osservatorio Nessuno ODV'",
-      "asn_prefix": "64.190.76.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.220.101.4",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 39"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "60729",
-      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "192.42.116.110",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 49"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.220.101.8",
-      "family": "v4",
-      "first_seen": "2026-11-07T18:00:00Z",
-      "last_seen": "2026-11-07T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 42"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "60729",
-      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "165.154.41.205",
-      "family": "v4",
-      "first_seen": "2026-11-07T16:00:00Z",
-      "last_seen": "2026-11-07T16:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "165.154.41.0/24"
-    },
-    {
-      "ip": "165.154.134.19",
-      "family": "v4",
-      "first_seen": "2026-11-07T16:00:00Z",
-      "last_seen": "2026-11-07T16:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "165.154.134.0/24"
-    },
-    {
-      "ip": "192.42.116.92",
-      "family": "v4",
-      "first_seen": "2026-11-07T15:00:00Z",
-      "last_seen": "2026-11-07T15:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 54"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "192.42.116.21",
-      "family": "v4",
-      "first_seen": "2026-11-07T15:00:00Z",
-      "last_seen": "2026-11-07T15:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 52"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "35.210.11.30",
-      "family": "v4",
-      "first_seen": "2026-11-07T13:00:00Z",
-      "last_seen": "2026-11-07T13:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 13"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.210.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "93.152.224.190",
-      "family": "v4",
-      "first_seen": "2026-11-07T22:00:00Z",
-      "last_seen": "2026-11-07T22:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Javascript Prototype Pollution Attempt via __proto__ in HTTP Body"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "207043",
-      "asn_name": "DEDIK-IO DEDIK SERVICES LIMITED",
-      "asn_prefix": "93.152.224.0/24",
-      "payloads": [
-        "POST /"
       ]
     },
     {
@@ -3379,6 +3004,201 @@
       "asn": "135377",
       "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
       "asn_prefix": "152.32.134.0/24"
+    },
+    {
+      "ip": "92.154.95.236",
+      "family": "v4",
+      "first_seen": "2026-11-14T23:00:00Z",
+      "last_seen": "2026-11-14T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "3215",
+      "asn_name": "AS3215 Orange S.A.",
+      "asn_prefix": "92.154.0.0/17",
+      "payloads": [
+        "GET /owa/auth/logon.aspx"
+      ]
+    },
+    {
+      "ip": "47.243.29.3",
+      "family": "v4",
+      "first_seen": "2026-11-14T22:00:00Z",
+      "last_seen": "2026-11-14T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "45102",
+      "asn_name": "ALIBABA-CN-NET - Alibaba (US) Technology Co., Ltd.",
+      "asn_prefix": "47.243.0.0/16",
+      "payloads": [
+        "GET /autodiscover/autodiscover.json?@1337.com/owa/?&Email=autodiscover/autodiscover.json%3F@1337.com"
+      ]
+    },
+    {
+      "ip": "51.116.186.197",
+      "family": "v4",
+      "first_seen": "2026-11-14T20:00:00Z",
+      "last_seen": "2026-11-14T20:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-backdoors-attempts",
+        "crowdsec/http-crawl-non_statics",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "51.116.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /fpajz.php",
+        "GET /wss.php",
+        "GET /admin.php/wp-sx21.php",
+        "GET /admin.php/wp.php",
+        "GET /xz.php",
+        "GET /wp-devirus.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /wp-ainefgskk.php",
+        "GET /wp-ver.php?p=",
+        "GET /css.php",
+        "GET /ws.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /admin.php/testc.php",
+        "GET /admin.php/ass.php",
+        "GET /kerang.php",
+        "GET /wp_blog_foo.php",
+        "GET /llw.php",
+        "GET /term.php",
+        "GET /sm.php",
+        "GET /admin.php/pu9.php"
+      ]
+    },
+    {
+      "ip": "5.253.205.188",
+      "family": "v4",
+      "first_seen": "2026-11-14T19:00:00Z",
+      "last_seen": "2026-11-14T19:00:00Z",
+      "scenarios": [
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "9009",
+      "asn_name": "M247 M247 Europe SRL",
+      "asn_prefix": "5.253.205.0/24",
+      "payloads": [
+        "GET /wp-content/plugins/wpvivid/readme.txt",
+        "GET /wp-content/plugins/ninja-forms-uploads/readme.txt",
+        "GET /wp-content/plugins/simple-file-list/readme.txt",
+        "GET /wp-content/plugins/career-section/readme.txt"
+      ]
+    },
+    {
+      "ip": "20.164.213.82",
+      "family": "v4",
+      "first_seen": "2026-11-14T17:00:00Z",
+      "last_seen": "2026-11-14T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /wp-kikikoko.php",
+        "GET /wp-load.php",
+        "GET /wp-optimizer.php",
+        "GET /wp-admin/css/colors/midnight/media-new.php",
+        "GET /admins.php",
+        "GET /wp-admin/css/colors/modern/",
+        "GET /wp-admin/css/colors/sunrise/",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /radio.php",
+        "GET /BDKR28WP.php",
+        "GET /ccc.php",
+        "GET /file5.php",
+        "GET /Component.php",
+        "GET /adminfuns.php",
+        "GET /xwpg.php",
+        "GET /wsd.php",
+        "GET /buy.php"
+      ]
+    },
+    {
+      "ip": "80.66.83.43",
+      "family": "v4",
+      "first_seen": "2026-11-14T19:00:00Z",
+      "last_seen": "2026-11-14T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "216473",
+      "asn_name": "net-host Bashinskii Vadim Ruslanovich",
+      "asn_prefix": "80.66.83.0/24",
+      "payloads": [
+        "\u0003/*\\xe0Cookie: mstshash=Administr"
+      ]
+    },
+    {
+      "ip": "152.32.208.106",
+      "family": "v4",
+      "first_seen": "2026-11-14T14:00:00Z",
+      "last_seen": "2026-11-14T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.208.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
+    },
+    {
+      "ip": "195.182.16.183",
+      "family": "v4",
+      "first_seen": "2026-11-14T22:00:00Z",
+      "last_seen": "2026-11-14T22:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "206264",
+      "asn_name": "AMARUTU-TECHNOLOGY Amarutu Technology Ltd",
+      "asn_prefix": "195.182.16.0/24",
+      "payloads": [
+        "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"
+      ]
     }
   ]
 }
