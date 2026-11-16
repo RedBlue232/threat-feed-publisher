@@ -1,79 +1,13 @@
 {
-  "generated_at": "2026-11-15T13:00:00Z",
+  "generated_at": "2026-11-16T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 85,
-    "v4": 85,
+    "total": 86,
+    "v4": 86,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "118.194.251.17",
-      "family": "v4",
-      "first_seen": "2026-11-09T00:00:00Z",
-      "last_seen": "2026-11-09T00:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "118.194.251.0/24"
-    },
-    {
-      "ip": "118.194.249.72",
-      "family": "v4",
-      "first_seen": "2026-11-08T20:00:00Z",
-      "last_seen": "2026-11-08T20:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "118.194.249.0/24",
-      "payloads": [
-        "\u00033.\\xe0Cookie: mstshash=Administrator"
-      ]
-    },
-    {
-      "ip": "45.79.207.110",
-      "family": "v4",
-      "first_seen": "2026-11-08T17:00:00Z",
-      "last_seen": "2026-11-08T17:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
-      "asn_prefix": "45.79.192.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "118.193.59.4",
-      "family": "v4",
-      "first_seen": "2026-11-08T17:00:00Z",
-      "last_seen": "2026-11-08T17:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "118.193.59.0/24"
-    },
     {
       "ip": "152.32.247.22",
       "family": "v4",
@@ -1523,6 +1457,111 @@
       "asn_prefix": "178.128.80.0/20",
       "payloads": [
         "GET /"
+      ]
+    },
+    {
+      "ip": "40.124.179.252",
+      "family": "v4",
+      "first_seen": "2026-11-15T19:00:00Z",
+      "last_seen": "2026-11-15T19:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/text/list"
+      ]
+    },
+    {
+      "ip": "40.124.122.193",
+      "family": "v4",
+      "first_seen": "2026-11-15T18:00:00Z",
+      "last_seen": "2026-11-15T18:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "172.71.122.187",
+      "family": "v4",
+      "first_seen": "2026-11-15T14:00:00Z",
+      "last_seen": "2026-11-15T14:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP PHP PHP-CGI command execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.71.122.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "POST /index.php?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input"
+      ]
+    },
+    {
+      "ip": "172.71.122.186",
+      "family": "v4",
+      "first_seen": "2026-11-15T14:00:00Z",
+      "last_seen": "2026-11-15T14:00:00Z",
+      "scenarios": [
+        "suricata/SERVER-WEBAPP PHP PHP-CGI command execution attempt"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.71.122.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "POST /index.php?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input"
+      ]
+    },
+    {
+      "ip": "162.158.42.46",
+      "family": "v4",
+      "first_seen": "2026-11-15T23:00:00Z",
+      "last_seen": "2026-11-15T23:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Bing Webcrawler User-Agent (BingBot)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "162.158.42.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /robots.txt"
       ]
     }
   ]
