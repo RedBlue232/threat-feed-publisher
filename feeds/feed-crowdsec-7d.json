@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-17T01:00:00Z",
+  "generated_at": "2026-11-17T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 55,
+    "v4": 55,
     "v6": 0
   },
   "items": [
@@ -28,209 +28,6 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "84.233.199.140",
-      "family": "v4",
-      "first_seen": "2026-11-10T11:00:00Z",
-      "last_seen": "2026-11-10T11:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "212238",
-      "asn_name": "CDNEXT Datacamp Limited",
-      "asn_prefix": "84.233.199.0/24",
-      "payloads": [
-        "POST /wp-json/batch/v1",
-        "GET /info.php",
-        "GET /.env.production",
-        "GET /.env.prod",
-        "GET /.env.testing",
-        "GET /.env.development",
-        "GET /.env.backup",
-        "GET /.env.test",
-        "GET /.env.dev",
-        "GET /.env.staging",
-        "GET /.env.local",
-        "GET /.env.example",
-        "GET /.env.bak",
-        "GET /.env"
-      ]
-    },
-    {
-      "ip": "20.46.43.126",
-      "family": "v4",
-      "first_seen": "2026-11-10T09:00:00Z",
-      "last_seen": "2026-11-10T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-crawl-non_statics",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.46.32.0/19",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /file.php",
-        "GET /epinyins.php",
-        "GET /wp.php",
-        "GET /wp-includes/style-engine/autoload_classmap.php",
-        "GET /ok.php",
-        "GET /item.php",
-        "GET /info.php",
-        "GET /wp-content/admin.php",
-        "GET /wp-admin/images/admin.php",
-        "GET /wp-admin/css/colors/index.php",
-        "GET /wp-content.php.php",
-        "GET /admin.php",
-        "GET /public/css.php",
-        "GET /classwithtostring.php",
-        "GET /wp-includes/block-supports/",
-        "GET /gelay.php",
-        "GET /adminfuns.php",
-        "GET /wp-admin/css/",
-        "GET /admin/controller/extension/extension/ultra.php",
-        "GET /about.php"
-      ]
-    },
-    {
-      "ip": "79.124.58.22",
-      "family": "v4",
-      "first_seen": "2026-11-10T09:00:00Z",
-      "last_seen": "2026-11-10T09:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "50360",
-      "asn_name": "TAMATIYA-AS Tamatiya EOOD",
-      "asn_prefix": "79.124.58.0/24",
-      "payloads": [
-        "GET /.bitcoin/wallet.dat",
-        "GET /.env.staging",
-        "GET /.bitcoin/wallets/wallet.dat",
-        "GET /.env.dev",
-        "GET /.electrum/wallets/default_wallet",
-        "GET /.bitcoin/",
-        "GET /.env.prod",
-        "GET /.bitcoin/wallets/",
-        "GET /.env.test",
-        "GET /.env.backup",
-        "GET /.electrum/"
-      ]
-    },
-    {
-      "ip": "159.26.105.114",
-      "family": "v4",
-      "first_seen": "2026-11-10T08:00:00Z",
-      "last_seen": "2026-11-10T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-crawl-non_statics"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "208172",
-      "asn_name": "PV-HOSTED Proton AG",
-      "asn_prefix": "159.26.105.0/24",
-      "payloads": [
-        "GET /rest/feed/favicon/16575",
-        "GET /rest/feed/favicon/1050",
-        "GET /rest/feed/favicon/16573",
-        "GET /rest/feed/favicon/16571",
-        "GET /rest/feed/favicon/18017",
-        "GET /rest/feed/favicon/18013"
-      ]
-    },
-    {
-      "ip": "157.245.207.106",
-      "family": "v4",
-      "first_seen": "2026-11-10T06:00:00Z",
-      "last_seen": "2026-11-10T06:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "157.245.192.0/20",
-      "payloads": [
-        "GET /wp-content/plugins/plugins/cache.php",
-        "GET /assets/images/images/cache.php",
-        "GET /images/images/cache.php",
-        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
-      ]
-    },
-    {
-      "ip": "134.33.66.210",
-      "family": "v4",
-      "first_seen": "2026-11-10T04:00:00Z",
-      "last_seen": "2026-11-10T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "134.33.0.0/16",
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "43.131.255.65",
-      "family": "v4",
-      "first_seen": "2026-11-10T02:00:00Z",
-      "last_seen": "2026-11-10T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "132203",
-      "asn_name": "TENCENT-NET-AP-CN - Tencent Building, Kejizhongyi Avenue",
-      "asn_prefix": "43.131.224.0/19",
-      "payloads": [
-        "GET /administrator/.env",
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
       ]
     },
     {
@@ -1529,6 +1326,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1560,6 +1360,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.192.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -1596,6 +1399,75 @@
       ],
       "payloads": [
         "GET /autodiscover/autodiscover.json?@zdi/Powershell"
+      ]
+    },
+    {
+      "ip": "167.94.146.50",
+      "family": "v4",
+      "first_seen": "2026-11-17T10:00:00Z",
+      "last_seen": "2026-11-17T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "66.132.159.81",
+      "family": "v4",
+      "first_seen": "2026-11-17T05:00:00Z",
+      "last_seen": "2026-11-17T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /metrics",
+        "GET /security.txt"
+      ]
+    },
+    {
+      "ip": "177.10.160.46",
+      "family": "v4",
+      "first_seen": "2026-11-17T03:00:00Z",
+      "last_seen": "2026-11-17T03:00:00Z",
+      "scenarios": [
+        "crowdsec/CVE-2017-9841",
+        "crowdsec/http-probing",
+        "crowdsec/thinkphp-cve-2018-20062"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "payloads": [
+        "GET /index.php?s=/index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=md5&vars[1][]=Hello",
+        "POST /hello.world?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+        "POST /index.php?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /test.hello?%25ADd+allow_url_include%3D1+%25ADd+auto_prepend_file%3Dphp://input",
+        "POST /index.php?-d+allow_url_include%3don+-d+auto_prepend_file%3dphp%3a//input",
+        "GET /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/src/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/Util/PHP/eval-stdin.php",
+        "GET /vendor/phpunit/phpunit/LICENSE/eval-stdin.php",
+        "GET /vendor/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php"
       ]
     }
   ]
