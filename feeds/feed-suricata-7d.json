@@ -1,121 +1,13 @@
 {
-  "generated_at": "2026-11-17T13:00:00Z",
+  "generated_at": "2026-11-18T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 69,
-    "v4": 69,
+    "total": 66,
+    "v4": 66,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "134.33.97.60",
-      "family": "v4",
-      "first_seen": "2026-11-10T21:00:00Z",
-      "last_seen": "2026-11-10T21:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "134.33.0.0/16",
-      "payloads": [
-        "GET /portal/redlion"
-      ]
-    },
-    {
-      "ip": "165.154.172.88",
-      "family": "v4",
-      "first_seen": "2026-11-10T19:00:00Z",
-      "last_seen": "2026-11-10T19:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "165.154.172.0/24"
-    },
-    {
-      "ip": "123.188.69.140",
-      "family": "v4",
-      "first_seen": "2026-11-10T16:00:00Z",
-      "last_seen": "2026-11-10T16:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4837",
-      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
-      "asn_prefix": "123.188.0.0/14",
-      "payloads": [
-        "POST /GponForm/diag_Form?images/"
-      ]
-    },
-    {
-      "ip": "40.74.212.176",
-      "family": "v4",
-      "first_seen": "2026-11-10T16:00:00Z",
-      "last_seen": "2026-11-10T16:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.74.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "20.150.195.29",
-      "family": "v4",
-      "first_seen": "2026-11-10T13:00:00Z",
-      "last_seen": "2026-11-10T13:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.150.0.0/15",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /hudson"
-      ]
-    },
-    {
-      "ip": "118.193.36.63",
-      "family": "v4",
-      "first_seen": "2026-11-10T21:00:00Z",
-      "last_seen": "2026-11-10T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "118.193.36.0/24"
-    },
     {
       "ip": "91.189.92.22",
       "family": "v4",
@@ -1205,6 +1097,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "209",
+      "asn_name": "CENTURYLINK-US-LEGACY-QWEST - CenturyLink Communications, LLC",
+      "asn_prefix": "174.21.0.0/16",
       "payloads": [
         "GET /identity"
       ]
@@ -1283,6 +1178,54 @@
       "tags": [
         "mwl:cloud=\"azure\""
       ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "45.82.64.229",
+      "family": "v4",
+      "first_seen": "2026-11-17T19:00:00Z",
+      "last_seen": "2026-11-17T19:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA QUIC crypto fragments too long"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "49981",
+      "asn_name": "WorldStream WorldStream B.V.",
+      "asn_prefix": "45.82.64.0/22"
+    },
+    {
+      "ip": "165.154.120.89",
+      "family": "v4",
+      "first_seen": "2026-11-17T16:00:00Z",
+      "last_seen": "2026-11-17T16:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid SNI length"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "165.154.120.0/24"
+    },
+    {
+      "ip": "165.232.73.237",
+      "family": "v4",
+      "first_seen": "2026-11-17T21:00:00Z",
+      "last_seen": "2026-11-17T21:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "165.232.64.0/20",
       "payloads": [
         "GET /"
       ]
