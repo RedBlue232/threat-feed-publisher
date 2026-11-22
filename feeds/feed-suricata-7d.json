@@ -1,67 +1,13 @@
 {
-  "generated_at": "2026-11-21T13:00:00Z",
+  "generated_at": "2026-11-22T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 124,
-    "v4": 124,
+    "total": 122,
+    "v4": 122,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "80.66.83.43",
-      "family": "v4",
-      "first_seen": "2026-11-14T19:00:00Z",
-      "last_seen": "2026-11-14T19:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "216473",
-      "asn_name": "net-host Bashinskii Vadim Ruslanovich",
-      "asn_prefix": "80.66.83.0/24",
-      "payloads": [
-        "\u0003/*\\xe0Cookie: mstshash=Administr"
-      ]
-    },
-    {
-      "ip": "152.32.208.106",
-      "family": "v4",
-      "first_seen": "2026-11-14T14:00:00Z",
-      "last_seen": "2026-11-14T14:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "152.32.208.0/24",
-      "payloads": [
-        "\u00033.\\xe0Cookie: mstshash=Administrator"
-      ]
-    },
-    {
-      "ip": "195.182.16.183",
-      "family": "v4",
-      "first_seen": "2026-11-14T22:00:00Z",
-      "last_seen": "2026-11-14T22:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER /etc/passwd Detected in URI"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "206264",
-      "asn_name": "AMARUTU-TECHNOLOGY Amarutu Technology Ltd",
-      "asn_prefix": "195.182.16.0/24",
-      "payloads": [
-        "GET /..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd"
-      ]
-    },
     {
       "ip": "137.184.20.248",
       "family": "v4",
@@ -2132,6 +2078,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.40.0.0/13",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2150,6 +2099,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2246,6 +2198,21 @@
       "tags": [
         "mwl:cloud=\"azure\""
       ]
+    },
+    {
+      "ip": "78.128.112.74",
+      "family": "v4",
+      "first_seen": "2026-11-21T21:00:00Z",
+      "last_seen": "2026-11-21T21:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA SSH invalid banner"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "208637",
+      "asn_name": "Vendeta4-LTD 4 Vendeta Ltd",
+      "asn_prefix": "78.128.112.0/24"
     }
   ]
 }
