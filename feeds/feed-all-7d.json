@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T01:00:00Z",
+  "generated_at": "2026-11-23T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
@@ -8,95 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "66.132.195.104",
-      "family": "v4",
-      "first_seen": "2026-11-16T08:00:00Z",
-      "last_seen": "2026-11-16T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.186.162",
-      "family": "v4",
-      "first_seen": "2026-11-16T04:00:00Z",
-      "last_seen": "2026-11-16T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.186.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
-    {
-      "ip": "66.132.186.175",
-      "family": "v4",
-      "first_seen": "2026-11-16T04:00:00Z",
-      "last_seen": "2026-11-16T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.186.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
-    {
-      "ip": "35.210.22.77",
-      "family": "v4",
-      "first_seen": "2026-11-16T03:00:00Z",
-      "last_seen": "2026-11-16T03:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.210.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "187.45.61.16",
-      "family": "v4",
-      "first_seen": "2026-11-16T05:00:00Z",
-      "last_seen": "2026-11-16T05:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "268323",
-      "asn_prefix": "187.45.60.0/23"
-    },
     {
       "ip": "188.166.208.248",
       "family": "v4",
@@ -3532,6 +3443,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "13.232.0.0/14",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -3595,6 +3509,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "3.144.0.0/13",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -3646,6 +3563,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.208.0/24",
       "payloads": [
         "\u00033.\\xe0Cookie: mstshash=Administrator"
       ]
@@ -3726,6 +3646,109 @@
       "asn_prefix": "72.94.0.0/16",
       "payloads": [
         "GET /identity"
+      ]
+    },
+    {
+      "ip": "159.65.134.160",
+      "family": "v4",
+      "first_seen": "2026-11-23T07:00:00Z",
+      "last_seen": "2026-11-23T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.65.128.0/20",
+      "payloads": [
+        "GET /blogs/media/media/cache.php",
+        "GET /cache/cache/cache.php",
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "66.132.159.90",
+      "family": "v4",
+      "first_seen": "2026-11-23T06:00:00Z",
+      "last_seen": "2026-11-23T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "62.210.142.178",
+      "family": "v4",
+      "first_seen": "2026-11-23T05:00:00Z",
+      "last_seen": "2026-11-23T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /login",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "75.226.138.40",
+      "family": "v4",
+      "first_seen": "2026-11-23T01:00:00Z",
+      "last_seen": "2026-11-23T01:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "157.230.8.75",
+      "family": "v4",
+      "first_seen": "2026-11-23T02:00:00Z",
+      "last_seen": "2026-11-23T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]

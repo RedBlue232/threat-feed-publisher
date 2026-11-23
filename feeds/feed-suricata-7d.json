@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T01:00:00Z",
+  "generated_at": "2026-11-23T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -8,38 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "35.210.22.77",
-      "family": "v4",
-      "first_seen": "2026-11-16T03:00:00Z",
-      "last_seen": "2026-11-16T03:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "15169",
-      "asn_name": "GOOGLE - Google LLC",
-      "asn_prefix": "35.210.0.0/16",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ]
-    },
-    {
-      "ip": "187.45.61.16",
-      "family": "v4",
-      "first_seen": "2026-11-16T05:00:00Z",
-      "last_seen": "2026-11-16T05:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "268323",
-      "asn_prefix": "187.45.60.0/23"
-    },
     {
       "ip": "172.105.157.87",
       "family": "v4",
@@ -2226,6 +2194,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.208.0/24",
       "payloads": [
         "\u00033.\\xe0Cookie: mstshash=Administrator"
       ]
@@ -2306,6 +2277,36 @@
       "asn_prefix": "72.94.0.0/16",
       "payloads": [
         "GET /identity"
+      ]
+    },
+    {
+      "ip": "75.226.138.40",
+      "family": "v4",
+      "first_seen": "2026-11-23T01:00:00Z",
+      "last_seen": "2026-11-23T01:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "157.230.8.75",
+      "family": "v4",
+      "first_seen": "2026-11-23T02:00:00Z",
+      "last_seen": "2026-11-23T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]

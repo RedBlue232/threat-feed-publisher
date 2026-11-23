@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T01:00:00Z",
+  "generated_at": "2026-11-23T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
@@ -8,63 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "66.132.195.104",
-      "family": "v4",
-      "first_seen": "2026-11-16T08:00:00Z",
-      "last_seen": "2026-11-16T08:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "66.132.186.162",
-      "family": "v4",
-      "first_seen": "2026-11-16T04:00:00Z",
-      "last_seen": "2026-11-16T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.186.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
-    {
-      "ip": "66.132.186.175",
-      "family": "v4",
-      "first_seen": "2026-11-16T04:00:00Z",
-      "last_seen": "2026-11-16T04:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.186.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /metrics"
-      ]
-    },
     {
       "ip": "188.166.208.248",
       "family": "v4",
@@ -1435,6 +1378,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "13.232.0.0/14",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -1498,6 +1444,9 @@
       "sources": [
         "crowdsec"
       ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "3.144.0.0/13",
       "tags": [
         "mwl:cloud=\"aws\""
       ],
@@ -1536,6 +1485,79 @@
       "payloads": [
         "GET /",
         "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "159.65.134.160",
+      "family": "v4",
+      "first_seen": "2026-11-23T07:00:00Z",
+      "last_seen": "2026-11-23T07:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.65.128.0/20",
+      "payloads": [
+        "GET /blogs/media/media/cache.php",
+        "GET /cache/cache/cache.php",
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "66.132.159.90",
+      "family": "v4",
+      "first_seen": "2026-11-23T06:00:00Z",
+      "last_seen": "2026-11-23T06:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.159.0/24",
+      "tags": [
+        "mwl:scanner=\"censys\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "62.210.142.178",
+      "family": "v4",
+      "first_seen": "2026-11-23T05:00:00Z",
+      "last_seen": "2026-11-23T05:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /login",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /doc/index.html"
       ]
     }
   ]
