@@ -1,168 +1,13 @@
 {
-  "generated_at": "2026-11-22T13:00:00Z",
+  "generated_at": "2026-11-23T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 58,
-    "v4": 58,
+    "total": 57,
+    "v4": 57,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "40.123.240.128",
-      "family": "v4",
-      "first_seen": "2026-11-16T00:00:00Z",
-      "last_seen": "2026-11-16T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.120.0.0/14",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /wp-kikikoko.php",
-        "GET /wp-load.php",
-        "GET /wp-optimizer.php",
-        "GET /wp-admin/css/colors/midnight/media-new.php",
-        "GET /admins.php",
-        "GET /wp-admin/css/colors/modern/",
-        "GET /wp-admin/css/colors/sunrise/",
-        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
-        "GET /this_is_a_new_hello_world.php",
-        "GET /radio.php",
-        "GET /BDKR28WP.php",
-        "GET /ccc.php",
-        "GET /file5.php",
-        "GET /Component.php",
-        "GET /adminfuns.php",
-        "GET /xwpg.php",
-        "GET /wsd.php",
-        "GET /buy.php"
-      ]
-    },
-    {
-      "ip": "66.132.172.128",
-      "family": "v4",
-      "first_seen": "2026-11-16T00:00:00Z",
-      "last_seen": "2026-11-16T00:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.172.0/24",
-      "payloads": [
-        "GET /",
-        "GET /debug/pprof/"
-      ]
-    },
-    {
-      "ip": "172.180.64.72",
-      "family": "v4",
-      "first_seen": "2026-11-15T21:00:00Z",
-      "last_seen": "2026-11-15T21:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "172.160.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "128.14.224.214",
-      "family": "v4",
-      "first_seen": "2026-11-15T19:00:00Z",
-      "last_seen": "2026-11-15T19:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "128.14.224.0/24",
-      "payloads": [
-        "GET /info.php"
-      ]
-    },
-    {
-      "ip": "66.132.195.164",
-      "family": "v4",
-      "first_seen": "2026-11-15T19:00:00Z",
-      "last_seen": "2026-11-15T19:00:00Z",
-      "scenarios": [
-        "crowdsec/http-bad-user-agent"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "398324",
-      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
-      "asn_prefix": "66.132.195.0/24",
-      "payloads": [
-        "GET /debug/pprof/",
-        "GET /wiki"
-      ]
-    },
-    {
-      "ip": "51.20.6.226",
-      "family": "v4",
-      "first_seen": "2026-11-15T16:00:00Z",
-      "last_seen": "2026-11-15T16:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "16509",
-      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
-      "asn_prefix": "51.20.0.0/16",
-      "tags": [
-        "mwl:cloud=\"aws\""
-      ],
-      "payloads": [
-        "GET /info.php",
-        "GET /admin/.env",
-        "GET /administrator/.env",
-        "GET /phpinfo.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
     {
       "ip": "66.132.195.104",
       "family": "v4",
@@ -1534,6 +1379,161 @@
       "asn_prefix": "66.132.195.0/24",
       "payloads": [
         "GET /info.php",
+        "GET /",
+        "GET /debug/pprof/"
+      ]
+    },
+    {
+      "ip": "43.204.97.10",
+      "family": "v4",
+      "first_seen": "2026-11-22T17:00:00Z",
+      "last_seen": "2026-11-22T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc.",
+      "asn_prefix": "43.204.0.0/15",
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "13.233.104.218",
+      "family": "v4",
+      "first_seen": "2026-11-22T15:00:00Z",
+      "last_seen": "2026-11-22T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "172.196.48.135",
+      "family": "v4",
+      "first_seen": "2026-11-22T15:00:00Z",
+      "last_seen": "2026-11-22T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.192.0.0/13",
+      "payloads": [
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /aw.php",
+        "GET /images.php",
+        "GET /wp-optimizer.php",
+        "GET /joomla-templates.php",
+        "GET /md5.php3",
+        "GET /rich.php",
+        "GET /swm.php",
+        "GET /wp-avac.php",
+        "GET /ndthtedw.php"
+      ]
+    },
+    {
+      "ip": "3.144.210.88",
+      "family": "v4",
+      "first_seen": "2026-11-22T15:00:00Z",
+      "last_seen": "2026-11-22T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-sensitive-files",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "tags": [
+        "mwl:cloud=\"aws\""
+      ],
+      "payloads": [
+        "GET /administrator/.env",
+        "GET /phpinfo.php",
+        "GET /phpinfo",
+        "GET /info.php",
+        "GET /",
+        "GET /.git/config",
+        "GET /.env",
+        "GET /.env.local",
+        "GET /.env.production",
+        "GET /.env.staging",
+        "GET /.env.development",
+        "GET /.env.test",
+        "GET /.env.remote",
+        "GET /.env.bak",
+        "GET /.env.backup"
+      ]
+    },
+    {
+      "ip": "66.132.186.177",
+      "family": "v4",
+      "first_seen": "2026-11-22T13:00:00Z",
+      "last_seen": "2026-11-22T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "398324",
+      "asn_name": "CENSYS-ARIN-01 - Censys, Inc.",
+      "asn_prefix": "66.132.186.0/24",
+      "payloads": [
         "GET /",
         "GET /debug/pprof/"
       ]
