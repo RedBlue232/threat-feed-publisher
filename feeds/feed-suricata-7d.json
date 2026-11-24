@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:00:00Z",
+  "generated_at": "2026-11-24T13:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -8,102 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "174.21.190.218",
-      "family": "v4",
-      "first_seen": "2026-11-17T09:00:00Z",
-      "last_seen": "2026-11-17T09:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "209",
-      "asn_name": "CENTURYLINK-US-LEGACY-QWEST - CenturyLink Communications, LLC",
-      "asn_prefix": "174.21.0.0/16",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "89.163.144.128",
-      "family": "v4",
-      "first_seen": "2026-11-17T09:00:00Z",
-      "last_seen": "2026-11-17T09:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "24961",
-      "asn_name": "MYLOC-AS WIIT AG",
-      "asn_prefix": "89.163.128.0/17",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "119.18.14.172",
-      "family": "v4",
-      "first_seen": "2026-11-17T09:00:00Z",
-      "last_seen": "2026-11-17T09:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "4764",
-      "asn_name": "WIDEBAND-AS-AP - Aussie Broadband",
-      "asn_prefix": "119.18.8.0/21",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "40.80.204.65",
-      "family": "v4",
-      "first_seen": "2026-11-17T02:00:00Z",
-      "last_seen": "2026-11-17T02:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "40.80.0.0/12",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /portal/redlion"
-      ]
-    },
-    {
-      "ip": "20.221.74.176",
-      "family": "v4",
-      "first_seen": "2026-11-17T12:00:00Z",
-      "last_seen": "2026-11-17T12:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.192.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "45.82.64.229",
       "family": "v4",
@@ -2251,6 +2155,9 @@
       "sources": [
         "suricata"
       ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
       "tags": [
         "mwl:cloud=\"azure\""
       ],
@@ -2270,7 +2177,95 @@
         "suricata"
       ],
       "asn": "22612",
+      "asn_name": "NAMECHEAP-NET - Namecheap, Inc.",
       "asn_prefix": "104.219.250.0/24"
+    },
+    {
+      "ip": "164.92.117.229",
+      "family": "v4",
+      "first_seen": "2026-11-24T05:00:00Z",
+      "last_seen": "2026-11-24T05:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "164.92.96.0/19",
+      "payloads": [
+        "GET /aab8",
+        "GET /aaa9"
+      ]
+    },
+    {
+      "ip": "79.199.4.211",
+      "family": "v4",
+      "first_seen": "2026-11-24T04:00:00Z",
+      "last_seen": "2026-11-24T04:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3320",
+      "asn_prefix": "79.192.0.0/10",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "45.156.87.70",
+      "family": "v4",
+      "first_seen": "2026-11-24T03:00:00Z",
+      "last_seen": "2026-11-24T03:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 17"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "197170",
+      "asn_name": "TECHTIES-AS TechTies Inc.",
+      "asn_prefix": "45.156.87.0/24"
+    },
+    {
+      "ip": "152.32.146.202",
+      "family": "v4",
+      "first_seen": "2026-11-24T02:00:00Z",
+      "last_seen": "2026-11-24T02:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN MS Terminal Server Traffic on Non-standard Port"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "135377",
+      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn_prefix": "152.32.146.0/24",
+      "payloads": [
+        "\u00033.\\xe0Cookie: mstshash=Administrator"
+      ]
+    },
+    {
+      "ip": "35.210.31.160",
+      "family": "v4",
+      "first_seen": "2026-11-24T11:00:00Z",
+      "last_seen": "2026-11-24T11:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 15"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
     }
   ]
 }
