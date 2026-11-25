@@ -1,44 +1,13 @@
 {
-  "generated_at": "2026-11-25T01:00:00Z",
+  "generated_at": "2026-11-25T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 60,
+    "v4": 60,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "216.180.246.139",
-      "family": "v4",
-      "first_seen": "2026-11-18T05:00:00Z",
-      "last_seen": "2026-11-18T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "216.180.246.0/24",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /",
-        "GET /login",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /doc/index.html"
-      ]
-    },
     {
       "ip": "20.242.56.183",
       "family": "v4",
@@ -1597,6 +1566,45 @@
         "GET /wsd.php",
         "GET /gjbyv.php?p=",
         "GET /tinyfilemanager.php?p="
+      ]
+    },
+    {
+      "ip": "146.190.41.214",
+      "family": "v4",
+      "first_seen": "2026-11-25T09:00:00Z",
+      "last_seen": "2026-11-25T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "146.190.32.0/19",
+      "payloads": [
+        "GET /aaa9",
+        "GET /aab8"
+      ]
+    },
+    {
+      "ip": "216.128.178.44",
+      "family": "v4",
+      "first_seen": "2026-11-25T08:00:00Z",
+      "last_seen": "2026-11-25T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "20473",
+      "asn_name": "AS-VULTR - The Constant Company, LLC",
+      "asn_prefix": "216.128.176.0/20",
+      "payloads": [
+        "GET /remote/login?lang=en"
       ]
     }
   ]

@@ -1,155 +1,13 @@
 {
-  "generated_at": "2026-11-25T01:00:00Z",
+  "generated_at": "2026-11-25T13:00:00Z",
   "ttl_days": 7,
   "scope": "all",
   "counts": {
-    "total": 181,
-    "v4": 181,
+    "total": 183,
+    "v4": 183,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "216.180.246.139",
-      "family": "v4",
-      "first_seen": "2026-11-18T05:00:00Z",
-      "last_seen": "2026-11-18T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "216.180.246.0/24",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /",
-        "GET /login",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /doc/index.html"
-      ]
-    },
-    {
-      "ip": "45.147.208.29",
-      "family": "v4",
-      "first_seen": "2026-11-18T08:00:00Z",
-      "last_seen": "2026-11-18T08:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "47160",
-      "asn_name": "MOJI MOJI SAS",
-      "asn_prefix": "45.147.208.0/22"
-    },
-    {
-      "ip": "159.26.105.114",
-      "family": "v4",
-      "first_seen": "2026-11-18T07:00:00Z",
-      "last_seen": "2026-11-18T07:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "208172",
-      "asn_name": "PV-HOSTED Proton AG",
-      "asn_prefix": "159.26.105.0/24"
-    },
-    {
-      "ip": "185.194.178.68",
-      "family": "v4",
-      "first_seen": "2026-11-18T06:00:00Z",
-      "last_seen": "2026-11-18T06:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING Request for Webshell in .well-known directory"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "29066",
-      "asn_name": "VELIANET-AS velia.net Internetdienste GmbH",
-      "asn_prefix": "185.194.178.0/24",
-      "payloads": [
-        "GET /.well-known/pki-validation/moon.php"
-      ]
-    },
-    {
-      "ip": "45.79.115.134",
-      "family": "v4",
-      "first_seen": "2026-11-18T06:00:00Z",
-      "last_seen": "2026-11-18T06:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "63949",
-      "asn_name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
-      "asn_prefix": "45.79.112.0/22",
-      "payloads": [
-        "GET /"
-      ]
-    },
-    {
-      "ip": "118.194.251.75",
-      "family": "v4",
-      "first_seen": "2026-11-18T04:00:00Z",
-      "last_seen": "2026-11-18T04:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "118.194.251.0/24"
-    },
-    {
-      "ip": "58.182.58.128",
-      "family": "v4",
-      "first_seen": "2026-11-18T01:00:00Z",
-      "last_seen": "2026-11-18T01:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 18"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "55430",
-      "asn_name": "STARHUB-NGNBN - Starhub Ltd",
-      "asn_prefix": "58.182.0.0/18"
-    },
-    {
-      "ip": "212.104.214.7",
-      "family": "v4",
-      "first_seen": "2026-11-18T08:00:00Z",
-      "last_seen": "2026-11-18T08:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "212238",
-      "asn_name": "CDNEXT Datacamp Limited",
-      "asn_prefix": "212.104.214.0/24"
-    },
     {
       "ip": "20.242.56.183",
       "family": "v4",
@@ -3793,6 +3651,199 @@
       "asn": "212238",
       "asn_name": "CDNEXT Datacamp Limited",
       "asn_prefix": "212.104.214.0/24"
+    },
+    {
+      "ip": "146.190.41.214",
+      "family": "v4",
+      "first_seen": "2026-11-25T09:00:00Z",
+      "last_seen": "2026-11-25T09:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "146.190.32.0/19",
+      "payloads": [
+        "GET /aaa9",
+        "GET /aab8"
+      ]
+    },
+    {
+      "ip": "216.128.178.44",
+      "family": "v4",
+      "first_seen": "2026-11-25T08:00:00Z",
+      "last_seen": "2026-11-25T08:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "20473",
+      "asn_name": "AS-VULTR - The Constant Company, LLC",
+      "asn_prefix": "216.128.176.0/20",
+      "payloads": [
+        "GET /remote/login?lang=en"
+      ]
+    },
+    {
+      "ip": "35.206.158.12",
+      "family": "v4",
+      "first_seen": "2026-11-25T07:00:00Z",
+      "last_seen": "2026-11-25T07:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 12"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.206.128.0/18",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "40.124.123.226",
+      "family": "v4",
+      "first_seen": "2026-11-25T06:00:00Z",
+      "last_seen": "2026-11-25T06:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /druid/index.html"
+      ]
+    },
+    {
+      "ip": "75.167.63.24",
+      "family": "v4",
+      "first_seen": "2026-11-25T06:00:00Z",
+      "last_seen": "2026-11-25T06:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "209",
+      "asn_name": "CENTURYLINK-US-LEGACY-QWEST - CenturyLink Communications, LLC",
+      "asn_prefix": "75.167.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "35.210.160.35",
+      "family": "v4",
+      "first_seen": "2026-11-25T04:00:00Z",
+      "last_seen": "2026-11-25T04:00:00Z",
+      "scenarios": [
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "15169",
+      "asn_name": "GOOGLE - Google LLC",
+      "asn_prefix": "35.210.0.0/16",
+      "tags": [
+        "mwl:cloud=\"gcp\""
+      ]
+    },
+    {
+      "ip": "20.84.153.123",
+      "family": "v4",
+      "first_seen": "2026-11-25T03:00:00Z",
+      "last_seen": "2026-11-25T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /actuator/health"
+      ]
+    },
+    {
+      "ip": "172.70.34.43",
+      "family": "v4",
+      "first_seen": "2026-11-25T03:00:00Z",
+      "last_seen": "2026-11-25T03:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Bing Webcrawler User-Agent (BingBot)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "13335",
+      "asn_name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "asn_prefix": "172.70.34.0/24",
+      "tags": [
+        "mwl:cdn=\"cloudflare\""
+      ],
+      "payloads": [
+        "GET /robots.txt"
+      ]
+    },
+    {
+      "ip": "178.62.216.118",
+      "family": "v4",
+      "first_seen": "2026-11-25T01:00:00Z",
+      "last_seen": "2026-11-25T01:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "178.62.192.0/18",
+      "payloads": [
+        "GET /aab8",
+        "GET /aaa9"
+      ]
+    },
+    {
+      "ip": "66.183.132.16",
+      "family": "v4",
+      "first_seen": "2026-11-25T11:00:00Z",
+      "last_seen": "2026-11-25T11:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "852",
+      "asn_name": "ASN852 - TELUS Communications Inc.",
+      "asn_prefix": "66.183.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
     }
   ]
 }

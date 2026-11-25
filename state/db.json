@@ -1,232 +1,8 @@
 {
   "schema_version": "2",
   "ttl_days": 7,
-  "updated_at": "2026-11-25T01:00:07.333800Z",
+  "updated_at": "2026-11-25T13:00:08.068675Z",
   "items": {
-    "216.180.246.139": {
-      "ip": "216.180.246.139",
-      "family": "v4",
-      "first_seen": "2026-11-18T05:21:38Z",
-      "last_seen": "2026-11-18T05:21:38Z",
-      "scenarios": {
-        "crowdsec/http-admin-interface-probing": {
-          "count": 1,
-          "last_seen": "2026-11-18T05:21:38Z"
-        },
-        "crowdsec/http-technology-probing": {
-          "count": 1,
-          "last_seen": "2026-11-18T05:21:38Z"
-        },
-        "crowdsec/http-probing": {
-          "count": 1,
-          "last_seen": "2026-11-18T05:21:38Z"
-        }
-      },
-      "sources": {
-        "crowdsec": {
-          "count": 3,
-          "first_seen": "2026-11-18T05:21:38Z",
-          "last_seen": "2026-11-18T05:21:38Z",
-          "payloads": [
-            "GET /admin/index.html",
-            "GET /+CSCOE+/logon.html",
-            "GET /remote/login",
-            "GET /",
-            "GET /login",
-            "GET /manage/account/login",
-            "GET /index.html",
-            "GET /cgi-bin/login.cgi",
-            "GET /login.htm",
-            "GET /login.html",
-            "GET /login.jsp",
-            "GET /doc/index.html"
-          ]
-        }
-      },
-      "asn": "396982",
-      "asn_prefix": "216.180.246.0/24"
-    },
-    "45.147.208.29": {
-      "ip": "45.147.208.29",
-      "family": "v4",
-      "first_seen": "2026-11-18T08:03:00Z",
-      "last_seen": "2026-11-18T08:03:00Z",
-      "scenarios": {
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap": {
-          "count": 1,
-          "last_seen": "2026-11-18T08:03:00Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T08:03:00Z",
-          "last_seen": "2026-11-18T08:03:00Z",
-          "sids": [
-            2200070
-          ],
-          "max_priority": 3
-        }
-      },
-      "asn": "47160",
-      "asn_prefix": "45.147.208.0/22"
-    },
-    "159.26.105.114": {
-      "ip": "159.26.105.114",
-      "family": "v4",
-      "first_seen": "2026-11-18T07:58:50Z",
-      "last_seen": "2026-11-18T07:58:50Z",
-      "scenarios": {
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap": {
-          "count": 1,
-          "last_seen": "2026-11-18T07:58:50Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T07:58:50Z",
-          "last_seen": "2026-11-18T07:58:50Z",
-          "sids": [
-            2200070
-          ],
-          "max_priority": 3
-        }
-      },
-      "asn": "208172",
-      "asn_prefix": "159.26.105.0/24"
-    },
-    "185.194.178.68": {
-      "ip": "185.194.178.68",
-      "family": "v4",
-      "first_seen": "2026-11-18T06:51:27Z",
-      "last_seen": "2026-11-18T06:51:27Z",
-      "scenarios": {
-        "suricata/ET HUNTING Request for Webshell in .well-known directory": {
-          "count": 1,
-          "last_seen": "2026-11-18T06:51:27Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T06:51:27Z",
-          "last_seen": "2026-11-18T06:51:27Z",
-          "sids": [
-            2064917
-          ],
-          "max_priority": 2,
-          "payloads": [
-            "GET /.well-known/pki-validation/moon.php"
-          ]
-        }
-      },
-      "asn": "29066",
-      "asn_prefix": "185.194.178.0/24"
-    },
-    "45.79.115.134": {
-      "ip": "45.79.115.134",
-      "family": "v4",
-      "first_seen": "2026-11-18T06:44:31Z",
-      "last_seen": "2026-11-18T06:44:31Z",
-      "scenarios": {
-        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
-          "count": 1,
-          "last_seen": "2026-11-18T06:44:31Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T06:44:31Z",
-          "last_seen": "2026-11-18T06:44:31Z",
-          "sids": [
-            2029054
-          ],
-          "max_priority": 3,
-          "payloads": [
-            "GET /"
-          ]
-        }
-      },
-      "asn": "63949",
-      "asn_prefix": "45.79.112.0/22"
-    },
-    "118.194.251.75": {
-      "ip": "118.194.251.75",
-      "family": "v4",
-      "first_seen": "2026-11-18T04:22:26Z",
-      "last_seen": "2026-11-18T04:22:26Z",
-      "scenarios": {
-        "suricata/SURICATA TLS invalid SNI length": {
-          "count": 1,
-          "last_seen": "2026-11-18T04:22:26Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T04:22:26Z",
-          "last_seen": "2026-11-18T04:22:26Z",
-          "sids": [
-            2230018
-          ],
-          "max_priority": 3
-        }
-      },
-      "asn": "135377",
-      "asn_prefix": "118.194.251.0/24"
-    },
-    "58.182.58.128": {
-      "ip": "58.182.58.128",
-      "family": "v4",
-      "first_seen": "2026-11-18T01:09:37Z",
-      "last_seen": "2026-11-18T01:09:37Z",
-      "scenarios": {
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 18": {
-          "count": 1,
-          "last_seen": "2026-11-18T01:09:37Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T01:09:37Z",
-          "last_seen": "2026-11-18T01:09:37Z",
-          "sids": [
-            2500034
-          ],
-          "max_priority": 2
-        }
-      },
-      "asn": "55430",
-      "asn_prefix": "58.182.0.0/18"
-    },
-    "212.104.214.7": {
-      "ip": "212.104.214.7",
-      "family": "v4",
-      "first_seen": "2026-11-18T08:53:51Z",
-      "last_seen": "2026-11-18T08:53:51Z",
-      "scenarios": {
-        "suricata/SURICATA FRAG IPv4 Fragmentation overlap": {
-          "count": 1,
-          "last_seen": "2026-11-18T08:53:51Z"
-        }
-      },
-      "sources": {
-        "suricata": {
-          "count": 1,
-          "first_seen": "2026-11-18T08:53:51Z",
-          "last_seen": "2026-11-18T08:53:51Z",
-          "sids": [
-            2200070
-          ],
-          "max_priority": 3
-        }
-      },
-      "asn": "212238",
-      "asn_prefix": "212.104.214.0/24"
-    },
     "20.242.56.183": {
       "ip": "20.242.56.183",
       "family": "v4",
@@ -5443,6 +5219,291 @@
       },
       "asn": "212238",
       "asn_prefix": "212.104.214.0/24"
+    },
+    "146.190.41.214": {
+      "ip": "146.190.41.214",
+      "family": "v4",
+      "first_seen": "2026-11-25T09:20:14Z",
+      "last_seen": "2026-11-25T09:20:14Z",
+      "scenarios": {
+        "crowdsec/http-bad-user-agent": {
+          "count": 1,
+          "last_seen": "2026-11-25T09:20:14Z"
+        },
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-11-25T09:20:14Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-11-25T09:20:14Z",
+          "last_seen": "2026-11-25T09:20:14Z",
+          "payloads": [
+            "GET /aaa9",
+            "GET /aab8"
+          ]
+        },
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T09:20:14Z",
+          "last_seen": "2026-11-25T09:20:14Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /aaa9",
+            "GET /aab8"
+          ]
+        }
+      },
+      "asn": "14061",
+      "asn_prefix": "146.190.32.0/19"
+    },
+    "216.128.178.44": {
+      "ip": "216.128.178.44",
+      "family": "v4",
+      "first_seen": "2026-11-25T08:56:52Z",
+      "last_seen": "2026-11-25T08:56:52Z",
+      "scenarios": {
+        "crowdsec/http-technology-probing": {
+          "count": 1,
+          "last_seen": "2026-11-25T08:56:52Z"
+        }
+      },
+      "sources": {
+        "crowdsec": {
+          "count": 1,
+          "first_seen": "2026-11-25T08:56:52Z",
+          "last_seen": "2026-11-25T08:56:52Z",
+          "payloads": [
+            "GET /remote/login?lang=en"
+          ]
+        }
+      },
+      "asn": "20473",
+      "asn_prefix": "216.128.176.0/20"
+    },
+    "35.206.158.12": {
+      "ip": "35.206.158.12",
+      "family": "v4",
+      "first_seen": "2026-11-25T07:51:18Z",
+      "last_seen": "2026-11-25T07:51:18Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 12": {
+          "count": 1,
+          "last_seen": "2026-11-25T07:51:18Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T07:51:18Z",
+          "last_seen": "2026-11-25T07:51:18Z",
+          "sids": [
+            2500022
+          ],
+          "max_priority": 2
+        }
+      },
+      "asn": "15169",
+      "asn_prefix": "35.206.128.0/18"
+    },
+    "40.124.123.226": {
+      "ip": "40.124.123.226",
+      "family": "v4",
+      "first_seen": "2026-11-25T06:35:37Z",
+      "last_seen": "2026-11-25T06:35:37Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-11-25T06:35:37Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T06:35:37Z",
+          "last_seen": "2026-11-25T06:35:37Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /druid/index.html"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "40.124.0.0/16"
+    },
+    "75.167.63.24": {
+      "ip": "75.167.63.24",
+      "family": "v4",
+      "first_seen": "2026-11-25T06:27:32Z",
+      "last_seen": "2026-11-25T06:27:32Z",
+      "scenarios": {
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost": {
+          "count": 1,
+          "last_seen": "2026-11-25T06:27:32Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T06:27:32Z",
+          "last_seen": "2026-11-25T06:27:32Z",
+          "sids": [
+            2072593
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /identity"
+          ]
+        }
+      },
+      "asn": "209",
+      "asn_prefix": "75.167.0.0/16"
+    },
+    "35.210.160.35": {
+      "ip": "35.210.160.35",
+      "family": "v4",
+      "first_seen": "2026-11-25T04:31:57Z",
+      "last_seen": "2026-11-25T04:31:57Z",
+      "scenarios": {
+        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 14": {
+          "count": 1,
+          "last_seen": "2026-11-25T04:31:57Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T04:31:57Z",
+          "last_seen": "2026-11-25T04:31:57Z",
+          "sids": [
+            2500026
+          ],
+          "max_priority": 2
+        }
+      },
+      "asn": "15169",
+      "asn_prefix": "35.210.0.0/16"
+    },
+    "20.84.153.123": {
+      "ip": "20.84.153.123",
+      "family": "v4",
+      "first_seen": "2026-11-25T03:56:30Z",
+      "last_seen": "2026-11-25T03:56:30Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-11-25T03:56:30Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T03:56:30Z",
+          "last_seen": "2026-11-25T03:56:30Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /actuator/health"
+          ]
+        }
+      },
+      "asn": "8075",
+      "asn_prefix": "20.64.0.0/10"
+    },
+    "172.70.34.43": {
+      "ip": "172.70.34.43",
+      "family": "v4",
+      "first_seen": "2026-11-25T03:06:08Z",
+      "last_seen": "2026-11-25T03:06:08Z",
+      "scenarios": {
+        "suricata/ET SCAN Bing Webcrawler User-Agent (BingBot)": {
+          "count": 1,
+          "last_seen": "2026-11-25T03:06:08Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T03:06:08Z",
+          "last_seen": "2026-11-25T03:06:08Z",
+          "sids": [
+            2032981
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /robots.txt"
+          ]
+        }
+      },
+      "asn": "13335",
+      "asn_prefix": "172.70.34.0/24"
+    },
+    "178.62.216.118": {
+      "ip": "178.62.216.118",
+      "family": "v4",
+      "first_seen": "2026-11-25T01:30:53Z",
+      "last_seen": "2026-11-25T01:30:53Z",
+      "scenarios": {
+        "suricata/ET SCAN Zmap User-Agent (Inbound)": {
+          "count": 1,
+          "last_seen": "2026-11-25T01:30:53Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T01:30:53Z",
+          "last_seen": "2026-11-25T01:30:53Z",
+          "sids": [
+            2029054
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /aab8",
+            "GET /aaa9"
+          ]
+        }
+      },
+      "asn": "14061",
+      "asn_prefix": "178.62.192.0/18"
+    },
+    "66.183.132.16": {
+      "ip": "66.183.132.16",
+      "family": "v4",
+      "first_seen": "2026-11-25T11:28:28Z",
+      "last_seen": "2026-11-25T11:28:28Z",
+      "scenarios": {
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost": {
+          "count": 1,
+          "last_seen": "2026-11-25T11:28:28Z"
+        }
+      },
+      "sources": {
+        "suricata": {
+          "count": 1,
+          "first_seen": "2026-11-25T11:28:28Z",
+          "last_seen": "2026-11-25T11:28:28Z",
+          "sids": [
+            2072593
+          ],
+          "max_priority": 3,
+          "payloads": [
+            "GET /identity"
+          ]
+        }
+      },
+      "asn": "852",
+      "asn_prefix": "66.183.0.0/16"
     }
   },
   "asn_names": {
@@ -5459,14 +5520,9 @@
     "16509": "AMAZON-02 - Amazon.com, Inc.",
     "3215": "AS3215 Orange S.A.",
     "12876": "AS12876 Scaleway SAS",
-    "63949": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
     "4764": "WIDEBAND-AS-AP - Aussie Broadband",
     "209": "CENTURYLINK-US-LEGACY-QWEST - CenturyLink Communications, LLC",
-    "208172": "PV-HOSTED Proton AG",
     "212238": "CDNEXT Datacamp Limited",
-    "29066": "VELIANET-AS velia.net Internetdienste GmbH",
-    "47160": "MOJI MOJI SAS",
-    "55430": "STARHUB-NGNBN - Starhub Ltd",
     "11426": "TWC-11426-CAROLINAS - Charter Communications Inc",
     "142647": "NAN-AS-AP - Nasstec Airnet Networks Private Limited",
     "198364": "BANATSYNC-SRL BANATSYNC SRL",
