@@ -1,61 +1,13 @@
 {
-  "generated_at": "2026-11-24T13:00:00Z",
+  "generated_at": "2026-11-25T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 124,
-    "v4": 124,
+    "total": 126,
+    "v4": 126,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "45.82.64.229",
-      "family": "v4",
-      "first_seen": "2026-11-17T19:00:00Z",
-      "last_seen": "2026-11-17T19:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA QUIC crypto fragments too long"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "49981",
-      "asn_name": "WorldStream WorldStream B.V.",
-      "asn_prefix": "45.82.64.0/22"
-    },
-    {
-      "ip": "165.154.120.89",
-      "family": "v4",
-      "first_seen": "2026-11-17T16:00:00Z",
-      "last_seen": "2026-11-17T16:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA TLS invalid SNI length"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "135377",
-      "asn_name": "UCLOUD-HK-AS-AP - UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "asn_prefix": "165.154.120.0/24"
-    },
-    {
-      "ip": "165.232.73.237",
-      "family": "v4",
-      "first_seen": "2026-11-17T21:00:00Z",
-      "last_seen": "2026-11-17T21:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "14061",
-      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
-      "asn_prefix": "165.232.64.0/20",
-      "payloads": [
-        "GET /"
-      ]
-    },
     {
       "ip": "45.147.208.29",
       "family": "v4",
@@ -2211,6 +2163,7 @@
         "suricata"
       ],
       "asn": "3320",
+      "asn_name": "DTAG Deutsche Telekom AG",
       "asn_prefix": "79.192.0.0/10",
       "payloads": [
         "GET /identity"
@@ -2266,6 +2219,99 @@
       "tags": [
         "mwl:cloud=\"gcp\""
       ]
+    },
+    {
+      "ip": "90.107.48.66",
+      "family": "v4",
+      "first_seen": "2026-11-24T15:00:00Z",
+      "last_seen": "2026-11-24T15:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "3215",
+      "asn_name": "AS3215 Orange S.A.",
+      "asn_prefix": "90.107.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "40.119.27.158",
+      "family": "v4",
+      "first_seen": "2026-11-24T14:00:00Z",
+      "last_seen": "2026-11-24T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.112.0.0/13",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /ReportServer"
+      ]
+    },
+    {
+      "ip": "172.180.64.97",
+      "family": "v4",
+      "first_seen": "2026-11-24T13:00:00Z",
+      "last_seen": "2026-11-24T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.160.0.0/11",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "137.59.230.114",
+      "family": "v4",
+      "first_seen": "2026-11-24T13:00:00Z",
+      "last_seen": "2026-11-24T13:00:00Z",
+      "scenarios": [
+        "suricata/ET EXPLOIT HackingTrio UA (Hello, World)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "9541",
+      "asn_name": "CYBERNET-AP - Cyber Internet Services (Pvt) Ltd.",
+      "asn_prefix": "137.59.230.0/24",
+      "payloads": [
+        "POST /GponForm/diag_Form?images/"
+      ]
+    },
+    {
+      "ip": "212.104.214.78",
+      "family": "v4",
+      "first_seen": "2026-11-24T18:00:00Z",
+      "last_seen": "2026-11-24T18:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA FRAG IPv4 Fragmentation overlap"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "212238",
+      "asn_name": "CDNEXT Datacamp Limited",
+      "asn_prefix": "212.104.214.0/24"
     }
   ]
 }
