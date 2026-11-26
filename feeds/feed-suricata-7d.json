@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T13:00:00Z",
+  "generated_at": "2026-11-26T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
@@ -8,78 +8,6 @@
     "v6": 0
   },
   "items": [
-    {
-      "ip": "20.65.178.231",
-      "family": "v4",
-      "first_seen": "2026-11-18T21:00:00Z",
-      "last_seen": "2026-11-18T21:00:00Z",
-      "scenarios": [
-        "suricata/SURICATA SSH invalid banner"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ]
-    },
-    {
-      "ip": "161.97.99.129",
-      "family": "v4",
-      "first_seen": "2026-11-18T15:00:00Z",
-      "last_seen": "2026-11-18T15:00:00Z",
-      "scenarios": [
-        "suricata/ET WEB_SERVER WEB-PHP phpinfo access"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "51167",
-      "asn_name": "CONTABO Contabo GmbH",
-      "asn_prefix": "161.97.98.0/23",
-      "payloads": [
-        "GET /dev/lara/phpinfo.php"
-      ]
-    },
-    {
-      "ip": "77.239.124.252",
-      "family": "v4",
-      "first_seen": "2026-11-18T13:00:00Z",
-      "last_seen": "2026-11-18T13:00:00Z",
-      "scenarios": [
-        "suricata/ET COMPROMISED Known Compromised or Hostile Host Traffic group 19"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "198364",
-      "asn_name": "BANATSYNC-SRL BANATSYNC SRL",
-      "asn_prefix": "77.239.124.0/24"
-    },
-    {
-      "ip": "20.118.227.163",
-      "family": "v4",
-      "first_seen": "2026-11-19T00:00:00Z",
-      "last_seen": "2026-11-19T00:00:00Z",
-      "scenarios": [
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.64.0.0/10",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
     {
       "ip": "20.65.171.52",
       "family": "v4",
@@ -2375,6 +2303,78 @@
       "asn_prefix": "66.183.0.0/16",
       "payloads": [
         "GET /identity"
+      ]
+    },
+    {
+      "ip": "170.64.166.144",
+      "family": "v4",
+      "first_seen": "2026-11-25T21:00:00Z",
+      "last_seen": "2026-11-25T21:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "170.64.128.0/18",
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "79.127.254.133",
+      "family": "v4",
+      "first_seen": "2026-11-25T15:00:00Z",
+      "last_seen": "2026-11-25T15:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA TLS invalid record version"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "60068",
+      "asn_name": "CDN77 Datacamp Limited",
+      "asn_prefix": "79.127.254.0/24"
+    },
+    {
+      "ip": "195.26.248.120",
+      "family": "v4",
+      "first_seen": "2026-11-25T14:00:00Z",
+      "last_seen": "2026-11-25T14:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Laravel Debug Mode Information Disclosure Probe Inbound"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "40021",
+      "asn_name": "CONTABO-40021 - Contabo Inc.",
+      "asn_prefix": "195.26.248.0/21",
+      "payloads": [
+        "POST /"
+      ]
+    },
+    {
+      "ip": "20.65.170.227",
+      "family": "v4",
+      "first_seen": "2026-11-25T22:00:00Z",
+      "last_seen": "2026-11-25T22:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.64.0.0/10",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
       ]
     }
   ]
